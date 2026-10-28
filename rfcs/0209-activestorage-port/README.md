@@ -124,19 +124,22 @@ memory stays sync.
   `TransformJob` have async `perform`, and every `*_later` awaits
   `perform_later`, per CLAUDE.md § "A job's `perform` and `enqueue` are async".
 - **Attaching.** The generated `avatar` reader is a property answering
-  `Attached::One` (CLAUDE.md § "Generated attribute readers are properties"),
-  and the `avatar=` writer stays a sync setter: it records an
-  `Attached::Changes::CreateOne` in `attachment_changes`
-  (`attached/model.rb:117-126`) and reads nothing. Every io read is async.
-  Rails' `CreateOne#initialize` unfurls the attachable at once through
-  `identify_without_saving`, reading the io for its checksum and Marcel
-  content type; trails moves that unfurl to the first awaited step that
-  reaches the change: `save` (the `after_save` at `attached/model.rb:142`),
-  `attach`, or an explicit await on the change. A sync read would block the
-  event loop for the whole file and could not read a stream-backed io. The
-  upload stays in the async `after_commit` (`attached/model.rb:144`).
-  `attach`, `detach`, `purge` and `purge_later` on `One` / `Many` are async,
-  since each reads, saves or deletes.
+  `Attached::One` (CLAUDE.md § "Generated attribute readers are properties").
+  Ruby's `avatar=` (`attached/model.rb:117-126`) is the async
+  `setAvatar(attachable)`, CLAUDE.md's settled spelling for a Ruby `x=` that
+  must be awaited; the generated property has no setter half, so
+  `user.avatar = file` is a type error, not a second spelling. `setAvatar`
+  records the `Attached::Changes::CreateOne` / `DeleteOne` in
+  `attachment_changes` and awaits `CreateOne`'s unfurl
+  (`identify_without_saving`: the checksum and Marcel content type), so the
+  blob is built when the writer resolves, as in Rails. Every io read is async.
+  Mass assignment (`User.create!(avatar: file)`, `update(avatar: file)`) goes
+  through the awaitable `setAttributes` that association writers already use;
+  the sync `assignAttributes` and the constructor raise for an attachment key
+  rather than park a promise for `save` to drain. The upload stays in the async
+  `after_commit` (`attached/model.rb:144`). `attach`, `detach`, `purge` and
+  `purge_later` on `One` / `Many` are async, since each reads, saves or
+  deletes. `has_many_attached`'s `photos=` is `setPhotos` the same way.
 - **Variants and previews.** `Variant#processed`, `VariantWithRecord#processed`,
   `Preview#processed`, `Variation#transform` and every transformer, analyzer
   and previewer call are async; `Variation#key`, `#digest`, `#format`,
@@ -205,10 +208,10 @@ precedent for an engine test database.
 - **Lay app/ files under `src/app/…`.** Rejected: solid-queue's
   `extraLibPaths` flattening is the enrolled precedent, and api-compare keys
   file paths that way.
-- **An async `avatar=` writer (`await user.setAvatar(file)`)**, keeping Rails'
-  unfurl-at-assignment timing. Rejected (owner, 2026-10-28): it gives up the
-  `user.avatar = file` spelling and the property shape every other generated
-  writer has.
+- **A sync `avatar=` setter that defers the unfurl to `save`.** Briefly
+  ruled, then reversed by the owner on 2026-10-28: it leaves the blob's
+  `checksum`, `byte_size` and `content_type` unset between assignment and the
+  first await, a window Rails does not have.
 - **Sync io reads in `CreateOne#initialize`.** Rejected (owner, 2026-10-28):
   they block the event loop for the whole file and cannot read a stream.
 
@@ -283,18 +286,19 @@ carry `deps` edges into RFC 0202 and RFC 0203 stories.
 
 ## Decisions
 
-- **Attachable io reads are async, deferred past the `avatar=` writer**
-  (owner, 2026-10-28). The writer stays a sync setter that only records the
-  change; `CreateOne` unfurls (checksum, content type, blob build) on the
-  first awaited step: `save`, `attach`, or awaiting the change. The
-  observable difference from Rails is the window between assignment and that
-  step: `user.avatar.blob`'s `checksum`, `byte_size` and `content_type` are
-  unset there. A ported test that reads them in that window awaits an async
-  step first or carries a receipt citing this decision; the attached-one and
-  attached-many test stories inventory those tests.
+- **The attachment writer is an async `setAvatar`** (owner, 2026-10-28).
+  `has_one_attached :avatar`'s `avatar=` is `await user.setAvatar(file)` and
+  `has_many_attached :photos`'s is `await user.setPhotos(files)`; there is no
+  `=` setter. The writer awaits the attachable's unfurl, so a ported test reads
+  the blob's checksum, size and content type right after it, as Rails does.
+  Mass assignment of an attachment key goes through `setAttributes`; the
+  constructor and `assignAttributes` raise for one, and nothing is parked for
+  `save`.
 
 ## Changelog
 
 - 2026-10-28: initial draft
 - 2026-10-28: attachable io reads are async and deferred past the sync
   `avatar=` writer (owner ruling); former open question 4 moved to Decisions
+- 2026-10-28: the attachment writer is an async `setAvatar` with no `=`
+  setter, replacing the deferred-unfurl ruling (owner)

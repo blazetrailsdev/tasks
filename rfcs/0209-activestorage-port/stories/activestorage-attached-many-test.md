@@ -25,7 +25,6 @@ twin of `one_test.rb`.
 
 - All 75 tests are ported with Rails' names; any that does not fit one PR is
   filed as a remainder story with the line range it leaves.
-- Each test that reads a blob's checksum, byte size or content type between
-  assignment and an awaited step is listed in the PR body, and either awaits
-  that step first or carries a receipt citing the RFC's Decisions entry on
-  deferred unfurling.
+- Rails' `@user.avatar = file` is `await user.setAvatar(file)` (and `photos=`
+  is `setPhotos`), and `create!` / `update` with an attachment key go through
+  the awaitable path; no test needs a receipt for the writer's timing.
