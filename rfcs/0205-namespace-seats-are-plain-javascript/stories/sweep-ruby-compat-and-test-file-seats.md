@@ -1,7 +1,7 @@
 ---
 title: "Convert the remaining test-file seats and ruby-compat's own"
 status: ready
-updated: 2026-10-23
+updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "Remaining rbObjClassname compares: thor Proc checks and ActiveModel numeric class compare"
-status: in-progress
+status: done
 updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
