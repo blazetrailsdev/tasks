@@ -2,7 +2,7 @@
 title: "Extractor: arity pairing of reader/writer pairs is nondeterministic (actionview fieldErrorProc)"
 status: draft
 updated: 2026-10-27
-rfc: "0120-extra-surface-gating-rollout"
+rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
 deps: []
