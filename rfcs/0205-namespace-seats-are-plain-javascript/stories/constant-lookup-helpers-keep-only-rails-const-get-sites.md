@@ -1,7 +1,7 @@
 ---
 title: "String-keyed constant lookups become ES imports, or explicit registries where the name is computed"
-status: ready
-updated: 2026-10-27
+status: claimed
+updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: conversion
 packages:
@@ -20,8 +20,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-28T21:49:19Z"
+assignee: "constant-lookup-helpers-keep-only-rails-const-get-sites"
 blocked-by: null
 closed-reason: null
 ---

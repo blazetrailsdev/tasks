@@ -1,6 +1,6 @@
 ---
 title: "Convert activerecord's adapter, association, encryption and CPK reads to ES imports"
-status: in-progress
+status: done
 updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
