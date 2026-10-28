@@ -1,0 +1,38 @@
+---
+title: "framework-constantize-calls-become-imports-or-registries"
+status: draft
+updated: 2026-10-28
+rfc: "0205-namespace-seats-are-plain-javascript"
+cluster: null
+packages: []
+deps: []
+deps-rfc: []
+est-loc: null
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+Repo-owner ruling, 2026-10-28, on closed trails#9397: trails does not resolve classes through a ported `const_get` constant walk. A Rails `constantize` / `const_get` call becomes a plain ES import where the name is known when the call is written. Where the name is computed, it becomes a read of an explicit registry, as CLAUDE.md § "A dispatch by name is spelled directly" rules for a computed `send`. `constantize-open-codes-rb-mod-const-get` was closed FALSIFIED on this ruling.
+
+`constant-lookup-helpers-keep-only-rails-const-get-sites` covers the ruby-compat lookup helpers (`rbModConstGet`, `rbConstGet`, `rbPathToClass`, ...). This story covers framework calls to ActiveSupport's `constantize` / `safeConstantize` (`packages/activesupport/src/inflector.ts`), outside tests:
+
+- actionpack: `action-dispatch/http/request.ts` (`controller_class_for`, `request.rb:94-110`), `action-dispatch/middleware/session/abstract-store.ts`
+- actionview: `helpers/form-helper.ts`
+- activejob: `core.ts`, `serializers/module-serializer.ts`
+- activemodel: `validations/validates.ts`
+- activerecord: `aggregations.ts`, `connection-adapters.ts`, `core.ts`, `delegated-type.ts`, `inheritance.ts`, `migration.ts`, `reflection.ts`, `associations/collection-proxy.ts`
+- activesupport: `delegation.ts`, `module-ext.ts`, `deprecation/constant-accessor.ts`, `deprecation/proxy-wrappers.ts`, `message-pack/extensions.ts`
+- chronic: `handler.ts`, `repeater.ts`
+- globalid: `global-id.ts`
+
+## Acceptance criteria
+
+- [ ] Each call site is classified with its Rails `file:line`. A site whose name is known where it is written becomes an import. A site whose name ranges over a closed framework set (adapters, chronic handlers and repeaters, deprecation targets) reads a module-private registry beside it. A site whose name comes from the application (association `class_name:`, STI `type`, polymorphic `_type`, a controller name, GlobalID, a serialized job class) reads the application table from `application-classes-resolve-without-a-registration-call` or a generated class-path table.
+- [ ] No converted site reaches `RCLASS_CONST_TBL` or a `const_get` walk over namespace properties.
+- [ ] Touched test files pass, and each touched package's built `dist/**.js` loads as a plain-node ESM entry module.
