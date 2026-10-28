@@ -2,7 +2,7 @@
 title: "activerecord: a record's init_internals never reaches ActiveModel::Validations#init_internals"
 status: blocked
 updated: 2026-10-03
-rfc: "0188-module-initialize-inlined-into-constructors"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
