@@ -2,7 +2,7 @@
 title: "assert-includes-receipt-is-a-scoring-gap-not-permanent"
 status: blocked
 updated: 2026-10-20
-rfc: "0120-extra-surface-gating-rollout"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
