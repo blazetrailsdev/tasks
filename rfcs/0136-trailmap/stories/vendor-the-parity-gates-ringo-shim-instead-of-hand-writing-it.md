@@ -1,7 +1,7 @@
 ---
 title: "Generate the parity gate's ringo shim from the pin instead of hand-writing envOr and parityHTML"
-status: ready
-updated: 2026-10-15
+status: in-progress
+updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#90
+claim: "2026-10-28T15:10:51Z"
+assignee: "up-ready-does-not-assert-the-hub-migration-head"
 blocked-by: null
 closed-reason: null
 ---

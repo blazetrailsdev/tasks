@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: the five core constants Psych::ClassLoader reads are seated in variable.ts and wiped by resetConstants"
-status: in-progress
+status: done
 updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null

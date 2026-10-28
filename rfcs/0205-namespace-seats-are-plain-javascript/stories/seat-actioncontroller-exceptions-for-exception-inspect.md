@@ -1,7 +1,7 @@
 ---
 title: "Seat ActionController / MimeNegotiation exception classes so exception_inspect uses rbInspect"
-status: ready
-updated: 2026-10-27
+status: claimed
+updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-28T15:49:23Z"
+assignee: "ruby-compat-rb-define-module-reopens-a-namespace"
 blocked-by: null
 closed-reason: null
 ---

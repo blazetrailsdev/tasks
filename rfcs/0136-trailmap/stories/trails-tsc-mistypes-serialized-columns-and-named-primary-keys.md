@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc: serialized columns and default-typed named primary keys get the wrong type"
-status: in-progress
+status: done
 updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null

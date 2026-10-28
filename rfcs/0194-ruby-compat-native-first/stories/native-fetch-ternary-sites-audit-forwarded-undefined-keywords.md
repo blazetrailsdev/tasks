@@ -1,6 +1,6 @@
 ---
 title: "Audit converted fetch ternaries for keywords forwarded as undefined"
-status: in-progress
+status: done
 updated: 2026-10-28
 rfc: "0194-ruby-compat-native-first"
 cluster: null

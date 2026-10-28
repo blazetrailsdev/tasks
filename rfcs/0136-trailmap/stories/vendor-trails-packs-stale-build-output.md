@@ -1,7 +1,7 @@
 ---
 title: "trailmap: vendor-trails.sh packs stale build output left in the trails checkout"
-status: ready
-updated: 2026-10-12
+status: in-progress
+updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#90
+claim: "2026-10-28T15:10:51Z"
+assignee: "up-ready-does-not-assert-the-hub-migration-head"
 blocked-by: null
 closed-reason: null
 ---

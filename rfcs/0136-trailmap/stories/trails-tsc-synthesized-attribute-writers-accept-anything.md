@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc: a synthesized attribute writer is typed unknown"
-status: in-progress
+status: done
 updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null

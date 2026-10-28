@@ -1,7 +1,7 @@
 ---
 title: "The VFS readFileSync swallows a missing path and drops the Bytes overload"
-status: ready
-updated: 2026-10-12
+status: in-progress
+updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9405
+claim: "2026-10-28T15:10:51Z"
+assignee: "up-ready-does-not-assert-the-hub-migration-head"
 blocked-by: null
 closed-reason: null
 ---

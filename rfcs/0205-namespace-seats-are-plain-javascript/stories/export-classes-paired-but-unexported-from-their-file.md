@@ -1,6 +1,6 @@
 ---
 title: "Export the 16 paired-but-unexported classes so the generated class-path table names them"
-status: claimed
+status: done
 updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#9404
 claim: "2026-10-28T14:49:24Z"
 assignee: "retire-array-helper-rows-after-native-sweep"
 blocked-by: null
