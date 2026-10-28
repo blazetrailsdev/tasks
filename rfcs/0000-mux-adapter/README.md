@@ -39,8 +39,10 @@ numeric gates before any write moves over.
 
 - **Pane control is the last fleet logic welded to Go.** RFC 0136 gives the
   task domain one home, but pane control stays in Go, in 1,650 lines that
-  mix tmux verbs with policy. All 52 primitive calls go through two helpers
-  (`tmuxCmd`, `spawnPane`), so the seam already exists in practice.
+  mix tmux verbs with policy. Every primitive except one goes through two
+  helpers: 55 `tmuxCmd` call sites and 10 `spawnPane` call sites. The
+  exception is a raw `exec.Command("tmux", …)` in `checkSocket`. So the seam
+  already exists in practice.
 - **Backend choice.**
   - [rmux](https://docs.rs/crate/rmux/0.6.1) is a Rust tmux replacement with a
     tmux-style CLI, a daemon and structured snapshots. It is aimed at agents
@@ -95,8 +97,14 @@ uses. That way no consumer imports `tmux/`.
 `bin/muxd`). It runs on the **host**, not in a container, as a systemd user
 unit next to the tmux server.
 
-- It serves HTTP on loopback and on the `fleet` docker network address. This
-  is the same exposure model as 0136's JSON API.
+- It serves HTTP on loopback and on the `fleet` docker network address.
+- Unlike 0136's read-mostly API, these endpoints type into agent shells, so
+  being reachable on the network counts as code execution. Every request
+  except `GET /up` needs a bearer token. The token is read from a `0600` file
+  on the host and given to ringo and trailmap as a dokku secret. A request
+  without the token gets `401`, and that is tested.
+- It needs Node 24 on the host, the same floor as trailmap, installed through
+  Homebrew next to the tmux binary.
 - Running on the host removes three things the containers need today: the
   tmux socket bind mount, the matching tmux binary in the image, and the
   identical-path `/mnt/theta/trails` mount.
@@ -172,8 +180,9 @@ explicit identity scope.
   instance rather than editing the old one.
 - **Registry.** A `panes` table holds `ref`, `instance`, `native`,
   `spawn_cwd`, `cwd`, `repo`, `branch`, `pr`, `title`, `spawned_at`,
-  `last_seen_at` and `gone_at`. It is written on spawn and on `/link`, which
-  already binds a pane to a PR.
+  `last_seen_at` and `gone_at`. It is written on spawn, and on `/link`, which
+  already binds a pane to a PR: ringo's `/link-pane` handler forwards the
+  binding to `muxd` (story `ringo-http-pane-sender-shadow`).
 
 **Reconciliation.** It runs when `muxd` starts and on every `listPanes` poll
 (at most once every 5 s):
@@ -223,13 +232,13 @@ variable for a future backend), which returns the `PaneRef`.
 The Go tests are too thin to serve as the oracle. Each gate below is a number,
 and each one blocks a named step.
 
-| Gate                   | Measure                                                                                                                                   | Threshold                                                                                                                                                             | Blocks               |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
-| G1 classifier fixtures | TS output vs Go `cmd/parity-dump` `expected.json` over `parity/screens/`                                                                  | ≥ 300 screens, including ≥ 20 each of idle, busy, input-pending, usage-limit, API-error and stuck-retry; **100 % exact match**                                        | `muxd` serving reads |
-| G2 command traces      | Normalized argv JSONL diff, Go `Sender` vs TS `Fleet`, through a fake `tmux` shim, over the 9 scenarios in story `mux-trace-differential` | **0 diff lines**                                                                                                                                                      | any write cutover    |
-| G3 shadow soak (reads) | ringo computes status, input, usage-blocked and find through both implementations on every dashboard poll                                 | **7 consecutive days**, ≥ 20,000 comparisons over ≥ 30 distinct panes, **0 unexplained mismatches** (each explained one is added to G1 first, and the clock restarts) | write cutovers       |
-| G4 per-write soak      | For each write (message, spawn, kill/cleanup, pane logs) behind its flag: failure rate vs the Go baseline over the prior 7 days           | **3 days**, ≥ 50 operations, failure rate ≤ Go baseline, 0 lost messages (a sent message never confirmed and never retried)                                           | the next write; G5   |
-| G5 retirement          | `rg 'tmux\.Sender' btwebooks --type go` outside `tmux/`                                                                                   | **0 hits**, all G4 flags on for 7 days                                                                                                                                | deleting `tmux/`     |
+| Gate                   | Measure                                                                                                                                                                                                | Threshold                                                                                                                                                             | Blocks               |
+| ---------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
+| G1 classifier fixtures | TS output vs Go `cmd/parity-dump` `expected.json` over `parity/screens/`                                                                                                                               | ≥ 300 screens, including ≥ 20 each of idle, busy, input-pending, usage-limit, API-error and stuck-retry; **100 % exact match**                                        | `muxd` serving reads |
+| G2 command traces      | Normalized argv JSONL diff, Go `Sender` vs TS `Fleet`, through a fake `tmux` shim, over the 9 scenarios in story `mux-trace-differential`                                                              | **0 diff lines**                                                                                                                                                      | any write cutover    |
+| G3 shadow soak (reads) | ringo computes status, input, usage-blocked and find through both implementations on every dashboard poll                                                                                              | **7 consecutive days**, ≥ 20,000 comparisons over ≥ 30 distinct panes, **0 unexplained mismatches** (each explained one is added to G1 first, and the clock restarts) | write cutovers       |
+| G4 per-write soak      | For each write (message, spawn, kill/cleanup, pane logs) behind its flag: failure rate vs the Go baseline, which is counted per write during the G3 soak (story `mux-shadow-soak-and-mismatch-report`) | **3 days**, ≥ 50 operations, failure rate ≤ Go baseline, 0 lost messages (a sent message never confirmed and never retried)                                           | the next write; G5   |
+| G5 retirement          | `rg 'tmux\.Sender' btwebooks --type go` outside `tmux/`                                                                                                                                                | **0 hits**, all G4 flags on for 7 days                                                                                                                                | deleting `tmux/`     |
 
 ## Non-goals
 
@@ -325,3 +334,8 @@ and each one blocks a named step.
   - turned the parity checks into numeric gates G1 to G5,
   - moved cmux to non-goals,
   - added the remaining template sections and the stories.
+- 2026-10-28: tightened the design:
+  - `muxd` requires a bearer token, because it can type into agent shells,
+  - the Go write-failure baseline is now measured during the G3 soak,
+  - the `/link` binding to the registry is now owned by a story,
+  - corrected the count of primitive call sites.

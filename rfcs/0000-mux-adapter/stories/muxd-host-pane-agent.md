@@ -26,3 +26,5 @@ Covers the RFC's **Topology** section. It runs on the host as a systemd user uni
 - [ ] A systemd user unit and its install steps are documented
 - [ ] `GET /up` and a restart policy are in place
 - [ ] Reads are disabled until G1 is green (enforced in config)
+- [ ] Every endpoint except `GET /up` requires the bearer token from the host token file, and a test checks that a request without it gets `401`
+- [ ] The install steps cover Node 24 on the host
