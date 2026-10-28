@@ -1,7 +1,7 @@
 ---
 title: "Rebase GeneratorBase onto Thor::Group + Thor::Shell and delete its dispatch / invoke / hook / say copies"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-28
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -16,9 +16,9 @@ deps:
 deps-rfc: []
 est-loc: 600
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9394
+claim: "2026-10-28T01:01:54Z"
+assignee: "converge-generator-base-create-file-onto-thor-actions"
 blocked-by: null
 closed-reason: null
 ---

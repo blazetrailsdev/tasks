@@ -1,7 +1,7 @@
 ---
 title: "actionpack exception constructors drop hand-set this.name now that classes are path-seated"
-status: in-progress
-updated: 2026-10-27
+status: done
+updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []

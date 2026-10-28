@@ -1,7 +1,7 @@
 ---
 title: 'ActionDispatch''s autoload_under "testing" block misses IntegrationTest, TestRequest and AssertionResponse'
-status: in-progress
-updated: 2026-10-27
+status: done
+updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat-native-required: aryJoin row must not require .join over Symbol-string elements"
-status: in-progress
-updated: 2026-10-27
+status: done
+updated: 2026-10-28
 rfc: "0194-ruby-compat-native-first"
 cluster: null
 packages: []

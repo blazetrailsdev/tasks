@@ -1,7 +1,7 @@
 ---
 title: "Request#controllerClassFor constantizes the controller instead of reading controllerConstants"
-status: in-progress
-updated: 2026-10-27
+status: done
+updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []

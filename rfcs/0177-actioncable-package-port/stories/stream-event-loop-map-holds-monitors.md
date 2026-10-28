@@ -1,7 +1,7 @@
 ---
 title: "StreamEventLoop's @map holds a monitor with value and interests, as nio4r's does"
-status: draft
-updated: 2026-10-27
+status: ready
+updated: 2026-10-28
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]

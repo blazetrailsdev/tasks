@@ -1,6 +1,6 @@
 ---
 title: "Converge Rails::Generators::Actions (rake, git, environment, route, initializer, …) onto Thor's run / in_root / inject actions"
-status: in-progress
+status: done
 updated: 2026-10-28
 rfc: "0171-thor-port"
 cluster: null
