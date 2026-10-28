@@ -176,10 +176,18 @@ Every `lib` file of `mail` (outside the retriever methods), `mini_mime`,
 
 ## Open questions
 
-1. **Transliteration of the Ragel output**: the generated Ruby (recommended,
-   regenerable from the vendored gem), or a hand port of the `.rl` grammars into
-   a JS state-machine generator. The second is ~1.4k lines of grammar but needs a
-   Ragel backend nobody maintains. Resolved by `mail-address-lists-parser-spike`.
+1. **How the Ragel parsers are ported**, decided for address lists first by
+   a three-way comparison in `mail-address-lists-parser-spike`: (A) a script
+   transliterates the generated `parsers/address_lists_parser.rb`, on the
+   precedent of nokogiri's racc port, though Ragel inlines its driver into
+   each file so there is no shared runtime; (B) a hand-written, readable TS
+   parser from `address_lists_parser.rl` and the grammars it includes,
+   building the same `AddressListStruct` / `AddressStruct`; (C) an npm parser
+   (`email-addresses`, nodemailer's `addressparser`) adapted to those structs.
+   Each is measured on pass rate against mail's address specs, lines owned
+   (generated and hand-written), bundle size, and the cost to apply it to the
+   other ten parsers. The repo owner leans toward B. The Design section's
+   transliteration recommendation stands only until this is resolved.
 2. **SMTP sink in CI**: npm `smtp-server` in-process (recommended, no service
    container) or a `smtp4dev` service. The delivery and `net-smtp` stories
    assume the recommendation; resolve before the RFC goes `active`.
@@ -190,3 +198,7 @@ Every `lib` file of `mail` (outside the retriever methods), `mini_mime`,
 - 2026-10-22: review: split oversized stories, owners for every lib file
   (Multibyte, railtie, support modules), `net-smtp` package, parser spike and
   drift check, LOC-waiver and test counts stated
+- 2026-10-28: Open question 1 reframed as a three-way comparison (transliterate,
+  hand-write from `.rl`, wrap npm) for address lists; repo owner leans toward
+  the hand-written port. mail 2.8.1 has eleven generated parsers in all, so
+  "the other eleven" elsewhere in this RFC means the other ten.
