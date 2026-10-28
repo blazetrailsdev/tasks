@@ -39,4 +39,4 @@ This is the consumer of RFC 0202, not a re-port of it.
   `call(file, …)`, as Rails calls `call`.
 - An unsupported method or argument raises `UnsupportedImageProcessingMethod`
   / `UnsupportedImageProcessingArgument` as Rails does.
-- `variant_processor` `:mini_magick` and `:vips` both work (open question 5).
+- `variant_processor` `:mini_magick` and `:vips` both work (open question 4).

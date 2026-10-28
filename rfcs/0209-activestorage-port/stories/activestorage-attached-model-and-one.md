@@ -33,8 +33,10 @@ reflection; `attachment_changes` (`:281`), `changed_for_autosave?`,
 - `hasOneAttached` defines the reader as a property and the writer as a sync
   setter on the generated-association module, with no string eval (RFC
   "Attaching").
-- `CreateOne` unfurls the attachable as the RFC's open question 4 rules, and
-  its `upload` runs in the async `after_commit`.
+- `CreateOne` reads nothing at construction; it unfurls the attachable
+  asynchronously on the first awaited step (`save`, `attach`, or awaiting the
+  change), per the RFC's Decisions, and its `upload` runs in the async
+  `after_commit`.
 - `One#attach`, `detach`, `purge`, `purge_later` are async; `One`'s
   `delegate_missing_to` is a Proxy row in CLAUDE.md's table.
 - The `One` tests are the `activestorage-attached-one-test` story.

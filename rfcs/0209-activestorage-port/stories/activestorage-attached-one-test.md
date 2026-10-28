@@ -29,3 +29,7 @@ after-commit ordering.
   filed as a remainder story with the line range it leaves.
 - Tests that depend on variants or previews wait on those stories rather than
   being rewritten.
+- Each test that reads a blob's checksum, byte size or content type between
+  assignment and an awaited step is listed in the PR body, and either awaits
+  that step first or carries a receipt citing the RFC's Decisions entry on
+  deferred unfurling.

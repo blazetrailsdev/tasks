@@ -125,14 +125,18 @@ memory stays sync.
   `perform_later`, per CLAUDE.md § "A job's `perform` and `enqueue` are async".
 - **Attaching.** The generated `avatar` reader is a property answering
   `Attached::One` (CLAUDE.md § "Generated attribute readers are properties"),
-  and the `avatar=` writer stays a sync setter: it only records an
+  and the `avatar=` writer stays a sync setter: it records an
   `Attached::Changes::CreateOne` in `attachment_changes`
-  (`attached/model.rb:117-126`). `CreateOne#initialize` unfurls the
-  attachable through `identify_without_saving`, which reads the io for its
-  checksum and its Marcel content type; that read is sync over ruby-compat's
-  `IO` / `StringIO` / `Tempfile` (open question 4). The upload happens in the
-  async `after_commit` (`attached/model.rb:144`). `attach`, `detach`, `purge`
-  and `purge_later` on `One` / `Many` are async, since each saves or deletes.
+  (`attached/model.rb:117-126`) and reads nothing. Every io read is async.
+  Rails' `CreateOne#initialize` unfurls the attachable at once through
+  `identify_without_saving`, reading the io for its checksum and Marcel
+  content type; trails moves that unfurl to the first awaited step that
+  reaches the change: `save` (the `after_save` at `attached/model.rb:142`),
+  `attach`, or an explicit await on the change. A sync read would block the
+  event loop for the whole file and could not read a stream-backed io. The
+  upload stays in the async `after_commit` (`attached/model.rb:144`).
+  `attach`, `detach`, `purge` and `purge_later` on `One` / `Many` are async,
+  since each reads, saves or deletes.
 - **Variants and previews.** `Variant#processed`, `VariantWithRecord#processed`,
   `Preview#processed`, `Variation#transform` and every transformer, analyzer
   and previewer call are async; `Variation#key`, `#digest`, `#format`,
@@ -201,9 +205,12 @@ precedent for an engine test database.
 - **Lay app/ files under `src/app/…`.** Rejected: solid-queue's
   `extraLibPaths` flattening is the enrolled precedent, and api-compare keys
   file paths that way.
-- **An async `avatar=` writer (`setAvatar`)**, so `CreateOne` can read the io
-  asynchronously. Not chosen by default because the writer only records a
-  change in Rails; open question 4 holds it.
+- **An async `avatar=` writer (`await user.setAvatar(file)`)**, keeping Rails'
+  unfurl-at-assignment timing. Rejected (owner, 2026-10-28): it gives up the
+  `user.avatar = file` spelling and the property shape every other generated
+  writer has.
+- **Sync io reads in `CreateOne#initialize`.** Rejected (owner, 2026-10-28):
+  they block the event loop for the whole file and cannot read a stream.
 
 ## Rollout
 
@@ -269,17 +276,25 @@ carry `deps` edges into RFC 0202 and RFC 0203 stories.
    three Disk services to a Disk primary (`mirror_service_test.rb:6-14`). Recommendation: port it, since
    `Blob#mirror_later` and `MirrorJob` reach it and it needs no SDK. The story
    is filed; close it `FALSIFIED:` if the answer is no.
-4. **Sync io reads in the `avatar=` writer.** Recommendation: keep the writer
-   sync and read the attachable synchronously (`fs.readSync` under ruby-compat
-   `File` / `Tempfile`, an in-memory `StringIO` / `Uint8Array` as is), as
-   `CreateOne#initialize` reads it in Ruby. An `ActionDispatch::Http::UploadedFile`
-   is already a tempfile on disk. The alternative is a `setAvatar()` async
-   writer, at the cost of the property shape every other generated writer has.
-5. **Default `variant_processor`.** Rails' module default is `:mini_magick`
+4. **Default `variant_processor`.** Rails' module default is `:mini_magick`
    (`lib/active_storage.rb:50`) and `load_defaults 7.0` sets `:vips`.
    Recommendation: keep both defaults as Rails has them; CI exercises both
    transformers through the 0202 backends.
 
+## Decisions
+
+- **Attachable io reads are async, deferred past the `avatar=` writer**
+  (owner, 2026-10-28). The writer stays a sync setter that only records the
+  change; `CreateOne` unfurls (checksum, content type, blob build) on the
+  first awaited step: `save`, `attach`, or awaiting the change. The
+  observable difference from Rails is the window between assignment and that
+  step: `user.avatar.blob`'s `checksum`, `byte_size` and `content_type` are
+  unset there. A ported test that reads them in that window awaits an async
+  step first or carries a receipt citing this decision; the attached-one and
+  attached-many test stories inventory those tests.
+
 ## Changelog
 
 - 2026-10-28: initial draft
+- 2026-10-28: attachable io reads are async and deferred past the sync
+  `avatar=` writer (owner ruling); former open question 4 moved to Decisions

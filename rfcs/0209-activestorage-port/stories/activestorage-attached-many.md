@@ -27,5 +27,7 @@ and `changes/{create_many,create_one_of_many,delete_many,detach_many,purge_many}
 ## Acceptance criteria
 
 - `hasManyAttached` and `Many` are ported as the one-attachment story ports
-  `One`; `attach` accepts the splat and the array form.
+  `One`; `attach` accepts the splat and the array form; `CreateMany` /
+  `CreateOneOfMany` unfurl asynchronously on the first awaited step, per the
+  RFC's Decisions.
 - `Many`'s `delegate_missing_to` is a Proxy row in CLAUDE.md's table.
