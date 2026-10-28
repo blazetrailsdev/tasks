@@ -17,6 +17,7 @@ packages:
   - "ruby-compat"
   - "tse-compiler"
   - "trails-tsc"
+  - "html-sanitizer"
 clusters: []
 related-rfcs:
   - "0140-actionview-rendering-core"
