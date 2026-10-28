@@ -1,6 +1,6 @@
 ---
 title: "smoke-boot builds its scratch tasks database from the test environment"
-status: in-progress
+status: done
 updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null

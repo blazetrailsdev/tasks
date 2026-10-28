@@ -1,7 +1,7 @@
 ---
 title: "track-trails-from-main-in-trailmap"
-status: ready
-updated: 2026-10-12
+status: in-progress
+updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#89
+claim: "2026-10-28T13:08:18Z"
+assignee: "split-the-render-pages-the-rails-way-story"
 blocked-by: null
 closed-reason: null
 ---

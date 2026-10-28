@@ -1,6 +1,6 @@
 ---
 title: "Image.open URL arm: port OpenURI::OpenRead#open"
-status: in-progress
+status: done
 updated: 2026-10-28
 rfc: "0203-mini-magick-port-to-100"
 cluster: null

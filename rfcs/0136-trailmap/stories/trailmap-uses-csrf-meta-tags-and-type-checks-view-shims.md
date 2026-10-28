@@ -1,7 +1,7 @@
 ---
 title: "trailmap: use csrfMetaTags, drop the csrfToken local, and type-check view shims"
-status: ready
-updated: 2026-10-12
+status: blocked
+updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
-blocked-by: null
+pr: trailmap#89
+claim: "2026-10-28T13:08:18Z"
+assignee: "split-the-render-pages-the-rails-way-story"
+blocked-by: "criteria 1-3 in trailmap#89; criterion 4 needs trails story view-shim-scope-falls-back-to-any-for-unknown-names (unknown names type as any)"
 closed-reason: null
 ---
 

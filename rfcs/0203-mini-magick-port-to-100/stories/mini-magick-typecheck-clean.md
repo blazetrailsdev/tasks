@@ -1,6 +1,6 @@
 ---
 title: "Take mini_magick to zero tsc errors and no any"
-status: in-progress
+status: done
 updated: 2026-10-28
 rfc: "0203-mini-magick-port-to-100"
 cluster: mini-magick-polish

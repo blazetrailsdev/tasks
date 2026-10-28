@@ -1,7 +1,7 @@
 ---
 title: "Port rb_mod_const_get so constantize is Object.const_get alone"
-status: ready
-updated: 2026-10-27
+status: in-progress
+updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9397
+claim: "2026-10-28T13:19:20Z"
+assignee: "enumerable-free-functions-remaining-loop-and-enumerator-sites"
 blocked-by: null
 closed-reason: null
 ---

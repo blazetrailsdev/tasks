@@ -1,7 +1,7 @@
 ---
 title: "Break the request.ts cycle so actionpack's five remaining Request reads become imports"
 status: ready
-updated: 2026-10-27
+updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []

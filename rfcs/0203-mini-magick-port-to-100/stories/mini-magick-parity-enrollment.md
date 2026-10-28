@@ -1,7 +1,7 @@
 ---
 title: "Enroll mini_magick in parity:api and parity:test at 100%"
-status: ready
-updated: 2026-10-22
+status: claimed
+updated: 2026-10-28
 rfc: "0203-mini-magick-port-to-100"
 cluster: mini-magick-parity
 packages: ["mini-magick"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-28T13:16:11Z"
+assignee: "mini-magick-image-cold-signature-equality"
 blocked-by: null
 ---
 

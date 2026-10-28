@@ -1,6 +1,6 @@
 ---
 title: "Crass facade reads U+0080-U+009F as name code points, as Crass does"
-status: draft
+status: ready
 updated: 2026-10-28
 rfc: "0176-actionview-helpers"
 cluster: null

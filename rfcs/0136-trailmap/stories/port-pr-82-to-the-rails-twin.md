@@ -1,6 +1,6 @@
 ---
 title: "Port trailmap#82 (session files, JSON API idioms, shared fleet upstream, dep-held as blocked) to rails/"
-status: in-progress
+status: done
 updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null

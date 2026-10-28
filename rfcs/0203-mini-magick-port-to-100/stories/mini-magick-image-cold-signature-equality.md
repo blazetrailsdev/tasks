@@ -1,6 +1,6 @@
 ---
 title: "Image#==/hash must not silently compare a cold (Promise) signature"
-status: draft
+status: claimed
 updated: 2026-10-28
 rfc: "0203-mini-magick-port-to-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-28T13:16:11Z"
+assignee: "mini-magick-image-cold-signature-equality"
 blocked-by: null
 closed-reason: null
 ---

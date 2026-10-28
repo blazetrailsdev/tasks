@@ -1,6 +1,6 @@
 ---
 title: "trailmap: the index.json equivalence test still runs only on the box, because CI has no published index.json"
-status: in-progress
+status: done
 updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null
