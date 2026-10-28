@@ -1,7 +1,7 @@
 ---
 title: "Convert arel's 278 deferred namespace reads to ES imports"
-status: ready
-updated: 2026-10-23
+status: claimed
+updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ deps-rfc: []
 est-loc: 520
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-28T20:19:20Z"
+assignee: "activerecord-reads-whose-import-edge-reorders-the-base-cycle"
 blocked-by: null
 closed-reason: null
 ---

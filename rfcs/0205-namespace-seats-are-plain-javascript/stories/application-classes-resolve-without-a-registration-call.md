@@ -1,7 +1,7 @@
 ---
 title: "Application classes resolve through a scanned per-application class-path table; the register* APIs and registerConstant go"
-status: ready
-updated: 2026-10-27
+status: claimed
+updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: retire
 packages:
@@ -19,8 +19,8 @@ deps-rfc: []
 est-loc: 500
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-28T20:49:20Z"
+assignee: "application-classes-resolve-without-a-registration-call"
 blocked-by: null
 closed-reason: null
 ---
