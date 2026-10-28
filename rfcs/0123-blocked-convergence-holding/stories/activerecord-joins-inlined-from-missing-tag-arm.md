@@ -2,7 +2,7 @@
 title: "activerecord joins the inlined-from missing-tag arm"
 status: ready
 updated: 2026-10-14
-rfc: "0188-module-initialize-inlined-into-constructors"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps:
