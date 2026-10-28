@@ -2,7 +2,7 @@
 title: "activerecord: Base includes ActiveModel::API's modules itself instead of extending Model"
 status: ready
 updated: 2026-10-11
-rfc: "0188-module-initialize-inlined-into-constructors"
+rfc: "0123-blocked-convergence-holding"
 cluster: conversion
 packages: ["activerecord", "activemodel"]
 deps: ["activemodel-inlines-api-attributes-and-serialize-cast-value-initialize"]
