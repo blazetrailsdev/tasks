@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat README: the rule-1 table becomes the full export ledger"
-status: in-progress
-updated: 2026-10-28
+status: closed
+updated: 2026-10-29
 rfc: "0194-ruby-compat-native-first"
 cluster: ledger
 packages: ["ruby-compat"]
@@ -12,7 +12,7 @@ pr: trails#9415
 claim: "2026-10-28T17:19:34Z"
 assignee: "ruby-compat-readme-export-ledger"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: owner ruling 2026-10-28 — src/index.ts is the export list; no README export ledger. JSDoc citations shipped in trails#9415."
 ---
 
 ## Context

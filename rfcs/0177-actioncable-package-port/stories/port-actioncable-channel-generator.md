@@ -1,7 +1,7 @@
 ---
 title: "Port Rails::Generators::ChannelGenerator and its templates"
-status: in-progress
-updated: 2026-10-27
+status: done
+updated: 2026-10-29
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["trailties"]

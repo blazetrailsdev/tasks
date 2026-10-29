@@ -1,7 +1,7 @@
 ---
 title: "rails/: /sessions/pane replays a pane log instead of answering 501"
 status: ready
-updated: 2026-10-28
+updated: 2026-10-29
 rfc: "0136-trailmap"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "rails/: Fleet::Relay streams /sessions/file and stops at the 128 MiB cap"
-status: ready
-updated: 2026-10-28
+status: in-progress
+updated: 2026-10-29
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#92
+claim: "2026-10-29T12:51:28Z"
+assignee: "loopback-only-guard-as-a-private-method-by-name"
 blocked-by: null
 closed-reason: null
 ---

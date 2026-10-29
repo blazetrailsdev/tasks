@@ -1,7 +1,7 @@
 ---
 title: "Converge or record the template markup twin-diff finds between rails/ and app/"
-status: in-progress
-updated: 2026-10-28
+status: done
+updated: 2026-10-29
 rfc: "0136-trailmap"
 cluster: null
 packages: []
