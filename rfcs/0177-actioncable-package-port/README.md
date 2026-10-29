@@ -887,14 +887,14 @@ silently.
     1 (`@missingRailsCall wakeup`), `connection/stream.ts` 2
     (`@missingRailsArgs pop`, `@missingRailsName writeHead`),
     `connection/client-socket.ts` 1 (`@noRailsEquivalent`);
-    `connection/web-socket.ts` carries none. Package-wide there are 19, all
-    `PERMANENT`. The close-out PR converged the last `call-mismatches-exclude`
+    `connection/web-socket.ts` carries none. Package-wide there are 17, all
+    `PERMANENT`, after the close-out PR deleted `server/worker.ts`'s `splitArgs`. The close-out PR converged the last `call-mismatches-exclude`
     row (`server/broadcasting.json`, `truncate`'s receiver-first argument) onto
     the `@missingRailsArgs truncate` receipt `channel/base.ts#transmit` already
     carries for the identical call.
   - **Seed versus actual.** The seed was 58 stories at 18,720 est-loc; the RFC
-    closed at 83 stories (79 done, 2 closed `FALSIFIED:`, 1 blocked,
-    the close-out) at 20,420 est-loc. The 38 shipped PRs measure 20,373
+    closed at 84 stories (79 done, 2 closed `FALSIFIED:`, 1 blocked,
+    the close-out and its bundled receipt story) at 20,500 est-loc. The 38 shipped PRs measure 20,373
     lines (additions + deletions, less lockfiles, snapshots and `.md`) against
     20,270 est-loc for the stories they closed: +0.5% overall, with the widest
     misses on #9304 (4 stories, 370 est, 1,238 actual), #9361 (450 / 884) and
@@ -924,7 +924,9 @@ silently.
     `claude-md-register-x-over-eager-load`, `load-controllers-shares-collect-constants`,
     `scoped-comparison-loads-every-mixin-source-gem`,
     `actioncable-server-broadcasting-module-members-credited-as-mixins`,
-    `ci-actioncable-only-routes-to-scoped-comparison`.
+    `ci-actioncable-only-routes-to-scoped-comparison`, and
+    `actioncable-receipts-outside-socket-files-traced` (filed by the close-out:
+    the RFC's receipt-location line could not hold as written).
   - **Open.** `configuration-test-framework-deprecators` stays blocked on the
     ActionMailbox, ActionMailer, ActionText and ActiveStorage ports, so
     `configuration_test.rb:4265` is the one RFC case not yet credited.
