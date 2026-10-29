@@ -1,6 +1,6 @@
 ---
 title: "StreamEventLoop#writes_pending converges to Rails' monitor-exists-only body"
-status: draft
+status: in-progress
 updated: 2026-10-29
 rfc: "0177-actioncable-package-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9429
+claim: "2026-10-29T13:09:27Z"
+assignee: "stream-event-loop-writes-pending-one-waiter-converges"
 blocked-by: null
 closed-reason: null
 ---

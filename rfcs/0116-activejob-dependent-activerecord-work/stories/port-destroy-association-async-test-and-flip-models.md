@@ -1,7 +1,7 @@
 ---
 title: "Port destroy_association_async_test.rb and flip the canonical models to dependent: :destroy_async"
-status: draft
-updated: 2026-08-21
+status: ready
+updated: 2026-10-29
 rfc: "0116-activejob-dependent-activerecord-work"
 cluster: null
 packages: ["activerecord"]

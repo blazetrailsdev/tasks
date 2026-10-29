@@ -1,6 +1,6 @@
 ---
 title: "trailmap: override timestampAttributesForUpdate instead of pinning trails' private timestamp caches"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0136-trailmap"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Make the fleet fan-out isolation test fail without its guard, or drop both"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0136-trailmap"
 cluster: null

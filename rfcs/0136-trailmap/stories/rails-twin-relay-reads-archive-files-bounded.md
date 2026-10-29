@@ -1,6 +1,6 @@
 ---
 title: "rails/: Fleet::Relay streams /sessions/file and stops at the 128 MiB cap"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0136-trailmap"
 cluster: null

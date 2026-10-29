@@ -1,6 +1,6 @@
 ---
 title: "ImageProcessing::Chainable as a thenable Proxy that collects operations"
-status: claimed
+status: done
 updated: 2026-10-29
 rfc: "0202-image-processing-port"
 cluster: ip-core
@@ -9,7 +9,7 @@ deps: ["vendor-image-processing-and-mini-magick"]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#9426
 claim: "2026-10-29T12:52:29Z"
 assignee: "image-processing-chainable-thenable-proxy"
 blocked-by: null

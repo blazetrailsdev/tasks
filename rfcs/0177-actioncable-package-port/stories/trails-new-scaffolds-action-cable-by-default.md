@@ -1,7 +1,7 @@
 ---
 title: "trails new stops skipping Action Cable and scaffolds real cable files"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-29
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["trailties"]
@@ -13,9 +13,9 @@ deps:
   ]
 deps-rfc: []
 est-loc: 350
-pr: null
-claim: null
-assignee: null
+pr: trails#9429
+claim: "2026-10-29T13:09:27Z"
+assignee: "stream-event-loop-writes-pending-one-waiter-converges"
 blocked-by: null
 closed-reason: null
 ---
