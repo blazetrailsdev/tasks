@@ -1,9 +1,9 @@
 ---
 rfc: "0116-activejob-dependent-activerecord-work"
 title: "ActiveJob-dependent ActiveRecord work: the dependent: :destroy_async closure"
-status: draft
+status: active
 created: 2026-08-21
-updated: 2026-08-21
+updated: 2026-10-29
 owner: "@deanmarano"
 packages:
   - "activerecord"
