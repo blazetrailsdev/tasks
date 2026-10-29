@@ -1,9 +1,9 @@
 ---
 rfc: "0176-actionview-helpers"
 title: "ActionView helpers — the helper half to parity"
-status: active
+status: closed
 created: 2026-10-01
-updated: 2026-10-19
+updated: 2026-10-29
 owner: "@deanmarano"
 priority: 3
 packages:

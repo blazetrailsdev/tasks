@@ -35,7 +35,7 @@ related-rfcs:
   - "0151-activesupport-autoload-slot-registry"
   - "0154-ruby-compat-surfaced-deviations"
   - "0197-plain-object-modules-replace-ruby-compat-module"
-priority: 1
+priority: null
 ---
 
 # RFC 0205 — Lean on ES imports

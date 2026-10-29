@@ -1,7 +1,7 @@
 ---
 title: "StreamEventLoop's @map holds a monitor with value and interests, as nio4r's does"
-status: ready
-updated: 2026-10-28
+status: in-progress
+updated: 2026-10-29
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9423
+claim: "2026-10-29T00:55:25Z"
+assignee: "stream-event-loop-map-holds-monitors"
 blocked-by: null
 closed-reason: null
 ---

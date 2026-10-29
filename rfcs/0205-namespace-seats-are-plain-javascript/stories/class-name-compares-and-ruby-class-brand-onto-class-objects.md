@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: name comparisons test the class object, and the rubyClass brand retires onto classpaths"
-status: in-progress
-updated: 2026-10-28
+status: done
+updated: 2026-10-29
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
