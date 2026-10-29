@@ -23,4 +23,4 @@ The first half of `vendor/rake/v13.2.1/lib/rake/application.rb` (847 lines): `in
 
 - [ ] Ported at the Ruby paths and names; option parsing accepts rake's documented switches.
 - [ ] Rakefile lookup walks up directories as `find_rakefile_location` does.
-- [ ] `test/test_rake_application.rb` (loading and option arms) and `test_rake_application_options.rb` port with verbatim names.
+- [ ] `test/test_rake_application.rb` (loading and option arms) and `test_rake_application_options.rb` port as native Vitest (`expect` and `@blazetrails/vitest-matchers`, per the rake RFC § "Tests are native Vitest"), names matching for `parity:test`.

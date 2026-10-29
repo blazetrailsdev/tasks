@@ -23,4 +23,4 @@ blocked-by: null
 
 - [ ] Ported at the Ruby paths and names; `Rake::Task[name]` raises the same "Don't know how to build task" `RuntimeError`.
 - [ ] Rules are ported, including `RuleRecursionOverflowError`.
-- [ ] `test/test_rake_task_manager.rb`, `test_rake_task_manager_argument_resolution.rb`, `test_rake_scope.rb`, `test_rake_name_space.rb` and `test_rake_rules.rb` port with verbatim names.
+- [ ] `test/test_rake_task_manager.rb`, `test_rake_task_manager_argument_resolution.rb`, `test_rake_scope.rb`, `test_rake_name_space.rb` and `test_rake_rules.rb` port as native Vitest (`expect` and `@blazetrails/vitest-matchers`, per the rake RFC § "Tests are native Vitest"), names matching for `parity:test`.

@@ -58,8 +58,18 @@ trailties' dispatch onto it.
 `packages/rake` mirrors `lib/rake/*.rb` file for file, under the repo's usual
 rules (CLAUDE.md § "Fidelity is the job"): Rails-style names, control flow and
 decomposition, errors with the same class and message, and enrolment in
-`parity:api` / `parity:test` like every other ported gem. rake's own Minitest
-suite (`test/`) ports with its test names verbatim.
+`parity:api` / `parity:test` like every other ported gem.
+
+### Tests are native Vitest
+
+rake's suite (`test/`) is Minitest. It is ported as native Vitest, not run on
+a Minitest shim: each `def test_foo` becomes an `it` in a `*.test.ts` beside
+the file it covers, named so `parity:test` matches it, and each assertion is a
+Vitest `expect` by the table in CONTRIBUTING.md § "Porting a Minitest
+assertion" — the built-in matcher by default, a `@blazetrails/vitest-matchers`
+matcher where the built-in gives the wrong answer for the value. Minitest's
+setup and teardown (`Rake::TestCase`, `test/helper.rb`) become `beforeEach` /
+`afterEach`.
 
 The core:
 

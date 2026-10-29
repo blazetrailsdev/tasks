@@ -23,4 +23,4 @@ The second half of `vendor/rake/v13.2.1/lib/rake/application.rb`: `run`, `top_le
 
 - [ ] Ported at the Ruby paths and names; `invoke_task("name[a,b]")` parses arguments as `parse_task_string` does.
 - [ ] Error display and exit status match Ruby; `--trace` and `Backtrace.collapse` filter frames by rake's rules over Node stack frames.
-- [ ] The remaining arms of `test/test_rake_application.rb`, plus `test_rake_top_level_functions.rb`, `test_rake_backtrace.rb`, `test_trace_output.rb` port with verbatim names.
+- [ ] The remaining arms of `test/test_rake_application.rb`, plus `test_rake_top_level_functions.rb`, `test_rake_backtrace.rb`, `test_trace_output.rb` port as native Vitest (`expect` and `@blazetrails/vitest-matchers`, per the rake RFC § "Tests are native Vitest"), names matching for `parity:test`.
