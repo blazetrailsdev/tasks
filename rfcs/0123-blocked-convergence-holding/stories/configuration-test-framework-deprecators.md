@@ -2,7 +2,7 @@
 title: "configuration-test-framework-deprecators"
 status: blocked
 updated: 2026-10-26
-rfc: "0177-actioncable-package-port"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
