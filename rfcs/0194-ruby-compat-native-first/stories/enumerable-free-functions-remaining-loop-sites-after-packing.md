@@ -35,6 +35,8 @@ closed-reason: null
 
 ## Acceptance criteria
 
-- [ ] Each site above uses the ruby-compat free function or carries a cited language-forced reason.
-- [ ] `Array#count` / `Array#compact` leave `RECEIVER_KEYED_RUBY_COMPAT_EXPORTS`, or the story records why they cannot.
+- [ ] `connection_pool.rb:687-689`'s `@connections.count { }` uses ruby-compat `count`.
 - [ ] `parity:api:calls` and `:calls:args` stay green with no new baseline rows.
+
+Every other site above, and the `Array#compact` / `Array#sort` rows, moved to
+`enumerable-free-functions-loop-sites-break-and-nonlocal-return`.
