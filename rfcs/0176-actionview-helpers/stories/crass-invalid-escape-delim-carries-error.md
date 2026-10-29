@@ -1,6 +1,6 @@
 ---
 title: "Crass facade marks an invalid-escape \\ delim error: true, as Crass does"
-status: in-progress
+status: done
 updated: 2026-10-28
 rfc: "0176-actionview-helpers"
 cluster: null

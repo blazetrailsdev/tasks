@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: rbDefineModule creates or reopens a top-level module; sharded test models use it"
-status: in-progress
+status: done
 updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null

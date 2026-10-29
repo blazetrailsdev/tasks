@@ -1,6 +1,6 @@
 ---
 title: "class-paths-resolve-for-entry-less-deep-imports"
-status: claimed
+status: ready
 updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-10-28T21:19:17Z"
-assignee: "class-paths-resolve-for-entry-less-deep-imports"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

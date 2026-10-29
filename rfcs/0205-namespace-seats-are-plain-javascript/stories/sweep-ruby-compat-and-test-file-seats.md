@@ -1,6 +1,6 @@
 ---
 title: "Convert the remaining test-file seats and ruby-compat's own"
-status: claimed
+status: in-progress
 updated: 2026-10-28
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 320
 priority: null
-pr: null
+pr: trails#9421
 claim: "2026-10-28T21:19:17Z"
 assignee: "class-paths-resolve-for-entry-less-deep-imports"
 blocked-by: null

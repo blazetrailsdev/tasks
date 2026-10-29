@@ -1,6 +1,6 @@
 ---
 title: "Drop the foreign_key/class_name options trails already infers on 8 associations"
-status: claimed
+status: in-progress
 updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: null
-pr: null
+pr: trailmap#91
 claim: "2026-10-28T22:52:30Z"
 assignee: "check-the-transcript-page-under-its-csp-sandbox"
 blocked-by: null
