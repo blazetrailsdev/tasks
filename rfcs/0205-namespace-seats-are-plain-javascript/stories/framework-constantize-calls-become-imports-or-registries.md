@@ -37,4 +37,6 @@ Repo-owner ruling, 2026-10-28, on closed trails#9397: trails does not resolve cl
 
 - [ ] Each call site is classified with its Rails `file:line`. A site whose name is known where it is written becomes an import. A site whose name ranges over a closed framework set (adapters, chronic handlers and repeaters, deprecation targets) reads a module-private map beside it. A site whose name comes from the application (association `class_name:`, STI `type`, polymorphic `_type`, a controller name, GlobalID, a serialized job class) reads its domain's `registerX` registry (`register-x-registries-gain-a-read-side`).
 - [ ] A Rails `constantize` at the site is not a reason to keep one. No converted site calls `constantize`, `safeConstantize`, a class-path table, `RCLASS_CONST_TBL` or a `const_get` walk.
+- [ ] Once every application-class site reads its registry, `registerModel`, `registerJob`, `registerChannel` and `registerConnection` stop writing through `registerConstant` (moved from `register-x-registries-gain-a-read-side`).
+- [ ] actionpack gains `registeredController` beside `registerController`, over its own map, read by the routing controller lookup in the same PR.
 - [ ] Touched test files pass, and each touched package's built `dist/**.js` loads as a plain-node ESM entry module.
