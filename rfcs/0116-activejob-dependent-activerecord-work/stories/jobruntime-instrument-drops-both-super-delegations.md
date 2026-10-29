@@ -1,6 +1,6 @@
 ---
 title: "JobRuntime#instrument drops both super delegations, so the host's instrumentation never runs"
-status: claimed
+status: in-progress
 updated: 2026-10-29
 rfc: "0116-activejob-dependent-activerecord-work"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["port-activejob-instrumentation"]
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: trails#9432
 claim: "2026-10-29T13:51:05Z"
 assignee: "jobruntime-instrument-drops-both-super-delegations"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "/sessions/transcript relays ringo's whole page, chrome and nav included"
-status: claimed
+status: in-progress
 updated: 2026-10-29
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trailmap#93
 claim: "2026-10-29T13:52:37Z"
 assignee: "port-the-session-transcript-page"
 blocked-by: null

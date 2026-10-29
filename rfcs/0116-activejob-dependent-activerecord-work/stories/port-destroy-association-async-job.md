@@ -1,6 +1,6 @@
 ---
 title: "Port ActiveRecord::DestroyAssociationAsyncJob and its two Rails test files"
-status: claimed
+status: in-progress
 updated: 2026-10-29
 rfc: "0116-activejob-dependent-activerecord-work"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["port-after-commit-jobs-callback", "port-activejob-test-helper-performed-
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#9432
 claim: "2026-10-29T13:51:05Z"
 assignee: "jobruntime-instrument-drops-both-super-delegations"
 blocked-by: null

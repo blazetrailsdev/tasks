@@ -1,7 +1,7 @@
 ---
 title: "rbBlockCall packs multi-value yields (rb_enum_values_pack); each receivers yield only Ruby's values"
-status: draft
-updated: 2026-10-28
+status: in-progress
+updated: 2026-10-29
 rfc: "0194-ruby-compat-native-first"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9435
+claim: "2026-10-29T14:09:53Z"
+assignee: "enumerable-free-functions-loop-sites-after-with-index"
 blocked-by: null
 closed-reason: null
 ---

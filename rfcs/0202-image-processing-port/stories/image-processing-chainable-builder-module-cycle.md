@@ -1,6 +1,6 @@
 ---
 title: "chainable.ts as an entry module: break the Builder/Chainable module-eval cycle"
-status: draft
+status: done
 updated: 2026-10-29
 rfc: "0202-image-processing-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9433
+claim: "2026-10-29T14:05:29Z"
+assignee: "image-processing-chainable-builder-module-cycle"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Application classes resolve through a scanned per-application class-path table; the register* APIs and registerConstant go"
-status: in-progress
-updated: 2026-10-28
+status: closed
+updated: 2026-10-29
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: retire
 packages:
@@ -22,7 +22,7 @@ pr: trails#9419
 claim: "2026-10-28T20:49:20Z"
 assignee: "application-classes-resolve-without-a-registration-call"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: superseded by the 2026-10-28 owner ruling (trails#9424): app classes resolve through registerX, and class-path tables print names only, never look them up."
 ---
 
 ## Context

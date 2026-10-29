@@ -1,6 +1,6 @@
 ---
 title: "StreamEventLoop#writes_pending converges to Rails' monitor-exists-only body"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0177-actioncable-package-port"
 cluster: null

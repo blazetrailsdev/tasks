@@ -1,6 +1,6 @@
 ---
 title: "url-helpers-reach-controllers-without-a-prototype-proxy"
-status: draft
+status: in-progress
 updated: 2026-10-29
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9437
+claim: "2026-10-29T14:49:30Z"
+assignee: "url-helpers-reach-controllers-without-a-prototype-proxy"
 blocked-by: null
 closed-reason: null
 ---

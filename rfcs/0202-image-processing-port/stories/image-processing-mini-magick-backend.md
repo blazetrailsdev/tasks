@@ -1,7 +1,7 @@
 ---
 title: "Port ImageProcessing::MiniMagick over the mini_magick port"
-status: ready
-updated: 2026-10-28
+status: in-progress
+updated: 2026-10-29
 rfc: "0202-image-processing-port"
 cluster: ip-backends
 packages: ["image-processing"]
@@ -9,9 +9,9 @@ deps: ["image-processing-pipeline-and-processor", "mini-magick-typecheck-clean"]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9438
+claim: "2026-10-29T14:34:07Z"
+assignee: "image-processing-mini-magick-backend"
 blocked-by: null
 ---
 

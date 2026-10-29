@@ -1,7 +1,7 @@
 ---
 title: "Port ImageProcessing::Pipeline and Processor"
-status: ready
-updated: 2026-10-28
+status: done
+updated: 2026-10-29
 rfc: "0202-image-processing-port"
 cluster: ip-core
 packages: ["image-processing"]
@@ -9,9 +9,9 @@ deps: ["image-processing-chainable-thenable-proxy"]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9433
+claim: "2026-10-29T14:05:29Z"
+assignee: "image-processing-chainable-builder-module-cycle"
 blocked-by: null
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Enroll rack-session in class-to-string-seat"
-status: blocked
-updated: 2026-10-27
+status: closed
+updated: 2026-10-29
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Held on decide-class-to-string-literal-against-generated-path-table: the static toString literal duplicates the Ruby path the RFC 0205 generated class-path table already answers through rbModName."
-closed-reason: null
+blocked-by: null
+closed-reason: "FALSIFIED: duplicates the class -> Ruby name table ruby-compat already generates (RFC 0205 README, 2026-10-29); a hand-seeded path literal per class is the registration protocol this RFC removes."
 ---
 
 ## Context

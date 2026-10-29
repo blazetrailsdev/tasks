@@ -1,6 +1,6 @@
 ---
 title: "IDHash distances under wasm-vips' libvips 8.18 agree with dhash-vips' assert_similar verdicts"
-status: draft
+status: ready
 updated: 2026-10-29
 rfc: "0202-image-processing-port"
 cluster: null

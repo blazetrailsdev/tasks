@@ -1,6 +1,6 @@
 ---
 title: "app-generator-required-railties-framework-requires"
-status: draft
+status: done
 updated: 2026-10-29
 rfc: "0177-actioncable-package-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9429
 claim: null
 assignee: null
 blocked-by: null

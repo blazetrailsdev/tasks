@@ -1,7 +1,7 @@
 ---
 title: "Close out the Action Cable port: verify every file, case and gate against the RFC"
-status: ready
-updated: 2026-10-21
+status: in-progress
+updated: 2026-10-29
 rfc: "0177-actioncable-package-port"
 cluster: fidelity
 packages: ["actioncable", "trailties", "scripts"]
@@ -26,9 +26,9 @@ deps:
   ]
 deps-rfc: []
 est-loc: 150
-pr: null
-claim: null
-assignee: null
+pr: trails#9436
+claim: "2026-10-29T14:21:55Z"
+assignee: "actioncable-close-out"
 blocked-by: null
 closed-reason: null
 ---

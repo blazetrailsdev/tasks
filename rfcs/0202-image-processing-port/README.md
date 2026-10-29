@@ -11,6 +11,7 @@ clusters:
   - ip-vendor
   - ip-core
   - ip-backends
+priority: 1
 ---
 
 # RFC 0202 — image_processing over wasm-vips, on the mini_magick port
