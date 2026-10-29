@@ -882,3 +882,49 @@ silently.
 - 2026-10-02: owner direction: added two root CI-scoping stories, generalizing
   RFC 0171's thor-only gate and scoped comparison job to Action Cable
   (58 stories, 18,720 est-loc).
+- 2026-10-29: close-out (`actioncable-close-out`).
+  - **Receipts.** The three Tier 2 files carry 4: `connection/stream-event-loop.ts`
+    1 (`@missingRailsCall wakeup`), `connection/stream.ts` 2
+    (`@missingRailsArgs pop`, `@missingRailsName writeHead`),
+    `connection/client-socket.ts` 1 (`@noRailsEquivalent`);
+    `connection/web-socket.ts` carries none. Package-wide there are 19, all
+    `PERMANENT`. The close-out PR converged the last `call-mismatches-exclude`
+    row (`server/broadcasting.json`, `truncate`'s receiver-first argument) onto
+    the `@missingRailsArgs truncate` receipt `channel/base.ts#transmit` already
+    carries for the identical call.
+  - **Seed versus actual.** The seed was 58 stories at 18,720 est-loc; the RFC
+    closed at 83 stories (79 done, 2 closed `FALSIFIED:`, 1 blocked,
+    the close-out) at 20,420 est-loc. The 38 shipped PRs measure 20,373
+    lines (additions + deletions, less lockfiles, snapshots and `.md`) against
+    20,270 est-loc for the stories they closed: +0.5% overall, with the widest
+    misses on #9304 (4 stories, 370 est, 1,238 actual), #9361 (450 / 884) and
+    #9364 (650 / 884), and the widest overestimates on #9202 (600 / 313) and
+    #9314 (800 / 495).
+  - **Stories added after the seed**, with the line the seed missed:
+    `handler-node-offers-hijack-on-ordinary-requests` and
+    `rack-hijack-returns-a-socket-io` (`rack/v3.1.14/lib/rack/lint.rb:582-603`),
+    `rack-response-type-admits-callable-hijack-header` and
+    `rack-response-type-admits-the-rack-hijack-header-callback` (`lint.rb:619-630`),
+    `upgrade-request-body-is-not-in-rack-input` (`lint.rb:423-426`),
+    `tcpsocket-read-nonblock-outbuf-and-backpressure` and
+    `basic-socket-read-blocks-until-length-or-eof` (`ruby/v3.3.11/io.c:3731`),
+    `pubsub-adapter-require-sets-load-error-path` (`server/configuration.rb:40-67`),
+    `server-base-pubsub-reader-is-synchronous` (`server/base.rb:93-95`),
+    `connection-base-new-tagged-logger-invented-function-arm` (`connection/base.rb:262-266`),
+    `type-actioncable-class-macros-on-connection-and-channel-base` (`connection/identification.rb:16-19`),
+    `type-channel-pubsub-and-connection-websocket-readers` (`channel/streams.rb:152-153`),
+    `redis-subscribed-client-wraps-raw-client` (`subscription_adapter/redis.rb:246-248`),
+    `configuration-test-framework-deprecators` (`railties/test/application/configuration_test.rb:4265-4283`),
+    `stop-stream-from-deletes-from-channel-stub-array` (`channel/test_case.rb:41-43`),
+    `stream-write-goes-through-write-nonblock` (`connection/stream.rb:42-70`),
+    `stream-event-loop-map-holds-monitors` (`connection/stream_event_loop.rb:32-33`),
+    `stream-event-loop-writes-pending-one-waiter-converges` (`stream_event_loop.rb:47-53`),
+    `app-generator-required-railties-framework-requires` (`railties/lib/rails/generators/app_base.rb:298-316`).
+    Tooling and split stories with no Rails line: `port-actioncable-client-test-remaining-cases`,
+    `claude-md-register-x-over-eager-load`, `load-controllers-shares-collect-constants`,
+    `scoped-comparison-loads-every-mixin-source-gem`,
+    `actioncable-server-broadcasting-module-members-credited-as-mixins`,
+    `ci-actioncable-only-routes-to-scoped-comparison`.
+  - **Open.** `configuration-test-framework-deprecators` stays blocked on the
+    ActionMailbox, ActionMailer, ActionText and ActiveStorage ports, so
+    `configuration_test.rb:4265` is the one RFC case not yet credited.
