@@ -1,7 +1,7 @@
 ---
 title: "activerecord-reads-whose-import-edge-reorders-the-base-cycle"
-status: claimed
-updated: 2026-10-28
+status: ready
+updated: 2026-10-29
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-10-28T20:19:20Z"
-assignee: "activerecord-reads-whose-import-edge-reorders-the-base-cycle"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
