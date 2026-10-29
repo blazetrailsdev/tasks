@@ -163,55 +163,54 @@ package. `vendor/ruby`'s are MRI internals, not a ported body.
 A surviving module-eval _seat_ is a plain assignment, `Owner.Name = Klass`,
 which is type-checked where the helper call was not.
 
-### The Ruby path is generated from the parity manifest, not registered
+### The Ruby name is printed from a ruby-compat table, never looked up
 
-The seat's other effect is a write into the `classpaths` WeakMap so `rbModName`
-answers `"Arel::Nodes::Not"` rather than JavaScript's `"Not"`. That path is
-real Rails behaviour — it surfaces in `inspect`, error messages, STI type
-columns and i18n keys — so it is kept. It does not need 790 runtime calls to
-record it: `scripts/api-compare/output/rails-api.json` already holds every Ruby
-class's `fqn` and defining file (`"Arel::Nodes::NotEqual": { fqn:
-"Arel::Nodes::NotEqual", file: "nodes/binary.rb", … }`), and `parity:api`
-already matches each TS class to that Ruby counterpart.
+A seat also wrote the `classpaths` WeakMap, so `rbModName` answers
+`"Arel::Nodes::Not"` rather than JavaScript's `"Not"`. That name is real Rails
+output — `inspect`, error messages, an STI `type` value, `compute_type`'s
+candidate names (`activerecord/lib/active_record/inheritance.rb:255-261`), i18n
+keys — so ruby-compat keeps a generated class → Ruby name table per package and
+`rbModName` reads it.
 
-So each package gets one **generated** module mapping its exported classes to
-their Ruby fqn, built by the existing manifest tooling and checked in, which
-`rbModName` consults before falling back to `klass.name`. Three properties the
-current shape lacks: it is verified by `parity:api` rather than by hand, a
-wrong or missing path is a CI red rather than a silently unqualified name, and
-adding a class costs nothing at its declaration.
+That is the table's whole job. By repo-owner ruling (2026-10-28, trails#9424):
 
-### Lookup goes too, not only definition
+- It answers class → name, and nothing else. It is never a name → class
+  lookup; `generatedClass` and `constantize`'s fallback to it are debt.
+- It is a ruby-compat internal. Outside ruby-compat only the generated
+  `class-paths*.generated.ts` files call `registerClassPaths`; hand-written
+  code reaches a name through `rbModName` / `rbInspect` only.
 
-An earlier draft left `rbModConstGet` / `rbModConstDefined` / `rbModConstants`
-/ `registerConstant` untouched as "nine" dynamic lookups. Measured on
-2026-10-27 they are far more: 587 `registerConstant` calls (139 non-test
-files), 38 `rbModConstGet`, 11 `rbModConstDefined`, 6 `rbModConstants`, and
-58 more calls into the top-level constant table, plus the invented
-`registerModel` / `registerController` / `registerJob` / `registerChannel` /
-`registerConnection` APIs (385 test call sites for `registerModel` alone).
-By repo-owner ruling (2026-10-27) the goal is for constant **lookup** to go
-away entirely, not only seating:
+### Lookup is an ES import or an explicit registry
 
-- A string-keyed lookup with a literal name is a plain ES import, as
-  CLAUDE.md § "A dispatch by name is spelled directly" rules for `send`.
-- A computed-name lookup becomes an **explicit registry**: a declared map from
-  the Ruby-visible name to the class, read at the call site, as that section
-  rules for a computed `send`. This holds even where the Rails body calls
-  `const_get`, `const_defined?`, `constants`, `constantize` or `path2class`.
-  trails does not port a `const_get` walk over namespace properties to
-  answer such a call (repo-owner ruling, 2026-10-28, on closed trails#9397).
-  The generated class-path tables and the per-application table below are
-  the registries. Where a closed set needs its own registry, it is a
-  module-private table beside the reader.
-- `registerConstant` and the top-level constant table `RCLASS_CONST_TBL` are
-  deleted. Framework and core classes resolve through generated class-path
-  tables. Application classes resolve through a per-application class-path
-  table that trailties' eager boot scan fills, read the same way as the
-  generated tables. This supersedes the `registerX` ruling of 2026-10-26
-  (trails#9319); the reasoning is in
-  `application-classes-resolve-without-a-registration-call`.
-- Each module-eval survivor below gets its own plan to become an import.
+Ruby finds a class by name at run time (`constantize`, `const_get`,
+`const_defined?`, `constants`, `path2class`). trails does not port that
+lookup, **even where the Rails body calls it**: this is JavaScript, and a class
+is reached the way JavaScript reaches it (repo-owner ruling, 2026-10-28,
+recorded in root CLAUDE.md § "Constant lookup is an import or a registry").
+
+- **A known name is an ES import.** A literal name, or one from a set the
+  framework closes (adapters, coders, type names, chronic handlers), is an
+  import, or a module-private map or `switch` beside the reader.
+- **An open set of application classes is an explicit registry.** Models (STI
+  `type`, polymorphic `_type`, `class_name:`, GlobalID) go through
+  `registerModel`, routed controllers through `registerController`, jobs
+  through `registerJob`, channels and connections through `registerChannel` /
+  `registerConnection`. Each registry keeps its own map and exports a name →
+  class read beside it; a domain with no registry gets one of the same shape,
+  never a generic constant lookup.
+- **`registerConstant` and the top-level constant table `RCLASS_CONST_TBL`
+  are deleted**, as are the outside-ruby-compat calls to `rbModConstGet`,
+  `rbModConstDefined`, `rbModConstants`, `rbPathToClass`, `registeredConstant`,
+  `constantize` and `safeConstantize`.
+
+Measured on 2026-10-28 (non-test source): `registerConstant` 279,
+`constantize` 44, `safeConstantize` 30, `rbModConstGet` 28,
+`registeredConstant` 16, `isRegisteredConstant` 12, `rbPathToClass` 8,
+`rbModConstDefined` 7, `rbModConstants` 3. Tests add 2,674 `registerX` calls,
+which stay: they are the target shape.
+
+This supersedes the 2026-10-27 ruling, which replaced the `registerX` APIs
+with a per-application class-path table filled by trailties' boot scan.
 
 ## What survives
 
@@ -240,28 +239,35 @@ Anything not on this list, after its sweep, is a plain ES import.
 
 ## Scope
 
-Story 1 amends the four CLAUDE.md texts. Story 2 lands the generated path
-table. Stories 3–11 are the per-package conversions. Story 12 gates both
-`rbModConstSet` and module-eval namespace reads. Story 13 retires the backlog
-arm still scheduled to do the opposite.
+The seat and read arm (landed or in flight): CLAUDE.md amendments, the
+per-package sweeps converting deferred reads to imports, the
+`rbModConstSet` gate, and the module-eval survivors.
 
-The lookup arm, added 2026-10-27:
+The lookup arm burns down in this order:
 
-- `constant-lookup-helpers-keep-only-rails-const-get-sites`
-- `framework-register-constant-seats-retire-onto-class-path-tables`
-- `ruby-compat-core-classes-join-a-generated-class-path-table`
-- `application-classes-resolve-without-a-registration-call`
-- `test-suites-drop-register-model-and-register-constant`
-- `module-eval-namespace-reads-converge-to-imports`
-- `delete-register-constant-and-the-top-level-constant-table`, the finish
-  line, which depends on all of the above and the gate
+1. **Gate** — `gate-constant-lookup-calls-outside-ruby-compat`: an only-shrink
+   per-file count of the lookup calls above, against the `origin/main`
+   merge-base, as `parity:api:sends` does. `registerX` is not counted.
+2. **Registry read sides** — `register-x-registries-gain-a-read-side`: each
+   `registerX` keeps its own map and stops writing through
+   `registerConstant`; `compute_type` is the proof reader.
+3. **Readers convert** — `framework-constantize-calls-become-imports-or-registries`
+   and `constant-lookup-helpers-keep-only-rails-const-get-sites`: every site
+   becomes an import, a module-private map, or a `registerX` read. A Rails
+   `const_get` at the site is not a reason to keep it.
+4. **Table boundary** — `class-path-table-api-is-ruby-compat-internal`: a lint
+   holding the class-path API inside ruby-compat; `inflector.ts`'s
+   `generatedClass` fallback and the hand-written actionpack row go.
+5. **Seats go** — `framework-register-constant-seats-retire-onto-class-path-tables`
+   (rescoped: seats are deleted once nothing reads them) and
+   `test-suites-drop-register-model-and-register-constant` (rescoped: tests
+   drop `registerConstant` only; `registerModel` stays).
+6. **Finish** — `delete-register-constant-and-the-top-level-constant-table`.
 
 Each conversion must re-run the ESM entry-module check CLAUDE.md
 § "Call-time constant resolution" prescribes — a plain-node import of the
 **built** `dist/**.js` modules as entry modules, because a vitest run enters a
-funnel module first and masks a TDZ. That check is the acceptance test for
-"this read was deferred after all", and it is why the conversions are per
-package rather than one sweep.
+funnel module first and masks a TDZ.
 
 ## Out of scope
 
@@ -269,8 +275,8 @@ package rather than one sweep.
   objects stay — they remain the public `Arel.Nodes` / `ActiveRecord.Base`
   surface a Rails developer reaches for, and RFC 0151 settled the autoload
   layer. This RFC changes how _framework-internal_ code reaches a class.
-- **Dropping the qualified Ruby path.** It is Rails-visible behaviour;
-  generating it is the point.
+- **Dropping the qualified Ruby path.** It is Rails-visible output, and
+  ruby-compat keeps it for printing a name.
 - **Application autoloading**, ratified absent in CLAUDE.md § "Trails has no
   autoloader".
 
@@ -292,6 +298,17 @@ it.
 invented calls past a mechanism that costs a compile-time check and a readable
 import graph, and the rule that produced them is still in CLAUDE.md producing
 more.
+
+**A per-application class-path table filled by a boot scan, in place of
+`registerX`.** This was the 2026-10-27 ruling. Rejected by the repo owner on
+2026-10-28: it routed name → class lookup through tables generated by the
+parity scripts and grew a story for every edge case of a class learning its own
+name (deep imports, renames, nested classes, entry-less packages). The
+registries are plain JavaScript and already exist.
+
+**Keep `constantize` / `const_get` wherever the Rails body calls it.**
+Rejected on 2026-10-28: "I don't even want 'justified by rails' — this is js,
+we want to do js as natively as possible."
 
 ## What this RFC reverses
 
