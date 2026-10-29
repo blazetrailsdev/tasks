@@ -170,4 +170,4 @@ as tasks (`db:*`, `app:template`) move onto tasks, which is what the existing
 
 ## Changelog
 
-- 2026-10-29: initial RFC
+- 2026-10-29: initial RFC; tests port as native Vitest; every rake test file assigned to a story or a non-goal
