@@ -39,3 +39,4 @@ production.
 - [ ] `baseName` / `generatorName` read the Ruby path (`rbModName`) for every generator, in tests and under `trails generate`.
 - [ ] `GeneratorBase.namespace` ports `base.rb:54-57`.
 - [ ] `TaskGenerator`'s explicit `sourceRoot` is removed; `default_source_root` finds `rails/task/templates`.
+- [ ] `AppGenerator`'s explicit `sourceRoot` (trails#9462) is removed; `default_source_root` finds `rails/app/templates`.
