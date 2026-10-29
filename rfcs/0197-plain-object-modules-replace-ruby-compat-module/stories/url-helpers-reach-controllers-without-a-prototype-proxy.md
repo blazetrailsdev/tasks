@@ -28,4 +28,4 @@ The Proxy exists because the url-helpers module is a live ruby-compat `Module` t
 
 - The controller reaches its URL helpers through ordinary prototype members (or the RFC's include of a plain-object module), with no Proxy in the controller prototype chain.
 - A route drawn after a controller class is defined is still reachable through its helper, as the existing `routes-helpers` and url-helper tests check.
-- The `new Module` / `Module` import counts for actionpack drop, and `pnpm parity:modules --tighten` records it.
+- The actionpack `new Module` / `Module` import counts for the url-helpers module are deferred to `actionpack-route-set-helper-modules-without-live-include`, which converts the route set's helper modules; this story removes the Proxy only (owner ruling, 2026-10-29).
