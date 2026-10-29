@@ -1,6 +1,6 @@
 ---
 title: "middleware-reaches-its-app-by-a-direct-call"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

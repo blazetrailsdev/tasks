@@ -1,6 +1,6 @@
 ---
 title: "rfc-page-lifecycle-buttons-and-ready-all-drafts"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0136-trailmap"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "ActiveRecord types cover lock(SqlLiteral), relation class methods, maximum and logger.silence"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0196-solid-stack"
 cluster: null

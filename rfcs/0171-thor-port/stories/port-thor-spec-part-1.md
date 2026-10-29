@@ -1,7 +1,7 @@
 ---
 title: "Port thor_spec.rb, part 1 (method_option, default_command, stop_on_unknown_option!, check_unknown_options!, disable_required_check!, map, desc, method_options)"
-status: ready
-updated: 2026-10-05
+status: in-progress
+updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 500
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9458
+claim: "2026-10-29T21:39:08Z"
+assignee: "converge-create-migration-onto-thor-create-file"
 blocked-by: null
 closed-reason: null
 ---

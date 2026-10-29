@@ -1,6 +1,6 @@
 ---
 title: "SolidCable config readers are synchronous; trimmable / nonBlockingLock read config as Rails does"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0196-solid-stack"
 cluster: null

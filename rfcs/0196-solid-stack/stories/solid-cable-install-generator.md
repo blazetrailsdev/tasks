@@ -1,6 +1,6 @@
 ---
 title: "Port solid_cable:install"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0196-solid-stack"
 cluster: solid-stack
