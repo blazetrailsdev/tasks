@@ -1,5 +1,5 @@
 ---
-title: "Test suites stop registering models, controllers and jobs by hand"
+title: "Test suites drop registerConstant (registerX stays)"
 status: ready
 updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
@@ -30,6 +30,8 @@ closed-reason: null
 
 ## Context
 
+**Direction change (repo owner, 2026-10-28, trails#9424):** lookup is an ES import or an explicit `registerX` registry, never `constantize` / `const_get`, even where Rails calls it; class-path tables answer class → Ruby name only. The text below is rescoped to that.
+
 The test suites register their canonical models, controllers and jobs by
 hand: 385 `registerModel` calls, plus `registerConstant` in 199 test or
 test-helper files (actionpack 47, activerecord 42, activejob 39,
@@ -54,11 +56,7 @@ Related: `0189/register-model-alias-does-not-rename-a-defined-class`,
 
 ## Acceptance criteria
 
-- [ ] No test or test-helper file calls `registerModel`, `registerController`,
-      `registerJob`, `registerChannel`, `registerConnection` or
-      `registerConstant`.
-- [ ] Each remaining `rbModConstSet` / `rbModRemoveConst` in a test mirrors a
-      `const_set` / `remove_const` / `stub_const` in the Rails test it ports
-      (`file:line` in the PR body).
-- [ ] Split by package if it exceeds the PR ceiling: file the remainder with
-      `tasks new` rather than fanning out.
+- [ ] No test or test-helper file calls `registerConstant`. `registerModel`, `registerController`, `registerJob`, `registerChannel` and `registerConnection` stay: they are the target shape.
+- [ ] A test that found a class through `constantize` imports it, or finds it through its domain's `registerX` read side.
+- [ ] Each remaining `rbModConstSet` / `rbModRemoveConst` in a test mirrors a `const_set` / `remove_const` / `stub_const` in the Rails test it ports (`file:line` in the PR body).
+- [ ] Split by package if it exceeds the PR ceiling: file the remainder with `tasks new` rather than fanning out.

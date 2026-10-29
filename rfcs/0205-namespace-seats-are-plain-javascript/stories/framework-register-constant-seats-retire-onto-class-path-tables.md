@@ -1,5 +1,5 @@
 ---
-title: "Retire framework registerConstant seats onto the generated class-path tables"
+title: "Framework registerConstant seats are deleted once nothing reads them"
 status: ready
 updated: 2026-10-27
 rfc: "0205-namespace-seats-are-plain-javascript"
@@ -28,6 +28,8 @@ closed-reason: null
 ---
 
 ## Context
+
+**Direction change (repo owner, 2026-10-28, trails#9424):** lookup is an ES import or an explicit `registerX` registry, never `constantize` / `const_get`, even where Rails calls it; class-path tables answer class → Ruby name only. The text below is rescoped to that.
 
 `registerConstant(path, Klass)` (`packages/ruby-compat/src/variable.ts:74`)
 writes the top-level constant table `RCLASS_CONST_TBL`
@@ -62,14 +64,8 @@ Related: `0154/seated-classes-answer-module-name-with-their-constant-path`,
 
 ## Acceptance criteria
 
-- [ ] No non-test framework file outside ruby-compat calls
-      `registerConstant`, except where the Rails body calls `const_set` on
-      `Object` (cite the `file:line`).
-- [ ] Each class a deleted seat named is reachable by `constantize` through
-      its package's generated table; add the missing table entries (export
-      the class if that is what kept it out).
-- [ ] `rbModName` answers the same qualified path for each such class as
-      before the change; a test pins a sample per package.
-- [ ] The built `dist/**.js` of each touched package loads as a plain-node
-      ESM entry module.
+- [ ] No non-test framework file outside ruby-compat calls `registerConstant`.
+- [ ] A seat is deleted once nothing reads it; a reader still needing the class imports it, or reads its domain's `registerX` registry (`register-x-registries-gain-a-read-side`). No seat is replaced by a class-path-table lookup.
+- [ ] `rbModName` answers the same qualified path for each such class as before; add missing class → name rows to the package's generated table where it does not.
+- [ ] The built `dist/**.js` of each touched package loads as a plain-node ESM entry module.
 - [ ] Touched test files pass.
