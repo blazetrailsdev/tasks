@@ -789,9 +789,9 @@ citing the Rails line this authoring missed.
   cases and the 2 `configuration_test.rb` cases (`:3632`, `:4265`).
 - Every parity gate is green for actioncable at zero, with no baseline row,
   exclude shard or mark above 0, and actioncable is in `ROWLESS_PACKAGES`.
-- Every receipt under `packages/actioncable/src` is `PERMANENT`, sits in a
-  file the CLAUDE.md section names (or at an adapter call a story lists), and
-  cites that section.
+- Every receipt under `packages/actioncable/src` is `PERMANENT` and traces to
+  a ratified CLAUDE.md section or a JavaScript language limit. Receipts carry no
+  prose, so the trace is recorded in `actioncable-receipts-outside-socket-files-traced`.
 - `client_test.rb`'s eight cases pass against `ActionCable.server` behind
   `Rack::Handler::Node` over TCP, and the published `@rails/actioncable`
   client completes a subscribe / perform / broadcast / disconnect cycle against
