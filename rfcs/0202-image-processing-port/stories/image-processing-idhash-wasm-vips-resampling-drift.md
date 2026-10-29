@@ -1,6 +1,6 @@
 ---
 title: "IDHash distances under wasm-vips' libvips 8.18 agree with dhash-vips' assert_similar verdicts"
-status: ready
+status: in-progress
 updated: 2026-10-29
 rfc: "0202-image-processing-port"
 cluster: null
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9440
+claim: "2026-10-29T16:07:40Z"
+assignee: "image-processing-backend-tests-remainder"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,9 +1,9 @@
 ---
 rfc: "0177-actioncable-package-port"
 title: "@blazetrails/actioncable: port Action Cable, with its socket layer over Node"
-status: active
+status: closed
 created: 2026-10-01
-updated: 2026-10-21
+updated: 2026-10-29
 owner: "@deanmarano"
 packages:
   - actioncable

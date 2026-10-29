@@ -1,6 +1,6 @@
 ---
 title: "enroll-activerecord-test-activejob-in-parity-test"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0116-activejob-dependent-activerecord-work"
 cluster: null

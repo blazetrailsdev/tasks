@@ -1,6 +1,6 @@
 ---
 title: "image-processing-vips-loader-saver-option-introspection"
-status: draft
+status: in-progress
 updated: 2026-10-29
 rfc: "0202-image-processing-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9440
+claim: "2026-10-29T16:07:40Z"
+assignee: "image-processing-backend-tests-remainder"
 blocked-by: null
 closed-reason: null
 ---

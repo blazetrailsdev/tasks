@@ -1,7 +1,7 @@
 ---
 title: "Port Previewer, the MuPDF, Poppler and video previewers, Preview and PreviewImageJob"
-status: draft
-updated: 2026-10-28
+status: ready
+updated: 2026-10-29
 rfc: "0209-activestorage-port"
 cluster: as-previews
 packages: ["activestorage"]

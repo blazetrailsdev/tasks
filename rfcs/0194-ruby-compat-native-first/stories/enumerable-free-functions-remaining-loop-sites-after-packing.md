@@ -1,6 +1,6 @@
 ---
 title: "enumerable-free-functions-remaining-loop-sites-after-packing"
-status: draft
+status: in-progress
 updated: 2026-10-29
 rfc: "0194-ruby-compat-native-first"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9442
+claim: "2026-10-29T16:18:57Z"
+assignee: "enumerable-free-functions-remaining-loop-sites-after-packing"
 blocked-by: null
 closed-reason: null
 ---

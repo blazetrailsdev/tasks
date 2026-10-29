@@ -1,7 +1,7 @@
 ---
 title: "Port the representation base, redirect and proxy controllers"
-status: draft
-updated: 2026-10-28
+status: ready
+updated: 2026-10-29
 rfc: "0209-activestorage-port"
 cluster: as-controllers
 packages: ["activestorage"]

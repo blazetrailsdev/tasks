@@ -1,7 +1,7 @@
 ---
 title: "Port ActionCable::SubscriptionAdapter::SolidCable and its message model"
-status: ready
-updated: 2026-10-26
+status: in-progress
+updated: 2026-10-29
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-cable"]
@@ -13,9 +13,9 @@ deps:
   ]
 deps-rfc: []
 est-loc: 450
-pr: null
-claim: null
-assignee: null
+pr: trails#9445
+claim: "2026-10-29T16:09:47Z"
+assignee: "port-solid-cable-adapter"
 blocked-by: null
 closed-reason: null
 priority: 6

@@ -1,7 +1,7 @@
 ---
 title: "Port IO.popen's argv and block form to ruby-compat over the child-process adapter"
-status: draft
-updated: 2026-10-28
+status: in-progress
+updated: 2026-10-29
 rfc: "0209-activestorage-port"
 cluster: as-infra
 packages: ["ruby-compat"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9444
+claim: "2026-10-29T16:17:59Z"
+assignee: "activestorage-parity-enrollment-and-package"
 blocked-by: null
 closed-reason: null
 ---

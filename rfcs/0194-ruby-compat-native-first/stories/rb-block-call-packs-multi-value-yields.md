@@ -1,6 +1,6 @@
 ---
 title: "rbBlockCall packs multi-value yields (rb_enum_values_pack); each receivers yield only Ruby's values"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0194-ruby-compat-native-first"
 cluster: null

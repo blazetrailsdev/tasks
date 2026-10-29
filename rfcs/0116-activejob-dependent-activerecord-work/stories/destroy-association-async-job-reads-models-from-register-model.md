@@ -1,6 +1,6 @@
 ---
 title: "destroy-association-async-job-reads-models-from-register-model"
-status: draft
+status: ready
 updated: 2026-10-29
 rfc: "0116-activejob-dependent-activerecord-work"
 cluster: null

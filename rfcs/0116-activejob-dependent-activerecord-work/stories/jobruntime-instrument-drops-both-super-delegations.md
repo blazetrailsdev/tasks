@@ -1,6 +1,6 @@
 ---
 title: "JobRuntime#instrument drops both super delegations, so the host's instrumentation never runs"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0116-activejob-dependent-activerecord-work"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "scrub decodes each UTF-8 sequence with a BOM-stripping TextDecoder, so htmlEscape drops U+FEFF"
-status: draft
+status: in-progress
 updated: 2026-10-29
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9441
+claim: "2026-10-29T16:29:26Z"
+assignee: "scrub-drops-a-byte-order-mark"
 blocked-by: null
 closed-reason: null
 ---

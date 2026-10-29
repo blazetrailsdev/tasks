@@ -1,7 +1,7 @@
 ---
 title: "Port the ActiveStorage migrations and the dummy app's test database"
-status: draft
-updated: 2026-10-28
+status: ready
+updated: 2026-10-29
 rfc: "0209-activestorage-port"
 cluster: as-models
 packages: ["activestorage"]

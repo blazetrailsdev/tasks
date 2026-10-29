@@ -1,7 +1,7 @@
 ---
 title: "Port Variation, Variant, VariantRecord, VariantWithRecord, Blob::Representable and TransformJob"
-status: draft
-updated: 2026-10-28
+status: ready
+updated: 2026-10-29
 rfc: "0209-activestorage-port"
 cluster: as-variants
 packages: ["activestorage"]
