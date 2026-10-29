@@ -1,6 +1,6 @@
 ---
 title: "Create packages/activestorage and enroll it in parity:api and parity:test"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0209-activestorage-port"
 cluster: as-infra

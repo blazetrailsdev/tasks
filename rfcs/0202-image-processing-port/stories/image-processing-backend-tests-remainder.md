@@ -1,6 +1,6 @@
 ---
 title: "image-processing-backend-tests-remainder"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0202-image-processing-port"
 cluster: null

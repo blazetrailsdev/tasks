@@ -1,6 +1,6 @@
 ---
 title: "Type MiniMagick::Tool subclass constants so convert_shim needs no cast"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0202-image-processing-port"
 cluster: null

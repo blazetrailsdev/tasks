@@ -1,6 +1,6 @@
 ---
 title: "Port IO.popen's argv and block form to ruby-compat over the child-process adapter"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0209-activestorage-port"
 cluster: as-infra
