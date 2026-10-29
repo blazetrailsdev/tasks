@@ -1,6 +1,6 @@
 ---
 title: "Port ActiveStorage::Filename, Record, Current and BaseJob"
-status: ready
+status: in-progress
 updated: 2026-10-29
 rfc: "0209-activestorage-port"
 cluster: as-models
@@ -9,9 +9,9 @@ deps: ["activestorage-module-config-errors-and-log-subscriber"]
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9461
+claim: "2026-10-29T22:08:18Z"
+assignee: "activestorage-filename-record-and-current"
 blocked-by: null
 closed-reason: null
 ---

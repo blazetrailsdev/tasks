@@ -1,6 +1,6 @@
 ---
 title: "dbconsole's include_password switch is --includePassword, not Rails' --include-password"
-status: ready
+status: done
 updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-29T22:09:13Z"
+assignee: "port-thor-directory-action"
 blocked-by: null
 closed-reason: null
 ---

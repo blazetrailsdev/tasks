@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat-io-pipe"
-status: ready
+status: in-progress
 updated: 2026-10-29
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9459
+claim: "2026-10-29T22:08:36Z"
+assignee: "ruby-compat-io-pipe"
 blocked-by: null
 closed-reason: null
 ---

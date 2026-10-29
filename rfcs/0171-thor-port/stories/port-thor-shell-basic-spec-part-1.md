@@ -1,7 +1,7 @@
 ---
 title: "Port shell/basic_spec.rb, part 1 (padding, indent, ask, yes?, no?, say, say_error)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["port-thor-line-editor-and-ask", "port-thor-spec-helper-and-script-fixtur
 deps-rfc: []
 est-loc: 350
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9463
+claim: "2026-10-29T22:39:15Z"
+assignee: "port-thor-shell-basic-spec-part-1"
 blocked-by: null
 closed-reason: null
 ---

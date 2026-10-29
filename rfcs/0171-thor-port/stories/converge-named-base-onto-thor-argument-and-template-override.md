@@ -1,7 +1,7 @@
 ---
 title: "Converge NamedBase onto Thor's argument :name and its template override"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -13,9 +13,9 @@ deps:
 deps-rfc: []
 est-loc: 350
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9410
+claim: "2026-10-29T22:07:16Z"
+assignee: "converge-named-base-onto-thor-argument-and-template-override"
 blocked-by: null
 closed-reason: null
 ---

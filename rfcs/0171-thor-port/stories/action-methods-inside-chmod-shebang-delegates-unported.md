@@ -1,7 +1,7 @@
 ---
 title: "ActionMethods lacks inside/chmod/shebang delegates (Thor inside/chmod unported)"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9464
+claim: "2026-10-29T22:09:13Z"
+assignee: "port-thor-directory-action"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Call-args gate: admit strip and force_encoding as receiver-first, retire Thor's two @missingRailsArgs receipts"
-status: ready
+status: in-progress
 updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9462
+claim: "2026-10-29T22:07:16Z"
+assignee: "converge-named-base-onto-thor-argument-and-template-override"
 blocked-by: null
 closed-reason: null
 ---

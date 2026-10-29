@@ -1,7 +1,7 @@
 ---
 title: "Port Thor::Actions#directory and Actions::Directory (recursive copy with .tt rendering and .empty_directory)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 350
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9464
+claim: "2026-10-29T22:09:13Z"
+assignee: "port-thor-directory-action"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "@blazetrails/rake package skeleton"
-status: ready
+status: in-progress
 updated: 2026-10-29
 rfc: "0211-rake-gem-port"
 cluster: port
@@ -9,9 +9,9 @@ deps: [vendor-rake-13-2-1]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9460
+claim: "2026-10-29T22:08:51Z"
+assignee: "rake-package-skeleton"
 blocked-by: null
 ---
 

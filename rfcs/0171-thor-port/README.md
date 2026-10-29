@@ -16,7 +16,7 @@ clusters:
 related-rfcs:
   - "0142-trailties-surfaced-deviations"
   - "0149-bare-keyed-option-hashes"
-priority: 2
+priority: 4
 ---
 
 # RFC 0171 — Thor

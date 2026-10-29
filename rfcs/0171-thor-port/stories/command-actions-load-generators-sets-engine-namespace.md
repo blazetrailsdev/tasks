@@ -1,6 +1,6 @@
 ---
 title: "Command::Actions#load_generators sets Generators.namespace for an engine"
-status: ready
+status: blocked
 updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-10-29T22:07:16Z"
+assignee: "converge-named-base-onto-thor-argument-and-template-override"
+blocked-by: "Needs Railtie#railtie_namespace (railties/lib/rails/railtie.rb:266-268), which walks module_parents via constantize — barred by CLAUDE.md 'Constant lookup is an import or a registry'; owner decision needed on how an engine instance finds its isolated namespace module. ENGINE_ROOT (engine/commands.rb) is also unported."
 closed-reason: null
 ---
 

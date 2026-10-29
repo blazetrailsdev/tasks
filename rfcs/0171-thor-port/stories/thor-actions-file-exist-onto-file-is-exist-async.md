@@ -1,6 +1,6 @@
 ---
 title: "Converge Thor actions' File.exist? sites onto File.isExistAsync"
-status: ready
+status: in-progress
 updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9464
+claim: "2026-10-29T22:09:13Z"
+assignee: "port-thor-directory-action"
 blocked-by: null
 closed-reason: null
 ---
