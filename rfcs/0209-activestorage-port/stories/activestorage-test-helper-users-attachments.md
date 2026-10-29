@@ -5,7 +5,10 @@ updated: 2026-10-29
 rfc: "0209-activestorage-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - activestorage-attached-many
+  - activestorage-attached-model-and-one
+  - activestorage-filename-record-and-current
 deps-rfc: []
 est-loc: null
 priority: null
