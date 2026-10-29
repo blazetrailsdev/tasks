@@ -2,7 +2,7 @@
 title: "html-sanitizer-port-scrubbers"
 status: blocked
 updated: 2026-10-27
-rfc: "0176-actionview-helpers"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps:
