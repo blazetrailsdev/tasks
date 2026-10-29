@@ -1,6 +1,6 @@
 ---
 title: "/sessions/transcript relays ringo's whole page, chrome and nav included"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0136-trailmap"
 cluster: null

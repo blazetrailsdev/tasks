@@ -1,6 +1,6 @@
 ---
 title: "enroll-activerecord-test-activejob-in-parity-test"
-status: ready
+status: in-progress
 updated: 2026-10-29
 rfc: "0116-activejob-dependent-activerecord-work"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9432
+claim: "2026-10-29T15:09:47Z"
+assignee: "jobruntime-instrument-drops-both-super-delegations"
 blocked-by: null
 closed-reason: null
 ---

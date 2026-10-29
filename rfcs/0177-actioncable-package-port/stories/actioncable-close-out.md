@@ -1,6 +1,6 @@
 ---
 title: "Close out the Action Cable port: verify every file, case and gate against the RFC"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0177-actioncable-package-port"
 cluster: fidelity

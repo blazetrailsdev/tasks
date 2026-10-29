@@ -1,6 +1,6 @@
 ---
 title: "Port ImageProcessing::Vips over wasm-vips"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0202-image-processing-port"
 cluster: ip-backends

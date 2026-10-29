@@ -1,6 +1,6 @@
 ---
 title: "trailmap: the 'no hub schema' boot-refusal test times out under full-suite load"
-status: draft
+status: ready
 updated: 2026-10-29
 rfc: "0136-trailmap"
 cluster: null

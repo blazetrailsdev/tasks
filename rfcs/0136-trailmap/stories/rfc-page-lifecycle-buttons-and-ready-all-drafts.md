@@ -1,6 +1,6 @@
 ---
 title: "rfc-page-lifecycle-buttons-and-ready-all-drafts"
-status: ready
+status: in-progress
 updated: 2026-10-29
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#94
+claim: "2026-10-29T15:14:09Z"
+assignee: "rfc-page-lifecycle-buttons-and-ready-all-drafts"
 blocked-by: null
 closed-reason: null
 ---

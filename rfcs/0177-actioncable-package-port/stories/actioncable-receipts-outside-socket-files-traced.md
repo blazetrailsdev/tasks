@@ -1,6 +1,6 @@
 ---
 title: "Trace or converge Action Cable receipts outside the socket-layer files"
-status: claimed
+status: done
 updated: 2026-10-29
 rfc: "0177-actioncable-package-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#9436
 claim: "2026-10-29T14:57:22Z"
 assignee: "actioncable-close-out"
 blocked-by: null
