@@ -2,7 +2,7 @@
 title: "port-loofah-scrubber-class"
 status: draft
 updated: 2026-10-28
-rfc: "0176-actionview-helpers"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
