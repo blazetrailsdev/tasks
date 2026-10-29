@@ -1,9 +1,9 @@
 ---
 rfc: "0209-activestorage-port"
 title: "Port ActiveStorage on the Disk service"
-status: draft
+status: active
 created: 2026-10-28
-updated: 2026-10-28
+updated: 2026-10-29
 owner: "@deanmarano"
 packages:
   - activestorage
