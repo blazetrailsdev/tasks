@@ -1,6 +1,6 @@
 ---
 title: "Port Rake::DSL, FileTask, FileCreationTask, MultiTask"
-status: draft
+status: ready
 updated: 2026-10-29
 rfc: "0211-rake-gem-port"
 cluster: port

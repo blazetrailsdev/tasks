@@ -1,7 +1,7 @@
 ---
 title: "GeneratorBase is constructed by Thor::Base#initialize: Thor::Options parse, argument accessors, zero-arg commands"
-status: ready
-updated: 2026-10-04
+status: closed
+updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -19,7 +19,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#9399: generator constructors take Thor's (args, localOptions, config) and GeneratorBase has no constructor of its own (origin/main generators/base.ts: no constructor/parser), so Thor::Base#initialize (inlined in packages/thor/src/group.ts:311-409) does Thor::Options/Arguments parsing; NamedBase declares argument('name') (named-base.ts:18); no run(name, attributes) remains."
 ---
 
 ## Context

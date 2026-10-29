@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat-io-pipe"
-status: draft
+status: ready
 updated: 2026-10-29
 rfc: "0196-solid-stack"
 cluster: null

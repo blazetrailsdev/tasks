@@ -1,7 +1,7 @@
 ---
 title: "parity:api credits a top-level [initialize] hook assignment on a re-exported Module"
-status: draft
-updated: 2026-10-05
+status: closed
+updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone: trails#9059 inlined Thor::Base#initialize into the Thor/Group constructors; git grep '\\[initialize\\]' packages/thor/src/base.ts on origin/main -> 0 hits, so there is no top-level X[initialize] assignment to credit."
 ---
 
 ## Context

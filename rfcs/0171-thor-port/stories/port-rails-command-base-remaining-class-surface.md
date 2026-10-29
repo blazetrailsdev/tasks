@@ -1,7 +1,7 @@
 ---
 title: "port-rails-command-base-remaining-class-surface"
-status: draft
-updated: 2026-10-28
+status: ready
+updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
 packages: []

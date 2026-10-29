@@ -1,6 +1,6 @@
 ---
 title: "middleware-reaches-its-app-by-a-direct-call"
-status: draft
+status: in-progress
 updated: 2026-10-29
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9455
+claim: "2026-10-29T20:54:13Z"
+assignee: "middleware-reaches-its-app-by-a-direct-call"
 blocked-by: null
 closed-reason: null
 ---

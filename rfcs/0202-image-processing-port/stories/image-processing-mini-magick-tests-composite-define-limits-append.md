@@ -1,6 +1,6 @@
 ---
 title: "image-processing-mini-magick-tests-composite-define-limits-append"
-status: draft
+status: done
 updated: 2026-10-29
 rfc: "0202-image-processing-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9454
+claim: "2026-10-29T20:30:47Z"
+assignee: "image-processing-mini-magick-tests-composite-define-limits-append"
 blocked-by: null
 closed-reason: null
 ---

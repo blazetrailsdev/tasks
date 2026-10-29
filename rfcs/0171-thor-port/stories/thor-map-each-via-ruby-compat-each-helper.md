@@ -1,7 +1,7 @@
 ---
 title: "Thor.map iterates keys through a ruby-compat each helper, dropping the invented Hash arm"
-status: draft
-updated: 2026-10-26
+status: ready
+updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
 packages: []

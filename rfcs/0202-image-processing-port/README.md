@@ -1,9 +1,9 @@
 ---
 rfc: "0202-image-processing-port"
 title: "image_processing over wasm-vips, on the mini_magick port"
-status: active
+status: closed
 created: 2026-10-21
-updated: 2026-10-28
+updated: 2026-10-29
 owner: "@deanmarano"
 packages:
   - image-processing

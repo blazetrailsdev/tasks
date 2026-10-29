@@ -1,6 +1,6 @@
 ---
 title: "Port Rake::Application option parsing and Rakefile loading"
-status: draft
+status: ready
 updated: 2026-10-29
 rfc: "0211-rake-gem-port"
 cluster: port

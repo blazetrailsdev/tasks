@@ -1,6 +1,6 @@
 ---
 title: "Port the ActiveStorage migrations and the dummy app's test database"
-status: claimed
+status: done
 updated: 2026-10-29
 rfc: "0209-activestorage-port"
 cluster: as-models
@@ -9,7 +9,7 @@ deps: ["activestorage-parity-enrollment-and-package"]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#9450
 claim: "2026-10-29T19:38:39Z"
 assignee: "activestorage-ci-media-binaries"
 blocked-by: null

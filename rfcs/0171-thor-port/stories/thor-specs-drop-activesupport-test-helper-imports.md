@@ -1,7 +1,7 @@
 ---
 title: "Thor specs drop their @blazetrails/activesupport test-helper imports and the import-boundary ignores list"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
 packages: []

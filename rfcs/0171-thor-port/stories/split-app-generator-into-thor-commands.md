@@ -1,7 +1,7 @@
 ---
 title: "Split AppBase / AppGenerator into Rails' Thor commands (create_root_files … finish_template)"
-status: ready
-updated: 2026-09-30
+status: closed
+updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -20,7 +20,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "trails#9399 (rebase GeneratorBase onto Thor::Group) registers every generator's Rails command methods via methodAdded in Rails order with hooks between; PR body: 'This covers the work of the four split-* stories'. origin/main: git grep '^\\s*(async )?run\\(' packages/trailties/src/generators -> 0 hits; app-generator.ts:99+ methodAdded createRoot..."
 ---
 
 ## Context

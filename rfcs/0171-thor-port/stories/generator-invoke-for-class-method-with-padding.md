@@ -1,7 +1,7 @@
 ---
 title: "generator-invoke-for-class-method-with-padding"
-status: ready
-updated: 2026-10-04
+status: closed
+updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#9399 + port-thor-group: GeneratorBase now inherits Thor::Group#_invoke_for_class_method, which wraps in withPadding (packages/thor/src/group.ts:412-421); trails' own copy was deleted with the invocation registries."
 ---
 
 ## Context

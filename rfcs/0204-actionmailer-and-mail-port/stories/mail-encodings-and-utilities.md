@@ -1,6 +1,6 @@
 ---
 title: "Port Mail::Encodings, encodings/ and Mail::Utilities"
-status: claimed
+status: in-progress
 updated: 2026-10-29
 rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-core
@@ -9,7 +9,7 @@ deps: ["vendor-mail-mini-mime-and-net-smtp"]
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
+pr: trails#9452
 claim: "2026-10-29T19:46:24Z"
 assignee: "mail-encodings-and-utilities"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "generators-read-app-files-relative-to-the-working-directory"
-status: draft
-updated: 2026-10-27
+status: ready
+updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
 packages: []

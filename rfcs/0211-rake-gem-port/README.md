@@ -16,6 +16,7 @@ related-rfcs:
   - "0171-thor-port"
   - "0142-trailties-surfaced-deviations"
   - "0189-activerecord-surfaced-deviations"
+priority: 3
 ---
 
 # RFC 0211 — Rake

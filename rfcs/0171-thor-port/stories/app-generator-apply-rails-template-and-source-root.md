@@ -1,7 +1,7 @@
 ---
 title: "Port AppBase#apply_rails_template and give AppGenerator a source root, retiring app:template's source-path push and verbose: false"
-status: draft
-updated: 2026-10-04
+status: ready
+updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
 packages: []

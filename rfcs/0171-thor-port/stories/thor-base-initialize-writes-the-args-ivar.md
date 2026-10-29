@@ -1,7 +1,7 @@
 ---
 title: "Thor::Base#initialize writes @args, not the args= writer"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
 packages: []

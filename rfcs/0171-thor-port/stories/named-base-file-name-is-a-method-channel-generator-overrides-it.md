@@ -1,7 +1,7 @@
 ---
 title: "NamedBase#file_name is a memoized method; TestUnit ChannelGenerator overrides it instead of mutating in a constructor"
-status: draft
-updated: 2026-10-22
+status: closed
+updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'Delivered by trails#9399 (''file_name overrides ... are now memoized reader overrides over NamedBase#file_name''): test-unit/channel/channel-generator.ts:25-28 is ''override get fileName() { return (this.__fileName ??= super.fileName.replace(/_channel$/i, "")) }'' and the invented constructor is gone.'
 ---
 
 ## Context

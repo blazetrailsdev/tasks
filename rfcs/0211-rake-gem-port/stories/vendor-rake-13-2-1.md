@@ -1,6 +1,6 @@
 ---
 title: "Vendor rake 13.2.1"
-status: draft
+status: done
 updated: 2026-10-29
 rfc: "0211-rake-gem-port"
 cluster: port
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9453
+claim: "2026-10-29T20:37:39Z"
+assignee: "vendor-rake-13-2-1"
 blocked-by: null
 ---
 

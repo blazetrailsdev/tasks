@@ -1,7 +1,7 @@
 ---
 title: "Thor::Actions#apply re-evaluates a URL template's module body on every apply"
-status: draft
-updated: 2026-10-04
+status: ready
+updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
 packages: []

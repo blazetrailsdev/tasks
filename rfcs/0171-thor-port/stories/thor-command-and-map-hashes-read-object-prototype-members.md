@@ -1,7 +1,7 @@
 ---
 title: "Thor commands / all_commands / map read Object.prototype members as entries"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
 packages: []

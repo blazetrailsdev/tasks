@@ -1,6 +1,6 @@
 ---
 title: "destroy-association-async-job-composite-key-where"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0116-activejob-dependent-activerecord-work"
 cluster: null

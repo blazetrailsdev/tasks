@@ -1,7 +1,7 @@
 ---
 title: "Converge Thor actions' File.exist? sites onto File.isExistAsync"
-status: draft
-updated: 2026-10-05
+status: ready
+updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
 packages: []

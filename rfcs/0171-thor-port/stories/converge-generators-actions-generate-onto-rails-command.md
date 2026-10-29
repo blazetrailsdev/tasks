@@ -1,7 +1,7 @@
 ---
 title: "converge-generators-actions-generate-onto-rails-command"
-status: draft
-updated: 2026-10-28
+status: ready
+updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
 packages: []

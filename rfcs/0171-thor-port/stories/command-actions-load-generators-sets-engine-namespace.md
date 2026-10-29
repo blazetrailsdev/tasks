@@ -1,6 +1,6 @@
 ---
 title: "Command::Actions#load_generators sets Generators.namespace for an engine"
-status: draft
+status: ready
 updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null

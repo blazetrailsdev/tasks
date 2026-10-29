@@ -1,7 +1,7 @@
 ---
 title: "call gate compares an includer's constructor against the included module's initialize"
-status: draft
-updated: 2026-10-05
+status: closed
+updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone: trails#9059 inlined Thor::Base#initialize into Group's constructor (packages/thor/src/group.ts:309-311 @inlinedFrom Thor::Base#initialize base.rb:53-113); there is no longer a one-line initializeIncludedModules chain seat (git grep initializeIncludedModules packages/thor/src/group.ts -> 0) nor a [initialize] hook in base.ts."
 ---
 
 ## Context

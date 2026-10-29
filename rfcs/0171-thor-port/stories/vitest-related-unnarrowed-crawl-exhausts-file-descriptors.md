@@ -1,7 +1,7 @@
 ---
 title: "vitest related without --project dies with EMFILE crawling every project's test files"
-status: draft
-updated: 2026-10-06
+status: closed
+updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Not necessary for the Thor port: CI's thor-only step runs the narrowed 'pnpm vitest related --run --passWithNoTests --project trailties' (.github/workflows/ci.yml:1119) and the thor package has its own vitest project (vitest.config.ts:652); the unnarrowed local invocation is a generic dev-tooling limit outside RFC 0171's charter."
 ---
 
 ## Context
