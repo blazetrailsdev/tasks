@@ -1,9 +1,9 @@
 ---
 rfc: "0204-actionmailer-and-mail-port"
 title: "ActionMailer, and the mail gem it builds messages with"
-status: draft
+status: active
 created: 2026-10-22
-updated: 2026-10-22
+updated: 2026-10-29
 owner: "@deanmarano"
 packages:
   - mail
