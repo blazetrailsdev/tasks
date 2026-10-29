@@ -2,7 +2,7 @@
 title: "enumerable-free-functions-loop-sites-break-and-nonlocal-return"
 status: draft
 updated: 2026-10-29
-rfc: "0194-ruby-compat-native-first"
+rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
