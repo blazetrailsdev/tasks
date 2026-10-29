@@ -392,7 +392,7 @@ for after merge):
 **This RFC depends on 0142 stories**: `generator-base-name-derived-from-bare-js-class-name`
 (Ruby constant names, for `namespace`), `port-app-builder-and-build-dispatch` (the `AppBuilder`
 move under `split-app-generator-into-thor-commands`), and
-`port-rake-dsl-task-manager-for-app-tasks` (Rake, for `port-rails-command-rake-command`).
+`port-rake-dsl-task-manager-for-app-tasks` (Rake, for `port-rails-command-rake-command`; the rake gem itself is the rake-gem-port RFC).
 `generator-inherited-registers-templates-path-source-paths`,
 `controller-generator-hook-targets-are-unported`,
 `scaffold-controller-hooks-test-framework-and-engine-arms` and
@@ -460,7 +460,7 @@ group + shell + lint (+ 0142 base-name) → rebase GeneratorBase → initialize/
                                                                                       └→ split-* (5) → trails new / help arm / action methods
 dispatch + invocation + shell + lint → Command::Base < Thor ─┬→ usage/banner, find_by_namespace → app loader
                                                               ├→ 6 command ports, application / help / version
-                                                              └→ rake command (← 0142 rake DSL) → db ×2, app:template
+                                                              └→ rake command (← rake-gem-port RFC) → db ×2, app:template
 all of the above → retire commander
 ```
 
@@ -672,8 +672,8 @@ missed.
    Resolved there.
 2. **Should `db:*` move to Rake here, or in its own RFC?** Recommendation: here. Commander
    cannot be retired without it, and the move re-wraps existing `DatabaseTasks` calls rather than
-   porting new behavior. If `port-rake-dsl-task-manager-for-app-tasks` (0142) is re-scoped into
-   its own RFC, the two `move-db-*` stories follow it. Resolved at `port-rails-command-rake-command`.
+   porting new behavior. `port-rake-dsl-task-manager-for-app-tasks` moves to the rake-gem-port RFC;
+   the two `move-db-*` stories stay here. Resolved at `port-rails-command-rake-command`.
 3. **Does the website need a browser `LineEditor`?** Recommendation: not in this RFC. The browser
    process adapter answers `gets` with EOF, which Thor treats as "yes" (`basic.rb:218-220`), and
    that matches today's always-force behavior. A real browser prompt is deferred to a website

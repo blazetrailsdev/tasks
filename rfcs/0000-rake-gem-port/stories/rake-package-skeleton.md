@@ -24,4 +24,4 @@ A new `packages/rake` mirroring `vendor/rake/v13.2.1/lib/rake/`, depending on `@
 - [ ] `packages/rake` builds and is wired into CI the way `packages/thor` is.
 - [ ] `parity:api` and `parity:test` see rake and report its files as unported.
 - [ ] `version.ts` ports `rake/version.rb` (the one real file this story lands).
-- [ ] `SCOPED_SKIP_GROUPS` records `thread_pool.rb`, `promise.rb`, `cpu_counter.rb` and `thread_history_display.rb` as not ported, citing the rake RFC § "`multitask` without a thread pool".
+- [ ] `SCOPED_SKIP_GROUPS` records `thread_pool.rb`, `promise.rb`, `cpu_counter.rb` and `thread_history_display.rb` as not ported, citing the rake RFC § "`multitask` without a thread pool", and `parity:api` stays green with those four files skipped.

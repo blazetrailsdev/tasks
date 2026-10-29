@@ -15,6 +15,7 @@ clusters:
 related-rfcs:
   - "0171-thor-port"
   - "0142-trailties-surfaced-deviations"
+  - "0189-activerecord-surfaced-deviations"
 ---
 
 <!-- Unnumbered until merge. -->
@@ -108,13 +109,28 @@ CLAUDE.md § "A migration file is loaded by `Kernel#load`" settles (`rbFLoad`).
 The default task file names become `Rakefile.ts` / `rakefile.ts` and
 `lib/tasks/*.ts`.
 
+### Package and dependency direction
+
+`@blazetrails/rake` depends on `@blazetrails/ruby-compat` only, and trailties
+depends on it, as rake has no dependency on Rails.
+
 ### trailties converges onto it
 
 `invokeRake` becomes Rails' `RakeCommand#perform`: boot `Rake.application`,
-`Rails.application.load_tasks`, invoke the task. `Trailtie.rakeTasks` blocks
-then run against a real `Rake.application`, and the commands Rails implements
-as tasks (`db:*`, `app:template`) move onto tasks, which is what the existing
-0171 stories ask for.
+`Rails.application.load_tasks`, invoke the task. Three existing stories own that
+work, and this RFC's stories are their foundation:
+
+- `port-rake-dsl-task-manager-for-app-tasks` (0142, rehomed here after merge):
+  `Engine#loadTasks` (`railties/lib/rails/engine.rb:468-472`) and
+  `Application#runTasksBlocks` (`railties/lib/rails/application.rb:560-569`,
+  including `task :environment`), so `Trailtie.rakeTasks` blocks run against
+  a real `Rake.application`. Its criteria are cut to that wiring in this PR;
+  vendoring and the DSL / manager / task port are this RFC's own stories.
+- `port-rails-command-rake-command` (0171): `RakeCommand#perform` replaces
+  `invokeRake`, which is deleted.
+- `move-db-commands-onto-databases-rake-tasks-part-1` / `-part-2` and
+  `move-app-template-command-onto-framework-rake-task` (0171) then move the
+  commands Rails implements as tasks onto tasks.
 
 ## Non-goals
 
@@ -152,22 +168,30 @@ as tasks (`db:*`, `app:template`) move onto tasks, which is what the existing
 2. `rake-task-and-arguments`, `rake-task-manager-and-scope` (needs the task).
 3. `rake-dsl-and-file-tasks`, `rake-file-utils`.
 4. `rake-application-options-and-loading`, `rake-application-top-level-run`.
-5. `port-rake-dsl-task-manager-for-app-tasks` is rehomed here after merge and
-   converges trailties' `invokeRake` onto `Rake.application`. The 0171 and
-   0189 stories under Motivation then gain a dep on it.
+5. `port-rake-dsl-task-manager-for-app-tasks` (deps:
+   `rake-application-top-level-run`) is rehomed here after merge with
+   `tasks rehome`.
+6. `port-rails-command-rake-command` (0171) already depends on
+   `port-rake-dsl-task-manager-for-app-tasks`, and the `move-*` stories on
+   `port-rails-command-rake-command`. This PR adds the one missing edge:
+   `database-tasks-run-migration-stands-in-for-rake-inlined-context` (0189) on
+   `port-rake-dsl-task-manager-for-app-tasks`.
 
 ## Verification
 
 - `parity:api` reports rake's ported files at 100% of their non-skipped
   members, and `parity:test` matches each ported rake test by name.
-- `invokeRake` is deleted, and `bin/rails db:migrate` reaches a
-  `Rake::Task#invoke` (a trailties test pins it).
+- `invokeRake` is deleted and `bin/rails db:migrate` reaches a
+  `Rake::Task#invoke`, pinned by a trailties test, owned by
+  `port-rails-command-rake-command`.
+- `Trailtie.rakeTasks` blocks and `lib/tasks/*.ts` load into
+  `Rake.application`, owned by `port-rake-dsl-task-manager-for-app-tasks`.
 
 ## Open questions
 
-1. **Package name and dependency direction.** `@blazetrails/rake`, depending
-   on ruby-compat only; trailties depends on it. Recommended.
+None. The package name and dependency direction are settled in Design, and a
+separate `bin/rake` executable is a non-goal.
 
 ## Changelog
 
-- 2026-10-29: initial RFC; tests port as native Vitest; every rake test file assigned to a story or a non-goal
+- 2026-10-29: initial RFC; tests port as native Vitest; every rake test file assigned to a story or a non-goal; convergence owners named, 0142 story trimmed, dep edges added
