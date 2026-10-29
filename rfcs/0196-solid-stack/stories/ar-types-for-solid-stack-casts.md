@@ -1,6 +1,6 @@
 ---
 title: "ActiveRecord types cover lock(SqlLiteral), relation class methods, maximum and logger.silence"
-status: draft
+status: in-progress
 updated: 2026-10-29
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9449
+claim: "2026-10-29T19:31:14Z"
+assignee: "ar-types-for-solid-stack-casts"
 blocked-by: null
 closed-reason: null
 ---

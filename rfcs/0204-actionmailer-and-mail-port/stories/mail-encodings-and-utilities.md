@@ -1,7 +1,7 @@
 ---
 title: "Port Mail::Encodings, encodings/ and Mail::Utilities"
-status: draft
-updated: 2026-10-22
+status: claimed
+updated: 2026-10-29
 rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-core
 packages: ["mail"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 700
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-29T19:46:24Z"
+assignee: "mail-encodings-and-utilities"
 blocked-by: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Install ffmpeg, mupdf-tools and poppler-utils on the activestorage CI lanes"
-status: ready
+status: claimed
 updated: 2026-10-29
 rfc: "0209-activestorage-port"
 cluster: as-infra
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-29T19:38:39Z"
+assignee: "activestorage-ci-media-binaries"
 blocked-by: null
 closed-reason: null
 ---

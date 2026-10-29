@@ -1,6 +1,6 @@
 ---
 title: "Port destroy_association_async_test.rb and flip the canonical models to dependent: :destroy_async"
-status: ready
+status: in-progress
 updated: 2026-10-29
 rfc: "0116-activejob-dependent-activerecord-work"
 cluster: null
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9447
+claim: "2026-10-29T19:19:53Z"
+assignee: "destroy-association-async-job-composite-key-where"
 blocked-by: null
 closed-reason: null
 ---

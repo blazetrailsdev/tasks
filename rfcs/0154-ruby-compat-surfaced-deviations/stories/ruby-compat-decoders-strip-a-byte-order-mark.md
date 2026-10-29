@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat's remaining default TextDecoders strip a leading U+FEFF"
-status: ready
+status: draft
 updated: 2026-10-29
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

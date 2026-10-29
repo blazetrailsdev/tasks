@@ -17,6 +17,7 @@ clusters:
   - mail-delivery
   - actionmailer
   - trailties
+priority: 4
 ---
 
 # RFC 0204 — ActionMailer, and the mail gem it builds messages with

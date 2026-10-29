@@ -1,6 +1,6 @@
 ---
 title: "image-processing-pipeline-test-backend-examples"
-status: ready
+status: in-progress
 updated: 2026-10-29
 rfc: "0202-image-processing-port"
 cluster: null
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9448
+claim: "2026-10-29T19:20:00Z"
+assignee: "image-processing-mini-magick-tests-remainder"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Port SolidCable Listener's self-pipe members over a ruby-compat IO.pipe"
-status: draft
+status: ready
 updated: 2026-10-29
 rfc: "0196-solid-stack"
 cluster: null

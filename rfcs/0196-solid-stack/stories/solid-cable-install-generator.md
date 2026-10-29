@@ -1,16 +1,16 @@
 ---
 title: "Port solid_cable:install"
-status: ready
-updated: 2026-10-26
+status: in-progress
+updated: 2026-10-29
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-cable"]
 deps: ["port-solid-cable-adapter"]
 deps-rfc: []
 est-loc: 150
-pr: null
-claim: null
-assignee: null
+pr: trails#9449
+claim: "2026-10-29T19:31:14Z"
+assignee: "ar-types-for-solid-stack-casts"
 blocked-by: null
 closed-reason: null
 priority: 8

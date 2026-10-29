@@ -1,7 +1,7 @@
 ---
 title: "Spike: three-way comparison for AddressListsParser (transliterate, hand-write, wrap npm)"
-status: draft
-updated: 2026-10-22
+status: done
+updated: 2026-10-29
 rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-core
 packages: ["mail"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 500
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-29T19:44:12Z"
+assignee: "mail-address-lists-parser-spike"
 blocked-by: null
 ---
 
