@@ -2,7 +2,7 @@
 title: "Triage the RFC 0154 drafts that exist only because of the Module carrier"
 status: ready
 updated: 2026-10-25
-rfc: "0194-ruby-compat-native-first"
+rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: ledger
 packages: ["ruby-compat"]
 deps: ["delete-ruby-compat-module-class-final"]

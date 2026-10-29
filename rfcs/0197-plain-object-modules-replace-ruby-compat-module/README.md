@@ -23,6 +23,7 @@ clusters:
   - tooling
   - conversion
   - retire
+  - "ledger"
 related-rfcs:
   - "0154-ruby-compat-surfaced-deviations"
   - "0188-module-initialize-inlined-into-constructors"
