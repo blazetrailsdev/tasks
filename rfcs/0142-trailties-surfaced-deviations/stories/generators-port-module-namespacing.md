@@ -49,6 +49,8 @@ output is identical, because `namespaced?` is always false.
   nested-directory destination and records why.
 - `channel.ts.tt` opens with `moduleNamespacing`, and the
   `@missingRailsCall module_namespacing` receipt on `createChannelFile` is deleted.
-- The `--skip-namespace` and isolated-engine tests in
-  `railties/test/generators/namespaced_generators_test.rb` that cover the channel
-  generator are ported.
+- `railties/test/generators/namespaced_generators_test.rb` (30 tests, for example
+  `test_namespaced_controller_skeleton_is_created` at `:31` and `test_skipping_namespace`
+  at `:42`) is ported for the generators trails has. Rails has no namespaced channel
+  test, so a TS-only `channel-generator.trails.test.ts` case asserts the wrapped
+  `channel.ts` under an isolated namespace.
