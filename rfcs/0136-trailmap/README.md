@@ -396,6 +396,17 @@ So phase B gives them tables, in trailmap's database, migrated by trailmap and
 written by ringo. Each file dual-writes through a soak before it is deleted;
 no file is removed in the story that adds its table.
 
+**Deploy logs are the exception: they stay files, on a shared read-only
+volume** (`deploy-logs-outlive-ringos-disk`). Each is a `pipe-pane` capture of
+up to megabytes, written by tmux and gzipped by ringo's sweep; copying it into
+a row would duplicate what the file already is. trailmap mounts ringo's pane-log
+directory read-only as `DEPLOY_LOGS_DIR` and reads a run's capture by base name,
+raw or `.gz`, so `/deploys/log` answers with ringo down. Finished runs need no
+backfill: their files are already in that directory. The run row names the
+file, so this completes when `move-deploys-and-sweeps-into-the-database` gives
+the row a `log_file` column; until then ringo's `/api/deploys` must expose it,
+and without it trailmap relays the log from ringo.
+
 This phase is also what makes the root dashboard portable. `/` is a 2,442-line
 constant HTML string plus `EventSource('/events')` (`dashboard.go:2154,2348`)
 **because** its data lives in process memory and JSON blobs — there is nothing
