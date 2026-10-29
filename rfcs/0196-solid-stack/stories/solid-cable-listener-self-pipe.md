@@ -5,7 +5,8 @@ updated: 2026-10-29
 rfc: "0196-solid-stack"
 cluster: null
 packages: []
-deps: []
+deps:
+  - ruby-compat-io-pipe
 deps-rfc: []
 est-loc: null
 priority: null
