@@ -2,7 +2,7 @@
 title: "Port Rake::Application#run, top_level and error display"
 status: draft
 updated: 2026-10-29
-rfc: "0000-rake-gem-port"
+rfc: "0211-rake-gem-port"
 cluster: port
 packages: [rake]
 deps: [rake-application-options-and-loading]

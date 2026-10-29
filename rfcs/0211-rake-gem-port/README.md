@@ -1,5 +1,5 @@
 ---
-rfc: "0000-rake-gem-port"
+rfc: "0211-rake-gem-port"
 title: "Rake: a direct port of rake 13.2.1, and trailties' task dispatch converged onto it"
 status: draft
 created: 2026-10-29
@@ -18,9 +18,7 @@ related-rfcs:
   - "0189-activerecord-surfaced-deviations"
 ---
 
-<!-- Unnumbered until merge. -->
-
-# RFC — Rake
+# RFC 0211 — Rake
 
 ## Summary
 
