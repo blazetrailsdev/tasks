@@ -5,7 +5,9 @@ updated: 2026-10-29
 rfc: "0202-image-processing-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - image-processing-vips-backend-over-wasm-vips
+  - image-processing-mini-magick-backend
 deps-rfc: []
 est-loc: null
 priority: null
