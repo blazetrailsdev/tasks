@@ -7,7 +7,7 @@ cluster: null
 packages:
   - "activerecord"
   - "trailties"
-deps: []
+deps: ["port-rake-dsl-task-manager-for-app-tasks"]
 deps-rfc: []
 est-loc: 120
 priority: null

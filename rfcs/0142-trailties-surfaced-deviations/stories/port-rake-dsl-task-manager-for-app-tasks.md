@@ -5,7 +5,7 @@ updated: 2026-09-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps: ["rake-application-top-level-run"]
 deps-rfc: []
 est-loc: null
 priority: 6
@@ -45,12 +45,11 @@ rake-13.2.1: `lib/rake/dsl_definition.rb`, `task_manager.rb`, `task.rb`,
 
 ## Acceptance criteria
 
-- rake is vendored through `vendor/sources.ts` so its `lib/rake/*.rb` can be cited.
-- A minimal async port of `Rake::DSL` (`namespace`, `desc`, `task` with
-  prerequisites), `Rake::TaskManager` (define/lookup/`in_namespace`) and
-  `Rake::Task#invoke`, placed where `parity:api` maps rake's files.
+Rescoped 2026-10-29: the rake gem itself (vendoring, `Rake::DSL`, `TaskManager`, `Task#invoke`, `Application`) is the rake-gem-port RFC's own stories. This story is the trailties wiring on top of `@blazetrails/rake`.
+
 - `Engine#loadTasks` and `Application#runTasksBlocks` (`application.rb:560-569`,
-  including `task :environment`) are ported on top of it.
+  including `task :environment`) are ported on `Rake.application`.
+- `Trailtie#runTasksBlocks` gains its caller, and `Trailtie.rakeTasks` blocks run against `Rake.application`.
 - Unblocks `engine-never-loads-lib-tasks`, which then adds the `Engine#runTasksBlocks`
   override, the CLI rake-command dispatch, and the generator template
   (`task.rb.tt`: `namespace`/`desc`/`task ...: :environment`).
