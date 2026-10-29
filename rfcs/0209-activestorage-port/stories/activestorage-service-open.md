@@ -5,7 +5,8 @@ updated: 2026-10-29
 rfc: "0209-activestorage-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - activestorage-blob-and-downloader
 deps-rfc: []
 est-loc: 15
 priority: null
