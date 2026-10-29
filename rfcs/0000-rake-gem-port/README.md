@@ -124,6 +124,14 @@ as tasks (`db:*`, `app:template`) move onto tasks, which is what the existing
 - **`file_list.rb`, `ext/string.rb`, `ext/core.rb`:** `FileList` has 2 uses in
   Rails' lib, and `ext/` monkeypatches `String`. Deferred to the first caller.
 - **`loaders/makefile.rb`, `win32.rb`, `rake_test_loader.rb`:** no caller.
+- **Their tests:** `test_rake_clean.rb`, `test_rake_file_list.rb`,
+  `test_rake_file_list_path_map.rb`, `test_rake_path_map*.rb`,
+  `test_rake_package_task.rb`, `test_rake_test_task.rb`,
+  `test_rake_rake_test_loader.rb`, `test_rake_makefile_loader.rb`,
+  `test_rake_win32.rb`, `test_rake_extension.rb`, `test_rake_reduce_compat.rb`,
+  and the thread-pool trio (`test_rake_thread_pool.rb`,
+  `test_rake_cpu_counter.rb`, `test_thread_history_display.rb`) stay unported
+  with their files. Every other file in rake's `test/` is assigned to a story.
 - **The `rake` executable as a separate CLI.** Tasks run through `bin/rails`,
   as Rails apps do today. `Application#run`'s option parsing is ported, so a
   `bin/rake` stub is a one-file follow-up if wanted.

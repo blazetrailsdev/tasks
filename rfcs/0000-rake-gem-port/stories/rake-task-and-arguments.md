@@ -23,4 +23,4 @@ blocked-by: null
 
 - [ ] Each file is ported at its Ruby path and names; `invoke` runs a task once, prerequisites first, and raises `RuntimeError` "Circular dependency detected" as `invocation_chain.rb` does.
 - [ ] `enhance`, `reenable`, `clear*`, `arg_names`, `comment` / `full_comment` / `add_description` match Ruby.
-- [ ] rake's `test/test_rake_task.rb`, `test_rake_task_arguments.rb` and `test_rake_invocation_chain.rb` port as native Vitest (`expect` and `@blazetrails/vitest-matchers`, per the rake RFC § "Tests are native Vitest"), names matching for `parity:test`, using a minimal application stub only where the Ruby test does.
+- [ ] rake's `test/test_rake_task.rb`, `test_rake_task_arguments.rb`, `test_rake_invocation_chain.rb`, `test_rake_linked_list.rb` and `test_rake_task_with_arguments.rb` port as native Vitest (`expect` and `@blazetrails/vitest-matchers`, per the rake RFC § "Tests are native Vitest"), names matching for `parity:test`, using a minimal application stub only where the Ruby test does.
