@@ -2,7 +2,7 @@
 title: "Port Nokogiri::VersionInfo#libxml2? and use it in Scrub.force_correct_attribute_escaping!"
 status: draft
 updated: 2026-10-28
-rfc: "0176-actionview-helpers"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
