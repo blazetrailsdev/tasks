@@ -1,9 +1,9 @@
 ---
 rfc: "0171-thor-port"
 title: "Thor: a direct port of thor 1.3.2, and trailties' generators and commands converged onto it"
-status: draft
+status: active
 created: 2026-09-30
-updated: 2026-10-06
+updated: 2026-10-29
 owner: "@deanmarano"
 packages:
   - trailties
