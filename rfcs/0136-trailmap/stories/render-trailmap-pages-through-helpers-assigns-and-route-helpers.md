@@ -1,15 +1,19 @@
 ---
 title: "Render trailmap's pages the Rails way: helpers in views, instance assigns, named-route helpers, asset tags"
 status: blocked
-updated: 2026-10-15
+updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null
 packages: ["actionview", "actionpack"]
 deps:
   - re-vendor-trails-for-app-helpers
   - split-the-render-pages-the-rails-way-story
+  - name-the-page-routes-and-use-path-helpers-in-every-view
+  - rfc-pages-render-through-instance-assigns
+  - story-pages-and-dashboard-render-through-instance-assigns
+  - views-call-render-markdown-pluralize-and-the-partial-shorthand
 deps-rfc: []
-est-loc: 280
+est-loc: 0
 priority: null
 pr: null
 claim: null
@@ -28,7 +32,9 @@ Too large for one PR. Delivered by, in order:
 - `views-call-render-markdown-pluralize-and-the-partial-shorthand` (~140 LOC)
 
 The stylesheet bullet is dropped: the layout already calls
-`stylesheetLinkTag("application")`. Close this story when the four land.
+`stylesheetLinkTag("application")`. The dashboard script criterion moves to
+`story-pages-and-dashboard-render-through-instance-assigns`. This story is now
+a tracking umbrella with no work of its own: close it when the four land.
 
 ## Context
 

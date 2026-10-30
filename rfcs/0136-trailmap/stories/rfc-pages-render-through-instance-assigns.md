@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-Bullet 2 of `render-trailmap-pages-through-helpers-assigns-and-route-helpers`, for `rfc-pages`. `RfcRow` and `RfcStoryRow` move out of a 316-line controller, so each moved line counts twice.
+Item 2 (instance assigns) of the numbered list in the Context of `render-trailmap-pages-through-helpers-assigns-and-route-helpers`, for `rfc-pages`. `RfcRow` and `RfcStoryRow` move out of a 316-line controller, so each moved line counts twice.
 
 ## Acceptance criteria
 

@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-Bullets 1, 5 and 6 of `render-trailmap-pages-through-helpers-assigns-and-route-helpers`. Measured 2026-10-30: 50 `render({ partial` calls, 5 count ternaries, 9 `renderMarkdown` references in controllers.
+Items 1 (markdown), 5 (pluralization) and 6 (partial calls) of the numbered list in the Context of `render-trailmap-pages-through-helpers-assigns-and-route-helpers`. Measured 2026-10-30: 50 `render({ partial` calls, 5 count ternaries, 9 `renderMarkdown` references in controllers.
 
 `MarkdownHelper` has to be added to the helper stand-in in `test/support/controller-test-case.ts`.
 

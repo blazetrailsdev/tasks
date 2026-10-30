@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-Bullet 3 of `render-trailmap-pages-through-helpers-assigns-and-route-helpers`. Measured 2026-10-30: 40 GET routes to name, 61 hard-coded app URLs across 23 files under `app/views`, 16 in controllers. Each URL is a removed and an added line.
+Item 3 (hard-coded URLs) of the numbered list in the Context of `render-trailmap-pages-through-helpers-assigns-and-route-helpers`. Measured 2026-10-30: 40 GET routes to name, 61 hard-coded app URLs across 23 files under `app/views`, 16 in controllers. Each URL is a removed and an added line.
 
 ## Acceptance criteria
 
