@@ -4,10 +4,10 @@ status: draft
 updated: 2026-10-30
 rfc: "0171-thor-port"
 cluster: null
-packages: []
+packages: [trailties]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 900
 priority: null
 pr: null
 claim: null
