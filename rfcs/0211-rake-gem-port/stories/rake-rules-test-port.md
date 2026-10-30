@@ -5,7 +5,8 @@ updated: 2026-10-30
 rfc: "0211-rake-gem-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - rake-dsl-and-file-tasks
 deps-rfc: []
 est-loc: null
 priority: null
