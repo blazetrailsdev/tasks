@@ -84,7 +84,7 @@ function relPathOf(abs: string): string {
 }
 
 async function truncate(): Promise<void> {
-  const conn = Base.connection;
+  const conn = await Base.leaseConnection();
   for (const t of [
     "story_deps",
     "story_rfc_deps",

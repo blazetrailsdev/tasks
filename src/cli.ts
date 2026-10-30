@@ -511,7 +511,7 @@ try {
 }
 // Explicit: the connection pool would otherwise keep the event loop alive.
 try {
-  Base.connection.disconnect();
+  (await Base.leaseConnection()).disconnect();
 } catch {
   /* already closed */
 }

@@ -81,7 +81,7 @@ const TABLES: [table: string, idColumn: string][] = [
 
 const quote = (s: string): string => `'${s.replace(/'/g, "''")}'`;
 
-export class QualifyPrRefs extends Migration {
+export class QualifyPrRefs extends Migration.get(8) {
   async up() {
     await this.changeColumn("stories", "pr", "string");
     await this.changeColumn("events", "pr", "string");

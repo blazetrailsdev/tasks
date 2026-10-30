@@ -29,7 +29,9 @@ describe("models", () => {
     s!.status = "in-progress";
     await s!.save();
     const raw = (
-      await Base.connection.selectAll("SELECT status FROM stories WHERE id='dependent'")
+      await (
+        await Base.leaseConnection()
+      ).selectAll("SELECT status FROM stories WHERE id='dependent'")
     ).toArray();
     expect(raw[0].status).toBe("in-progress");
     s!.status = "ready";

@@ -63,7 +63,7 @@ describe("status values", () => {
     await markTracking(["s1"], "in-progress", "trails#42");
     const viaModel = (await Story.findBy({ id: "s1" }))!.status;
     const viaSql = (
-      await Base.connection.selectAll("SELECT status FROM stories WHERE id='s1'")
+      await (await Base.leaseConnection()).selectAll("SELECT status FROM stories WHERE id='s1'")
     ).toArray()[0].status;
     expect(viaModel).toBe("in-progress");
     expect(viaSql).toBe("in-progress");
@@ -79,7 +79,7 @@ describe("claim timestamps", () => {
   it("stores the exact ISO-seconds-Z text it was given", async () => {
     await claim(["s1"], "agent-a");
     const raw = (
-      await Base.connection.selectAll("SELECT claim_at FROM stories WHERE id='s1'")
+      await (await Base.leaseConnection()).selectAll("SELECT claim_at FROM stories WHERE id='s1'")
     ).toArray()[0].claim_at as string;
     expect(raw).toMatch(/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/);
   });
