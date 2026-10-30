@@ -1,6 +1,6 @@
 ---
 title: "rake-dsl-test-ports"
-status: ready
+status: done
 updated: 2026-10-30
 rfc: "0211-rake-gem-port"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9507
+claim: "2026-10-30T21:16:38Z"
+assignee: "rake-dsl-test-ports"
 blocked-by: null
 closed-reason: null
 ---
