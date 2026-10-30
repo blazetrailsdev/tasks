@@ -30,6 +30,8 @@ export class Rfc extends Base {
   declare static closed: () => Relation<Rfc>;
 
   static {
+    // Search text for trailmap, written by ingest; no verb should load it.
+    this.ignoredColumns = ["body"];
     // Same trap as Story's `updated_on` — see the comment there. `created_on`
     // and `updated_on` are markdown's date-only `created:`/`updated:` fields;
     // `created_at`/`updated_at` are the real row timestamps (and NOT NULL), so

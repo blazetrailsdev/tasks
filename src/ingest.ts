@@ -258,6 +258,7 @@ export async function ingest(opts: { tasksDir?: string; to?: string } = {}): Pro
     scanned: 0,
   };
 
+  await backfillBodies(tasksDir);
   if (from === to) return result;
 
   const paths = changedPaths(tasksDir, from, to);
@@ -283,6 +284,29 @@ export async function ingest(opts: { tasksDir?: string; to?: string } = {}): Pro
   await Meta.set("last_ingested_sha", to);
 
   return result;
+}
+
+/**
+ * Fill `body` on rows that predate the column. Ingest only reads what a diff
+ * names, so without this an unchanged document would never be searchable. A
+ * file that cannot be read or parsed gets "", so it is not tried every run.
+ */
+async function backfillBodies(tasksDir: string): Promise<void> {
+  const CHUNK = 200;
+  for (const model of [Story, Rfc] as const) {
+    const rows = (
+      (await model.where({ body: null }).pluck("id", "file_path")) as [string, string | null][]
+    ).filter((row): row is [string, string] => row[1] !== null);
+    for (let i = 0; i < rows.length; i += CHUNK) {
+      await Base.transaction(async () => {
+        for (const [id, rel] of rows.slice(i, i + CHUNK)) {
+          const abs = join(tasksDir, rel);
+          const body = existsSync(abs) ? (parseFile(abs)?.body ?? "") : "";
+          await model.where({ id }).updateAll({ body });
+        }
+      });
+    }
+  }
 }
 
 async function ingestChunk(paths: string[], tasksDir: string, result: IngestResult): Promise<void> {
@@ -389,6 +413,8 @@ async function ingestChunk(paths: string[], tasksDir: string, result: IngestResu
         });
         result.created++;
       }
+      // Written apart from the row: the model ignores `body`, so no load carries it.
+      await Story.where({ id: storyId }).updateAll({ body });
       await replaceJoins(storyId, fm, body);
     }
   });
@@ -508,6 +534,7 @@ async function ingestRfc(tasksDir: string, rel: string, rfcId: string): Promise<
       priority: int(fm.priority),
     });
   }
+  await Rfc.where({ id: rfcId }).updateAll({ body: parsed.body });
 }
 
 /**
@@ -580,6 +607,7 @@ export const sweepVanishedRfcsForTest = sweepVanishedRfcs;
 
 /** Test seam for ingestRfc's vanished-README branch (see ingest-reap.test.ts). */
 export const ingestRfcForTest = ingestRfc;
+export const backfillBodiesForTest = backfillBodies;
 
 /** Test seam for the vanished-vs-moved story branch (see ingest-reap.test.ts). */
 export const ingestChunkForTest = ingestChunk;
