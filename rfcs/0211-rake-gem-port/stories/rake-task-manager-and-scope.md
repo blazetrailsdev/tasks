@@ -5,7 +5,9 @@ updated: 2026-10-29
 rfc: "0211-rake-gem-port"
 cluster: port
 packages: [rake]
-deps: [rake-task-and-arguments]
+deps:
+  - rake-task-and-arguments
+  - rake-task-core
 deps-rfc: []
 est-loc: 600
 priority: null
