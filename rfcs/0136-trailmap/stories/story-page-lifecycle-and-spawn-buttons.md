@@ -51,3 +51,9 @@ manual spawn does.
 - "Spawn worker" is relayed to ringo's `story-spawn` through `fleet/control`,
   with ringo's confirm text; trailmap adds no spawn logic.
 - Controller tests cover each button's visibility condition and a refusal.
+
+## Note on the mutation endpoints
+
+The criteria say the buttons call trailmap's mutation endpoints. trailmap#98 adds
+page POSTs that run the same model verbs instead, as trailmap#94 did for RFCs:
+the endpoints are loopback-only JSON, and a refusal has to render on the page.
