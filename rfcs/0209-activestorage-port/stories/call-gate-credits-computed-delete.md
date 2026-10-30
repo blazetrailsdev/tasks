@@ -1,5 +1,5 @@
 ---
-title: "call-gate-credits-computed-delete"
+title: "Credit a computed-key delete expression as Hash#delete in parity:api:calls"
 status: draft
 updated: 2026-10-30
 rfc: "0209-activestorage-port"
