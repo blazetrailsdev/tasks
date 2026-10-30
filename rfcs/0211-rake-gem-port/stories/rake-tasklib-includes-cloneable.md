@@ -1,6 +1,6 @@
 ---
 title: "Port Rake::Cloneable and include it in TaskLib"
-status: claimed
+status: done
 updated: 2026-10-30
 rfc: "0211-rake-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#9507
 claim: "2026-10-30T19:56:42Z"
 assignee: "file-utils-compare-stream-reads-blocks"
 blocked-by: null

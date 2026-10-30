@@ -1,6 +1,6 @@
 ---
 title: "TopLevel moves to ruby-compat and replaces RCLASS_CONST_TBL"
-status: ready
+status: done
 updated: 2026-10-30
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-lookup
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9508
+claim: "2026-10-30T20:01:49Z"
+assignee: "top-level-moves-to-ruby-compat"
 blocked-by: null
 closed-reason: null
 ---

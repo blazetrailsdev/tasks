@@ -1,6 +1,6 @@
 ---
 title: "Port Mail::Encodings RFC 2047 value encoding and the charset half of Mail::Utilities"
-status: in-progress
+status: done
 updated: 2026-10-30
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null

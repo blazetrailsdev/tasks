@@ -1,6 +1,6 @@
 ---
 title: "Port the rest of Zeitwerk's test suite"
-status: draft
+status: ready
 updated: 2026-10-30
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-gem

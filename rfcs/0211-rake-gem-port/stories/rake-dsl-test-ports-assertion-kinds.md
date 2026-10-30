@@ -1,6 +1,6 @@
 ---
 title: "Land the fourth wip test and converge wip rake tests to Rails assertion kinds"
-status: claimed
+status: done
 updated: 2026-10-30
 rfc: "0211-rake-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: trails#9507
 claim: "2026-10-30T19:56:42Z"
 assignee: "file-utils-compare-stream-reads-blocks"
 blocked-by: null
