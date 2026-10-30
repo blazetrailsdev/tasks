@@ -7,7 +7,6 @@ cluster: port
 packages: [rake]
 deps:
   - rake-task-and-arguments
-  - rake-task-core
 deps-rfc: []
 est-loc: 600
 priority: null
