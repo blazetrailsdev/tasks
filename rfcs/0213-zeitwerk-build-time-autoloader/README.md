@@ -15,6 +15,7 @@ packages:
   - activejob
   - actioncable
   - scripts
+  - "trails-tsc"
 # The mechanical test sweep is one rename over about 2,100 sites in activerecord.
 max-est-loc: 2500
 clusters:
