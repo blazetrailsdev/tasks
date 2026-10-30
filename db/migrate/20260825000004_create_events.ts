@@ -1,6 +1,6 @@
-import { Migration } from "@blazetrails/activerecord";
+import { Migration8 } from "../../src/migration-base.ts";
 
-export class CreateEvents extends Migration.get(8) {
+export class CreateEvents extends Migration8 {
   async change() {
     // Append-only. Replaces parsing 27k git commit subjects: this is what the
     // velocity and RFC burndown charts read.

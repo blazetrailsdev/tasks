@@ -1,4 +1,4 @@
-import { Migration } from "@blazetrails/activerecord";
+import { Migration8 } from "../../src/migration-base.ts";
 
 /**
  * `pr` becomes a `repo#N` string (src/pr-ref.ts), and every existing bare
@@ -81,7 +81,7 @@ const TABLES: [table: string, idColumn: string][] = [
 
 const quote = (s: string): string => `'${s.replace(/'/g, "''")}'`;
 
-export class QualifyPrRefs extends Migration.get(8) {
+export class QualifyPrRefs extends Migration8 {
   async up() {
     await this.changeColumn("stories", "pr", "string");
     await this.changeColumn("events", "pr", "string");
