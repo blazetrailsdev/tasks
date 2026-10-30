@@ -1,6 +1,6 @@
 ---
 title: "Port Rake::Task's class methods, | and the DSL-dependent task tests"
-status: ready
+status: in-progress
 updated: 2026-10-30
 rfc: "0211-rake-gem-port"
 cluster: port
@@ -12,9 +12,9 @@ deps:
 deps-rfc: []
 est-loc: 650
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9513
+claim: "2026-10-30T22:36:42Z"
+assignee: "rake-task-class-methods-and-dsl-tests"
 blocked-by: null
 closed-reason: null
 ---

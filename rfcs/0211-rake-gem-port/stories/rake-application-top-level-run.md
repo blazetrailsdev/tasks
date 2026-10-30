@@ -1,6 +1,6 @@
 ---
 title: "Port Rake::Application#run, top_level and error display"
-status: claimed
+status: in-progress
 updated: 2026-10-30
 rfc: "0211-rake-gem-port"
 cluster: port
@@ -9,7 +9,7 @@ deps: [rake-application-options-and-loading]
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
+pr: trails#9511
 claim: "2026-10-30T21:56:40Z"
 assignee: "rake-application-top-level-run"
 blocked-by: null

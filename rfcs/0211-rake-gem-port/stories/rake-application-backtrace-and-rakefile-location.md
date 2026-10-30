@@ -1,6 +1,6 @@
 ---
 title: "Port Application display_exception_backtrace, rakefile_location and windows?"
-status: draft
+status: in-progress
 updated: 2026-10-30
 rfc: "0211-rake-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9511
+claim: "2026-10-30T22:14:50Z"
+assignee: "rake-application-backtrace-and-rakefile-location"
 blocked-by: null
 closed-reason: null
 ---
