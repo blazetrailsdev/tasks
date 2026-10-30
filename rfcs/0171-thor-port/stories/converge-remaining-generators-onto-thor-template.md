@@ -1,6 +1,6 @@
 ---
 title: "converge-remaining-generators-onto-thor-template"
-status: draft
+status: ready
 updated: 2026-10-30
 rfc: "0171-thor-port"
 cluster: null
