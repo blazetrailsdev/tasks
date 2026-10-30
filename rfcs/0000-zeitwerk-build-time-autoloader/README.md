@@ -169,8 +169,7 @@ Three file-name rules are language-level and recorded once:
 ### The ratified deviation: a build step replaces `Module#autoload`
 
 `define_autoload` calls `Module#autoload`
-(`vendor/zeitwerk/v2.7.2/lib/zeitwerk/loader.rb:461
-542`), which binds a name now
+(`vendor/zeitwerk/v2.7.2/lib/zeitwerk/loader.rb:542`), which binds a name now
 and runs `require` synchronously at first reference. JS cannot do this: no hook
 fires on an unresolved identifier, `import()` is async, and JS has no
 synchronous await. This is the same shortcoming as root `CLAUDE.md`
