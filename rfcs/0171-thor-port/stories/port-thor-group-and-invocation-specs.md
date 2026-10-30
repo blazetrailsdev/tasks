@@ -1,6 +1,6 @@
 ---
 title: "Port group_spec.rb and invocation_spec.rb"
-status: in-progress
+status: done
 updated: 2026-10-30
 rfc: "0171-thor-port"
 cluster: null

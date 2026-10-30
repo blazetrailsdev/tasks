@@ -1,7 +1,7 @@
 ---
 title: "Port ActiveStorage::Blob with Identifiable, Servable and the Downloader"
-status: ready
-updated: 2026-10-29
+status: claimed
+updated: 2026-10-30
 rfc: "0209-activestorage-port"
 cluster: as-models
 packages: ["activestorage"]
@@ -15,8 +15,8 @@ deps-rfc: []
 est-loc: 650
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-30T01:05:49Z"
+assignee: "activestorage-blob-and-downloader"
 blocked-by: null
 closed-reason: null
 ---

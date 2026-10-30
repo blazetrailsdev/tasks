@@ -1,7 +1,7 @@
 ---
 title: "Port SolidCable Listener's self-pipe members over a ruby-compat IO.pipe"
-status: ready
-updated: 2026-10-29
+status: done
+updated: 2026-10-30
 rfc: "0196-solid-stack"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9474
+claim: "2026-10-30T01:18:43Z"
+assignee: "solid-cable-listener-self-pipe"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Port register_spec.rb, subcommand_spec.rb and sort_spec.rb"
-status: claimed
+status: done
 updated: 2026-10-30
 rfc: "0171-thor-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["port-thor-spec-part-1", "port-thor-group"]
 deps-rfc: []
 est-loc: 450
 priority: 2
-pr: null
+pr: trails#9473
 claim: "2026-10-30T00:56:40Z"
 assignee: "port-thor-register-subcommand-and-sort-specs"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Show the archive-mode and unclaimed-pane-capture notes on /sessions"
-status: claimed
+status: in-progress
 updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
+pr: trailmap#96
 claim: "2026-10-30T00:53:46Z"
 assignee: "bound-the-transcript-parse-on-the-request-thread"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "Transliterate the remaining eleven mail parsers and gate regeneration drift in CI"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-10-30
 rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-core
 packages: ["mail"]
@@ -9,9 +9,9 @@ deps: ["mail-address-lists-parser-spike"]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9476
+claim: "2026-10-30T01:17:37Z"
+assignee: "mail-ragel-parsers-remaining"
 blocked-by: null
 ---
 
