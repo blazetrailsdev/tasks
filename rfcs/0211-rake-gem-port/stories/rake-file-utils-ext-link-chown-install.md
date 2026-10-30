@@ -1,6 +1,6 @@
 ---
 title: "rake-file-utils-ext-link-chown-install"
-status: draft
+status: ready
 updated: 2026-10-30
 rfc: "0211-rake-gem-port"
 cluster: null

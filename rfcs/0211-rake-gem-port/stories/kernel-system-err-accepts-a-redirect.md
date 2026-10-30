@@ -1,6 +1,6 @@
 ---
 title: "rbFSystem err: is honored, as rb_execarg_addopt does"
-status: draft
+status: in-progress
 updated: 2026-10-30
 rfc: "0211-rake-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9497
+claim: "2026-10-30T16:17:02Z"
+assignee: "capture-subprocess-io-for-rake-sh"
 blocked-by: null
 closed-reason: null
 ---
