@@ -9,7 +9,6 @@ deps:
   - rake-task-and-arguments
   - rake-application-options-and-loading
   - rake-dsl-and-file-tasks
-  - rake-task-core
 deps-rfc: []
 est-loc: 650
 priority: null
