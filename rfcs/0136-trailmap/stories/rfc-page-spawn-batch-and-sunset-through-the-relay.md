@@ -1,6 +1,6 @@
 ---
 title: "rfc-page-spawn-batch-and-sunset-through-the-relay"
-status: in-progress
+status: done
 updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null

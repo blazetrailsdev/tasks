@@ -1,6 +1,6 @@
 ---
 title: "Port Rake::Task's instance methods (invoke, enhance, comments)"
-status: draft
+status: closed
 updated: 2026-10-30
 rfc: "0211-rake-gem-port"
 cluster: port
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: absorbed into rake-task-and-arguments (trails#9479) after the LOC ceiling was waived"
 ---
 
 ## Context

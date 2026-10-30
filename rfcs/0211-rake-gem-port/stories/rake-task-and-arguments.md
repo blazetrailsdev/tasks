@@ -1,6 +1,6 @@
 ---
 title: "Port Rake::Task, TaskArguments and InvocationChain"
-status: claimed
+status: in-progress
 updated: 2026-10-30
 rfc: "0211-rake-gem-port"
 cluster: port
@@ -9,7 +9,7 @@ deps: [rake-package-skeleton]
 deps-rfc: []
 est-loc: 650
 priority: null
-pr: null
+pr: trails#9479
 claim: "2026-10-30T01:27:39Z"
 assignee: "rake-task-and-arguments"
 blocked-by: null

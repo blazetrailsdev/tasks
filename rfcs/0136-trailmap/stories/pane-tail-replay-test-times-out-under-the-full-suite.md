@@ -1,6 +1,6 @@
 ---
 title: "sessions-files pane tail test times out at 5s under the full parallel suite"
-status: in-progress
+status: done
 updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "/sessions/transcript runs ringo's reader synchronously over up to 128 MiB"
-status: in-progress
+status: done
 updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null

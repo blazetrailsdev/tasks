@@ -1,6 +1,6 @@
 ---
 title: "SolidQueueAdapter is found by queue_adapter = :solid_queue"
-status: draft
+status: in-progress
 updated: 2026-10-30
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9480
+claim: "2026-10-30T02:17:35Z"
+assignee: "solid-queue-adapter-resolves-by-name"
 blocked-by: null
 closed-reason: null
 ---

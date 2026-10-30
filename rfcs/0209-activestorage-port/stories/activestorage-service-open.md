@@ -1,7 +1,7 @@
 ---
 title: "Port ActiveStorage::Service#open over Downloader"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-10-30
 rfc: "0209-activestorage-port"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9478
+claim: "2026-10-30T02:06:55Z"
+assignee: "activestorage-service-open"
 blocked-by: null
 closed-reason: null
 ---

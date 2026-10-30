@@ -1,6 +1,6 @@
 ---
 title: "Active Record SQLite Tests (1) failing on main @15d54db3"
-status: ready
+status: closed
 updated: 2026-10-30
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-30T02:26:46Z"
+assignee: "red-15d54db3"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: CI flake (transient sqlite 'database is locked'), no code fix needed"
 ---
 
 ## Context

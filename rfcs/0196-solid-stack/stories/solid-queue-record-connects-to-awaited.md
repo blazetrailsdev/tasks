@@ -1,6 +1,6 @@
 ---
 title: "Await SolidQueue::Record.connectsTo instead of floating it in an onLoad hook"
-status: claimed
+status: in-progress
 updated: 2026-10-30
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#9477
 claim: "2026-10-30T01:58:51Z"
 assignee: "solid-queue-record-connects-to-awaited"
 blocked-by: null
