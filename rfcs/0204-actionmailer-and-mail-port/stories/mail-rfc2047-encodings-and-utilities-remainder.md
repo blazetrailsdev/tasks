@@ -1,6 +1,6 @@
 ---
 title: "Port Mail::Encodings RFC 2047 value encoding and the rest of Mail::Utilities"
-status: claimed
+status: in-progress
 updated: 2026-10-30
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9481
 claim: "2026-10-30T02:56:45Z"
 assignee: "mail-rfc2047-encodings-and-utilities-remainder"
 blocked-by: null

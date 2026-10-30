@@ -1,7 +1,7 @@
 ---
 title: "Port Net::SMTP's client surface over nodemailer's SMTPConnection"
-status: ready
-updated: 2026-10-29
+status: claimed
+updated: 2026-10-30
 rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-delivery
 packages: ["net-smtp"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 500
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-30T03:26:36Z"
+assignee: "net-smtp-port"
 blocked-by: null
 ---
 

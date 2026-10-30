@@ -1,7 +1,7 @@
 ---
 title: "relation-proxy-moves-into-the-prototype-chain"
-status: draft
-updated: 2026-10-29
+status: in-progress
+updated: 2026-10-30
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9482
+claim: "2026-10-30T03:57:12Z"
+assignee: "relation-proxy-moves-into-the-prototype-chain"
 blocked-by: null
 closed-reason: null
 ---
