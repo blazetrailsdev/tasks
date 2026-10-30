@@ -4,7 +4,7 @@ status: draft
 updated: 2026-10-30
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
-packages: ["trails-tsc"]
+packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
