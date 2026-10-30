@@ -1,6 +1,6 @@
 ---
 title: "relation-proxy-moves-into-the-prototype-chain"
-status: in-progress
+status: done
 updated: 2026-10-30
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

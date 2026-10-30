@@ -1,6 +1,6 @@
 ---
 title: "Port Mail::Multibyte over the activesupport Multibyte port"
-status: in-progress
+status: done
 updated: 2026-10-30
 rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-core

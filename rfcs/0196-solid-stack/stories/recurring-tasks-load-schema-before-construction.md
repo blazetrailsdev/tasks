@@ -1,6 +1,6 @@
 ---
 title: "Configuration builds RecurringTask before its schema is loaded, so a real supervisor crashes"
-status: draft
+status: in-progress
 updated: 2026-10-30
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9491
+claim: "2026-10-30T14:28:50Z"
+assignee: "recurring-tasks-load-schema-before-construction"
 blocked-by: null
 closed-reason: null
 ---
