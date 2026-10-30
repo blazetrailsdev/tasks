@@ -1,7 +1,7 @@
 ---
 title: "Port attached/many_test.rb"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-10-30
 rfc: "0209-activestorage-port"
 cluster: as-attached
 packages: ["activestorage"]
@@ -9,9 +9,9 @@ deps: ["activestorage-attached-many", "activestorage-test-helper-and-fixture-set
 deps-rfc: []
 est-loc: 650
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9506
+claim: "2026-10-30T19:37:15Z"
+assignee: "activestorage-attached-many-test"
 blocked-by: null
 closed-reason: null
 ---

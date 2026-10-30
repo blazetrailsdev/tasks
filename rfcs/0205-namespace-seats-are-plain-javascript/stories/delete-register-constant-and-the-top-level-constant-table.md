@@ -1,7 +1,7 @@
 ---
 title: "Delete registerConstant and the top-level constant table"
-status: ready
-updated: 2026-10-27
+status: closed
+updated: 2026-10-30
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: retire
 packages: ["ruby-compat", "activesupport"]
@@ -21,7 +21,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Moved to delete-register-constant-and-class-path-api (RFC 0213)."
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "rake-dsl-test-ports"
-status: draft
+status: ready
 updated: 2026-10-30
 rfc: "0211-rake-gem-port"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Generate framework constant tables over GemInflector"
-status: draft
+status: ready
 updated: 2026-10-30
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-framework

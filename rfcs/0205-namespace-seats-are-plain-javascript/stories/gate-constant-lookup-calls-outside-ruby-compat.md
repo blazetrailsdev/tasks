@@ -1,7 +1,7 @@
 ---
 title: "Only-shrink gate on constant-lookup calls outside ruby-compat"
-status: draft
-updated: 2026-10-29
+status: closed
+updated: 2026-10-30
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: lookup calls are allowed again by RFC 0213; a gate on them no longer holds."
 ---
 
 ## Context

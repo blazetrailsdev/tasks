@@ -1,6 +1,6 @@
 ---
 title: "computeType registry reaches the non-model class_name and const_missing arms"
-status: draft
+status: closed
 updated: 2026-10-30
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: computeType keeps constantize under RFC 0213, so no registry arm exists to converge."
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "Port Mail::Encodings RFC 2047 value encoding and the charset half of Mail::Utilities"
-status: ready
+status: in-progress
 updated: 2026-10-30
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9504
+claim: "2026-10-30T19:16:43Z"
+assignee: "rake-rules-test-port"
 blocked-by: null
 closed-reason: null
 ---

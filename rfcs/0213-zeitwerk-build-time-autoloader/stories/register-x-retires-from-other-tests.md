@@ -1,6 +1,6 @@
 ---
 title: "Other packages' tests drop registerX, and the definitions go"
-status: draft
+status: ready
 updated: 2026-10-30
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-lookup

@@ -1,7 +1,7 @@
 ---
 title: "Lint: class-path table API is ruby-compat internal"
-status: draft
-updated: 2026-10-29
+status: blocked
+updated: 2026-10-30
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Needs its acceptance criteria rewritten for RFC 0213; waits on constantize-restored-over-namespaces."
 closed-reason: null
 ---
 

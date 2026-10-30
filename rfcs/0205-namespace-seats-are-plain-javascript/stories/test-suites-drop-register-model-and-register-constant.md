@@ -1,7 +1,7 @@
 ---
 title: "Test suites drop registerConstant (registerX stays)"
-status: ready
-updated: 2026-10-27
+status: closed
+updated: 2026-10-30
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: retire
 packages:
@@ -25,7 +25,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Moved to register-x-retires-from-activerecord-tests and register-x-retires-from-other-tests (RFC 0213)."
 ---
 
 ## Context
