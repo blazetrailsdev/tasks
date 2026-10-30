@@ -1,6 +1,6 @@
 ---
 title: "DiskService url_helpers reads a typed routes seat; tests use engine routes"
-status: claimed
+status: ready
 updated: 2026-10-30
 rfc: "0209-activestorage-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: "2026-10-30T01:05:49Z"
-assignee: "activestorage-blob-and-downloader"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

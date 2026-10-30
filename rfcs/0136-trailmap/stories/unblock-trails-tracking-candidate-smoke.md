@@ -1,7 +1,7 @@
 ---
 title: "Trails tracking fails at candidate-smoke; the pin is 2,120 commits behind"
-status: ready
-updated: 2026-10-28
+status: claimed
+updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 100
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-30T09:56:35Z"
+assignee: "split-the-render-pages-the-rails-way-story"
 blocked-by: null
 closed-reason: null
 ---

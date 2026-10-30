@@ -1,6 +1,6 @@
 ---
 title: "ringo: POST /pane/<n>/send types one line of text and Enter into a pane"
-status: claimed
+status: ready
 updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: "2026-10-30T00:53:46Z"
-assignee: "bound-the-transcript-parse-on-the-request-thread"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

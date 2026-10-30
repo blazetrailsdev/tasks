@@ -1,7 +1,7 @@
 ---
 title: "Store story and RFC bodies at ingest so /search queries them in SQL"
 status: ready
-updated: 2026-10-28
+updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null
 packages: []

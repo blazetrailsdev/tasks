@@ -1,7 +1,7 @@
 ---
 title: "Render the PR timeline on /sessions/:owner/:repo/:pr"
 status: ready
-updated: 2026-10-28
+updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null
 packages: []

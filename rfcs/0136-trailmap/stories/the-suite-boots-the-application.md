@@ -1,7 +1,7 @@
 ---
 title: "The suite boots the application, so tests run under its configuration"
-status: ready
-updated: 2026-10-28
+status: in-progress
+updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#97
+claim: "2026-10-30T09:26:35Z"
+assignee: "sessions-show-page-pr-timeline"
 blocked-by: null
 closed-reason: null
 ---

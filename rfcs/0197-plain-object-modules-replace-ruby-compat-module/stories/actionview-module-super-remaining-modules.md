@@ -1,7 +1,7 @@
 ---
 title: "actionview: remaining super-calling modules are plain objects (Context, TagHelper, UrlHelper, Rendering, Layouts, RoutingUrlFor…)"
-status: in-progress
-updated: 2026-10-28
+status: done
+updated: 2026-10-30
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: conversion
 packages: ["actionview"]
