@@ -61,9 +61,9 @@ Author:
 
 Mutate:
   claim <id...> [--assignee NAME]
-  release <id...>
+  release <id...> [--actor NAME]
   in-progress <id...> --pr REPO#N   (e.g. --pr trails#7228, --pr tasks#94)
-  done <id...> [--pr REPO#N]
+  done <id...> [--pr REPO#N] [--actor NAME]
   record-spawn <id...> --source S [--branch B] [--pane P]
   record-spawn --rfc R --source S [--pane P]      (RFC-scoped, e.g. a refine)
   block <id> <reason|--reason R>
@@ -342,7 +342,7 @@ async function main(): Promise<number> {
     case "release": {
       const ids = [...new Set(pos)];
       if (!ids.length) return usage();
-      await release(ids);
+      await release(ids, str(flags, "actor"));
       break;
     }
     case "in-progress":
@@ -359,7 +359,7 @@ async function main(): Promise<number> {
         return 1;
       }
       if (cmd === "in-progress" && pr === null) return usage();
-      await markTracking(ids, cmd, pr);
+      await markTracking(ids, cmd, pr, str(flags, "actor"));
       break;
     }
     case "record-spawn": {
