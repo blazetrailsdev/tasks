@@ -1,6 +1,6 @@
 ---
 title: "Port Attached::Model#has_one_attached, Attached::One and the single-attachment changes"
-status: claimed
+status: done
 updated: 2026-10-30
 rfc: "0209-activestorage-port"
 cluster: as-attached
@@ -9,7 +9,7 @@ deps: ["activestorage-attachment-model"]
 deps-rfc: []
 est-loc: 650
 priority: null
-pr: null
+pr: trails#9493
 claim: "2026-10-30T14:56:38Z"
 assignee: "activestorage-attached-model-and-one"
 blocked-by: null

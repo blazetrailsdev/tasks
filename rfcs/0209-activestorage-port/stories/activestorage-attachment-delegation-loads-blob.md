@@ -1,6 +1,6 @@
 ---
 title: "activestorage-attachment-delegation-loads-blob"
-status: ready
+status: in-progress
 updated: 2026-10-30
 rfc: "0209-activestorage-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9494
+claim: "2026-10-30T15:26:56Z"
+assignee: "activestorage-attachment-delegation-loads-blob"
 blocked-by: null
 closed-reason: null
 ---

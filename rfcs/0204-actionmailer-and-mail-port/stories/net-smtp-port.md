@@ -1,6 +1,6 @@
 ---
 title: "Port Net::SMTP's client surface over nodemailer's SMTPConnection"
-status: in-progress
+status: done
 updated: 2026-10-30
 rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-delivery

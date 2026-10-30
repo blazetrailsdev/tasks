@@ -1,6 +1,6 @@
 ---
 title: "A production boot reaches playwright, vite and rollup through two export sites"
-status: ready
+status: claimed
 updated: 2026-10-30
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 140
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-30T15:56:49Z"
+assignee: "keep-playwright-and-vite-out-of-a-production-boot"
 blocked-by: null
 closed-reason: null
 ---
