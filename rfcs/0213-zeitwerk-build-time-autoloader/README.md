@@ -1,7 +1,7 @@
 ---
 rfc: "0213-zeitwerk-build-time-autoloader"
 title: "Port Zeitwerk: @blazetrails/zeitwerk, a build-time autoloader"
-status: draft
+status: active
 created: 2026-10-30
 updated: 2026-10-30
 owner: "@deanmarano"
