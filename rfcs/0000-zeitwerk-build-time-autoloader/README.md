@@ -15,6 +15,8 @@ packages:
   - activejob
   - actioncable
   - scripts
+# The mechanical test sweep is one rename over about 2,100 sites in activerecord.
+max-est-loc: 2500
 clusters:
   - zw-gem
   - zw-railties
@@ -51,7 +53,8 @@ Everything above that line is faithful.
 - the "Trails has no autoloader" ruling in `packages/trailties/CLAUDE.md`,
   including "there is no story to port Zeitwerk".
 
-The `registerModel` family retires, and RFC 0205's lookup arm is rewritten
+These reversals take effect when this RFC goes `active`, and not at merge. The
+`registerModel` family retires, and RFC 0205's lookup arm is rewritten
 (§ "RFC 0205").
 
 ## Motivation
@@ -283,8 +286,16 @@ the query, and binds the old module. So in development a synchronous Node
 resolve hook (`module.registerHooks`, Node ≥ 24 is the repo's engine floor)
 appends the importer's generation to any specifier that resolves to a managed
 file. Framework packages and `once` files stay in the first generation. This
-exists only in development. It is untested, and the reload story opens with a
-spike; see open question 2.
+exists only in development. It is untested, and
+`zeitwerk-reload-generation-spike` is a go/no-go on it; see open question 2.
+
+**Vitest cannot exercise this.** The suites run through Vite's resolver, not
+Node's, so the hook never fires there. Reload tests that assert generations, in
+the gem and in railties, spawn a real `node` subprocess against a temporary
+directory, as `scripts/test-deps/` does. Every other loader test runs under vitest,
+because `eager_load` uses `import()` with a file URL and needs no hook. The spike
+also settles `registerHooks`' stability level on Node 24; the repo's `engines`
+floor is `>=24`.
 
 **Module records are never evicted.** ESM has no unload, so each generation keeps
 its records for the life of the process, where Ruby's unloaded classes are
@@ -295,7 +306,15 @@ is added to mitigate it.
 
 ### `constantize`, `safe_constantize`, `const_get` restored
 
-These become real ports reading the namespaces:
+**Today** `constantize` (`packages/activesupport/src/inflector.ts:194`) is already
+a segment walk with a `constMissing` arm. It reads `RCLASS_CONST_TBL` by full
+path first, then a property on the receiver, then the name → class map behind
+`generatedClass`. A miss with no hook raises `NameError`. So the port exists, over
+tables Rails does not have, and "restored" means restored as permitted and
+rewired, not newly written. `constantize-restored-over-namespaces` is a rewrite of
+that reader plus its types, which is what its 400 lines cover.
+
+After it, these are ports reading the namespaces:
 
 - `constantize` is `Object.const_get(camel_cased_word)`, walking `TopLevel` by
   segment. A miss calls the receiver's `constMissing`.
@@ -415,6 +434,9 @@ table, and the rule that class → name is a ruby-compat internal stands.
 
 ## `CLAUDE.md` sections to rewrite
 
+Each rewrite lands with the story that makes it true; § "Rollout" names the owner.
+The decision-history entry lands first, with `vendor-zeitwerk-v2-7-2`.
+
 | File                                                          | Section                                                                 | Change                                                                              |
 | ------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------------------------- |
 | root                                                          | "Constant lookup is an import or a registry"                            | Reversed: lookup is real, reads namespaces, imports still preferred for known names |
@@ -426,6 +448,19 @@ table, and the rule that class → name is a ruby-compat internal stands.
 | `packages/activerecord/CLAUDE.md`                             | "A model is seated by `registerModel`", "Call-time constant resolution" | Seat by loader or `rbModConstSet`; inventory updated                                |
 | `packages/activesupport/CLAUDE.md`, `packages/arel/CLAUDE.md` | "Call-time constant resolution"                                         | Inventory updated                                                                   |
 | `docs/claude-md-decision-history.md`                          | new entry                                                               | Both reversals, with their dates and reasons                                        |
+
+## Other RFCs
+
+- **RFC 0212** lists `autoloaders.rb`, `autoloaders/**` and `zeitwerk_checker.rb`
+  as ruled out, and **RFC 0177** lists Zeitwerk as not ported. Each carries a note
+  added here that this RFC reverses that when it goes `active`.
+  `zeitwerk_checker.rb` then falls to `trailties-autoloaders-and-config-paths`.
+  Rewriting 0212's permanent unported rows is that story's work too.
+- **RFC 0142** is the trailties deviation bucket. Its stories that rest on the
+  scan or the class-path tables, such as
+  `trailties-subpath-exports-load-their-class-path-table`, are re-read when
+  `trailties-app-scan-retires` and `framework-constant-tables-replace-class-paths`
+  land, and closed or rewritten then. No story moves now.
 
 ## RFC 0205
 
@@ -483,51 +518,70 @@ be reachable under their qualified name. That goes into
 - **Keep `registerModel` in tests only.** A two-spelling world, with app and test
   code seating differently. See open question 4.
 
-## Migration plan
+## Rollout
 
-Order matters, because the lookup restore must not break a working `constantize`:
+Not yet filed; `tasks new` follows approval. `max-est-loc` is lifted to 2500 for
+one story only, `register-x-retires-from-activerecord-tests`, a single mechanical
+rename. Every other story stays under 700.
 
-1. **Gem:** vendor, skeleton, inflector, config, walk and build step, eager load,
-   reload. Nothing in trails uses it yet. Zeitwerk's tests run against the package.
-2. **Railties:** `Trails.autoloaders` replaces the scan. `registerX` remains
-   called, now from `on_load`, so `constantize` keeps its current table.
-3. **Lookup:** `TopLevel` moves down; `constantize` reads namespaces.
-4. **Retire `registerX`:** callers, then definitions.
-5. **Framework tables:** generator, then deletion of `registerConstant` and the
-   class-path API.
+Order matters, because the lookup restore must not break a working `constantize`.
+At each phase main stays green and the old path works until its replacement lands.
 
-At each step main stays green and the old path works until its replacement lands.
+**Phase 1, gem.** Nothing in trails uses it yet; Zeitwerk's tests run against the
+package. `@blazetrails/zeitwerk` seats the root namespace on `TopLevel`, so
+`top-level-moves-to-ruby-compat` comes before the `Cref` work.
 
-## Proposed stories
+| Story                                     | Cluster   | est-loc | Deps                                                                        | Scope                                                                                                                 |
+| ----------------------------------------- | --------- | ------- | --------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `vendor-zeitwerk-v2-7-2`                  | zw-gem    | 60      |                                                                             | `sources.ts`, lock, `vendor/README.md` row; `docs/claude-md-decision-history.md` entry for both reversals             |
+| `zeitwerk-package-skeleton-and-inflector` | zw-gem    | 300     | `vendor-zeitwerk-v2-7-2`                                                    | Package registrations, parity enrollment, inflectors, errors, their tests                                             |
+| `top-level-moves-to-ruby-compat`          | zw-lookup | 250     |                                                                             | `TopLevel` down, `RCLASS_CONST_TBL` readers onto it                                                                   |
+| `zeitwerk-loader-config-and-helpers`      | zw-gem    | 550     | `zeitwerk-package-skeleton-and-inflector`, `top-level-moves-to-ruby-compat` | `loader/config.rb`, `helpers.rb`, `Cref`, `Cref::Map`, `Registry`; ignore, collapse, push_dir tests                   |
+| `zeitwerk-setup-walk`                     | zw-gem    | 450     | `zeitwerk-loader-config-and-helpers`                                        | The walk, in process, filling `autoloads` and `namespace_dirs`                                                        |
+| `zeitwerk-eager-load-and-callbacks`       | zw-gem    | 650     | `zeitwerk-setup-walk`                                                       | `eager_load*`, `load_file`, `callbacks.rb`, seating, `on_load`, namespaces                                            |
+| `zeitwerk-build-artifacts`                | zw-gem    | 400     | `zeitwerk-setup-walk`                                                       | Manifest, `imports.generated.js`, `constants.generated.d.ts`, digest, `trails-tsc` subcommand, root deviation section |
+| `zeitwerk-reload-generation-spike`        | zw-gem    | 100     | `zeitwerk-eager-load-and-callbacks`                                         | Go/no-go on open question 2, run under real Node                                                                      |
+| `zeitwerk-reload-and-unload`              | zw-gem    | 500     | `zeitwerk-reload-generation-spike`                                          | `unload`, `reload`, `on_unload`, `to_unload`                                                                          |
+| `zeitwerk-remaining-test-suite`           | zw-gem    | 700     | `zeitwerk-reload-and-unload`                                                | The rest of `test/`; Ruby-only arms under `PERMANENT-SKIP:`                                                           |
 
-Not yet filed; `tasks new` follows approval. Each fits the 700-line ceiling,
-except the mechanical sweep, which is one rename.
+**Phase 2, railties.** `Trails.autoloaders` replaces the scan. `registerX` is still
+called, from an `on_load` that `trailties-autoloaders-and-config-paths` adds, so
+`constantize` keeps its current table.
 
-| Story                                           | Cluster      | est-loc    | Deps                   | Scope                                                                                                                                               |
-| ----------------------------------------------- | ------------ | ---------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `vendor-zeitwerk-v2-7-2`                        | zw-gem       | 60         |                        | `sources.ts`, lock, `vendor/README.md` row                                                                                                          |
-| `zeitwerk-package-skeleton-and-inflector`       | zw-gem       | 300        | vendor                 | Package registrations, parity enrollment, `Inflector`, `GemInflector`, `NullInflector`, errors, their tests                                         |
-| `zeitwerk-loader-config-and-helpers`            | zw-gem       | 550        | skeleton               | `loader/config.rb`, `helpers.rb`, `Cref`, `Cref::Map`, `Registry`; ignore, collapse, push_dir tests                                                 |
-| `zeitwerk-setup-walk-and-build-step`            | zw-gem       | 700        | config                 | The walk, manifest, `imports.generated.js`, `constants.generated.d.ts`, digest, the `trails-tsc` subcommand, root `CLAUDE.md` deviation section     |
-| `zeitwerk-eager-load-and-callbacks`             | zw-gem       | 650        | setup                  | `eager_load*`, `load_file`, `callbacks.rb`, seating, `on_load`, namespaces                                                                          |
-| `zeitwerk-reload-and-unload`                    | zw-gem       | 600        | eager load             | Spike the resolve hook first, then `unload`, `reload`, `on_unload`, `to_unload`                                                                     |
-| `zeitwerk-remaining-test-suite`                 | zw-gem       | 700        | reload                 | The rest of `test/`; Ruby-only arms parked with `PERMANENT-SKIP:`                                                                                   |
-| `trailties-autoloaders-and-config-paths`        | zw-railties  | 650        | eager load             | `Trails.autoloaders`, both setup initializers, the path config, `autoload_lib`, the scan deleted, app fixtures swept, trailties `CLAUDE.md` rewrite |
-| `trailties-reload-drives-zeitwerk`              | zw-railties  | 300        | reload, autoloaders    | Reloader, `after_class_unload`, tracked classes                                                                                                     |
-| `top-level-moves-to-ruby-compat`                | zw-lookup    | 250        |                        | `TopLevel` down, `RCLASS_CONST_TBL` readers onto it                                                                                                 |
-| `constantize-restored-over-namespaces`          | zw-lookup    | 400        | top-level, autoloaders | `constantize` family, types, the 3 reflection tests stay green, HABTM test, root `CLAUDE.md` rewrite                                                |
-| `register-x-retires-from-source`                | zw-lookup    | 450        | constantize            | Source callers and definitions of all five; activerecord `CLAUDE.md`                                                                                |
-| `register-x-retires-from-tests`                 | zw-lookup    | mechanical | source                 | `registerModel`, `registerController`, … in tests onto `rbModConstSet`, single mechanical rename                                                    |
-| `framework-constant-table-generator`            | zw-framework | 500        | skeleton               | Generator over `GemInflector`, residue counted, `--check` kept                                                                                      |
-| `framework-constant-tables-replace-class-paths` | zw-framework | 600        | generator, constantize | Rewrite the 35 tables to `constants.generated.ts`, new readers                                                                                      |
-| `delete-register-constant-and-class-path-api`   | zw-framework | 350        | tables, tests sweep    | Deletions, ruby-compat internals, entry-module TDZ check                                                                                            |
+| Story                                    | Cluster     | est-loc | Deps                                                                   | Scope                                                                                                |
+| ---------------------------------------- | ----------- | ------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| `trailties-autoloaders-and-config-paths` | zw-railties | 500     | `zeitwerk-eager-load-and-callbacks`                                    | `Trails.autoloaders`, both setup initializers, path config, `autoload_lib`, the `on_load` above      |
+| `trailties-app-scan-retires`             | zw-railties | 350     | `trailties-autoloaders-and-config-paths`                               | Scan deleted, file contract enforced, app fixtures swept, trailties `CLAUDE.md` and its root pointer |
+| `trailties-reload-drives-zeitwerk`       | zw-railties | 300     | `zeitwerk-reload-and-unload`, `trailties-autoloaders-and-config-paths` | Reloader, `after_class_unload`, tracked classes                                                      |
 
-Total excluding the mechanical sweep: about 6,700.
+**Phase 3, lookup.**
+
+| Story                                  | Cluster   | est-loc | Deps                                                           | Scope                                                                                                                                                        |
+| -------------------------------------- | --------- | ------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `constantize-restored-over-namespaces` | zw-lookup | 400     | `top-level-moves-to-ruby-compat`, `trailties-app-scan-retires` | Walk `TopLevel`, typed `ConstantTable`, `rbFLoad` seat, the 3 reflection tests stay green, HABTM test; root lookup and call-time sections, `rbFLoad` pointer |
+
+**Phase 4, retire `registerX`.**
+
+| Story                                        | Cluster   | est-loc | Deps                                   | Scope                                                                                             |
+| -------------------------------------------- | --------- | ------- | -------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `register-x-retires-from-source`             | zw-lookup | 450     | `constantize-restored-over-namespaces` | Source callers and the `on_load`; definitions stay until the tests move; activerecord `CLAUDE.md` |
+| `register-x-retires-from-activerecord-tests` | zw-lookup | 2200    | `register-x-retires-from-source`       | Single mechanical rename onto `rbModConstSet`                                                     |
+| `register-x-retires-from-other-tests`        | zw-lookup | 300     | `register-x-retires-from-source`       | The other packages' tests, then the definitions                                                   |
+
+**Phase 5, framework tables.**
+
+| Story                                           | Cluster      | est-loc | Deps                                                                                                                                 | Scope                                                                                        |
+| ----------------------------------------------- | ------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
+| `framework-constant-table-generator`            | zw-framework | 500     | `zeitwerk-loader-config-and-helpers`                                                                                                 | Generator over `GemInflector`, residue counted, `--check` kept                               |
+| `framework-constant-tables-replace-class-paths` | zw-framework | 600     | `framework-constant-table-generator`, `constantize-restored-over-namespaces`                                                         | The 35 tables to `constants.generated.ts`, new readers                                       |
+| `delete-register-constant-and-class-path-api`   | zw-framework | 350     | `framework-constant-tables-replace-class-paths`, `register-x-retires-from-activerecord-tests`, `register-x-retires-from-other-tests` | Deletions, ruby-compat internals, entry-module TDZ check; activesupport and arel inventories |
+
+Total: about 9,900, of which 2,200 is the mechanical rename.
 
 ## Risks
 
 - **Reload under ESM.** The generation hook is unproven, and a missed edge means
-  old and new classes coexisting. The spike comes first; a failure reopens the
+  old and new classes coexisting. The spike is a separate go/no-go; a failure reopens the
   reload design only, since boot does not need it.
 - **Build-step requirement for tests.** Handled by the in-process walk: vitest and
   Zeitwerk's own `with_files`-style tests call `setup` with no artifact, no
@@ -567,8 +621,11 @@ Total excluding the mechanical sweep: about 6,700.
   `registerClassPaths`, `generatedClass`.
 - The finisher has no `@missingRailsCall` for `eager_load_all`, `eager_load!` or
   `after_class_unload`.
-- A built app boots with no `vendor/` and no scan; a changed file reloads in
-  development with no class surviving from the previous generation.
+- A fixture app under `packages/trailties`, built by the `zeitwerk-build-artifacts`
+  subcommand, boots in a `node` subprocess from its artifacts with no scan and no
+  `vendor/`, and answers `constantize` for a namespaced controller.
+- In a subprocess, a changed file reloads with no class surviving from the
+  previous generation (`zeitwerk-reload-and-unload`).
 - `pnpm parity:modules` and the plain-node entry import pass for every package.
 
 ## Open questions
@@ -578,7 +635,7 @@ Total excluding the mechanical sweep: about 6,700.
    soundness reason in § "Reload". A narrower reload would be a second deviation.
    Needs the owner's confirmation.
 2. **Generation propagation.** A resolve hook is the recommendation. The fallback,
-   rewriting specifiers in a dev transform, is uglier. Settled by the reload spike.
+   rewriting specifiers in a dev transform, is uglier. Settled by `zeitwerk-reload-generation-spike`.
 3. **Framework residue.** How many table rows the path cannot derive. If it
    is more than a small override list, those rows keep a `rails-api.json` source.
    Settled by `framework-constant-table-generator`.

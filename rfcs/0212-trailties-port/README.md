@@ -142,7 +142,8 @@ tests run on Vitest, and Minitest is becoming its own package
   RDoc site and has no meaning for a TS package. Its files become permanent
   unported rows.
 - **`autoloaders.rb`, `autoloaders/**`, `zeitwerk_checker.rb`\*\*: CLAUDE.md
-  § "Trails has no autoloader" (packages/trailties/CLAUDE.md) rules these out.
+§ "Trails has no autoloader" (packages/trailties/CLAUDE.md) rules these out.
+The `zeitwerk-build-time-autoloader` RFC proposes to reverse this (2026-10-30).
 - **Commands other than `plugin`**: RFC 0171.
 - **Bundler-specific arms** of `app_base.rb` and the generators
   (`bundle_command`, `run_bundle`, gemfile entries): RFC 0171's
