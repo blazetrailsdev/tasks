@@ -1,6 +1,6 @@
 ---
 title: "capture_subprocess_io captures inherited child stdio"
-status: in-progress
+status: done
 updated: 2026-10-30
 rfc: "0211-rake-gem-port"
 cluster: null

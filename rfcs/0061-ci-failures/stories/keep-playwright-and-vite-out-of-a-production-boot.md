@@ -1,6 +1,6 @@
 ---
 title: "A production boot reaches playwright, vite and rollup through two export sites"
-status: in-progress
+status: done
 updated: 2026-10-30
 rfc: "0061-ci-failures"
 cluster: null

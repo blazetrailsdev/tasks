@@ -1,6 +1,6 @@
 ---
 title: "rake-file-utils-ext-link-chown-install"
-status: ready
+status: claimed
 updated: 2026-10-30
 rfc: "0211-rake-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-30T17:56:38Z"
+assignee: "rake-file-utils-ext-link-chown-install"
 blocked-by: null
 closed-reason: null
 ---

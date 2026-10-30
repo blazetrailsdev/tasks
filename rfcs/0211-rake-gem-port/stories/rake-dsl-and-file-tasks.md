@@ -1,7 +1,7 @@
 ---
 title: "Port Rake::DSL, FileTask, FileCreationTask, MultiTask"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-10-30
 rfc: "0211-rake-gem-port"
 cluster: port
 packages: [rake]
@@ -9,9 +9,9 @@ deps: [rake-task-manager-and-scope]
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9499
+claim: "2026-10-30T17:37:10Z"
+assignee: "rake-dsl-and-file-tasks"
 blocked-by: null
 ---
 
