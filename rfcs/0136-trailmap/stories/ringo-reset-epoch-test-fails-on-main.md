@@ -1,6 +1,6 @@
 ---
 title: "ringo: TestResetEpochResolvesTheLabelInTheScrapersZone fails on btwebooks main"
-status: draft
+status: ready
 updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null

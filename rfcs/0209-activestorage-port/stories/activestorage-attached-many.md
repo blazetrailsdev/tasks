@@ -1,7 +1,7 @@
 ---
 title: "Port has_many_attached, Attached::Many and the many-attachment changes"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-10-30
 rfc: "0209-activestorage-port"
 cluster: as-attached
 packages: ["activestorage"]
@@ -9,9 +9,9 @@ deps: ["activestorage-attached-model-and-one"]
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9501
+claim: "2026-10-30T18:16:42Z"
+assignee: "activestorage-attached-many"
 blocked-by: null
 closed-reason: null
 ---

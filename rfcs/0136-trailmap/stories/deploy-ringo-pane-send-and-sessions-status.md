@@ -1,6 +1,6 @@
 ---
 title: "Review and deploy ringo's /pane/<n>/send and /api/sessions/status branch"
-status: draft
+status: ready
 updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "tasks CLI: done and release cannot record who made the mutation"
-status: draft
+status: ready
 updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null

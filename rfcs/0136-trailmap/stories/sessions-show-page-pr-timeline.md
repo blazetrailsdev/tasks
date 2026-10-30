@@ -1,6 +1,6 @@
 ---
 title: "Render the PR timeline on /sessions/:owner/:repo/:pr"
-status: ready
+status: in-progress
 updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#101
+claim: "2026-10-30T18:18:51Z"
+assignee: "sessions-show-page-pr-timeline"
 blocked-by: null
 closed-reason: null
 ---

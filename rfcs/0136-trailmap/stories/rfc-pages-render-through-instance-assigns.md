@@ -1,6 +1,6 @@
 ---
 title: "rfc-pages sets instance assigns and derives its rows in helpers"
-status: draft
+status: ready
 updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null

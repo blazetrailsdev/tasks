@@ -1,7 +1,7 @@
 ---
 title: "Port Rake::Application option parsing and Rakefile loading"
-status: ready
-updated: 2026-10-29
+status: claimed
+updated: 2026-10-30
 rfc: "0211-rake-gem-port"
 cluster: port
 packages: [rake]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 650
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-30T18:56:44Z"
+assignee: "rake-application-options-and-loading"
 blocked-by: null
 ---
 

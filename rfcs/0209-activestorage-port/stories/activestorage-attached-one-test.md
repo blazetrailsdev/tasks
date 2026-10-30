@@ -1,7 +1,7 @@
 ---
 title: "Port attached/one_test.rb"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-10-30
 rfc: "0209-activestorage-port"
 cluster: as-attached
 packages: ["activestorage"]
@@ -9,9 +9,9 @@ deps: ["activestorage-attached-model-and-one", "activestorage-test-helper-and-fi
 deps-rfc: []
 est-loc: 650
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9502
+claim: "2026-10-30T18:36:40Z"
+assignee: "activestorage-attached-one-test"
 blocked-by: null
 closed-reason: null
 ---
