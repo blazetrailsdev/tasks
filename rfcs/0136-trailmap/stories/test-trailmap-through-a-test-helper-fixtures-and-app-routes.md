@@ -68,3 +68,14 @@ controller and integration tests at `Rails.application.routes`
   `eager-scan-registers-app-models-for-string-association-targets` (0142) has
   landed, since its premise goes away. Otherwise it stays.
 - `pnpm test` passes with no assertion changes beyond harness plumbing.
+
+## Measured 2026-10-30
+
+Released from a bundle because it cannot share a PR. 43 test files carry the
+harness calls and there are 284 `.create(` calls to triage into fixtures, so it
+needs a PR of its own and very likely a split.
+
+A `test/test-helper.ts` as a vitest setup file does load `config/environment`
+now. Boot then stops at Postgres: `maintain-test-schema` connects to `hub`, so
+every test would need `HUB_DATABASE_URL`, where `pnpm test` runs without one
+today. Decide that first.

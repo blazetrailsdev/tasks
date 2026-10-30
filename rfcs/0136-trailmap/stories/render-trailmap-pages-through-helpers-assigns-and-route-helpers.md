@@ -8,8 +8,12 @@ packages: ["actionview", "actionpack"]
 deps:
   - re-vendor-trails-for-app-helpers
   - split-the-render-pages-the-rails-way-story
+  - name-the-page-routes-and-use-path-helpers-in-every-view
+  - rfc-pages-render-through-instance-assigns
+  - story-pages-and-dashboard-render-through-instance-assigns
+  - views-call-render-markdown-pluralize-and-the-partial-shorthand
 deps-rfc: []
-est-loc: 280
+est-loc: 0
 priority: null
 pr: null
 claim: null
@@ -17,6 +21,20 @@ assignee: null
 blocked-by: "Tracking umbrella: closed when its four split stories land."
 closed-reason: null
 ---
+
+## Split
+
+Too large for one PR. Delivered by, in order:
+
+- `name-the-page-routes-and-use-path-helpers-in-every-view` (~300 LOC)
+- `rfc-pages-render-through-instance-assigns` (~240 LOC)
+- `story-pages-and-dashboard-render-through-instance-assigns` (~300 LOC)
+- `views-call-render-markdown-pluralize-and-the-partial-shorthand` (~140 LOC)
+
+The stylesheet bullet is dropped: the layout already calls
+`stylesheetLinkTag("application")`. The dashboard script criterion moves to
+`story-pages-and-dashboard-render-through-instance-assigns`. This story is now
+a tracking umbrella with no work of its own: close it when the four land.
 
 ## Context
 
@@ -87,8 +105,7 @@ Its scope there is the status-badge normalisation only.
   `app/helpers/*` or on the models.
 - Every page route in `config/routes.ts` has an `as:` name, and no view or
   controller builds an app URL by string concatenation.
-- The layout uses `stylesheetLinkTag("application")`. The dashboard script
-  uses the asset tag helper if trails ports `javascript_include_tag`;
+- The dashboard script uses the asset tag helper if trails ports `javascript_include_tag`;
   otherwise the gap is noted against
   `port-the-rest-of-asset-tag-helper-and-asset-url-helper`.
 - Count phrases use `pluralize`, and partials use the `render(name, locals)`

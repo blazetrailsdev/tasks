@@ -58,7 +58,7 @@ export interface IndexJson {
  * order — the sort IS part of the ready-queue ranking. Reproduce it exactly.
  */
 export async function buildIndex(): Promise<IndexJson> {
-  const conn = Base.connection;
+  const conn = await Base.leaseConnection();
 
   // One query per table rather than per-row association loads: this runs after
   // every mutation, so an N+1 over 7k stories would put seconds into the hot
@@ -150,9 +150,9 @@ export interface EventsJson {
  * Chronological, which is the order both collectors walk.
  */
 export async function buildEvents(): Promise<EventsJson> {
-  const rows = await Base.connection.selectAll(
-    "SELECT at, verb, story_id, rfc_id, pr, actor, detail FROM events ORDER BY at, id",
-  );
+  const rows = await (
+    await Base.leaseConnection()
+  ).selectAll("SELECT at, verb, story_id, rfc_id, pr, actor, detail FROM events ORDER BY at, id");
   return {
     events: rows.toArray().map((e) => ({
       at: e.at,
