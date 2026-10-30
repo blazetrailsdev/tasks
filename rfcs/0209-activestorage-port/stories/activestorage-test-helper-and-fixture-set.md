@@ -1,7 +1,7 @@
 ---
 title: "Port ActiveStorage::FixtureSet and the suite's test_helper"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-10-30
 rfc: "0209-activestorage-port"
 cluster: as-models
 packages: ["activestorage"]
@@ -9,9 +9,9 @@ deps: ["activestorage-blob-and-downloader"]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9485
+claim: "2026-10-30T11:26:41Z"
+assignee: "activestorage-attachment-model"
 blocked-by: null
 closed-reason: null
 ---

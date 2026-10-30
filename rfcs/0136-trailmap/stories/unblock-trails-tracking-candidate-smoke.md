@@ -1,6 +1,6 @@
 ---
 title: "Trails tracking fails at candidate-smoke; the pin is 2,120 commits behind"
-status: in-progress
+status: done
 updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null

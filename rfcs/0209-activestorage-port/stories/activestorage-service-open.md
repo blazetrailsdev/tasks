@@ -1,6 +1,6 @@
 ---
 title: "Port ActiveStorage::Service#open over Downloader"
-status: in-progress
+status: done
 updated: 2026-10-30
 rfc: "0209-activestorage-port"
 cluster: null

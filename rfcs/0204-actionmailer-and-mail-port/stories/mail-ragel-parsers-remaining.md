@@ -1,6 +1,6 @@
 ---
 title: "Transliterate the remaining eleven mail parsers and gate regeneration drift in CI"
-status: in-progress
+status: done
 updated: 2026-10-30
 rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-core

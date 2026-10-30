@@ -1,6 +1,6 @@
 ---
 title: "Port ActiveStorage::Blob with Identifiable, Servable and the Downloader"
-status: claimed
+status: done
 updated: 2026-10-30
 rfc: "0209-activestorage-port"
 cluster: as-models
@@ -14,7 +14,7 @@ deps:
 deps-rfc: []
 est-loc: 650
 priority: null
-pr: null
+pr: trails#9478
 claim: "2026-10-30T01:05:49Z"
 assignee: "activestorage-blob-and-downloader"
 blocked-by: null

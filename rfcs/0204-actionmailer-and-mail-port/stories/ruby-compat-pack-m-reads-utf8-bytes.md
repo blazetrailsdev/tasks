@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat pack 'm' reads a JS string's UTF-8 bytes like 'u' and 'M'"
-status: in-progress
+status: done
 updated: 2026-10-30
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null

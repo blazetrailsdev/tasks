@@ -1,6 +1,6 @@
 ---
 title: "The suite boots the application, so tests run under its configuration"
-status: in-progress
+status: done
 updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null
