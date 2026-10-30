@@ -5,7 +5,8 @@ updated: 2026-10-30
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - mail-elements
 deps-rfc: []
 est-loc: null
 priority: null
