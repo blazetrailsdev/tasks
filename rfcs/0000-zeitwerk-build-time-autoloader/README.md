@@ -339,7 +339,7 @@ Zeitwerk defines no `const_missing`, so the hook is not a lazy-load seat.
 `computeType` already reads `constantize` / `safeConstantize` on main, because
 trails#9466 has not merged, and is a line-for-line port. So the three reflection tests
 are **not skipped on main today**. The acceptance criterion is that they stay
-running and pass once the loader, the top-level table and retired `registerX`
+running and pass once the `TopLevel` walk and the retired `registerX`
 are in place.
 
 ### Railties
@@ -372,7 +372,8 @@ controllers.
 subclass under any file name. A file now has to define the constant its path
 says. A generated app already does; an existing app with two classes in a file
 or a default export gets the Zeitwerk error at boot. trails has no published
-apps to migrate beyond the repo's own fixtures, which the railties story sweeps.
+apps to migrate beyond the repo's own fixtures, which `trailties-app-scan-retires`
+sweeps.
 
 ### `registerX` retires
 
