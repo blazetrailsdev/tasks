@@ -18,6 +18,18 @@ blocked-by: "Measures ~700 diff lines vs 280 est (trailmap#68 claimed and releas
 closed-reason: null
 ---
 
+## Split
+
+Too large for one PR. Delivered by, in order:
+
+- `name-the-page-routes-and-use-path-helpers-in-every-view` (~300 LOC)
+- `rfc-pages-render-through-instance-assigns` (~240 LOC)
+- `story-pages-and-dashboard-render-through-instance-assigns` (~300 LOC)
+- `views-call-render-markdown-pluralize-and-the-partial-shorthand` (~140 LOC)
+
+The stylesheet bullet is dropped: the layout already calls
+`stylesheetLinkTag("application")`. Close this story when the four land.
+
 ## Context
 
 From the trailmap Rails-idiom audit. The page controllers build view-model
@@ -87,8 +99,7 @@ Its scope there is the status-badge normalisation only.
   `app/helpers/*` or on the models.
 - Every page route in `config/routes.ts` has an `as:` name, and no view or
   controller builds an app URL by string concatenation.
-- The layout uses `stylesheetLinkTag("application")`. The dashboard script
-  uses the asset tag helper if trails ports `javascript_include_tag`;
+- The dashboard script uses the asset tag helper if trails ports `javascript_include_tag`;
   otherwise the gap is noted against
   `port-the-rest-of-asset-tag-helper-and-asset-url-helper`.
 - Count phrases use `pluralize`, and partials use the `render(name, locals)`
