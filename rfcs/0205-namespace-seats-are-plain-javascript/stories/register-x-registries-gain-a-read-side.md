@@ -30,6 +30,9 @@ The first reader to convert is `compute_type` (`vendor/rails/v8.0.2/activerecord
 
 ## Acceptance criteria
 
-- [ ] Each `registerX` keeps its own map (name → class, keyed as it seats today: `klass.name` plus the Ruby name) and its package exports one name → class read beside it.
-- [ ] The registries stop writing through `registerConstant`.
+- [ ] `registerModel`, `registerJob`, `registerChannel` and `registerConnection` each keep their own map (name → class, keyed as it seats today: `klass.name` plus the Ruby name) and its package exports one name → class read beside it.
 - [ ] No reader is converted in this story beyond one proof site (`compute_type`); the rest belong to `framework-constantize-calls-become-imports-or-registries`.
+
+## Scope change (owner, 2026-10-29)
+
+Dropping the `registerConstant` write-through moves to `framework-constantize-calls-become-imports-or-registries`: ~44 non-test files still `constantize` registered classes, and the write stops only once they read the registries. `registeredController` moves there too: actioncontroller's extra-surface `allowed` mark is only-shrink, so the read lands with its first reader (the routing controller lookup). `registeredModel` lives in `active-record.ts`, not beside `registerModel` in `associations.ts`: `inheritance.ts` (the `compute_type` reader) importing `associations.ts` closes a module-eval import cycle through the association builders, and `active-record.ts` is already its import.
