@@ -1,5 +1,5 @@
 ---
-rfc: "0000-zeitwerk-build-time-autoloader"
+rfc: "0213-zeitwerk-build-time-autoloader"
 title: "Port Zeitwerk: @blazetrails/zeitwerk, a build-time autoloader"
 status: draft
 created: 2026-10-30
@@ -29,10 +29,7 @@ related-rfcs:
   - "0142-trailties-surfaced-deviations"
 ---
 
-<!-- Unnumbered until merge: `scripts/finalize-rfc.mjs` swaps 0000 for the
-     assigned number at merge. -->
-
-# RFC — Port Zeitwerk: @blazetrails/zeitwerk, a build-time autoloader
+# RFC 0213 — Port Zeitwerk: @blazetrails/zeitwerk, a build-time autoloader
 
 ## Summary
 
