@@ -40,9 +40,6 @@ both `authentication-generator.ts` files are in-memory overrides of Thor's `temp
 
 ## Acceptance criteria
 
-- [ ] Each generator carrying a `CONVERGEABLE converge-remaining-generators-onto-thor-template`
-      receipt calls Thor's `template` over a source file in its `templates/` directory, and the
-      receipt is removed.
-- [ ] The in-memory `template` overrides in `app-generator.ts`, `change-generator.ts` and both
-      authentication generators are deleted.
-- [ ] Split by LOC under the ceiling, one generator family per PR.
+Re-scoped on trails#9514: devcontainer, scaffold-controller and the in-memory `template` overrides moved to `converge-generators-remainder-onto-thor-template`.
+
+- [ ] benchmark, controller, helper, job, script, test-unit/{channel,controller,job,model} and tse/controller call Thor's `template` over a source file in their `templates/` directory, and their receipts are removed.

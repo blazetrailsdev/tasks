@@ -30,3 +30,4 @@ closed-reason: null
 
 - [ ] Each generator carrying a `CONVERGEABLE converge-generators-remainder-onto-thor-template` receipt calls Thor's `template` over a source file in its `templates/` directory, and the receipt is removed.
 - [ ] The in-memory `template` overrides in `app-generator.ts`, `change-generator.ts` and both authentication generators are deleted, with their `TEMPLATES` tables.
+- [ ] The `CONVERGEABLE converge-generators-remainder-onto-thor-template` `@noRailsEquivalent` helpers on `rails/controller/controller-generator.ts`, `rails/job/job-generator.ts` and `test-unit/controller/controller-generator.ts` (`parentRef`, `parentClass`, `parentPath`, `controllerClassName`, `paths`, `importPrefix`) are gone: `.tt` files reach `classify` and the import path without a generator member, as `controller.rb.tt:2` reads `parent_class_name.classify` (`vendor/rails/v8.0.2/railties/lib/rails/generators/rails/controller/templates/controller.rb.tt`).
