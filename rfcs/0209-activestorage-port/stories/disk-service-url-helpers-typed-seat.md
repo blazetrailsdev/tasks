@@ -32,7 +32,7 @@ themselves and set a stub `TopLevel.Trails`, waiting on
 
 ## Acceptance criteria
 
+The engine-routes half moved to `shared-service-tests-use-engine-routes`.
+
 - The `routes()` seat type declares `urlHelpers()`, so `DiskService#urlHelpers` reads it
   without `as unknown as`.
-- Once the engine routes land, the shared service tests use the engine's routes
-  instead of the hand-drawn RouteSet and stub `Trails`.
