@@ -166,7 +166,7 @@ export async function claim(ids: string[], assignee: string): Promise<void> {
 }
 
 /** Inverse of claim: claimed → ready, clearing the holder. */
-export async function release(ids: string[]): Promise<void> {
+export async function release(ids: string[], actor: string | null = null): Promise<void> {
   await Base.transaction(async () => {
     const found = await findAll(ids);
     requireFound(ids, found);
@@ -182,7 +182,7 @@ export async function release(ids: string[]): Promise<void> {
         ...clearedBy("ready"),
         updated_on: today(),
       });
-      await record("release", s.id);
+      await record("release", s.id, { actor });
       console.log(`released ${s.id}`);
     }
   });
@@ -211,6 +211,8 @@ export async function markTracking(
   status: Extract<StoryStatus, "in-progress" | "done">,
   /** A normalized `repo#N` (see pr-ref.ts), or null for done-without-PR. */
   pr: string | null,
+  /** Who made the mutation, for the `events` row: a sweep names itself. */
+  actor: string | null = null,
 ): Promise<void> {
   await Base.transaction(async () => {
     const found = await findAll(ids);
@@ -225,7 +227,7 @@ export async function markTracking(
           ? { claim_at: nowIso(), assignee: s.assignee ?? s.id }
           : {};
       await s.update({ status, pr, ...clearedBy(status), ...selfClaim, updated_on: today() });
-      await record(status, s.id, { pr });
+      await record(status, s.id, { pr, actor });
       console.log(`${status} ${s.id}${pr === null ? "" : ` ${pr}`}`);
     }
   });

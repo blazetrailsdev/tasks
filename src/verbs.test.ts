@@ -341,3 +341,23 @@ describe("statusSet over several ids", () => {
     expect(await events()).toBe(1);
   });
 });
+
+describe("actor", () => {
+  const eventActor = async (verb: string) => (await Event.findBy({ verb, story_id: "s1" }))!.actor;
+
+  it("done writes --actor to its event, and null without it", async () => {
+    await markTracking(["s1"], "done", null, "merge-sweep");
+    expect(await eventActor("done")).toBe("merge-sweep");
+    await markTracking(["s2"], "done", null);
+    expect((await Event.findBy({ verb: "done", story_id: "s2" }))!.actor).toBeNull();
+  });
+
+  it("release writes --actor to its event, and null without it", async () => {
+    await claim(["s1"], "agent-a");
+    await release(["s1"], "claim-sweep");
+    expect(await eventActor("release")).toBe("claim-sweep");
+    await claim(["s2"], "agent-a");
+    await release(["s2"]);
+    expect((await Event.findBy({ verb: "release", story_id: "s2" }))!.actor).toBeNull();
+  });
+});
