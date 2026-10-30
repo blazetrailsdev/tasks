@@ -1,6 +1,6 @@
 ---
 title: "rbFSystem out: accepts an IO, as rb_execarg_addopt does"
-status: draft
+status: claimed
 updated: 2026-10-30
 rfc: "0211-rake-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-30T13:56:41Z"
+assignee: "kernel-system-out-accepts-an-io"
 blocked-by: null
 closed-reason: null
 ---

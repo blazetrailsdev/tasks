@@ -1,7 +1,7 @@
 ---
 title: "Port Rake::TaskManager, Scope and NameSpace"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-10-30
 rfc: "0211-rake-gem-port"
 cluster: port
 packages: [rake]
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9488
+claim: "2026-10-30T13:27:35Z"
+assignee: "rake-task-manager-and-scope"
 blocked-by: null
 ---
 

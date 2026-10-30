@@ -1,6 +1,6 @@
 ---
 title: "Store story and RFC bodies at ingest so /search queries them in SQL"
-status: ready
+status: done
 updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#99
+claim: "2026-10-30T13:03:44Z"
+assignee: "ringo-sends-a-line-of-text-to-a-pane"
 blocked-by: null
 closed-reason: null
 ---

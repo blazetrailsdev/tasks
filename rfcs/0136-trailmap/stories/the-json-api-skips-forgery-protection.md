@@ -1,7 +1,7 @@
 ---
 title: "The JSON API skips forgery protection, so mutation verbs work outside test"
-status: ready
-updated: 2026-10-28
+status: done
+updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#99
+claim: "2026-10-30T13:03:44Z"
+assignee: "ringo-sends-a-line-of-text-to-a-pane"
 blocked-by: null
 closed-reason: null
 ---

@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: trails#9478
+pr: trails#9484
 claim: "2026-10-30T10:26:42Z"
 assignee: "disk-service-url-helpers-typed-seat"
 blocked-by: null

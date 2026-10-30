@@ -1,6 +1,6 @@
 ---
 title: "SolidQueueAdapter is found by queue_adapter = :solid_queue"
-status: in-progress
+status: done
 updated: 2026-10-30
 rfc: "0196-solid-stack"
 cluster: null
