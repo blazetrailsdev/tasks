@@ -79,6 +79,12 @@ Those three are the visible cost of a design that leaves a port short of its
 Rails body wherever the body looks a constant up. The 2026-10-28 ruling accepted
 that cost; this RFC stops paying it.
 
+These three need a namespace-reading `constantize` with a `const_missing` miss
+path, and classes seated at definition. They do **not** need a loader: Rails'
+`reflection_test.rb` runs with none, requiring its models and letting the `class`
+keyword bind the rest. So `constantize-restored-over-namespaces` and the test
+seats answer them. The loader is justified by what follows.
+
 **The application scan is an invented loader.** `loadAppClasses`,
 `collectAppClasses`, `collectModels` and `loadControllers`
 (`packages/trailties/src/application/finisher.ts`) import every file, keep the
@@ -553,11 +559,13 @@ called, from an `on_load` that `trailties-autoloaders-and-config-paths` adds, so
 | `trailties-app-scan-retires`             | zw-railties | 350     | `trailties-autoloaders-and-config-paths`                               | Scan deleted, file contract enforced, app fixtures swept, trailties `CLAUDE.md` and its root pointer |
 | `trailties-reload-drives-zeitwerk`       | zw-railties | 300     | `zeitwerk-reload-and-unload`, `trailties-autoloaders-and-config-paths` | Reloader, `after_class_unload`, tracked classes                                                      |
 
-**Phase 3, lookup.**
+**Phase 3, lookup.** This does not depend on Phase 2 and may land before it. Once
+`TopLevel` holds the seats, a `registerX` write reaches it like any other, so the
+walk finds application classes whichever path seated them.
 
-| Story                                  | Cluster   | est-loc | Deps                                                           | Scope                                                                                                                                                        |
-| -------------------------------------- | --------- | ------- | -------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| `constantize-restored-over-namespaces` | zw-lookup | 400     | `top-level-moves-to-ruby-compat`, `trailties-app-scan-retires` | Walk `TopLevel`, typed `ConstantTable`, `rbFLoad` seat, the 3 reflection tests stay green, HABTM test; root lookup and call-time sections, `rbFLoad` pointer |
+| Story                                  | Cluster   | est-loc | Deps                             | Scope                                                                                                                                                        |
+| -------------------------------------- | --------- | ------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `constantize-restored-over-namespaces` | zw-lookup | 400     | `top-level-moves-to-ruby-compat` | Walk `TopLevel`, typed `ConstantTable`, `rbFLoad` seat, the 3 reflection tests stay green, HABTM test; root lookup and call-time sections, `rbFLoad` pointer |
 
 **Phase 4, retire `registerX`.**
 
