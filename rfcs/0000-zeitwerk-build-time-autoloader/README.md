@@ -466,8 +466,7 @@ The decision-history entry lands first, with `vendor-zeitwerk-v2-7-2`.
 
 RFC 0205's seat and read arm is unaffected: plain imports inside bodies, plain
 assignment seats and the module-eval survivors all stand. Its lookup arm is
-replaced. Its README records the disposition story by story in § "Lookup arm:
-superseded".
+replaced. Its README records the disposition story by story in § "Lookup arm: proposed supersession".
 
 ## trails#9466
 
