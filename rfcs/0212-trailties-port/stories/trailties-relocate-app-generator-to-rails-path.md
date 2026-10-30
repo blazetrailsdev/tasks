@@ -2,7 +2,7 @@
 title: "Move AppGenerator to generators/rails/app/app-generator.ts"
 status: ready
 updated: 2026-10-30
-rfc: "0000-trailties-port"
+rfc: "0212-trailties-port"
 cluster: tt-layout
 packages: ["trailties"]
 deps: []

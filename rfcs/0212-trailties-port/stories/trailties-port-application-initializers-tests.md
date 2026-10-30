@@ -2,7 +2,7 @@
 title: "Pilot: port railties' test/application/initializers tests onto the isolation harness"
 status: ready
 updated: 2026-10-30
-rfc: "0000-trailties-port"
+rfc: "0212-trailties-port"
 cluster: tt-tests
 packages: ["trailties"]
 deps: ["trailties-isolation-abstract-unit-boot-and-rails-command"]

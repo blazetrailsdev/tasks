@@ -2,7 +2,7 @@
 title: "Port the remaining CodeStatistics, Info and SourceAnnotationExtractor methods"
 status: ready
 updated: 2026-10-30
-rfc: "0000-trailties-port"
+rfc: "0212-trailties-port"
 cluster: tt-surface
 packages: ["trailties"]
 deps: []

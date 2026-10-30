@@ -2,7 +2,7 @@
 title: "Port Rails::Generators::TestCase, Testing::Behavior and SetupAndTeardown"
 status: ready
 updated: 2026-10-30
-rfc: "0000-trailties-port"
+rfc: "0212-trailties-port"
 cluster: tt-harness
 packages: ["trailties"]
 deps: []

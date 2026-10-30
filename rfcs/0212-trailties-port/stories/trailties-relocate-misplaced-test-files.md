@@ -2,7 +2,7 @@
 title: "Move trailties' 144 misplaced test files to their Rails paths"
 status: ready
 updated: 2026-10-30
-rfc: "0000-trailties-port"
+rfc: "0212-trailties-port"
 cluster: tt-layout
 packages: ["trailties"]
 deps: []

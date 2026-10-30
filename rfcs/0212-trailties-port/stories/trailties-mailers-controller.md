@@ -2,7 +2,7 @@
 title: "Port Rails::MailersController (mailer previews)"
 status: ready
 updated: 2026-10-30
-rfc: "0000-trailties-port"
+rfc: "0212-trailties-port"
 cluster: tt-surface
 packages: ["trailties", "actionmailer"]
 deps: []

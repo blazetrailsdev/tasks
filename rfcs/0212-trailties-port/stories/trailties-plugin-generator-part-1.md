@@ -2,7 +2,7 @@
 title: "Port Rails::Generators::PluginGenerator, part 1 (PluginBuilder)"
 status: ready
 updated: 2026-10-30
-rfc: "0000-trailties-port"
+rfc: "0212-trailties-port"
 cluster: tt-surface
 packages: ["trailties"]
 deps: ["trailties-app-base-remaining-surface"]

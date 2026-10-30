@@ -1,5 +1,5 @@
 ---
-rfc: "0000-trailties-port"
+rfc: "0212-trailties-port"
 title: "Port the rest of railties into trailties, and its test suite"
 status: draft
 created: 2026-10-30
@@ -21,12 +21,7 @@ related-rfcs:
   - "0204-actionmailer-and-mail-port"
 ---
 
-<!-- Unnumbered until merge: copy this dir to `rfcs/0000-your-slug`, keep `rfc:`
-     as 0000-your-slug and the H1 below number-free. `scripts/finalize-rfc.mjs`
-     swaps 0000 for the assigned number at merge. Never use a `draft-` prefix —
-     `draft` is a lifecycle status, not a dir prefix (see top-level README). -->
-
-# RFC — Port the rest of railties into trailties, and its test suite
+# RFC 0212 — Port the rest of railties into trailties, and its test suite
 
 ## Summary
 

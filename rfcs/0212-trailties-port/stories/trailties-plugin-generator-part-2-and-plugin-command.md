@@ -2,7 +2,7 @@
 title: "Port PluginGenerator, part 2, and the plugin command"
 status: ready
 updated: 2026-10-30
-rfc: "0000-trailties-port"
+rfc: "0212-trailties-port"
 cluster: tt-surface
 packages: ["trailties"]
 deps: ["trailties-plugin-generator-part-1"]
