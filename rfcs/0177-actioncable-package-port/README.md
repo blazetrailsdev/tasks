@@ -265,6 +265,9 @@ has no autoloader"). Framework-internal constant resolution uses the
 `namespaces.ts` `Autoload` shape: six namespace objects, each class seating
 itself with `rbModConstSet` in its defining module.
 
+**Proposed 2026-10-30:** the `zeitwerk-build-time-autoloader` RFC reverses this
+ruling when it goes `active`; its § "Other RFCs" says what happens here.
+
 ### CI: an actioncable-only diff runs a minimal lane
 
 About 35 of the stories touch only `packages/actioncable/**`. Without

@@ -3,7 +3,7 @@ rfc: "0205-namespace-seats-are-plain-javascript"
 title: "Lean on ES imports: namespace seating survives only where module evaluation order needs it"
 status: active
 created: 2026-10-22
-updated: 2026-10-28
+updated: 2026-10-30
 owner: "@deanmarano"
 packages:
   - "ruby-compat"
@@ -39,6 +39,11 @@ priority: null
 ---
 
 # RFC 0205 — Lean on ES imports
+
+> **Proposed 2026-10-30.** The `zeitwerk-build-time-autoloader` RFC would supersede
+> the lookup arm and reverse the 2026-10-28 ruling below. Until that RFC goes
+> `active`, the lookup arm stands as written. See § "Lookup arm: proposed
+> supersession". The seat and read arm is not affected.
 
 ## Summary
 
@@ -182,6 +187,9 @@ That is the table's whole job. By repo-owner ruling (2026-10-28, trails#9424):
 
 ### Lookup is an ES import or an explicit registry
 
+**Proposed for supersession on 2026-10-30; see § "Lookup arm: proposed
+supersession".**
+
 Ruby finds a class by name at run time (`constantize`, `const_get`,
 `const_defined?`, `constants`, `path2class`). trails does not port that
 lookup, **even where the Rails body calls it**: this is JavaScript, and a class
@@ -237,13 +245,64 @@ and then frozen by the gate:
 
 Anything not on this list, after its sweep, is a plain ES import.
 
+## Lookup arm: proposed supersession
+
+By owner direction (2026-10-30), once the `zeitwerk-build-time-autoloader` RFC goes
+`active`, trails ports Zeitwerk, and `constantize`,
+`safe_constantize` and `const_get` are real, reading the namespaces a loader
+defined. A literal name a plain import can reach is still an import: that half
+of the 2026-10-28 ruling stands. What is reversed is "even where the Rails body
+calls it", and the claim that an open set of classes needs a per-domain registry.
+
+What would change here:
+
+- `registerModel`, `registerController`, `registerJob`, `registerChannel` and
+  `registerConnection` retire rather than stay as the target shape, so the 2,674
+  test calls are converted rather than kept.
+- `rbModConstSet` also ports the `class` keyword's own `rb_const_set`, for a class
+  no loader manages. § "`rbModConstSet` survives only where Rails says
+  `const_set`" stays true of framework source, and
+  `gate-rb-mod-const-set-to-rails-const-set-sites` must admit this shape in tests
+  and in files outside a loader.
+- The table of class → Ruby name also answers name → class. One generated
+  `constants.generated.ts` per package replaces `class-paths*.generated.ts`.
+  It stays a ruby-compat internal.
+- `TopLevel` moves to ruby-compat and is `rb_cObject`'s table.
+  `RCLASS_CONST_TBL` and `registerConstant` are still deleted, now by the
+  `zeitwerk-build-time-autoloader` RFC.
+
+Disposition of each story in the lookup arm. These are applied through `tasks`
+verbs when that RFC is approved, not by this edit:
+
+| Story                                                                      | Disposition                                                                     |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `gate-constant-lookup-calls-outside-ruby-compat`                           | Close `FALSIFIED:` lookup calls are allowed again                               |
+| `register-x-registries-gain-a-read-side` (trails#9466)                     | Close `FALSIFIED:`; #9466 closes unmerged, its HABTM finding carried over       |
+| `compute-type-registry-reaches-non-model-and-const-missing-arms`           | Close `FALSIFIED:` `computeType` keeps `constantize`                            |
+| `framework-constantize-calls-become-imports-or-registries`                 | Rewrite: literal names become imports; computed names stay lookups              |
+| `constant-lookup-helpers-keep-only-rails-const-get-sites`                  | Rewrite: its title's original meaning returns; a Rails `const_get` is kept      |
+| `class-path-table-api-is-ruby-compat-internal`                             | Rewrite: the lint targets the new table; `generatedClass` is replaced, not debt |
+| `framework-register-constant-seats-retire-onto-class-path-tables`          | Moved to `framework-constant-tables-replace-class-paths`                        |
+| `test-suites-drop-register-model-and-register-constant`                    | Moved to `register-x-retires-from-activerecord-tests`                           |
+| `delete-register-constant-and-the-top-level-constant-table`                | Moved to `delete-register-constant-and-class-path-api`                          |
+| `destroy-association-async-job-resolves-without-model-side-imports` (0189) | Re-read against `constantize`                                                   |
+| `destroy-association-async-job-reads-models-from-register-model` (0116)    | Re-read against `constantize`                                                   |
+
+Class-path stories that remain valid against the new table carry over unchanged
+in substance: `class-paths-resolve-for-entry-less-deep-imports`,
+`seats-kept-for-class-paths-the-table-cannot-name`,
+`msgpack-c-classes-and-nokogiri-need-class-path-rows`,
+`register-model-alias-does-not-rename-a-defined-class` (re-read once
+`registerModel` is gone).
+
 ## Scope
 
 The seat and read arm (landed or in flight): CLAUDE.md amendments, the
 per-package sweeps converting deferred reads to imports, the
 `rbModConstSet` gate, and the module-eval survivors.
 
-The lookup arm burns down in this order:
+The lookup arm burns down in this order, unless the
+`zeitwerk-build-time-autoloader` RFC goes `active`:
 
 1. **Gate** — `gate-constant-lookup-calls-outside-ruby-compat`: an only-shrink
    per-file count of the lookup calls above, against the `origin/main`
@@ -278,7 +337,7 @@ funnel module first and masks a TDZ.
 - **Dropping the qualified Ruby path.** It is Rails-visible output, and
   ruby-compat keeps it for printing a name.
 - **Application autoloading**, ratified absent in CLAUDE.md § "Trails has no
-  autoloader".
+  autoloader". The `zeitwerk-build-time-autoloader` RFC proposes to reverse this.
 
 ## Alternatives considered
 
@@ -308,7 +367,10 @@ registries are plain JavaScript and already exist.
 
 **Keep `constantize` / `const_get` wherever the Rails body calls it.**
 Rejected on 2026-10-28: "I don't even want 'justified by rails' — this is js,
-we want to do js as natively as possible."
+we want to do js as natively as possible." **Proposed for reversal on 2026-10-30**
+by the `zeitwerk-build-time-autoloader` RFC: three reflection tests could not be
+reached through a registry (trails#9466), and a loader removes the objection
+that lookup had no JS-native source of names.
 
 ## What this RFC reverses
 
@@ -327,3 +389,9 @@ the inverse, and fifteen `class-to-string-seat-enroll-<package>` stories enroll
 each package in a lint rule writing a hand-seeded Ruby path literal per class —
 the same registration-protocol mistake one layer down, and a duplicate of the
 generated table in story 2.
+
+## Changelog
+
+- 2026-10-30: supersession of the lookup arm proposed by the
+  `zeitwerk-build-time-autoloader` RFC; dispositions in § "Lookup arm: proposed
+  supersession".
