@@ -69,6 +69,8 @@ export class Story extends Base {
   declare isReady: () => boolean;
 
   static {
+    // Search text for trailmap, written by ingest; no verb should load it.
+    this.ignoredColumns = ["body"];
     // `updated_on` is a DATE-ONLY string ("2026-08-28"), markdown's `updated:`
     // field — but Rails' update-timestamp columns are BOTH `updated_at` and
     // `updated_on`, so a save stamps it with a full instant. It only skips a
