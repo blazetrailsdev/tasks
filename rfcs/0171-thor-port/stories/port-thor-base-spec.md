@@ -1,7 +1,7 @@
 ---
 title: "Port base_spec.rb (initialize, argument, class options and help, namespace, group, commands, start, attr_*)"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-10-30
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9469
+claim: "2026-10-30T00:09:10Z"
+assignee: "port-thor-base-spec"
 blocked-by: null
 closed-reason: null
 ---

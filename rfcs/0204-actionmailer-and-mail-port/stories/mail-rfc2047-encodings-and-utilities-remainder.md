@@ -1,7 +1,7 @@
 ---
 title: "Port Mail::Encodings RFC 2047 value encoding and the rest of Mail::Utilities"
-status: draft
-updated: 2026-10-29
+status: ready
+updated: 2026-10-30
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
 packages: []

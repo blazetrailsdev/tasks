@@ -1,7 +1,7 @@
 ---
 title: "Port actions/file_manipulation_spec.rb, part 2 (when changing existent files, when adjusting comments)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-30
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -12,9 +12,9 @@ deps:
 deps-rfc: []
 est-loc: 350
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9470
+claim: "2026-10-30T00:39:19Z"
+assignee: "port-thor-file-manipulation-spec-part-2"
 blocked-by: null
 closed-reason: null
 ---

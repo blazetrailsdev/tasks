@@ -1,7 +1,7 @@
 ---
 title: "Port Mail::Multibyte over the activesupport Multibyte port"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-10-30
 rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-core
 packages: ["mail"]
@@ -9,9 +9,9 @@ deps: ["mail-encodings-and-utilities"]
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9472
+claim: "2026-10-30T00:54:27Z"
+assignee: "mail-multibyte"
 blocked-by: null
 ---
 

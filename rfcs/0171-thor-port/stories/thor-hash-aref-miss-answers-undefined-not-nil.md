@@ -1,6 +1,6 @@
 ---
 title: "thor-hash-aref-miss-answers-undefined-not-nil"
-status: draft
+status: closed
 updated: 2026-10-30
 rfc: "0171-thor-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: hashAref (ruby-compat Hash#[]) already answers nil on a miss and reads the key over a colliding Hash method; the thor fixtures now use it (trails#9470)."
 ---
 
 ## Context

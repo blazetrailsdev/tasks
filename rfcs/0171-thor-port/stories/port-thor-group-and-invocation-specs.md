@@ -1,7 +1,7 @@
 ---
 title: "Port group_spec.rb and invocation_spec.rb"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-30
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["port-thor-spec-group-and-invoke-fixtures"]
 deps-rfc: []
 est-loc: 450
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9470
+claim: "2026-10-30T00:39:19Z"
+assignee: "port-thor-file-manipulation-spec-part-2"
 blocked-by: null
 closed-reason: null
 ---

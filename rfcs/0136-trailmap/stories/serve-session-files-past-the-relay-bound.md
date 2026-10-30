@@ -1,7 +1,7 @@
 ---
 title: "/sessions/file refuses files over 128 MiB and the pane view replays only 2 MiB"
-status: ready
-updated: 2026-10-29
+status: blocked
+updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "waits on controller-cannot-respond-with-a-readable-stream-body and no-worker-adapter-for-cpu-bound-work, both still draft in trails"
 closed-reason: null
 ---
 

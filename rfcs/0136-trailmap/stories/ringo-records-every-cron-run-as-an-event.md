@@ -1,7 +1,7 @@
 ---
 title: "ringo: record every cron run as a row in events"
-status: ready
-updated: 2026-10-29
+status: claimed
+updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-30T00:53:46Z"
+assignee: "bound-the-transcript-parse-on-the-request-thread"
 blocked-by: null
 closed-reason: null
 ---

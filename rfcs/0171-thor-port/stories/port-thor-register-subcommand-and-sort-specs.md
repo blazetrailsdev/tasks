@@ -1,7 +1,7 @@
 ---
 title: "Port register_spec.rb, subcommand_spec.rb and sort_spec.rb"
-status: ready
-updated: 2026-09-30
+status: claimed
+updated: 2026-10-30
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 450
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-30T00:56:40Z"
+assignee: "port-thor-register-subcommand-and-sort-specs"
 blocked-by: null
 closed-reason: null
 ---
