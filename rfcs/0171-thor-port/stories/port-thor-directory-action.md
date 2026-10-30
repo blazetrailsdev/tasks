@@ -1,6 +1,6 @@
 ---
 title: "Port Thor::Actions#directory and Actions::Directory (recursive copy with .tt rendering and .empty_directory)"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null

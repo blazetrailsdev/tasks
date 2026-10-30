@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: Kernel#system / Open3.capture2e always use /bin/sh -c; MRI execs a metacharacter-free command line directly"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null

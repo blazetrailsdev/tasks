@@ -1,6 +1,6 @@
 ---
 title: "@blazetrails/rake package skeleton"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0211-rake-gem-port"
 cluster: port

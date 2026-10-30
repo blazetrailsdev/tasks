@@ -1,6 +1,6 @@
 ---
 title: "Port Service, Service::Registry and Service::Configurator over an explicit service registry"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0209-activestorage-port"
 cluster: as-services

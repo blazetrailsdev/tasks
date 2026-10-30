@@ -1,6 +1,6 @@
 ---
 title: "solid-cable-record-connects-to-at-load"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0196-solid-stack"
 cluster: null

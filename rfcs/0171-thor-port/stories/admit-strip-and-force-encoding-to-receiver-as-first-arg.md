@@ -1,6 +1,6 @@
 ---
 title: "Call-args gate: admit strip and force_encoding as receiver-first, retire Thor's two @missingRailsArgs receipts"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null

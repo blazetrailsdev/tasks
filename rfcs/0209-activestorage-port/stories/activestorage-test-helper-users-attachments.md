@@ -1,6 +1,6 @@
 ---
 title: "activestorage-test-helper-users-attachments"
-status: draft
+status: ready
 updated: 2026-10-29
 rfc: "0209-activestorage-port"
 cluster: null

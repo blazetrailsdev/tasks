@@ -1,7 +1,7 @@
 ---
 title: "Port Thor's group.thor and invoke.thor fixtures"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["port-thor-group", "port-thor-spec-helper-and-script-fixtures"]
 deps-rfc: []
 est-loc: 400
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9465
+claim: "2026-10-29T23:09:07Z"
+assignee: "port-thor-spec-group-and-invoke-fixtures"
 blocked-by: null
 closed-reason: null
 ---

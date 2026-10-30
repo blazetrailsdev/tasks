@@ -1,6 +1,6 @@
 ---
 title: "Port Service::DiskService with the shared service tests"
-status: ready
+status: claimed
 updated: 2026-10-29
 rfc: "0209-activestorage-port"
 cluster: as-services
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 550
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-29T23:46:22Z"
+assignee: "activestorage-disk-service"
 blocked-by: null
 closed-reason: null
 ---

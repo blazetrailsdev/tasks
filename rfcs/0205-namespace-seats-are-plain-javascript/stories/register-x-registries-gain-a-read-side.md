@@ -1,6 +1,6 @@
 ---
 title: "registerX registries gain a name → class read side"
-status: draft
+status: in-progress
 updated: 2026-10-29
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9466
+claim: "2026-10-29T23:39:32Z"
+assignee: "register-x-registries-gain-a-read-side"
 blocked-by: null
 closed-reason: null
 ---

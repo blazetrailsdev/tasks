@@ -1,7 +1,7 @@
 ---
 title: "Port actions_spec.rb (initialize, accessors, inside, in_root, apply, run, run_ruby_script, thor)"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["port-thor-actions-apply", "port-thor-spec-group-and-invoke-fixtures"]
 deps-rfc: []
 est-loc: 500
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9467
+claim: "2026-10-29T23:39:11Z"
+assignee: "port-thor-actions-spec"
 blocked-by: null
 closed-reason: null
 ---

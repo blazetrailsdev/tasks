@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: Dir.chdir raises for sibling async blocks inside one open block"
-status: in-progress
+status: done
 updated: 2026-10-29
 rfc: "0171-thor-port"
 cluster: null
