@@ -1,6 +1,6 @@
 ---
 title: "Test trailmap through one test helper, fixtures and the application's own routes"
-status: claimed
+status: ready
 updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: "2026-10-30T09:56:35Z"
-assignee: "split-the-render-pages-the-rails-way-story"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

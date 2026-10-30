@@ -1,6 +1,6 @@
 ---
 title: "Split render-trailmap-pages-through-helpers-assigns-and-route-helpers: it measures about 700 lines, not 280"
-status: claimed
+status: in-progress
 updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: tasks#303
 claim: "2026-10-30T09:56:35Z"
 assignee: "split-the-render-pages-the-rails-way-story"
 blocked-by: null

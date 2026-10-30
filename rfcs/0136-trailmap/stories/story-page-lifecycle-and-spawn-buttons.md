@@ -1,6 +1,6 @@
 ---
 title: "story-page-lifecycle-and-spawn-buttons"
-status: claimed
+status: in-progress
 updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
+pr: trailmap#98
 claim: "2026-10-30T09:56:35Z"
 assignee: "split-the-render-pages-the-rails-way-story"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "Render trailmap's pages the Rails way: helpers in views, instance assigns, named-route helpers, asset tags"
 status: blocked
-updated: 2026-10-15
+updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null
 packages: ["actionview", "actionpack"]
@@ -14,7 +14,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Measures ~700 diff lines vs 280 est (trailmap#68 claimed and released it); exceeds the bundle ceiling. Held until split-the-render-pages-the-rails-way-story splits it."
+blocked-by: "Tracking umbrella: closed when its four split stories land."
 closed-reason: null
 ---
 
