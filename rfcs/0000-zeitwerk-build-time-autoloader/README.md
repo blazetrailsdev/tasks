@@ -551,7 +551,7 @@ package. `@blazetrails/zeitwerk` seats the root namespace on `TopLevel`, so
 
 **Phase 2, railties.** `Trails.autoloaders` replaces the scan. `registerX` is still
 called, from an `on_load` that `trailties-autoloaders-and-config-paths` adds, so
-`constantize` keeps its current table.
+`registerConstant` keeps seating application classes on `TopLevel`.
 
 | Story                                    | Cluster     | est-loc | Deps                                                                   | Scope                                                                                                |
 | ---------------------------------------- | ----------- | ------- | ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------- |
@@ -559,9 +559,13 @@ called, from an `on_load` that `trailties-autoloaders-and-config-paths` adds, so
 | `trailties-app-scan-retires`             | zw-railties | 350     | `trailties-autoloaders-and-config-paths`                               | Scan deleted, file contract enforced, app fixtures swept, trailties `CLAUDE.md` and its root pointer |
 | `trailties-reload-drives-zeitwerk`       | zw-railties | 300     | `zeitwerk-reload-and-unload`, `trailties-autoloaders-and-config-paths` | Reloader, `after_class_unload`, tracked classes                                                      |
 
-**Phase 3, lookup.** This does not depend on Phase 2 and may land before it. Once
-`TopLevel` holds the seats, a `registerX` write reaches it like any other, so the
-walk finds application classes whichever path seated them.
+**Phase 3, lookup.** This does not depend on Phase 2 and may land before it.
+`registerX` writes through `registerConstant` today
+(`packages/activerecord/src/associations.ts:112`,
+`packages/actionpack/src/action-controller/base.ts:779`,
+`packages/activejob/src/base.ts:167`), and `top-level-moves-to-ruby-compat` makes
+`registerConstant` write `TopLevel`. So the walk finds application classes
+whichever path seated them.
 
 | Story                                  | Cluster   | est-loc | Deps                             | Scope                                                                                                                                                        |
 | -------------------------------------- | --------- | ------- | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -569,11 +573,11 @@ walk finds application classes whichever path seated them.
 
 **Phase 4, retire `registerX`.**
 
-| Story                                        | Cluster   | est-loc | Deps                                   | Scope                                                                                             |
-| -------------------------------------------- | --------- | ------- | -------------------------------------- | ------------------------------------------------------------------------------------------------- |
-| `register-x-retires-from-source`             | zw-lookup | 450     | `constantize-restored-over-namespaces` | Source callers and the `on_load`; definitions stay until the tests move; activerecord `CLAUDE.md` |
-| `register-x-retires-from-activerecord-tests` | zw-lookup | 2200    | `register-x-retires-from-source`       | Single mechanical rename onto `rbModConstSet`                                                     |
-| `register-x-retires-from-other-tests`        | zw-lookup | 300     | `register-x-retires-from-source`       | The other packages' tests, then the definitions                                                   |
+| Story                                        | Cluster   | est-loc | Deps                                                                 | Scope                                                                                             |
+| -------------------------------------------- | --------- | ------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| `register-x-retires-from-source`             | zw-lookup | 450     | `constantize-restored-over-namespaces`, `trailties-app-scan-retires` | Source callers and the `on_load`; definitions stay until the tests move; activerecord `CLAUDE.md` |
+| `register-x-retires-from-activerecord-tests` | zw-lookup | 2200    | `register-x-retires-from-source`                                     | Single mechanical rename onto `rbModConstSet`                                                     |
+| `register-x-retires-from-other-tests`        | zw-lookup | 300     | `register-x-retires-from-source`                                     | The other packages' tests, then the definitions                                                   |
 
 **Phase 5, framework tables.**
 
