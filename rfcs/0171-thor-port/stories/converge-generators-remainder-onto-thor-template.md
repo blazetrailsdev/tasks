@@ -26,6 +26,16 @@ closed-reason: null
 
 `build:templates` already copies every non-TS file under `src/generators`, so a new `templates/` directory needs no package.json edit.
 
+Files this story touches:
+
+- `packages/trailties/src/generators/app-generator.ts`
+- `packages/trailties/src/generators/rails/db/system/change/change-generator.ts`
+- `packages/trailties/src/generators/rails/authentication/authentication-generator.ts`
+- `packages/trailties/src/generators/tse/authentication/authentication-generator.ts`
+- `packages/trailties/src/generators/rails/controller/controller-generator.ts`
+- `packages/trailties/src/generators/rails/job/job-generator.ts`
+- `packages/trailties/src/generators/test-unit/controller/controller-generator.ts`
+
 ## Acceptance criteria
 
 - [ ] Each generator carrying a `CONVERGEABLE converge-generators-remainder-onto-thor-template` receipt calls Thor's `template` over a source file in its `templates/` directory, and the receipt is removed.
