@@ -1,6 +1,6 @@
 ---
 title: "Thor commands / all_commands / map read Object.prototype members as entries"
-status: in-progress
+status: done
 updated: 2026-10-31
 rfc: "0171-thor-port"
 cluster: null

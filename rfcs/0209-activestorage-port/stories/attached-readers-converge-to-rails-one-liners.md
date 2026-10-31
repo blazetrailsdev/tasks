@@ -1,6 +1,6 @@
 ---
 title: "Converge Attached readers to Rails' one-liners"
-status: in-progress
+status: done
 updated: 2026-10-31
 rfc: "0209-activestorage-port"
 cluster: null

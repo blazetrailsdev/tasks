@@ -1,6 +1,6 @@
 ---
 title: "Commands and generator namespaces register and list in kebab-case, and accept snake_case input"
-status: in-progress
+status: done
 updated: 2026-10-31
 rfc: "0171-thor-port"
 cluster: null

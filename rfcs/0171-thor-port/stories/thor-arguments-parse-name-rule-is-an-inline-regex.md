@@ -1,6 +1,6 @@
 ---
 title: "Thor::Arguments#parse builds parse_#{type}'s TS name with an inline regex instead of ruby-compat's method-name rule"
-status: in-progress
+status: done
 updated: 2026-10-31
 rfc: "0171-thor-port"
 cluster: null

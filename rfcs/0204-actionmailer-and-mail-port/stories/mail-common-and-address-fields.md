@@ -1,6 +1,6 @@
 ---
 title: "Port mail's field base classes and address fields"
-status: in-progress
+status: done
 updated: 2026-10-31
 rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-core

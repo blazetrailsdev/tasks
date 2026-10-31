@@ -1,6 +1,6 @@
 ---
 title: "mail-encodings-spec-remainder-and-generate-message-id"
-status: in-progress
+status: done
 updated: 2026-10-31
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
