@@ -1,7 +1,7 @@
 ---
 title: "Port mail's elements/"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-10-30
 rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-core
 packages: ["mail"]
@@ -9,9 +9,9 @@ deps: ["mail-ragel-parsers-remaining"]
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9517
+claim: "2026-10-30T23:38:37Z"
+assignee: "mail-elements"
 blocked-by: null
 ---
 

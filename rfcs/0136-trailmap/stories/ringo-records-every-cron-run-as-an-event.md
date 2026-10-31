@@ -1,6 +1,6 @@
 ---
 title: "ringo: record every cron run as a row in events"
-status: blocked
+status: ready
 updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "needs the tasks CLI to take an actor on done/release (verbs.ts records actor null), so sweep mutations can carry the sweep; ringo's write path (taskswrite.go) exists but has no caller yet"
+blocked-by: null
 closed-reason: null
 ---
 

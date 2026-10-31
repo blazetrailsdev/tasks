@@ -1,6 +1,6 @@
 ---
 title: "ringo: POST /pane/<n>/send types one line of text and Enter into a pane"
-status: claimed
+status: done
 updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null

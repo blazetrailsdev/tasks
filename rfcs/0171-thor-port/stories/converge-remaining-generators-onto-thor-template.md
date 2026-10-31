@@ -1,6 +1,6 @@
 ---
 title: "converge-remaining-generators-onto-thor-template"
-status: ready
+status: in-progress
 updated: 2026-10-30
 rfc: "0171-thor-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9514
+claim: "2026-10-30T23:17:03Z"
+assignee: "converge-remaining-generators-onto-thor-template"
 blocked-by: null
 closed-reason: null
 ---

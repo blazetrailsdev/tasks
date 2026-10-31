@@ -1,6 +1,6 @@
 ---
 title: "Port net-smtp's remaining gem tests with a scripted FakeServer"
-status: draft
+status: ready
 updated: 2026-10-30
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Converge Net::SMTP's session setup and authenticators off nodemailer internals"
-status: draft
+status: ready
 updated: 2026-10-30
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null

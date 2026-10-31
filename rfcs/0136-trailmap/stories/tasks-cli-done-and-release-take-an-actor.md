@@ -1,6 +1,6 @@
 ---
 title: "tasks CLI: done and release cannot record who made the mutation"
-status: ready
+status: done
 updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#102
+claim: "2026-10-30T23:02:36Z"
+assignee: "deploy-ringo-pane-send-and-sessions-status"
 blocked-by: null
 closed-reason: null
 ---

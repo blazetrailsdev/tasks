@@ -1,6 +1,6 @@
 ---
 title: "Port Application display_exception_backtrace, rakefile_location and windows?"
-status: in-progress
+status: done
 updated: 2026-10-30
 rfc: "0211-rake-gem-port"
 cluster: null

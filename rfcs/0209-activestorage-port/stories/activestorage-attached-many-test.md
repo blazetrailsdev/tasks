@@ -1,6 +1,6 @@
 ---
 title: "Port attached/many_test.rb"
-status: in-progress
+status: done
 updated: 2026-10-30
 rfc: "0209-activestorage-port"
 cluster: as-attached

@@ -1,6 +1,6 @@
 ---
 title: "constantize walks TopLevel namespaces"
-status: ready
+status: claimed
 updated: 2026-10-30
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-lookup
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-30T23:40:52Z"
+assignee: "constantize-restored-over-namespaces"
 blocked-by: null
 closed-reason: null
 ---

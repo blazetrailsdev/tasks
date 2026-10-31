@@ -1,6 +1,6 @@
 ---
 title: "Port Rake::Task's class methods, | and the DSL-dependent task tests"
-status: in-progress
+status: done
 updated: 2026-10-30
 rfc: "0211-rake-gem-port"
 cluster: port
