@@ -1,7 +1,7 @@
 ---
 title: "Lint failing on main @eb90cd3e"
-status: in-progress
-updated: 2026-10-30
+status: done
+updated: 2026-10-31
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

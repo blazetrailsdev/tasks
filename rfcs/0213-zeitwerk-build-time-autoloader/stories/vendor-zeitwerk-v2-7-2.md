@@ -1,7 +1,7 @@
 ---
 title: "Vendor Zeitwerk v2.7.2 and record the two reversals"
-status: claimed
-updated: 2026-10-30
+status: in-progress
+updated: 2026-10-31
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-gem
 packages: ["scripts"]
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#9518
 claim: "2026-10-30T23:40:52Z"
 assignee: "constantize-restored-over-namespaces"
 blocked-by: null

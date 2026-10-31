@@ -1,6 +1,6 @@
 ---
 title: "Active Record MariaDB Tests (1), Active Record PostgreSQL Tests (1), Trailties Tests, Build & Type Check, Unit Tests (1), Active Record SQLite Tests (2), Guides Code Type Check, Active Record MariaDB Tests (2), Active Record SQLite Tests (1), Active Record SQLite :memory: Tests (2), Active Record PostgreSQL Tests (2), Rails API/Test Comparison, Active Record SQLite :memory: Tests (1), Unit Tests (2) failing on main @daedeeb7"
-status: ready
+status: in-progress
 updated: 2026-10-31
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: trails#9519
+claim: "2026-10-31T00:49:49Z"
+assignee: "red-daedeeb7-r12"
 blocked-by: null
 closed-reason: null
 ---

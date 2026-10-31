@@ -1,7 +1,7 @@
 ---
 title: "constantize walks TopLevel namespaces"
-status: claimed
-updated: 2026-10-30
+status: in-progress
+updated: 2026-10-31
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-lookup
 packages: ["activesupport", "ruby-compat", "activerecord"]
@@ -9,7 +9,7 @@ deps: ["top-level-moves-to-ruby-compat"]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#9518
 claim: "2026-10-30T23:40:52Z"
 assignee: "constantize-restored-over-namespaces"
 blocked-by: null
