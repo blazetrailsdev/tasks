@@ -5,7 +5,9 @@ updated: 2026-10-31
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
 packages: []
-deps: []
+deps:
+  - zeitwerk-setup-walk
+  - zeitwerk-loader-config-and-helpers
 deps-rfc: []
 est-loc: null
 priority: null
