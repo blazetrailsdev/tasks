@@ -1,7 +1,7 @@
 ---
 title: "registerX registries gain a name → class read side"
-status: in-progress
-updated: 2026-10-29
+status: closed
+updated: 2026-10-31
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: trails#9466
 claim: "2026-10-29T23:39:32Z"
 assignee: "register-x-registries-gain-a-read-side"
 blocked-by: null
-closed-reason: null
+closed-reason: "Superseded by RFC 0213."
 ---
 
 ## Context

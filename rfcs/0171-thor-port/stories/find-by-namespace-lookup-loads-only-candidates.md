@@ -1,7 +1,7 @@
 ---
 title: "find-by-namespace-lookup-loads-only-candidates"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-10-31
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["vendor-thor-and-port-command-base-thor-surface"]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9540
+claim: "2026-10-31T16:55:20Z"
+assignee: "rake-testtask-and-loader-unit-tests"
 blocked-by: null
 closed-reason: null
 ---

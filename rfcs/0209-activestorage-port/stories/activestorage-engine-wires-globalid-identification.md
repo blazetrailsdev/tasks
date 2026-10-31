@@ -1,6 +1,6 @@
 ---
 title: "activestorage-engine-wires-globalid-identification"
-status: in-progress
+status: done
 updated: 2026-10-31
 rfc: "0209-activestorage-port"
 cluster: null

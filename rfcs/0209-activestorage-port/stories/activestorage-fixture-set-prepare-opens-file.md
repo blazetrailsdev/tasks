@@ -1,6 +1,6 @@
 ---
 title: "activestorage-fixture-set-prepare-opens-file"
-status: claimed
+status: done
 updated: 2026-10-31
 rfc: "0209-activestorage-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9536
 claim: "2026-10-31T15:56:40Z"
 assignee: "activestorage-fixture-set-prepare-opens-file"
 blocked-by: null

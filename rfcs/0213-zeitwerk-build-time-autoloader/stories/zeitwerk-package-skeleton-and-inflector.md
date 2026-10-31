@@ -1,7 +1,7 @@
 ---
 title: "@blazetrails/zeitwerk package skeleton, inflectors and errors"
-status: ready
-updated: 2026-10-30
+status: in-progress
+updated: 2026-10-31
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-gem
 packages: ["zeitwerk"]
@@ -9,9 +9,9 @@ deps: ["vendor-zeitwerk-v2-7-2"]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9541
+claim: "2026-10-31T17:12:43Z"
+assignee: "zeitwerk-package-skeleton-and-inflector"
 blocked-by: null
 closed-reason: null
 ---

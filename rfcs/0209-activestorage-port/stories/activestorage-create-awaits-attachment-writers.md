@@ -1,6 +1,6 @@
 ---
 title: "activestorage-create-awaits-attachment-writers"
-status: in-progress
+status: done
 updated: 2026-10-31
 rfc: "0209-activestorage-port"
 cluster: null

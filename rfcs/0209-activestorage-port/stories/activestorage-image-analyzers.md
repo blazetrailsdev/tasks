@@ -1,7 +1,7 @@
 ---
 title: "Port Analyzer, NullAnalyzer, ImageAnalyzer (ImageMagick and Vips), Blob::Analyzable and AnalyzeJob"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-10-31
 rfc: "0209-activestorage-port"
 cluster: as-analysis
 packages: ["activestorage"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9537
+claim: "2026-10-31T16:16:46Z"
+assignee: "activestorage-image-analyzers"
 blocked-by: null
 closed-reason: null
 ---

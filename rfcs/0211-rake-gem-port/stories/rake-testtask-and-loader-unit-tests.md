@@ -1,6 +1,6 @@
 ---
 title: "Port test_rake_test_task, rake_test_loader and makefile_loader tests"
-status: draft
+status: in-progress
 updated: 2026-10-31
 rfc: "0211-rake-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9540
+claim: "2026-10-31T16:55:20Z"
+assignee: "rake-testtask-and-loader-unit-tests"
 blocked-by: null
 closed-reason: null
 ---

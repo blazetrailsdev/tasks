@@ -1,7 +1,7 @@
 ---
 title: "Commands and generator namespaces register and list in kebab-case, and accept snake_case input"
-status: ready
-updated: 2026-10-04
+status: claimed
+updated: 2026-10-31
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-31T17:30:45Z"
+assignee: "rake-thread-pool-history"
 blocked-by: null
 closed-reason: null
 ---

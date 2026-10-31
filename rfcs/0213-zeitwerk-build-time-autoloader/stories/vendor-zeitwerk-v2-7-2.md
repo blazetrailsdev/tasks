@@ -1,6 +1,6 @@
 ---
 title: "Vendor Zeitwerk v2.7.2 and record the two reversals"
-status: in-progress
+status: done
 updated: 2026-10-31
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-gem

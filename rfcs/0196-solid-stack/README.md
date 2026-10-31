@@ -14,7 +14,7 @@ packages:
   - "activerecord"
 clusters:
   - solid-stack
-priority: 3
+priority: 5
 ---
 
 # RFC 0196 — Solid Cache, Solid Queue and Solid Cable as the trails production backends

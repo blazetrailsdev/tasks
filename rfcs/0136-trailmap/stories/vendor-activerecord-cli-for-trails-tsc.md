@@ -1,7 +1,7 @@
 ---
 title: "Vendor @blazetrails/activerecord-cli so pnpm build can run trails-tsc"
 status: ready
-updated: 2026-10-30
+updated: 2026-10-31
 rfc: "0136-trailmap"
 cluster: null
 packages: []

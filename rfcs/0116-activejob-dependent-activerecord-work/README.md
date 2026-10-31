@@ -12,7 +12,7 @@ clusters:
 related-rfcs:
   - "0106-wide-call-set-direct-burndown"
   - "0023-surfaced-deviations"
-priority: 1
+priority: 4
 ---
 
 # RFC 0116 — ActiveJob-dependent ActiveRecord work: the `dependent: :destroy_async` closure

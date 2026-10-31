@@ -1,6 +1,6 @@
 ---
 title: "attached-analyzing-tests"
-status: draft
+status: ready
 updated: 2026-10-31
 rfc: "0209-activestorage-port"
 cluster: null

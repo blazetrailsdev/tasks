@@ -1,7 +1,7 @@
 ---
 title: "invoke_from_option's status line prints the camelCase option key, not Rails' option name"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-10-31
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9540
+claim: "2026-10-31T16:55:20Z"
+assignee: "rake-testtask-and-loader-unit-tests"
 blocked-by: null
 closed-reason: null
 ---

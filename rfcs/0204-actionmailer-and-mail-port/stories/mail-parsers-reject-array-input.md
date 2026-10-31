@@ -1,6 +1,6 @@
 ---
 title: "mail-parsers-reject-array-input"
-status: draft
+status: closed
 updated: 2026-10-31
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: shipped in trails#9539"
 ---
 
 ## Context

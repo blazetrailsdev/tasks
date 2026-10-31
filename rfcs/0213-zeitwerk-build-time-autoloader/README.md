@@ -29,7 +29,7 @@ related-rfcs:
   - "0151-activesupport-autoload-slot-registry"
   - "0212-trailties-port"
   - "0142-trailties-surfaced-deviations"
-priority: 3
+priority: 1
 ---
 
 # RFC 0213 — Port Zeitwerk: @blazetrails/zeitwerk, a build-time autoloader

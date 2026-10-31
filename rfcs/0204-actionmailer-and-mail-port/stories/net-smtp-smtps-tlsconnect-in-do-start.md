@@ -1,6 +1,6 @@
 ---
 title: "net-smtp-smtps-tlsconnect-in-do-start"
-status: draft
+status: ready
 updated: 2026-10-31
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null

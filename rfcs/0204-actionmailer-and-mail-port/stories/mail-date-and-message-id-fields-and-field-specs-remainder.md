@@ -1,6 +1,6 @@
 ---
 title: "mail-date-and-message-id-fields-and-field-specs-remainder"
-status: draft
+status: closed
 updated: 2026-10-31
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: the ceiling was waived and trails#9539 ships this work; its Mail.new specs wait on mail-message-core"
 ---
 
 ## Context

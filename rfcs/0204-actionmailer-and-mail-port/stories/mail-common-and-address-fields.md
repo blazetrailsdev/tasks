@@ -1,7 +1,7 @@
 ---
 title: "Port mail's field base classes and address fields"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-10-31
 rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-core
 packages: ["mail"]
@@ -9,9 +9,9 @@ deps: ["mail-elements"]
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9539
+claim: "2026-10-31T16:43:43Z"
+assignee: "mail-common-and-address-fields"
 blocked-by: null
 ---
 

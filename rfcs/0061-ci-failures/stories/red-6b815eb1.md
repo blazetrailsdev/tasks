@@ -1,6 +1,6 @@
 ---
 title: "Lint failing on main @6b815eb1"
-status: ready
+status: closed
 updated: 2026-10-31
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-31T17:18:51Z"
+assignee: "red-6b815eb1"
 blocked-by: null
-closed-reason: null
+closed-reason: "Infrastructure: Lint job on run 41222899149 was killed by a runner shutdown signal mid-ESLint with no lint findings logged; eslint on every .ts file from 6b815eb1 passes locally (exit 0)."
 ---
 
 ## Context

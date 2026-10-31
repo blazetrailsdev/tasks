@@ -1,7 +1,7 @@
 ---
 title: "Port Service::MirrorService and MirrorJob for Disk mirrors"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-10-31
 rfc: "0209-activestorage-port"
 cluster: as-services
 packages: ["activestorage"]
@@ -9,9 +9,9 @@ deps: ["activestorage-disk-service", "activestorage-blob-and-downloader"]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9538
+claim: "2026-10-31T16:36:40Z"
+assignee: "activestorage-mirror-service-over-disk"
 blocked-by: null
 closed-reason: null
 ---

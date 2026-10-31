@@ -1,6 +1,6 @@
 ---
 title: "Port blob_test.rb and the purge job test"
-status: in-progress
+status: done
 updated: 2026-10-31
 rfc: "0209-activestorage-port"
 cluster: as-models

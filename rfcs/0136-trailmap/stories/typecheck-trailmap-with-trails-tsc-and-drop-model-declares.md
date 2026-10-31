@@ -1,7 +1,7 @@
 ---
 title: "Typecheck trailmap with trails-tsc and delete the hand-written model declares"
 status: ready
-updated: 2026-10-30
+updated: 2026-10-31
 rfc: "0136-trailmap"
 cluster: null
 packages: ["trails-tsc"]

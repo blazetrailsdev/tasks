@@ -1,6 +1,6 @@
 ---
 title: "TestTask libs reach the test process load path"
-status: draft
+status: in-progress
 updated: 2026-10-31
 rfc: "0211-rake-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9540
+claim: "2026-10-31T16:55:20Z"
+assignee: "rake-testtask-and-loader-unit-tests"
 blocked-by: null
 closed-reason: null
 ---

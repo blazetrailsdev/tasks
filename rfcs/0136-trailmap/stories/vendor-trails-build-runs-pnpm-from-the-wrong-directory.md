@@ -1,7 +1,7 @@
 ---
 title: "vendor-trails.sh runs pnpm -C from trailmap, so pnpm's version switch fails"
-status: ready
-updated: 2026-10-30
+status: in-progress
+updated: 2026-10-31
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 5
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#104
+claim: "2026-10-31T17:12:06Z"
+assignee: "ringo-records-every-cron-run-as-an-event"
 blocked-by: null
 closed-reason: null
 ---

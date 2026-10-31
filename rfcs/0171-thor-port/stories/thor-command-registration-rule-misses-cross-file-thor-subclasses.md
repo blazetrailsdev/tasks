@@ -1,7 +1,7 @@
 ---
 title: "thor-command-registration: name the generator bases so cross-file Thor subclasses are checked"
-status: ready
-updated: 2026-10-05
+status: claimed
+updated: 2026-10-31
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-31T17:48:46Z"
+assignee: "activestorage-one-test-nested-attachment-attributes"
 blocked-by: null
 closed-reason: null
 ---

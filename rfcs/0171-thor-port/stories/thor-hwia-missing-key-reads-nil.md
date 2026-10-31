@@ -1,7 +1,7 @@
 ---
 title: "Thor HWIA [] on a missing key answers nil, not undefined"
-status: draft
-updated: 2026-10-29
+status: ready
+updated: 2026-10-31
 rfc: "0171-thor-port"
 cluster: null
 packages: []
