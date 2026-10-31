@@ -1,6 +1,6 @@
 ---
 title: "FileList implicit Array conversion under async resolve"
-status: in-progress
+status: done
 updated: 2026-10-31
 rfc: "0211-rake-gem-port"
 cluster: null

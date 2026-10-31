@@ -1,7 +1,7 @@
 ---
 title: "Port blob_test.rb and the purge job test"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-10-31
 rfc: "0209-activestorage-port"
 cluster: as-models
 packages: ["activestorage"]
@@ -9,9 +9,9 @@ deps: ["activestorage-test-helper-and-fixture-set"]
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9529
+claim: "2026-10-31T13:16:39Z"
+assignee: "activestorage-blob-test"
 blocked-by: null
 closed-reason: null
 ---
