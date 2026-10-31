@@ -1,7 +1,7 @@
 ---
 title: "Converge Net::SMTP's session setup and authenticators off nodemailer internals"
-status: ready
-updated: 2026-10-30
+status: in-progress
+updated: 2026-10-31
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9520
+claim: "2026-10-31T02:00:27Z"
+assignee: "compare-file-async-reads-without-sync-fs"
 blocked-by: null
 closed-reason: null
 ---

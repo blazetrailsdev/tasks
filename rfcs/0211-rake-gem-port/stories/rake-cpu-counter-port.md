@@ -1,6 +1,6 @@
 ---
 title: "rake-cpu-counter-port"
-status: ready
+status: in-progress
 updated: 2026-10-31
 rfc: "0211-rake-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9521
+claim: "2026-10-31T02:16:41Z"
+assignee: "rake-cpu-counter-port"
 blocked-by: null
 closed-reason: null
 ---

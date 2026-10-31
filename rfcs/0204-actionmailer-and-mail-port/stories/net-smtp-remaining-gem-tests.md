@@ -1,7 +1,7 @@
 ---
 title: "Port net-smtp's remaining gem tests with a scripted FakeServer"
-status: ready
-updated: 2026-10-30
+status: in-progress
+updated: 2026-10-31
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9521
+claim: "2026-10-31T02:16:41Z"
+assignee: "rake-cpu-counter-port"
 blocked-by: null
 closed-reason: null
 ---
