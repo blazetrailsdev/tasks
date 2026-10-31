@@ -1,0 +1,19 @@
+---
+title: "limitsConcurrency is typed on ActiveJob's Base"
+status: draft
+updated: 2026-10-31
+rfc: "0196-solid-stack"
+cluster: null
+packages: []
+deps: []
+deps-rfc: []
+est-loc: 30
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+solid_queue adds limits_concurrency to ActiveJob::Base (solid_queue v1.1.3 lib/active_job/concurrency_controls.rb:16). trails adds it at runtime but activejob Base does not type it, so trailmap carries `declare static limitsConcurrency` in app/jobs/stats-sync-job.ts. Converged shape: importing @blazetrails/solid-queue augments Base with the static; delete the declare in trailmap.
