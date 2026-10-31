@@ -28,4 +28,4 @@ that `attached/model.rb:275` does not have. That guard skips the "Missing Active
 ## Acceptance criteria
 
 - `VariantRecord` calls `this.hasOneAttached("image")`.
-- `validateGlobalServiceConfiguration` has no configuration guard and its `@inventedArm` receipt is deleted.
+- `validateGlobalServiceConfiguration` has no configuration guard.
