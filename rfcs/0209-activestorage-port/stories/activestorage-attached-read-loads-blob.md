@@ -1,7 +1,7 @@
 ---
 title: "activestorage-attached-read-loads-blob"
-status: in-progress
-updated: 2026-10-30
+status: done
+updated: 2026-10-31
 rfc: "0209-activestorage-port"
 cluster: null
 packages: []

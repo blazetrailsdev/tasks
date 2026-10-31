@@ -1,6 +1,6 @@
 ---
 title: "Converge rake --job-stats and terminal width stdin"
-status: in-progress
+status: done
 updated: 2026-10-31
 rfc: "0211-rake-gem-port"
 cluster: null

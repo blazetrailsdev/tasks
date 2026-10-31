@@ -1,6 +1,6 @@
 ---
 title: "rake-task-prerequisites-awaiting-map"
-status: ready
+status: in-progress
 updated: 2026-10-31
 rfc: "0211-rake-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9526
+claim: "2026-10-31T12:36:54Z"
+assignee: "rake-task-prerequisites-awaiting-map"
 blocked-by: null
 closed-reason: null
 ---
