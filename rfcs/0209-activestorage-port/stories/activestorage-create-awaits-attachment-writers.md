@@ -1,6 +1,6 @@
 ---
 title: "activestorage-create-awaits-attachment-writers"
-status: claimed
+status: in-progress
 updated: 2026-10-31
 rfc: "0209-activestorage-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9530
 claim: "2026-10-31T13:36:40Z"
 assignee: "activestorage-create-awaits-attachment-writers"
 blocked-by: null

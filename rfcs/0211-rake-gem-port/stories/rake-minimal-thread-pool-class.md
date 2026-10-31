@@ -1,6 +1,6 @@
 ---
 title: "rake-minimal-thread-pool-class"
-status: ready
+status: claimed
 updated: 2026-10-31
 rfc: "0211-rake-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-31T14:56:40Z"
+assignee: "rake-minimal-thread-pool-class"
 blocked-by: null
 closed-reason: null
 ---

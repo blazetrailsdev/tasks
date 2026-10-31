@@ -1,6 +1,6 @@
 ---
 title: "rake-file-list-prerequisite-sync-read"
-status: ready
+status: in-progress
 updated: 2026-10-31
 rfc: "0211-rake-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9532
+claim: "2026-10-31T14:36:51Z"
+assignee: "rake-file-list-prerequisite-sync-read"
 blocked-by: null
 closed-reason: null
 ---
