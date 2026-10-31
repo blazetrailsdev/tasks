@@ -1,6 +1,6 @@
 ---
 title: "Port ActiveStorage::Reflection with its reflection, presence and strict-loading tests"
-status: in-progress
+status: done
 updated: 2026-10-31
 rfc: "0209-activestorage-port"
 cluster: as-attached
