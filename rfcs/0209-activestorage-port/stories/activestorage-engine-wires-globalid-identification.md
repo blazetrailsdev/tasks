@@ -1,7 +1,7 @@
 ---
 title: "activestorage-engine-wires-globalid-identification"
-status: ready
-updated: 2026-10-30
+status: in-progress
+updated: 2026-10-31
 rfc: "0209-activestorage-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9535
+claim: "2026-10-31T15:36:40Z"
+assignee: "activestorage-engine-wires-globalid-identification"
 blocked-by: null
 closed-reason: null
 ---

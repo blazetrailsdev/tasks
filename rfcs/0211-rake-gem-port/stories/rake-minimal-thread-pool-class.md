@@ -1,6 +1,6 @@
 ---
 title: "rake-minimal-thread-pool-class"
-status: claimed
+status: in-progress
 updated: 2026-10-31
 rfc: "0211-rake-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9533
 claim: "2026-10-31T14:56:40Z"
 assignee: "rake-minimal-thread-pool-class"
 blocked-by: null
