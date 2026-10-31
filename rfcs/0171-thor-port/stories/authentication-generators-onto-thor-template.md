@@ -5,7 +5,8 @@ updated: 2026-10-31
 rfc: "0171-thor-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - converge-generators-remainder-onto-thor-template
 deps-rfc: []
 est-loc: 200
 priority: null
