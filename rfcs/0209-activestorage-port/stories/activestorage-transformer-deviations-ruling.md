@@ -24,7 +24,9 @@ closed-reason: null
 (`vendor/rails/v8.0.2/activestorage/lib/active_storage/transformers/image_processing_transformer.rb:29`).
 `validate_transformation` also accepts the camelCase spelling of a listed method, where Rails compares exactly (`:54`).
 
+`operations` also refuses `combineOptions` beside `combine_options` (Rails `name.to_s == "combine_options"`, `:38`) and pushes `camelize(name...)` where Rails pushes `[ name, argument ]` (`:45`).
+
 ## Acceptance criteria
 
-- The repo owner rules on the awaited load and the camelCase spelling, recorded in CLAUDE.md.
+- The repo owner rules on the awaited load, the camelCase allowlist spelling, the `combineOptions` arm and the name normalisation in `operations`, recorded in CLAUDE.md.
 - The `@inventedArm` receipts are converged, or become `PERMANENT` under that ruling.
