@@ -1,6 +1,6 @@
 ---
 title: "Thor::Util snake_case and namespace_from_thor_class call a ruby-compat squeeze and to_s, not regex and a typeof arm"
-status: claimed
+status: in-progress
 updated: 2026-10-31
 rfc: "0171-thor-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: trails#9550
 claim: "2026-10-31T18:42:46Z"
 assignee: "activestorage-test-helper-users-attachments"
 blocked-by: null

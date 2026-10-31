@@ -1,6 +1,6 @@
 ---
 title: "activestorage-test-helper-users-attachments"
-status: claimed
+status: in-progress
 updated: 2026-10-31
 rfc: "0209-activestorage-port"
 cluster: null
@@ -12,7 +12,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9550
 claim: "2026-10-31T18:42:46Z"
 assignee: "activestorage-test-helper-users-attachments"
 blocked-by: null

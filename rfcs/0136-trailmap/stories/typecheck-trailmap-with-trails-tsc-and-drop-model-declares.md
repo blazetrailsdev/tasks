@@ -1,6 +1,6 @@
 ---
 title: "Typecheck trailmap with trails-tsc and delete the hand-written model declares"
-status: claimed
+status: in-progress
 updated: 2026-10-31
 rfc: "0136-trailmap"
 cluster: null
@@ -14,7 +14,7 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trailmap#105
 claim: "2026-10-31T18:50:43Z"
 assignee: "typecheck-trailmap-with-trails-tsc-and-drop-model-declares"
 blocked-by: null

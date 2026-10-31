@@ -1,6 +1,6 @@
 ---
 title: 'CreateFile#invoke! writes render''s bytes (binary "wb" open), not a UTF-8 re-encode'
-status: claimed
+status: in-progress
 updated: 2026-10-31
 rfc: "0171-thor-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#9547
 claim: "2026-10-31T18:25:01Z"
 assignee: "const-family-ruby-facing-names"
 blocked-by: null

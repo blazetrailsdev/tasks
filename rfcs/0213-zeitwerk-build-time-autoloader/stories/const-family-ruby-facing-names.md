@@ -1,6 +1,6 @@
 ---
 title: "const-family-ruby-facing-names"
-status: claimed
+status: in-progress
 updated: 2026-10-31
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9547
 claim: "2026-10-31T18:25:01Z"
 assignee: "const-family-ruby-facing-names"
 blocked-by: null

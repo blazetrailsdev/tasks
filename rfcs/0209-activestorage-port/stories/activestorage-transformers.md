@@ -1,7 +1,7 @@
 ---
 title: "Port Transformers::Transformer and ImageProcessingTransformer"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-10-31
 rfc: "0209-activestorage-port"
 cluster: as-variants
 packages: ["activestorage"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9548
+claim: "2026-10-31T19:01:14Z"
+assignee: "activestorage-transformers"
 blocked-by: null
 closed-reason: null
 ---
