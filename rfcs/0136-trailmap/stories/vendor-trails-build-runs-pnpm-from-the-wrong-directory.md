@@ -1,6 +1,6 @@
 ---
 title: "vendor-trails.sh runs pnpm -C from trailmap, so pnpm's version switch fails"
-status: in-progress
+status: done
 updated: 2026-10-31
 rfc: "0136-trailmap"
 cluster: null

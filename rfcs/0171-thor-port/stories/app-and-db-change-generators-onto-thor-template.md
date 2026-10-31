@@ -1,6 +1,6 @@
 ---
 title: "app-and-db-change-generators-onto-thor-template"
-status: draft
+status: ready
 updated: 2026-10-31
 rfc: "0171-thor-port"
 cluster: null

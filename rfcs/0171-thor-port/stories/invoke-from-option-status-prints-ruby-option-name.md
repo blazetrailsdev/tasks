@@ -1,6 +1,6 @@
 ---
 title: "invoke_from_option's status line prints the camelCase option key, not Rails' option name"
-status: in-progress
+status: done
 updated: 2026-10-31
 rfc: "0171-thor-port"
 cluster: null

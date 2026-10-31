@@ -1,7 +1,7 @@
 ---
 title: "The thor-only CI lane scores extra surface differently from the full lane (moved credit comes from other gems)"
-status: ready
-updated: 2026-10-29
+status: claimed
+updated: 2026-10-31
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-31T18:25:01Z"
+assignee: "const-family-ruby-facing-names"
 blocked-by: null
 closed-reason: null
 ---

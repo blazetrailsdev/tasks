@@ -1,6 +1,6 @@
 ---
 title: "zeitwerk-loader-inflector-tests"
-status: draft
+status: ready
 updated: 2026-10-31
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null

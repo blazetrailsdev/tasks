@@ -1,6 +1,6 @@
 ---
 title: "Thor::Command#handle_argument_error? counts rbFSend's frames, so a body's own top-frame ArgumentError is re-raised"
-status: claimed
+status: in-progress
 updated: 2026-10-31
 rfc: "0171-thor-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#9543
 claim: "2026-10-31T17:48:46Z"
 assignee: "activestorage-one-test-nested-attachment-attributes"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Port Service::MirrorService and MirrorJob for Disk mirrors"
-status: in-progress
+status: done
 updated: 2026-10-31
 rfc: "0209-activestorage-port"
 cluster: as-services

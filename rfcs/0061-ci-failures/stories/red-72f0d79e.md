@@ -1,6 +1,6 @@
 ---
 title: "Lint failing on main @72f0d79e"
-status: ready
+status: closed
 updated: 2026-10-31
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-31T18:25:00Z"
+assignee: "red-72f0d79e"
 blocked-by: null
-closed-reason: null
+closed-reason: "Lint on 72f0d79e was killed by a GitHub runner shutdown signal (exit 143, 'The runner has received a shutdown signal') mid-ESLint, with no lint errors reported. eslint passes locally on every file the commit touched. Infrastructure, no code fix."
 ---
 
 ## Context

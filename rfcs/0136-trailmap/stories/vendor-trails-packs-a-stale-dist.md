@@ -1,6 +1,6 @@
 ---
 title: "scripts/vendor-trails.sh packs whatever dist/ the checkout has, not the pinned ref's build"
-status: in-progress
+status: done
 updated: 2026-10-31
 rfc: "0136-trailmap"
 cluster: null

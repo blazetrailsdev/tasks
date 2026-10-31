@@ -1,6 +1,6 @@
 ---
 title: "Converge Attached readers to Rails' one-liners"
-status: claimed
+status: in-progress
 updated: 2026-10-31
 rfc: "0209-activestorage-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#9542
 claim: "2026-10-31T17:30:45Z"
 assignee: "rake-thread-pool-history"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "Apply Thor's spec helper to every Thor spec port through a vitest setup, and converge util.test onto the shared fixtures"
-status: ready
-updated: 2026-10-29
+status: claimed
+updated: 2026-10-31
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-31T18:42:46Z"
+assignee: "activestorage-test-helper-users-attachments"
 blocked-by: null
 closed-reason: null
 ---

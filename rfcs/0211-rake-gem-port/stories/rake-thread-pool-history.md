@@ -1,6 +1,6 @@
 ---
 title: "Port Rake thread history for --job-stats=history"
-status: claimed
+status: in-progress
 updated: 2026-10-31
 rfc: "0211-rake-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#9542
 claim: "2026-10-31T17:30:45Z"
 assignee: "rake-thread-pool-history"
 blocked-by: null

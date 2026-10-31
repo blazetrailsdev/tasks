@@ -1,6 +1,6 @@
 ---
 title: "Thor commands / all_commands / map read Object.prototype members as entries"
-status: claimed
+status: in-progress
 updated: 2026-10-31
 rfc: "0171-thor-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#9542
 claim: "2026-10-31T17:30:45Z"
 assignee: "rake-thread-pool-history"
 blocked-by: null
