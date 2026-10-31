@@ -1,0 +1,30 @@
+---
+title: "activestorage-transformer-deviations-ruling"
+status: draft
+updated: 2026-10-31
+rfc: "0209-activestorage-port"
+cluster: null
+packages: []
+deps: []
+deps-rfc: []
+est-loc: null
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+`packages/activestorage/src/transformers/image-processing-transformer.ts` carries two unratified additions to Rails.
+`process` awaits `ImageProcessing.loadPath[...]` where Ruby's `autoload :MiniMagick` / `:Vips`
+(`vendor/image_processing/v1.14.0/lib/image_processing.rb:10-11`) loads inside `const_get`
+(`vendor/rails/v8.0.2/activestorage/lib/active_storage/transformers/image_processing_transformer.rb:29`).
+`validate_transformation` also accepts the camelCase spelling of a listed method, where Rails compares exactly (`:54`).
+
+## Acceptance criteria
+
+- The repo owner rules on the awaited load and the camelCase spelling, recorded in CLAUDE.md.
+- The `@inventedArm` receipts are converged, or become `PERMANENT` under that ruling.
