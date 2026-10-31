@@ -1,7 +1,7 @@
 ---
 title: "Name trailmap's page routes and call path helpers in every view"
-status: in-progress
-updated: 2026-10-30
+status: done
+updated: 2026-10-31
 rfc: "0136-trailmap"
 cluster: null
 packages: ["actionview", "actionpack"]

@@ -1,7 +1,7 @@
 ---
 title: "Scheduler fails to register with SQLITE_BUSY on a file SQLite queue database"
-status: in-progress
-updated: 2026-10-30
+status: done
+updated: 2026-10-31
 rfc: "0196-solid-stack"
 cluster: null
 packages: ["solid-queue"]
