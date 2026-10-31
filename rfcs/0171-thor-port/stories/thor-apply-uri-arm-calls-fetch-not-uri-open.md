@@ -1,7 +1,7 @@
 ---
 title: "Port URI.open (open-uri) into ruby-compat and route Thor::Actions#apply's URI arm through it"
-status: in-progress
-updated: 2026-10-30
+status: done
+updated: 2026-10-31
 rfc: "0171-thor-port"
 cluster: null
 packages: []

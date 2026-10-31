@@ -1,6 +1,6 @@
 ---
 title: "Stats sync runs as a Solid Queue recurring job"
-status: draft
+status: in-progress
 updated: 2026-10-31
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#103
+claim: "2026-10-31T01:33:06Z"
+assignee: "stats-sync-runs-as-a-solid-queue-recurring-job"
 blocked-by: null
 closed-reason: null
 ---

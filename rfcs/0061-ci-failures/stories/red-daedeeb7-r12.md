@@ -1,6 +1,6 @@
 ---
 title: "Active Record MariaDB Tests (1), Active Record PostgreSQL Tests (1), Trailties Tests, Build & Type Check, Unit Tests (1), Active Record SQLite Tests (2), Guides Code Type Check, Active Record MariaDB Tests (2), Active Record SQLite Tests (1), Active Record SQLite :memory: Tests (2), Active Record PostgreSQL Tests (2), Rails API/Test Comparison, Active Record SQLite :memory: Tests (1), Unit Tests (2) failing on main @daedeeb7"
-status: in-progress
+status: done
 updated: 2026-10-31
 rfc: "0061-ci-failures"
 cluster: null

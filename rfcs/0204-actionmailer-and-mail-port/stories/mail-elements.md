@@ -1,7 +1,7 @@
 ---
 title: "Port mail's elements/"
-status: in-progress
-updated: 2026-10-30
+status: done
+updated: 2026-10-31
 rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-core
 packages: ["mail"]
