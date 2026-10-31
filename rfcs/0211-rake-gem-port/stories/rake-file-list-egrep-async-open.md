@@ -1,6 +1,6 @@
 ---
 title: "rake-file-list-egrep-async-open"
-status: claimed
+status: in-progress
 updated: 2026-10-31
 rfc: "0211-rake-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9523
 claim: "2026-10-31T02:56:40Z"
 assignee: "rake-file-list-egrep-async-open"
 blocked-by: null

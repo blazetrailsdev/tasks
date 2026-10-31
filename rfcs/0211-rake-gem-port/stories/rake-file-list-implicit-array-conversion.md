@@ -1,6 +1,6 @@
 ---
 title: "FileList implicit Array conversion under async resolve"
-status: ready
+status: claimed
 updated: 2026-10-31
 rfc: "0211-rake-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-10-31T03:36:54Z"
+assignee: "rake-file-list-implicit-array-conversion"
 blocked-by: null
 closed-reason: null
 ---
