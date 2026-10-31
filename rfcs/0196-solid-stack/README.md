@@ -5,7 +5,13 @@ status: active
 created: 2026-10-17
 updated: 2026-10-29
 owner: "@deanmarano"
-packages: ["solid-cache", "solid-queue", "solid-cable", "activesupport", "trailties"]
+packages:
+  - "solid-cache"
+  - "solid-queue"
+  - "solid-cable"
+  - "activesupport"
+  - "trailties"
+  - "activerecord"
 clusters:
   - solid-stack
 priority: 3
