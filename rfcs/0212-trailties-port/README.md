@@ -1,9 +1,9 @@
 ---
 rfc: "0212-trailties-port"
 title: "Port the rest of railties into trailties, and its test suite"
-status: draft
+status: active
 created: 2026-10-30
-updated: 2026-10-30
+updated: 2026-11-01
 owner: "@deanmarano"
 packages:
   - trailties
