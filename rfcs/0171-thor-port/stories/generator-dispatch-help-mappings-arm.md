@@ -1,7 +1,7 @@
 ---
 title: "Port Rails::Generators::Base banner / desc / help over Thor::Group's help, and route `trails g <name> --help` through it"
-status: ready
-updated: 2026-10-04
+status: claimed
+updated: 2026-11-01
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -15,8 +15,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-01T00:42:59Z"
+assignee: "port-routes-commands-onto-rails-command-base"
 blocked-by: null
 closed-reason: null
 ---

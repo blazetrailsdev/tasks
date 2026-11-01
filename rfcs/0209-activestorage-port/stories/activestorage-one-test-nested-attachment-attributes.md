@@ -1,7 +1,7 @@
 ---
 title: "activestorage-one-test-nested-attachment-attributes"
-status: in-progress
-updated: 2026-10-31
+status: done
+updated: 2026-11-01
 rfc: "0209-activestorage-port"
 cluster: null
 packages: []

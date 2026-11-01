@@ -1,6 +1,6 @@
 ---
 title: "source-annotation-extractor-scans-comment-tokens-not-lines"
-status: draft
+status: ready
 updated: 2026-11-01
 rfc: "0171-thor-port"
 cluster: null

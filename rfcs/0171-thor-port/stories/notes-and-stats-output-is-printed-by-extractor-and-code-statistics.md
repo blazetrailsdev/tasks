@@ -1,6 +1,6 @@
 ---
 title: "notes-and-stats-output-is-printed-by-extractor-and-code-statistics"
-status: draft
+status: ready
 updated: 2026-11-01
 rfc: "0171-thor-port"
 cluster: null

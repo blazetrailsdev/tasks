@@ -1,7 +1,7 @@
 ---
 title: "TestTask :direct loader puts libs on LOAD_PATH"
-status: draft
-updated: 2026-10-31
+status: ready
+updated: 2026-11-01
 rfc: "0211-rake-gem-port"
 cluster: null
 packages: []

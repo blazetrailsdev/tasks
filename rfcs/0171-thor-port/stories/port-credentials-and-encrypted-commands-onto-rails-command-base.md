@@ -1,7 +1,7 @@
 ---
 title: "Port CredentialsCommand (with Diffing) and EncryptedCommand onto Rails::Command::Base"
-status: claimed
-updated: 2026-10-31
+status: in-progress
+updated: 2026-11-01
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 550
 priority: 2
-pr: null
+pr: trails#9553
 claim: "2026-10-31T23:48:41Z"
 assignee: "port-credentials-and-encrypted-commands-onto-rails-command-base"
 blocked-by: null

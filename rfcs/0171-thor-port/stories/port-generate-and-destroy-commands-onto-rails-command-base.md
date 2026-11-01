@@ -1,7 +1,7 @@
 ---
 title: "Port GenerateCommand and DestroyCommand onto Rails::Command::Base"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-11-01
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9554
+claim: "2026-11-01T00:06:42Z"
+assignee: "port-generate-and-destroy-commands-onto-rails-command-base"
 blocked-by: null
 closed-reason: null
 ---

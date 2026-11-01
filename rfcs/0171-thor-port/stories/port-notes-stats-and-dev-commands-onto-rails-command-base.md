@@ -1,7 +1,7 @@
 ---
 title: "Port NotesCommand, StatsCommand and DevCommand onto Rails::Command::Base"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-11-01
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9555
+claim: "2026-11-01T00:25:15Z"
+assignee: "port-notes-stats-and-dev-commands-onto-rails-command-base"
 blocked-by: null
 closed-reason: null
 ---

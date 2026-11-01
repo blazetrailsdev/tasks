@@ -1,6 +1,6 @@
 ---
 title: "Port Rails::Command.root and ARGV.replace for generate and destroy"
-status: draft
+status: ready
 updated: 2026-11-01
 rfc: "0171-thor-port"
 cluster: null
