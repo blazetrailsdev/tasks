@@ -5,7 +5,9 @@ updated: 2026-10-30
 rfc: "0212-trailties-port"
 cluster: tt-surface
 packages: ["trailties"]
-deps: ["trailties-plugin-generator-part-1"]
+deps:
+  - trailties-plugin-generator-part-1
+  - trailties-plugin-template-entry-points
 deps-rfc: []
 est-loc: 600
 priority: null
