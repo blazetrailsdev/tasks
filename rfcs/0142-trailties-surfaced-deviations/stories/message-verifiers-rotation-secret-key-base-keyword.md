@@ -1,6 +1,6 @@
 ---
 title: Call gates read a block through Object.assign at new MessageVerifiers
-status: draft
+status: ready
 updated: 2026-11-01
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
