@@ -23,4 +23,4 @@ closed-reason: null
 ## Acceptance criteria
 
 - `versionControl` is ported on `AppBuilder` and built from the generator's Rails position, using `gitInitCommand`.
-- The `git init` step and its instance capture leave `new.ts`.
+- The `git init` step leaves `new.ts`. The instance capture stays for the install step until `new-command-run-bundle-is-a-public-task` ports `run_bundle`.
