@@ -1,5 +1,5 @@
 ---
-title: "zeitwerk-config-tests-through-loader"
+title: "Port the Zeitwerk config and Cref tests that need the Loader"
 status: draft
 updated: 2026-11-01
 rfc: "0213-zeitwerk-build-time-autoloader"
