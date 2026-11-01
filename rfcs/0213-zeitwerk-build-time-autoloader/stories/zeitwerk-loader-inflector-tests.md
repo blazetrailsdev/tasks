@@ -8,6 +8,8 @@ packages: []
 deps:
   - zeitwerk-setup-walk
   - zeitwerk-loader-config-and-helpers
+  - zeitwerk-config-tests-through-loader
+  - zeitwerk-eager-load-and-callbacks
 deps-rfc: []
 est-loc: null
 priority: null
