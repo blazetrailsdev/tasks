@@ -1,6 +1,6 @@
 ---
 title: "limitsConcurrency is typed on ActiveJob's Base"
-status: claimed
+status: in-progress
 updated: 2026-11-01
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: trails#9582
 claim: "2026-11-01T18:41:29Z"
 assignee: "limits-concurrency-typed-on-activejob-base"
 blocked-by: null

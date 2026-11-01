@@ -1,6 +1,6 @@
 ---
 title: "port-command-base-class-usage"
-status: ready
+status: in-progress
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9584
+claim: "2026-11-01T19:26:39Z"
+assignee: "port-command-base-class-usage"
 blocked-by: null
 closed-reason: null
 ---
