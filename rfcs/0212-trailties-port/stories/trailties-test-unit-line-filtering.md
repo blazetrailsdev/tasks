@@ -33,3 +33,7 @@ is ported, so it could not land with `TestParser`
 - `packages/trailties/src/test-unit/line-filtering.ts` ports `LineFiltering#run`
   over the ported `Runner.composeFilter`.
 - `CompositeFilter`'s line lookup reaches `TestParser.definitionFor`.
+
+- `test-parser.ts` statically imports `typescript/unstable/*`, and `typescript` is an
+  optional peer of trailties. Keep it off any load path that runs without
+  `typescript` installed.
