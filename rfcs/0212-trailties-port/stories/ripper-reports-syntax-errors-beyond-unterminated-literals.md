@@ -31,3 +31,4 @@ Valid code is also rejected: `a = 1\ndef x; end\na /2\n` reports an error, becau
 - Assignment and `def` binders read as `parse.y` does: `(a, b) = 1, 2`, `a, (b, c) = 1, [2]`, and `def (a).b(c)` learn their names, and `foo(puts, y = 1)` does not learn `puts`.
 - `puts a, b = 1\na /'/\n# c\n` does not learn `a`'s neighbour as a call argument, and `undef /, % # c\n` reads each name after a comma as an fname.
 - `for a,\n b in c\n b /2\nend\n# c\n` learns `b`: `FOR_VARS` reads past the newline.
+- `case x\nin ^(puts) then 1\nend\nputs /'/\n# c\n` does not learn `puts`: a pin expression binds nothing.
