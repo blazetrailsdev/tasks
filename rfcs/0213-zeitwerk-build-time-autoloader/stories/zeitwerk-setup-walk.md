@@ -1,7 +1,7 @@
 ---
 title: "Port Zeitwerk setup walk in process"
-status: ready
-updated: 2026-10-30
+status: in-progress
+updated: 2026-11-01
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-gem
 packages: ["zeitwerk"]
@@ -9,9 +9,9 @@ deps: ["zeitwerk-loader-config-and-helpers"]
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9581
+claim: "2026-11-01T18:46:41Z"
+assignee: "zeitwerk-setup-walk"
 blocked-by: null
 closed-reason: null
 ---

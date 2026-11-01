@@ -1,7 +1,7 @@
 ---
 title: "SQLite batches, deadlocks and retries match Rails' busy handling on one event loop"
-status: draft
-updated: 2026-10-30
+status: claimed
+updated: 2026-11-01
 rfc: "0196-solid-stack"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-01T18:41:29Z"
+assignee: "limits-concurrency-typed-on-activejob-base"
 blocked-by: null
 closed-reason: null
 ---

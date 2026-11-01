@@ -1,14 +1,14 @@
 ---
 title: "A Concern's included hook does not typecheck on a Module, and include() does not type the methods it adds"
 status: draft
-updated: 2026-10-27
+updated: 2026-11-01
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

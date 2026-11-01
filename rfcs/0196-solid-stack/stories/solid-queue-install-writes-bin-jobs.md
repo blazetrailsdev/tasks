@@ -1,6 +1,6 @@
 ---
 title: "solid_queue:install writes a bin/jobs that loads jobs after the boot"
-status: draft
+status: claimed
 updated: 2026-11-01
 rfc: "0196-solid-stack"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-01T18:41:29Z"
+assignee: "limits-concurrency-typed-on-activejob-base"
 blocked-by: null
 closed-reason: null
 ---

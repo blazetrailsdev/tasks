@@ -1,6 +1,6 @@
 ---
 title: "attribute() and trails-tsc reject a dangerous attribute name"
-status: in-progress
+status: done
 updated: 2026-11-01
 rfc: "0136-trailmap"
 cluster: null
