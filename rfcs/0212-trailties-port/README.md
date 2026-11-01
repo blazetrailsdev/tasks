@@ -201,7 +201,7 @@ Phases 2 and 3 do not depend on phase 1 and can run in parallel with it.
 
 ## Open questions
 
-1. **What does `rails test` drive?** (a) Port `Rails::TestUnit::Runner` over
+1. **What does `rails test` drive?** Answered by the repo owner on 2026-11-01: (b), shipped by trails#9567. (a) Port `Rails::TestUnit::Runner` over
    `@blazetrails/minitest`, line for line. (b) Keep Rails' names and argument
    parsing (`TestParser`, `line_filtering`, `-n`, `file:line`) and hand off to
    Vitest. Recommendation: (b). `LineFiltering` ports unchanged. `TestParser` is a
