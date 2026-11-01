@@ -1,6 +1,6 @@
 ---
 title: "Move trailties' 144 misplaced test files to their Rails paths"
-status: in-progress
+status: closed
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: tt-layout
@@ -13,7 +13,7 @@ pr: trails#9565
 claim: "2026-11-01T03:25:05Z"
 assignee: "trailties-relocate-app-generator-to-rails-path"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: a body-unchanged move reds the assertion ratchet; replaced by trailties-move-tests-converging-assertions"
 ---
 
 ## Context

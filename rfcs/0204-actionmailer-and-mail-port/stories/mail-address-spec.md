@@ -1,6 +1,6 @@
 ---
 title: "mail-address-spec"
-status: claimed
+status: in-progress
 updated: 2026-11-01
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 650
 priority: null
-pr: null
-claim: "2026-11-01T12:42:40Z"
-assignee: "app-base-app-name-and-shebang"
+pr: trails#9570
+claim: "2026-11-01T13:37:46Z"
+assignee: "app-generator-create-files-go-through-build"
 blocked-by: null
 closed-reason: null
 ---

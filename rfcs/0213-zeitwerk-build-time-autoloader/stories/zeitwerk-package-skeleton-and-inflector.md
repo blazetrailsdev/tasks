@@ -1,7 +1,7 @@
 ---
 title: "@blazetrails/zeitwerk package skeleton, inflectors and errors"
-status: in-progress
-updated: 2026-10-31
+status: done
+updated: 2026-11-01
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-gem
 packages: ["zeitwerk"]

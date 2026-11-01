@@ -1,6 +1,6 @@
 ---
 title: "Credit a computed-key delete expression as Hash#delete in parity:api:calls"
-status: claimed
+status: in-progress
 updated: 2026-11-01
 rfc: "0209-activestorage-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: trails#9568
 claim: "2026-11-01T12:42:40Z"
 assignee: "app-base-app-name-and-shebang"
 blocked-by: null

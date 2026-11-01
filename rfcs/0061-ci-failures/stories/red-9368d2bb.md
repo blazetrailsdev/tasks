@@ -1,6 +1,6 @@
 ---
 title: "Lint failing on main @9368d2bb"
-status: ready
+status: closed
 updated: 2026-11-01
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-01T13:26:05Z"
+assignee: "red-9368d2bb"
 blocked-by: null
-closed-reason: null
+closed-reason: "Lint on 9368d2bb was killed mid-eslint with no lint errors (Killed, runner shutdown, exit 143), the out-of-memory signature of full-tree lint at --concurrency 2 on the 16 GB runner. Already fixed by #9541 (ff79e34558), which set lint to --concurrency 1 and the job timeout to 30 minutes."
 ---
 
 ## Context

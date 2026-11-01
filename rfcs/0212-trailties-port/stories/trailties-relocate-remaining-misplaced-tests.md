@@ -1,6 +1,6 @@
 ---
 title: "trailties-relocate-remaining-misplaced-tests"
-status: ready
+status: closed
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: subsumed by trailties-move-tests-converging-assertions"
 ---
 
 ## Context

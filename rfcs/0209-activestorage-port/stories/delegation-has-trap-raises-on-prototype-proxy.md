@@ -1,6 +1,6 @@
 ---
 title: "delegation-has-trap-raises-on-prototype-proxy"
-status: claimed
+status: in-progress
 updated: 2026-11-01
 rfc: "0209-activestorage-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#9568
 claim: "2026-11-01T12:42:40Z"
 assignee: "app-base-app-name-and-shebang"
 blocked-by: null

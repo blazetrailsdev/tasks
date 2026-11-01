@@ -1,7 +1,7 @@
 ---
 title: "authentication-generators-onto-thor-template"
-status: ready
-updated: 2026-10-31
+status: in-progress
+updated: 2026-11-01
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9569
+claim: "2026-11-01T13:01:13Z"
+assignee: "app-base-shell-readers-and-run-tasks"
 blocked-by: null
 closed-reason: null
 ---

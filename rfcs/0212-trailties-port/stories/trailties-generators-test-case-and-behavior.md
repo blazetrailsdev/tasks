@@ -1,6 +1,6 @@
 ---
 title: "Port Rails::Generators::TestCase, Testing::Behavior and SetupAndTeardown"
-status: in-progress
+status: done
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: tt-harness

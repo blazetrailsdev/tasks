@@ -1,7 +1,7 @@
 ---
 title: "Port Zeitwerk loader config, helpers, Cref and Registry"
-status: ready
-updated: 2026-10-30
+status: in-progress
+updated: 2026-11-01
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-gem
 packages: ["zeitwerk"]
@@ -9,9 +9,9 @@ deps: ["zeitwerk-package-skeleton-and-inflector", "top-level-moves-to-ruby-compa
 deps-rfc: []
 est-loc: 550
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9571
+claim: "2026-11-01T13:19:22Z"
+assignee: "zeitwerk-loader-config-and-helpers"
 blocked-by: null
 closed-reason: null
 ---

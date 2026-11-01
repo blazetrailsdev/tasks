@@ -1,6 +1,6 @@
 ---
 title: "app-base-shell-readers-and-run-tasks"
-status: ready
+status: in-progress
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9569
+claim: "2026-11-01T13:01:13Z"
+assignee: "app-base-shell-readers-and-run-tasks"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Port ActiveSupport::Testing::Isolation with its Subprocess arm"
-status: in-progress
+status: done
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: tt-harness
