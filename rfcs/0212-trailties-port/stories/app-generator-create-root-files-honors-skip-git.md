@@ -1,6 +1,6 @@
 ---
 title: "app-generator-create-root-files-honors-skip-git"
-status: ready
+status: in-progress
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9595
+claim: "2026-11-01T22:46:37Z"
+assignee: "app-generator-create-root-files-honors-skip-git"
 blocked-by: null
 closed-reason: null
 ---

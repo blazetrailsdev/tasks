@@ -1,7 +1,7 @@
 ---
 title: "No isolation test-app builder to strip the ESLint autocorrect line (abstract_unit.rb:151)"
-status: draft
-updated: 2026-09-28
+status: done
+updated: 2026-11-01
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#9587
 claim: null
 assignee: null
 blocked-by: null

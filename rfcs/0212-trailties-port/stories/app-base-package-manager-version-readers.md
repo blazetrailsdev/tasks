@@ -1,6 +1,6 @@
 ---
 title: "app-base-package-manager-version-readers"
-status: in-progress
+status: done
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null

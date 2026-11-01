@@ -1,6 +1,6 @@
 ---
 title: "Runner reads test titles from the AST and exits on unknown flags"
-status: in-progress
+status: done
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null

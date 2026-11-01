@@ -1,6 +1,6 @@
 ---
 title: "Port railties' isolation abstract_unit: Paths, Generation and the app template"
-status: in-progress
+status: done
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: tt-harness

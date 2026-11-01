@@ -1,6 +1,6 @@
 ---
 title: "zeitwerk-gem-inflector-tests-through-for-gem"
-status: draft
+status: closed
 updated: 2026-11-01
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -15,7 +15,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: duplicates zeitwerk-loader-inflector-tests, which stays open"
 ---
 
 ## Context
