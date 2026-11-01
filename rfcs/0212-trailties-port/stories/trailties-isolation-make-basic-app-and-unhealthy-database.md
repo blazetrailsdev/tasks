@@ -5,7 +5,8 @@ updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - trailties-isolation-abstract-unit-boot-and-rails-command
 deps-rfc: []
 est-loc: null
 priority: null
