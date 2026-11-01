@@ -1,7 +1,7 @@
 ---
 title: "Port shell/basic_spec.rb, part 2 (print_wrapped, say_status, print_in_columns, print_table, file_collision)"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-11-01
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 350
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9559
+claim: "2026-11-01T01:37:03Z"
+assignee: "port-thor-shell-basic-spec-part-2"
 blocked-by: null
 closed-reason: null
 ---

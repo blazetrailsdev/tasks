@@ -1,6 +1,6 @@
 ---
 title: "command-root-reads-the-application-root"
-status: draft
+status: done
 updated: 2026-11-01
 rfc: "0171-thor-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9553
 claim: null
 assignee: null
 blocked-by: null

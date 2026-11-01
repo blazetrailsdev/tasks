@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat-encode-to-iso-2022-jp"
-status: ready
+status: claimed
 updated: 2026-11-01
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-01T01:54:44Z"
+assignee: "testtask-direct-loader-libs-reach-load-path"
 blocked-by: null
 closed-reason: null
 ---

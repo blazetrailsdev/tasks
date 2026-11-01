@@ -1,7 +1,7 @@
 ---
 title: "port-rails-command-base-usage-and-banner"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-11-01
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9559
+claim: "2026-11-01T01:37:03Z"
+assignee: "port-thor-shell-basic-spec-part-2"
 blocked-by: null
 closed-reason: null
 ---

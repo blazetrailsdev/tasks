@@ -1,6 +1,6 @@
 ---
 title: "Port RoutesCommand onto Rails::Command::Base and drop UnusedRoutesCommand's commander wrapper"
-status: claimed
+status: in-progress
 updated: 2026-11-01
 rfc: "0171-thor-port"
 cluster: null
@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: 2
-pr: null
+pr: trails#9556
 claim: "2026-11-01T00:42:59Z"
 assignee: "port-routes-commands-onto-rails-command-base"
 blocked-by: null

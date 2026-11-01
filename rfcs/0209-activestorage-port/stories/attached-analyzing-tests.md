@@ -1,7 +1,7 @@
 ---
 title: "attached-analyzing-tests"
-status: ready
-updated: 2026-10-31
+status: claimed
+updated: 2026-11-01
 rfc: "0209-activestorage-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 100
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-01T01:54:44Z"
+assignee: "testtask-direct-loader-libs-reach-load-path"
 blocked-by: null
 closed-reason: null
 ---

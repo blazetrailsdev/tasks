@@ -1,7 +1,7 @@
 ---
 title: "Port actions/create_file_spec.rb, create_link_spec.rb and empty_directory_spec.rb"
-status: ready
-updated: 2026-09-30
+status: done
+updated: 2026-11-01
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 550
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9557
+claim: "2026-11-01T01:18:46Z"
+assignee: "port-thor-create-file-link-and-empty-directory-specs"
 blocked-by: null
 closed-reason: null
 ---
