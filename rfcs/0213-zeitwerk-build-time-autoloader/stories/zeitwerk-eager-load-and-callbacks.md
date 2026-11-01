@@ -26,4 +26,5 @@ Sources: `vendor/zeitwerk/v2.7.2/lib/zeitwerk/loader/eager_load.rb`, `loader/cal
 - A file's constant is its named export; a miss raises "expected file … to define constant …".
 - Implicit namespaces are plain-object modules; an explicit namespace is seated before its children.
 - `on_load` and `on_setup` run as in Ruby.
+- A namespace directory another loader has pending descends as `autoload_subdir` does (`vendor/zeitwerk/v2.7.2/lib/zeitwerk/loader.rb:500-503`): `packages/zeitwerk/src/loader.ts` `autoloadSubdir`'s third arm raises `NameError` from `cref.get()` today, pinned by `setup.trails.test.ts`; that test flips to the Ruby behaviour here.
 - `test_eager_load.rb`, `test_on_load.rb`, `test_explicit_namespace.rb` and `test_autovivification.rb` are ported.
