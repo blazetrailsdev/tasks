@@ -1,0 +1,27 @@
+---
+title: "ruby-compat-fileutils-module-function-instance-forms"
+status: draft
+updated: 2026-11-01
+rfc: "0212-trailties-port"
+cluster: null
+packages: []
+deps: []
+deps-rfc: []
+est-loc: null
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+`Rails::Generators::TestCase` does `include FileUtils` (`vendor/rails/v8.0.2/railties/lib/rails/generators/test_case.rb:34`), and `Testing::Behavior` calls `cd`, `rm_rf` and `mkdir_p` on self (`behavior.rb:100-105`). ruby-compat's `FileUtils` (`packages/ruby-compat/src/file-utils.ts`) is statics only, so `include()` has nothing to copy. Ruby's `module_function` gives both forms.
+
+## Acceptance criteria
+
+- `FileUtils` is a class module with instance forms of its `module_function` methods.
+- `packages/trailties/src/generators/test-case.ts` calls `include(TestCase, FileUtils)` and its `@missingRailsCall include` receipt is removed.
+- `Behavior` calls `this.cd`, `this.rmRf` and `this.mkdirP`.
