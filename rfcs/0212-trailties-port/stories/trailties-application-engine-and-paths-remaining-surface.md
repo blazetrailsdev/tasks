@@ -1,6 +1,6 @@
 ---
 title: "Port the remaining methods of Application, Engine, Paths and Finisher"
-status: claimed
+status: in-progress
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: tt-surface
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
+pr: trails#9563
 claim: "2026-11-01T02:49:14Z"
 assignee: "trailties-application-engine-and-paths-remaining-surface"
 blocked-by: null

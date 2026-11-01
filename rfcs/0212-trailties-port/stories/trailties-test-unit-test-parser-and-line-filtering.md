@@ -1,6 +1,6 @@
 ---
 title: "Port Rails::TestUnit test_parser and line_filtering"
-status: ready
+status: in-progress
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: tt-surface
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9564
+claim: "2026-11-01T03:07:56Z"
+assignee: "trailties-mailers-controller"
 blocked-by: null
 closed-reason: null
 ---

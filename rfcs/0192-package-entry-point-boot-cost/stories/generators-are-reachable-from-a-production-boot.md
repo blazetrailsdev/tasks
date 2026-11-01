@@ -1,7 +1,7 @@
 ---
 title: "A production boot still reaches the trailties generator tree, and Thor with it"
-status: draft
-updated: 2026-10-31
+status: closed
+updated: 2026-11-01
 rfc: "0192-package-entry-point-boot-cost"
 cluster: null
 packages: ["trailties"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'Premise refuted by measurement. engine.ts:226 is async loadGenerators(app = this) doing a lazy await import("./generators.js"), which mirrors railties/lib/rails/engine.rb:476''s load_generators exactly, so there is no Rails deviation to converge. The compile error the story cited was @blazetrails/thor having no dist in my worktree; once built, the 1937-module graph compiles (235 MB binary). The real finding is Perry const-folding a correct lazy boundary into a hard import edge, which is upstream, not trails backlog. Recorded in examples/perry-native/perry/FINDINGS.md.'
 ---
 
 ## Context

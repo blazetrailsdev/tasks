@@ -1,7 +1,7 @@
 ---
 title: "Move trailties' 144 misplaced test files to their Rails paths"
-status: ready
-updated: 2026-10-30
+status: in-progress
+updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: tt-layout
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9565
+claim: "2026-11-01T03:25:05Z"
+assignee: "trailties-relocate-app-generator-to-rails-path"
 blocked-by: null
 closed-reason: null
 ---

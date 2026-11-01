@@ -1,6 +1,6 @@
 ---
 title: "Port the remaining 72 methods of Rails::Generators::AppBase"
-status: claimed
+status: in-progress
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: tt-surface
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
+pr: trails#9562
 claim: "2026-11-01T02:31:32Z"
 assignee: "trailties-app-base-remaining-surface"
 blocked-by: null

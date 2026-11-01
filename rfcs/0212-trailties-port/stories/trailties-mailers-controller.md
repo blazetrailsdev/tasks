@@ -1,7 +1,7 @@
 ---
 title: "Port Rails::MailersController (mailer previews)"
-status: ready
-updated: 2026-10-30
+status: blocked
+updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: tt-surface
 packages: ["trailties", "actionmailer"]
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-01T03:07:56Z"
+assignee: "trailties-mailers-controller"
+blocked-by: "ActionMailer::Preview is unported: packages/actionmailer does not exist; waits on actionmailer-test-helper-test-case-and-preview"
 closed-reason: null
 ---
 
