@@ -1,7 +1,7 @@
 ---
 title: "Port railties' isolation abstract_unit: Paths, Generation and the app template"
-status: ready
-updated: 2026-10-30
+status: in-progress
+updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: tt-harness
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["activesupport-testing-isolation-subprocess"]
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9587
+claim: "2026-11-01T20:26:42Z"
+assignee: "trailties-isolation-abstract-unit-generation"
 blocked-by: null
 closed-reason: null
 ---

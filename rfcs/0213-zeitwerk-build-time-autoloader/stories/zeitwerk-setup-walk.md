@@ -1,6 +1,6 @@
 ---
 title: "Port Zeitwerk setup walk in process"
-status: in-progress
+status: done
 updated: 2026-11-01
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-gem

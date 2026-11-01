@@ -1,6 +1,6 @@
 ---
 title: "parser-extractor-reads-ruby-comments-with-a-real-parser"
-status: in-progress
+status: closed
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: trails#9583
 claim: "2026-11-01T19:06:41Z"
 assignee: "parser-extractor-reads-ruby-comments-with-a-real-parser"
 blocked-by: null
-closed-reason: null
+closed-reason: "Operator ruling 2026-11-01: trails does not parse Ruby. Replaced by source-annotation-extractor-reads-ts-comments. trails#9583 (Ripper tokenizer) is unmerged; ripper.ts is not on origin/main."
 ---
 
 ## Context

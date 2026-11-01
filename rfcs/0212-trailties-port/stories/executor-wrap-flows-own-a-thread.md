@@ -1,6 +1,6 @@
 ---
 title: "executor-wrap-flows-own-a-thread"
-status: draft
+status: ready
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null

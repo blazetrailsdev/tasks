@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat-fileutils-module-function-instance-forms"
-status: claimed
+status: in-progress
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9585
 claim: "2026-11-01T19:46:39Z"
 assignee: "ruby-compat-fileutils-module-function-instance-forms"
 blocked-by: null

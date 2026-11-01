@@ -1,7 +1,7 @@
 ---
 title: "Zeitwerk build artifacts and the trails-tsc subcommand"
-status: ready
-updated: 2026-10-30
+status: claimed
+updated: 2026-11-01
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-gem
 packages: ["zeitwerk", "trails-tsc", "trailties"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-01T20:46:44Z"
+assignee: "zeitwerk-build-artifacts"
 blocked-by: null
 closed-reason: null
 ---

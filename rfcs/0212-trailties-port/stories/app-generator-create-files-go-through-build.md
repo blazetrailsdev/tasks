@@ -1,6 +1,6 @@
 ---
 title: "app-generator-create-files-go-through-build"
-status: blocked
+status: ready
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-01T13:37:46Z"
-assignee: "app-generator-create-files-go-through-build"
-blocked-by: "waiting on trails#9565 (trailties-relocate-app-generator-to-rails-path): the rails/app/app-generator.ts path and its 19 baseline rows exist only there. Moving ~1100 lines of bodies onto AppBuilder also exceeds one 800 LOC PR alone, so it needs its own PR after #9565 merges, not a bundle with mail-address-spec."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

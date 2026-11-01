@@ -1,6 +1,6 @@
 ---
 title: "AppName#valid_const? answers Ruby core constants"
-status: draft
+status: closed
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Ruby core names do not collide in a JS app. app-name.ts checks constDefined(TopLevel) plus globalThis, so refusing JS globals such as performance is the correct target; Integer, Kernel and Comparable are free names there."
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "ripper-reports-syntax-errors-beyond-unterminated-literals"
-status: draft
+status: closed
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Operator ruling 2026-11-01: trails does not parse Ruby. Premise gone: packages/ruby-compat/src/ripper.ts is not on origin/main, it exists only in unmerged trails#9583."
 ---
 
 ## Context

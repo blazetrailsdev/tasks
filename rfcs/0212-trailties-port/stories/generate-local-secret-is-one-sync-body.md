@@ -1,6 +1,6 @@
 ---
 title: "generate-local-secret-is-one-sync-body"
-status: draft
+status: closed
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "The story's check answers no: the async split is the JS-forced shape. trailties code is async-fs only (docs/trailties/trailties-plan.md:29) and website generators reach an in-memory fs only through the async adapter (docs/claude-md-decision-history.md:283). loadLocalSecret is @noRailsEquivalent PERMANENT, and the cited @missingRailsCall mkdir_p receipt is not on origin/main."
 ---
 
 ## Context

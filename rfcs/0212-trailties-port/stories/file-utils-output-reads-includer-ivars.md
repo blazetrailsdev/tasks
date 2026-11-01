@@ -1,6 +1,6 @@
 ---
 title: "file-utils-output-reads-includer-ivars"
-status: draft
+status: closed
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Ruby ivar mechanics with no consumer: the only reader outside file-utils.ts is packages/rake/src/file-utils-ext.trails.test.ts, which sets the FileUtils statics that fuOutputMessage already reads. No includer sets these fields on origin/main."
 ---
 
 ## Context

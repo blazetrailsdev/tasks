@@ -1,6 +1,6 @@
 ---
 title: "trailties-test-unit-line-filtering"
-status: ready
+status: closed
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone: LineFiltering#run wraps Minitest::Runnable.run, which has no seat under Vitest (trails#9567). file:line already works: Runner.testLocations resolves lines through TestParser.ranges and passes path:line to vitest (runner.ts:209)."
 ---
 
 ## Context

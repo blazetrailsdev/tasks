@@ -1,6 +1,6 @@
 ---
 title: "TestUnitReporter extends StatisticsReporter and reports trails test runs"
-status: draft
+status: closed
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Superclass arm is impossible: no Minitest package exists and trails test runs Vitest (RFC open question 1, trails#9567). Replaced by test-unit-reporter-fed-by-vitest, which also targets bin/trails."
 ---
 
 ## Context

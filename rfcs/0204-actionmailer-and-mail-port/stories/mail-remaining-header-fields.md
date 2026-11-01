@@ -1,7 +1,7 @@
 ---
 title: "Port mail's remaining header fields"
-status: ready
-updated: 2026-10-29
+status: claimed
+updated: 2026-11-01
 rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-core
 packages: ["mail"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 700
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-01T20:54:44Z"
+assignee: "mail-remaining-header-fields"
 blocked-by: null
 ---
 

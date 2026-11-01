@@ -1,6 +1,6 @@
 ---
 title: "trails-new-parses-app-generator-class-options"
-status: ready
+status: done
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9586
+claim: "2026-11-01T20:06:59Z"
+assignee: "trails-new-parses-app-generator-class-options"
 blocked-by: null
 closed-reason: null
 ---
