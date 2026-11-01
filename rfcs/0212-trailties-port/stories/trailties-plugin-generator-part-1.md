@@ -1,6 +1,6 @@
 ---
 title: "Port Rails::Generators::PluginGenerator, part 1 (PluginBuilder)"
-status: in-progress
+status: done
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: tt-surface

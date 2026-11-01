@@ -1,7 +1,7 @@
 ---
 title: "track-trails: candidate smoke fails in PostgreSQLDatabaseTasks.create at trails 6b815eb19"
-status: draft
-updated: 2026-10-31
+status: ready
+updated: 2026-11-01
 rfc: "0136-trailmap"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "loadControllers is tested on a nested API controller"
-status: draft
+status: closed
 updated: 2026-11-01
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Covered on trails#9425 by the nested API controller test"
 ---
 
 ## Context

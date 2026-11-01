@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc scopes each --schema to the abstract base that connects to it"
-status: draft
+status: ready
 updated: 2026-11-01
 rfc: "0136-trailmap"
 cluster: null

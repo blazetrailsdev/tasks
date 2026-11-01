@@ -1,6 +1,6 @@
 ---
 title: "ringo: record every cron run as a row in events"
-status: ready
+status: claimed
 updated: 2026-11-01
 rfc: "0136-trailmap"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-01T14:56:30Z"
+assignee: "attribute-rejects-a-name-that-shadows-base"
 blocked-by: null
 closed-reason: null
 ---

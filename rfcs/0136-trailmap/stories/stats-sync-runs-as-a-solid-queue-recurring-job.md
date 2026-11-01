@@ -1,7 +1,7 @@
 ---
 title: "Stats sync runs as a Solid Queue recurring job"
-status: in-progress
-updated: 2026-10-31
+status: done
+updated: 2026-11-01
 rfc: "0136-trailmap"
 cluster: null
 packages: []

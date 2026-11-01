@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc does not treat ActiveJob classes as models"
-status: draft
+status: ready
 updated: 2026-11-01
 rfc: "0136-trailmap"
 cluster: null

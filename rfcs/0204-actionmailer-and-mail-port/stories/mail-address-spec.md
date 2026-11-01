@@ -1,6 +1,6 @@
 ---
 title: "mail-address-spec"
-status: in-progress
+status: done
 updated: 2026-11-01
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null

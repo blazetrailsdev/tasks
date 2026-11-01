@@ -1,7 +1,7 @@
 ---
 title: "bin/trails test: port Rails::Command::TestCommand and TestUnit::Runner"
-status: draft
-updated: 2026-09-28
+status: closed
+updated: 2026-11-01
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: duplicate of trailties-test-unit-runner-reporter-and-test-command, shipped by trails#9567"
 ---
 
 ## Context
