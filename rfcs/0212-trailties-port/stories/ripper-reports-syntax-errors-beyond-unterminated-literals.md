@@ -20,7 +20,10 @@ closed-reason: null
 
 `Ripper` in `packages/ruby-compat/src/ripper.ts` (trails#9583) tokenizes only. `isError` is true for an unterminated literal alone, so `SourceAnnotationExtractor::ParserExtractor#annotations` returns comments where `return [] unless result.success?` (`vendor/rails/v8.0.2/railties/lib/rails/source_annotation_extractor.rb:29`) drops them. `x = y ?1:'#'`, `yield /#/`, `foo ?a : 2` and `x = a ?'b' : 'c'` fail Prism and yield comments here. Locals are also one flat set reset at `def`, where `parse.y` keeps a scope stack (`local_push`).
 
+Valid code is also rejected: `a = 1\ndef x; end\na /2\n` reports an error, because the set forgets `a` at `def`.
+
 ## Acceptance criteria
 
 - `Ripper#isError` answers true for those snippets, through a grammar check or a real parser, or the repo owner rules the reduced lexer permanent.
 - The `CONVERGEABLE` receipts in `ripper.ts` are removed.
+- `a = 1\ndef x; end\na /2\n` is not an error: locals follow `local_push` scopes.
