@@ -1,6 +1,6 @@
 ---
 title: "Port Rails::TestUnit::Runner, Reporter and the test command"
-status: ready
+status: in-progress
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: tt-surface
@@ -9,9 +9,9 @@ deps: ["trailties-test-unit-test-parser-and-line-filtering"]
 deps-rfc: []
 est-loc: 650
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9567
+claim: "2026-11-01T12:24:47Z"
+assignee: "trailties-test-unit-runner-reporter-and-test-command"
 blocked-by: null
 closed-reason: null
 ---

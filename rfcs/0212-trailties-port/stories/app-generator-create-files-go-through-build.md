@@ -1,6 +1,6 @@
 ---
 title: "app-generator-create-files-go-through-build"
-status: draft
+status: ready
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null

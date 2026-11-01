@@ -1,6 +1,6 @@
 ---
 title: "parser-extractor-reads-ruby-comments-with-a-real-parser"
-status: draft
+status: ready
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null

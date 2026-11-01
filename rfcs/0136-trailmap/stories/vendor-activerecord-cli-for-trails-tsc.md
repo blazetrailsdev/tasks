@@ -1,7 +1,7 @@
 ---
 title: "Vendor @blazetrails/activerecord-cli so pnpm build can run trails-tsc"
-status: ready
-updated: 2026-10-31
+status: done
+updated: 2026-11-01
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#105
+claim: "2026-11-01T12:39:22Z"
+assignee: "ringo-records-every-cron-run-as-an-event"
 blocked-by: null
 closed-reason: null
 ---

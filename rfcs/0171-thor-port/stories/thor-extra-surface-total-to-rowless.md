@@ -1,7 +1,7 @@
 ---
 title: "thor: burn the two moved extras on thor.ts and move thor to rowless in the extra-surface ratchet"
-status: in-progress
-updated: 2026-10-31
+status: done
+updated: 2026-11-01
 rfc: "0171-thor-port"
 cluster: null
 packages: []

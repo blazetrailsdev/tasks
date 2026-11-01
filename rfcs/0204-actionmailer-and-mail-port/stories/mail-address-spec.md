@@ -1,7 +1,7 @@
 ---
 title: "mail-address-spec"
-status: ready
-updated: 2026-10-31
+status: claimed
+updated: 2026-11-01
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 650
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-01T12:42:40Z"
+assignee: "app-base-app-name-and-shebang"
 blocked-by: null
 closed-reason: null
 ---

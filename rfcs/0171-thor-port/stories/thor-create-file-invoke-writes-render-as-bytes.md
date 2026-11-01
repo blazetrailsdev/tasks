@@ -1,7 +1,7 @@
 ---
 title: 'CreateFile#invoke! writes render''s bytes (binary "wb" open), not a UTF-8 re-encode'
-status: in-progress
-updated: 2026-10-31
+status: done
+updated: 2026-11-01
 rfc: "0171-thor-port"
 cluster: null
 packages: []

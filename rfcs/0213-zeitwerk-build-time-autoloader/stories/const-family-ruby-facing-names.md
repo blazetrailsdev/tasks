@@ -1,7 +1,7 @@
 ---
 title: "const-family-ruby-facing-names"
-status: in-progress
-updated: 2026-10-31
+status: done
+updated: 2026-11-01
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
 packages: []

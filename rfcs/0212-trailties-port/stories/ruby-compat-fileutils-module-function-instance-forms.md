@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat-fileutils-module-function-instance-forms"
-status: draft
+status: ready
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "app-base-app-name-and-shebang"
-status: draft
+status: claimed
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-01T12:42:40Z"
+assignee: "app-base-app-name-and-shebang"
 blocked-by: null
 closed-reason: null
 ---
