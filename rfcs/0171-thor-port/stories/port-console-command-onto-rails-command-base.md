@@ -1,7 +1,7 @@
 ---
 title: "Port ConsoleCommand onto Rails::Command::Base"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-10-31
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9552
+claim: "2026-10-31T23:37:58Z"
+assignee: "port-console-command-onto-rails-command-base"
 blocked-by: null
 closed-reason: null
 ---

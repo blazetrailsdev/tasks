@@ -1,6 +1,6 @@
 ---
 title: "Thor error classes answer StandardError for their class name"
-status: in-progress
+status: done
 updated: 2026-10-31
 rfc: "0171-thor-port"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "activestorage-attached-macros-run-after-boot"
-status: draft
+status: done
 updated: 2026-10-31
 rfc: "0209-activestorage-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9550
 claim: null
 assignee: null
 blocked-by: null

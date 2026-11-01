@@ -1,6 +1,6 @@
 ---
 title: "Apply Thor's spec helper to every Thor spec port through a vitest setup, and converge util.test onto the shared fixtures"
-status: in-progress
+status: done
 updated: 2026-10-31
 rfc: "0171-thor-port"
 cluster: null
