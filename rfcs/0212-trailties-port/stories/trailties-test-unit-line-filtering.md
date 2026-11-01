@@ -5,7 +5,8 @@ updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - trailties-test-unit-runner-reporter-and-test-command
 deps-rfc: []
 est-loc: null
 priority: null
