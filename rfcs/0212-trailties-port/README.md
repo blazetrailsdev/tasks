@@ -19,6 +19,7 @@ related-rfcs:
   - "0142-trailties-surfaced-deviations"
   - "0104-twitter-app-full-stack-integration"
   - "0204-actionmailer-and-mail-port"
+priority: 2
 ---
 
 # RFC 0212 — Port the rest of railties into trailties, and its test suite

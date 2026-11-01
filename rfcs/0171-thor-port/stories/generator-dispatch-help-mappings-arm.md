@@ -1,6 +1,6 @@
 ---
 title: "Port Rails::Generators::Base banner / desc / help over Thor::Group's help, and route `trails g <name> --help` through it"
-status: in-progress
+status: done
 updated: 2026-11-01
 rfc: "0171-thor-port"
 cluster: null

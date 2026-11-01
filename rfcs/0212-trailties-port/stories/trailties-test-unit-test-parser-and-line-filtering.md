@@ -1,7 +1,7 @@
 ---
 title: "Port Rails::TestUnit test_parser and line_filtering"
-status: draft
-updated: 2026-10-30
+status: ready
+updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: tt-surface
 packages: ["trailties"]

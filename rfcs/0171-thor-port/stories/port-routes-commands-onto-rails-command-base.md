@@ -1,6 +1,6 @@
 ---
 title: "Port RoutesCommand onto Rails::Command::Base and drop UnusedRoutesCommand's commander wrapper"
-status: in-progress
+status: done
 updated: 2026-11-01
 rfc: "0171-thor-port"
 cluster: null

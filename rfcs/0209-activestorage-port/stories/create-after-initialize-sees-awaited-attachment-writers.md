@@ -1,6 +1,6 @@
 ---
 title: "create-after-initialize-sees-awaited-attachment-writers"
-status: claimed
+status: ready
 updated: 2026-11-01
 rfc: "0209-activestorage-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: "2026-11-01T01:54:44Z"
-assignee: "testtask-direct-loader-libs-reach-load-path"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

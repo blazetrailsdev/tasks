@@ -1,7 +1,7 @@
 ---
 title: "Port Rails::Generators::TestCase, Testing::Behavior and SetupAndTeardown"
-status: ready
-updated: 2026-10-30
+status: in-progress
+updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: tt-harness
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9561
+claim: "2026-11-01T02:12:46Z"
+assignee: "activesupport-testing-isolation-subprocess"
 blocked-by: null
 closed-reason: null
 ---

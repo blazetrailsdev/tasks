@@ -1,7 +1,7 @@
 ---
 title: "Port the remaining 72 methods of Rails::Generators::AppBase"
-status: ready
-updated: 2026-10-30
+status: claimed
+updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: tt-surface
 packages: ["trailties"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 600
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-01T02:31:32Z"
+assignee: "trailties-app-base-remaining-surface"
 blocked-by: null
 closed-reason: null
 ---
