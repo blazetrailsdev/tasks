@@ -27,3 +27,4 @@ Valid code is also rejected: `a = 1\ndef x; end\na /2\n` reports an error, becau
 - `Ripper#isError` answers true for those snippets, through a grammar check or a real parser, or the repo owner rules the reduced lexer permanent.
 - The `CONVERGEABLE` receipts in `ripper.ts` are removed.
 - `a = 1\ndef x; end\na /2\n` is not an error: locals follow `local_push` scopes.
+- `a => b\nb /2\n# c\n` is not an error: rightward assignment binds `b`.
