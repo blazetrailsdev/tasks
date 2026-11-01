@@ -1,6 +1,6 @@
 ---
 title: Port Finisher MonitorHook and InterlockHook and the executor concurrency initializer
-status: ready
+status: in-progress
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9579
+claim: "2026-11-01T16:46:38Z"
+assignee: "finisher-monitor-and-interlock-hooks"
 blocked-by: null
 closed-reason: null
 ---

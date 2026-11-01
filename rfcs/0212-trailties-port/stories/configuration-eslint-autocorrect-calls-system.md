@@ -1,6 +1,6 @@
 ---
 title: "configuration-eslint-autocorrect-calls-system"
-status: ready
+status: in-progress
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9578
+claim: "2026-11-01T16:06:38Z"
+assignee: "configuration-eslint-autocorrect-calls-system"
 blocked-by: null
 closed-reason: null
 ---
