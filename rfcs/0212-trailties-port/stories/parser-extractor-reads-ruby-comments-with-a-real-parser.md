@@ -4,7 +4,7 @@ status: draft
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
-packages: []
+packages: [trailties]
 deps: []
 deps-rfc: []
 est-loc: null
@@ -23,7 +23,9 @@ closed-reason: null
 reads Ruby comments through Prism or Ripper. trails has no Ruby parser, so
 `Parser#parse` in `packages/trailties/src/source-annotation-extractor.ts` is a
 quote-aware character scan. A `#` inside a heredoc or `%q` literal reads as a
-comment, and only an unterminated quote counts as a parse error.
+comment, and an apostrophe in a heredoc, `%q`, regex (`/'/`) or `?'` opens a quote that never
+closes, so `isError` is true and `annotations` returns `[]` for the whole file,
+where Prism succeeds. Only an unterminated quote counts as a parse error.
 
 ## Acceptance criteria
 

@@ -1,10 +1,10 @@
 ---
-title: "finisher-monitor-and-interlock-hooks"
+title: Port Finisher MonitorHook and InterlockHook and the executor concurrency initializer
 status: draft
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
-packages: []
+packages: [trailties, ruby-compat]
 deps: []
 deps-rfc: []
 est-loc: null
