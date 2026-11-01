@@ -28,3 +28,4 @@ Valid code is also rejected: `a = 1\ndef x; end\na /2\n` reports an error, becau
 - The `CONVERGEABLE` receipts in `ripper.ts` are removed.
 - `a = 1\ndef x; end\na /2\n` is not an error: locals follow `local_push` scopes.
 - `a => b\nb /2\n# c\n` is not an error: rightward assignment binds `b`.
+- Assignment and `def` binders read as `parse.y` does: `(a, b) = 1, 2`, `a, (b, c) = 1, [2]`, and `def (a).b(c)` learn their names, and `foo(puts, y = 1)` does not learn `puts`.
