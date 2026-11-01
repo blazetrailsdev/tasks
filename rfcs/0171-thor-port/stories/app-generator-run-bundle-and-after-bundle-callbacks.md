@@ -22,14 +22,14 @@ closed-reason: null
 (`vendor/rails/v8.0.2/railties/lib/rails/generators/rails/app/app_generator.rb:331-337`) ends with
 `generator.run_bundle` and `generator.run_after_bundle_callbacks`
 (`vendor/rails/v8.0.2/railties/lib/rails/generators/app_base.rb`). trails'
-`AppGenerator.applyRailsTemplate` (`packages/trailties/src/generators/app-generator.ts`) stops after
-`applyRailsTemplate` and carries `@missingRailsCall run_bundle` / `run_after_bundle_callbacks`
-receipts. The `app:template` command (`packages/trailties/src/commands/app.ts`) drains
+`AppGenerator.applyRailsTemplate` (`packages/trailties/src/generators/rails/app/app-generator.ts`) stops after
+`applyRailsTemplate`. The call gate does not flag this: both calls have a local receiver, so
+rails-api.json files them under `weakCalls`. trails#9565 removed the stale receipts. The `app:template` command (`packages/trailties/src/commands/app.ts`) drains
 `pendingGenerators` itself, a trails-only stand-in for the after-bundle callbacks.
 
 ## Acceptance criteria
 
 - [ ] `AppBase#runBundle` and `#runAfterBundleCallbacks` are ported (the package-manager install
       standing in for `bundle install`), and `AppGenerator.applyRailsTemplate` calls both.
-- [ ] The two `@missingRailsCall` receipts are deleted and the `pendingGenerators` drain in
+- [ ] The `pendingGenerators` drain in
       `commands/app.ts` converges onto `run_after_bundle_callbacks`.
