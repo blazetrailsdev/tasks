@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat-encode-to-iso-2022-jp"
-status: in-progress
+status: done
 updated: 2026-11-01
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null

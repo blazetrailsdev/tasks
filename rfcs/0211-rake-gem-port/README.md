@@ -1,9 +1,9 @@
 ---
 rfc: "0211-rake-gem-port"
 title: "Rake: a direct port of rake 13.2.1, and trailties' task dispatch converged onto it"
-status: active
+status: closed
 created: 2026-10-29
-updated: 2026-10-29
+updated: 2026-11-01
 owner: "@deanmarano"
 packages:
   - rake

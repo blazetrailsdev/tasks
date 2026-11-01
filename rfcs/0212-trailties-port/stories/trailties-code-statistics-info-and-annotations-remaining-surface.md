@@ -1,6 +1,6 @@
 ---
 title: "Port the remaining CodeStatistics, Info and SourceAnnotationExtractor methods"
-status: in-progress
+status: done
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: tt-surface

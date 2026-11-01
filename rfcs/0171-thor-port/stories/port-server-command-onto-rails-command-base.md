@@ -1,6 +1,6 @@
 ---
 title: "Port ServerCommand onto Rails::Command::Base"
-status: in-progress
+status: done
 updated: 2026-11-01
 rfc: "0171-thor-port"
 cluster: null
