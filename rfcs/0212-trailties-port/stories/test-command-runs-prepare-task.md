@@ -5,7 +5,8 @@ updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - port-rails-command-rake-command
 deps-rfc: []
 est-loc: 30
 priority: null
