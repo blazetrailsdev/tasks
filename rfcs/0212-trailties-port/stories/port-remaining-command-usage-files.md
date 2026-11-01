@@ -1,6 +1,6 @@
 ---
 title: "Port the remaining command USAGE files"
-status: ready
+status: in-progress
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9592
+claim: "2026-11-01T21:26:50Z"
+assignee: "zeitwerk-loader-inflector-tests"
 blocked-by: null
 closed-reason: null
 ---

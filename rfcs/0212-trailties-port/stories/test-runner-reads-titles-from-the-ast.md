@@ -1,6 +1,6 @@
 ---
 title: "Runner reads test titles from the AST and exits on unknown flags"
-status: ready
+status: in-progress
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9593
+claim: "2026-11-01T21:46:44Z"
+assignee: "app-base-package-manager-version-readers"
 blocked-by: null
 closed-reason: null
 ---

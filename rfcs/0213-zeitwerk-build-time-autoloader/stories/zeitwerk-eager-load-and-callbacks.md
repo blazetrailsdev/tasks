@@ -1,7 +1,7 @@
 ---
 title: "Port Zeitwerk eager load, callbacks and seating"
-status: ready
-updated: 2026-10-30
+status: in-progress
+updated: 2026-11-01
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-gem
 packages: ["zeitwerk"]
@@ -9,9 +9,9 @@ deps: ["zeitwerk-setup-walk"]
 deps-rfc: []
 est-loc: 650
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9591
+claim: "2026-11-01T21:06:40Z"
+assignee: "zeitwerk-eager-load-and-callbacks"
 blocked-by: null
 closed-reason: null
 ---
