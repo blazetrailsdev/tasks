@@ -1,6 +1,6 @@
 ---
 title: "Port Rails::TestUnit::Runner, Reporter and the test command"
-status: in-progress
+status: done
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: tt-surface

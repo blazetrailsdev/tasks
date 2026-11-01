@@ -1,6 +1,6 @@
 ---
 title: "Credit a computed-key delete expression as Hash#delete in parity:api:calls"
-status: in-progress
+status: done
 updated: 2026-11-01
 rfc: "0209-activestorage-port"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "StatsSyncJob failures alert like the cron wrapper did"
-status: claimed
+status: blocked
 updated: 2026-11-01
 rfc: "0136-trailmap"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-11-01T14:56:30Z"
 assignee: "attribute-rejects-a-name-that-shadows-base"
-blocked-by: null
+blocked-by: "No mail path in the container: msmtp is host-only and @blazetrails/actionmailer is not vendored, so EMAIL alerts need a decision (add msmtp + credentials to the image, or vendor the mailer). The watcher half is ringo's STATS_SYNC_LOG, and that log does not exist until the trial starts."
 closed-reason: null
 ---
 

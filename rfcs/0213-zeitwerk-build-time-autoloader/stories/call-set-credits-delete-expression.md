@@ -1,6 +1,6 @@
 ---
 title: "call-set-credits-delete-expression"
-status: ready
+status: in-progress
 updated: 2026-11-01
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9573
+claim: "2026-11-01T15:19:18Z"
+assignee: "call-set-credits-delete-expression"
 blocked-by: null
 closed-reason: null
 ---

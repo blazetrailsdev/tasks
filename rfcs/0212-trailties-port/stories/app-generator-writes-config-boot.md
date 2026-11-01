@@ -1,6 +1,6 @@
 ---
 title: "app-generator-writes-config-boot"
-status: ready
+status: in-progress
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9575
+claim: "2026-11-01T15:27:05Z"
+assignee: "app-generator-writes-config-boot"
 blocked-by: null
 closed-reason: null
 ---

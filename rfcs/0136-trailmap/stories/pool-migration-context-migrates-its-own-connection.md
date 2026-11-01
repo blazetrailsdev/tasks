@@ -1,6 +1,6 @@
 ---
 title: "A pool's migrationContext migrates on that pool, not Base"
-status: claimed
+status: in-progress
 updated: 2026-11-01
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: trails#9574
 claim: "2026-11-01T14:56:30Z"
 assignee: "attribute-rejects-a-name-that-shadows-base"
 blocked-by: null

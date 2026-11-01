@@ -1,7 +1,7 @@
 ---
 title: "app-and-db-change-generators-onto-thor-template"
-status: ready
-updated: 2026-10-31
+status: in-progress
+updated: 2026-11-01
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9573
+claim: "2026-11-01T15:19:18Z"
+assignee: "call-set-credits-delete-expression"
 blocked-by: null
 closed-reason: null
 ---

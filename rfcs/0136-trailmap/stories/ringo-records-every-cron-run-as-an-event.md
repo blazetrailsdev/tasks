@@ -1,6 +1,6 @@
 ---
 title: "ringo: record every cron run as a row in events"
-status: claimed
+status: blocked
 updated: 2026-11-01
 rfc: "0136-trailmap"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-11-01T14:56:30Z"
 assignee: "attribute-rejects-a-name-that-shadows-base"
-blocked-by: null
+blocked-by: "btwebooks has no GitHub remote, only dokku@localhost:btwhooks, where a push deploys ringo live, so it cannot land through a PR. Also needs a write path: webhook/tasksdb.go opens the DB mode=ro and has none, and retry lives in the mutation callers."
 closed-reason: null
 ---
 
