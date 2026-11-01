@@ -27,3 +27,4 @@ trails `packages/zeitwerk/src/{ignore,collapse,push-dir,cref}.test.ts` park as `
 - Every parked test runs with its Zeitwerk body, through the ported Loader.
 - `Cref#autoload` / `#autoload?` and `Registry.loader_for_gem` are ported.
 - No `it.skip` remains in those four files.
+- `newLoader` and `teardown` in `packages/zeitwerk/src/test-helpers/loader-test.ts` regain `dirs:`, `namespace:`, `enable_reloading:`, `setup:` and `reset_constants` (`test/support/loader_test.rb:18-26`, `:48-52`).
