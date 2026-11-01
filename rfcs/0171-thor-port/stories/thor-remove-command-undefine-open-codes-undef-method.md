@@ -1,6 +1,6 @@
 ---
 title: "Thor remove_command's :undefine arm calls rbModUndefMethod instead of an inline defineProperty"
-status: in-progress
+status: done
 updated: 2026-11-01
 rfc: "0171-thor-port"
 cluster: null

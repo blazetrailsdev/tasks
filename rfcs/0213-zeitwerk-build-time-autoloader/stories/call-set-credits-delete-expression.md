@@ -1,6 +1,6 @@
 ---
 title: "call-set-credits-delete-expression"
-status: in-progress
+status: done
 updated: 2026-11-01
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null

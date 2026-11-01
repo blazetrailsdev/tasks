@@ -1,6 +1,6 @@
 ---
 title: "bin/jobs crashes: eager load runs before Solid Queue's active_job hook"
-status: draft
+status: in-progress
 updated: 2026-11-01
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#107
+claim: "2026-11-01T17:55:50Z"
+assignee: "solid-queue-hook-runs-before-eager-load"
 blocked-by: null
 closed-reason: null
 ---
