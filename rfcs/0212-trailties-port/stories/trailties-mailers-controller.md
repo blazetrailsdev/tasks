@@ -5,7 +5,8 @@ updated: 2026-10-30
 rfc: "0212-trailties-port"
 cluster: tt-surface
 packages: ["trailties", "actionmailer"]
-deps: []
+deps:
+  - actionmailer-test-helper-test-case-and-preview
 deps-rfc: []
 est-loc: 350
 priority: null
