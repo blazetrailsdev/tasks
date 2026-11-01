@@ -25,4 +25,4 @@ Sources: `vendor/zeitwerk/v2.7.2/lib/zeitwerk/loader/config.rb`, `loader/helpers
 - Config and helpers port at their names, including `cname_for`, `ls`, `walk_up`.
 - `ruby?` answers `.ts` / `.js`, never `.d.ts`, a test file or an emitted twin; `ls` turns `-` into `_` before `camelize`.
 - `Cref#set` is a plain property seat plus the classpath write, with `TopLevel` as `Object`.
-- `test_ignore.rb`, `test_collapse.rb`, `test_push_dir.rb` and the `Cref` tests are ported.
+- `test_ignore.rb`, `test_collapse.rb`, `test_push_dir.rb` and the `Cref` tests are ported where they do not need the Loader walk. Tests driving `setup`, `eager_load`, `reload` or `Cref#autoload`, and `Cref#autoload` / `#autoload?` themselves, move to `zeitwerk-config-tests-through-loader` (owner ruling, 2026-11-01, trails#9571).
