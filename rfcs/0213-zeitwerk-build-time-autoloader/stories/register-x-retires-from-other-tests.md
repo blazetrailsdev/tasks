@@ -5,7 +5,9 @@ updated: 2026-10-30
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-lookup
 packages: ["actionpack", "activejob", "actioncable", "trailties"]
-deps: ["register-x-retires-from-source"]
+deps:
+  - register-x-retires-from-source
+  - manifest-and-rails-namespace-seats
 deps-rfc: []
 est-loc: 300
 priority: null
