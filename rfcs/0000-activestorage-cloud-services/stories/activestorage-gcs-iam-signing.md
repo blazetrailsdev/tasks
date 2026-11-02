@@ -5,7 +5,7 @@ updated: 2026-11-02
 rfc: "0000-activestorage-cloud-services"
 cluster: as-cloud-gcs
 packages: [activestorage]
-deps: [activestorage-gcs-service-urls]
+deps: [activestorage-gcs-iam-signing-spike]
 deps-rfc: []
 est-loc: 200
 priority: null
@@ -24,8 +24,8 @@ the `Storage` auth client. Nothing here can run on fake-gcs.
 
 ## Acceptance criteria
 
-- [ ] A short spike names the Node seam (an `authClient` overriding
-      `getCredentials` and `sign` is the candidate); record it in the RFC
+- [ ] Uses the seam `activestorage-gcs-iam-signing-spike` recorded, and its size is
+      re-estimated from that result
 - [ ] `gsa_email` wins over the metadata server, and the memo matches :200
 - [ ] The two metadata errors raise on Rails' conditions, tested with a fake
       metadata response

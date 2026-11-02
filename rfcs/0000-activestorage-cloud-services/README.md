@@ -175,7 +175,7 @@ seats. Differences a porter would otherwise rediscover:
   where Ruby has `InvalidArgumentError` and `NotFoundError`.
 - **GCS IAM signing.** Ruby passes `issuer:` and `signer:` per call. Node takes
   neither; it signs through the `Storage` auth client. See
-  `activestorage-gcs-iam-signing`.
+  `activestorage-gcs-iam-signing-spike`.
 
 ### Emulators
 
@@ -274,12 +274,17 @@ emulators need arguments, so CI starts them with `docker run` steps.
    `activestorage-s3-public-service-test`,
    `activestorage-s3-controller-tests`
 3. GCS — `activestorage-gcs-service-object-calls`,
-   `activestorage-gcs-service-urls`, `activestorage-gcs-iam-signing`,
+   `activestorage-gcs-service-urls`, `activestorage-gcs-iam-signing-spike`,
+   `activestorage-gcs-iam-signing`,
    `activestorage-gcs-service-test`, `activestorage-gcs-public-service-test`,
    `activestorage-gcs-controller-tests`
 
-Only the engine story and the two controller-test stories depend on open 0209
-stories. S3 and GCS run in parallel.
+Phases 2 and 3 wait on the owner's ruling on open question 2: both
+`*-service-object-calls` stories depend on `activestorage-service-url-is-async`.
+Until then only the other phase 1 stories can start. After it, S3 and GCS run in
+parallel. Open 0209 stories are deps of the engine story and the two
+controller-test stories only; the 0209 stories the service tests use (test
+helper, `User`, attached writers) are done.
 
 ## Verification
 
@@ -287,8 +292,10 @@ stories. S3 and GCS run in parallel.
   its only cloud rows are the two Azure ones.
 - `parity:api` reports `s3_service.rb` and `gcs_service.rb` at 100%.
 - `parity:test` matches every test in the four service test files, each gap a
-  `PERMANENT-SKIP` or a ruling recorded here; only the two IAM tests are skipped
-  in a run with no `gsa_email`.
+  `PERMANENT-SKIP` or a ruling recorded here. A run with no `gsa_email` skips the
+  two IAM tests. Tests changed for an emulator gap are the SSE test, if it needs
+  the fallback emulator, the GCS v2 PUTs of open question 1, and the
+  stored-disposition assertions; each is listed in this RFC when it lands.
 - A CI lane runs them against the emulators with no cloud secret in scope.
 - With neither SDK installed, `import "@blazetrails/activestorage"` works and
   `service: S3` raises `Missing service adapter for "S3"`.
@@ -317,5 +324,7 @@ stories. S3 and GCS run in parallel.
 ## Changelog
 
 - 2026-11-02: initial RFC
+- 2026-11-02: review: rollout gating, 0209 pointers, SSE and skip accounting,
+  IAM spike split out
 - 2026-11-02: self-review: register row count, 0209 cross-reference, test-row
   retirement, trailties in scope
