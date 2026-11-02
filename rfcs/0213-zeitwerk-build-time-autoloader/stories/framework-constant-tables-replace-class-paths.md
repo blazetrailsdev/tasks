@@ -5,7 +5,9 @@ updated: 2026-10-30
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-framework
 packages: ["ruby-compat", "scripts"]
-deps: ["framework-constant-table-generator", "constantize-restored-over-namespaces"]
+deps:
+  - framework-constant-table-generator-over-inflector
+  - constantize-restored-over-namespaces
 deps-rfc: []
 est-loc: 600
 priority: null
