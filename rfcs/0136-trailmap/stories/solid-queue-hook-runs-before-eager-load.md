@@ -1,5 +1,5 @@
 ---
-title: "bin/jobs crashes: eager load runs before Solid Queue's active_job hook"
+title: "bin/jobs crashes: lib/jobs.ts imports app/jobs before the boot finishes"
 status: done
 updated: 2026-11-02
 rfc: "0136-trailmap"
@@ -16,6 +16,6 @@ blocked-by: null
 closed-reason: null
 ---
 
-trailmap's `bin/jobs` crashes at boot under production config with `this.limitsConcurrency is not a function`. `config.eagerLoad` evaluates `app/jobs/stats-sync-job.ts` before the Solid Queue engine's `onLoad("active_job")` hook includes ConcurrencyControls (solid-queue engine.js:40), so a job's static block cannot call it. Rails' lazy load hook runs when ActiveJob::Base loads, before any subclass body. Found on trailmap#106; it stops the stats trial.
+trailmap's `bin/jobs` crashed at boot with `this.limitsConcurrency is not a function`. The cause was `lib/jobs.ts`'s import order under top-level await: a static import of `app/jobs` evaluates while `config/environment.ts` is suspended on `Trails.initialize()`, before the Solid Queue engine's initializer runs. Eager load was not the cause, as it also crashes with `eagerLoad = false`. Found on trailmap#106.
 
-Expected: fix in trails with a test there, re-vendor, then a trails worker finishes a row the Rails app enqueued, proving the Rails-to-trails direction of CLAUDE.md's shared solid_queue artefact.
+trailmap#107 fixed it by importing `app/jobs` dynamically after the boot. No trails fix or re-vendor was needed. A trails worker then finished a row the Rails app enqueued (trailmap#106), proving the Rails-to-trails direction of CLAUDE.md's shared solid_queue artefact.
