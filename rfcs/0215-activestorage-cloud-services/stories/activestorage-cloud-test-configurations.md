@@ -1,6 +1,6 @@
 ---
 title: "Gate cloud tests on SERVICE_CONFIGURATIONS as Rails does"
-status: draft
+status: ready
 updated: 2026-11-02
 rfc: "0215-activestorage-cloud-services"
 cluster: as-cloud-infra

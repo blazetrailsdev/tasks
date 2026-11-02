@@ -1,6 +1,6 @@
 ---
 title: "Find the Node seam for GCS issuer and signer"
-status: draft
+status: ready
 updated: 2026-11-02
 rfc: "0215-activestorage-cloud-services"
 cluster: as-cloud-gcs

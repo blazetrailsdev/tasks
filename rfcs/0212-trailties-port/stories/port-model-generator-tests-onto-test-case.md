@@ -1,6 +1,6 @@
 ---
 title: "Port model_generator_test.rb onto TestCase"
-status: ready
+status: in-progress
 updated: 2026-11-02
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9640
+claim: "2026-11-02T22:38:07Z"
+assignee: "actions-generate-runs-in-line"
 blocked-by: null
 closed-reason: null
 ---

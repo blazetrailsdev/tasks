@@ -1,6 +1,6 @@
 ---
 title: "Configurator awaits a service file's load and resolves it with constGet"
-status: draft
+status: ready
 updated: 2026-11-02
 rfc: "0215-activestorage-cloud-services"
 cluster: as-cloud-infra

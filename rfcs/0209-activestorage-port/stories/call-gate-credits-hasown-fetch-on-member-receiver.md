@@ -1,6 +1,6 @@
 ---
 title: "Credit the Object.hasOwn fetch form on a member receiver, drop Variation#format's receipt"
-status: in-progress
+status: done
 updated: 2026-11-02
 rfc: "0209-activestorage-port"
 cluster: null

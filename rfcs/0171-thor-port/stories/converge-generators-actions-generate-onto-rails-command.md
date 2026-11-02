@@ -1,7 +1,7 @@
 ---
 title: "converge-generators-actions-generate-onto-rails-command"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-11-02
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9640
+claim: "2026-11-02T22:52:17Z"
+assignee: "converge-generators-actions-generate-onto-rails-command"
 blocked-by: null
 closed-reason: null
 ---

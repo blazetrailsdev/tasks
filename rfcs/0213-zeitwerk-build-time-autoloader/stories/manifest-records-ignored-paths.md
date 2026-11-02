@@ -1,6 +1,6 @@
 ---
 title: "Manifest records ignored paths so load_file raises is ignored"
-status: ready
+status: in-progress
 updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9640
+claim: "2026-11-02T22:38:07Z"
+assignee: "actions-generate-runs-in-line"
 blocked-by: null
 closed-reason: null
 ---

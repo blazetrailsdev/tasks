@@ -1,6 +1,6 @@
 ---
 title: "Await Configurator.load in the active_storage.services initializer"
-status: draft
+status: ready
 updated: 2026-11-02
 rfc: "0215-activestorage-cloud-services"
 cluster: as-cloud-infra

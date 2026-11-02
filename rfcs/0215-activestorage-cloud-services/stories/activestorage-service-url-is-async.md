@@ -1,6 +1,6 @@
 ---
 title: "Make Service#url and url_for_direct_upload async on every service"
-status: draft
+status: ready
 updated: 2026-11-02
 rfc: "0215-activestorage-cloud-services"
 cluster: as-cloud-infra
