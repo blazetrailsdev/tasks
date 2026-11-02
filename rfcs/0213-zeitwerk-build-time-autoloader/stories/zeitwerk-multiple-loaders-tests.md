@@ -1,6 +1,6 @@
 ---
 title: "zeitwerk-multiple-loaders-tests"
-status: claimed
+status: in-progress
 updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9637
 claim: "2026-11-02T18:46:45Z"
 assignee: "zeitwerk-multiple-loaders-tests"
 blocked-by: null

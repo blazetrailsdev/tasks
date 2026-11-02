@@ -1,6 +1,6 @@
 ---
 title: "zeitwerk-check-name-error-reaches-task-abort"
-status: in-progress
+status: blocked
 updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: trails#9636
 claim: "2026-11-02T18:21:42Z"
 assignee: "zeitwerk-check-name-error-reaches-task-abort"
-blocked-by: null
+blocked-by: "owner ruling: may boot eagerLoad deferral (defer_boot_eager_load) be a PERMANENT receipt, or must it converge?"
 closed-reason: null
 ---
 

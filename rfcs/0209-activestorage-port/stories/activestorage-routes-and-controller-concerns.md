@@ -1,6 +1,6 @@
 ---
 title: "Port ActiveStorage's routes, BaseController and the controller concerns"
-status: in-progress
+status: done
 updated: 2026-11-02
 rfc: "0209-activestorage-port"
 cluster: as-controllers
