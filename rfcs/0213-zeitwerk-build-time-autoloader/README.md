@@ -292,16 +292,18 @@ the query, and binds the old module. So in development a synchronous Node
 resolve hook (`module.registerHooks`, Node ≥ 24 is the repo's engine floor)
 appends the importer's generation to any specifier that resolves to a managed
 file. Framework packages and `once` files stay in the first generation. This
-exists only in development. It is untested, and
-`zeitwerk-reload-generation-spike` is a go/no-go on it; see open question 2.
+exists only in development. `zeitwerk-reload-generation-spike` returned a go; see
+open question 2.
 
 **Vitest cannot exercise this.** The suites run through Vite's resolver, not
 Node's, so the hook never fires there. Reload tests that assert generations, in
 the gem and in railties, spawn a real `node` subprocess against a temporary
 directory, as `scripts/test-deps/` does. Every other loader test runs under vitest,
-because `eager_load` uses `import()` with a file URL and needs no hook. The spike
-also settles `registerHooks`' stability level on Node 24; the repo's `engines`
-floor is `>=24`.
+because `eager_load` uses `import()` with a file URL and needs no hook.
+`registerHooks` is Stability 1.2, Release candidate, since Node v24.13.1 (the
+docs at v24.21.0, nodejs/node#60960), and was experimental before that. The
+repo's `engines` floor of `>=24` admits those experimental releases, so
+`zeitwerk-reload-and-unload` should raise it to `>=24.13.1` or accept that.
 
 **Module records are never evicted.** ESM has no unload, so each generation keeps
 its records for the life of the process, where Ruby's unloaded classes are
@@ -646,8 +648,14 @@ Total: about 9,900, of which 2,200 is the mechanical rename.
    drops all of them, as Zeitwerk does. Recommendation: whole-loader, for the
    soundness reason in § "Reload". A narrower reload would be a second deviation.
    Needs the owner's confirmation.
-2. **Generation propagation.** A resolve hook is the recommendation. The fallback,
-   rewriting specifiers in a dev transform, is uglier. Settled by `zeitwerk-reload-generation-spike`.
+2. **Generation propagation. Settled: go on the resolve hook.** Under real Node
+   v24.21.0 (`packages/zeitwerk/src/reload-generation.trails.test.ts`), generation
+   2 re-evaluated every managed file reached by static import, through a cycle
+   and a dynamic `import()`, read edited source, and rebuilt the class chain.
+   Framework and `once` files kept their first-generation module. The transform
+   fallback was not needed. One limit: Node does not map a `./x.js` specifier to
+   `x.ts`, so an application file running unbuilt under plain Node must name
+   `./x.ts`, or the hook must map it; `zeitwerk-reload-and-unload` decides which.
 3. **Framework residue.** How many table rows the path cannot derive. If it
    is more than a small override list, those rows keep a `rails-api.json` source.
    Settled by `framework-constant-table-generator`.
