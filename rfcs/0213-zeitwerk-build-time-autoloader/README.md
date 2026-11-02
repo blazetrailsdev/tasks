@@ -142,7 +142,7 @@ File layout follows `lib/zeitwerk/` so `parity:api` pairs it:
 | Rails-facing surface                                                                                                                 | Source                    | Port                  |
 | ------------------------------------------------------------------------------------------------------------------------------------ | ------------------------- | --------------------- |
 | `push_dir`, `ignore`, `collapse`, `do_not_eager_load`, `enable_reloading`, `tag`, `on_setup`, `on_load`, `on_unload`, `log!`, `dirs` | `loader/config.rb`        | line for line         |
-| `Inflector#camelize`, `#inflect`, `GemInflector`, `NullInflector`                                                                    | `inflector.rb`, …         | line for line         |
+| `Inflector#camelize`, `#inflect`, `NullInflector`                                                                                    | `inflector.rb`, …         | line for line         |
 | `setup`, `unload`, `reload`, `all_expected_cpaths`, `cpath_expected_at`, `unloadable_cpaths`                                         | `loader.rb`               | async where noted     |
 | `eager_load`, `eager_load_dir`, `eager_load_namespace`, `load_file`                                                                  | `loader/eager_load.rb`    | async                 |
 | `on_file_autoloaded`, `on_dir_autoloaded`, `on_namespace_loaded`                                                                     | `loader/callbacks.rb`     | line for line         |
@@ -405,7 +405,7 @@ inflector and the walk over a file tree, at build time.
 
 `pnpm parity:class-paths` today derives `class-paths.generated.ts` from
 `rails-api.json`, which needs `vendor/rails` and a parity run. Replace it with a
-generator built on the loader's `cname_for` plus a `GemInflector`:
+generator built on the loader's `cname_for` plus an `Inflector`:
 
 - A file's directory gives the namespace, as `cpath_expected_at` would, and its
   exported classes give the `cname`s. `RUBY_FILE_TS_OVERRIDES` and
@@ -498,8 +498,11 @@ be reachable under their qualified name. That goes into
   sync read into a read that sometimes fails depending on what ran first.
 - **Bare-name references in app code.** No global injection of constants. A file
   imports what it names.
-- **Porting `Zeitwerk::Loader.for_gem`'s use in trails packages.** The port
-  exists for fidelity (`GemLoader`, tests), but framework packages stay ES modules.
+- **Porting `Zeitwerk::Loader.for_gem`, `GemLoader` and `GemInflector`.** trails
+  has no Ruby packaging concept, so by owner decision on trails#9619 they are not
+  ported. `Registry.loaderForPackage(packageFile, { namespace })` reads a
+  `package.json` and memoizes a plain `Loader`, and framework packages stay ES
+  modules.
 - **Thread-safety machinery.** `mutex` and `dirs_autoload_monitor` guard threads.
   Where a section spans an `await`, root § "The pool monitor guards only sections
   that span an `await`" decides, not this RFC.
@@ -586,7 +589,7 @@ whichever path seated them.
 
 | Story                                           | Cluster      | est-loc | Deps                                                                                                                                 | Scope                                                                                        |
 | ----------------------------------------------- | ------------ | ------- | ------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------- |
-| `framework-constant-table-generator`            | zw-framework | 500     | `zeitwerk-loader-config-and-helpers`                                                                                                 | Generator over `GemInflector`, residue counted, `--check` kept                               |
+| `framework-constant-table-generator`            | zw-framework | 500     | `zeitwerk-loader-config-and-helpers`                                                                                                 | Generator over `Inflector` , residue counted, `--check` kept                                 |
 | `framework-constant-tables-replace-class-paths` | zw-framework | 600     | `framework-constant-table-generator`, `constantize-restored-over-namespaces`                                                         | The 35 tables to `constants.generated.ts`, new readers                                       |
 | `delete-register-constant-and-class-path-api`   | zw-framework | 350     | `framework-constant-tables-replace-class-paths`, `register-x-retires-from-activerecord-tests`, `register-x-retires-from-other-tests` | Deletions, ruby-compat internals, entry-module TDZ check; activesupport and arel inventories |
 
