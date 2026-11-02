@@ -1,6 +1,6 @@
 ---
 title: "trailties-sets-loader-manifest-root"
-status: ready
+status: in-progress
 updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9613
+claim: "2026-11-02T04:06:39Z"
+assignee: "trailties-sets-loader-manifest-root"
 blocked-by: null
 closed-reason: null
 ---
