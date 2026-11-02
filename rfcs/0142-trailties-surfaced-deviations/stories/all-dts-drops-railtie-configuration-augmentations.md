@@ -1,6 +1,6 @@
 ---
 title: "all-dts-drops-railtie-configuration-augmentations"
-status: draft
+status: in-progress
 updated: 2026-11-02
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9601
+claim: "2026-11-02T00:27:46Z"
+assignee: "all-dts-drops-railtie-configuration-augmentations"
 blocked-by: null
 closed-reason: null
 ---

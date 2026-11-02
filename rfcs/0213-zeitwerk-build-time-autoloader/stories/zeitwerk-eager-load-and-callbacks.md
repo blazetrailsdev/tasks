@@ -1,7 +1,7 @@
 ---
 title: "Port Zeitwerk eager load, callbacks and seating"
-status: in-progress
-updated: 2026-11-01
+status: done
+updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-gem
 packages: ["zeitwerk"]

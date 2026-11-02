@@ -1,7 +1,7 @@
 ---
 title: "call-gate-credits-file-utils-async"
-status: claimed
-updated: 2026-11-01
+status: done
+updated: 2026-11-02
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9598
 claim: "2026-11-01T23:56:25Z"
 assignee: "call-gate-credits-file-utils-async"
 blocked-by: null

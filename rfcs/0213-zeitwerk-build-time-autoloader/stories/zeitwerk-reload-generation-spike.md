@@ -1,7 +1,7 @@
 ---
 title: "Spike: reload generations through a Node resolve hook"
-status: ready
-updated: 2026-10-30
+status: in-progress
+updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-gem
 packages: ["zeitwerk"]
@@ -9,9 +9,9 @@ deps: ["zeitwerk-eager-load-and-callbacks"]
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9602
+claim: "2026-11-02T00:46:39Z"
+assignee: "zeitwerk-reload-generation-spike"
 blocked-by: null
 closed-reason: null
 ---

@@ -18,7 +18,7 @@ clusters:
   - as-previews
   - as-controllers
   - as-engine
-priority: 3
+priority: 2
 ---
 
 # RFC 0209 — Port ActiveStorage on the Disk service

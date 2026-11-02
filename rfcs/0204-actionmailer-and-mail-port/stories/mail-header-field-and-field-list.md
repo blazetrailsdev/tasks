@@ -1,7 +1,7 @@
 ---
 title: "Port Mail::Header, Field, FieldList and IndifferentHash"
-status: claimed
-updated: 2026-11-01
+status: in-progress
+updated: 2026-11-02
 rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-core
 packages: ["mail"]
@@ -9,7 +9,7 @@ deps: ["mail-remaining-header-fields"]
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
+pr: trails#9599
 claim: "2026-11-01T23:49:02Z"
 assignee: "mail-header-field-and-field-list"
 blocked-by: null

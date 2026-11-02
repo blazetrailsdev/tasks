@@ -1,7 +1,7 @@
 ---
 title: "Port Rails.autoloaders and the autoload path config"
-status: ready
-updated: 2026-10-30
+status: claimed
+updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-railties
 packages: ["trailties", "activesupport"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 500
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-02T00:26:39Z"
+assignee: "trailties-autoloaders-and-config-paths"
 blocked-by: null
 closed-reason: null
 ---
