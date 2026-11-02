@@ -1,7 +1,7 @@
 ---
 title: "Retire the application scan and enforce the file contract"
-status: ready
-updated: 2026-10-30
+status: in-progress
+updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-railties
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["trailties-autoloaders-and-config-paths"]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9612
+claim: "2026-11-02T03:27:16Z"
+assignee: "trailties-app-scan-retires"
 blocked-by: null
 closed-reason: null
 ---

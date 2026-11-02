@@ -1,6 +1,6 @@
 ---
 title: "generators-load-rails-command-for-inline-rails-command"
-status: in-progress
+status: done
 updated: 2026-11-02
 rfc: "0212-trailties-port"
 cluster: null

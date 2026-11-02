@@ -1,6 +1,6 @@
 ---
 title: "Active Job serialize writes the current Time.zone name"
-status: draft
+status: ready
 updated: 2026-11-02
 rfc: "0214-activejob-surfaced-deviations"
 cluster: null
