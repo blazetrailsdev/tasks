@@ -2,7 +2,7 @@
 title: "Port S3Service multipart upload, compose and delete_prefixed"
 status: draft
 updated: 2026-11-02
-rfc: "0000-activestorage-cloud-services"
+rfc: "0215-activestorage-cloud-services"
 cluster: as-cloud-s3
 packages: [activestorage]
 deps: [activestorage-s3-service-object-calls]

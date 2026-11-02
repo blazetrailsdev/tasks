@@ -1,5 +1,5 @@
 ---
-rfc: "0000-activestorage-cloud-services"
+rfc: "0215-activestorage-cloud-services"
 title: "Port ActiveStorage's S3 and GCS services"
 status: active
 created: 2026-11-02
@@ -15,9 +15,7 @@ clusters:
 priority: 2
 ---
 
-<!-- Unnumbered until merge -->
-
-# RFC — Port ActiveStorage's S3 and GCS services
+# RFC 0215 — Port ActiveStorage's S3 and GCS services
 
 ## Summary
 

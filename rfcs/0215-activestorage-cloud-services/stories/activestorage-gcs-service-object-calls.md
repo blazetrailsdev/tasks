@@ -2,7 +2,7 @@
 title: "Port GCSService's object calls"
 status: draft
 updated: 2026-11-02
-rfc: "0000-activestorage-cloud-services"
+rfc: "0215-activestorage-cloud-services"
 cluster: as-cloud-gcs
 packages: [activestorage]
 deps: [activestorage-cloud-peer-dependencies, activestorage-service-url-is-async]

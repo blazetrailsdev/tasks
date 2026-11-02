@@ -2,7 +2,7 @@
 title: "Record Azure as permanently unported in the parity registers"
 status: draft
 updated: 2026-11-02
-rfc: "0000-activestorage-cloud-services"
+rfc: "0215-activestorage-cloud-services"
 cluster: as-cloud-infra
 packages: [activestorage]
 deps: []

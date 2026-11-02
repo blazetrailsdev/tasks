@@ -2,7 +2,7 @@
 title: "Port gcs_service_test.rb"
 status: draft
 updated: 2026-11-02
-rfc: "0000-activestorage-cloud-services"
+rfc: "0215-activestorage-cloud-services"
 cluster: as-cloud-gcs
 packages: [activestorage]
 deps:
