@@ -5,7 +5,8 @@ updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
 packages: []
-deps: []
+deps:
+  - register-x-retires-from-source
 deps-rfc: []
 est-loc: null
 priority: null
