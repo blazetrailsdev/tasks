@@ -1,7 +1,7 @@
 ---
 title: "Correct the bin/jobs crash record once the Rails twin lands"
-status: draft
-updated: 2026-11-01
+status: ready
+updated: 2026-11-02
 rfc: "0136-trailmap"
 cluster: null
 packages: []

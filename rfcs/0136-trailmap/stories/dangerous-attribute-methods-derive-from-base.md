@@ -1,7 +1,7 @@
 ---
 title: "dangerousAttributeMethods derives from Base as Rails does"
-status: draft
-updated: 2026-11-01
+status: ready
+updated: 2026-11-02
 rfc: "0136-trailmap"
 cluster: null
 packages: []

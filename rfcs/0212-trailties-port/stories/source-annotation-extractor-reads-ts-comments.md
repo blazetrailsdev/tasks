@@ -1,6 +1,6 @@
 ---
 title: "Read annotations from TS and JS comments with a real tokenizer"
-status: in-progress
+status: done
 updated: 2026-11-02
 rfc: "0212-trailties-port"
 cluster: tt-surface

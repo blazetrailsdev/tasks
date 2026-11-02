@@ -1,6 +1,6 @@
 ---
 title: "Feed TestUnitReporter from Vitest and print bin/trails rerun snippets"
-status: in-progress
+status: done
 updated: 2026-11-02
 rfc: "0212-trailties-port"
 cluster: tt-surface

@@ -1,7 +1,7 @@
 ---
 title: "trails-tsc scopes each --schema to the abstract base that connects to it"
-status: ready
-updated: 2026-11-01
+status: claimed
+updated: 2026-11-02
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-02T12:51:05Z"
+assignee: "test-trailmap-through-a-test-helper-fixtures-and-app-routes"
 blocked-by: null
 closed-reason: null
 ---

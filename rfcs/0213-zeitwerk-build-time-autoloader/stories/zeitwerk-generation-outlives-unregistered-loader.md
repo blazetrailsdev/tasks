@@ -1,6 +1,6 @@
 ---
 title: "Keep a file's reload generation across unregister"
-status: ready
+status: in-progress
 updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9616
+claim: "2026-11-02T12:26:46Z"
+assignee: "red-3a2108c0"
 blocked-by: null
 closed-reason: null
 ---

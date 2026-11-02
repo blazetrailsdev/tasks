@@ -1,7 +1,7 @@
 ---
 title: "bin/jobs forwards its arguments to the Solid Queue CLI"
-status: draft
-updated: 2026-11-01
+status: ready
+updated: 2026-11-02
 rfc: "0136-trailmap"
 cluster: null
 packages: []

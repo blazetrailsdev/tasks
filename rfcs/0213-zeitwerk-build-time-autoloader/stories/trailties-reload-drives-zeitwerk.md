@@ -1,7 +1,7 @@
 ---
 title: "The Rails reloader drives Zeitwerk reload"
-status: ready
-updated: 2026-10-30
+status: claimed
+updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-railties
 packages: ["trailties", "activesupport"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-02T12:46:51Z"
+assignee: "trailties-reload-drives-zeitwerk"
 blocked-by: null
 closed-reason: null
 ---
