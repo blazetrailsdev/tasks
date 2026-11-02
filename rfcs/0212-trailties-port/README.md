@@ -9,6 +9,7 @@ packages:
   - trailties
   - activesupport
   - actionmailer
+  - ruby-compat
 clusters:
   - tt-harness
   - tt-layout
