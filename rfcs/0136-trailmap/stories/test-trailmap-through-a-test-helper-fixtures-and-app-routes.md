@@ -1,6 +1,6 @@
 ---
 title: "Test trailmap through one test helper, fixtures and the application's own routes"
-status: claimed
+status: ready
 updated: 2026-11-02
 rfc: "0136-trailmap"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: "2026-11-02T12:51:05Z"
-assignee: "test-trailmap-through-a-test-helper-fixtures-and-app-routes"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

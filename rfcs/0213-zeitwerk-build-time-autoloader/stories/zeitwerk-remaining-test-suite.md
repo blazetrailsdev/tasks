@@ -1,7 +1,7 @@
 ---
 title: "Port the rest of Zeitwerk's test suite"
-status: ready
-updated: 2026-10-30
+status: in-progress
+updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-gem
 packages: ["zeitwerk"]
@@ -9,9 +9,9 @@ deps: ["zeitwerk-reload-and-unload"]
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9620
+claim: "2026-11-02T13:26:40Z"
+assignee: "zeitwerk-remaining-test-suite"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc scopes each --schema to the abstract base that connects to it"
-status: claimed
+status: in-progress
 updated: 2026-11-02
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#9618
 claim: "2026-11-02T12:51:05Z"
 assignee: "test-trailmap-through-a-test-helper-fixtures-and-app-routes"
 blocked-by: null

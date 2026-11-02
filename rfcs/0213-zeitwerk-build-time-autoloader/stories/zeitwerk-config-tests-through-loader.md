@@ -1,7 +1,7 @@
 ---
 title: "Port the Zeitwerk config and Cref tests that need the Loader"
-status: ready
-updated: 2026-11-01
+status: in-progress
+updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
 packages: []
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9619
+claim: "2026-11-02T13:07:10Z"
+assignee: "zeitwerk-config-tests-through-loader"
 blocked-by: null
 closed-reason: null
 ---

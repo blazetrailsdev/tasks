@@ -1,6 +1,6 @@
 ---
 title: "Keep a file's reload generation across unregister"
-status: in-progress
+status: done
 updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null

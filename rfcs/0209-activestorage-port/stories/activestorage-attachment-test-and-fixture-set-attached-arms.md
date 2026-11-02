@@ -1,6 +1,6 @@
 ---
 title: "activestorage-attachment-test-and-fixture-set-attached-arms"
-status: in-progress
+status: done
 updated: 2026-11-02
 rfc: "0209-activestorage-port"
 cluster: null
