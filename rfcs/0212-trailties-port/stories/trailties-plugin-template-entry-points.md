@@ -1,7 +1,7 @@
 ---
 title: "trailties-plugin-template-entry-points"
-status: ready
-updated: 2026-11-01
+status: in-progress
+updated: 2026-11-02
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9627
+claim: "2026-11-02T15:46:39Z"
+assignee: "trailties-plugin-template-entry-points"
 blocked-by: null
 closed-reason: null
 ---

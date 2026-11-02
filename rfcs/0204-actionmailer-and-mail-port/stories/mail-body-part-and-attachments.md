@@ -1,7 +1,7 @@
 ---
 title: "Port Mail::Body, Part, PartsList and AttachmentsList"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-11-02
 rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-core
 packages: ["mail"]
@@ -9,9 +9,9 @@ deps: ["mail-header-field-and-field-list", "mail-encodings-and-utilities", "mini
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9626
+claim: "2026-11-02T15:26:38Z"
+assignee: "mail-body-part-and-attachments"
 blocked-by: null
 ---
 

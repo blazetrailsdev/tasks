@@ -1,6 +1,6 @@
 ---
 title: "loader_for_gem memoizes across its await"
-status: draft
+status: closed
 updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: superseded by loader-for-package-memoizes-across-await"
 ---
 
 ## Context

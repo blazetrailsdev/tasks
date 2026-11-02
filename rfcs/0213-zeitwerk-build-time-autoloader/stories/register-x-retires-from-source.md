@@ -1,7 +1,7 @@
 ---
 title: "registerX leaves framework source"
-status: ready
-updated: 2026-10-30
+status: in-progress
+updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-lookup
 packages: ["activerecord", "actionpack", "activejob", "actioncable", "trailties"]
@@ -9,9 +9,9 @@ deps: ["constantize-restored-over-namespaces", "trailties-app-scan-retires"]
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9625
+claim: "2026-11-02T15:06:41Z"
+assignee: "register-x-retires-from-source"
 blocked-by: null
 closed-reason: null
 ---
