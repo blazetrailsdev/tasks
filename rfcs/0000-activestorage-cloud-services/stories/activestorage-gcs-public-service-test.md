@@ -25,4 +25,4 @@ fake-gcs serves every object anonymously, and `direct upload` here signs v2.
 - [ ] The `gcs_public_service_test.rb` row leaves `unported-files/activestorage.ts`
 - [ ] `public URL generation` asserts the `storage.googleapis.com` shape offline and
       a 200 on the emulator
-- [ ] `direct upload` follows the ruling on open question 1
+- [ ] `direct upload` follows decision 6

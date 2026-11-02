@@ -54,6 +54,12 @@ Owner decisions of 2026-11-02, binding:
 5. **`url` and `url_for_direct_upload` are async on every service**, Disk
    included, as § "The async boundary" sets out. `headers_for_direct_upload`
    stays sync.
+6. **GCS v2 direct-upload tests** assert the v2 URL offline and upload through the
+   v4 path, which fake-gcs accepts, with a `PERMANENT-SKIP` only if that fails. The
+   v2 PUT itself is not exercised in CI.
+7. **Third-party services:** `Configurator.load` skips a class already seated at
+   `Service.FooService`, the seat a third-party module writes before boot.
+8. **The S3 emulator is SeaweedFS**, since MinIO's official images are gone.
 
 ## Design
 
@@ -215,8 +221,7 @@ Known gaps, none hidden:
 - **GCS v2 signed PUT.** fake-gcs answers `400 invalid uploadType` to a v2 URL
   and routes only v4. Rails uses v2 unless `cache_control` is set
   (`gcs_service.rb:95`). So "direct upload" (twice), "direct upload with content
-  disposition" and the controller's GCS PUT cannot run as written. See open
-  question 1.
+  disposition" and the controller's GCS PUT cannot run as written. See decision 6.
 - **GCS signatures are not verified.** A tampered v4 URL answered 200. No GCS
   test here proves a signature valid.
 - **GCS public access is not modelled.** fake-gcs serves everything, so "public
@@ -296,7 +301,7 @@ helper, `User`, attached writers) are done.
 - `parity:test` matches every test in the four service test files, each gap a
   `PERMANENT-SKIP` or a ruling recorded here. A run with no `gsa_email` skips the
   two IAM tests. Tests changed for an emulator gap are the SSE test, if it needs
-  the fallback emulator, the GCS v2 PUTs of open question 1, and the
+  the fallback emulator, the GCS v2 PUTs of decision 6, and the
   stored-disposition assertions; each is listed in this RFC when it lands.
 - A CI lane runs them against the emulators with no cloud secret in scope.
 - With neither SDK installed, `import "@blazetrails/activestorage"` works and
@@ -304,25 +309,12 @@ helper, `User`, attached writers) are done.
 
 ## Open questions
 
-1. **GCS v2 direct-upload tests on fake-gcs.** Options: a test helper that
-   rewrites the v2 URL to the form fake-gcs routes; an upstream fake-gcs change;
-   or asserting the v2 URL offline and parking the PUT. Recommendation: assert
-   the URL offline and upload through the existing v4 path, with a
-   `PERMANENT-SKIP` only if neither works. Deferred to
-   `activestorage-gcs-service-test`.
-2. **Async `url`.** Resolved: decision 5.
-3. **Third-party services.** Rails finds any
-   `active_storage/service/foo_service` on the load path, as the `azure-blob` gem
-   does. Recommendation: `load` skips a class already seated at
-   `Service.FooService`, which is the seat a third-party module writes.
-   Deferred to `activestorage-configurator-loads-services`.
-4. **SeaweedFS as a dependency.** It is a heavy server used as a test double, and
-   a different product from the MinIO the owner named. Recommendation: accept
-   it. Deferred to `activestorage-cloud-ci-emulators`.
+None open. All four were resolved by the owner on 2026-11-02, as decisions 5 to 8.
 
 ## Changelog
 
 - 2026-11-02: initial RFC
+- 2026-11-02: owner resolved the remaining open questions (decisions 6 to 8)
 - 2026-11-02: owner ruled `url` async (decision 5)
 - 2026-11-02: review: rollout gating, 0209 pointers, SSE and skip accounting,
   IAM spike split out

@@ -33,5 +33,5 @@ retires. See the RFC, § "Configurator: the registry retires".
       assignments, and `Mirror`'s `primary` and `mirrors` are loaded by the same step
 - [ ] `"GCS"` resolves `gcs-service.js` and `GCSService`; `"AzureStorage"` raises
       the missing-adapter error
-- [ ] Open question 3 is settled and recorded in the RFC
+- [ ] `load` skips a class already seated on `Service`, per decision 7
 - [ ] `vendor/rails/v8.0.2/activestorage/test/service/configurator_test.rb` still passes

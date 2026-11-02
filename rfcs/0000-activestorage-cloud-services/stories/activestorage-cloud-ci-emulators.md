@@ -31,5 +31,5 @@ existing output rather than adding to it.
 - [ ] No secret is in scope for the job
 - [ ] A `docker compose` file runs the same pair locally
 - [ ] SeaweedFS's KMS config is tried for SSE `AES256`; else the fallback from the
-      RFC is taken and recorded, and open question 4 is settled
+      RFC is taken and recorded
 - [ ] The lane is required only where `activestorage` is affected
