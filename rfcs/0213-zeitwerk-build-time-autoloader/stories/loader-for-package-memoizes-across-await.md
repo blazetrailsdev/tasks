@@ -1,6 +1,6 @@
 ---
 title: "loaderForPackage memoizes across its await"
-status: draft
+status: claimed
 updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-02T16:46:44Z"
+assignee: "autoloader-receipts-recheck-after-scan-retires"
 blocked-by: null
 closed-reason: null
 ---

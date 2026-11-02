@@ -1,7 +1,7 @@
 ---
 title: "Port ActiveStorage's routes, BaseController and the controller concerns"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-11-02
 rfc: "0209-activestorage-port"
 cluster: as-controllers
 packages: ["activestorage"]
@@ -9,9 +9,9 @@ deps: ["activestorage-blob-and-downloader", "activestorage-variation-and-variant
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9629
+claim: "2026-11-02T16:26:42Z"
+assignee: "activestorage-routes-and-controller-concerns"
 blocked-by: null
 closed-reason: null
 ---

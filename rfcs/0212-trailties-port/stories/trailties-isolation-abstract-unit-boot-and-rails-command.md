@@ -1,6 +1,6 @@
 ---
 title: "Port abstract_unit's boot_rails, rails(*args), Rack and Reload helpers"
-status: claimed
+status: in-progress
 updated: 2026-11-02
 rfc: "0212-trailties-port"
 cluster: tt-harness
@@ -9,7 +9,7 @@ deps: ["trailties-isolation-abstract-unit-generation"]
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
+pr: trails#9630
 claim: "2026-11-02T14:26:42Z"
 assignee: "trailties-isolation-abstract-unit-boot-and-rails-command"
 blocked-by: null

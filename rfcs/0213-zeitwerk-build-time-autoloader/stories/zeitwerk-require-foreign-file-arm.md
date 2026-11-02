@@ -1,6 +1,6 @@
 ---
 title: "Port Kernel#require's foreign-file arm in zeitwerk"
-status: draft
+status: closed
 updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Ruby-only arm: the foreign-file branch serves a Kernel#require of a load-path feature, and an ES import never passes through it. Second AC already holds: SCOPED_SKIP_GROUPS in scripts/parity/conventions.ts:735 skips require and const_added for core_ext/kernel.rb PERMANENT, matching RFC 0213's 'three things have no port', and require-interaction.test.ts holds its 12 tests under PERMANENT-SKIP. No source receipt cites this story on origin/main."
 ---
 
 ## Context

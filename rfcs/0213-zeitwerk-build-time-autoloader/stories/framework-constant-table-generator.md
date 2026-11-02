@@ -1,7 +1,7 @@
 ---
 title: "Generate framework constant tables over GemInflector"
-status: in-progress
-updated: 2026-11-01
+status: blocked
+updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-framework
 packages: ["scripts", "zeitwerk"]
@@ -12,7 +12,7 @@ priority: null
 pr: trails#9580
 claim: "2026-11-01T18:29:29Z"
 assignee: "framework-constant-table-generator"
-blocked-by: null
+blocked-by: "Stale in-progress: trails#9580 closed unmerged 2026-11-01, and its title and first AC require GemInflector, which trails#9619 deleted (no Ruby packaging concept). Needs an owner rewrite onto Zeitwerk::Inflector or a package-layout rule plus a re-claim; framework-constant-tables-replace-class-paths and delete-register-constant-and-class-path-api wait on it."
 closed-reason: null
 ---
 

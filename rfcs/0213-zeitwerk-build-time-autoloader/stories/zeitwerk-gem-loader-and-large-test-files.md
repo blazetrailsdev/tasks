@@ -1,6 +1,6 @@
 ---
 title: "zeitwerk-gem-loader-and-large-test-files"
-status: draft
+status: blocked
 updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Body must be split before claiming: its gem half (gem_loader.rb, for_gem, for_gem_extension, loader_for_gem, test_for_gem*.rb) was ruled out by the owner on trails#9619, while test_callbacks, test_top_level, test_utf8, test_eager_load_dir, test_eager_load_namespace, test_load_file and test_logging are still unported and valid. Needs an owner rewrite to the test files only."
 closed-reason: null
 ---
 

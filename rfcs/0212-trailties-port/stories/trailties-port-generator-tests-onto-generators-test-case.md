@@ -1,7 +1,7 @@
 ---
 title: "Pilot: port generator tests onto Rails::Generators::TestCase"
-status: ready
-updated: 2026-10-30
+status: in-progress
+updated: 2026-11-02
 rfc: "0212-trailties-port"
 cluster: tt-tests
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["trailties-generators-test-case-and-behavior"]
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9628
+claim: "2026-11-02T16:06:38Z"
+assignee: "trailties-port-generator-tests-onto-generators-test-case"
 blocked-by: null
 closed-reason: null
 ---

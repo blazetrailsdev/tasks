@@ -1,7 +1,7 @@
 ---
 title: "GemInflector matches .ts root files"
-status: draft
-updated: 2026-11-01
+status: closed
+updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone: trails#9619 deleted the GemInflector port by owner decision (trails has no Ruby packaging concept). git grep 'GemInflector|gem-inflector|forGem' over origin/main packages/ and scripts/ returns nothing; packages/zeitwerk/src/gem-inflector.ts does not exist."
 ---
 
 ## Context
