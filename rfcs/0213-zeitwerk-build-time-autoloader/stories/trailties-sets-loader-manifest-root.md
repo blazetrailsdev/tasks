@@ -1,7 +1,7 @@
 ---
 title: "trailties-sets-loader-manifest-root"
-status: draft
-updated: 2026-11-01
+status: ready
+updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
 packages: []

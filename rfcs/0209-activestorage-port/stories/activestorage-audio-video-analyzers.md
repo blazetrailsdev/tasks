@@ -1,6 +1,6 @@
 ---
 title: "Port AudioAnalyzer and VideoAnalyzer, shelling out to ffprobe"
-status: in-progress
+status: done
 updated: 2026-11-02
 rfc: "0209-activestorage-port"
 cluster: as-analysis

@@ -1,7 +1,7 @@
 ---
 title: "generators-load-rails-command-for-inline-rails-command"
-status: ready
-updated: 2026-11-01
+status: in-progress
+updated: 2026-11-02
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9607
+claim: "2026-11-02T02:07:10Z"
+assignee: "generators-load-rails-command-for-inline-rails-command"
 blocked-by: null
 closed-reason: null
 ---

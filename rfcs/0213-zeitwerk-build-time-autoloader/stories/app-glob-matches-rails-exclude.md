@@ -1,6 +1,6 @@
 ---
 title: "Converge the app glob's exclude onto Rails"
-status: draft
+status: claimed
 updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-02T02:56:09Z"
+assignee: "app-glob-matches-rails-exclude"
 blocked-by: null
 closed-reason: null
 ---

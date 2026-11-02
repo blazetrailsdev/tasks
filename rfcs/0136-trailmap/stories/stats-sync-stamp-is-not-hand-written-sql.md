@@ -1,7 +1,7 @@
 ---
 title: "Replace the hand-written schema_migrations stamp in the stats seed"
-status: in-progress
-updated: 2026-11-01
+status: done
+updated: 2026-11-02
 rfc: "0136-trailmap"
 cluster: null
 packages: []
