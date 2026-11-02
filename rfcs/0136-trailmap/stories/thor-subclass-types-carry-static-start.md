@@ -4,7 +4,7 @@ status: ready
 updated: 2026-11-02
 rfc: "0136-trailmap"
 cluster: null
-packages: [thor]
+packages: []
 deps: []
 deps-rfc: []
 est-loc: 10
