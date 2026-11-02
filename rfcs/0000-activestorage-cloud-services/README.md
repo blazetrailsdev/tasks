@@ -7,6 +7,7 @@ updated: 2026-11-02
 owner: "@deanmarano"
 packages:
   - activestorage
+  - trailties
 clusters:
   - as-cloud-infra
   - as-cloud-s3
@@ -183,15 +184,15 @@ official images can no longer be pulled (`minio/minio`, `quay.io/minio/minio`,
 pinned 2025 tags: access denied), and its repository is archived. The
 `cgr.dev/chainguard/minio` rebuild does run.
 
-| Check                        | SeaweedFS | chainguard MinIO | RustFS | versitygw | s3mock |
-| ---------------------------- | --------- | ---------------- | ------ | --------- | ------ |
-| Bad MD5 is `BadDigest`       | yes       | yes              | yes    | yes       | no     |
-| Range, 404, multipart 8 MB   | yes       | yes              | yes    | yes       | yes    |
-| Presigned GET, response hdrs | yes       | yes              | yes    | yes       | yes    |
-| Presigned PUT                | yes       | yes              | yes    | yes       | yes    |
-| Oversize signed PUT is 403   | yes       | yes              | yes    | yes       | no     |
-| `public-read` then anon GET  | 200       | 403              | 403    | 403       | 200    |
-| SSE `AES256`, as started     | 500       | needs KMS        | key    | no        | yes    |
+| Check                        | SeaweedFS | chainguard MinIO | RustFS    | versitygw | s3mock |
+| ---------------------------- | --------- | ---------------- | --------- | --------- | ------ |
+| Bad MD5 is `BadDigest`       | yes       | yes              | yes       | yes       | no     |
+| Range, 404, multipart 8 MB   | yes       | yes              | yes       | yes       | yes    |
+| Presigned GET, response hdrs | yes       | yes              | yes       | yes       | yes    |
+| Presigned PUT                | yes       | yes              | yes       | yes       | yes    |
+| Oversize signed PUT is 403   | yes       | yes              | yes       | yes       | no     |
+| `public-read` then anon GET  | 200       | 403              | 403       | 403       | 200    |
+| SSE `AES256`, as started     | 500       | needs KMS        | needs key | no        | yes    |
 
 LocalStack exited with code 55 and asked for credentials, which decision 3
 excludes.
@@ -283,7 +284,7 @@ stories. S3 and GCS run in parallel.
 ## Verification
 
 - `scripts/parity/unported-files/activestorage.ts` holds no S3 or GCS row, and
-  its only cloud rows are the three Azure ones.
+  its only cloud rows are the two Azure ones.
 - `parity:api` reports `s3_service.rb` and `gcs_service.rb` at 100%.
 - `parity:test` matches every test in the four service test files, each gap a
   `PERMANENT-SKIP` or a ruling recorded here; only the two IAM tests are skipped
@@ -316,3 +317,5 @@ stories. S3 and GCS run in parallel.
 ## Changelog
 
 - 2026-11-02: initial RFC
+- 2026-11-02: self-review: register row count, 0209 cross-reference, test-row
+  retirement, trailties in scope

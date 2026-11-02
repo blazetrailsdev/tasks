@@ -32,5 +32,6 @@ blocked-by: null
 - [ ] `stream` looks the file up first (`skip_lookup: false`) and keeps the 5 MB loop
 - [ ] `update_metadata` and `compose` set Rails' three fields, with disposition
       only when `disposition` and `filename` are both given
-- [ ] `service/gcs_service.rb`'s unported row retires
+- [ ] The `pattern` half of the `service/gcs_service.rb` row retires; the test half goes
+      with `activestorage-gcs-service-test`
 - [ ] The shared service tests pass on fake-gcs

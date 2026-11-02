@@ -32,6 +32,7 @@ multiple parts`, `uploading a small object with multipart_threshold configured`.
 
 ## Acceptance criteria
 
+- [ ] The `s3_service_test.rb` row leaves `unported-files/activestorage.ts`
 - [ ] All twelve pass on the emulator, under the Rails names
 - [ ] `signed URL generation` uses the offline config for the `amazonaws.com` match
 - [ ] Rails' `use_ssl: true` follows the emulator's scheme

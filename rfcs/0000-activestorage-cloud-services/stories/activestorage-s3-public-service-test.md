@@ -23,6 +23,7 @@ SeaweedFS answered 200 to an anonymous GET after `public-read`.
 
 ## Acceptance criteria
 
+- [ ] The `s3_public_service_test.rb` row leaves `unported-files/activestorage.ts`
 - [ ] All four pass, each with its anonymous GET
 - [ ] The `amazonaws.com` match and the GET use separate services, and the split is
       commented at the test

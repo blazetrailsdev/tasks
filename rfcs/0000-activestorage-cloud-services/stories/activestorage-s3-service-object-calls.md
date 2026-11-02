@@ -33,6 +33,7 @@ See the RFC, § "Gem-backed port rules and SDK differences".
 - [ ] `stream` keeps Rails' 5 MB ranged loop, not the SDK's body stream
 - [ ] The `io.size` arm in `upload` is present; its multipart side lands with
       `activestorage-s3-service-multipart-and-compose`
-- [ ] `service/s3_service.rb`'s unported row retires, with its baseline JSON row
+- [ ] The `pattern` half of the `service/s3_service.rb` row retires, with its baseline
+      JSON row; the test half goes with `activestorage-s3-service-test`
 - [ ] The shared service tests pass on SeaweedFS, `compose` and `deleting by prefix`
       excepted

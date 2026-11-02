@@ -189,8 +189,9 @@ precedent for an engine test database.
 ## Non-goals
 
 - **S3, GCS and Azure services** (`service/{s3,gcs,azure_storage}_service.rb`
-  and their 39 tests): repo-owner scope ruling, 2026-10-28. They plug in as
-  registry entries later; no stories are filed.
+  and their 39 tests): repo-owner scope ruling, 2026-10-28. They are ported by the
+  `activestorage-cloud-services` RFC, which also replaces this RFC's service
+  registry with a `constGet` lookup, after RFC 0213's reversal.
 - **Mirror setups whose mirrors are cloud services**: same ruling. A
   Disk-to-Disk `MirrorService` is open question 3.
 - **The browser JavaScript** (`app/javascript/activestorage`, the built

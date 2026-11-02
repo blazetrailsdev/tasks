@@ -33,5 +33,5 @@ PR converts whichever have landed.
 - [ ] `Blob#url`, `Blob#serviceUrlForDirectUpload`, `Variant#url` and
       `VariantWithRecord#url` are async, and every caller awaits
 - [ ] A CLAUDE.md section records the ruling, and the RFC's decisions cite it
-- [ ] No floating promise: `@typescript-eslint/no-floating-promises`-style review
-      of every call site, and every Disk test still passes
+- [ ] A grep of every `.url(` and `urlForDirectUpload(` caller shows each awaited,
+      and the Disk and Mirror tests pass

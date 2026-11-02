@@ -31,6 +31,7 @@ signing`. fake-gcs refuses a v2 signed PUT with `400 invalid uploadType`.
 
 ## Acceptance criteria
 
+- [ ] The `gcs_service_test.rb` row leaves `unported-files/activestorage.ts`
 - [ ] Open question 1 is settled and recorded; any parked PUT has a `PERMANENT-SKIP`
       naming fake-gcs, and the URL is still asserted
 - [ ] `direct upload with cache control` runs in full, as it signs v4

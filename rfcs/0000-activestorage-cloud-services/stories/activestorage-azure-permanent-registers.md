@@ -28,7 +28,8 @@ Decision 1. `scripts/parity/unported-files/activestorage.ts` shares one
 
 ## Acceptance criteria
 
-- [ ] The two Azure file rows and the public test row carry an `AZURE_SERVICE`
+- [ ] The two Azure rows (`azure_storage_service.rb` with its test, and the public
+      test) carry an `AZURE_SERVICE`
       reason starting `PERMANENT:`, citing `azure_storage_service.rb:21` and this RFC
 - [ ] The `azure service is deprecated` skip cites this RFC's decision, not 0209's
       non-goal
