@@ -1,6 +1,6 @@
 ---
 title: "runner-code-arm-eval-needs-owner-ruling"
-status: ready
+status: closed
 updated: 2026-11-02
 rfc: "0212-trailties-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "PERMANENT: repo owner ruled on trails#9630 that runner may eval its CLI argument; the no-eval rule concerns production, recorded in packages/trailties/CLAUDE.md."
 ---
 
 ## Context

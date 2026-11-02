@@ -1,6 +1,6 @@
 ---
 title: "autoloaded-subclasses-reload-test"
-status: draft
+status: ready
 updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null

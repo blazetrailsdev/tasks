@@ -1,6 +1,6 @@
 ---
 title: "Port the small generator test files onto TestCase"
-status: in-progress
+status: done
 updated: 2026-11-02
 rfc: "0212-trailties-port"
 cluster: null

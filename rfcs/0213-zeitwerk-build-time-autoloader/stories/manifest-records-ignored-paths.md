@@ -1,6 +1,6 @@
 ---
 title: "Manifest records ignored paths so load_file raises is ignored"
-status: draft
+status: ready
 updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null

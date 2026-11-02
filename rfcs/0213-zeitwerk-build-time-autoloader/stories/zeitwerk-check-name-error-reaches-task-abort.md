@@ -12,7 +12,7 @@ priority: null
 pr: trails#9636
 claim: "2026-11-02T18:21:42Z"
 assignee: "zeitwerk-check-name-error-reaches-task-abort"
-blocked-by: "owner ruling: may boot eagerLoad deferral (defer_boot_eager_load) be a PERMANENT receipt, or must it converge?"
+blocked-by: "Live: owner ruling needed. Main already has defer_boot_eager_load (tasks/zeitwerk.ts, finisher.ts:113, trails#9614), receipted CONVERGEABLE against this story. Rule whether it may be PERMANENT or must converge. trails#9636 released this story; the story's pr field is stale."
 closed-reason: null
 ---
 
