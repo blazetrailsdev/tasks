@@ -1,6 +1,6 @@
 ---
 title: "Run Representable's and VariantRecord's attachment macros as Rails does"
-status: ready
+status: in-progress
 updated: 2026-11-02
 rfc: "0209-activestorage-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9636
+claim: "2026-11-02T18:21:42Z"
+assignee: "zeitwerk-check-name-error-reaches-task-abort"
 blocked-by: null
 closed-reason: null
 ---

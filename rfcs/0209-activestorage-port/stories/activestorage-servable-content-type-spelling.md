@@ -1,6 +1,6 @@
 ---
 title: "Remove Blob#contentType, read by Servable"
-status: claimed
+status: blocked
 updated: 2026-11-02
 rfc: "0209-activestorage-port"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: "2026-11-02T17:56:45Z"
-assignee: "rake-command-printing-commands-and-invoke-rake"
-blocked-by: null
+claim: null
+assignee: null
+blocked-by: "owner ruling on the spelling: renaming the variant readers to content_type loses parity:api credit on Variant, VariantWithRecord and Preview (contentType), and Blob has no contentType once its getter goes; removing the getter alone is green on parity:api:calls"
 closed-reason: null
 ---
 

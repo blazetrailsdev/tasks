@@ -1,6 +1,6 @@
 ---
 title: "AppGenerator renders config/routes.ts from a template"
-status: claimed
+status: in-progress
 updated: 2026-11-02
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#9635
 claim: "2026-11-02T17:56:45Z"
 assignee: "rake-command-printing-commands-and-invoke-rake"
 blocked-by: null

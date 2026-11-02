@@ -1,6 +1,6 @@
 ---
 title: "Credit the Object.hasOwn fetch form on a member receiver, drop Variation#format's receipt"
-status: ready
+status: in-progress
 updated: 2026-11-02
 rfc: "0209-activestorage-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9636
+claim: "2026-11-02T18:21:42Z"
+assignee: "zeitwerk-check-name-error-reaches-task-abort"
 blocked-by: null
 closed-reason: null
 ---

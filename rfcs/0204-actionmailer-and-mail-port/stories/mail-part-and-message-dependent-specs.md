@@ -1,6 +1,6 @@
 ---
 title: "mail-part-and-message-dependent-specs"
-status: ready
+status: closed
 updated: 2026-11-02
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -15,7 +15,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: its work landed in trails#9626 or moved to the peeled stories mail-message-spec-port and mail-parts-list-delegate-class"
 ---
 
 ## Context

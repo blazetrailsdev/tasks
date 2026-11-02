@@ -1,6 +1,6 @@
 ---
 title: "pnpm smoke fails locally on the supply-chain policy check for vendored packages"
-status: in-progress
+status: done
 updated: 2026-11-02
 rfc: "0136-trailmap"
 cluster: null

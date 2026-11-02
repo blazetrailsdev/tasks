@@ -1,6 +1,6 @@
 ---
 title: "Port the small generator test files onto TestCase"
-status: ready
+status: claimed
 updated: 2026-11-02
 rfc: "0212-trailties-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 600
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-02T18:46:45Z"
+assignee: "zeitwerk-multiple-loaders-tests"
 blocked-by: null
 closed-reason: null
 ---
