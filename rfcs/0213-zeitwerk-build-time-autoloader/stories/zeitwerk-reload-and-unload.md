@@ -1,7 +1,7 @@
 ---
 title: "Port Zeitwerk unload and reload"
-status: ready
-updated: 2026-10-30
+status: in-progress
+updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-gem
 packages: ["zeitwerk"]
@@ -9,9 +9,9 @@ deps: ["zeitwerk-reload-generation-spike"]
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9605
+claim: "2026-11-02T01:26:57Z"
+assignee: "zeitwerk-reload-and-unload"
 blocked-by: null
 closed-reason: null
 ---

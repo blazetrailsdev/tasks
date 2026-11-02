@@ -1,7 +1,7 @@
 ---
 title: "Port AudioAnalyzer and VideoAnalyzer, shelling out to ffprobe"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-11-02
 rfc: "0209-activestorage-port"
 cluster: as-analysis
 packages: ["activestorage"]
@@ -9,9 +9,9 @@ deps: ["activestorage-image-analyzers", "ruby-compat-io-popen", "activestorage-c
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9604
+claim: "2026-11-02T01:06:38Z"
+assignee: "activestorage-audio-video-analyzers"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Port Variation, Variant, VariantRecord, VariantWithRecord, Blob::Representable and TransformJob"
-status: ready
-updated: 2026-10-29
+status: claimed
+updated: 2026-11-02
 rfc: "0209-activestorage-port"
 cluster: as-variants
 packages: ["activestorage"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 650
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-02T01:46:39Z"
+assignee: "activestorage-variation-and-variants"
 blocked-by: null
 closed-reason: null
 ---
