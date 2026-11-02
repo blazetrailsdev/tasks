@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat-last-status-per-async-context"
-status: draft
+status: ready
 updated: 2026-11-02
 rfc: "0209-activestorage-port"
 cluster: null

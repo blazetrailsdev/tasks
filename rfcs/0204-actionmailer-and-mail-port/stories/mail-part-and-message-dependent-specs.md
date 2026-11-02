@@ -1,6 +1,6 @@
 ---
 title: "mail-part-and-message-dependent-specs"
-status: draft
+status: ready
 updated: 2026-11-02
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Remove generateMethodMissing's prototypeLayer option"
-status: draft
-updated: 2026-11-01
+status: ready
+updated: 2026-11-02
 rfc: "0209-activestorage-port"
 cluster: null
 packages: []

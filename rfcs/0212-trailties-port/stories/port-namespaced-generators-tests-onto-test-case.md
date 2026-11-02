@@ -1,6 +1,6 @@
 ---
 title: "Port namespaced_generators_test.rb onto TestCase"
-status: draft
+status: ready
 updated: 2026-11-02
 rfc: "0212-trailties-port"
 cluster: null

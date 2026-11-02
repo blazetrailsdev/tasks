@@ -1,6 +1,6 @@
 ---
 title: "Rewrite the Dependencies skip group reason after the port"
-status: in-progress
+status: done
 updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null

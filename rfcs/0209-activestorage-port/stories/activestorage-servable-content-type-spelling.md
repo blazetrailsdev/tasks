@@ -1,6 +1,6 @@
 ---
 title: "Remove Blob#contentType, read by Servable"
-status: draft
+status: claimed
 updated: 2026-11-02
 rfc: "0209-activestorage-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-02T17:56:45Z"
+assignee: "rake-command-printing-commands-and-invoke-rake"
 blocked-by: null
 closed-reason: null
 ---

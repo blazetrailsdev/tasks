@@ -1,7 +1,7 @@
 ---
 title: "create-async-block-settles-before-after-initialize"
-status: draft
-updated: 2026-11-01
+status: ready
+updated: 2026-11-02
 rfc: "0209-activestorage-port"
 cluster: null
 packages: []

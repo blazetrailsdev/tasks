@@ -1,6 +1,6 @@
 ---
 title: "Stop the stats sync's changes column raising DangerousAttributeError"
-status: ready
+status: done
 updated: 2026-11-02
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#108
+claim: "2026-11-02T17:36:26Z"
+assignee: "bin-jobs-forwards-its-arguments"
 blocked-by: null
 closed-reason: null
 ---

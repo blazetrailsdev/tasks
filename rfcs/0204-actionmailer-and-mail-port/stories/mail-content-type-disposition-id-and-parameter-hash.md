@@ -1,7 +1,7 @@
 ---
 title: "mail-content-type-disposition-id-and-parameter-hash"
-status: draft
-updated: 2026-11-01
+status: ready
+updated: 2026-11-02
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
 packages: []

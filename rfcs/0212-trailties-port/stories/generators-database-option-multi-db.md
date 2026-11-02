@@ -1,6 +1,6 @@
 ---
 title: "Add the --database option to the model and migration generators"
-status: draft
+status: ready
 updated: 2026-11-02
 rfc: "0212-trailties-port"
 cluster: null

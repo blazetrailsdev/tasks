@@ -1,6 +1,6 @@
 ---
 title: "runner-code-arm-eval-needs-owner-ruling"
-status: draft
+status: ready
 updated: 2026-11-02
 rfc: "0212-trailties-port"
 cluster: null

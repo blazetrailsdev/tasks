@@ -1,6 +1,6 @@
 ---
 title: "Port the scaffold tests that run inside a generated engine"
-status: draft
+status: ready
 updated: 2026-11-02
 rfc: "0212-trailties-port"
 cluster: null

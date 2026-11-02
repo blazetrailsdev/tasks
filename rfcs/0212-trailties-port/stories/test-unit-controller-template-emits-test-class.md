@@ -1,6 +1,6 @@
 ---
 title: "test-unit-controller-template-emits-test-class"
-status: draft
+status: ready
 updated: 2026-11-02
 rfc: "0212-trailties-port"
 cluster: null

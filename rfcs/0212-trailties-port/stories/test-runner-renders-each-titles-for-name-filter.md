@@ -1,7 +1,7 @@
 ---
 title: "Runner name filter matches rendered it.each and non-literal describe titles"
-status: draft
-updated: 2026-11-01
+status: ready
+updated: 2026-11-02
 rfc: "0212-trailties-port"
 cluster: null
 packages: []

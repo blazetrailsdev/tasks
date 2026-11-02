@@ -1,6 +1,6 @@
 ---
 title: "executor-wrap-concurrent-flows-on-one-thread"
-status: draft
+status: ready
 updated: 2026-11-02
 rfc: "0212-trailties-port"
 cluster: null

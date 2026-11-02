@@ -1,6 +1,6 @@
 ---
 title: "rails-namespace-converges-on-trails"
-status: ready
+status: closed
 updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: the Rails object is deleted in trails#9625; reload coverage remains untested"
 ---
 
 ## Context

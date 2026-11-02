@@ -1,6 +1,6 @@
 ---
 title: "port-remaining-rails-tasks-rake-files"
-status: ready
+status: in-progress
 updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9634
+claim: "2026-11-02T17:31:38Z"
+assignee: "port-remaining-rails-tasks-rake-files"
 blocked-by: null
 closed-reason: null
 ---
