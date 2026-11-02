@@ -1,6 +1,6 @@
 ---
 title: "Feed TestUnitReporter from Vitest and print bin/trails rerun snippets"
-status: claimed
+status: in-progress
 updated: 2026-11-02
 rfc: "0212-trailties-port"
 cluster: tt-surface
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#9615
 claim: "2026-11-02T04:46:39Z"
 assignee: "source-annotation-extractor-reads-ts-comments"
 blocked-by: null
