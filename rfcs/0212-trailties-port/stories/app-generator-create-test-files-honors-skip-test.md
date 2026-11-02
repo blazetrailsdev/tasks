@@ -1,6 +1,6 @@
 ---
 title: "app-generator-create-test-files-honors-skip-test"
-status: ready
+status: done
 updated: 2026-11-01
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9594
+claim: "2026-11-01T23:06:53Z"
+assignee: "app-generator-create-test-files-honors-skip-test"
 blocked-by: null
 closed-reason: null
 ---

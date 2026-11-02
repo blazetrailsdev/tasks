@@ -1,6 +1,6 @@
 ---
 title: "solid_queue:install writes a bin/jobs that loads jobs after the boot"
-status: in-progress
+status: done
 updated: 2026-11-01
 rfc: "0196-solid-stack"
 cluster: null

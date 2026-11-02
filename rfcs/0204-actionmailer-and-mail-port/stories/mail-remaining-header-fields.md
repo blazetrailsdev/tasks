@@ -1,6 +1,6 @@
 ---
 title: "Port mail's remaining header fields"
-status: in-progress
+status: done
 updated: 2026-11-01
 rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-core
