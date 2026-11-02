@@ -656,6 +656,9 @@ Total: about 9,900, of which 2,200 is the mechanical rename.
    fallback was not needed. One limit: Node does not map a `./x.js` specifier to
    `x.ts`, so an application file running unbuilt under plain Node must name
    `./x.ts`, or the hook must map it; `zeitwerk-reload-and-unload` decides which.
+   The hook reads the generation from the parent URL, so a `once` or framework
+   importer of a managed file always binds its first generation. Zeitwerk allows
+   this only because `once` code must not reference reloadable code.
 3. **Framework residue.** How many table rows the path cannot derive. If it
    is more than a small override list, those rows keep a `rails-api.json` source.
    Settled by `framework-constant-table-generator`.
