@@ -1,6 +1,6 @@
 ---
 title: "Port Mail::Header, Field, FieldList and IndifferentHash"
-status: in-progress
+status: done
 updated: 2026-11-02
 rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-core

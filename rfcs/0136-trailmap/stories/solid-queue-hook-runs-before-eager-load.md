@@ -1,7 +1,7 @@
 ---
 title: "bin/jobs crashes: eager load runs before Solid Queue's active_job hook"
-status: in-progress
-updated: 2026-11-01
+status: done
+updated: 2026-11-02
 rfc: "0136-trailmap"
 cluster: null
 packages: []
