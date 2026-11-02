@@ -87,6 +87,10 @@ The enrollment story also does the rest of the enumerating-guard checklist
 
 ### Disk only; where cloud services plug in
 
+Superseded in part by the `activestorage-cloud-services` RFC: `resolve` becomes a
+`constGet` lookup, and `url` and `url_for_direct_upload` are async (owner,
+2026-11-02).
+
 `Service::Configurator#resolve` (`lib/active_storage/service/configurator.rb:29-34`)
 `require`s `active_storage/service/#{class_name.underscore}_service` and
 `const_get`s `"#{class_name}Service"`. Per the standing ruling on
@@ -189,8 +193,9 @@ precedent for an engine test database.
 ## Non-goals
 
 - **S3, GCS and Azure services** (`service/{s3,gcs,azure_storage}_service.rb`
-  and their 39 tests): repo-owner scope ruling, 2026-10-28. They plug in as
-  registry entries later; no stories are filed.
+  and their 39 tests): repo-owner scope ruling, 2026-10-28. They are ported by the
+  `activestorage-cloud-services` RFC, which also replaces this RFC's service
+  registry with a `constGet` lookup, after RFC 0213's reversal.
 - **Mirror setups whose mirrors are cloud services**: same ruling. A
   Disk-to-Disk `MirrorService` is open question 3.
 - **The browser JavaScript** (`app/javascript/activestorage`, the built
@@ -305,3 +310,5 @@ carry `deps` edges into RFC 0202 and RFC 0203 stories.
   `avatar=` writer (owner ruling); former open question 4 moved to Decisions
 - 2026-10-28: the attachment writer is an async `setAvatar` with no `=`
   setter, replacing the deferred-unfurl ruling (owner)
+- 2026-11-02: the `activestorage-cloud-services` RFC supersedes the service
+  registry and makes service URLs async

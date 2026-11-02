@@ -37,3 +37,9 @@ scope).
 - The two actionview direct-upload tests blocked by
   `actionview-tests-needing-actionpack-controller-and-parameters` can use these
   routes; unblocking them is that story's, not this one's.
+
+## Notes
+
+Write `await` on every `blob.url`, `serviceUrlForDirectUpload` and `variant.url`
+call even while they are sync. The `activestorage-cloud-services` RFC makes them
+async, and this way either landing order is correct.

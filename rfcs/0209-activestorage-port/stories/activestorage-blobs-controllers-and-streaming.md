@@ -36,3 +36,9 @@ with `send_stream` (`:56-70`); trails has `ActionController::Live`
 - Single and multipart `Range` requests answer Rails' status, headers and
   body.
 - Both test files pass.
+
+## Notes
+
+Write `await` on every `blob.url`, `serviceUrlForDirectUpload` and `variant.url`
+call even while they are sync. The `activestorage-cloud-services` RFC makes them
+async, and this way either landing order is correct.

@@ -29,3 +29,9 @@ closed-reason: null
 - The three controllers are ported; `set_representation` awaits
   `processed`, and an unrepresentable blob answers Rails' 404.
 - Both test files pass.
+
+## Notes
+
+Write `await` on every `blob.url`, `serviceUrlForDirectUpload` and `variant.url`
+call even while they are sync. The `activestorage-cloud-services` RFC makes them
+async, and this way either landing order is correct.
