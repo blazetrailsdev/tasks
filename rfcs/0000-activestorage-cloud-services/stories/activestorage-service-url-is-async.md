@@ -26,7 +26,6 @@ PR converts whichever have landed.
 
 ## Acceptance criteria
 
-- [ ] The owner has ruled on open question 2; stop and ask before any code
 - [ ] `Service#url`, `#urlForDirectUpload` and the Disk and Mirror overrides are
       async, and `privateUrl` / `publicUrl` may be
 - [ ] `headersForDirectUpload` stays sync

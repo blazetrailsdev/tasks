@@ -88,8 +88,8 @@ The enrollment story also does the rest of the enumerating-guard checklist
 ### Disk only; where cloud services plug in
 
 Superseded in part by the `activestorage-cloud-services` RFC: `resolve` becomes a
-`constGet` lookup, and that RFC proposes an async `url` and
-`url_for_direct_upload`.
+`constGet` lookup, and `url` and `url_for_direct_upload` are async (owner,
+2026-11-02).
 
 `Service::Configurator#resolve` (`lib/active_storage/service/configurator.rb:29-34`)
 `require`s `active_storage/service/#{class_name.underscore}_service` and
@@ -311,4 +311,4 @@ carry `deps` edges into RFC 0202 and RFC 0203 stories.
 - 2026-10-28: the attachment writer is an async `setAvatar` with no `=`
   setter, replacing the deferred-unfurl ruling (owner)
 - 2026-11-02: the `activestorage-cloud-services` RFC supersedes the service
-  registry and proposes async service URLs
+  registry and makes service URLs async

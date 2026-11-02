@@ -51,6 +51,9 @@ Owner decisions of 2026-11-02, binding:
 3. **CI runs against emulators**, with no cloud credentials.
 4. **A separate RFC, startable now.** Deps on 0209 appear only where a cloud
    story truly needs an open 0209 story.
+5. **`url` and `url_for_direct_upload` are async on every service**, Disk
+   included, as § "The async boundary" sets out. `headers_for_direct_upload`
+   stays sync.
 
 ## Design
 
@@ -279,10 +282,9 @@ emulators need arguments, so CI starts them with `docker run` steps.
    `activestorage-gcs-service-test`, `activestorage-gcs-public-service-test`,
    `activestorage-gcs-controller-tests`
 
-Phases 2 and 3 wait on the owner's ruling on open question 2: both
-`*-service-object-calls` stories depend on `activestorage-service-url-is-async`.
-Until then only the other phase 1 stories can start. After it, S3 and GCS run in
-parallel. Open 0209 stories are deps of the engine story and the two
+Both `*-service-object-calls` stories depend on
+`activestorage-service-url-is-async`, which is startable now. After it, S3 and
+GCS run in parallel. Open 0209 stories are deps of the engine story and the two
 controller-test stories only; the 0209 stories the service tests use (test
 helper, `User`, attached writers) are done.
 
@@ -308,10 +310,7 @@ helper, `User`, attached writers) are done.
    the URL offline and upload through the existing v4 path, with a
    `PERMANENT-SKIP` only if neither works. Deferred to
    `activestorage-gcs-service-test`.
-2. **Async `url`.** It reverses a line of 0209's design and needs a CLAUDE.md
-   section. Recommendation as in the Design. Deferred to
-   `activestorage-service-url-is-async`, which stops for the owner's ruling
-   before changing code.
+2. **Async `url`.** Resolved: decision 5.
 3. **Third-party services.** Rails finds any
    `active_storage/service/foo_service` on the load path, as the `azure-blob` gem
    does. Recommendation: `load` skips a class already seated at
@@ -324,6 +323,7 @@ helper, `User`, attached writers) are done.
 ## Changelog
 
 - 2026-11-02: initial RFC
+- 2026-11-02: owner ruled `url` async (decision 5)
 - 2026-11-02: review: rollout gating, 0209 pointers, SSE and skip accounting,
   IAM spike split out
 - 2026-11-02: self-review: register row count, 0209 cross-reference, test-row
