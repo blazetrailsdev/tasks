@@ -1,7 +1,7 @@
 ---
 title: "trailties-move-tests-converging-assertions"
-status: ready
-updated: 2026-11-01
+status: in-progress
+updated: 2026-11-02
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9624
+claim: "2026-11-02T14:46:38Z"
+assignee: "trailties-move-tests-converging-assertions"
 blocked-by: null
 closed-reason: null
 ---

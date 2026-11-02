@@ -1,6 +1,6 @@
 ---
 title: "Rewrite the Dependencies skip group reason after the port"
-status: ready
+status: in-progress
 updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9622
+claim: "2026-11-02T14:07:05Z"
+assignee: "dependencies-skip-group-reason-follows-the-port"
 blocked-by: null
 closed-reason: null
 ---
