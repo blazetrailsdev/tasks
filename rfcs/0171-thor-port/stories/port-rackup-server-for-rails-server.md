@@ -22,5 +22,8 @@ closed-reason: null
 
 ## Acceptance criteria
 
-- [ ] `Server` extends a port of `Rackup::Server`, with its handler lookup behind `server`.
-- [ ] `defaultOptions` is `super.merge`, and the receipt on `server()` naming this story is gone.
+Re-scoped by the repo owner on 2026-11-03: this story vendors rackup and ports it; wiring `Rails::Server` onto it is `rails-server-extends-rackup-server`.
+
+- [ ] `vendor/sources.ts` vendors rackup v2.2.1 (`vendor/rails/v8.0.2/Gemfile.lock:445`).
+- [ ] `@blazetrails/rackup` ports `Rackup::Handler` (`lib/rackup/handler.rb`) and `Rackup::Server` with its `Options` (`lib/rackup/server.rb`), with `Server#server` behind `Handler.get` / `Handler.default`.
+- [ ] The receipt on trailties' `Server#server()` names `rails-server-extends-rackup-server`.
