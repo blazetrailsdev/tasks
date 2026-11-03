@@ -5,7 +5,8 @@ updated: 2026-11-03
 rfc: "0136-trailmap"
 cluster: null
 packages: ["trailties"]
-deps: []
+deps:
+  - zeitwerk-seats-a-second-module-instance-under-vitest
 deps-rfc: []
 est-loc: 300
 priority: null
