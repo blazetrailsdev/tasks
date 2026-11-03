@@ -1,5 +1,5 @@
 ---
-title: "destroy-association-async-job-reads-models-from-register-model"
+title: "DestroyAssociationAsyncJob#perform resolves both models with constantize"
 status: ready
 updated: 2026-10-29
 rfc: "0116-activejob-dependent-activerecord-work"
@@ -8,7 +8,7 @@ packages: []
 deps:
   - register-x-registries-gain-a-read-side
 deps-rfc: []
-est-loc: null
+est-loc: 30
 priority: null
 pr: null
 claim: null
@@ -19,19 +19,12 @@ closed-reason: null
 
 ## Context
 
-`ActiveRecord::DestroyAssociationAsyncJob#perform` (`vendor/rails/v8.0.2/activerecord/lib/active_record/destroy_association_async_job.rb:20-21`) resolves both class names with `association_class.constantize` and `owner_model_name.constantize`. trails (`packages/activerecord/src/destroy-association-async-job.ts`, trails#9432) cannot add `constantize` (root CLAUDE.md § "Constant lookup is an import or a registry"). It calls `computeType(Base, name.replace(/^(::)?/, "::"))`, where the leading `::` makes `computeType` (`inheritance.ts`) skip its candidate search and do a top-level lookup. The regex and the `computeType` call are an invented stand-in.
+`ActiveRecord::DestroyAssociationAsyncJob#perform` (`vendor/rails/v8.0.2/activerecord/lib/active_record/destroy_association_async_job.rb:20-21`) resolves both class names with `association_class.constantize` and `owner_model_name.constantize`. trails (`packages/activerecord/src/destroy-association-async-job.ts:36-37`) calls `computeType(Base, name.replace(/^(::)?/, "::"))` instead, receipted `@inventedArm replace` / `@inventedArm computeType — CONVERGEABLE` against this story (`:18-19`).
 
-## Converged shape
-
-Once `registerModel` (`packages/activerecord/src/associations.ts`) gains a name → class read over its own map, as CLAUDE.md says a reader like `compute_type` converts, `perform` reads both models from it. The regex goes away:
-
-```ts
-const associationModel = <registry read>(associationClass);
-const ownerClass = <registry read>(ownerModelName);
-```
+This story first targeted a `registerModel` name → class read. That premise is gone: RFC 0213 retired `registerModel` (trails#9656) and reversed the constant-lookup ruling (root CLAUDE.md § "Constant lookup is an import or a registry", 2026-10-30), and `constantize` is ported (`packages/activesupport/src/inflector.ts:183`). The slug is kept so the receipts still resolve.
 
 ## Acceptance criteria
 
-- `perform` resolves both names through the `registerModel` registry read, with no `computeType` call and no regex.
-- The `@inventedArm replace` receipt on `perform` is removed.
-- `destroy-association-async-job*.test.ts` stay green.
+- [ ] `perform` resolves both names with `constantize(associationClass)` / `constantize(ownerModelName)`, with no `computeType` call and no regex.
+- [ ] Both `@inventedArm` receipts on `perform` are removed.
+- [ ] `destroy-association-async-job*.test.ts` stay green.

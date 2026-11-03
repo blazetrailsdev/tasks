@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 40
 priority: null
 pr: null
 claim: null
@@ -18,9 +18,9 @@ closed-reason: null
 
 ## Context
 
-`packages/trailties/src/class-paths.generated.ts` has no `Rails::Command::*` row and `pnpm parity:class-paths` adds none, so `CorrectableNameError#detailed_message` ends `(CorrectableNameError)` where Rails prints `(Rails::Command::CorrectableNameError)` (`vendor/rails/v8.0.2/railties/lib/rails/command.rb:17`).
+`CorrectableNameError#detailed_message` should end `(Rails::Command::CorrectableNameError)` (`vendor/rails/v8.0.2/railties/lib/rails/command.rb:17`), spelled `Trails::Command::…` in trails. The old `class-paths.generated.ts` is gone; trailties' class paths now come from `packages/trailties/src/constants*.generated.ts` (RFC 0213), and none of them names a `Trails::Command::*` class (`grep -n Command packages/trailties/src/constants.generated.ts` is empty). So the test at `packages/trailties/src/commands/server.test.ts:208` only matches `\(.*CorrectableNameError\)`.
 
 ## Acceptance criteria
 
-- [ ] The generated table holds the `Rails::Command::*` classes.
-- [ ] `test_using_server_mistype` in `packages/trailties/src/commands/server.test.ts` asserts the full Ruby path.
+- [ ] The generated constant tables name `Trails::Command::CorrectableNameError`, `UnrecognizedCommandError` and the other `command.rb` classes.
+- [ ] `server.test.ts`'s mistype test asserts the full `(Trails::Command::CorrectableNameError)` path.

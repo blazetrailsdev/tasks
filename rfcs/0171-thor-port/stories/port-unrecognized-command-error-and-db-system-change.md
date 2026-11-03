@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null
@@ -18,9 +18,9 @@ closed-reason: null
 
 ## Context
 
-`Rails::Command::UnrecognizedCommandError` (`vendor/rails/v8.0.2/railties/lib/rails/command.rb:36-38`) is the only Rails caller of `printing_commands` (`command.rb:114-118`). `printingCommands` is ported in `packages/trailties/src/command.ts` and has no shipped caller. `Rails::Command::Db::System::ChangeCommand` (`rails/commands/db/system/change/change_command.rb`) is also unported; `command/base.test.ts` stands in a local class for it.
+`UnrecognizedCommandError` is ported (`packages/trailties/src/command.ts:47`) and raised from `commands/rake.ts:34,48`. What remains is `Rails::Command::Db::System::ChangeCommand` (`vendor/rails/v8.0.2/railties/lib/rails/commands/db/system/change/change_command.rb`), which is unported: `packages/trailties/src/command/base.test.ts:26-34` defines a local `ChangeCommand` class to stand in for it.
 
 ## Acceptance criteria
 
-- `UnrecognizedCommandError` is ported and raised where `command.rb` raises it, with its did-you-mean text over `printingCommands`.
-- `ChangeCommand` is ported and the local class in `base.test.ts` is replaced by it.
+- [ ] `Db::System::ChangeCommand` is ported onto `Trails::Command::Base` at the mirrored path, with its Rails test (`vendor/rails/v8.0.2/railties/test/commands/db_system_change_test.rb`).
+- [ ] The local class in `command/base.test.ts` is replaced by the real one.

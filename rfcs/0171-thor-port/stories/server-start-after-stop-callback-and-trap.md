@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 80
 priority: null
 pr: null
 claim: null
@@ -18,15 +18,12 @@ closed-reason: null
 
 ## Context
 
-`ServerCommand#perform` and `Rails::Server#start` (`packages/trailties/src/commands/server.ts`) omit three Rails calls.
+trails#9558 ported `Server#start(afterStopCallback)` (run on the listening server's `close`) and `perform`'s `after_stop_callback` lambda (`packages/trailties/src/commands/server.ts:78-98`, `:290-293`). Two Rails calls are still missing:
 
-- `trap(:INT) { exit }` and the `ensure after_stop_callback.call` in `Server#start` (`vendor/rails/v8.0.2/railties/lib/rails/commands/server/server_command.rb:32-41`). Rack's `super()` blocks in Ruby; `Handler.Node.run` resolves once bound, so an `ensure` would fire at boot, not at stop.
-- `after_stop_callback = -> { say "Exiting" unless options[:daemon] }` (`:144`).
-- `set_application_directory!` (`:133`, `rails/command/actions.rb`), which needs `Rails::Command.root` semantics for a built app.
-
-`--daemon`, `--pid` writing, `--restart` and `--early-hints` are parsed but have no serving effect, since `Rackup::Server` is unported.
+- `trap(:INT) { exit }` in `Server#start` (`vendor/rails/v8.0.2/railties/lib/rails/commands/server/server_command.rb:32-41`).
+- `set_application_directory!` in `ServerCommand#perform` (`:133`, `vendor/rails/v8.0.2/railties/lib/rails/command/actions.rb`). `perform` instead does `Dir.chdir(Trails.root()!)` after `requireApplicationBang`, and carries `@missingRailsCall application — CONVERGEABLE server-start-after-stop-callback-and-trap` (`server.ts:280`).
 
 ## Acceptance criteria
 
-- [ ] `Server#start` runs its after-stop callback when the listening server closes, and traps INT.
-- [ ] `perform` calls `setApplicationDirectoryBang`, and the receipts naming this story are gone.
+- [ ] `Server#start` traps INT and exits, as Rails does.
+- [ ] `perform` calls `setApplicationDirectoryBang` at Rails' position, the invented `Dir.chdir` goes, and the receipt naming this story is removed.

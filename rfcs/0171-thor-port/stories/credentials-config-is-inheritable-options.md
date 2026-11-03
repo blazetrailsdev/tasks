@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 60
 priority: null
 pr: null
 claim: null
@@ -18,10 +18,9 @@ closed-reason: null
 
 ## Context
 
-`CredentialsCommand#edit` calls `config.overridden?(:content_path)` (`vendor/rails/v8.0.2/railties/lib/rails/commands/credentials/credentials_command.rb:22-23`), and Rails' `config.credentials` is `InheritableOptions.new(credentials_defaults)` (`railties/lib/rails/application/configuration.rb:77`). trails' `config.credentials` is a plain object with null defaults (`packages/trailties/src/application/configuration.ts`), and `InheritableOptions` has no `isOverridden` (`activesupport/lib/active_support/ordered_options.rb:130`).
+`CredentialsCommand#edit` calls `config.overridden?(:content_path)` (`vendor/rails/v8.0.2/railties/lib/rails/commands/credentials/credentials_command.rb:22-23`), and Rails' `config.credentials` is `InheritableOptions.new(credentials_defaults)` (`vendor/rails/v8.0.2/railties/lib/rails/application/configuration.rb:77`). `InheritableOptions#isOverridden` is already ported (`packages/activesupport/src/ordered-options.ts:224`, trails#6608). What is left: trails' `config.credentials` is still a plain `{ contentPath, keyPath }` object with null defaults (`packages/trailties/src/application/configuration.ts:91`), so `packages/trailties/src/commands/credentials.ts:142,153` call `credentialsDefaults()` instead and carry `@inventedArm credentialsDefaults — CONVERGEABLE credentials-config-is-inheritable-options`.
 
 ## Acceptance criteria
 
-- [ ] `InheritableOptions#isOverridden` is ported.
 - [ ] `config.credentials` is an `InheritableOptions` over `credentialsDefaults`.
-- [ ] The `@missingRailsCall overridden?` receipt on `CredentialsCommand#edit` is removed.
+- [ ] `CredentialsCommand` reads `config.credentials.isOverridden("contentPath")` / `contentPath` as Rails does, and both `@inventedArm credentialsDefaults` receipts in `commands/credentials.ts` are removed.
