@@ -1,6 +1,6 @@
 ---
 title: "unregister-constant-converges-on-remove-const"
-status: draft
+status: ready
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null

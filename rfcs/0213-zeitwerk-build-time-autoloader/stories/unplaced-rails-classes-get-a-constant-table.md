@@ -1,6 +1,6 @@
 ---
 title: "unplaced-rails-classes-get-a-constant-table"
-status: blocked
+status: ready
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-03T14:42:08Z"
-assignee: "unplaced-rails-classes-get-a-constant-table"
-blocked-by: "waiting on trails#9665 (limits constant-residue excluded to placeable keys), unmerged"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

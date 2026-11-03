@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: "2026-11-03T16:04:44Z"
 assignee: "constant-residue-excluded-other-packages-receipts"
-blocked-by: "Premise: 80 of the excluded keys are real Ruby/Rails constants (Thor, GlobalID, msgpack/net-smtp/mini-magick errors, core-ext reopens, CookieOverflow, Scanner, FormBuilder, Cache::Store). The rails-api extractor leaves them unpaired (Class.new constants, core-class reopens, file mismatches), and a @noRailsEquivalent receipt on them is rejected as REDUNDANT (trails#9665, Canceled). Waiting on extract-ruby-api-records-class-new-constants and sibling pairing fixes."
+blocked-by: "Still live (re-checked 2026-11-03): trails#9665 and extract-ruby-api-records-class-new-constants (trails#9668) both merged, but origin/main constant-residue.json still holds ~95 non-AR excluded keys (activesupport 50, net-smtp 8, msgpack 6, ...) that remain unpaired, so receipts would still be REDUNDANT. Needs the remaining extractor pairing fixes (core-ext reopens, file mismatches), which have no story yet."
 closed-reason: null
 ---
 

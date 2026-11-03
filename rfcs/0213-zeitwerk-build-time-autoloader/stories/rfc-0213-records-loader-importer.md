@@ -1,6 +1,6 @@
 ---
 title: "RFC 0213 records Loader#importer and why the generated imports table is not used under vitest"
-status: draft
+status: claimed
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-03T22:48:22Z"
+assignee: "generated-app-vitest-suite-runs-against-packed-packages"
 blocked-by: null
 closed-reason: null
 ---

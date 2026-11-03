@@ -1,6 +1,6 @@
 ---
 title: "intermediate-namespaces-seated-drop-const-get-full-path-row"
-status: in-progress
+status: done
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null

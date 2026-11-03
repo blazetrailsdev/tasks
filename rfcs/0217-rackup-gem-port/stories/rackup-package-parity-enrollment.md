@@ -1,6 +1,6 @@
 ---
 title: "rackup: enroll @blazetrails/rackup in the parity gates"
-status: ready
+status: in-progress
 updated: 2026-11-03
 rfc: "0217-rackup-gem-port"
 cluster: fidelity
@@ -9,9 +9,9 @@ deps: ["port-rackup-server-for-rails-server"]
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9685
+claim: "2026-11-03T22:19:38Z"
+assignee: "rackup-package-parity-enrollment"
 blocked-by: null
 closed-reason: null
 ---

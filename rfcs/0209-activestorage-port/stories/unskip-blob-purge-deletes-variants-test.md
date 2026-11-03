@@ -1,6 +1,6 @@
 ---
 title: "unskip-blob-purge-deletes-variants-test"
-status: ready
+status: claimed
 updated: 2026-11-03
 rfc: "0209-activestorage-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-03T22:48:22Z"
+assignee: "generated-app-vitest-suite-runs-against-packed-packages"
 blocked-by: null
 closed-reason: null
 ---

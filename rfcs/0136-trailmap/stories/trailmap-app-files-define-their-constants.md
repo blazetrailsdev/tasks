@@ -1,6 +1,6 @@
 ---
 title: "trailmap: every autoloaded app/ file defines its constant"
-status: in-progress
+status: done
 updated: 2026-11-03
 rfc: "0136-trailmap"
 cluster: null

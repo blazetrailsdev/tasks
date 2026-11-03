@@ -1,6 +1,6 @@
 ---
 title: "Seat Representations controllers in the activestorage constant table"
-status: ready
+status: in-progress
 updated: 2026-11-03
 rfc: "0209-activestorage-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9684
+claim: "2026-11-03T22:28:13Z"
+assignee: "activestorage-engine-models-seated-by-app-loader"
 blocked-by: null
 closed-reason: null
 ---
