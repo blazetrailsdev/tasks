@@ -1,6 +1,6 @@
 ---
 title: "rails-controller-seats-reach-every-entry"
-status: in-progress
+status: done
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "generators-migration-is-an-included-module"
-status: draft
-updated: 2026-10-31
+status: claimed
+updated: 2026-11-03
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-03T14:27:04Z"
+assignee: "intermediate-namespaces-seated-drop-const-get-full-path-row"
 blocked-by: null
 closed-reason: null
 ---

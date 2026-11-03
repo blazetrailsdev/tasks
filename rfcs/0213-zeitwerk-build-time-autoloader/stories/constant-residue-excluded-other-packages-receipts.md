@@ -1,6 +1,6 @@
 ---
 title: "constant-residue-excluded-other-packages-receipts"
-status: blocked
+status: ready
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: "2026-11-03T13:56:40Z"
-assignee: "constant-residue-excluded-other-packages-receipts"
-blocked-by: "waiting on trails#9665 (seatable-only excluded lists) to merge; the 112-key set does not exist on main yet"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

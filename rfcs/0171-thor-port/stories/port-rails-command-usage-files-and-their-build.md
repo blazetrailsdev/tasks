@@ -1,7 +1,7 @@
 ---
 title: "port-rails-command-usage-files-and-their-build"
-status: draft
-updated: 2026-11-01
+status: done
+updated: 2026-11-03
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9592
 claim: null
 assignee: null
 blocked-by: null

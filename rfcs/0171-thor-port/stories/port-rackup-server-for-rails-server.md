@@ -1,7 +1,7 @@
 ---
 title: "port-rackup-server-for-rails-server"
-status: draft
-updated: 2026-11-01
+status: claimed
+updated: 2026-11-03
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 500
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-03T14:42:08Z"
+assignee: "unplaced-rails-classes-get-a-constant-table"
 blocked-by: null
 closed-reason: null
 ---

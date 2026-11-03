@@ -1,7 +1,7 @@
 ---
 title: "Port Rails::Command.application_root and use it in StatsCommand"
-status: draft
-updated: 2026-11-01
+status: closed
+updated: 2026-11-03
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: its premise 'trails has no applicationRoot' no longer holds — applicationRoot landed in command.ts:75 (trails#9553); the remaining stats.ts join is receipted to and owned by trails-cli-has-no-app-loader-exec-app, and the dist/ APP_PATH strip by app-path-expands-to-the-application-root"
 ---
 
 ## Context

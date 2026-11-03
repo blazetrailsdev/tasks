@@ -1,7 +1,7 @@
 ---
 title: "ConnectionPool awaits async checkout callbacks"
-status: draft
-updated: 2026-11-01
+status: claimed
+updated: 2026-11-03
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-03T14:11:44Z"
+assignee: "extract-ruby-api-records-class-new-constants"
 blocked-by: null
 closed-reason: null
 ---

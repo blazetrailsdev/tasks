@@ -1,6 +1,6 @@
 ---
 title: "Port the scaffold tests that run inside a generated engine"
-status: blocked
+status: ready
 updated: 2026-11-03
 rfc: "0212-trailties-port"
 cluster: null
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: "2026-11-03T00:16:39Z"
-assignee: "manifest-and-rails-namespace-seats"
-blocked-by: "needs trailties-plugin-generator-part-2-and-plugin-command: PluginGenerator and the plugin command, which with_new_plugin runs, are unported"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

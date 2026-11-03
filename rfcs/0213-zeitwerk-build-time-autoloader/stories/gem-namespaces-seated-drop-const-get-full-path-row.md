@@ -1,6 +1,6 @@
 ---
 title: "Seat Mail, Net and MiniMime so constGet drops its full-path row fallback"
-status: claimed
+status: closed
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: "2026-11-03T13:56:40Z"
 assignee: "constant-residue-excluded-other-packages-receipts"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: the full-path fallback serves ~400 rows across most packages, not only Mail/Net/MiniMime; those three are seated in trails#9666 and the deletion moves to intermediate-namespaces-seated-drop-const-get-full-path-row"
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "Hub and Stats use connectsTo, and the connecting initializers go"
-status: blocked
-updated: 2026-10-28
+status: closed
+updated: 2026-11-03
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: trailmap#91
 claim: "2026-10-28T22:52:30Z"
 assignee: "check-the-transcript-page-under-its-csp-sandbox"
-blocked-by: "trails: connectsTo is async and resolves Base.configurations at class definition, but trails-tsc-views build (and vitest) import models without running active_record.initialize_database, so Hub's connectsTo throws AdapterNotSpecified (trailmap#91 CI). Rails registers the pool synchronously before the class body returns. Needs a trails fix first."
-closed-reason: null
+blocked-by: null
+closed-reason: "Duplicate of hub-and-stats-connect-through-connects-to (same AC, carries the framework dep on connects-to-is-synchronous-and-callable-from-a-class-body)"
 ---
 
 ## Context
