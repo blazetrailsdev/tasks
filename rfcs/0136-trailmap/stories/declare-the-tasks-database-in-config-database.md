@@ -9,6 +9,7 @@ deps:
   [
     "trailties-lacks-active-record-initialize-database-initializer",
     "enum-raises-undeclared-type-on-an-unreflected-cold-model",
+    "db-database-flag-loads-primary-schema",
   ]
 deps-rfc: []
 est-loc: 120
