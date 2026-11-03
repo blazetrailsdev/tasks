@@ -5,7 +5,8 @@ updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
 packages: []
-deps: []
+deps:
+  - constant-residue-excluded-receipts-burndown
 deps-rfc: []
 est-loc: 400
 priority: null
