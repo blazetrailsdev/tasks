@@ -1,6 +1,6 @@
 ---
 title: "Delete registerConstant and the class-path API"
-status: claimed
+status: in-progress
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-framework
@@ -14,7 +14,7 @@ deps:
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: trails#9681
 claim: "2026-11-03T17:52:18Z"
 assignee: "delete-register-constant-and-class-path-api"
 blocked-by: null
