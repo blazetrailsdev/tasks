@@ -3,7 +3,7 @@ title: "rackup: port Rackup::Lobster and bin/rackup"
 status: ready
 updated: 2026-11-03
 rfc: "0000-rackup-gem-port"
-cluster: null
+cluster: port
 packages: ["rackup"]
 deps: ["rackup-package-parity-enrollment"]
 deps-rfc: []

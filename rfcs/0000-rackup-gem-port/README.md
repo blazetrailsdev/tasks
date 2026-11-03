@@ -56,9 +56,9 @@ already filed elsewhere into one place.
 
 | File                            | Lines | Story                                                                                                   |
 | ------------------------------- | ----- | ------------------------------------------------------------------------------------------------------- |
-| `lib/rackup.rb`                 | 21    | `port-rackup-server-for-rails-server` (entry); its `require 'webrick'` arm is a non-goal                |
-| `lib/rackup/version.rb`         | 8     | `port-rackup-server-for-rails-server`                                                                   |
-| `lib/rackup/handler.rb`         | 113   | `port-rackup-server-for-rails-server` (`register`, `[]`, `get`, `pick`, `default`, `require_handler`)   |
+| `lib/rackup.rb`                 | 21    | `rackup-package-parity-enrollment` (entry); its `require 'webrick'` arm is a non-goal                   |
+| `lib/rackup/version.rb`         | 8     | `rackup-package-parity-enrollment`                                                                      |
+| `lib/rackup/handler.rb`         | 113   | `rackup-package-parity-enrollment` (`register`, `[]`, `get`, `pick`, `default`, `require_handler`)      |
 | `lib/rackup/server.rb`          | 462   | `port-rackup-server-for-rails-server` (class), `rackup-server-spec-full-port` (remaining arms and spec) |
 | `lib/rackup/handler/webrick.rb` | 162   | non-goal; `rackup-handler-node-moves-out-of-rack` is trails' handler                                    |
 | `lib/rackup/handler/cgi.rb`     | 61    | non-goal                                                                                                |
@@ -69,8 +69,14 @@ already filed elsewhere into one place.
 Test suite (`test/` in the v2.2.1 tag; the gem ships none): `spec_server.rb`
 (51 `it`), `spec_handler.rb` (6), `spec_lobster.rb` (6) are ported;
 `spec_webrick.rb` (11) is not (non-goal below). rackup is to be vendored at
-`vendor/rackup/v2.2.1/` with its `test/` tree; the in-flight
-`port-rackup-server-for-rails-server` adds the `vendor/sources.ts` entry.
+`vendor/rackup/v2.2.1/` with its `test/` tree.
+
+The in-flight `port-rackup-server-for-rails-server` commits only to its own
+acceptance criteria: `Rails::Server` extends a port of `Rackup::Server`, and
+`defaultOptions` is `super.merge`. Everything else the package needs (the
+package itself, the vendor entry, `Handler`, `version.rb`) is owned by
+`rackup-package-parity-enrollment`, which keeps whatever that PR already
+landed and adds the rest. No phase-2 story assumes more of the in-flight PR.
 
 ## Design
 
@@ -82,8 +88,18 @@ Test suite (`test/` in the v2.2.1 tag; the gem ships none): `spec_server.rb`
   `require`; it follows the awaited-load shape of trails' CLAUDE.md
   § "An adapter file is loaded by an awaited step".
 - `Server#daemonize_app` (`server.rb:427-432`) calls `Process.daemon`, which
-  forks; it follows CLAUDE.md § "Runtime facts Node does not expose" (`fork`),
-  so its spec arm is a `PERMANENT-SKIP`, decided in `rackup-server-spec-full-port`.
+  forks; under CLAUDE.md § "Runtime facts Node does not expose" (`fork`) it is
+  ported as written over ruby-compat's `Process.daemon`, and
+  `spec_server.rb:125` ("#start daemonizes if daemonize option is given") is a
+  `PERMANENT-SKIP` citing that section.
+- Profiling: `handle_profiling` / `make_profile_name` (`server.rb:357-393`)
+  require `objspace` and `stackprof`, Ruby-runtime libraries with no Node
+  counterpart. Both methods are ported line for line, so `--heap` /
+  `--profile` / `--profile-mode` are parsed and warn as Ruby does when the
+  library fails to load (the `LoadError` arm). The tests that need a heap dump
+  or stackprof output are `PERMANENT-SKIP`: `spec_server.rb:134`, `:148`,
+  `:368`, `:390`, `:412`. `:71`, `:75` and `:285` (option parsing and the
+  invalid-mode warning) are ported.
 - `Rails::Server` in `packages/trailties/src/commands/server.ts` extends
   `Rackup::Server`; trailties' server-command stories depend on the rackup
   stories below.
@@ -107,11 +123,12 @@ Test suite (`test/` in the v2.2.1 tag; the gem ships none): `spec_server.rb`
 ## Rollout
 
 1. `port-rackup-server-for-rails-server` (in flight; moved here from 0171):
-   package, vendor entry, `Handler`, `Server`, version.
-2. `rackup-package-parity-enrollment`, `rackup-handler-node-moves-out-of-rack`,
-   `rackup-server-spec-full-port`.
-3. `rackup-stream-port`, `rackup-lobster-and-bin-rackup`.
-4. Moved Node-handler stories (from 0142):
+   `Rails::Server` extends `Rackup::Server`.
+2. `rackup-package-parity-enrollment`: package, vendor, `Handler`, version,
+   gates.
+3. `rackup-handler-node-moves-out-of-rack`, `rackup-server-spec-full-port`.
+4. `rackup-stream-port`, `rackup-lobster-and-bin-rackup`.
+5. Moved Node-handler stories (from 0142):
    `trails-server-adapts-application-to-function-rack-app`,
    `rack-node-handler-runs-requests-on-a-puma-style-thread-pool`,
    `handler-node-rack-errors-fails-rack-lint`,
@@ -123,7 +140,8 @@ Test suite (`test/` in the v2.2.1 tag; the gem ships none): `spec_server.rb`
 - `pnpm parity:api --package rackup` credits every method of `handler.rb`,
   `server.rb`, `stream.rb`, `lobster.rb` (100% of in-scope files).
 - `pnpm parity:test --package rackup` matches all 63 in-scope `it` blocks
-  (51 + 6 + 6), less receipted `PERMANENT-SKIP`s.
+  (51 + 6 + 6, per § Inventory), less the six `PERMANENT-SKIP`s named in
+  § Design.
 - `packages/rack/src/handler/` is gone and `rack`'s `Handler` export with it.
 - No `CONVERGEABLE port-rackup-server-for-rails-server` receipt remains in
   `packages/trailties/src/commands/server.ts`.
@@ -131,3 +149,7 @@ Test suite (`test/` in the v2.2.1 tag; the gem ships none): `spec_server.rb`
 ## Open questions
 
 None.
+
+## Changelog
+
+- 2026-11-03: initial RFC
