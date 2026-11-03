@@ -5,7 +5,8 @@ updated: 2026-11-03
 rfc: "0209-activestorage-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - attachment-variant-sync-for-loaded-blob
 deps-rfc: []
 est-loc: 60
 priority: null
