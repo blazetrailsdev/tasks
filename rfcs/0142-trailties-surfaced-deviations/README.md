@@ -18,6 +18,7 @@ packages:
   - "rack"
   - "ruby-compat"
   - "actionview"
+  - "trails-tsc"
 clusters:
   - "boot"
   - "generators"
