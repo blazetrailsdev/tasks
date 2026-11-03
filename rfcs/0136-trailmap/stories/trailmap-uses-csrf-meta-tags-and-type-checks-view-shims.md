@@ -5,7 +5,8 @@ updated: 2026-10-28
 rfc: "0136-trailmap"
 cluster: null
 packages: []
-deps: []
+deps:
+  - view-shim-unknown-name-types-as-any
 deps-rfc: []
 est-loc: 40
 priority: null
