@@ -33,4 +33,4 @@ unless the app imports `@blazetrails/activestorage`, so an app whose connected m
 - The application loader seats the engine's models (Blob, Attachment, VariantRecord) as Zeitwerk
   does for an engine's `app/models` (awaited at boot, as § "`Module#autoload` is a build step"
   settles), so `ActiveStorage.Blob` resolves before app models are defined.
-- Booting with no storage config still succeeds for an app that does not reference Blob.
+- Booting the engine with no storage config raises "Couldn't find Active Storage configuration", as Rails does under `eager_load = true` (`engine.rb:140-146`): the trails app loader always eager-loads at boot, so Blob loads then. Operator ruling on trails#9684.
