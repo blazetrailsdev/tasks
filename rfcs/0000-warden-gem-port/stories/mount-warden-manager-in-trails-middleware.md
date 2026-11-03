@@ -1,5 +1,5 @@
 ---
-title: "Mount Warden::Manager through config.middleware.use and reach request.env["warden"] from a controller"
+title: 'Mount Warden::Manager through config.middleware.use and reach request.env["warden"] from a controller'
 status: draft
 updated: 2026-11-03
 rfc: "0000-warden-gem-port"
