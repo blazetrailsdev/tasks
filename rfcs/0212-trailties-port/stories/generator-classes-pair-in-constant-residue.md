@@ -5,7 +5,8 @@ updated: 2026-11-03
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - port-application-record-generator
 deps-rfc: []
 est-loc: 80
 priority: null
