@@ -1,6 +1,6 @@
 ---
 title: "Engine services hook raises on missing storage config (Blob loaded lazily)"
-status: ready
+status: done
 updated: 2026-11-03
 rfc: "0209-activestorage-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9678
+claim: "2026-11-03T18:02:01Z"
+assignee: "activestorage-engine-raises-missing-storage-config"
 blocked-by: null
 closed-reason: null
 ---

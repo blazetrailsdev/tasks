@@ -1,6 +1,6 @@
 ---
 title: "Port the variant, variant-with-record, representation and transform-job tests"
-status: claimed
+status: in-progress
 updated: 2026-11-03
 rfc: "0209-activestorage-port"
 cluster: as-variants
@@ -9,7 +9,7 @@ deps: ["activestorage-variation-and-variants", "activestorage-test-helper-and-fi
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
+pr: trails#9677
 claim: "2026-11-03T17:42:28Z"
 assignee: "activestorage-variant-tests"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "create-async-block-settles-before-after-initialize"
-status: ready
-updated: 2026-11-02
+status: in-progress
+updated: 2026-11-03
 rfc: "0209-activestorage-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9680
+claim: "2026-11-03T18:11:44Z"
+assignee: "create-async-block-settles-before-after-initialize"
 blocked-by: null
 closed-reason: null
 ---
