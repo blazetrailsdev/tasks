@@ -13,7 +13,6 @@ deps:
     "activestorage-blob-and-downloader",
     "activestorage-migrations-and-test-database",
     "port-activejob-enqueuing-and-configured-job",
-    "mail-date-and-message-id-fields-and-field-specs-remainder",
   ]
 deps-rfc: []
 est-loc: 500
