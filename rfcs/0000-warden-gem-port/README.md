@@ -9,6 +9,7 @@ packages:
   - warden
   - trailties
   - actionpack
+  - activesupport
 clusters:
   - warden-setup
   - warden-core
