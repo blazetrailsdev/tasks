@@ -5,7 +5,9 @@ updated: 2026-11-03
 rfc: "0209-activestorage-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - activestorage-engine
+  - activestorage-preview-servable-and-engine-previewers
 deps-rfc: []
 est-loc: 200
 priority: null
