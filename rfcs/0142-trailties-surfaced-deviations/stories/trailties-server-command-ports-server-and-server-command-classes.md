@@ -5,7 +5,8 @@ updated: 2026-10-23
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps:
+  - port-rackup-server-for-rails-server
 deps-rfc: []
 est-loc: null
 priority: null
