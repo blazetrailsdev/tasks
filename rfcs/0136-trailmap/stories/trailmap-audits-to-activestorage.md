@@ -7,6 +7,7 @@ cluster: null
 packages: ["activestorage", "activerecord"]
 deps:
   - boot-eager-loads-only-when-config-eager-load
+  - trailmap-app-files-define-their-constants
 deps-rfc: []
 est-loc: 600
 priority: null
