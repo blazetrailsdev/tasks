@@ -12,6 +12,7 @@ packages:
   - activerecord
   - trails-tsc
   - "activerecord-cli"
+  - "activestorage"
 clusters: []
 priority: 4
 ---
