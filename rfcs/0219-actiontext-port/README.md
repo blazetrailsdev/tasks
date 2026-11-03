@@ -1,5 +1,5 @@
 ---
-rfc: "0000-actiontext-port"
+rfc: "0219-actiontext-port"
 title: "Port ActionText (server side) over Trix and @rails/actiontext from npm"
 status: draft
 created: 2026-11-03
@@ -17,10 +17,7 @@ clusters:
   - at-engine
 ---
 
-<!-- Unnumbered until merge: `scripts/finalize-rfc.mjs` swaps 0000 for the
-     assigned number at merge. -->
-
-# RFC — Port ActionText (server side) over Trix and @rails/actiontext from npm
+# RFC 0219 — Port ActionText (server side) over Trix and @rails/actiontext from npm
 
 ## Summary
 

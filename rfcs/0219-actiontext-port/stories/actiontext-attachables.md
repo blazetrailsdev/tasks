@@ -2,7 +2,7 @@
 title: "Port Attachable, the three Attachables, and attachable/attachment/trix tests"
 status: draft
 updated: 2026-11-03
-rfc: "0000-actiontext-port"
+rfc: "0219-actiontext-port"
 cluster: at-content
 packages: ["actiontext"]
 deps: ["actiontext-trix-attachment-and-attachment", "actiontext-migration-and-test-database"]

@@ -2,7 +2,7 @@
 title: "Port TrixAttachment, Attachment, AttachmentGallery and the Attachments mixins"
 status: draft
 updated: 2026-11-03
-rfc: "0000-actiontext-port"
+rfc: "0219-actiontext-port"
 cluster: at-content
 packages: ["actiontext"]
 deps: ["actiontext-module-fragment-and-conversions"]

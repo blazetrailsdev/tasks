@@ -2,7 +2,7 @@
 title: "Port the action_text:install generator, test_unit hook and rake task, wiring Trix and @rails/actiontext from npm"
 status: draft
 updated: 2026-11-03
-rfc: "0000-actiontext-port"
+rfc: "0219-actiontext-port"
 cluster: at-engine
 packages: ["actiontext", "trailties"]
 deps:

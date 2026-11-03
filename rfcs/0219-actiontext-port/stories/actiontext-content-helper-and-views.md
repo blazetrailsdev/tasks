@@ -2,7 +2,7 @@
 title: "Port ContentHelper and the ActionText view templates"
 status: draft
 updated: 2026-11-03
-rfc: "0000-actiontext-port"
+rfc: "0219-actiontext-port"
 cluster: at-views
 packages: ["actiontext"]
 deps: ["actiontext-content-and-rendering", "activestorage-variation-and-variants"]
