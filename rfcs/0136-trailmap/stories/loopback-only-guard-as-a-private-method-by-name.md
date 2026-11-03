@@ -5,7 +5,8 @@ updated: 2026-10-29
 rfc: "0136-trailmap"
 cluster: null
 packages: []
-deps: []
+deps:
+  - ts-private-controller-method-is-an-action-method
 deps-rfc: []
 est-loc: 30
 priority: null
