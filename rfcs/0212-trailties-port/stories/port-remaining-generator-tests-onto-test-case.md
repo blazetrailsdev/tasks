@@ -22,7 +22,7 @@ closed-reason: null
 
 - `db_system_change_generator_test.rb`: the generator exists; `packages/trailties/src/generators/rails/db/system/change/change-generator.test.ts` (300 lines) still uses `node:fs` helpers.
 - `benchmark_generator_test.rb:75-83` ("generate benchmark twice only adds ips gem once") and the Gemfile assertion at `:18`: the generator adds no dependency.
-- No generator ported yet, so port generator and test together: `mailer` (14 tests), `integration_test`, `system_test`, `application_record`, `multi_db`, `action_text_install`, `action_mailbox_install`.
+- No generator ported yet, so port generator and test together: `mailer` (14 tests), `integration_test`, `system_test`, `application_record`, `multi_db`, `action_text_install`. `action_mailbox_install` moves to the `actionmailbox-port` RFC's `actionmailbox-generators-and-install`.
 - A `::` parent in `rails/controller/templates/controller.ts.tt` and `rails/job/templates/job.ts.tt` imports a flattened name the parent's file does not export; `active-record/model/model-generator.ts#createModelFile` shows the alias shape.
 
 ## Acceptance criteria
