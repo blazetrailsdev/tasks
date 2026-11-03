@@ -1,6 +1,6 @@
 ---
 title: "Port the ApplicationRecord generator"
-status: ready
+status: in-progress
 updated: 2026-11-03
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9664
+claim: "2026-11-03T13:17:04Z"
+assignee: "activestorage-preview-servable-and-engine-previewers"
 blocked-by: null
 closed-reason: null
 ---

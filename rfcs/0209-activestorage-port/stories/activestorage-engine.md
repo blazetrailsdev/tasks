@@ -1,6 +1,6 @@
 ---
 title: "Port ActiveStorage::Engine"
-status: claimed
+status: in-progress
 updated: 2026-11-03
 rfc: "0209-activestorage-port"
 cluster: as-engine
@@ -14,7 +14,7 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
+pr: trails#9663
 claim: "2026-11-03T12:56:52Z"
 assignee: "activestorage-engine"
 blocked-by: null

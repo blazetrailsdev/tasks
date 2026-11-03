@@ -1,6 +1,6 @@
 ---
 title: "constant-residue.json excluded exports converge or carry receipts"
-status: draft
+status: in-progress
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9665
+claim: "2026-11-03T13:36:41Z"
+assignee: "constant-residue-excluded-receipts-burndown"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Seat Mail, Net and MiniMime so constGet drops its full-path row fallback"
-status: draft
+status: claimed
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-03T13:56:40Z"
+assignee: "constant-residue-excluded-other-packages-receipts"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "activestorage-preview-servable-and-engine-previewers"
-status: ready
-updated: 2026-11-02
+status: in-progress
+updated: 2026-11-03
 rfc: "0209-activestorage-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9664
+claim: "2026-11-03T13:17:04Z"
+assignee: "activestorage-preview-servable-and-engine-previewers"
 blocked-by: null
 closed-reason: null
 ---

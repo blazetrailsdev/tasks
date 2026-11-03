@@ -1,6 +1,6 @@
 ---
 title: "rack-get-byte-ranges-returns-ranges"
-status: draft
+status: in-progress
 updated: 2026-11-03
 rfc: "0209-activestorage-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9662
+claim: "2026-11-03T13:12:38Z"
+assignee: "rack-get-byte-ranges-returns-ranges"
 blocked-by: null
 closed-reason: null
 ---
