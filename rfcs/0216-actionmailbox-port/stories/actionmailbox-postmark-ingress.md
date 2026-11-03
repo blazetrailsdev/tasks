@@ -1,13 +1,13 @@
 ---
-title: "Port the Mailgun ingress controller (deferred wave)"
+title: "Port the Postmark ingress controller (deferred wave)"
 status: draft
 updated: 2026-11-03
-rfc: "0000-actionmailbox-port"
+rfc: "0216-actionmailbox-port"
 cluster: amb-ingress-deferred
 packages: ["actionmailbox"]
 deps: ["actionmailbox-base-controller-and-relay-ingress"]
 deps-rfc: []
-est-loc: 400
+est-loc: 250
 priority: null
 pr: null
 claim: null
@@ -21,11 +21,11 @@ closed-reason: null
 Deferred by repo-owner ruling (2026-11-03): the first wave ports the core and
 the Relay ingress only, and this ingress waits for the second wave.
 
-`vendor/rails/v8.0.2/actionmailbox/app/controllers/action_mailbox/ingresses/mailgun/inbound_emails_controller.rb`
-(110 lines): an `OpenSSL::HMAC` SHA256 signature over `timestamp` and `token`, checked with `ActiveSupport::SecurityUtils.secure_compare` inside a 2-minute freshness window, and the `body-mime` param with `recipient` prepended as `X-Original-To` (`:55-56`). Its routes are `config/routes.rb:13-14` in the
+`vendor/rails/v8.0.2/actionmailbox/app/controllers/action_mailbox/ingresses/postmark/inbound_emails_controller.rb`
+(70 lines): `authenticate_by_password`, `params.require("RawEmail")` with `OriginalRecipient` prepended as `X-Original-To` (`:65-66`). Its routes are `config/routes.rb:5` in the
 `/rails/action_mailbox` scope, which this story draws.
 
-Test: `test/controllers/ingresses/mailgun/inbound_emails_controller_test.rb` (7).
+Test: `test/controllers/ingresses/postmark/inbound_emails_controller_test.rb` (7).
 
 ## Acceptance criteria
 

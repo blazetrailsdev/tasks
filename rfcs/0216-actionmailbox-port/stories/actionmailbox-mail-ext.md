@@ -2,7 +2,7 @@
 title: "Port ActionMailbox's mail_ext reopenings of Mail::Address, Mail::Message and Mail"
 status: draft
 updated: 2026-11-03
-rfc: "0000-actionmailbox-port"
+rfc: "0216-actionmailbox-port"
 cluster: amb-core
 packages: ["actionmailbox"]
 deps:

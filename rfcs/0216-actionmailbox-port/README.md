@@ -1,5 +1,5 @@
 ---
-rfc: "0000-actionmailbox-port"
+rfc: "0216-actionmailbox-port"
 title: "Port ActionMailbox, core and the Relay ingress first"
 status: draft
 created: 2026-11-03
@@ -17,10 +17,7 @@ clusters:
   - amb-ingress-deferred
 ---
 
-<!-- Unnumbered until merge: `scripts/finalize-rfc.mjs` swaps 0000 for the
-     assigned number at merge. -->
-
-# RFC — Port ActionMailbox, core and the Relay ingress first
+# RFC 0216 — Port ActionMailbox, core and the Relay ingress first
 
 ## Summary
 

@@ -2,7 +2,7 @@
 title: "rackup: enroll @blazetrails/rackup in the parity gates"
 status: ready
 updated: 2026-11-03
-rfc: "0000-rackup-gem-port"
+rfc: "0217-rackup-gem-port"
 cluster: fidelity
 packages: ["rackup", "scripts"]
 deps: ["port-rackup-server-for-rails-server"]

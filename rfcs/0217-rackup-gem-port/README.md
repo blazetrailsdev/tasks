@@ -1,5 +1,5 @@
 ---
-rfc: "0000-rackup-gem-port"
+rfc: "0217-rackup-gem-port"
 title: "Rackup: a direct port of rackup 2.2.1 as @blazetrails/rackup"
 status: active
 created: 2026-11-03
@@ -21,10 +21,7 @@ related-rfcs:
   - "0193-small-gem-ports-parity-100"
 ---
 
-<!-- Unnumbered until merge: `scripts/finalize-rfc.mjs` swaps 0000 for the
-     assigned number at merge. -->
-
-# RFC — Rackup
+# RFC 0217 — Rackup
 
 ## Summary
 

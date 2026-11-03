@@ -2,7 +2,7 @@
 title: "rackup: port the rest of Rackup::Server and spec_server.rb"
 status: ready
 updated: 2026-11-03
-rfc: "0000-rackup-gem-port"
+rfc: "0217-rackup-gem-port"
 cluster: port
 packages: ["rackup"]
 deps: ["port-rackup-server-for-rails-server", "rackup-package-parity-enrollment"]

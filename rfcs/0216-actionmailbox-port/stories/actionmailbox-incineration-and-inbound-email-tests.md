@@ -2,7 +2,7 @@
 title: "Port InboundEmail::Incineratable, Incineration and IncinerationJob, and the InboundEmail tests"
 status: draft
 updated: 2026-11-03
-rfc: "0000-actionmailbox-port"
+rfc: "0216-actionmailbox-port"
 cluster: amb-core
 packages: ["actionmailbox"]
 deps: ["actionmailbox-base-and-callbacks", "port-activejob-exceptions"]

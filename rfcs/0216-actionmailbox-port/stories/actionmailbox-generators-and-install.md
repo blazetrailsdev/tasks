@@ -2,7 +2,7 @@
 title: "Port the mailbox and action_mailbox:install generators and the install task"
 status: draft
 updated: 2026-11-03
-rfc: "0000-actionmailbox-port"
+rfc: "0216-actionmailbox-port"
 cluster: amb-engine
 packages: ["actionmailbox", "trailties"]
 deps:

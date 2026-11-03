@@ -2,7 +2,7 @@
 title: "Port ActionMailbox::Relayer and its test"
 status: draft
 updated: 2026-11-03
-rfc: "0000-actionmailbox-port"
+rfc: "0216-actionmailbox-port"
 cluster: amb-ingress
 packages: ["actionmailbox"]
 deps: ["actionmailbox-package-and-parity-enrollment", "ruby-compat-net-http-post-client"]

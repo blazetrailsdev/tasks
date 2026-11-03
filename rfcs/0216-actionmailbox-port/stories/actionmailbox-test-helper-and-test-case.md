@@ -2,7 +2,7 @@
 title: "Port ActionMailbox::TestHelper and ActionMailbox::TestCase"
 status: draft
 updated: 2026-11-03
-rfc: "0000-actionmailbox-port"
+rfc: "0216-actionmailbox-port"
 cluster: amb-core
 packages: ["actionmailbox"]
 deps: ["actionmailbox-record-inbound-email-message-id-and-routable"]

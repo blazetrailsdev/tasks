@@ -2,7 +2,7 @@
 title: "rackup: port Rackup::Stream"
 status: ready
 updated: 2026-11-03
-rfc: "0000-rackup-gem-port"
+rfc: "0217-rackup-gem-port"
 cluster: port
 packages: ["rackup", "ruby-compat"]
 deps: ["rackup-package-parity-enrollment"]

@@ -2,7 +2,7 @@
 title: "rackup: Handler::Node moves out of @blazetrails/rack"
 status: ready
 updated: 2026-11-03
-rfc: "0000-rackup-gem-port"
+rfc: "0217-rackup-gem-port"
 cluster: fidelity
 packages: ["rackup", "rack", "trailties"]
 deps: ["rackup-package-parity-enrollment"]

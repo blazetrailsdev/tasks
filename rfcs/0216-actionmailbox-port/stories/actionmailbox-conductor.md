@@ -2,7 +2,7 @@
 title: "Port the Rails conductor for ActionMailbox (controllers, views, layout)"
 status: draft
 updated: 2026-11-03
-rfc: "0000-actionmailbox-port"
+rfc: "0216-actionmailbox-port"
 cluster: amb-engine
 packages: ["actionmailbox"]
 deps:
