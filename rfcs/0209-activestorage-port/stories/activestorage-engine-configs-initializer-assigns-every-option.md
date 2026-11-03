@@ -1,6 +1,6 @@
 ---
 title: "activestorage-engine-configs-initializer-assigns-every-option"
-status: ready
+status: done
 updated: 2026-11-03
 rfc: "0209-activestorage-port"
 cluster: null
@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#9663
 claim: null
 assignee: null
 blocked-by: null

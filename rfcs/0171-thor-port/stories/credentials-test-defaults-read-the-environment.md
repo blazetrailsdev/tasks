@@ -1,6 +1,6 @@
 ---
 title: "credentials-test-defaults-read-the-environment"
-status: claimed
+status: in-progress
 updated: 2026-11-03
 rfc: "0171-thor-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: trails#9671
 claim: "2026-11-03T14:57:46Z"
 assignee: "class-paths-table-covers-rails-command"
 blocked-by: null

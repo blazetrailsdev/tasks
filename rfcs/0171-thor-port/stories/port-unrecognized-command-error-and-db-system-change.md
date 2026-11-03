@@ -1,6 +1,6 @@
 ---
 title: "port-unrecognized-command-error-and-db-system-change"
-status: claimed
+status: done
 updated: 2026-11-03
 rfc: "0171-thor-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#9669
 claim: "2026-11-03T14:42:08Z"
 assignee: "unplaced-rails-classes-get-a-constant-table"
 blocked-by: null

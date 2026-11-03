@@ -1,6 +1,6 @@
 ---
 title: "Call-args gate normalizes Ruby file extensions"
-status: claimed
+status: in-progress
 updated: 2026-11-03
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#9668
 claim: "2026-11-03T14:11:44Z"
 assignee: "extract-ruby-api-records-class-new-constants"
 blocked-by: null

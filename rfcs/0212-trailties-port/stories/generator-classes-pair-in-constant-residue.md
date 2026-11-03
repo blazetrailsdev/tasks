@@ -1,6 +1,6 @@
 ---
 title: "generator-classes-pair-in-constant-residue"
-status: ready
+status: closed
 updated: 2026-11-03
 rfc: "0212-trailties-port"
 cluster: null
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: trails#9665 made constant-residue exclusions count only seatable exports, so generator classes (outside every entry graph) no longer need pairing or receipts; unplaced real Rails classes are tracked by unplaced-rails-classes-get-a-constant-table."
 ---
 
 ## Context

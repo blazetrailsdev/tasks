@@ -1,6 +1,6 @@
 ---
 title: "printing-commands-omits-commander-commands"
-status: claimed
+status: blocked
 updated: 2026-11-03
 rfc: "0171-thor-port"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-11-03T14:42:08Z"
 assignee: "unplaced-rails-classes-get-a-constant-table"
-blocked-by: null
+blocked-by: "db/new/app listing lands with retire-commander-cli-onto-rails-command-invoke (story acceptance names it)"
 closed-reason: null
 ---
 

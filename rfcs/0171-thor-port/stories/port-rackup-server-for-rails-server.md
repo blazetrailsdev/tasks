@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 500
 priority: null
 pr: null
-claim: "2026-11-03T14:42:08Z"
-assignee: "unplaced-rails-classes-get-a-constant-table"
+claim: "2026-11-03T15:22:14Z"
+assignee: "port-rackup-server-for-rails-server"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "DestroyAssociationAsyncJob#perform resolves both models with constantize"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-11-03
 rfc: "0116-activejob-dependent-activerecord-work"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9670
+claim: "2026-11-03T15:28:59Z"
+assignee: "destroy-association-async-job-reads-models-from-register-model"
 blocked-by: null
 closed-reason: null
 ---
