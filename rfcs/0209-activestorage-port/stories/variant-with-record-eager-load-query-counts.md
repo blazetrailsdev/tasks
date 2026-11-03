@@ -1,6 +1,6 @@
 ---
 title: "variant-with-record-eager-load-query-counts"
-status: draft
+status: ready
 updated: 2026-11-03
 rfc: "0209-activestorage-port"
 cluster: null

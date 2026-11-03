@@ -1,6 +1,6 @@
 ---
 title: "Under vitest the autoloader seats a second module instance of every app class"
-status: draft
+status: done
 updated: 2026-11-03
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9683
+claim: "2026-11-03T20:15:20Z"
+assignee: "zeitwerk-seats-a-second-module-instance-under-vitest"
 blocked-by: null
 closed-reason: null
 ---

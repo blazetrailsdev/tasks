@@ -1,6 +1,6 @@
 ---
 title: "trailmap: every autoloaded app/ file defines its constant"
-status: draft
+status: in-progress
 updated: 2026-11-03
 rfc: "0136-trailmap"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#112
+claim: "2026-11-03T20:59:19Z"
+assignee: "trailmap-app-files-define-their-constants"
 blocked-by: null
 closed-reason: null
 ---

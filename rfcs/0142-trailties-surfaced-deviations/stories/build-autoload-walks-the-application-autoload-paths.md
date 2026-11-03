@@ -1,6 +1,6 @@
 ---
 title: "trails build writes an empty main manifest for an application: it stops before setup_main_autoloader pushes the autoload paths"
-status: draft
+status: done
 updated: 2026-11-03
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9682
+claim: "2026-11-03T20:08:51Z"
+assignee: "build-autoload-walks-the-application-autoload-paths"
 blocked-by: null
 closed-reason: null
 ---

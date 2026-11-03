@@ -1,6 +1,6 @@
 ---
 title: "active_storage:install copies the engine's migrations into the app (railties:install:migrations)"
-status: in-progress
+status: done
 updated: 2026-11-03
 rfc: "0209-activestorage-port"
 cluster: null
