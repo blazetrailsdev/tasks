@@ -2,7 +2,7 @@
 title: "Let a Kernel#throw from a controller action pass actionpack's rescue layers"
 status: draft
 updated: 2026-11-03
-rfc: "0000-warden-gem-port"
+rfc: "0220-warden-gem-port"
 cluster: warden-wiring
 packages: ["actionpack", "activesupport", "trailties"]
 deps: ["port-kernel-catch-throw"]

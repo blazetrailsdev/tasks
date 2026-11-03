@@ -2,7 +2,7 @@
 title: "Vendor warden 1.2.9 and create @blazetrails/warden, registered and parity-enrolled"
 status: draft
 updated: 2026-11-03
-rfc: "0000-warden-gem-port"
+rfc: "0220-warden-gem-port"
 cluster: warden-setup
 packages: ["warden"]
 deps: []

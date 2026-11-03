@@ -2,7 +2,7 @@
 title: "Port Warden::Manager, the Warden module and the spec request helper"
 status: draft
 updated: 2026-11-03
-rfc: "0000-warden-gem-port"
+rfc: "0220-warden-gem-port"
 cluster: warden-core
 packages: ["warden"]
 deps: ["port-warden-proxy"]

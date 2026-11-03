@@ -2,7 +2,7 @@
 title: 'Mount Warden::Manager through config.middleware.use and reach request.env["warden"] from a controller'
 status: draft
 updated: 2026-11-03
-rfc: "0000-warden-gem-port"
+rfc: "0220-warden-gem-port"
 cluster: warden-wiring
 packages: ["trailties", "actionpack"]
 deps: ["port-warden-manager", "actionpack-rescue-paths-rethrow-kernel-throw"]

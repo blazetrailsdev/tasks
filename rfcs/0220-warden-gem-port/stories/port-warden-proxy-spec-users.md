@@ -2,7 +2,7 @@
 title: "Port spec/warden/proxy_spec.rb lines 352-644 (users)"
 status: draft
 updated: 2026-11-03
-rfc: "0000-warden-gem-port"
+rfc: "0220-warden-gem-port"
 cluster: warden-specs
 packages: ["warden"]
 deps: ["port-warden-manager", "port-warden-proxy-spec-authentication"]

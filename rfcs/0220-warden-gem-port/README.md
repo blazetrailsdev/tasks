@@ -1,5 +1,5 @@
 ---
-rfc: "0000-warden-gem-port"
+rfc: "0220-warden-gem-port"
 title: "@blazetrails/warden: port the warden gem and mount Warden::Manager in a trails app"
 status: draft
 created: 2026-11-03
@@ -21,11 +21,7 @@ related-rfcs:
   - "0137-rack-test-gem-port"
 ---
 
-<!-- Unnumbered until merge: copy this dir to `rfcs/0000-your-slug`, keep `rfc:`
-     as 0000-your-slug and the H1 below number-free. `scripts/finalize-rfc.mjs`
-     swaps 0000 for the assigned number at merge. -->
-
-# RFC — `@blazetrails/warden`
+# RFC 0220 — `@blazetrails/warden`
 
 ## Summary
 
