@@ -2,7 +2,7 @@
 title: "Measure the privates lane per package on main and record the baseline"
 status: draft
 updated: 2026-11-03
-rfc: "0000-api-privates-extra-surface"
+rfc: "0218-api-privates-extra-surface"
 cluster: api-compare
 packages: []
 deps:
