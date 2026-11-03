@@ -1,7 +1,7 @@
 ---
 title: "manifest-and-rails-namespace-seats"
-status: ready
-updated: 2026-11-02
+status: in-progress
+updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9644
+claim: "2026-11-03T00:16:39Z"
+assignee: "manifest-and-rails-namespace-seats"
 blocked-by: null
 closed-reason: null
 ---

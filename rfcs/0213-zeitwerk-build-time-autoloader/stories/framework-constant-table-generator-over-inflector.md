@@ -1,7 +1,7 @@
 ---
 title: "Generate framework constant tables over Inflector"
-status: claimed
-updated: 2026-11-02
+status: done
+updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-framework
 packages: ["scripts", "zeitwerk"]
@@ -9,7 +9,7 @@ deps: ["zeitwerk-loader-config-and-helpers"]
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
+pr: trails#9643
 claim: "2026-11-02T23:56:40Z"
 assignee: "framework-constant-table-generator-over-inflector"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "app-templates-copy-tse-mailer-and-scaffold"
-status: in-progress
-updated: 2026-11-02
+status: done
+updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "constants.generated.ts replaces class-paths tables"
-status: ready
-updated: 2026-10-30
+status: in-progress
+updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-framework
 packages: ["ruby-compat", "scripts"]
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9645
+claim: "2026-11-03T00:36:40Z"
+assignee: "framework-constant-tables-replace-class-paths"
 blocked-by: null
 closed-reason: null
 ---

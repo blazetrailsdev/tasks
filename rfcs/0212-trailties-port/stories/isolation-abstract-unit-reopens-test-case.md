@@ -1,7 +1,7 @@
 ---
 title: "abstract_unit includes its helpers on ActiveSupport::TestCase"
-status: ready
-updated: 2026-11-02
+status: claimed
+updated: 2026-11-03
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-03T00:56:40Z"
+assignee: "rails-controller-seats-reach-every-entry"
 blocked-by: null
 closed-reason: null
 ---
