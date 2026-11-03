@@ -1,6 +1,6 @@
 ---
 title: "mail-content-type-disposition-id-and-parameter-hash"
-status: ready
+status: done
 updated: 2026-11-02
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9626
 claim: null
 assignee: null
 blocked-by: null

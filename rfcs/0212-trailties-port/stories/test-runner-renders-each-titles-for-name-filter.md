@@ -1,6 +1,6 @@
 ---
 title: "Runner name filter matches rendered it.each and non-literal describe titles"
-status: ready
+status: in-progress
 updated: 2026-11-02
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9642
+claim: "2026-11-02T23:36:59Z"
+assignee: "autoloaded-subclasses-reload-test"
 blocked-by: null
 closed-reason: null
 ---

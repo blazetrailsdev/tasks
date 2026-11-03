@@ -1,6 +1,6 @@
 ---
 title: "app-templates-copy-tse-mailer-and-scaffold"
-status: ready
+status: in-progress
 updated: 2026-11-02
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9641
+claim: "2026-11-02T23:16:44Z"
+assignee: "app-templates-copy-tse-mailer-and-scaffold"
 blocked-by: null
 closed-reason: null
 ---

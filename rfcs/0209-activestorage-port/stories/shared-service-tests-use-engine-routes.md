@@ -1,7 +1,7 @@
 ---
 title: "shared-service-tests-use-engine-routes"
-status: ready
-updated: 2026-10-30
+status: in-progress
+updated: 2026-11-02
 rfc: "0209-activestorage-port"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9642
+claim: "2026-11-02T23:36:59Z"
+assignee: "autoloaded-subclasses-reload-test"
 blocked-by: null
 closed-reason: null
 ---

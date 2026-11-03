@@ -1,6 +1,6 @@
 ---
 title: "Port Mail::Message's parts, encoding and parsing (message.rb:1626-2156)"
-status: claimed
+status: done
 updated: 2026-11-02
 rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-core
@@ -9,7 +9,7 @@ deps: ["mail-message-core"]
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
+pr: trails#9626
 claim: "2026-11-02T16:51:51Z"
 assignee: "mail-body-part-and-attachments"
 blocked-by: null
