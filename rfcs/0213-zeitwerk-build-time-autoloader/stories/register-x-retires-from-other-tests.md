@@ -1,7 +1,7 @@
 ---
 title: "Other packages' tests drop registerX, and the definitions go"
-status: ready
-updated: 2026-10-30
+status: in-progress
+updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-lookup
 packages: ["actionpack", "activejob", "actioncable", "trailties"]
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9648
+claim: "2026-11-03T01:36:39Z"
+assignee: "register-x-retires-from-other-tests"
 blocked-by: null
 closed-reason: null
 ---

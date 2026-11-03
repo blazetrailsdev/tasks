@@ -1,6 +1,6 @@
 ---
 title: "constants.generated.ts replaces class-paths tables"
-status: in-progress
+status: done
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-framework

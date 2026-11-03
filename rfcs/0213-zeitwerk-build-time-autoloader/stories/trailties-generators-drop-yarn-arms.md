@@ -1,7 +1,7 @@
 ---
 title: "trailties-generators-drop-yarn-arms"
-status: ready
-updated: 2026-11-02
+status: claimed
+updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-03T01:57:06Z"
+assignee: "trailties-generators-drop-yarn-arms"
 blocked-by: null
 closed-reason: null
 ---

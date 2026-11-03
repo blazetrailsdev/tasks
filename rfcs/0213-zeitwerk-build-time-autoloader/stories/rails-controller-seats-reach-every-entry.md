@@ -1,6 +1,6 @@
 ---
 title: "rails-controller-seats-reach-every-entry"
-status: claimed
+status: in-progress
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9646
 claim: "2026-11-03T00:56:40Z"
 assignee: "rails-controller-seats-reach-every-entry"
 blocked-by: null

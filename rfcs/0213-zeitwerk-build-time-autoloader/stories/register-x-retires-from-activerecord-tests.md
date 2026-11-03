@@ -1,7 +1,7 @@
 ---
 title: "activerecord tests seat with rbModConstSet"
-status: ready
-updated: 2026-10-30
+status: in-progress
+updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-lookup
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["register-x-retires-from-source"]
 deps-rfc: []
 est-loc: 2200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9647
+claim: "2026-11-03T01:16:40Z"
+assignee: "register-x-retires-from-activerecord-tests"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Port scaffold_controller and resource generator tests onto TestCase"
-status: in-progress
-updated: 2026-11-02
+status: done
+updated: 2026-11-03
 rfc: "0212-trailties-port"
 cluster: null
 packages: []

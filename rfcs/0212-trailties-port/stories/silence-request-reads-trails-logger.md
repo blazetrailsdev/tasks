@@ -1,6 +1,6 @@
 ---
 title: "SilenceRequest reads Trails.logger"
-status: claimed
+status: in-progress
 updated: 2026-11-03
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#9646
 claim: "2026-11-03T00:56:40Z"
 assignee: "rails-controller-seats-reach-every-entry"
 blocked-by: null
