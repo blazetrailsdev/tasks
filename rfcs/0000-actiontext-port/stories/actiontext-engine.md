@@ -22,8 +22,9 @@ closed-reason: null
 `config.action_text` with `attachment_tag_name` (`:17-18`),
 `autoload_once_paths`, and eight initializers:
 
-- `action_text.deprecator` (`:24-26`), which unblocks
-  `configuration-test-framework-deprecators` (RFC 0123).
+- `action_text.deprecator` (`:24-26`), which removes ActionText from
+  `configuration-test-framework-deprecators`' (RFC 0123) blocker; that story
+  still waits on ActionMailbox, ActionMailer and ActiveStorage.
 - `action_text.attribute` (`:28-33`): `include Attribute`, `prepend
 Encryption` on `:active_record`.
 - `action_text.asset` (`:35-39`): the guarded precompile list.
@@ -45,12 +46,14 @@ picked up here.
 ## Acceptance criteria
 
 - `packages/actiontext/src/engine.ts` ports every initializer in order with
-  Rails' names and `before:` option.
+  Rails' names and `before:` option, except `action_text.system_test_helper`
+  (`engine.rb:77-82`), which `actiontext-system-test-helper` adds at its Rails
+  position, since that story ports the module it includes.
 - The `active_storage_blob` block's three methods are defined on `Blob`
   before any includer reads them (CLAUDE.md § "A Ruby module is a JS object
   or a JS class"); no carrier.
 - `all.ts` gains the `action_text/engine` load path; an app importing only
   `@blazetrails/trailties/all` boots ActionText (covered in
   `all.trails.test.ts`).
-- `app.deprecators.action_text` is seated and the RFC 0123 story is moved
-  out of blocked.
+- `app.deprecators.action_text` is seated, and the RFC 0123 story's
+  `blocked-by` reason is updated to drop ActionText.

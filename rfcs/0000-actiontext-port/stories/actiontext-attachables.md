@@ -36,7 +36,8 @@ closed-reason: null
 - `from_attachable_sgid`'s dispatch is an `if`/`else` over
   `GlobalID.Locator.locateManySigned` / `locateSigned` (RFC "Dispatch by
   name"); it is async, and so is `from_node` and every caller that reaches
-  it, as `GlobalID::Locator` is async in trails.
+  it, as `GlobalID::Locator` is async in trails; the list of those callers
+  is the RFC's, in "Rendering is async where ActionView's is".
 - `Attachable`'s `super`-calling privates use `rbCallSuper` from
   `attachable.ts` (RFC "Mixins and module `super`").
 - `MissingAttachable#model` is `safeConstantize` over the sgid's model name

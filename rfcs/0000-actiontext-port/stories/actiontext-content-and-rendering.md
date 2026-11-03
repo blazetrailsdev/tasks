@@ -36,8 +36,10 @@ instance_accessor: false`, `delegate :render, to: :class`,
 ## Acceptance criteria
 
 - Render-reaching members return what `render` returns and are awaited by
-  their callers; fragment-only members stay sync (RFC "Rendering is async
-  where ActionView's is"). If TSE cannot output a promise-valued `to_s`, a
+  their callers; the members the RFC lists as reaching
+  `Attachable.from_node` (`attachments`, `attachables`, `to_plain_text`, …)
+  are async; `to_html`, `links`, `==`, `as_json` and `Serialization` stay
+  sync (RFC "Rendering is async where ActionView's is"). If TSE cannot output a promise-valued `to_s`, a
   story is filed against actionview with the failing template, per open
   question 2.
 - `initialize`'s `canonicalize` default keeps Rails' `with_defaults!`

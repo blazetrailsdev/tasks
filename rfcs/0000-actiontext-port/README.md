@@ -46,7 +46,8 @@ separately), and every gem it depends on is ported or has an active RFC.
   `actiontext-engine` adds the `all.ts` load path, and
   `actiontext-install-generator-and-rake` ports the generator hooks.
 - `configuration-test-framework-deprecators` (RFC 0123) is blocked on
-  ActionText seating `app.deprecators[:action_text]`
+  ActionMailbox, ActionMailer, ActionText and ActiveStorage seating their
+  deprecators; ActionText's is `app.deprecators[:action_text]`
   (`lib/action_text/engine.rb:24-26`).
 - The trailties model generator already parses `rich_text` attributes
   (`model-and-migration-generators-parse-through-generated-attribute`,
@@ -115,8 +116,12 @@ the same three members on the model's generated-association module with no
 string eval, as `has_one_attached` does in activestorage
 (`activestorage-attached-model-and-one`). `name?` is `isName` (the settled
 predicate spelling; `content?` is `isContent`). `name=` is a sync setter:
-its body is `self.name.body = body`, an attribute write on an already-built
-or loaded `RichText`, and both arms of `store_if_blank` port as written. The
+its body is `self.name.body = body`, which calls the reader, and both arms of
+`store_if_blank` port as written. On a new record, or with the association
+loaded, the reader answers a built or loaded `RichText` and the write is sync.
+On a persisted record with the association unloaded, the reader raises, and
+so does `name=` (and therefore `update(name: …)`); open question 1 asks the
+owner to rule on the setter in that case too. The
 reader is sync only once the `rich_text_<name>` association is loaded; an
 unloaded `has_one` read in trails is async, so the reader follows
 activestorage's `Attached::One` ruling: it raises on an unloaded association
@@ -136,10 +141,22 @@ So the render-reaching members (`Content#to_rendered_html_with_layout`,
 `trix_attachment_content`, `Content#to_trix_html`,
 `Attachables::ContentAttachment#to_html`, and the `ContentHelper` methods)
 return whatever ActionView's `render` returns, unchanged, and their callers
-await it. The members that only read the fragment
-(`to_html`, `to_plain_text`, `links`, `attachments`, `attachables`, `==`,
-`as_json`) stay sync, which is what serialization (`Serialization.dump`,
-`content.rb:161`) needs. Open question 2 asks how `<%= message.content %>`
+await it.
+
+`Attachable.from_node` (`attachable.rb:31-41`) resolves an sgid through
+`GlobalID::Locator.locate_signed`, which is async in trails
+(`packages/globalid/src/locator.ts`). So every member that reaches it is
+async too: `Attachment.from_node`, `Content#attachments`, `#attachables`,
+`#attachment_galleries`, `#gallery_attachments`, `#render_attachments`,
+`#render_attachment_galleries`, `#to_plain_text` (it runs
+`render_attachments`, `content.rb:130-132`), `AttachmentGallery#attachments`,
+and on `RichText`, `to_plain_text` and the `blank?` / `empty?` / `present?`
+delegated to it (`rich_text.rb:69-71,89`). `RichText`'s `before_save`
+(`rich_text.rb:54-56`) awaits `body.attachables`. Members that read only
+the fragment's markup stay sync: `to_html`, `links`, `==`, `as_json`,
+`inspect`, `Fragment#*`, and `Serialization.load` / `.dump`, which call only
+`new` and `to_html` (`serialization.rb:10-25`), so the `serialize :body`
+coder stays sync. Open question 5 covers the predicates this makes async. Open question 2 asks how `<%= message.content %>`
 renders a promise-valued `to_s`.
 
 `Rendering`'s `thread_cattr_accessor :renderer` (`rendering.rb:13`) is
@@ -244,11 +261,11 @@ package, mirrored as written, following
 ## Rollout
 
 1. Infrastructure: `actiontext-parity-enrollment-and-package`,
-   `nokogiri-html5-node-mutation-for-actiontext`
+   `nokogiri-html5-node-mutation-for-actiontext`,
+   `actiontext-migration-and-test-database`
 2. Content model: `actiontext-module-fragment-and-conversions`,
    `actiontext-trix-attachment-and-attachment`, `actiontext-attachables`
-3. Models: `actiontext-migration-and-test-database`,
-   `actiontext-content-and-rendering`,
+3. Models: `actiontext-content-and-rendering`,
    `actiontext-record-rich-text-and-attribute`, `actiontext-model-tests-and-fixture-set`,
    `actiontext-encryption`
 4. Views: `actiontext-content-helper-and-views`,
@@ -266,7 +283,8 @@ package, mirrored as written, following
   MariaDB; every skip is a `PERMANENT-SKIP` citing a ruling.
 - Every call gate, the argument gate, the parameter-name gate and the
   extra-surface gate are green for the package.
-- `configuration-test-framework-deprecators` (RFC 0123) is unblocked.
+- ActionText is removed from `configuration-test-framework-deprecators`'
+  (RFC 0123) blocker; the other three gems still hold it.
 
 ## Open questions
 
@@ -275,7 +293,12 @@ package, mirrored as written, following
    `Attached::One` does (CLAUDE.md, `active_storage/attached/one.rb` row),
    with `with_rich_text_<name>` / an explicit load as the caller's remedy. The
    alternative is an async `name` reader, which makes `name=` and `isName`
-   async too.
+   async too. The ruling also covers `name=`: since Rails' setter calls the
+   reader, the recommendation means `record.content = "…"` and
+   `update(content: …)` on a persisted record with `rich_text_content`
+   unloaded raise until the caller loads it. The alternative for the setter
+   alone is an async `setName` (RFC 0209's `setAvatar` shape) that loads the
+   association first.
 2. **A promise-valued `Content#to_s` in a template.** Recommendation:
    `to_s` returns what `render` returns, and TSE's `<%= %>` output step awaits
    a thenable as it already must for any async helper. If TSE does not, the
@@ -294,6 +317,19 @@ package, mirrored as written, following
    `SystemTestCase` page as the locator XPath written in the selector, with
    `Capybara.add_selector` a permanent unported row.
 
+5. **`isName` and `RichText#blank?` are async.** Per "Rendering is async
+   where ActionView's is", `RichText#present?` reaches `Attachable.from_node`
+   through `to_plain_text`, and `has_rich_text`'s `name?` is
+   `rich_text_name.present?` (`attribute.rb:59-61`). Recommendation: keep the
+   Rails call chain, so `isName`, `isBlank`, `isEmpty` and `isPresent` on
+   `RichText` are async, and the `validates :content, presence: true` path
+   in the dummy models awaits them (validations are already async). The
+   alternative, a sync `present?` over `to_html`, changes the answer for a
+   body that holds only attachments.
+
 ## Changelog
 
 - 2026-11-03: initial draft
+- 2026-11-03: review fixes: one sync/async ruling for attachables (open
+  question 5), the setter in open question 1, rollout order, RFC 0123
+  wording, and the system-test-helper initializer moved to its story

@@ -32,6 +32,10 @@ closed-reason: null
 
 ## Acceptance criteria
 
+- This story adds the engine's `action_text.system_test_helper` initializer
+  (`engine.rb:77-82`) at its Rails position between `action_text.renderer`
+  and `action_text.configure`; `actiontext-engine` leaves it out.
+
 - `fillInRichTextarea` / its alias follow the owner's answer to the RFC's
   open question 4; the locator arms match the Rails XPath one for one.
 - The system tests run in the system-test lane with `trix` and

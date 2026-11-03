@@ -43,7 +43,10 @@ ActionText::Content` (`:39`), `delegate :to_s, :nil?, to: :body` (`:40`),
 - `has_rich_text` defines the three members on the generated-association
   module with no string eval (RFC "`has_rich_text` defines methods without
   string eval"); `name?` is `isName`; `name=` is a sync setter.
-- The reader follows the RFC's open question 1 as decided by the owner.
+- The reader and `name=` follow the RFC's open question 1, and `isName` /
+  `RichText`'s delegated predicates follow open question 5, as the owner
+  decides.
+- `before_save` awaits `body.attachables`; `serialize`'s coder stays sync.
 - `before_save`'s `self.embeds =` is `await this.setEmbeds(...)`, the
   activestorage async writer (RFC 0209 Decisions); `grep(ActiveStorage::Blob)`
   is a `filter` on `instanceof Blob`.
