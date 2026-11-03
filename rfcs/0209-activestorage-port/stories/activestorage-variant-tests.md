@@ -1,7 +1,7 @@
 ---
 title: "Port the variant, variant-with-record, representation and transform-job tests"
-status: ready
-updated: 2026-10-29
+status: claimed
+updated: 2026-11-03
 rfc: "0209-activestorage-port"
 cluster: as-variants
 packages: ["activestorage"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 600
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-03T17:42:28Z"
+assignee: "activestorage-variant-tests"
 blocked-by: null
 closed-reason: null
 ---

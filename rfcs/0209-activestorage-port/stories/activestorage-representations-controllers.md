@@ -1,7 +1,7 @@
 ---
 title: "Port the representation base, redirect and proxy controllers"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-11-03
 rfc: "0209-activestorage-port"
 cluster: as-controllers
 packages: ["activestorage"]
@@ -9,9 +9,9 @@ deps: ["activestorage-blobs-controllers-and-streaming", "activestorage-previewer
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9676
+claim: "2026-11-03T17:32:08Z"
+assignee: "activestorage-representations-controllers"
 blocked-by: null
 closed-reason: null
 ---

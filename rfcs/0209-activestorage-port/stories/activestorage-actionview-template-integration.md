@@ -1,7 +1,7 @@
 ---
 title: "Port the image_tag, video_tag and audio_tag integration with attachments"
-status: ready
-updated: 2026-10-29
+status: done
+updated: 2026-11-03
 rfc: "0209-activestorage-port"
 cluster: as-engine
 packages: ["activestorage"]
@@ -9,9 +9,9 @@ deps: ["activestorage-engine", "activestorage-previewers-and-preview"]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9674
+claim: "2026-11-03T17:11:40Z"
+assignee: "activestorage-actionview-template-integration"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "fetch-typed-asserted-read-and-late-blob-macros"
-status: draft
-updated: 2026-11-02
+status: ready
+updated: 2026-11-03
 rfc: "0209-activestorage-port"
 cluster: null
 packages: []

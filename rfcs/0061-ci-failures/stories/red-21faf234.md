@@ -1,6 +1,6 @@
 ---
 title: "Repo Checks failing on main @21faf234"
-status: ready
+status: closed
 updated: 2026-11-03
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-03T17:08:00Z"
+assignee: "red-21faf234"
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a code break: stale-story-references on 21faf234 flagged refs to stories (credentials-config-is-inheritable-options, app-path-expands-to-the-application-root, pathname-answers-read-write-delete, destroy-association-async-job-reads-models-from-register-model) that #9667/#9670 marked done in the shared DB while 21faf234's tree still held the refs; those PRs removed the refs, test passes on origin/main db76c59b."
 ---
 
 ## Context

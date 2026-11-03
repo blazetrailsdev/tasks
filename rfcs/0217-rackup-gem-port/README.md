@@ -19,6 +19,7 @@ related-rfcs:
   - "0142-trailties-surfaced-deviations"
   - "0141-actionpack-surfaced-deviations"
   - "0193-small-gem-ports-parity-100"
+priority: 1
 ---
 
 # RFC 0217 — Rackup

@@ -1,6 +1,6 @@
 ---
 title: "Manifest records files under ignored dirs so a missing one does not exist"
-status: in-progress
+status: done
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null

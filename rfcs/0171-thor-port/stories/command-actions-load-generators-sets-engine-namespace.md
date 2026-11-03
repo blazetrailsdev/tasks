@@ -1,6 +1,6 @@
 ---
 title: "Command::Actions#load_generators sets Generators.namespace for an engine"
-status: in-progress
+status: done
 updated: 2026-11-03
 rfc: "0171-thor-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: trails#9671
+pr: trails#9668
 claim: "2026-11-03T14:57:46Z"
 assignee: "class-paths-table-covers-rails-command"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "extract-ruby-api-records-class-new-constants"
-status: in-progress
+status: done
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "serializable_hash methods: takes Ruby method names (signed_id)"
-status: in-progress
+status: done
 updated: 2026-11-03
 rfc: "0209-activestorage-port"
 cluster: null

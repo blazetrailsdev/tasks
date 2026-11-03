@@ -1,6 +1,6 @@
 ---
 title: "trailmap: store audit reports as Active Storage Disk blobs"
-status: draft
+status: blocked
 updated: 2026-11-03
 rfc: "0136-trailmap"
 cluster: null
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "vendoring activestorage needs a trails bump; any ref since 945a06ff5b fails trailmap's boot in test (boot-eager-loads-only-when-config-eager-load), and after that fix 21 app/ files that define no constant must be made Zeitwerk-clean before eagerLoad=true production boots"
 closed-reason: null
 ---
 

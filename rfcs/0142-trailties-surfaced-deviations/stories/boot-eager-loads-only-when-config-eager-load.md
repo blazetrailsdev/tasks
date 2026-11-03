@@ -1,6 +1,6 @@
 ---
 title: "Boot eager-loads the autoload paths even when config.eagerLoad is false"
-status: draft
+status: closed
 updated: 2026-11-03
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "not a defect: RFC 0213 § 'Loading: everything at boot' rules that setup_main_autoloader eager loads whatever config.eager_load says (sync lookup, async load); trailties CLAUDE.md documents it. The trailmap failure is trailmap's files not defining their constants (trailmap-app-files-define-their-constants)."
 ---
 
 ## Context

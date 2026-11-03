@@ -1,6 +1,6 @@
 ---
 title: "Engine services hook raises on missing storage config (Blob loaded lazily)"
-status: draft
+status: ready
 updated: 2026-11-03
 rfc: "0209-activestorage-port"
 cluster: null

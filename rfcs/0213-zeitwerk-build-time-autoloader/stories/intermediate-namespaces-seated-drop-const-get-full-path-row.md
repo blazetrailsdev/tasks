@@ -1,6 +1,6 @@
 ---
 title: "intermediate-namespaces-seated-drop-const-get-full-path-row"
-status: ready
+status: claimed
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-03T17:01:51Z"
+assignee: "intermediate-namespaces-seated-drop-const-get-full-path-row"
 blocked-by: null
 closed-reason: null
 ---
