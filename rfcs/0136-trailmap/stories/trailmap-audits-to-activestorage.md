@@ -5,7 +5,8 @@ updated: 2026-11-03
 rfc: "0136-trailmap"
 cluster: null
 packages: ["activestorage", "activerecord"]
-deps: []
+deps:
+  - boot-eager-loads-only-when-config-eager-load
 deps-rfc: []
 est-loc: 600
 priority: null
