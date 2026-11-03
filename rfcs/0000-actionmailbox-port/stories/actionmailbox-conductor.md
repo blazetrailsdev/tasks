@@ -39,6 +39,10 @@ rerouting and incinerating inbound emails. It has Rails tests and an owner in
   `app/views/rails/conductor/action_mailbox/inbound_emails/{index,new,show}.html.erb`,
   `inbound_emails/sources/new.html.erb`.
 
+Its routes (`config/routes.rb:18-25`) are drawn by
+`actionmailbox-engine-routes-and-trailties-wiring`; the redirects read them
+through `main_app` url helpers.
+
 Test: `test/controllers/rails/action_mailbox/inbound_emails_controller_test.rb` (4).
 
 ## Acceptance criteria

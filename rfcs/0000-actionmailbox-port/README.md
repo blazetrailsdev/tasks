@@ -147,8 +147,6 @@ are copied verbatim. The relayer test's WebMock calls (`stub_request`,
   `actionmailbox-sendgrid-ingress`) in cluster `amb-ingress-deferred`, and
   their `config/routes.rb:5,7-14` routes are drawn by the story that ports
   each controller.
-- **`lib/action_mailbox/gem_version.rb`'s `Gem::Version`** beyond what
-  activestorage's `gem-version.ts` already does: follow that precedent.
 - **A WebMock port** as a package: see Open question 2.
 - **ActionText**: its own RFC.
 

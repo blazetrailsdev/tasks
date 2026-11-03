@@ -22,7 +22,7 @@ Deferred by repo-owner ruling (2026-11-03): the first wave ports the core and
 the Relay ingress only, and this ingress waits for the second wave.
 
 `vendor/rails/v8.0.2/actionmailbox/app/controllers/action_mailbox/ingresses/mandrill/inbound_emails_controller.rb`
-(86 lines): `X-Mandrill-Signature` (HMAC-SHA1, Base64) over the URL and sorted params, `mandrill_events` JSON, `health_check` action. Its routes are `config/routes.rb`'s mandrill lines in the
+(86 lines): `X-Mandrill-Signature` (HMAC-SHA1, Base64) over the URL and sorted params, `mandrill_events` JSON, `health_check` action. Its routes are `config/routes.rb:9-11` in the
 `/rails/action_mailbox` scope, which this story draws.
 
 Test: `test/controllers/ingresses/mandrill/inbound_emails_controller_test.rb` (5).

@@ -22,7 +22,7 @@ Deferred by repo-owner ruling (2026-11-03): the first wave ports the core and
 the Relay ingress only, and this ingress waits for the second wave.
 
 `vendor/rails/v8.0.2/actionmailbox/app/controllers/action_mailbox/ingresses/sendgrid/inbound_emails_controller.rb`
-(69 lines): `authenticate_by_password`, `params.require(:email)` with the `envelope` JSON's `to` addresses added as `X-Original-To`. Its routes are `config/routes.rb`'s sendgrid lines in the
+(69 lines): `authenticate_by_password`, `params.require(:email)` with the `envelope` JSON's `to` addresses added as `X-Original-To`. Its routes are `config/routes.rb:7` in the
 `/rails/action_mailbox` scope, which this story draws.
 
 Test: `test/controllers/ingresses/sendgrid/inbound_emails_controller_test.rb` (6).
