@@ -1,9 +1,9 @@
 ---
 rfc: "0215-activestorage-cloud-services"
 title: "Port ActiveStorage's S3 and GCS services"
-status: active
+status: draft
 created: 2026-11-02
-updated: 2026-11-02
+updated: 2026-11-03
 owner: "@deanmarano"
 packages:
   - activestorage
