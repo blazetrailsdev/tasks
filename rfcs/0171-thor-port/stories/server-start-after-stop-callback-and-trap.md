@@ -1,6 +1,6 @@
 ---
 title: "server-start-after-stop-callback-and-trap"
-status: ready
+status: in-progress
 updated: 2026-11-03
 rfc: "0171-thor-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9673
+claim: "2026-11-03T16:04:44Z"
+assignee: "constant-residue-excluded-other-packages-receipts"
 blocked-by: null
 closed-reason: null
 ---

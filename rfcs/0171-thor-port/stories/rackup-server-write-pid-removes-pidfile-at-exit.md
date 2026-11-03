@@ -1,6 +1,6 @@
 ---
 title: "rackup-server-write-pid-removes-pidfile-at-exit"
-status: draft
+status: in-progress
 updated: 2026-11-03
 rfc: "0171-thor-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9672
+claim: "2026-11-03T16:48:09Z"
+assignee: "rackup-server-write-pid-removes-pidfile-at-exit"
 blocked-by: null
 closed-reason: null
 ---

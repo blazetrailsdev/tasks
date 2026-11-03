@@ -1,6 +1,6 @@
 ---
 title: "constant-residue-excluded-other-packages-receipts"
-status: ready
+status: blocked
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-03T16:04:44Z"
+assignee: "constant-residue-excluded-other-packages-receipts"
+blocked-by: "Premise: 80 of the excluded keys are real Ruby/Rails constants (Thor, GlobalID, msgpack/net-smtp/mini-magick errors, core-ext reopens, CookieOverflow, Scanner, FormBuilder, Cache::Store). The rails-api extractor leaves them unpaired (Class.new constants, core-class reopens, file mismatches), and a @noRailsEquivalent receipt on them is rejected as REDUNDANT (trails#9665, Canceled). Waiting on extract-ruby-api-records-class-new-constants and sibling pairing fixes."
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "DestroyAssociationAsyncJob#perform resolves both models with constantize"
-status: in-progress
+status: done
 updated: 2026-11-03
 rfc: "0116-activejob-dependent-activerecord-work"
 cluster: null

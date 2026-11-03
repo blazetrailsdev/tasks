@@ -1,6 +1,6 @@
 ---
 title: "credentials-and-encrypted-help-and-bin-run-verified"
-status: in-progress
+status: done
 updated: 2026-11-03
 rfc: "0171-thor-port"
 cluster: null

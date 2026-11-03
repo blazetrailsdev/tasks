@@ -1,6 +1,6 @@
 ---
 title: "bootTrails boots a built app with no cache-store override or chdir"
-status: in-progress
+status: done
 updated: 2026-11-03
 rfc: "0212-trailties-port"
 cluster: null

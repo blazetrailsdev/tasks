@@ -1,6 +1,6 @@
 ---
 title: "port-rackup-server-for-rails-server"
-status: claimed
+status: in-progress
 updated: 2026-11-03
 rfc: "0171-thor-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
+pr: trails#9672
 claim: "2026-11-03T15:22:14Z"
 assignee: "port-rackup-server-for-rails-server"
 blocked-by: null
