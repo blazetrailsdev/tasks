@@ -1,7 +1,7 @@
 ---
 title: "Port Zeitwerk eager_load_dir and load_file tests"
-status: ready
-updated: 2026-11-02
+status: in-progress
+updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-gem
 packages: ["zeitwerk"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9652
+claim: "2026-11-03T02:36:45Z"
+assignee: "zeitwerk-eager-load-dir-and-load-file-tests"
 blocked-by: null
 closed-reason: null
 ---

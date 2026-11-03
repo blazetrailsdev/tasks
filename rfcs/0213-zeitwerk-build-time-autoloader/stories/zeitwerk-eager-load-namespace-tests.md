@@ -1,7 +1,7 @@
 ---
 title: "Port Zeitwerk eager_load_namespace tests"
-status: ready
-updated: 2026-11-02
+status: claimed
+updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-gem
 packages: ["zeitwerk"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 450
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-03T02:56:40Z"
+assignee: "zeitwerk-eager-load-namespace-tests"
 blocked-by: null
 closed-reason: null
 ---

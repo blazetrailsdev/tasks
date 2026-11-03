@@ -1,6 +1,6 @@
 ---
 title: "rails-to-trails-repo-wide-rename"
-status: draft
+status: in-progress
 updated: 2026-11-03
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9650
+claim: "2026-11-03T02:19:49Z"
+assignee: "rails-to-trails-repo-wide-rename"
 blocked-by: null
 closed-reason: null
 ---

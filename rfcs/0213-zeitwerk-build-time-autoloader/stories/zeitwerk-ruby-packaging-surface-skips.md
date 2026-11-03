@@ -1,7 +1,7 @@
 ---
 title: "Receipt Zeitwerk's Ruby packaging surface as permanent skips"
-status: ready
-updated: 2026-11-02
+status: in-progress
+updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-gem
 packages: ["scripts", "zeitwerk"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9651
+claim: "2026-11-03T02:17:07Z"
+assignee: "zeitwerk-callbacks-top-level-utf8-logging-tests"
 blocked-by: null
 closed-reason: null
 ---

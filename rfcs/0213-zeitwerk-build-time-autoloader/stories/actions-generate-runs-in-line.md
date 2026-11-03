@@ -1,7 +1,7 @@
 ---
 title: "actions-generate-runs-in-line"
-status: in-progress
-updated: 2026-11-02
+status: done
+updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
 packages: []
