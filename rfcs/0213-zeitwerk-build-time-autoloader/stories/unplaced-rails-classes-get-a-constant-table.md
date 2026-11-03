@@ -5,7 +5,8 @@ updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
 packages: []
-deps: []
+deps:
+  - lazy-adapter-files-carry-their-own-constant-tables
 deps-rfc: []
 est-loc: null
 priority: null
