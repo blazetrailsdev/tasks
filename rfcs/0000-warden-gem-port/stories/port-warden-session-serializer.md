@@ -34,8 +34,8 @@ ports the reader and its spec.
 
 Specs: `spec/warden/session_serializer_spec.rb` (7 examples) and
 `spec/warden/scoped_session_serializer.rb` (9 examples; no `_spec` suffix, so
-rspec's default pattern never runs it, see `warden-package-setup`). Port both
-if `parity:test` lists the second; the scoped examples call
+rspec's default pattern never runs it, but `warden-package-setup` makes the
+extractor list it). Port both; the scoped examples call
 `Warden::Manager.serialize_into_session`, so they land `it.skip` naming
 `port-warden-manager`, which un-skips them.
 

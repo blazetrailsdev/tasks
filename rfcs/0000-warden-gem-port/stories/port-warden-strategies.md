@@ -46,6 +46,10 @@ closed-reason: null
   (`spec/spec_helper.rb:21-25`); port them under
   `packages/warden/src/test-helpers/strategies/` with a `loadStrategies()`
   matching `load_strategies`.
+- Spec support: `spec/helpers/request_helper.rb:1-52` starts here as
+  `packages/warden/src/test-helpers/request-helper.ts` with `env_with_params`
+  (it needs only `Rack::MockRequest`); `port-warden-manager` adds the
+  `Manager`-dependent `setup_rack`.
 - Spec: `spec/warden/strategies_spec.rb` (9 examples) here; `base_spec.rb` is
   `port-warden-strategies-base-spec`.
 

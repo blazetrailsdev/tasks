@@ -5,7 +5,7 @@ updated: 2026-11-03
 rfc: "0000-warden-gem-port"
 cluster: warden-specs
 packages: ["warden"]
-deps: ["port-warden-manager"]
+deps: ["port-warden-strategies"]
 deps-rfc: []
 est-loc: 340
 priority: null
@@ -23,7 +23,7 @@ closed-reason: null
 `fail`, `halt!` / `pass`, `redirect!` (Location building with
 `Rack::Utils.build_nested_query`, `:permanent` → 301), `custom!`, `store?`,
 `valid?`, and `_run!` performing once. Uses `env_with_params` from the request
-helper (`port-warden-manager`) and `RAS = Warden::Strategies` defined at the
+helper, which `port-warden-strategies` creates, and `RAS = Warden::Strategies` defined at the
 top of the spec.
 
 ## Acceptance criteria

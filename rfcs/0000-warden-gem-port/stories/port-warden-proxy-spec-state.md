@@ -5,7 +5,7 @@ updated: 2026-11-03
 rfc: "0000-warden-gem-port"
 cluster: warden-specs
 packages: ["warden"]
-deps: ["port-warden-manager"]
+deps: ["port-warden-manager", "port-warden-proxy-spec-authentication"]
 deps-rfc: []
 est-loc: 560
 priority: null
@@ -20,10 +20,10 @@ closed-reason: null
 
 `spec/warden/proxy_spec.rb` is 1,081 lines and 83 examples, split into three
 stories by top-level `describe` so each fits the PR ceiling. This story owns
-`:645-1081`: messages, invalid strategies, authenticated?, unauthenticated?, attributes, dynamic default_strategies, default scope options, asset_request? (30 examples). The `before` at `:3-19` (loading the spec
-strategies and building `@basic_app`) is shared; the first of the three
-stories to land creates `proxy.test.ts` with it and the others add their
-`describe` blocks to that file.
+`:645-1081`: messages, invalid strategies, authenticated?, unauthenticated?, attributes, dynamic default_strategies, default scope options, asset_request? (30 examples). The `before` at `:3-19` is shared and lands with
+`port-warden-proxy-spec-authentication`, which creates `proxy.test.ts`; this
+story depends on it and only appends its own `describe` blocks. One test file
+mirrors one spec file, which is what `parity:test`'s mapping expects.
 
 Uses `setup_rack` / `env_with_params` (`port-warden-manager`) and the spec
 strategies under `test-helpers/strategies/` (`port-warden-strategies`).

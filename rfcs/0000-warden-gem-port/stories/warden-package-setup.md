@@ -48,8 +48,9 @@ libEntryFile: "lib/warden.rb", testPath: "spec" }`, comparison on. The
   The mapping arm strips `warden/` and maps `_spec.rb` to `.test.ts`
   (`spec/warden/strategies/base_spec.rb` to `strategies/base.test.ts`).
   `spec/warden/scoped_session_serializer.rb` has no `_spec` suffix (rspec's
-  default pattern skips it, `.rspec` sets none); map it to
-  `scoped-session-serializer.test.ts` if the Ruby extractor lists it.
+  default pattern skips it, `.rspec` sets none); the Ruby
+  extractor must list it (widen its glob for this source if needed) and map it
+  to `scoped-session-serializer.test.ts`, so RFC Verification's 230 holds.
 - **CI.** `.github/workflows/ci.yml`: `RACK_PKGS_RE` gains `warden`, the
   "Rack tests" step gains `packages/warden`, the non-AR coverage list gains it;
   `scripts/ci-suite-coverage.test.ts` stays green.
@@ -63,6 +64,7 @@ libEntryFile: "lib/warden.rb", testPath: "spec" }`, comparison on. The
 - `packages/warden` builds; a plain-node import of the built
   `packages/warden/dist/index.js` succeeds.
 - `pnpm parity:api` and `pnpm parity:test` list `warden` (0 ported is the
-  honest day-one number).
+  honest day-one number), and `parity:test` counts 230 Ruby examples for it,
+  `spec/warden/scoped_session_serializer.rb`'s 9 included.
 - A change under `packages/warden/` triggers the Rack lane, and the lane runs
   its tests.

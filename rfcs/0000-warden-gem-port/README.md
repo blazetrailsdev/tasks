@@ -96,23 +96,23 @@ relative to the gem root.
 | `lib/warden/test/mock.rb`           |    69 | `port-warden-test-helpers`                                                                                      |
 | `lib/warden/test/warden_helpers.rb` |    44 | `port-warden-test-helpers`                                                                                      |
 
-| Spec file                                           | Examples | Story                                   |
-| --------------------------------------------------- | -------: | --------------------------------------- |
-| `spec/helpers/request_helper.rb`                    |  support | `port-warden-manager`                   |
-| `spec/helpers/strategies/*.rb` (7 files)            |  support | `port-warden-strategies`                |
-| `spec/warden/config_spec.rb`                        |        7 | `port-warden-config`                    |
-| `spec/warden/errors_spec.rb`                        |        7 | `port-warden-errors`                    |
-| `spec/warden/strategies_spec.rb`                    |        9 | `port-warden-strategies`                |
-| `spec/warden/strategies/base_spec.rb`               |       32 | `port-warden-strategies-base-spec`      |
-| `spec/warden/session_serializer_spec.rb`            |        7 | `port-warden-session-serializer`        |
-| `spec/warden/scoped_session_serializer.rb`          |        9 | `port-warden-session-serializer`        |
-| `spec/warden/manager_spec.rb`                       |       24 | `port-warden-manager-spec`              |
-| `spec/warden/hooks_spec.rb`                         |       31 | `port-warden-hooks-spec`                |
-| `spec/warden/authenticated_data_store_spec.rb`      |        8 | `port-warden-hooks-spec`                |
-| `spec/warden/proxy_spec.rb` `:1-351`                |       27 | `port-warden-proxy-spec-authentication` |
-| `spec/warden/proxy_spec.rb` `:352-644`              |       26 | `port-warden-proxy-spec-users`          |
-| `spec/warden/proxy_spec.rb` `:645-1081`             |       30 | `port-warden-proxy-spec-state`          |
-| `spec/warden/test/{helpers,test_mode,mock}_spec.rb` |       13 | `port-warden-test-helpers`              |
+| Spec file                                           | Examples | Story                                                                              |
+| --------------------------------------------------- | -------: | ---------------------------------------------------------------------------------- |
+| `spec/helpers/request_helper.rb`                    |  support | `port-warden-strategies` (`env_with_params`); `port-warden-manager` (`setup_rack`) |
+| `spec/helpers/strategies/*.rb` (7 files)            |  support | `port-warden-strategies`                                                           |
+| `spec/warden/config_spec.rb`                        |        7 | `port-warden-config`                                                               |
+| `spec/warden/errors_spec.rb`                        |        7 | `port-warden-errors`                                                               |
+| `spec/warden/strategies_spec.rb`                    |        9 | `port-warden-strategies`                                                           |
+| `spec/warden/strategies/base_spec.rb`               |       32 | `port-warden-strategies-base-spec`                                                 |
+| `spec/warden/session_serializer_spec.rb`            |        7 | `port-warden-session-serializer`                                                   |
+| `spec/warden/scoped_session_serializer.rb`          |        9 | `port-warden-session-serializer`                                                   |
+| `spec/warden/manager_spec.rb`                       |       24 | `port-warden-manager-spec`                                                         |
+| `spec/warden/hooks_spec.rb`                         |       31 | `port-warden-hooks-spec`                                                           |
+| `spec/warden/authenticated_data_store_spec.rb`      |        8 | `port-warden-hooks-spec`                                                           |
+| `spec/warden/proxy_spec.rb` `:1-351`                |       27 | `port-warden-proxy-spec-authentication`                                            |
+| `spec/warden/proxy_spec.rb` `:352-644`              |       26 | `port-warden-proxy-spec-users`                                                     |
+| `spec/warden/proxy_spec.rb` `:645-1081`             |       30 | `port-warden-proxy-spec-state`                                                     |
+| `spec/warden/test/{helpers,test_mode,mock}_spec.rb` |       13 | `port-warden-test-helpers`                                                         |
 
 Out of scope in the gem tree: `Rakefile`, `Gemfile`, `warden.gemspec`,
 `.github/`, `CHANGELOG.md` (no runtime code).
@@ -199,12 +199,13 @@ receipt per CLAUDE.md § "Fidelity is the job"; none is expected.
 1. Setup — `warden-package-setup`.
 2. Leaves, in parallel — `port-warden-config`, `port-warden-errors`,
    `port-warden-hooks`, `port-warden-strategies`,
-   `port-warden-session-serializer`.
+   `port-warden-session-serializer`; then `port-warden-strategies-base-spec`.
 3. Core — `port-warden-proxy`, then `port-warden-manager`.
 4. Specs and test support, in parallel — `port-warden-manager-spec`,
-   `port-warden-hooks-spec`, `port-warden-strategies-base-spec`,
-   `port-warden-proxy-spec-authentication`, `port-warden-proxy-spec-users`,
-   `port-warden-proxy-spec-state`, `port-warden-test-helpers`.
+   `port-warden-hooks-spec`, `port-warden-proxy-spec-authentication`,
+   `port-warden-test-helpers`; then `port-warden-proxy-spec-users` and
+   `port-warden-proxy-spec-state` in parallel (both append to the
+   `proxy.test.ts` the authentication story creates).
 5. Wiring — `actionpack-rescue-paths-rethrow-kernel-throw`,
    `mount-warden-manager-in-trails-middleware`,
    `warden-worked-example-integration-test`.
