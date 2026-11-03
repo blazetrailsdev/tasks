@@ -19,6 +19,7 @@ packages:
   - "ruby-compat"
   - "actionview"
   - "trails-tsc"
+  - "zeitwerk"
 clusters:
   - "boot"
   - "generators"
