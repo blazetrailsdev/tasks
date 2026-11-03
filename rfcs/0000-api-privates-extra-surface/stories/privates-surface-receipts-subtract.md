@@ -19,7 +19,7 @@ closed-reason: null
 ## Context
 
 The RFC's Design, "Receipts". The public lane's STALE check
-(`scripts/api-compare/extra-surface.ts:3268-3290`) rejects a receipt on any
+(`gateStale`, `scripts/api-compare/extra-surface.ts:3265-3277`) rejects a receipt on any
 internal or `_` name, because that lane never counts it; RFC 0025's draft
 story `allow-no-rails-equivalent-tags-on-private-members` records the failure
 on `relation.ts`'s `_loadAsyncPromise`, `_asyncLoad`, `_loadToken`.

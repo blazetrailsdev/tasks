@@ -32,7 +32,11 @@ tag's shape.
 - An `aliasOf` helper row is scored through its target only.
 - A `@perf`-tagged declaration is scored like any other (credited, moved or
   novel); nothing is subtracted for the tag.
+- The extractor records `@perf` on a `MethodInfo` (today `perf` is only in
+  its known-tag list, `scripts/api-compare/extract-ts-api.ts:262-269`, and is
+  not carried on the record), for members and for `extractFileLocalHelpers`
+  rows.
 - A `perf` sub-count of `novel` + `moved` rows carrying `@perf` is printed and
-  emitted in JSON (the extractor records the tag if it does not already).
+  emitted in JSON.
 - `countTsInternalNames` and the public lane are unchanged; a test pins that
   `parity:api:extra`'s `Intrnl` total is unchanged.

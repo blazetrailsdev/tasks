@@ -209,9 +209,12 @@ compile-time only"`); this lane reads TS modifiers and JSDoc only.
 ## Verification
 
 - `pnpm parity:api:privates --json` reports every package `parity:api:extra`
-  reports, with the five columns plus `perf`, and the `Intrnl` total of the
-  public lane equals this lane's population minus the `_`-prefixed rows and
-  the file-local helpers (a cross-check pinned in a test).
+  reports, with the five columns plus `perf`. A test pins the cross-check
+  against the public lane: file-local helpers already reach
+  `countTsInternalNames` through `fileFunctions`
+  (`scripts/api-compare/extract-ts-api.ts:1086-1088`), so the public lane's
+  `Intrnl` total equals this lane's population minus its `_`-prefixed rows,
+  over the files `extra-surface.ts:2638` does not skip as path-mirror folds.
 - The three `relation.ts` members from RFC 0025's story can carry a receipt
   without reddening either lane.
 - Wave 2: the README holds a dated baseline table per package.

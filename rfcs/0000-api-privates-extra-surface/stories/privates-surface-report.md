@@ -43,6 +43,10 @@ gathering to reuse is `collectAllowedNames` (`extra-surface.ts`, the loop at
 - A name is `credited` only by a Ruby private/protected method of the
   mirrored `.rb`; otherwise `moved` (a Ruby method elsewhere in the gem) or
   `novel`. A `_` name is matched with its leading `_` stripped once.
+- The public lane's included-module walk drops Ruby `private` methods of an
+  included owner (`extra-surface.ts:1816-1823`, inside `collectAllowedNames`
+  at `:1648`); the privates lane keeps them, since `include` makes them
+  private methods of the includer, with a test.
 - The Ruby-side walk is shared with `extra-surface.ts` (one function
   parameterised by visibility), not copied.
 - Unit tests in `scripts/api-compare/` cover each population kind and each
