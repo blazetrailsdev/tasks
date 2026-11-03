@@ -1,6 +1,6 @@
 ---
 title: "Receipt Zeitwerk's Ruby packaging surface as permanent skips"
-status: in-progress
+status: done
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: zw-gem

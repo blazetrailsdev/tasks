@@ -1,6 +1,6 @@
 ---
 title: "delete-register-model-definition"
-status: draft
+status: claimed
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-03T03:56:40Z"
+assignee: "delete-register-model-definition"
 blocked-by: null
 closed-reason: null
 ---

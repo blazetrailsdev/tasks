@@ -1,6 +1,6 @@
 ---
 title: "constant-tables-written-from-the-walk"
-status: draft
+status: in-progress
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9655
+claim: "2026-11-03T03:36:43Z"
+assignee: "constant-tables-written-from-the-walk"
 blocked-by: null
 closed-reason: null
 ---

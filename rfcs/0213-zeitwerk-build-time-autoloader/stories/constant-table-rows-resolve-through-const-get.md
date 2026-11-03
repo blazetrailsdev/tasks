@@ -1,6 +1,6 @@
 ---
 title: "Every constant table row resolves through constGet"
-status: draft
+status: in-progress
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9654
+claim: "2026-11-03T03:16:42Z"
+assignee: "activerecord-tests-computed-name-seats-converge"
 blocked-by: null
 closed-reason: null
 ---
