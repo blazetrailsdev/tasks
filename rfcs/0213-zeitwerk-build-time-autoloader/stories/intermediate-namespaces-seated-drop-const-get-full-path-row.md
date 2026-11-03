@@ -5,7 +5,8 @@ updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
 packages: []
-deps: []
+deps:
+  - gem-namespaces-seated-drop-const-get-full-path-row
 deps-rfc: []
 est-loc: 300
 priority: null
