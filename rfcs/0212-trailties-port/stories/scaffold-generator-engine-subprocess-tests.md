@@ -5,7 +5,8 @@ updated: 2026-11-02
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - trailties-plugin-generator-part-2-and-plugin-command
 deps-rfc: []
 est-loc: 250
 priority: null
