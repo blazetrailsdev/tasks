@@ -7,6 +7,8 @@ updated: 2026-11-02
 owner: "@deanmarano"
 packages:
   - "activejob"
+clusters:
+  - "activejob"
 ---
 
 The standing bucket for activejob deviations from Rails found after the package
