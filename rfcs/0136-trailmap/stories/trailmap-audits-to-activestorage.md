@@ -7,6 +7,7 @@ cluster: null
 packages: ["activestorage", "activerecord"]
 deps:
   - trailmap-app-files-define-their-constants
+  - trailmap-bump-trails-to-the-autoloader-importer
 deps-rfc: []
 est-loc: 600
 priority: null
