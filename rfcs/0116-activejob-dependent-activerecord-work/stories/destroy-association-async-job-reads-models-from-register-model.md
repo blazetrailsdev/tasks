@@ -5,8 +5,7 @@ updated: 2026-10-29
 rfc: "0116-activejob-dependent-activerecord-work"
 cluster: null
 packages: []
-deps:
-  - register-x-registries-gain-a-read-side
+deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
