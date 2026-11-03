@@ -8,6 +8,8 @@ owner: "@deanmarano"
 packages:
   - activestorage
   - ruby-compat
+  - "activerecord"
+  - "trailties"
 clusters:
   - as-infra
   - as-services
