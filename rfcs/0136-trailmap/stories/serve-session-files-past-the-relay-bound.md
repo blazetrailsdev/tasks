@@ -5,7 +5,9 @@ updated: 2026-10-30
 rfc: "0136-trailmap"
 cluster: null
 packages: []
-deps: []
+deps:
+  - controller-cannot-respond-with-a-readable-stream-body
+  - no-worker-adapter-for-cpu-bound-work
 deps-rfc: []
 est-loc: 80
 priority: null
