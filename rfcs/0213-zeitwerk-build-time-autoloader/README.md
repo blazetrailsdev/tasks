@@ -269,6 +269,19 @@ initializer (`vendor/rails/v8.0.2/railties/lib/rails/application/finisher.rb:76-
 `NameError` until `await loader.load_file(path)` runs, which is the one
 observable difference from Ruby.
 
+An application hands the loader its own `import()` through `Loader#importer`
+(`trails new`'s `config/environment.ts` sets `loader.importer = (url) =>
+import(url)` on every loader). A host that runs application code in a module
+graph of its own, such as vitest, would otherwise get a second instance of each
+class: `@blazetrails/zeitwerk` is an externalized dependency there, so its own
+`import()` is Node's, while a test imports the same file through vite. An
+`import()` written in the application resolves in whichever graph loaded the
+application, so the class the loader seats is the class the test imported. The
+generated `imports.generated.js` table is not used for this: it is written by
+`trails build` and goes stale as soon as a file is added after the build. The
+URL handed to the importer carries the reload generation, so a reload goes
+through it too.
+
 ### Reload
 
 `reload` is async, and Rails' awaits it. Its structure is Zeitwerk's: `unload`,
