@@ -5,12 +5,7 @@ updated: 2026-11-03
 rfc: "0000-warden-gem-port"
 cluster: warden-setup
 packages: ["warden"]
-deps:
-  [
-    "rack-test-package-skeleton",
-    "enroll-rack-test-in-compare-tooling",
-    "register-rack-test-in-ci-lanes",
-  ]
+deps: []
 deps-rfc: []
 est-loc: 320
 priority: null
@@ -58,8 +53,8 @@ libEntryFile: "lib/warden.rb", testPath: "spec" }`, comparison on. The
 - **CI.** `.github/workflows/ci.yml`: `RACK_PKGS_RE` gains `warden`, the
   "Rack tests" step gains `packages/warden`, the non-AR coverage list gains it;
   `scripts/ci-suite-coverage.test.ts` stays green.
-- **Constants.** A `constants.generated.ts` for the package if the generator
-  requires one per enrolled package (rack-test has one).
+- **Constants.** `packages/warden/src/constants.generated.ts`, generated the
+  way `packages/rack-test/src/constants.generated.ts` is.
 
 ## Acceptance criteria
 

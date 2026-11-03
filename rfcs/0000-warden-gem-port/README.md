@@ -45,7 +45,7 @@ is **not** scoped: no Devise story is filed by this RFC.
   A trails Devise port has nothing to stand on until warden exists.
 - **It is small and its prerequisites are met.** lib is 1,390 Ruby lines in 15
   files, about 127 `def`s, one runtime dependency (`rack`), an acyclic require
-  graph and no I/O. The spec suite is 2,924 lines, 233 examples in 13 files.
+  graph and no I/O. The spec suite is 2,924 lines, 230 examples in 13 files.
   The earlier codegen audit
   (`~/.btwhooks/data/github/blazetrailsdev/trails/audits/warden-codegen-20260914T170853Z.md`)
   named `catch(:warden)` / `throw(:warden, …)` as the blocking idiom. RFC 0148
@@ -109,9 +109,9 @@ relative to the gem root.
 | `spec/warden/manager_spec.rb`                       |       24 | `port-warden-manager-spec`              |
 | `spec/warden/hooks_spec.rb`                         |       31 | `port-warden-hooks-spec`                |
 | `spec/warden/authenticated_data_store_spec.rb`      |        8 | `port-warden-hooks-spec`                |
-| `spec/warden/proxy_spec.rb` `:1-351`                |      ~30 | `port-warden-proxy-spec-authentication` |
-| `spec/warden/proxy_spec.rb` `:352-644`              |      ~25 | `port-warden-proxy-spec-users`          |
-| `spec/warden/proxy_spec.rb` `:645-1081`             |      ~28 | `port-warden-proxy-spec-state`          |
+| `spec/warden/proxy_spec.rb` `:1-351`                |       27 | `port-warden-proxy-spec-authentication` |
+| `spec/warden/proxy_spec.rb` `:352-644`              |       26 | `port-warden-proxy-spec-users`          |
+| `spec/warden/proxy_spec.rb` `:645-1081`             |       30 | `port-warden-proxy-spec-state`          |
 | `spec/warden/test/{helpers,test_mode,mock}_spec.rb` |       13 | `port-warden-test-helpers`              |
 
 Out of scope in the gem tree: `Rakefile`, `Gemfile`, `warden.gemspec`,
@@ -214,7 +214,7 @@ receipt per CLAUDE.md § "Fidelity is the job"; none is expected.
 - `parity:api` for `warden`: 100% of the gem's public methods matched
   (about 127 `def`s), with `parity:api:extra --package warden` reporting no
   untagged extra.
-- `parity:test` for `warden`: all 233 examples matched, none skipped except
+- `parity:test` for `warden`: all 230 examples matched, none skipped except
   under a cited `PERMANENT-SKIP:`.
 - The worked-example integration test passes on CI in the trailties lane.
 

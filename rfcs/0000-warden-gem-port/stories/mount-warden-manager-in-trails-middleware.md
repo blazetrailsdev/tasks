@@ -18,8 +18,10 @@ closed-reason: null
 
 ## Context
 
-Rails ships no Warden wiring (`grep -rn warden vendor/rails/v8.0.2` finds
-only Gemfile comments, if anything). What this mirrors is Devise's railtie,
+Rails ships no Warden wiring: nothing under
+`vendor/rails/v8.0.2/*/lib` names warden, and the one test that does,
+`actionpack/test/controller/renderer_test.rb:90-92`, only passes an arbitrary
+`warden:` env key to `Renderer`. What this mirrors is Devise's railtie,
 `config.app_middleware.use Warden::Manager do |config| Devise.warden_config =
 config end` (devise 4.9.4 `lib/devise/rails.rb:11-13`), and the application
 spelling `config.middleware.use Warden::Manager do |manager| … end` from

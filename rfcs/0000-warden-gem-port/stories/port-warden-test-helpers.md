@@ -49,5 +49,5 @@ will consume, so `login_as` must work from a trails integration test
 ## Acceptance criteria
 
 - `test/helpers.ts`, `test/mock.ts`, `test/warden-helpers.ts` and
-  `Warden.testMode` port every `def`; `parity:api` credits all four files.
+  `Warden.testModeBang` port every `def`; `parity:api` credits all four files.
 - The three spec files port all 13 examples by name.

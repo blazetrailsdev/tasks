@@ -20,7 +20,7 @@ closed-reason: null
 
 `spec/warden/proxy_spec.rb` is 1,081 lines and 83 examples, split into three
 stories by top-level `describe` so each fits the PR ceiling. This story owns
-`:1-351`: authentication, authentication cache (~30 examples). The `before` at `:3-19` (loading the spec
+`:1-351`: authentication, authentication cache (27 examples). The `before` at `:3-19` (loading the spec
 strategies and building `@basic_app`) is shared; the first of the three
 stories to land creates `proxy.test.ts` with it and the others add their
 `describe` blocks to that file.
