@@ -1,13 +1,13 @@
 ---
-title: "active-storage-models-call-has-one-attached-directly"
+title: "VariantRecord and Blob::Representable call has_one_attached directly"
 status: draft
 updated: 2026-11-03
 rfc: "0209-activestorage-port"
 cluster: null
-packages: []
+packages: [activestorage]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null
