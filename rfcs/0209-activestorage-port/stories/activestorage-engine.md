@@ -1,7 +1,7 @@
 ---
 title: "Port ActiveStorage::Engine"
-status: ready
-updated: 2026-10-29
+status: claimed
+updated: 2026-11-03
 rfc: "0209-activestorage-port"
 cluster: as-engine
 packages: ["activestorage"]
@@ -15,8 +15,8 @@ deps-rfc: []
 est-loc: 450
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-03T12:56:52Z"
+assignee: "activestorage-engine"
 blocked-by: null
 closed-reason: null
 ---

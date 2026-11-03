@@ -1,6 +1,6 @@
 ---
 title: "Honor ERB's %%> literal in .tt templates"
-status: draft
+status: ready
 updated: 2026-11-03
 rfc: "0212-trailties-port"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "api-app-generator-update-tests-and-initializer-deletes"
-status: draft
-updated: 2026-11-02
+status: ready
+updated: 2026-11-03
 rfc: "0212-trailties-port"
 cluster: null
 packages: []

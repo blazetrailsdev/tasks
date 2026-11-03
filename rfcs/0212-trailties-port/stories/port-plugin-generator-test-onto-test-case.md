@@ -1,7 +1,7 @@
 ---
 title: "port-plugin-generator-test-onto-test-case"
-status: draft
-updated: 2026-11-02
+status: ready
+updated: 2026-11-03
 rfc: "0212-trailties-port"
 cluster: null
 packages: []

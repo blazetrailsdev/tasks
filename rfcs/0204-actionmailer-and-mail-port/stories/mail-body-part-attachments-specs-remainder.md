@@ -1,7 +1,7 @@
 ---
 title: "mail-body-part-attachments-specs-remainder"
-status: draft
-updated: 2026-11-02
+status: ready
+updated: 2026-11-03
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
 packages: []

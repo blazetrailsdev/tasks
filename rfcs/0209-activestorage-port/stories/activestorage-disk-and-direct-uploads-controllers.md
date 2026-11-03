@@ -1,7 +1,7 @@
 ---
 title: "Port DiskController and DirectUploadsController"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-11-03
 rfc: "0209-activestorage-port"
 cluster: as-controllers
 packages: ["activestorage"]
@@ -9,9 +9,9 @@ deps: ["activestorage-routes-and-controller-concerns"]
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9661
+claim: "2026-11-03T12:36:52Z"
+assignee: "activestorage-disk-and-direct-uploads-controllers"
 blocked-by: null
 closed-reason: null
 ---

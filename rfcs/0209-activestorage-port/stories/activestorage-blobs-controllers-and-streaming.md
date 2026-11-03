@@ -1,7 +1,7 @@
 ---
 title: "Port the blob redirect and proxy controllers and the Streaming concern"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-11-03
 rfc: "0209-activestorage-port"
 cluster: as-controllers
 packages: ["activestorage"]
@@ -9,9 +9,9 @@ deps: ["activestorage-routes-and-controller-concerns"]
 deps-rfc: []
 est-loc: 550
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9662
+claim: "2026-11-03T12:16:45Z"
+assignee: "activestorage-blobs-controllers-and-streaming"
 blocked-by: null
 closed-reason: null
 ---
