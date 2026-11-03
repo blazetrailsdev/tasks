@@ -1,6 +1,6 @@
 ---
 title: "activestorage-attached-preview-tests"
-status: claimed
+status: in-progress
 updated: 2026-11-03
 rfc: "0209-activestorage-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9659
 claim: "2026-11-03T04:56:39Z"
 assignee: "activestorage-attached-preview-tests"
 blocked-by: null
