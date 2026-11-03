@@ -5,7 +5,8 @@ updated: 2026-11-03
 rfc: "0171-thor-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - port-rackup-server-for-rails-server
 deps-rfc: []
 est-loc: null
 priority: null
