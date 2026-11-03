@@ -5,7 +5,7 @@ updated: 2026-11-03
 rfc: "0000-actiontext-port"
 cluster: at-models
 packages: ["actiontext"]
-deps: ["actiontext-content-and-rendering"]
+deps: ["actiontext-record-rich-text-and-attribute"]
 deps-rfc: []
 est-loc: 450
 priority: null

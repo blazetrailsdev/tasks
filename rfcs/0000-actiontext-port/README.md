@@ -248,8 +248,8 @@ package, mirrored as written, following
 2. Content model: `actiontext-module-fragment-and-conversions`,
    `actiontext-trix-attachment-and-attachment`, `actiontext-attachables`
 3. Models: `actiontext-migration-and-test-database`,
-   `actiontext-record-rich-text-and-attribute`,
-   `actiontext-content-and-rendering`, `actiontext-model-tests-and-fixture-set`,
+   `actiontext-content-and-rendering`,
+   `actiontext-record-rich-text-and-attribute`, `actiontext-model-tests-and-fixture-set`,
    `actiontext-encryption`
 4. Views: `actiontext-content-helper-and-views`,
    `actiontext-tag-helper-and-form-builder`

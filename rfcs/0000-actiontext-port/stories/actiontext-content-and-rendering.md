@@ -5,7 +5,7 @@ updated: 2026-11-03
 rfc: "0000-actiontext-port"
 cluster: at-content
 packages: ["actiontext"]
-deps: ["actiontext-attachables", "actiontext-record-rich-text-and-attribute"]
+deps: ["actiontext-attachables"]
 deps-rfc: []
 est-loc: 500
 priority: null
@@ -45,5 +45,6 @@ instance_accessor: false`, `delegate :render, to: :class`,
 - `==` keeps both arms, including the subclass arm comparing `to_s`.
 - `inspect` uses `truncate(25)` and `rbInspect`.
 - `content_test.rb`'s 25 tests pass, each skip a `PERMANENT-SKIP` citing a
-  ruling (the `deconstruct` pattern-matching tests cite CLAUDE.md § "Ruby
-  pattern matching has no port").
+  ruling (the rightward-pattern test at `content_test.rb:228`, `content =>
+[h1, div]`, cites CLAUDE.md § "Ruby pattern matching has no port"; the
+  test's other assertions are still ported).

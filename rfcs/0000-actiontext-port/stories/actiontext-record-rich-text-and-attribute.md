@@ -8,7 +8,7 @@ packages: ["actiontext"]
 deps:
   [
     "actiontext-migration-and-test-database",
-    "actiontext-trix-attachment-and-attachment",
+    "actiontext-content-and-rendering",
     "activestorage-attached-many",
   ]
 deps-rfc: []
