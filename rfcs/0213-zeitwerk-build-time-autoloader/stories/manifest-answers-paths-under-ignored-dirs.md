@@ -1,6 +1,6 @@
 ---
 title: "Manifest answers a path under an ignored directory as ignored"
-status: in-progress
+status: done
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null

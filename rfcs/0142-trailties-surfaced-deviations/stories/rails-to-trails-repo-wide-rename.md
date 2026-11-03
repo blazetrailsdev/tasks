@@ -1,6 +1,6 @@
 ---
 title: "rails-to-trails-repo-wide-rename"
-status: in-progress
+status: done
 updated: 2026-11-03
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

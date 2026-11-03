@@ -1,6 +1,6 @@
 ---
 title: "activerecord tests: converge computed-name constSet seats onto Rails' named or anonymous classes"
-status: in-progress
+status: done
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "reconcile-register-model-retirement-with-manifest"
-status: in-progress
+status: done
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: trails#9658
+pr: trails#9656
 claim: "2026-11-03T04:36:40Z"
 assignee: "reconcile-register-model-retirement-with-manifest"
 blocked-by: null
