@@ -5,7 +5,8 @@ updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
 packages: []
-deps: []
+deps:
+  - register-x-retires-from-activerecord-tests
 deps-rfc: []
 est-loc: null
 priority: null
