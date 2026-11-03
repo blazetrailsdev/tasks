@@ -25,4 +25,4 @@ RFC 0213 § "`registerX` retires". About 150 sites outside activerecord.
 ## Acceptance criteria
 
 - All remaining test calls are converted.
-- `registerController`, `registerJob`, `registerChannel`, `registerConnection` are deleted; `registerModel` is kept: once `register-x-retires-from-activerecord-tests` lands its only caller is the generated model manifest (owner ruling, trails#9644; `generated-model-manifest-is-a-build-artifact`).
+- `registerController`, `registerJob`, `registerChannel`, `registerConnection` are deleted; `registerModel` is deleted (trails#9656); the generated model manifest seats with `Object.assign(TopLevel, { ... })`.

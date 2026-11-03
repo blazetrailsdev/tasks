@@ -379,17 +379,12 @@ sweeps.
 
 ### `registerX` retires
 
-`registerController`, `registerJob`, `registerChannel` and
+`registerModel`, `registerController`, `registerJob`, `registerChannel` and
 `registerConnection` retire. Their read of a name is `constantize`, and their
-write is the loader's seat.
-
-`registerModel` stays, as the one call the generated model manifest makes
-(`packages/activerecord-cli/src/generate-manifest.ts`, `renderManifest`). The
-repo owner chose that on trails#9644 and rejected a separately named seat. The
-manifest is a build artifact, not committed
-(`generated-model-manifest-is-a-build-artifact`), so `registerModel` has no
-caller in hand-written source or tests: every other call converts as below, and
-the definition is kept for the manifest alone.
+write is the loader's seat. `registerModel` is deleted (trails#9656), and the
+generated model manifest (`packages/activerecord-cli/src/generate-manifest.ts`,
+`renderManifest`) seats its models with `Object.assign(TopLevel, { ... })`. That
+supersedes the trails#9644 choice to keep `registerModel` as the manifest's call.
 
 They do a second job in tests and in code outside any loader. In Ruby the `class`
 keyword binds the constant wherever the class is written. In JS only a loader or
@@ -591,7 +586,7 @@ whichever path seated them.
 | -------------------------------------------- | --------- | ------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | `register-x-retires-from-source`             | zw-lookup | 450     | `constantize-restored-over-namespaces`, `trailties-app-scan-retires` | Source callers and the `on_load`; definitions stay until the tests move; activerecord `CLAUDE.md` |
 | `register-x-retires-from-activerecord-tests` | zw-lookup | 2200    | `register-x-retires-from-source`                                     | Single mechanical rename onto `rbModConstSet`                                                     |
-| `register-x-retires-from-other-tests`        | zw-lookup | 300     | `register-x-retires-from-source`                                     | The other packages' tests, then the definitions but `registerModel`                               |
+| `register-x-retires-from-other-tests`        | zw-lookup | 300     | `register-x-retires-from-source`                                     | The other packages' tests, then the definitions                                                   |
 
 **Phase 5, framework tables.**
 
@@ -641,10 +636,9 @@ Total: about 9,900, of which 2,200 is the mechanical rename.
 - `pnpm parity:test` for `zeitwerk`: every portable test of the ~443 matched, the
   rest under a `PERMANENT-SKIP:` citing the deviation section.
 - The 3 reflection tests run and pass; none is skipped.
-- Zero source references to `registerController`, `registerJob`,
+- Zero source references to `registerModel`, `registerController`, `registerJob`,
   `registerChannel`, `registerConnection`, `registerConstant`,
-  `registerClassPaths`, `generatedClass`; `registerModel`'s only caller is the
-  generated model manifest.
+  `registerClassPaths`, `generatedClass`.
 - The finisher has no `@missingRailsCall` for `eager_load_all`, `eager_load!` or
   `after_class_unload`.
 - A fixture app under `packages/trailties`, built by the `zeitwerk-build-artifacts`
