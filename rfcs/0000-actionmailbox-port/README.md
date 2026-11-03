@@ -208,9 +208,10 @@ File map:
 
 ## Verification
 
-- All 105 ActionMailbox tests are ported: 80 in the first wave, the 25
-  ingress-controller tests in the second, each skip a `PERMANENT-SKIP:` citing
-  a ruling. Also ported here: railties' 3
+- All 105 ActionMailbox tests are ported: 80 pass after the first wave, and
+  the 25 deferred ingress-controller tests stay unported (not `PERMANENT`)
+  until their stories land. Any other skip is a `PERMANENT-SKIP:` citing a
+  ruling. Also ported here: railties' 3
   `action_mailbox_install_generator_test.rb` tests and 12 ActionMailbox cases
   of `railties/test/application/configuration_test.rb:3664-3772,4273`.
 - `parity:api` and `parity:test` report `actionmailbox`; after the first wave

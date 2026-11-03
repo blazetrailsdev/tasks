@@ -40,7 +40,8 @@ processing delivered failed bounced ]`; `mail` (memoized
   `create_and_extract_message_id!` (SHA1 checksum, `create!`, `rescue
 ActiveRecord::RecordNotUnique` → `nil`) and private `extract_message_id`,
   `generate_missing_message_id` (`Mail::MessageIdField`, `Socket.gethostname`,
-  a `logger.warn`), `create_and_upload_raw_email!` (`Blob.create_and_upload!`
+  a `logger.warn`; `Mail::MessageIdField` is on main at
+  `packages/mail/src/fields/message-id-field.ts`), `create_and_upload_raw_email!` (`Blob.create_and_upload!`
   with `service_name: ActionMailbox.storage_service`).
 - `inbound_email/routable.rb:8-24`: `after_create_commit :route_later, if:
 :pending?`, `route_later` (`RoutingJob.perform_later self`), `route`
