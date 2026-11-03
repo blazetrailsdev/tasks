@@ -54,29 +54,32 @@ already filed elsewhere into one place.
 
 ## Inventory (rackup 2.2.1, `lib/` + `bin/`, 1,112 lines)
 
-| File                            | Lines | Story                                                                                                   |
-| ------------------------------- | ----- | ------------------------------------------------------------------------------------------------------- |
-| `lib/rackup.rb`                 | 21    | `rackup-package-parity-enrollment` (entry); its `require 'webrick'` arm is a non-goal                   |
-| `lib/rackup/version.rb`         | 8     | `rackup-package-parity-enrollment`                                                                      |
-| `lib/rackup/handler.rb`         | 113   | `rackup-package-parity-enrollment` (`register`, `[]`, `get`, `pick`, `default`, `require_handler`)      |
-| `lib/rackup/server.rb`          | 462   | `port-rackup-server-for-rails-server` (class), `rackup-server-spec-full-port` (remaining arms and spec) |
-| `lib/rackup/handler/webrick.rb` | 162   | non-goal; `rackup-handler-node-moves-out-of-rack` is trails' handler                                    |
-| `lib/rackup/handler/cgi.rb`     | 61    | non-goal                                                                                                |
-| `lib/rackup/stream.rb`          | 199   | `rackup-stream-port`                                                                                    |
-| `lib/rackup/lobster.rb`         | 81    | `rackup-lobster-and-bin-rackup`                                                                         |
-| `bin/rackup`                    | 5     | `rackup-lobster-and-bin-rackup`                                                                         |
+| File                            | Lines | Story                                                                                                              |
+| ------------------------------- | ----- | ------------------------------------------------------------------------------------------------------------------ |
+| `lib/rackup.rb`                 | 21    | `rackup-package-parity-enrollment` (entry); its `require 'webrick'` arm is a non-goal                              |
+| `lib/rackup/version.rb`         | 8     | `rackup-package-parity-enrollment`                                                                                 |
+| `lib/rackup/handler.rb`         | 113   | `port-rackup-server-for-rails-server` (`register`, `[]`, `get`, `pick`, `default`, `require_handler`)              |
+| `lib/rackup/server.rb`          | 462   | `port-rackup-server-for-rails-server` (class, `Options`), `rackup-server-spec-full-port` (remaining arms and spec) |
+| `lib/rackup/handler/webrick.rb` | 162   | non-goal; `rackup-handler-node-moves-out-of-rack` is trails' handler                                               |
+| `lib/rackup/handler/cgi.rb`     | 61    | non-goal                                                                                                           |
+| `lib/rackup/stream.rb`          | 199   | `rackup-stream-port`                                                                                               |
+| `lib/rackup/lobster.rb`         | 81    | `rackup-lobster-and-bin-rackup`                                                                                    |
+| `bin/rackup`                    | 5     | `rackup-lobster-and-bin-rackup`                                                                                    |
 
 Test suite (`test/` in the v2.2.1 tag; the gem ships none): `spec_server.rb`
 (51 `it`), `spec_handler.rb` (6), `spec_lobster.rb` (6) are ported;
 `spec_webrick.rb` (11) is not (non-goal below). rackup is to be vendored at
 `vendor/rackup/v2.2.1/` with its `test/` tree.
 
-The in-flight `port-rackup-server-for-rails-server` commits only to its own
-acceptance criteria: `Rails::Server` extends a port of `Rackup::Server`, and
-`defaultOptions` is `super.merge`. Everything else the package needs (the
-package itself, the vendor entry, `Handler`, `version.rb`) is owned by
-`rackup-package-parity-enrollment`, which keeps whatever that PR already
-landed and adds the rest. No phase-2 story assumes more of the in-flight PR.
+The in-flight `port-rackup-server-for-rails-server` (re-scoped by the repo
+owner on 2026-11-03) commits to exactly: the `vendor/sources.ts` entry,
+`Rackup::Handler` (`handler.rb`), and `Rackup::Server` with its `Options`
+(`server.rb`), `Server#server` behind `Handler.get` / `Handler.default`.
+Wiring `Rails::Server` onto it is `rails-server-extends-rackup-server`, which
+stays in RFC 0171 because it is trailties code. Everything else the package
+needs (`rackup.rb`, `version.rb`, the parity gates, any spec that PR did not
+port) is owned by a phase-2 story below; none assumes more of the in-flight
+PR than those three criteria.
 
 ## Design
 
@@ -123,8 +126,9 @@ landed and adds the rest. No phase-2 story assumes more of the in-flight PR.
 ## Rollout
 
 1. `port-rackup-server-for-rails-server` (in flight; moved here from 0171):
-   `Rails::Server` extends `Rackup::Server`.
-2. `rackup-package-parity-enrollment`: package, vendor, `Handler`, version,
+   vendor entry, `Handler`, `Server` with `Options`. Then, in RFC 0171,
+   `rails-server-extends-rackup-server`.
+2. `rackup-package-parity-enrollment`: `rackup.rb`, version, `spec_handler.rb`,
    gates.
 3. `rackup-handler-node-moves-out-of-rack`, `rackup-server-spec-full-port`.
 4. `rackup-stream-port`, `rackup-lobster-and-bin-rackup`.
@@ -143,8 +147,8 @@ landed and adds the rest. No phase-2 story assumes more of the in-flight PR.
   (51 + 6 + 6, per § Inventory), less the six `PERMANENT-SKIP`s named in
   § Design.
 - `packages/rack/src/handler/` is gone and `rack`'s `Handler` export with it.
-- No `CONVERGEABLE port-rackup-server-for-rails-server` receipt remains in
-  `packages/trailties/src/commands/server.ts`.
+- `rails-server-extends-rackup-server` (RFC 0171) is done: trailties'
+  `Server` extends `Rackup.Server` with no stand-in `server()`.
 
 ## Open questions
 
