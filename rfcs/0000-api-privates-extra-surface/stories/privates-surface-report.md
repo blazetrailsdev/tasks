@@ -42,7 +42,9 @@ gathering to reuse is `collectAllowedNames` (`extra-surface.ts`, the loop at
   holds them out.
 - A name is `credited` only by a Ruby private/protected method of the
   mirrored `.rb`; otherwise `moved` (a Ruby method elsewhere in the gem) or
-  `novel`. A `_` name is matched with its leading `_` stripped once.
+  `novel`. Until `privates-surface-visibility-column` lands, a name whose only
+  match in the mirrored `.rb` is a Ruby PUBLIC method counts as `novel`, and
+  the report's help text says so. A `_` name is matched with its leading `_` stripped once.
 - The public lane's included-module walk drops Ruby `private` methods of an
   included owner (`extra-surface.ts:1816-1823`, inside `collectAllowedNames`
   at `:1648`); the privates lane keeps them, since `include` makes them
@@ -51,4 +53,5 @@ gathering to reuse is `collectAllowedNames` (`extra-surface.ts`, the loop at
   parameterised by visibility), not copied.
 - Unit tests in `scripts/api-compare/` cover each population kind and each
   column on fixture manifests.
-- `parity:api:extra`'s output is byte-identical before and after.
+- This story leaves `parity:api:extra`'s output byte-identical (the receipts
+  story later narrows its STALE check, by design).

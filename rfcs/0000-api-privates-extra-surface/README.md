@@ -164,7 +164,9 @@ the public lane's count.
   missing manifest or a STALE receipt.
 - JSON shape stable for the stats-DB importer: per package and per file,
   every column above plus `perf`.
-- No change to `parity:api:extra`'s numbers, its mark files or CI in wave 1.
+- No change to `parity:api:extra`'s counted numbers, its mark files or CI in
+  wave 1; its STALE check narrows as § Receipts says
+  (`privates-surface-receipts-subtract`).
 
 ## Non-goals
 
@@ -209,12 +211,15 @@ compile-time only"`); this lane reads TS modifiers and JSDoc only.
 ## Verification
 
 - `pnpm parity:api:privates --json` reports every package `parity:api:extra`
-  reports, with the five columns plus `perf`. A test pins the cross-check
-  against the public lane: file-local helpers already reach
-  `countTsInternalNames` through `fileFunctions`
-  (`scripts/api-compare/extract-ts-api.ts:1086-1088`), so the public lane's
-  `Intrnl` total equals this lane's population minus its `_`-prefixed rows,
-  over the files `extra-surface.ts:2638` does not skip as path-mirror folds.
+  reports, with the five columns plus `perf`.
+- A cross-check test, owned by `privates-surface-file-local-and-perf-helpers`,
+  pins `Intrnl = population − (_-prefixed rows) + (aliasOf rows)` over the
+  files `extra-surface.ts:2638` does not skip as path-mirror folds.
+  File-local helpers are in both counts (`extract-ts-api.ts:1086-1088` puts
+  them in `fileFunctions`); `countTsInternalNames` counts an `aliasOf` row,
+  which this lane scores through its target instead. A JSDoc-`@internal`
+  declaration with a receipt is in neither count (RFC 0121 clears its
+  `internal` flag), so it needs no term.
 - The three `relation.ts` members from RFC 0025's story can carry a receipt
   without reddening either lane.
 - Wave 2: the README holds a dated baseline table per package.
@@ -230,3 +235,7 @@ compile-time only"`); this lane reads TS modifiers and JSDoc only.
 - Does RFC 0025's `allow-no-rails-equivalent-tags-on-private-members` close
   when `privates-surface-receipts-subtract` lands, or get a `deps` edge onto
   it? (Proposed: a `deps` edge, set by `tasks set-deps` after this merges.)
+
+## Changelog
+
+- 2026-11-03: initial RFC

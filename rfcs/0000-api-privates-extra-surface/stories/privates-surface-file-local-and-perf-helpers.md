@@ -40,3 +40,8 @@ tag's shape.
   emitted in JSON.
 - `countTsInternalNames` and the public lane are unchanged; a test pins that
   `parity:api:extra`'s `Intrnl` total is unchanged.
+- The RFC's Verification cross-check is a test here, on fixture manifests:
+  `Intrnl = population − (_-prefixed rows) + (aliasOf rows)` over files
+  `extra-surface.ts:2638` does not skip, with one fixture case per term and
+  one for a JSDoc-`@internal` declaration carrying a receipt (in neither
+  count).
