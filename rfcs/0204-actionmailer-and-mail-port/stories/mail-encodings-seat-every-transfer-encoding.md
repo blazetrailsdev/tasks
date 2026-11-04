@@ -1,6 +1,6 @@
 ---
 title: "Seat every transfer encoding on Mail::Encodings"
-status: ready
+status: done
 updated: 2026-11-04
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9709
+claim: "2026-11-04T13:08:24Z"
+assignee: "rackup-stream-reader-receipts-at-declaration"
 blocked-by: null
 closed-reason: null
 ---

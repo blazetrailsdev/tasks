@@ -1,7 +1,7 @@
 ---
 title: "Move TS-only BacktraceCleanerKindTest into backtrace-cleaner.trails.test.ts"
-status: ready
-updated: 2026-10-22
+status: done
+updated: 2026-11-04
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9709
+claim: "2026-11-04T13:08:24Z"
+assignee: "rackup-stream-reader-receipts-at-declaration"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "trailmap: bump trails to the autoloader importer, and drop the hand-written model and job seating"
-status: claimed
+status: in-progress
 updated: 2026-11-04
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["trailmap-app-files-define-their-constants"]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trailmap#113
 claim: "2026-11-04T12:58:17Z"
 assignee: "drop-thor-start-cast-after-revendor"
 blocked-by: null

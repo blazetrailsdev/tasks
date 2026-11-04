@@ -1,6 +1,6 @@
 ---
 title: "Add pnpm parity:api:privates, scoring internal TS declarations against Rails privates"
-status: claimed
+status: done
 updated: 2026-11-04
 rfc: "0218-api-privates-extra-surface"
 cluster: api-compare
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
+pr: trails#9708
 claim: "2026-11-04T12:59:57Z"
 assignee: "privates-surface-report"
 blocked-by: null
