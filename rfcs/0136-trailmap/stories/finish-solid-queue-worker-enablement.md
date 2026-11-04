@@ -1,6 +1,6 @@
 ---
 title: "Finish enabling the Solid Queue worker in production"
-status: ready
+status: in-progress
 updated: 2026-11-04
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#115
+claim: "2026-11-04T17:02:48Z"
+assignee: "finish-solid-queue-worker-enablement"
 blocked-by: null
 closed-reason: null
 ---

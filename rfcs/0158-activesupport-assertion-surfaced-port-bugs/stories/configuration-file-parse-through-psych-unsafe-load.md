@@ -1,7 +1,7 @@
 ---
 title: "ConfigurationFile#parse reads YAML through Psych.unsafe_load_file / unsafe_load"
-status: ready
-updated: 2026-09-29
+status: blocked
+updated: 2026-11-04
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -17,9 +17,9 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-04T17:06:36Z"
+assignee: "mail-body-spec-adding-parts"
+blocked-by: "Psych.unsafeLoad/unsafeLoadFile answer a ruby-compat Hash (to-ruby.ts:222); ConfigurationFile callers (activerecord fixture-set/file.ts:78, solid-queue configuration.ts:290, configuration-file-render.test.ts) read plain objects and pass a merge: option Psych does not take. Needs a decision on Hash vs plain-object result before converging; larger than est-loc 40."
 closed-reason: null
 ---
 

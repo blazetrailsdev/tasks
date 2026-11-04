@@ -1,6 +1,6 @@
 ---
 title: "mail-body-spec-adding-parts"
-status: ready
+status: in-progress
 updated: 2026-11-04
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9718
+claim: "2026-11-04T17:06:36Z"
+assignee: "mail-body-spec-adding-parts"
 blocked-by: null
 closed-reason: null
 ---

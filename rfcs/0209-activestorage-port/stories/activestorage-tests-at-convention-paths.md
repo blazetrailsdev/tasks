@@ -1,6 +1,6 @@
 ---
 title: "Move activestorage tests to their Rails convention paths"
-status: in-progress
+status: done
 updated: 2026-11-04
 rfc: "0209-activestorage-port"
 cluster: null

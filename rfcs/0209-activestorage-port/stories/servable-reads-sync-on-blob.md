@@ -1,6 +1,6 @@
 ---
 title: "Blob::Servable reads and Blob#url answer synchronously on a Blob"
-status: blocked
+status: done
 updated: 2026-11-04
 rfc: "0209-activestorage-port"
 cluster: null
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#9716
 claim: "2026-11-04T15:46:25Z"
 assignee: "servable-reads-sync-on-blob"
-blocked-by: "waiting on trails#9712 (open): the async Servable/Blob#url this story reverts exists only on that PR; on main they are already sync"
+blocked-by: null
 closed-reason: null
 ---
 

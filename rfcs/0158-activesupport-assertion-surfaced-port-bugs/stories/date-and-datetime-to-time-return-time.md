@@ -1,7 +1,7 @@
 ---
 title: "Date#to_time and DateTime#to_time return a Time, not a Temporal.ZonedDateTime"
 status: ready
-updated: 2026-09-30
+updated: 2026-11-04
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "Let @noRailsEquivalent receipts on internal declarations subtract in the privates lane"
-status: ready
+status: in-progress
 updated: 2026-11-04
 rfc: "0218-api-privates-extra-surface"
 cluster: api-compare
@@ -9,9 +9,9 @@ deps: [privates-surface-report]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9719
+claim: "2026-11-04T17:01:39Z"
+assignee: "privates-surface-file-local-and-perf-helpers"
 blocked-by: null
 closed-reason: null
 ---

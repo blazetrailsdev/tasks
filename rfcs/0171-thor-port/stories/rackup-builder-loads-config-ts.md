@@ -1,6 +1,6 @@
 ---
 title: "rackup-builder-loads-config-ts"
-status: draft
+status: in-progress
 updated: 2026-11-04
 rfc: "0171-thor-port"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 0
+pr: trails#9721
+claim: "2026-11-04T17:28:59Z"
+assignee: "rackup-builder-loads-config-ts"
 blocked-by: null
 closed-reason: null
 ---

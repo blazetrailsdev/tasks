@@ -1,6 +1,6 @@
 ---
 title: "view-watch-runs-from-actionview-server-block"
-status: draft
+status: in-progress
 updated: 2026-11-04
 rfc: "0171-thor-port"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 0
+pr: trails#9720
+claim: "2026-11-04T17:29:09Z"
+assignee: "view-watch-runs-from-actionview-server-block"
 blocked-by: null
 closed-reason: null
 ---

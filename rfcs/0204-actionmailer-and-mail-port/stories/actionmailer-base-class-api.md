@@ -1,6 +1,6 @@
 ---
 title: "Port ActionMailer::Base's class side (base.rb:1-~560)"
-status: in-progress
+status: done
 updated: 2026-11-04
 rfc: "0204-actionmailer-and-mail-port"
 cluster: actionmailer
