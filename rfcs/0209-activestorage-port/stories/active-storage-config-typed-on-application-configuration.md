@@ -1,6 +1,6 @@
 ---
 title: "config.activeStorage types on the application's Configuration"
-status: draft
+status: ready
 updated: 2026-11-04
 rfc: "0209-activestorage-port"
 cluster: null

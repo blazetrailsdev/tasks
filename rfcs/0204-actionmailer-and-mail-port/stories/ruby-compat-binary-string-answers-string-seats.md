@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat-binary-string-answers-string-seats"
-status: draft
+status: ready
 updated: 2026-11-04
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null

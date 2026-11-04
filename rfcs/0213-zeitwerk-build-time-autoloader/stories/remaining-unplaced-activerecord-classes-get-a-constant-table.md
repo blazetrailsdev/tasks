@@ -1,6 +1,6 @@
 ---
 title: "Remaining unplaced activerecord classes (TestDatabases, SQLCounter) get a constant table"
-status: draft
+status: done
 updated: 2026-11-04
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9707
+claim: "2026-11-04T12:08:16Z"
+assignee: "rack-builder-script-resolves-toplevel-constants"
 blocked-by: null
 closed-reason: null
 ---

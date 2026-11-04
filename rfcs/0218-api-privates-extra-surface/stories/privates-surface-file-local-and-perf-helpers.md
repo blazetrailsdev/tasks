@@ -1,7 +1,7 @@
 ---
 title: "Score file-local helpers and @perf _ helpers in the privates lane, with a perf sub-count"
-status: draft
-updated: 2026-11-03
+status: ready
+updated: 2026-11-04
 rfc: "0218-api-privates-extra-surface"
 cluster: api-compare
 packages: []

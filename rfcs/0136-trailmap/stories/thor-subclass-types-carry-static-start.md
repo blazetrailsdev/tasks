@@ -1,6 +1,6 @@
 ---
 title: "Thor subclasses carry the static start in their type"
-status: in-progress
+status: done
 updated: 2026-11-04
 rfc: "0136-trailmap"
 cluster: null

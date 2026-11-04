@@ -1,6 +1,6 @@
 ---
 title: "trailmap: drop the Thor.start cast in lib/jobs.ts after re-vendoring past trails#9699"
-status: draft
+status: claimed
 updated: 2026-11-04
 rfc: "0136-trailmap"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 10
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-04T12:58:17Z"
+assignee: "drop-thor-start-cast-after-revendor"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "rack: Builder.new_from_string resolves top-level constants (TOPLEVEL_BINDING)"
-status: draft
+status: done
 updated: 2026-11-04
 rfc: "0217-rackup-gem-port"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 1
+pr: trails#9707
+claim: "2026-11-04T12:08:16Z"
+assignee: "rack-builder-script-resolves-toplevel-constants"
 blocked-by: null
 closed-reason: null
 ---

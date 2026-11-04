@@ -1,6 +1,6 @@
 ---
 title: "rackup: receipt Stream::Reader's binary/buffer deviations at the declaration"
-status: draft
+status: ready
 updated: 2026-11-04
 rfc: "0217-rackup-gem-port"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

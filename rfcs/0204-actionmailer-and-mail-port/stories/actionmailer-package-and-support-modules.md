@@ -1,6 +1,6 @@
 ---
 title: "Scaffold @blazetrails/actionmailer and port its small modules"
-status: in-progress
+status: done
 updated: 2026-11-04
 rfc: "0204-actionmailer-and-mail-port"
 cluster: actionmailer

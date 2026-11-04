@@ -1,6 +1,6 @@
 ---
 title: "Port Mail.defaults (instance_eval on Configuration.instance)"
-status: draft
+status: done
 updated: 2026-11-04
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9707
+claim: "2026-11-04T12:08:16Z"
+assignee: "rack-builder-script-resolves-toplevel-constants"
 blocked-by: null
 closed-reason: null
 ---

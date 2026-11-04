@@ -1,7 +1,7 @@
 ---
 title: "Finish enabling the Solid Queue worker in production"
-status: draft
-updated: 2026-11-02
+status: claimed
+updated: 2026-11-04
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 10
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-04T12:58:17Z"
+assignee: "drop-thor-start-cast-after-revendor"
 blocked-by: null
 closed-reason: null
 ---

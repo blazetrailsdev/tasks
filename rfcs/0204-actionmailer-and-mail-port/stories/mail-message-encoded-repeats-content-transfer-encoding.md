@@ -1,6 +1,6 @@
 ---
 title: "mail-message-encoded-repeats-content-transfer-encoding"
-status: draft
+status: done
 updated: 2026-11-04
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9703
 claim: null
 assignee: null
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc: resolve schema scope ancestors by class identity, not bare name"
-status: in-progress
+status: done
 updated: 2026-11-04
 rfc: "0136-trailmap"
 cluster: null

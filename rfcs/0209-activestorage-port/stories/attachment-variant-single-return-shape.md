@@ -1,7 +1,7 @@
 ---
 title: "attachment-variant-single-return-shape"
-status: draft
-updated: 2026-11-03
+status: ready
+updated: 2026-11-04
 rfc: "0209-activestorage-port"
 cluster: null
 packages: []
