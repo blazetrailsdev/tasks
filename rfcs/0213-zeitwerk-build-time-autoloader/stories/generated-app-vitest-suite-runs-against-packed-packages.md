@@ -1,7 +1,7 @@
 ---
 title: "CI runs a generated app's vitest suite against packed packages, where trails' source aliases hide module-graph defects"
-status: in-progress
-updated: 2026-11-03
+status: done
+updated: 2026-11-04
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
 packages: ["trailties", "zeitwerk"]

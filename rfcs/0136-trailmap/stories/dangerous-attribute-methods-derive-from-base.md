@@ -1,6 +1,6 @@
 ---
 title: "dangerousAttributeMethods derives from Base as Rails does"
-status: claimed
+status: in-progress
 updated: 2026-11-04
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#9699
 claim: "2026-11-04T00:45:46Z"
 assignee: "dangerous-attribute-methods-derive-from-base"
 blocked-by: null

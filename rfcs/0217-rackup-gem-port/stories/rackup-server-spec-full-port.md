@@ -1,6 +1,6 @@
 ---
 title: "rackup: port the rest of Rackup::Server and spec_server.rb"
-status: in-progress
+status: done
 updated: 2026-11-04
 rfc: "0217-rackup-gem-port"
 cluster: port

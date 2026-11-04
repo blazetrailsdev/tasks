@@ -1,7 +1,7 @@
 ---
 title: "mail-content-field-specs-port"
-status: ready
-updated: 2026-11-03
+status: in-progress
+updated: 2026-11-04
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9700
+claim: "2026-11-04T01:38:11Z"
+assignee: "mail-content-field-specs-port"
 blocked-by: null
 closed-reason: null
 ---

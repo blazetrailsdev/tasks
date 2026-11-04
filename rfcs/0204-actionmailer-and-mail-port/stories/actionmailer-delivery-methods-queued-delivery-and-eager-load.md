@@ -1,6 +1,6 @@
 ---
 title: "actionmailer-delivery-methods-queued-delivery-and-eager-load"
-status: draft
+status: ready
 updated: 2026-11-04
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null

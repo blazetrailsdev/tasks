@@ -1,7 +1,7 @@
 ---
 title: "unskip-blob-purge-deletes-variants-test"
-status: in-progress
-updated: 2026-11-03
+status: done
+updated: 2026-11-04
 rfc: "0209-activestorage-port"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "unplaced-rails-classes-get-a-constant-table"
-status: ready
-updated: 2026-11-03
+status: claimed
+updated: 2026-11-04
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
 packages: []
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-04T01:58:14Z"
+assignee: "unplaced-rails-classes-get-a-constant-table"
 blocked-by: null
 closed-reason: null
 ---

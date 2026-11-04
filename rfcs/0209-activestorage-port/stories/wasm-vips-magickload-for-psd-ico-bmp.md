@@ -1,7 +1,7 @@
 ---
 title: "wasm-vips-magickload-for-psd-ico-bmp"
-status: ready
-updated: 2026-11-03
+status: done
+updated: 2026-11-04
 rfc: "0209-activestorage-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9697
+claim: "2026-11-04T01:08:28Z"
+assignee: "wasm-vips-magickload-for-psd-ico-bmp"
 blocked-by: null
 closed-reason: null
 ---

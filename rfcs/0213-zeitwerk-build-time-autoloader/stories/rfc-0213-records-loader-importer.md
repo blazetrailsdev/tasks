@@ -1,7 +1,7 @@
 ---
 title: "RFC 0213 records Loader#importer and why the generated imports table is not used under vitest"
-status: in-progress
-updated: 2026-11-03
+status: done
+updated: 2026-11-04
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
 packages: ["zeitwerk"]

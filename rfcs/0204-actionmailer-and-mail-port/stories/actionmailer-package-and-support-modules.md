@@ -1,7 +1,7 @@
 ---
 title: "Scaffold @blazetrails/actionmailer and port its small modules"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-11-04
 rfc: "0204-actionmailer-and-mail-port"
 cluster: actionmailer
 packages: ["actionmailer"]
@@ -9,9 +9,9 @@ deps: ["mail-message-parts-and-encoding"]
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9698
+claim: "2026-11-04T01:18:14Z"
+assignee: "actionmailer-package-and-support-modules"
 blocked-by: null
 ---
 

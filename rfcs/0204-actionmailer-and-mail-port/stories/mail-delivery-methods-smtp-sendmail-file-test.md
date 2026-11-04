@@ -1,7 +1,7 @@
 ---
 title: "Port mail's delivery methods: SMTP over nodemailer SMTPConnection, sendmail by spawn"
-status: ready
-updated: 2026-10-29
+status: claimed
+updated: 2026-11-04
 rfc: "0204-actionmailer-and-mail-port"
 cluster: mail-delivery
 packages: ["mail"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 500
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-04T01:48:13Z"
+assignee: "mail-delivery-methods-smtp-sendmail-file-test"
 blocked-by: null
 ---
 

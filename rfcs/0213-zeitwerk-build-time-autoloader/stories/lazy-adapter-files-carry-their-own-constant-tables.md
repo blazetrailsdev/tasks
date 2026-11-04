@@ -1,7 +1,7 @@
 ---
 title: "Lazy adapter files carry their own constant tables"
-status: in-progress
-updated: 2026-11-03
+status: done
+updated: 2026-11-04
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc: resolve schema scope ancestors by class identity, not bare name"
-status: claimed
+status: in-progress
 updated: 2026-11-04
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#9699
 claim: "2026-11-04T00:45:46Z"
 assignee: "dangerous-attribute-methods-derive-from-base"
 blocked-by: null
