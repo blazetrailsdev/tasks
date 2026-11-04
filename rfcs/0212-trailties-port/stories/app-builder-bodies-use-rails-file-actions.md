@@ -1,7 +1,7 @@
 ---
 title: "app-builder-bodies-use-rails-file-actions"
-status: ready
-updated: 2026-11-02
+status: in-progress
+updated: 2026-11-04
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9705
+claim: "2026-11-04T02:38:13Z"
+assignee: "app-builder-bodies-use-rails-file-actions"
 blocked-by: null
 closed-reason: null
 ---

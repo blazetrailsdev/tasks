@@ -1,7 +1,7 @@
 ---
 title: "api-app-generator-update-tests-and-initializer-deletes"
-status: ready
-updated: 2026-11-03
+status: in-progress
+updated: 2026-11-04
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9704
+claim: "2026-11-04T02:08:17Z"
+assignee: "api-app-generator-update-tests-and-initializer-deletes"
 blocked-by: null
 closed-reason: null
 ---
