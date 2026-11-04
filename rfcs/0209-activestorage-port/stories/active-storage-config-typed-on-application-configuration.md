@@ -1,6 +1,6 @@
 ---
 title: "config.activeStorage types on the application's Configuration"
-status: ready
+status: claimed
 updated: 2026-11-04
 rfc: "0209-activestorage-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-04T14:08:12Z"
+assignee: "rackup-stream-reader-receipts-at-declaration"
 blocked-by: null
 closed-reason: null
 ---
