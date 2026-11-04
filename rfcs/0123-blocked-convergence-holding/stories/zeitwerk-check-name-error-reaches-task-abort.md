@@ -2,7 +2,7 @@
 title: "zeitwerk-check-name-error-reaches-task-abort"
 status: blocked
 updated: 2026-11-02
-rfc: "0213-zeitwerk-build-time-autoloader"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
