@@ -1,6 +1,6 @@
 ---
 title: "activesupport: a delegate-generated reader returns a function-valued result, so core.rb:37's delegate ports through delegate()"
-status: in-progress
+status: done
 updated: 2026-11-04
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

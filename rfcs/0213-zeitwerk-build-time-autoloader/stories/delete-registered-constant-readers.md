@@ -1,6 +1,6 @@
 ---
 title: "Delete isRegisteredConstant / registeredConstant; ruby-compat callers read constGet / constDefined"
-status: in-progress
+status: done
 updated: 2026-11-04
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null

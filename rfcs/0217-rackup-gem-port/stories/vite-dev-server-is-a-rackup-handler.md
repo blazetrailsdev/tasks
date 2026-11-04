@@ -1,6 +1,6 @@
 ---
 title: "vite-dev-server-is-a-rackup-handler"
-status: draft
+status: claimed
 updated: 2026-11-04
 rfc: "0217-rackup-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-04T19:25:18Z"
+assignee: "rackup-builder-loads-config-ts"
 blocked-by: null
 closed-reason: null
 ---

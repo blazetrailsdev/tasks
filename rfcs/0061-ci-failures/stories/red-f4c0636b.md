@@ -1,6 +1,6 @@
 ---
 title: "Active Record PostgreSQL Tests (3) failing on main @f4c0636b"
-status: ready
+status: closed
 updated: 2026-11-04
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-04T19:11:25Z"
+assignee: "red-f4c0636b"
 blocked-by: null
-closed-reason: null
+closed-reason: "Infra flake: 'Install a pg_dump matching the server major' step failed with curl (56) fetching apt.postgresql.org signing key; no test ran, no code break"
 ---
 
 ## Context
