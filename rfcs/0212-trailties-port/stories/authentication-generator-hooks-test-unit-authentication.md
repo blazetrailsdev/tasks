@@ -2,7 +2,7 @@
 title: "authentication-generator-hooks-test-unit-authentication"
 status: ready
 updated: 2026-10-29
-rfc: "0171-thor-port"
+rfc: "0212-trailties-port"
 cluster: null
 packages: []
 deps: []
