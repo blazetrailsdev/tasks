@@ -1,6 +1,6 @@
 ---
 title: "class-paths-pairs-oid-point-beside-activerecord-point"
-status: draft
+status: done
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9687
 claim: null
 assignee: null
 blocked-by: null

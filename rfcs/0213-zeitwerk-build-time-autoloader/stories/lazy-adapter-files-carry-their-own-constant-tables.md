@@ -1,6 +1,6 @@
 ---
 title: "Lazy adapter files carry their own constant tables"
-status: claimed
+status: in-progress
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#9687
 claim: "2026-11-03T22:48:22Z"
 assignee: "generated-app-vitest-suite-runs-against-packed-packages"
 blocked-by: null

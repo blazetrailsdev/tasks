@@ -1,6 +1,6 @@
 ---
 title: "rackup: enroll @blazetrails/rackup in the parity gates"
-status: in-progress
+status: done
 updated: 2026-11-03
 rfc: "0217-rackup-gem-port"
 cluster: fidelity

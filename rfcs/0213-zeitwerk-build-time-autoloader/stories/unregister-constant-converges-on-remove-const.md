@@ -1,6 +1,6 @@
 ---
 title: "unregister-constant-converges-on-remove-const"
-status: ready
+status: in-progress
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9688
+claim: "2026-11-03T23:08:13Z"
+assignee: "unregister-constant-converges-on-remove-const"
 blocked-by: null
 closed-reason: null
 ---

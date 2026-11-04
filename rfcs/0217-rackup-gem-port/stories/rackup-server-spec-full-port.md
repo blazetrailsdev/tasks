@@ -1,6 +1,6 @@
 ---
 title: "rackup: port the rest of Rackup::Server and spec_server.rb"
-status: ready
+status: claimed
 updated: 2026-11-03
 rfc: "0217-rackup-gem-port"
 cluster: port
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 600
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-03T23:48:19Z"
+assignee: "rackup-lobster-and-bin-rackup"
 blocked-by: null
 closed-reason: null
 ---

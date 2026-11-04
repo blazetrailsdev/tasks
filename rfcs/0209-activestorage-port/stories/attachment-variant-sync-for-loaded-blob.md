@@ -1,6 +1,6 @@
 ---
 title: "attachment-variant-sync-for-loaded-blob"
-status: ready
+status: in-progress
 updated: 2026-11-03
 rfc: "0209-activestorage-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9689
+claim: "2026-11-03T23:18:12Z"
+assignee: "attachment-variant-sync-for-loaded-blob"
 blocked-by: null
 closed-reason: null
 ---

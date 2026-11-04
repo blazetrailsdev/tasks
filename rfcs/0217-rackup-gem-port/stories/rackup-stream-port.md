@@ -1,6 +1,6 @@
 ---
 title: "rackup: port Rackup::Stream"
-status: ready
+status: claimed
 updated: 2026-11-03
 rfc: "0217-rackup-gem-port"
 cluster: port
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-03T23:58:13Z"
+assignee: "rackup-stream-port"
 blocked-by: null
 closed-reason: null
 ---

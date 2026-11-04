@@ -1,6 +1,6 @@
 ---
 title: "Psych and URI literal constGet reads become namespace reads"
-status: claimed
+status: done
 updated: 2026-11-03
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#9686
 claim: "2026-11-03T22:58:13Z"
 assignee: "psych-and-uri-literal-const-gets-become-namespace-reads"
 blocked-by: null
