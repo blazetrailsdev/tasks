@@ -1,6 +1,6 @@
 ---
 title: "Move ERB's <%% / %%> literals from the .tt regex pre-pass into the lexer"
-status: ready
+status: in-progress
 updated: 2026-11-04
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9730
+claim: "2026-11-04T20:11:23Z"
+assignee: "activestorage-tests-run-inside-executor"
 blocked-by: null
 closed-reason: null
 ---

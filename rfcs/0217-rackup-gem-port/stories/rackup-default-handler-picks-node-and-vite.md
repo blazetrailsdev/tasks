@@ -1,6 +1,6 @@
 ---
 title: "Handler.default picks node/vite; drop Trails::Server's invented fallback"
-status: draft
+status: in-progress
 updated: 2026-11-04
 rfc: "0217-rackup-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9731
+claim: "2026-11-04T20:36:30Z"
+assignee: "rackup-default-handler-picks-node-and-vite"
 blocked-by: null
 closed-reason: null
 ---

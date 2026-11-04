@@ -1,7 +1,7 @@
 ---
 title: "Codec default_serializer is :json in trails, :marshal in Rails"
-status: ready
-updated: 2026-07-27
+status: blocked
+updated: 2026-11-04
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-04T20:36:30Z"
+assignee: "rackup-default-handler-picks-node-and-vite"
+blocked-by: "Flipping to Codec's :marshal default breaks round trips: ruby-compat Marshal.load (packages/ruby-compat/src/marshal.ts:1602) answers a ruby-compat Hash for a dumped plain object, so message-verifier.test.ts 'simple round tripping' and message-encryptor.test.ts 'signed round tripping' get a Map where Rails gets an == Hash. Waits on Marshal round-tripping a plain-object Hash (or rbEqual-aware assertions); JSON messages already load via SerializerWithFallback's fallback."
 closed-reason: null
 ---
 

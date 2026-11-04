@@ -1,6 +1,6 @@
 ---
 title: "VariantRecord and Blob::Representable call has_one_attached directly"
-status: claimed
+status: done
 updated: 2026-11-04
 rfc: "0209-activestorage-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#9726
 claim: "2026-11-04T14:38:14Z"
 assignee: "active-storage-models-call-has-one-attached-directly"
 blocked-by: null

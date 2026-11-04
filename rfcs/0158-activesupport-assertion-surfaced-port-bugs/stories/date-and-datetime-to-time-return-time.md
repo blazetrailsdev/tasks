@@ -1,6 +1,6 @@
 ---
 title: "Date#to_time and DateTime#to_time return a Time, not a Temporal.ZonedDateTime"
-status: ready
+status: in-progress
 updated: 2026-11-04
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9731
+claim: "2026-11-04T20:36:30Z"
+assignee: "rackup-default-handler-picks-node-and-vite"
 blocked-by: null
 closed-reason: null
 ---

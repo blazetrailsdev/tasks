@@ -1,6 +1,6 @@
 ---
 title: "rails-server-extends-rackup-server"
-status: blocked
+status: in-progress
 updated: 2026-11-04
 rfc: "0171-thor-port"
 cluster: null
@@ -13,10 +13,10 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
-blocked-by: "waiting on rackup-builder-loads-config-ts, view-watch-runs-from-actionview-server-block, vite-dev-server-is-a-rackup-handler: super.start() needs config.ts loading, and view watch / Vite must move off start first"
+pr: trails#9727
+claim: "2026-11-04T20:21:58Z"
+assignee: "rails-server-extends-rackup-server"
+blocked-by: null
 closed-reason: null
 ---
 

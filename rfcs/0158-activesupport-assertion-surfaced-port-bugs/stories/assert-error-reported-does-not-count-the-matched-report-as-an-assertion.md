@@ -1,7 +1,7 @@
 ---
 title: "activesupport: assert_error_reported does not count the matched report as an assertion"
-status: ready
-updated: 2026-10-22
+status: in-progress
+updated: 2026-11-04
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9730
+claim: "2026-11-04T20:11:23Z"
+assignee: "activestorage-tests-run-inside-executor"
 blocked-by: null
 closed-reason: null
 ---

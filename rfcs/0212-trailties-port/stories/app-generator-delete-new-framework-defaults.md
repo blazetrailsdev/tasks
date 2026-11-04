@@ -1,6 +1,6 @@
 ---
 title: "AppGenerator#delete_new_framework_defaults"
-status: ready
+status: in-progress
 updated: 2026-11-04
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9730
+claim: "2026-11-04T20:11:23Z"
+assignee: "activestorage-tests-run-inside-executor"
 blocked-by: null
 closed-reason: null
 ---

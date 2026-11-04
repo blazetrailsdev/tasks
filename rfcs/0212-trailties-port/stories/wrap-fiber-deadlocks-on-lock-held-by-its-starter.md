@@ -1,6 +1,6 @@
 ---
 title: "activesupport: wrap's Fiber deadlocks on a ThreadLoadInterlockAwareMonitor held by the Fiber that started it"
-status: ready
+status: blocked
 updated: 2026-11-04
 rfc: "0212-trailties-port"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-04T20:11:23Z"
+assignee: "activestorage-tests-run-inside-executor"
+blocked-by: "owner decision: packages/activesupport/CLAUDE.md 'A thread-owned lock is owned by the Fiber' (2026-11-04, trails#9706) says a Fiber nested under the owner waits and not to converge back to Thread; this story asks the nested wrap Fiber to re-enter"
 closed-reason: null
 ---
 
