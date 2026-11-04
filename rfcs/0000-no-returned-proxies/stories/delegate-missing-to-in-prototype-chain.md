@@ -23,7 +23,7 @@ trails:
 
 Rails / Ruby:
 
-- `vendor/rails/v8.0.2/activesupport/lib/active_support/delegation.rb:156-190`
+- `vendor/rails/v8.0.2/activesupport/lib/active_support/delegation.rb:156-194`
 
 Rails' `generate_method_missing` `module_eval`s `method_missing` / `respond_to_missing?` onto the owner class, so the class-level prototype-chain form is the direct port; today the owner instance is wrapped and the wrapper returned.
 

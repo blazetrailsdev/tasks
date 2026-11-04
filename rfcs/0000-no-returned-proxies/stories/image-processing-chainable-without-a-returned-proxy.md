@@ -23,7 +23,7 @@ trails:
 
 Rails / Ruby:
 
-- `vendor/image_processing/v1.14.0/lib/image_processing/chainable.rb:86-90`
+- `vendor/image_processing/v1.14.0/lib/image_processing/chainable.rb:86-91`
 
 The thenable shape (memory: Chainable is a thenable Proxy) must survive: `then` stays an own or prototype member, not a trapped name.
 

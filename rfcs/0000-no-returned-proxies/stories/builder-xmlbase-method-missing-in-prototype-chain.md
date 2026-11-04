@@ -23,7 +23,7 @@ trails:
 
 Rails / Ruby:
 
-- `vendor/builder/v3.3.0/lib/builder/xmlbase.rb:90-100`
+- `vendor/builder/v3.3.0/lib/builder/xmlbase.rb:90-101`
 
 Already a misses-only trap, so the prototype-chain form changes no reachable name. Subclasses `XmlMarkup` / `XmlEvents` inherit the handler.
 

@@ -23,7 +23,7 @@ trails:
 
 Rails / Ruby:
 
-- `vendor/rails/v8.0.2/actionpack/lib/action_dispatch/request/session.rb:47-73`
+- `vendor/rails/v8.0.2/actionpack/lib/action_dispatch/request/session.rb:47-74`
 
 Rails' `Options` defines no `method_missing`: it answers `[]` / `[]=` / `to_hash` / `values_at` against `@delegate`. The Proxy forwarding every missed property to `delegate` is invented; port the members Rails defines and drop the trap, or, if a caller relies on dotted reads, move the trap into the prototype chain.
 

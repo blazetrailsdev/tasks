@@ -23,7 +23,7 @@ trails:
 
 Rails / Ruby:
 
-- `vendor/rails/v8.0.2/actionpack/lib/action_dispatch/routing/routes_proxy.rb:28-41`
+- `vendor/rails/v8.0.2/actionpack/lib/action_dispatch/routing/routes_proxy.rb:28-49`
 
 See the RFC README for why a returned Proxy is the defect, and trails#9572 for
 the first prototype-chain conversion of an instance-level dispatch.

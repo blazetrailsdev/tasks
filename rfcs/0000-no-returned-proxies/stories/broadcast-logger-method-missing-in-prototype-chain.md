@@ -23,7 +23,7 @@ trails:
 
 Rails / Ruby:
 
-- `vendor/rails/v8.0.2/activesupport/lib/active_support/broadcast_logger.rb:235-251`
+- `vendor/rails/v8.0.2/activesupport/lib/active_support/broadcast_logger.rb:235-249`
 
 Keep the `respond_to_missing?` gate: a name is forwarded only when a broadcast answers it (CLAUDE.md, "Ruby protocol methods with a different JS mechanism").
 

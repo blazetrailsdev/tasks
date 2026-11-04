@@ -25,7 +25,7 @@ trails:
 
 Rails / Ruby:
 
-- `vendor/ruby/v3.3.11/lib/delegate.rb:82-105`
+- `vendor/ruby/v3.3.11/lib/delegate.rb:82-108`
 
 Three sites in one file: the `Delegator` constructor, `DelegateClass`'s allocator, and `SimpleDelegator`. Every application `SimpleDelegator` subclass is a subclass that may declare a private field, so this is the highest-reach site in the RFC.
 

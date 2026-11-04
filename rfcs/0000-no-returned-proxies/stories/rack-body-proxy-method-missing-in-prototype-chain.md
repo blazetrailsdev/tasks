@@ -23,8 +23,8 @@ trails:
 
 Rails / Ruby:
 
-- `vendor/rack/v3.1.14/lib/rack/body_proxy.rb:17-19`
-- `vendor/rack/v3.1.14/lib/rack/body_proxy.rb:45-47`
+- `vendor/rack/v3.1.14/lib/rack/body_proxy.rb:17-24`
+- `vendor/rack/v3.1.14/lib/rack/body_proxy.rb:45-58`
 
 See the RFC README for why a returned Proxy is the defect, and trails#9572 for
 the first prototype-chain conversion of an instance-level dispatch.

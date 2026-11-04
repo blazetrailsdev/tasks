@@ -23,7 +23,7 @@ trails:
 
 Rails / Ruby:
 
-- `vendor/rails/v8.0.2/railties/lib/rails/railtie/configuration.rb:99-109`
+- `vendor/rails/v8.0.2/railties/lib/rails/railtie/configuration.rb:99-111`
 
 See the RFC README for why a returned Proxy is the defect, and trails#9572 for
 the first prototype-chain conversion of an instance-level dispatch.

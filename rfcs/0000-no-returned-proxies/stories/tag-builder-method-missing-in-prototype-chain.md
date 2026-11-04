@@ -23,7 +23,7 @@ trails:
 
 Rails / Ruby:
 
-- `vendor/rails/v8.0.2/actionview/lib/action_view/helpers/tag_helper.rb:320-332`
+- `vendor/rails/v8.0.2/actionview/lib/action_view/helpers/tag_helper.rb:320-330`
 
 `createTagBuilderProxy` wraps a fresh `TagBuilder`; with the handler above `TagBuilder.prototype`, `tagBuilder` memoises the `TagBuilder` itself and the factory goes away.
 

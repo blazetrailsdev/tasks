@@ -23,7 +23,7 @@ trails:
 
 Rails / Ruby:
 
-- `vendor/rack/v3.1.14/lib/rack/multipart/uploaded_file.rb:40-46`
+- `vendor/rack/v3.1.14/lib/rack/multipart/uploaded_file.rb:40-42`
 
 See the RFC README for why a returned Proxy is the defect, and trails#9572 for
 the first prototype-chain conversion of an instance-level dispatch.

@@ -23,7 +23,7 @@ trails:
 
 Rails / Ruby:
 
-- `vendor/rails/v8.0.2/activerecord/lib/active_record/migration/command_recorder.rb:395-404`
+- `vendor/rails/v8.0.2/activerecord/lib/active_record/migration/command_recorder.rb:395-406`
 
 See the RFC README for why a returned Proxy is the defect, and trails#9572 for
 the first prototype-chain conversion of an instance-level dispatch.

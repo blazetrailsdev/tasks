@@ -24,7 +24,7 @@ trails:
 
 Rails / Ruby:
 
-- `vendor/rails/v8.0.2/activesupport/lib/active_support/time_with_zone.rb:547-560`
+- `vendor/rails/v8.0.2/activesupport/lib/active_support/time_with_zone.rb:547-557`
 
 Two sites: the constructor's return, and the `rbDefineAllocFunc` allocator that wraps `Object.create(klass.prototype)`. With the handler in the chain, the allocator returns the bare `Object.create`.
 

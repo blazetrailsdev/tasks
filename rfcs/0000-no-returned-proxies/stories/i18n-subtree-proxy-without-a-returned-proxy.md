@@ -23,7 +23,7 @@ trails:
 
 Rails / Ruby:
 
-- `vendor/i18n/v1.14.8/lib/i18n/backend/key_value.rb:161-188`
+- `vendor/i18n/v1.14.8/lib/i18n/backend/key_value.rb:161-199`
 
 Latent instance of the defect itself: `SubtreeProxy` declares `#masterKey` / `#store` / `#subtree` and returns a Proxy, so any subclass field fails under an AOT runtime. Ruby's `SubtreeProxy` has no `method_missing`; it defines `[]`, `has_key?`, `is_a?`, `instance_of?`. Port `[]` as the member it is where the call sites allow, and put any remaining dotted-read dispatch in the prototype chain.
 

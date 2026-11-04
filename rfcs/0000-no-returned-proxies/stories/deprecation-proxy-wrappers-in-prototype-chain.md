@@ -23,7 +23,7 @@ trails:
 
 Rails / Ruby:
 
-- `vendor/rails/v8.0.2/activesupport/lib/active_support/deprecation/proxy_wrappers.rb:22-26`
+- `vendor/rails/v8.0.2/activesupport/lib/active_support/deprecation/proxy_wrappers.rb:22-25`
 - `vendor/rails/v8.0.2/activesupport/lib/active_support/deprecation/proxy_wrappers.rb:183-186`
 
 See the RFC README for why a returned Proxy is the defect, and trails#9572 for
