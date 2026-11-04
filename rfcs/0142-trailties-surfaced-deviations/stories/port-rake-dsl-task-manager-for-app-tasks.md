@@ -1,7 +1,7 @@
 ---
 title: "port-rake-dsl-task-manager-for-app-tasks"
-status: ready
-updated: 2026-09-27
+status: closed
+updated: 2026-11-04
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Landed: Rake DSL ported in @blazetrails/rake (trails#9499); Engine#loadTasks/runTasksBlocks (trails#9614)."
 ---
 
 ## Context

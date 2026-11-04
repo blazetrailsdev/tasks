@@ -1,7 +1,7 @@
 ---
 title: "Replace SerializerWithFallback key field with Rails' SERIALIZERS.key identity lookup"
-status: ready
-updated: 2026-07-27
+status: in-progress
+updated: 2026-11-04
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9733
+claim: "2026-11-04T21:06:46Z"
+assignee: "rackup-server-names-exact-constant"
 blocked-by: null
 closed-reason: null
 ---

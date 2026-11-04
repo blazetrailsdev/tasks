@@ -1,7 +1,7 @@
 ---
 title: "port-app-update-command-with-skip-option-preservation"
-status: ready
-updated: 2026-09-28
+status: closed
+updated: 2026-11-04
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of app-update-command-and-api-public-files-test (now 0171); skip-option preservation AC folded in there (tasks 30801370a)."
 ---
 
 # Port `app:update` (`Rails::Command::App::UpdateCommand`) with skip-option preservation

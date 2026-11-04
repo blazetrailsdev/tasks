@@ -1,6 +1,6 @@
 ---
 title: "Rackup::Handler::SERVER_NAMES is Rackup's exact constant"
-status: ready
+status: done
 updated: 2026-11-04
 rfc: "0217-rackup-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-04T21:06:46Z"
+assignee: "rackup-server-names-exact-constant"
 blocked-by: null
 closed-reason: null
 ---

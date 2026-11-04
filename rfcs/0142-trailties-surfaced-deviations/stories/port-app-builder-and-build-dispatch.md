@@ -1,7 +1,7 @@
 ---
 title: "port-app-builder-and-build-dispatch"
-status: draft
-updated: 2026-09-28
+status: closed
+updated: 2026-11-04
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Landed: ActionMethods, AppBuilder and getBuilderClass exist in generators/trails/app/app-generator.ts (trails#8226)."
 ---
 
 # Port AppBuilder / ActionMethods and AppBase#build dispatch

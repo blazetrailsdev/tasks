@@ -1,7 +1,7 @@
 ---
 title: "Port ActionMailer::Base#mail, part assembly and Collector"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-11-04
 rfc: "0204-actionmailer-and-mail-port"
 cluster: actionmailer
 packages: ["actionmailer"]
@@ -9,9 +9,9 @@ deps: ["actionmailer-base-class-api"]
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9734
+claim: "2026-11-04T21:36:45Z"
+assignee: "actionmailer-base-mail-and-collector"
 blocked-by: null
 ---
 

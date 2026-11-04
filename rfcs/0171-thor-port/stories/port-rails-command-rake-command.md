@@ -1,7 +1,7 @@
 ---
 title: "Port Rails::Command::RakeCommand so non-Thor namespaces (db:*, app:template) dispatch to Rake tasks"
-status: ready
-updated: 2026-09-30
+status: closed
+updated: 2026-11-04
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -19,7 +19,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Landed in trails#9614: RakeCommand < Base at commands/rake.ts with invokeRake dispatching to it, printingCommands lists commented non-app tasks, and command.trails.test.ts covers an underscored rake name passing through. All ACs verified."
 ---
 
 ## Context

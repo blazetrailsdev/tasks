@@ -1,7 +1,7 @@
 ---
 title: "drain-queued-generators-in-generators-invoke"
-status: blocked
-updated: 2026-10-23
+status: closed
+updated: 2026-11-04
 rfc: "0142-trailties-surfaced-deviations"
 cluster: "generators"
 packages: []
@@ -13,8 +13,8 @@ priority: 6
 pr: null
 claim: "2026-09-25T21:17:24Z"
 assignee: "drain-queued-generators-in-generators-invoke"
-blocked-by: "blocked on rails-migration-generator-does-not-hook-orm: move-hand-written-generate-subcommand-flags-onto-generators landed (trails#8270), but Generators.invoke('migration') still reaches the rails:migration stub (packages/trailties/src/generators/rails/migration/migration-generator.ts, empty change()), which has no hook_for :orm (railties/lib/rails/generators/rails/migration/migration_generator.rb:7). Draining queued generate calls would emit column-less migrations."
-closed-reason: null
+blocked-by: null
+closed-reason: "Duplicate of converge-generators-actions-generate-onto-rails-command (0171), which replaces pendingGenerators with rails_command."
 ---
 
 ## Context

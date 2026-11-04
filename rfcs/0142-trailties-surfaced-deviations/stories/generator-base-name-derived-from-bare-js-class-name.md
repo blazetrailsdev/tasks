@@ -1,7 +1,7 @@
 ---
 title: "GeneratorBase.baseName reads a bare JS class name, not Rails::Generators::<X>"
-status: draft
-updated: 2026-09-28
+status: closed
+updated: 2026-11-04
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of generator-base-name-reads-ruby-class-path (0171); its consumer ACs were folded in there (tasks 30801370a)."
 ---
 
 ## Context

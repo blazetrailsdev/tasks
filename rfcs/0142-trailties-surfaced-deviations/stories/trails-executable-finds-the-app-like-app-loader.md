@@ -1,7 +1,7 @@
 ---
 title: "The trails executable walks up to bin/trails, as Rails::AppLoader.exec_app does"
-status: draft
-updated: 2026-10-26
+status: closed
+updated: 2026-11-04
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of trails-cli-has-no-app-loader-exec-app (0171); its app/models and bin.ts ACs were folded in there (tasks 30801370a)."
 ---
 
 ## Context
