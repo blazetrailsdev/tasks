@@ -5,7 +5,7 @@ updated: 2026-11-04
 rfc: "0000-no-returned-proxies"
 cluster: factory-returned
 packages: ["image-processing"]
-deps: []
+deps: ["no-returned-proxy-lint-gate"]
 deps-rfc: []
 est-loc: 60
 priority: null

@@ -32,9 +32,17 @@ the first prototype-chain conversion of an instance-level dispatch.
 
 ## Acceptance criteria
 
-- [ ] A lint rule under `eslint/` reports a returned Proxy in the three shapes
-      named above, with a fixture test per shape and one for the sanctioned
-      `Object.setPrototypeOf(…, new Proxy(…))` form.
+- [ ] A lint rule under `eslint/` reports a returned Proxy in each shape the
+      inventory holds, with a fixture test per shape:
+  - `return new Proxy(…)` in a constructor, function or method;
+  - an allocator passed to `rbDefineAllocFunc` whose value is a `new Proxy(…)`;
+  - an exported `const` initialised with `new Proxy(…)`;
+  - a `return` (or arrow-function body) whose value is a call to a
+    Proxy-returning helper, listed in the rule: `methodMissingProxy`,
+    `rbFBinding`, `stripThenable`, `createTagBuilderProxy`, `pgConnection`.
+- [ ] The rule has a fixture for the sanctioned
+      `Object.setPrototypeOf(…, new Proxy(…))` form, which is not reported.
 - [ ] Its enrollment is an only-shrink JSON list holding exactly the sites in
-      this RFC's other stories, each row naming its story id.
-- [ ] CI runs it; a new returned Proxy anywhere in `packages/*/src` reds.
+      this RFC's other stories, each row naming its story id. A helper leaves
+      the rule's helper list in the story that retires it.
+- [ ] CI runs it, and a new returned Proxy anywhere in `packages/*/src` reds.

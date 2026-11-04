@@ -5,7 +5,7 @@ updated: 2026-11-04
 rfc: "0000-no-returned-proxies"
 cluster: factory-returned
 packages: ["activesupport"]
-deps: []
+deps: ["no-returned-proxy-lint-gate"]
 deps-rfc: []
 est-loc: 100
 priority: null
@@ -32,9 +32,13 @@ the first prototype-chain conversion of an instance-level dispatch.
 
 ## Acceptance criteria
 
-- [ ] No `new Proxy(` value is returned to a caller from the site(s) above.
-- [ ] The behaviour the Proxy provided is kept by the shape named in Context,
-      with existing tests passing unchanged.
-- [ ] A test pins the behaviour the Proxy existed for (the default, the
-      raise, the deferral, the hidden member) on the new shape.
-- [ ] This site's row in the `no-returned-proxy-lint-gate` list is deleted.
+- [ ] `stripThenable` no longer creates a Proxy; it is deleted, or it returns
+      its argument (`stripThenable(x) === x`).
+- [ ] At each of the seven calling files, the value the caller hands on is the
+      original object: a test asserts `===` identity with it, and that a
+      `#private` field of its class still reads through that value.
+- [ ] Wherever a caller needed `then` hidden (an `await` or `Promise.resolve`
+      must not adopt the object), a test awaits the value and gets the object
+      itself back.
+- [ ] This site's row in the `no-returned-proxy-lint-gate` list is deleted,
+      and `stripThenable` leaves the rule's helper list.

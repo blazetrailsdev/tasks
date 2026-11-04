@@ -197,6 +197,8 @@ on Node too, for the identity and fidelity reasons above.
 ## Rollout
 
 1. **Gate:** `no-returned-proxy-lint-gate`, so the count can only fall.
+   Every other story lists it in `deps`, so the ready queue cannot offer a
+   conversion before the gate exists.
 2. **The live defect and the subclass-heavy bases first:**
    `string-inquirer-method-missing-in-prototype-chain`,
    `ordered-options-method-missing-in-prototype-chain`,
@@ -232,5 +234,8 @@ on Node too, for the identity and fidelity reasons above.
 
 ## Changelog
 
+- 2026-11-04: review: every story depends on the gate; the gate covers
+  helper returns; explicit-member and non-dispatch stories get their own
+  criteria.
 - 2026-11-04: initial RFC (38 stories), folding tasks#318's
   `method-missing-proxy-in-the-prototype-chain`.

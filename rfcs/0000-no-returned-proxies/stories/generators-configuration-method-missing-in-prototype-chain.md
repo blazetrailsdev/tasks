@@ -5,7 +5,7 @@ updated: 2026-11-04
 rfc: "0000-no-returned-proxies"
 cluster: constructor-returned
 packages: ["trailties"]
-deps: []
+deps: ["no-returned-proxy-lint-gate"]
 deps-rfc: []
 est-loc: 40
 priority: null

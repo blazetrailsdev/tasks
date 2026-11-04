@@ -5,7 +5,7 @@ updated: 2026-11-04
 rfc: "0000-no-returned-proxies"
 cluster: factory-returned
 packages: ["ruby-compat", "activerecord", "rack", "thor", "trailties"]
-deps: []
+deps: ["no-returned-proxy-lint-gate"]
 deps-rfc: []
 est-loc: 100
 priority: null
@@ -33,9 +33,14 @@ the first prototype-chain conversion of an instance-level dispatch.
 
 ## Acceptance criteria
 
-- [ ] No `new Proxy(` value is returned to a caller from the site(s) above.
-- [ ] The behaviour the Proxy provided is kept by the shape named in Context,
-      with existing tests passing unchanged.
-- [ ] A test pins the behaviour the Proxy existed for (the default, the
-      raise, the deferral, the hidden member) on the new shape.
-- [ ] This site's row in the `no-returned-proxy-lint-gate` list is deleted.
+- [ ] `rbFBinding` returns no Proxy. The binding's `self` and its constant
+      table are passed as separate values, or the binding is a real object
+      whose prototype chain reaches the constant table.
+- [ ] For each of the five callers in Context, a test evaluates a template
+      against the binding and asserts both that a member of `self` is read
+      (the template's `this` `===` the caller's object) and that a top-level
+      constant seated on `TopLevel` resolves.
+- [ ] A name that is both a member of `self` and a top-level constant resolves
+      to the member, as `key in target` did before.
+- [ ] This site's row in the `no-returned-proxy-lint-gate` list is deleted,
+      and `rbFBinding` leaves the rule's helper list.

@@ -5,7 +5,7 @@ updated: 2026-11-04
 rfc: "0000-no-returned-proxies"
 cluster: constructor-returned
 packages: ["actionpack"]
-deps: []
+deps: ["no-returned-proxy-lint-gate"]
 deps-rfc: []
 est-loc: 40
 priority: null
@@ -25,7 +25,7 @@ Rails / Ruby:
 
 - `vendor/rails/v8.0.2/actionpack/lib/action_dispatch/request/session.rb:47-74`
 
-Rails' `Options` defines no `method_missing`: it answers `[]` / `[]=` / `to_hash` / `values_at` against `@delegate`. The Proxy forwarding every missed property to `delegate` is invented; port the members Rails defines and drop the trap, or, if a caller relies on dotted reads, move the trap into the prototype chain.
+Rails' `Options` defines no `method_missing`: it answers `[]` / `[]=` / `to_hash` / `values_at` against `@delegate`. The Proxy forwarding every missed property to `delegate` is invented; port the members Rails defines convert any dotted-read caller to `[]`, and drop the trap.
 
 See the RFC README for why a returned Proxy is the defect, and trails#9572 for
 the first prototype-chain conversion of an instance-level dispatch.
@@ -33,19 +33,14 @@ the first prototype-chain conversion of an instance-level dispatch.
 ## Acceptance criteria
 
 - [ ] No `new Proxy(` value is returned to a caller from the site(s) above:
-      the constructor returns nothing, and a factory returns a real instance.
-- [ ] Dispatch that Ruby reaches through `method_missing` is installed once,
-      in the prototype chain, in the form `activerecord/src/base.ts:2031` /
-      `relation.ts:2200` (class level) and `activestorage/src/attached/one.ts:81`
-      / `abstract-controller/collector.ts:30` (instance level) use:
-      `Object.setPrototypeOf(Klass.prototype, new Proxy(Object.create(parent), handler))`.
-- [ ] A `has` trap, where one exists, moves with the `get` trap, so
-      `rbObjRespondTo` / `in` answer as before.
+      the constructor returns nothing.
+- [ ] The class answers the members the Ruby counterpart defines (named in
+      Context) as ported members under their Rails names, and nothing else.
+      No `method_missing`-style trap is added, in the prototype chain or
+      elsewhere, because Ruby has none here.
+- [ ] Every trails caller that read a name through the old trap is converted
+      to one of those members, or to a member of the object the Ruby caller
+      reaches; the PR lists the converted call sites.
 - [ ] A test declares a subclass with a `#private` field, constructs it, and
-      reads the field; the dynamic names the class answered before still
-      answer (existing tests pass unchanged).
-- [ ] Identity holds: `x instanceof Klass` and
-      `Object.getPrototypeOf(x) === Klass.prototype` are both true.
-- [ ] The row in `docs/method-missing-definers.md` (if any) reads
-      `Proxy (proto chain)`, and this site's row in the
-      `no-returned-proxy-lint-gate` list is deleted.
+      reads the field, and the ported members are tested.
+- [ ] This site's row in the `no-returned-proxy-lint-gate` list is deleted.

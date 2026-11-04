@@ -5,7 +5,7 @@ updated: 2026-11-04
 rfc: "0000-no-returned-proxies"
 cluster: factory-returned
 packages: ["actionview"]
-deps: []
+deps: ["no-returned-proxy-lint-gate"]
 deps-rfc: []
 est-loc: 60
 priority: null
@@ -49,3 +49,4 @@ the first prototype-chain conversion of an instance-level dispatch.
 - [ ] The row in `docs/method-missing-definers.md` (if any) reads
       `Proxy (proto chain)`, and this site's row in the
       `no-returned-proxy-lint-gate` list is deleted.
+- [ ] `createTagBuilderProxy` leaves the `no-returned-proxy-lint-gate` rule's helper list.

@@ -7,6 +7,7 @@ cluster: delegator
 packages: ["ruby-compat"]
 deps:
   [
+    "no-returned-proxy-lint-gate",
     "reflection-proxy-delegates-through-prototype-chain",
     "command-recorder-delegates-through-prototype-chain",
     "uploaded-file-delegates-through-prototype-chain",
@@ -41,3 +42,4 @@ the first prototype-chain conversion of an instance-level dispatch.
 - [ ] `methodMissingProxy` and `method-missing-proxy.ts` are deleted, or
       replaced by a prototype-chain installer that returns nothing.
 - [ ] No import of it remains (`git grep methodMissingProxy packages` is empty).
+- [ ] `methodMissingProxy` leaves the `no-returned-proxy-lint-gate` rule's helper list.
