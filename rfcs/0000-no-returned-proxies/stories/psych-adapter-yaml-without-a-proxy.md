@@ -7,7 +7,7 @@ cluster: factory-returned
 packages: ["ruby-compat"]
 deps: []
 deps-rfc: []
-est-loc: 60
+est-loc: 40
 priority: null
 pr: null
 claim: null

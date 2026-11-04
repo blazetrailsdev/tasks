@@ -7,7 +7,7 @@ cluster: constructor-returned
 packages: ["rake"]
 deps: []
 deps-rfc: []
-est-loc: 60
+est-loc: 40
 priority: null
 pr: null
 claim: null

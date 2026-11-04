@@ -7,7 +7,7 @@ cluster: factory-returned
 packages: ["activesupport"]
 deps: []
 deps-rfc: []
-est-loc: 60
+est-loc: 100
 priority: null
 pr: null
 claim: null
@@ -25,7 +25,7 @@ Rails / Ruby:
 
 - None: the helper is `@noRailsEquivalent PERMANENT`, as Ruby objects are not thenables.
 
-Every caller receives a Proxy over its own object, which breaks identity and private-field access on the result. Inventory the callers first; most may be able to return an object whose `then` is shadowed by a non-callable own property instead.
+Every caller receives a Proxy over its own object, which breaks identity and private-field access on the result. It has seven non-test calling files; inventory them first; most may be able to return an object whose `then` is shadowed by a non-callable own property instead.
 
 See the RFC README for why a returned Proxy is the defect, and trails#9572 for
 the first prototype-chain conversion of an instance-level dispatch.

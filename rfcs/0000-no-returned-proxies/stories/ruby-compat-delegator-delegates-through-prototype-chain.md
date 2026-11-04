@@ -7,7 +7,7 @@ cluster: delegator
 packages: ["ruby-compat"]
 deps: []
 deps-rfc: []
-est-loc: 60
+est-loc: 100
 priority: null
 pr: null
 claim: null

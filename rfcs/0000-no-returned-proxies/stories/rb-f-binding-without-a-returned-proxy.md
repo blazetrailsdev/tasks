@@ -7,7 +7,7 @@ cluster: factory-returned
 packages: ["ruby-compat", "activerecord", "rack", "thor", "trailties"]
 deps: []
 deps-rfc: []
-est-loc: 60
+est-loc: 100
 priority: null
 pr: null
 claim: null

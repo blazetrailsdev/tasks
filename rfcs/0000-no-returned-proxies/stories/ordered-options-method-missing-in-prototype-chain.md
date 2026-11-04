@@ -7,7 +7,7 @@ cluster: constructor-returned
 packages: ["activesupport", "trailties"]
 deps: []
 deps-rfc: []
-est-loc: 60
+est-loc: 100
 priority: null
 pr: null
 claim: null
