@@ -1,9 +1,9 @@
 ---
 rfc: "0218-api-privates-extra-surface"
 title: "api privates extra: score internal TS declarations against Rails-private methods"
-status: draft
+status: active
 created: 2026-11-03
-updated: 2026-11-03
+updated: 2026-11-04
 owner: "@deanmarano"
 packages: []
 clusters:
