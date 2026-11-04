@@ -40,3 +40,4 @@ production.
 - [ ] `GeneratorBase.namespace` ports `base.rb:54-57`.
 - [ ] `TaskGenerator`'s explicit `sourceRoot` is removed; `default_source_root` finds `rails/task/templates`.
 - [ ] `AppGenerator`'s explicit `sourceRoot` (trails#9462) is removed; `default_source_root` finds `rails/app/templates`.
+- [ ] (from the closed duplicate `generator-base-name-derived-from-bare-js-class-name`) The consumers read the Ruby-path names: `hookFor`'s `in_base` / `as_hook` defaults (`base.rb:175-177`) and `defaultForOption`'s `config[generator_name]` / `config[base_name]` lookups (`base.rb:355-365`). A test covers each.

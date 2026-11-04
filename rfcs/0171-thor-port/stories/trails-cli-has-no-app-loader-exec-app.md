@@ -52,3 +52,5 @@ whether or not it is inside an app, with no `exec_app` step. As a result:
 ## Thor port (the Thor-port RFC this story is rehomed into)
 
 Part of retiring commander: `retire-commander-cli-onto-rails-command-invoke` depends on it. Estimated at 300.
+
+- [ ] (from the closed duplicate `trails-executable-finds-the-app-like-app-loader`) `AppLoader.execApp` walks up one directory at a time to the first one holding `bin/trails` (`app_loader.rb:45-75`), so `trails routes` run from a generated app's `app/models` boots that app, and `bin.ts` no longer probes `Dir.pwd()` for `dist/config/application.js` / `config/application.ts`.

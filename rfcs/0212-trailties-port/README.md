@@ -78,15 +78,17 @@ nothing to converge onto.
 
 ### Scope split with RFC 0171 and RFC 0142
 
-- **RFC 0171** owns every `commands/**/*_command.rb` port, the
-  generator-onto-Thor conversions, and `trails new` dispatch. This RFC files no
-  command stories except `rails plugin new` (`commands/plugin/plugin_command.rb`),
-  which 0171 does not cover and which only makes sense next to the plugin
-  generator.
-- **RFC 0142** keeps every deviation found in code that is already ported. A
-  story here ports what is missing. It does not re-file a 0142 story.
-- **This RFC** owns the unported lib files, the two test harnesses, file
-  relocation onto the Rails paths, and porting the test suite.
+The three trailties RFCs split the package by what a story does, not by which file it touches:
+
+| RFC                      | Owns                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **0171** (Thor)          | `packages/thor` and its specs; converging generators onto `Thor::Group` / `Thor::Actions`; every `commands/**/*_command.rb` port, `Rails::Command` dispatch (`invoke`, `RakeCommand`, `AppLoader`), the rackup-backed `trails server`, and retiring commander, including the `db:*` move onto `databases.rake` and any fix to `commands/db.ts` it deletes |
+| **0212** (railties port) | Rails files with no TS file yet (lib and `generators/**`, `test_unit/**`, apart from commands), the isolation and `Generators::TestCase` harnesses, moving tests to their Rails paths, and porting `railties/test`                                                                                                                                        |
+| **0142** (deviations)    | Any divergence in code already ported, including members missing from a ported file, in an already-converged command, and in `.tt` template output                                                                                                                                                                                                        |
+
+A story that fits two rows goes to the first match top to bottom, except that a member missing from an existing file is 0142 and not 0212.
+
+`rails plugin new` (`commands/plugin/plugin_command.rb`) is the one command filed here, because it only makes sense next to the plugin generator.
 
 ### The isolation harness
 

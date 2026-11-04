@@ -31,3 +31,4 @@ and `AppBuilder#configWhenUpdating` landed with `api-app-generator-update-tests-
 - `Rails::Command::App::UpdateCommand` is ported (its `perform` invoking the `update_*` steps).
 - A `runAppUpdate` test helper mirrors `generators_test_helper.rb:141-149`.
 - `it("app update does not generate public files")` is ported in `packages/trailties/src/generators/api-app-generator.test.ts`.
+- (from the closed duplicate `port-app-update-command-with-skip-option-preservation`) `generator_options` re-derives each skip flag from the running app as `update_command.rb:55-97` does. `skip_gem?` is read from the app's `package.json` (e.g. `skipEslint` is true when `eslint` is not a dependency), so `app:update` never re-adds a skipped tool.

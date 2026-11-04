@@ -33,3 +33,4 @@ they live there. This part moves: `db:migrate` (`db.ts:539`), `db:rollback` (`db
 - [ ] The corresponding `db.ts` commander code is deleted, and `bin/trails db:<task>` reaches
       the task through `RakeCommand`.
 - [ ] The existing `db` command tests keep passing through the new path.
+- [ ] For each `commands/db.ts` deviation story rehomed from RFC 0142 whose code this part deletes (`db-database-flag-loads-primary-schema`, `db-command-registers-only-task-enabled-configs-so-a-hidden-primary-promotes-the-next`, `db-prepare-sets-and-restores-the-schema-format-seat-around-prepare-all`, `db-seed-goes-through-database-tasks-load-seed`, `trailties-migrate-status-messages-cost-a-second-pool`): either the ported `.rake` body converges it and the PR closes that story, or the story is updated to point at the Rake task.

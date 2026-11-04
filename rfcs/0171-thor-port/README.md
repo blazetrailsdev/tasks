@@ -332,6 +332,18 @@ before the send.
 per-context cwd) and only makes the restore wait for the block's promise to settle
 (`ruby-compat-fileutils-cd-block-restores-on-settle`).
 
+## Scope boundary with RFC 0212 and RFC 0142
+
+The three trailties RFCs split the package by what a story does, not by which file it touches:
+
+| RFC                      | Owns                                                                                                                                                                                                                                                                                                                                                      |
+| ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **0171** (Thor)          | `packages/thor` and its specs; converging generators onto `Thor::Group` / `Thor::Actions`; every `commands/**/*_command.rb` port, `Rails::Command` dispatch (`invoke`, `RakeCommand`, `AppLoader`), the rackup-backed `trails server`, and retiring commander, including the `db:*` move onto `databases.rake` and any fix to `commands/db.ts` it deletes |
+| **0212** (railties port) | Rails files with no TS file yet (lib and `generators/**`, `test_unit/**`, apart from commands), the isolation and `Generators::TestCase` harnesses, moving tests to their Rails paths, and porting `railties/test`                                                                                                                                        |
+| **0142** (deviations)    | Any divergence in code already ported, including members missing from a ported file, in an already-converged command, and in `.tt` template output                                                                                                                                                                                                        |
+
+A story that fits two rows goes to the first match top to bottom, except that a member missing from an existing file is 0142 and not 0212.
+
 ## Non-goals
 
 - **`Thor::Runner`** (`runner.rb`, the `thor` executable that installs and runs Thorfiles) and the
