@@ -8,7 +8,7 @@ packages: []
 deps:
   - actionmailer-base-mail-and-collector
 deps-rfc: []
-est-loc: null
+est-loc: 80
 priority: 6
 pr: null
 claim: null
