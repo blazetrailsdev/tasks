@@ -2,7 +2,7 @@
 title: "ruby-compat-file-umask"
 status: draft
 updated: 2026-11-01
-rfc: "0142-trailties-surfaced-deviations"
+rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
