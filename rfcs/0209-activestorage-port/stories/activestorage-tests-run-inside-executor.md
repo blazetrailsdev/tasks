@@ -1,6 +1,6 @@
 ---
 title: "activestorage-tests-run-inside-executor"
-status: draft
+status: ready
 updated: 2026-11-04
 rfc: "0209-activestorage-port"
 cluster: null

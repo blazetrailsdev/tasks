@@ -1,6 +1,6 @@
 ---
 title: "view-watch-runs-from-actionview-server-block"
-status: claimed
+status: done
 updated: 2026-11-04
 rfc: "0217-rackup-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
+pr: trails#9720
 claim: "2026-11-04T19:25:18Z"
 assignee: "rackup-builder-loads-config-ts"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "activesupport: wrap's Fiber deadlocks on a ThreadLoadInterlockAwareMonitor held by the Fiber that started it"
-status: draft
+status: ready
 updated: 2026-11-04
 rfc: "0212-trailties-port"
 cluster: null

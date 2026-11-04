@@ -1,7 +1,7 @@
 ---
 title: "Move ERB's <%% / %%> literals from the .tt regex pre-pass into the lexer"
-status: draft
-updated: 2026-11-03
+status: ready
+updated: 2026-11-04
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
