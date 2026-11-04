@@ -5,7 +5,10 @@ updated: 2026-11-04
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - mail-delivery-methods-smtp-sendmail-file-test
+  - actionmailer-message-delivery-parameterized-and-delivery-job
+  - actionmailer-base-class-api
 deps-rfc: []
 est-loc: null
 priority: null
