@@ -2,7 +2,7 @@
 title: "test-unit-controller-template-emits-test-class"
 status: ready
 updated: 2026-11-02
-rfc: "0212-trailties-port"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

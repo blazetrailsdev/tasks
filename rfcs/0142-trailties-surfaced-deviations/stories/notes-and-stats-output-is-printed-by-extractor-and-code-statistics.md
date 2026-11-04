@@ -2,7 +2,7 @@
 title: "notes-and-stats-output-is-printed-by-extractor-and-code-statistics"
 status: ready
 updated: 2026-11-01
-rfc: "0171-thor-port"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

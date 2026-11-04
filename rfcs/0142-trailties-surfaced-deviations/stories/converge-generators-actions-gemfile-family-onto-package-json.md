@@ -2,7 +2,7 @@
 title: "converge-generators-actions-gemfile-family-onto-package-json"
 status: ready
 updated: 2026-10-29
-rfc: "0171-thor-port"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

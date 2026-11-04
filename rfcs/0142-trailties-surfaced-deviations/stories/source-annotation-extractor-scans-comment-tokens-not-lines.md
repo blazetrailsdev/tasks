@@ -2,7 +2,7 @@
 title: "source-annotation-extractor-scans-comment-tokens-not-lines"
 status: ready
 updated: 2026-11-01
-rfc: "0171-thor-port"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

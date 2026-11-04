@@ -2,7 +2,7 @@
 title: "generators-migration-class-methods-on-the-host-class"
 status: ready
 updated: 2026-10-31
-rfc: "0171-thor-port"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

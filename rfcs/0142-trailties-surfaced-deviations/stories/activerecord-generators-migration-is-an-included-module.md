@@ -2,7 +2,7 @@
 title: "ActiveRecord::Generators::Migration is an included module with ClassMethods"
 status: draft
 updated: 2026-11-03
-rfc: "0171-thor-port"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []

@@ -2,7 +2,7 @@
 title: "generators-error-lives-in-base-under-its-rails-name"
 status: ready
 updated: 2026-10-31
-rfc: "0171-thor-port"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
