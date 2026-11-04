@@ -1,0 +1,33 @@
+---
+title: "ruby-compat-io-read-async-to-eof"
+status: draft
+updated: 2026-11-04
+rfc: "0204-actionmailer-and-mail-port"
+cluster: null
+packages: []
+deps: []
+deps-rfc: []
+est-loc: null
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+`Mail.read` (`vendor/mail/2.8.1/lib/mail/mail.rb:168-170`) is
+`self.new(File.open(filename, 'rb') { |f| f.read })`. The port in
+`packages/mail/src/mail.ts` calls `IO.binreadAsync` instead, because
+ruby-compat's `IO#read` with no length (`packages/ruby-compat/src/io.ts`,
+`read`) reads with `readSync`, and `File.openAsync`'s block form has no
+async read-to-EOF to call. `IO#readAsync` takes a required length.
+
+## Acceptance criteria
+
+- `IO#readAsync` accepts no length and reads to EOF over the backend's async
+  read (`io_read`, `vendor/ruby/v3.3.11/io.c:3774`).
+- `Mail.read` is `File.openAsync(filename, "rb", (f) => f.readAsync())`, and its
+  `@missingRailsCall open` / `read` receipts are removed.
