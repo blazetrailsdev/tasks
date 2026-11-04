@@ -74,6 +74,12 @@ In every case the AOT-safe form is also the better form on Node:
   reachable from that app's code, whether or not the reachability is paid for at
   boot.
 
+A fix must also not ask trails to hold state, or name a file, differently from
+Rails merely to suit a compiler. trails#9724 was reverted for exactly that, and
+the lesson is in the shape of the preferred fix: prefer the form that satisfies
+both, and where none exists, a divergence is a case-by-case decision to be
+argued in the open rather than smuggled in with an AOT justification.
+
 Neither is a compiler workaround, which is the bar: a change that exists only to
 please a compiler belongs upstream in the compiler, not here.
 

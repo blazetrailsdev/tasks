@@ -77,9 +77,17 @@ chainable.ts:154). Those do not have this defect and are listed only so a sweep
 does not mistake them for it.
 
 Only a class whose own class or a subclass installs a private field after
-`super()` actually breaks today. `StringInquirer` is the one reached so far and
-is already fixed by deriving the value instead of storing it
-(trails#9724); the rest are latent.
+`super()` actually breaks today. `StringInquirer` is the one reached so far; the
+rest are latent.
+
+Its history is the argument for this story. trails#9724 first fixed it by
+**deriving** `local?` from the string instead of storing it, and review reverted
+that: `environment_inquirer.rb` stores `@local`, and a fix that drops a field
+Rails holds is a divergence bought for a compiler's benefit. The prototype-chain
+conversion is what avoids the trade entirely -- `#local` stays stored exactly as
+Rails stores `@local`, and the _returned Proxy_ goes instead (trails#9728). So
+converting these sites is not merely tidier; for this class of wall it is the
+only fix that does not ask trails to hold state differently from Rails.
 
 **`est-loc: 300` is provisional** — roughly 20 sites at ~15 lines, including
 tests. Some sites may resist conversion: `time-with-zone.ts` and
