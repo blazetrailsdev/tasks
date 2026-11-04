@@ -2,7 +2,7 @@
 title: "constant-residue-excluded-other-packages-receipts"
 status: blocked
 updated: 2026-11-03
-rfc: "0213-zeitwerk-build-time-autoloader"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps:
