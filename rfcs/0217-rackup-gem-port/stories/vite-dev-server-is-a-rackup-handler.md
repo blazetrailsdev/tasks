@@ -2,7 +2,7 @@
 title: "vite-dev-server-is-a-rackup-handler"
 status: draft
 updated: 2026-11-04
-rfc: "0171-thor-port"
+rfc: "0217-rackup-gem-port"
 cluster: null
 packages: []
 deps: []
