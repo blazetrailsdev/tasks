@@ -5,7 +5,8 @@ updated: 2026-11-04
 rfc: "0217-rackup-gem-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - rails-server-extends-rackup-server
 deps-rfc: []
 est-loc: 120
 priority: null
