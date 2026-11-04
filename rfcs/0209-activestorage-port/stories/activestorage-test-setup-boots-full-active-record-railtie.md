@@ -1,6 +1,6 @@
 ---
 title: "activestorage test setup boots the full ActiveRecord railtie"
-status: draft
+status: in-progress
 updated: 2026-11-04
 rfc: "0209-activestorage-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9714
+claim: "2026-11-04T16:06:25Z"
+assignee: "activestorage-fixture-set-test-names"
 blocked-by: null
 closed-reason: null
 ---

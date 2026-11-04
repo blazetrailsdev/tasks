@@ -1,6 +1,6 @@
 ---
 title: "image-processing-wasm-vips-handle-lifetime"
-status: draft
+status: claimed
 updated: 2026-11-04
 rfc: "0209-activestorage-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-04T16:26:25Z"
+assignee: "image-processing-wasm-vips-handle-lifetime"
 blocked-by: null
 closed-reason: null
 ---

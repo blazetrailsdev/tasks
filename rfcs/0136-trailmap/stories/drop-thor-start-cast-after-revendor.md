@@ -1,6 +1,6 @@
 ---
 title: "trailmap: drop the Thor.start cast in lib/jobs.ts after re-vendoring past trails#9699"
-status: in-progress
+status: done
 updated: 2026-11-04
 rfc: "0136-trailmap"
 cluster: null

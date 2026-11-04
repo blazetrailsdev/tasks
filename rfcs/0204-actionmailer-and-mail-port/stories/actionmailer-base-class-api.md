@@ -1,7 +1,7 @@
 ---
 title: "Port ActionMailer::Base's class side (base.rb:1-~560)"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-11-04
 rfc: "0204-actionmailer-and-mail-port"
 cluster: actionmailer
 packages: ["actionmailer"]
@@ -9,9 +9,9 @@ deps: ["actionmailer-package-and-support-modules"]
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9715
+claim: "2026-11-04T16:46:26Z"
+assignee: "actionmailer-base-class-api"
 blocked-by: null
 ---
 
