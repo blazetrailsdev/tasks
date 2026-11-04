@@ -1,7 +1,7 @@
 ---
 title: "rackup: port Rackup::Stream"
-status: claimed
-updated: 2026-11-03
+status: in-progress
+updated: 2026-11-04
 rfc: "0217-rackup-gem-port"
 cluster: port
 packages: ["rackup", "ruby-compat"]
@@ -9,7 +9,7 @@ deps: ["rackup-package-parity-enrollment"]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: trails#9695
 claim: "2026-11-03T23:58:13Z"
 assignee: "rackup-stream-port"
 blocked-by: null

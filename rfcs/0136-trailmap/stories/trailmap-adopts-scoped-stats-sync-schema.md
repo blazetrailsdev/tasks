@@ -1,7 +1,7 @@
 ---
 title: "trailmap: type the stats-sync models with --schema db/statsSync_schema.ts=StatsSyncRecord"
 status: ready
-updated: 2026-11-03
+updated: 2026-11-04
 rfc: "0136-trailmap"
 cluster: null
 packages: []

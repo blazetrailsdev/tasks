@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat-last-status-per-async-context"
-status: ready
-updated: 2026-11-02
+status: done
+updated: 2026-11-04
 rfc: "0209-activestorage-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9694
+claim: "2026-11-04T00:08:40Z"
+assignee: "ruby-compat-last-status-per-async-context"
 blocked-by: null
 closed-reason: null
 ---

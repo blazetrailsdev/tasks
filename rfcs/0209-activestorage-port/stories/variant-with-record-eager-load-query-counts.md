@@ -1,7 +1,7 @@
 ---
 title: "variant-with-record-eager-load-query-counts"
-status: ready
-updated: 2026-11-03
+status: claimed
+updated: 2026-11-04
 rfc: "0209-activestorage-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-04T00:58:14Z"
+assignee: "variant-with-record-eager-load-query-counts"
 blocked-by: null
 closed-reason: null
 ---

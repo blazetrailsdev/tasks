@@ -1,7 +1,7 @@
 ---
 title: "rackup: port the rest of Rackup::Server and spec_server.rb"
-status: claimed
-updated: 2026-11-03
+status: in-progress
+updated: 2026-11-04
 rfc: "0217-rackup-gem-port"
 cluster: port
 packages: ["rackup"]
@@ -9,7 +9,7 @@ deps: ["port-rackup-server-for-rails-server", "rackup-package-parity-enrollment"
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
+pr: trails#9693
 claim: "2026-11-03T23:48:19Z"
 assignee: "rackup-lobster-and-bin-rackup"
 blocked-by: null
