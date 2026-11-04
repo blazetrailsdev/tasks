@@ -1,7 +1,7 @@
 ---
 title: "executor-wrap-concurrent-flows-on-one-thread"
-status: ready
-updated: 2026-11-02
+status: in-progress
+updated: 2026-11-04
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9706
+claim: "2026-11-04T03:08:16Z"
+assignee: "executor-wrap-concurrent-flows-on-one-thread"
 blocked-by: null
 closed-reason: null
 ---

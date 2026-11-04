@@ -1,6 +1,6 @@
 ---
 title: "unplaced-rails-classes-get-a-constant-table"
-status: in-progress
+status: done
 updated: 2026-11-04
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
