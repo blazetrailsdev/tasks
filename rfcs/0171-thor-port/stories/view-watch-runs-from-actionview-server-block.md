@@ -1,6 +1,6 @@
 ---
 title: "view-watch-runs-from-actionview-server-block"
-status: in-progress
+status: done
 updated: 2026-11-04
 rfc: "0171-thor-port"
 cluster: null

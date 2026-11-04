@@ -1,6 +1,6 @@
 ---
 title: "Delete isRegisteredConstant / registeredConstant; ruby-compat callers read constGet / constDefined"
-status: draft
+status: in-progress
 updated: 2026-11-04
 rfc: "0213-zeitwerk-build-time-autoloader"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9723
+claim: "2026-11-04T18:26:03Z"
+assignee: "delete-registered-constant-readers"
 blocked-by: null
 closed-reason: null
 ---
