@@ -2,7 +2,7 @@
 title: "trailties-server-command-ports-server-and-server-command-classes"
 status: draft
 updated: 2026-10-23
-rfc: "0142-trailties-surfaced-deviations"
+rfc: "0171-thor-port"
 cluster: null
 packages: []
 deps:

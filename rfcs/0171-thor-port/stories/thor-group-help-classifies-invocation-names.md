@@ -2,7 +2,7 @@
 title: "thor-group-help-classifies-invocation-names"
 status: ready
 updated: 2026-11-03
-rfc: "0212-trailties-port"
+rfc: "0171-thor-port"
 cluster: null
 packages: []
 deps: []

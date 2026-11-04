@@ -2,7 +2,7 @@
 title: "app-update-command-and-api-public-files-test"
 status: ready
 updated: 2026-11-04
-rfc: "0212-trailties-port"
+rfc: "0171-thor-port"
 cluster: null
 packages: []
 deps: []

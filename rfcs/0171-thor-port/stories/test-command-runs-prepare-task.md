@@ -2,7 +2,7 @@
 title: "TestCommand#perform runs test:prepare"
 status: ready
 updated: 2026-11-01
-rfc: "0212-trailties-port"
+rfc: "0171-thor-port"
 cluster: null
 packages: []
 deps:

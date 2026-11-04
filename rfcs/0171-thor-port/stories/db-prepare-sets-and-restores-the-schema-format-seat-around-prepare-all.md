@@ -2,7 +2,7 @@
 title: "trailties: db prepare sets and restores the schema_format seat around prepareAll; test:prepare skips format resolution"
 status: draft
 updated: 2026-10-09
-rfc: "0142-trailties-surfaced-deviations"
+rfc: "0171-thor-port"
 cluster: null
 packages: []
 deps: []
