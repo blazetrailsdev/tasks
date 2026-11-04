@@ -1,6 +1,6 @@
 ---
 title: "rackup: receipt Stream::Reader's binary/buffer deviations at the declaration"
-status: claimed
+status: done
 updated: 2026-11-04
 rfc: "0217-rackup-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 2
-pr: null
+pr: trails#9695
 claim: "2026-11-04T14:08:12Z"
 assignee: "rackup-stream-reader-receipts-at-declaration"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Preview filename/content_type reach presentation and process the variant"
-status: ready
+status: in-progress
 updated: 2026-11-04
 rfc: "0209-activestorage-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9712
+claim: "2026-11-04T15:26:29Z"
+assignee: "preview-delegated-reads-reach-presentation"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "attachment-variant-single-return-shape"
-status: ready
+status: in-progress
 updated: 2026-11-04
 rfc: "0209-activestorage-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9711
+claim: "2026-11-04T15:06:31Z"
+assignee: "attachment-variant-single-return-shape"
 blocked-by: null
 closed-reason: null
 ---
