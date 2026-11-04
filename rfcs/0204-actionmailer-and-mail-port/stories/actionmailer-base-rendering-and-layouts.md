@@ -1,6 +1,6 @@
 ---
 title: "actionmailer-base-rendering-and-layouts"
-status: draft
+status: in-progress
 updated: 2026-11-04
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9734
+claim: "2026-11-04T22:21:41Z"
+assignee: "actionmailer-base-rendering-and-layouts"
 blocked-by: null
 closed-reason: null
 ---
