@@ -32,4 +32,4 @@ trails#9712 made `Preview#filename` / `#contentType` reach `presentation`
 - `Blob#url`, `Blob#service_metadata` and the four Servable members answer synchronously on a
   `Blob` (and `Variant` / `VariantWithRecord`), as Rails' do, while `Preview` still reaches
   `presentation`.
-- The `@inventedArm await — CONVERGEABLE` receipts naming this story are removed.
+- Blob's Servable reads are no longer awaited in `blob.ts` or `streaming.ts`.
