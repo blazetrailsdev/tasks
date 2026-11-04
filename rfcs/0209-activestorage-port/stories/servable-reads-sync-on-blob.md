@@ -1,13 +1,13 @@
 ---
-title: "servable-reads-sync-on-blob"
+title: "Blob::Servable reads and Blob#url answer synchronously on a Blob"
 status: draft
 updated: 2026-11-04
 rfc: "0209-activestorage-port"
 cluster: null
-packages: []
+packages: [activestorage]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 150
 priority: null
 pr: null
 claim: null
