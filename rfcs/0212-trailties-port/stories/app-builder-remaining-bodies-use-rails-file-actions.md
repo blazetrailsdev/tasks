@@ -36,5 +36,6 @@ did not fit one PR.
 ## Acceptance criteria
 
 - Each body above makes the Rails calls, with its content in `trails/app/templates/`.
+- `rubyVersion` (`ruby_version`, :54-56, `template "ruby-version", ".ruby-version"`) is today a copy of `nodeVersion` writing `.node-version`, so `create_root_files` writes that file twice. Converge it, or get an owner ruling that a trails app has no `.ruby-version` and skip the method.
 - Every `@missingRailsCall … CONVERGEABLE app-builder-remaining-bodies-use-rails-file-actions`
   receipt is removed.
