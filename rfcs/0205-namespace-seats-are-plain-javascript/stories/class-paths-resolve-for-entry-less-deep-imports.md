@@ -1,7 +1,7 @@
 ---
 title: "class-paths-resolve-for-entry-less-deep-imports"
 status: ready
-updated: 2026-10-28
+updated: 2026-11-05
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []

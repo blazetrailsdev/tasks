@@ -1,7 +1,7 @@
 ---
 title: "seat-remaining-qualified-error-classes"
 status: ready
-updated: 2026-10-19
+updated: 2026-11-05
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []

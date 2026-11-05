@@ -1,7 +1,7 @@
 ---
 title: "SQLite3Integer is seated by a plain assignment, not constSet"
-status: draft
-updated: 2026-11-04
+status: in-progress
+updated: 2026-11-05
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9754
+claim: "2026-11-05T19:51:49Z"
+assignee: "activerecord-reads-whose-import-edge-reorders-the-base-cycle"
 blocked-by: null
 closed-reason: null
 ---

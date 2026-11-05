@@ -1,6 +1,6 @@
 ---
 title: "trails: package-summary.ts adds one row per Rails file api-compare pairs"
-status: ready
+status: in-progress
 updated: 2026-11-05
 rfc: "0222-trailmap-package-pages"
 cluster: package-summary-data
@@ -9,9 +9,9 @@ deps: [emit-package-summary-json]
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9752
+claim: "2026-11-05T19:46:30Z"
+assignee: "emit-package-file-rows"
 blocked-by: null
 ---
 

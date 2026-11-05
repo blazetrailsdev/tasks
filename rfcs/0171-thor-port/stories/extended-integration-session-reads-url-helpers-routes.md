@@ -1,6 +1,6 @@
 ---
 title: "extended-integration-session-reads-url-helpers-routes"
-status: draft
+status: in-progress
 updated: 2026-11-05
 rfc: "0171-thor-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9753
+claim: "2026-11-05T19:55:15Z"
+assignee: "extended-integration-session-reads-url-helpers-routes"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "default-helper-module-reads-rbmodname-once-outer-constants-resolve"
-status: draft
-updated: 2026-10-28
+status: ready
+updated: 2026-11-05
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []

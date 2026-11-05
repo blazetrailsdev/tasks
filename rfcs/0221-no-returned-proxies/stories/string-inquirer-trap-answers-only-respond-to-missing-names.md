@@ -1,6 +1,6 @@
 ---
 title: "StringInquirer trap answers only respond_to_missing? names (then/toJSON read undefined)"
-status: ready
+status: in-progress
 updated: 2026-11-05
 rfc: "0221-no-returned-proxies"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9755
+claim: "2026-11-05T19:36:27Z"
+assignee: "string-inquirer-trap-answers-only-respond-to-missing-names"
 blocked-by: null
 closed-reason: null
 ---

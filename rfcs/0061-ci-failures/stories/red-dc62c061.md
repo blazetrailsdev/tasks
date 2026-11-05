@@ -1,6 +1,6 @@
 ---
 title: "Active Record SQLite Tests (2) failing on main @dc62c061"
-status: ready
+status: closed
 updated: 2026-11-05
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-05T19:41:57Z"
+assignee: "red-dc62c061"
 blocked-by: null
-closed-reason: null
+closed-reason: "Infrastructure: SQLite Tests (2) failed in the apt-get install step (ffmpeg/mupdf/poppler/imagemagick) after 3 retries, before any tests ran; no code failure on dc62c061."
 ---
 
 ## Context

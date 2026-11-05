@@ -1,6 +1,6 @@
 ---
 title: "Port message_delivery_test's deserialization-error-to-mailer-class test"
-status: ready
+status: done
 updated: 2026-11-05
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9751
+claim: "2026-11-05T19:06:51Z"
+assignee: "actionmailer-delivery-methods-and-remaining-base-test-port"
 blocked-by: null
 closed-reason: null
 ---
