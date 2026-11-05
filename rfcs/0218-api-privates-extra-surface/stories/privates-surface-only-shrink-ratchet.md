@@ -1,7 +1,7 @@
 ---
 title: "Only-shrink ratchet and CI wiring for parity:api:privates (deferred)"
-status: ready
-updated: 2026-11-04
+status: closed
+updated: 2026-11-05
 rfc: "0218-api-privates-extra-surface"
 cluster: api-compare
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "don't want a rachet, it's a CI pain. rachet goes in when we're at 0"
 ---
 
 ## Context

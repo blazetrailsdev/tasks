@@ -1,7 +1,7 @@
 ---
 title: "Measure the privates lane per package on main and record the baseline"
-status: ready
-updated: 2026-11-04
+status: claimed
+updated: 2026-11-05
 rfc: "0218-api-privates-extra-surface"
 cluster: api-compare
 packages: []
@@ -16,8 +16,8 @@ deps-rfc: []
 est-loc: 50
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-05T15:56:04Z"
+assignee: "privates-surface-baseline-counts"
 blocked-by: null
 closed-reason: null
 ---

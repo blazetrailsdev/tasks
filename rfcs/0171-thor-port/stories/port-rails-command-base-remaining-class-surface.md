@@ -1,7 +1,7 @@
 ---
 title: "port-rails-command-base-remaining-class-surface"
-status: ready
-updated: 2026-10-29
+status: done
+updated: 2026-11-05
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9635
+claim: "2026-11-05T15:06:26Z"
+assignee: "mail-header-field-specs-and-content-field-rows"
 blocked-by: null
 closed-reason: null
 ---

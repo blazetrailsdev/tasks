@@ -1,6 +1,6 @@
 ---
 title: "A production build reaches the CLI, and the TypeScript compiler through it: split a production entry from the dev CLI"
-status: draft
+status: claimed
 updated: 2026-11-05
 rfc: "0212-trailties-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-05T15:36:26Z"
+assignee: "trailties-test-unit-is-on-the-production-boot-path"
 blocked-by: null
 closed-reason: null
 ---

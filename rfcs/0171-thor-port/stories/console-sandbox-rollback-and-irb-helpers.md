@@ -1,6 +1,6 @@
 ---
 title: "console-sandbox-rollback-and-irb-helpers"
-status: ready
+status: claimed
 updated: 2026-11-05
 rfc: "0171-thor-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 450
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-05T15:36:26Z"
+assignee: "trailties-test-unit-is-on-the-production-boot-path"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "mail-header-field-specs-and-content-field-rows"
 status: ready
-updated: 2026-11-02
+updated: 2026-11-05
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
 packages: []

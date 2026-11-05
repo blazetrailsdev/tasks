@@ -1,6 +1,6 @@
 ---
 title: "Move the db:* commander subcommands onto ActiveRecord's databases.rake tasks, part 1"
-status: in-progress
+status: done
 updated: 2026-11-05
 rfc: "0171-thor-port"
 cluster: null

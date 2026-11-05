@@ -1,6 +1,6 @@
 ---
 title: "trailties db migrate re-derives pending counts in a second pool for non-Rails messages"
-status: in-progress
+status: done
 updated: 2026-11-05
 rfc: "0171-thor-port"
 cluster: null
