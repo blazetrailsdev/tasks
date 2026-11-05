@@ -1,6 +1,6 @@
 ---
 title: "activeSupportLocalZone keys its memo on the date zone seat, not on the value it memoizes"
-status: draft
+status: closed
 updated: 2026-11-04
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Converged in trails#9731: the memo now keys on nowTimeZoneId(), the date zone seat."
 ---
 
 ## Context

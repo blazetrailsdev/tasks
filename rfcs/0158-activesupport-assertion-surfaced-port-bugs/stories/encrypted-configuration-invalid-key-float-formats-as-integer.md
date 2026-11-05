@@ -1,6 +1,6 @@
 ---
 title: "EncryptedConfiguration InvalidKeyError reports 42.0 key as 42 (YAML float/int collapse)"
-status: in-progress
+status: done
 updated: 2026-11-04
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

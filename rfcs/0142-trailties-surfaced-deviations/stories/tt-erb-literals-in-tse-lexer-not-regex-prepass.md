@@ -1,6 +1,6 @@
 ---
 title: "Move ERB's <%% / %%> literals from the .tt regex pre-pass into the lexer"
-status: in-progress
+status: done
 updated: 2026-11-04
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

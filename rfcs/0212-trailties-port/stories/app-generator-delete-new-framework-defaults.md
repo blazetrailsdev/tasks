@@ -1,6 +1,6 @@
 ---
 title: "AppGenerator#delete_new_framework_defaults"
-status: in-progress
+status: done
 updated: 2026-11-04
 rfc: "0212-trailties-port"
 cluster: null
