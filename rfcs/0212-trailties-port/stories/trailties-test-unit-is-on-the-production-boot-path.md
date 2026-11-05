@@ -2,7 +2,7 @@
 title: "trailties' test-unit code is on the production boot path, dragging in the TypeScript compiler"
 status: draft
 updated: 2026-11-05
-rfc: "0100-package-size-and-publish-shape"
+rfc: "0212-trailties-port"
 cluster: null
 packages: ["trailties"]
 deps: []
