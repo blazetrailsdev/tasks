@@ -429,6 +429,11 @@ test("est-loc above the ceiling is legal once the story is closed", () => {
     });
     assert(w.length === 0, "expected no warning");
   });
+  test("a done or closed unattributed story does not warn", () => {
+    for (const status of ["done", "closed"]) {
+      assert(run([], story({}, { status })).length === 0, `expected no warning for ${status}`);
+    }
+  });
   test("an unattributed story is a warning, not a validate error", () => {
     expectClean(validate({ rfcs: [rfc({}, { packages: [] })], stories: [story()] }).errors);
   });

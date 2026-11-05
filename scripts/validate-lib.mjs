@@ -307,6 +307,9 @@ export const UNATTRIBUTED_RULE =
   "a trailmap or tasks story lists the trails packages it exercises " +
   "(rule from backfill-story-packages-on-open-stories)";
 
+// A closed or done story is touched by its closing edit; it is not backlog.
+const TERMINAL_STORY_STATUSES = new Set(["done", "closed"]);
+
 // Warnings, not errors: a story that genuinely touches no package may merge.
 // `changed` is the set of story files added or modified relative to origin/main.
 export function unattributedWarnings({ rfcs, stories, changed }) {
@@ -314,6 +317,7 @@ export function unattributedWarnings({ rfcs, stories, changed }) {
   const warnings = [];
   for (const s of stories) {
     if (s.error || !changed.has(relPath(s.file))) continue;
+    if (TERMINAL_STORY_STATUSES.has(s.frontmatter?.status)) continue;
     if (packageAttribution(s, rfcPackages).length > 0) continue;
     warnings.push(`${relPath(s.file)}: no package attribution; ${UNATTRIBUTED_RULE}`);
   }
