@@ -1,7 +1,7 @@
 ---
 title: "ActionMailer::Base::NullMail answers every method with nil (Proxy)"
-status: draft
-updated: 2026-11-04
+status: in-progress
+updated: 2026-11-05
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9738
+claim: "2026-11-05T13:58:07Z"
+assignee: "actionmailer-null-mail-method-missing-proxy"
 blocked-by: null
 closed-reason: null
 ---

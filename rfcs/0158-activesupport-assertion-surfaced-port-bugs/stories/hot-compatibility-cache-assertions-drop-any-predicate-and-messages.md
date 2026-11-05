@@ -1,7 +1,7 @@
 ---
 title: "hot_compatibility prepared-statement tests drop assert_predicate :any? and Rails messages"
-status: in-progress
-updated: 2026-11-04
+status: done
+updated: 2026-11-05
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

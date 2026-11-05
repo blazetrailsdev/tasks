@@ -1,7 +1,7 @@
 ---
 title: "trailties db migrate re-derives pending counts in a second pool for non-Rails messages"
-status: draft
-updated: 2026-08-02
+status: in-progress
+updated: 2026-11-05
 rfc: "0171-thor-port"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9737
+claim: "2026-11-05T13:26:43Z"
+assignee: "trailties-migrate-status-messages-cost-a-second-pool"
 blocked-by: null
 closed-reason: null
 ---

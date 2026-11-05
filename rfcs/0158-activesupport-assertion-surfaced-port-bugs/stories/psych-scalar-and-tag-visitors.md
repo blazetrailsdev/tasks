@@ -1,7 +1,7 @@
 ---
 title: "Psych: the remaining YAMLTree / ToRuby arms (Rational, Complex, BigDecimal, Exception, Encoding)"
-status: in-progress
-updated: 2026-11-04
+status: done
+updated: 2026-11-05
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: ["ruby-compat"]

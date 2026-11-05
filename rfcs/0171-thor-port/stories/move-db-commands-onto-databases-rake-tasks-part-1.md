@@ -1,7 +1,7 @@
 ---
 title: "Move the db:* commander subcommands onto ActiveRecord's databases.rake tasks, part 1"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-11-05
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties", "activerecord"]
@@ -9,9 +9,9 @@ deps: ["port-rails-command-rake-command"]
 deps-rfc: []
 est-loc: 600
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9737
+claim: "2026-11-05T13:06:34Z"
+assignee: "move-db-commands-onto-databases-rake-tasks-part-1"
 blocked-by: null
 closed-reason: null
 ---

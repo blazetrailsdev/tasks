@@ -1,7 +1,7 @@
 ---
 title: "Port MessageDelivery, Parameterized and MailDeliveryJob with async delivery"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-11-05
 rfc: "0204-actionmailer-and-mail-port"
 cluster: actionmailer
 packages: ["actionmailer"]
@@ -9,9 +9,9 @@ deps: ["actionmailer-base-mail-and-collector", "mail-delivery-methods-smtp-sendm
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9738
+claim: "2026-11-05T13:36:27Z"
+assignee: "actionmailer-message-delivery-parameterized-and-delivery-job"
 blocked-by: null
 ---
 
