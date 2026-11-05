@@ -167,7 +167,7 @@ All five reuse the layouts and partials of `rfc-pages`, `story-pages` and
   (by `story_paths`); grouped by directory, sortable.
 - **`/packages/:name/deviations`** — tag counts drillable to `file:line`;
   mark and baseline counts with trend; `PERMANENT-SKIP` tests grouped by
-  cited section; open `<pkg>-surfaced-deviations` stories; and the ratified
+  cited section; open surfaced-deviations stories (per the rule above); and the ratified
   sections of the package and root `CLAUDE.md` that the package's receipts
   cite, as "works differently than you'd expect" — heading, lede and a link,
   from `claude_md_sections`.
