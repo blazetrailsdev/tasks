@@ -1,7 +1,7 @@
 ---
 title: "Finish enabling the Solid Queue worker in production"
-status: in-progress
-updated: 2026-11-04
+status: done
+updated: 2026-11-05
 rfc: "0136-trailmap"
 cluster: null
 packages: []
