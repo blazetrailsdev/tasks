@@ -1,7 +1,7 @@
 ---
 title: "abstract-controller/translation.test.ts carries Rails names over invented bodies"
-status: ready
-updated: 2026-10-23
+status: in-progress
+updated: 2026-11-05
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9757
+claim: "2026-11-05T20:37:02Z"
+assignee: "abstract-controller-translation-test-carries-rails-names-over-invented-bodies"
 blocked-by: null
 closed-reason: null
 ---

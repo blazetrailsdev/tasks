@@ -1,6 +1,6 @@
 ---
 title: "SQLite3Integer is seated by a plain assignment, not constSet"
-status: in-progress
+status: done
 updated: 2026-11-05
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null

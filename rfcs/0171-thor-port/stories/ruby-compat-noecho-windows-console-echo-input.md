@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat-noecho-windows-console-echo-input"
 status: ready
-updated: 2026-10-29
+updated: 2026-11-05
 rfc: "0171-thor-port"
 cluster: null
 packages: []

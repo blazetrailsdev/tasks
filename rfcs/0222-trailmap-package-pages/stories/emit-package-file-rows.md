@@ -1,6 +1,6 @@
 ---
 title: "trails: package-summary.ts adds one row per Rails file api-compare pairs"
-status: in-progress
+status: done
 updated: 2026-11-05
 rfc: "0222-trailmap-package-pages"
 cluster: package-summary-data

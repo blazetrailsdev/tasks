@@ -1,6 +1,6 @@
 ---
 title: "Active Record MariaDB Tests (1) failing on main @df21dec2"
-status: claimed
+status: closed
 updated: 2026-11-05
 rfc: "0061-ci-failures"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: "2026-11-05T19:59:29Z"
 assignee: "red-df21dec2"
 blocked-by: null
-closed-reason: null
+closed-reason: "Infra: Active Record MariaDB Tests (1) failed in the activestorage-media-binaries apt-get step (azure.archive.ubuntu.com mirror crawled, step timed out) before any tests ran; no code break."
 ---
 
 ## Context

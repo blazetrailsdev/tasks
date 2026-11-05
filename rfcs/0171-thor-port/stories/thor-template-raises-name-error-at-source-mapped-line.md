@@ -1,6 +1,6 @@
 ---
 title: "thor-template-raises-name-error-at-source-mapped-line"
-status: in-progress
+status: done
 updated: 2026-11-05
 rfc: "0171-thor-port"
 cluster: null

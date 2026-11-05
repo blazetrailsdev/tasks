@@ -1,6 +1,6 @@
 ---
 title: "translate-reads-a-symbol-key-for-lazy-lookup"
-status: draft
+status: done
 updated: 2026-11-05
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9757
 claim: null
 assignee: null
 blocked-by: null

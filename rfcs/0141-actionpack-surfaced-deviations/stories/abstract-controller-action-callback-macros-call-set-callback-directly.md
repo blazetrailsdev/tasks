@@ -1,7 +1,7 @@
 ---
 title: "abstract-controller: action callback macros call set_callback / skip_callback directly"
-status: ready
-updated: 2026-10-23
+status: in-progress
+updated: 2026-11-05
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9756
+claim: "2026-11-05T20:06:28Z"
+assignee: "actionmailer-delivery-methods-and-remaining-base-test-port"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "actionpack: UrlFor's @_routes ivar and the _routes reader are one property"
-status: ready
-updated: 2026-10-19
+status: done
+updated: 2026-11-05
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9753
+claim: "2026-11-05T20:02:42Z"
+assignee: "trailties-test-unit-is-on-the-production-boot-path"
 blocked-by: null
 closed-reason: null
 ---
