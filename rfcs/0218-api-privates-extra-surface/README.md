@@ -192,6 +192,78 @@ compile-time only"`); this lane reads TS modifiers and JSDoc only.
   as `novel`. Matching on `rails-api.json` with `collectAllowedNames`'s entity
   walk is the same source with the per-entity visibility intact.
 
+## Baseline (2026-11-05)
+
+Measured on trails `main` at `827225005b` after `pnpm build` and `API_COMPARE_FORCE=1 pnpm parity:api`, from `pnpm parity:api:privates --json` (9,596 rows; 2,327 `novel`; no `stale`).
+
+| Package                   | Population | credited | visibility | moved | novel | allowed | perf |
+| ------------------------- | ---------: | -------: | ---------: | ----: | ----: | ------: | ---: |
+| arel                      |        265 |      240 |          1 |     8 |    16 |       0 |    0 |
+| activerecord              |       2526 |     1637 |        294 |   171 |   424 |       0 |    1 |
+| activerecord-test-support |         76 |        1 |          0 |     5 |    70 |       0 |    0 |
+| activemodel               |        223 |      164 |         22 |     9 |    28 |       0 |    0 |
+| activesupport             |        817 |      307 |         76 |   179 |   245 |      10 |    0 |
+| actiondispatch            |        833 |      415 |        166 |   122 |   128 |       2 |    0 |
+| actioncontroller          |        286 |      144 |        104 |    10 |    27 |       1 |    0 |
+| abstractcontroller        |         69 |       19 |         31 |     2 |    17 |       0 |    0 |
+| actionpackversion         |          0 |        0 |          0 |     0 |     0 |       0 |    0 |
+| actionview                |        543 |      282 |         99 |    60 |   102 |       0 |    0 |
+| actioncable               |        189 |       96 |         56 |    16 |    21 |       0 |    0 |
+| activejob                 |        110 |       75 |         29 |     4 |     2 |       0 |    0 |
+| actionmailer              |         45 |       23 |         19 |     2 |     1 |       0 |    0 |
+| activestorage             |        231 |      168 |         59 |     4 |     0 |       0 |    0 |
+| trailties                 |        644 |      311 |        120 |    69 |   136 |       8 |    0 |
+| rack                      |        234 |       80 |         29 |    75 |    50 |       0 |    0 |
+| rack-session              |         63 |       41 |          5 |     4 |    13 |       0 |    0 |
+| rack-test                 |         53 |       16 |         29 |     7 |     1 |       0 |    0 |
+| rackup                    |         36 |       14 |          7 |     6 |     7 |       2 |    1 |
+| did-you-mean              |          8 |        2 |          2 |     0 |     4 |       0 |    0 |
+| globalid                  |         42 |       29 |          6 |     1 |     6 |       0 |    0 |
+| bcrypt                    |          5 |        2 |          1 |     0 |     2 |       0 |    0 |
+| msgpack                   |         91 |        0 |          2 |     8 |    81 |       0 |    0 |
+| mysql2                    |         14 |        1 |          1 |     9 |     2 |       1 |    0 |
+| pg                        |         22 |        0 |          1 |     6 |    15 |       0 |    0 |
+| sqlite3                   |         23 |        0 |          0 |     2 |    19 |       2 |    0 |
+| marcel                    |          3 |        0 |          3 |     0 |     0 |       0 |    0 |
+| builder                   |         27 |       13 |          5 |     7 |     2 |       0 |    0 |
+| mini-magick               |         21 |        4 |         14 |     3 |     0 |       0 |    0 |
+| rake                      |        163 |       53 |         52 |    24 |    33 |       1 |    0 |
+| thor                      |        225 |      154 |         45 |    13 |    13 |       0 |    0 |
+| zeitwerk                  |         83 |       29 |          4 |     6 |    41 |       3 |    0 |
+| rails-dom-testing         |         25 |       19 |          1 |     2 |     3 |       0 |    0 |
+| i18n                      |         86 |       44 |          0 |    15 |    27 |       0 |    0 |
+| solid-queue               |        228 |      212 |          5 |     0 |    11 |       0 |    0 |
+| solid-cable               |         27 |        4 |          0 |    17 |     6 |       0 |    0 |
+| raabro                    |          5 |        0 |          5 |     0 |     0 |       0 |    0 |
+| et-orbi                   |         33 |       26 |          6 |     1 |     0 |       0 |    0 |
+| fugit                     |         63 |       25 |         30 |     2 |     6 |       0 |    0 |
+| chronic                   |         41 |       19 |          2 |     4 |    16 |       0 |    0 |
+| mail                      |        177 |      113 |         41 |     9 |    13 |       1 |    0 |
+| mini-mime                 |         13 |        0 |          0 |     6 |     7 |       0 |    0 |
+| net-smtp                  |         27 |       15 |          7 |     2 |     3 |       0 |    0 |
+| ruby-compat               |        901 |        0 |          0 |   160 |   729 |      12 |    3 |
+
+Top ten files by `novel`:
+
+| Package      | File                     | novel |
+| ------------ | ------------------------ | ----: |
+| ruby-compat  | `psych/emitter.ts`       |    69 |
+| ruby-compat  | `marshal.ts`             |    64 |
+| msgpack      | `buffer.ts`              |    35 |
+| ruby-compat  | `io.ts`                  |    30 |
+| ruby-compat  | `include.ts`             |    28 |
+| ruby-compat  | `object.ts`              |    28 |
+| trailties    | `commands/db.ts`         |    27 |
+| ruby-compat  | `string/method-table.ts` |    27 |
+| activerecord | `relation.ts`            |    25 |
+| ruby-compat  | `kernel-format.ts`       |    25 |
+
+Proposed burndown stories, one per package with non-zero `novel` (not filed; awaiting the owner's OK): `arel`, `activerecord`, `activerecord-test-support`, `activemodel`, `activesupport`, `actiondispatch`, `actioncontroller`, `abstractcontroller`, `actionview`, `actioncable`, `activejob`, `actionmailer`, `trailties`, `rack`, `rack-session`, `rack-test`, `rackup`, `did-you-mean`, `globalid`, `bcrypt`, `msgpack`, `mysql2`, `pg`, `sqlite3`, `builder`, `rake`, `thor`, `zeitwerk`, `rails-dom-testing`, `i18n`, `solid-queue`, `solid-cable`, `fugit`, `chronic`, `mail`, `mini-mime`, `net-smtp`, `ruby-compat`.
+
+Candidates for the ratchet's first gated set ( already 0, so the gate only holds the line): , , , , , . Next after them, ≤ 3: , , , , , , , .
+
+The JSON's `packages` rows (one object per package, the eight columns above) and `names` rows (`name`, `package`, `tsFile`, `rubyFile`, `kind`, `population`) are the shape for the stats DB import; that it round-trips is to be confirmed with the owner.
+
 ## Rollout
 
 1. Report — `privates-surface-report`, then
@@ -234,3 +306,4 @@ compile-time only"`); this lane reads TS modifiers and JSDoc only.
 ## Changelog
 
 - 2026-11-03: initial RFC
+- 2026-11-05: wave 2 baseline recorded
