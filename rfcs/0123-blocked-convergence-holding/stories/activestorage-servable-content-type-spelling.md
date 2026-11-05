@@ -2,7 +2,7 @@
 title: "Remove Blob#contentType, read by Servable"
 status: blocked
 updated: 2026-11-02
-rfc: "0209-activestorage-port"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
