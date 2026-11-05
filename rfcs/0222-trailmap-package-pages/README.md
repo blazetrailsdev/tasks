@@ -1,7 +1,7 @@
 ---
 rfc: "0222-trailmap-package-pages"
 title: "trailmap: per-package pages for newcomers who know Rails but not trails"
-status: draft
+status: active
 created: 2026-11-05
 updated: 2026-11-05
 owner: "@deanmarano"
