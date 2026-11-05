@@ -260,6 +260,8 @@ Top ten files by `novel`:
 
 Proposed burndown stories, one per package with non-zero `novel` (not filed; awaiting the owner's OK): `arel`, `activerecord`, `activerecord-test-support`, `activemodel`, `activesupport`, `actiondispatch`, `actioncontroller`, `abstractcontroller`, `actionview`, `actioncable`, `activejob`, `actionmailer`, `trailties`, `rack`, `rack-session`, `rack-test`, `rackup`, `did-you-mean`, `globalid`, `bcrypt`, `msgpack`, `mysql2`, `pg`, `sqlite3`, `builder`, `rake`, `thor`, `zeitwerk`, `rails-dom-testing`, `i18n`, `solid-queue`, `solid-cable`, `fugit`, `chronic`, `mail`, `mini-mime`, `net-smtp`, `ruby-compat`.
 
+Candidates for the ratchet's first gated set (`novel` already 0, so the gate only holds the line): `activestorage`, `marcel`, `mini-magick`, `raabro`, `et-orbi`, `actionpackversion`. Next after them, `novel` ≤ 3: `actionmailer`, `rack-test`, `activejob`, `builder`, `bcrypt`, `mysql2`, `rails-dom-testing`, `net-smtp`.
+
 The JSON's `packages` rows (one object per package, the eight columns above) and `names` rows (`name`, `package`, `tsFile`, `rubyFile`, `kind`, `population`) are the shape for the stats DB import; that it round-trips is to be confirmed with the owner.
 
 ## Rollout
