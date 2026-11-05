@@ -1,6 +1,6 @@
 ---
 title: "Port message_delivery_test's deserialization-error-to-mailer-class test"
-status: draft
+status: ready
 updated: 2026-11-05
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Port ActionMailer TestHelper, TestCase and Preview"
-status: ready
-updated: 2026-10-29
+status: claimed
+updated: 2026-11-05
 rfc: "0204-actionmailer-and-mail-port"
 cluster: actionmailer
 packages: ["actionmailer"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 500
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-05T18:36:25Z"
+assignee: "actionmailer-test-helper-test-case-and-preview"
 blocked-by: null
 ---
 

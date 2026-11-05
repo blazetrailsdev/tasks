@@ -28,6 +28,7 @@ clusters:
 related-rfcs:
   - "0189-activerecord-surfaced-deviations"
   - "0093-proxy-dynamic-method-consistency"
+priority: 3
 ---
 
 # RFC 0221 — No returned Proxies

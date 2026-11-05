@@ -1,6 +1,6 @@
 ---
 title: "mailer-collector-renders-each-format-before-the-next-is-set"
-status: draft
+status: ready
 updated: 2026-11-05
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Port SelectorAssertions#assert_dom_email once ActionMailer exists"
-status: ready
-updated: 2026-11-03
+status: done
+updated: 2026-11-05
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9749
+claim: "2026-11-05T18:06:42Z"
+assignee: "actionmailer-delivery-methods-queued-delivery-and-eager-load"
 blocked-by: null
 closed-reason: null
 ---

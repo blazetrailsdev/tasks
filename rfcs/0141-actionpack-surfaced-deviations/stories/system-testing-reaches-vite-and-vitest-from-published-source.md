@@ -1,6 +1,6 @@
 ---
 title: "actionpack's system-testing reaches vite and vitest from published non-test source"
-status: in-progress
+status: done
 updated: 2026-11-05
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

@@ -15,6 +15,7 @@ clusters:
   - package-pages
 related-rfcs:
   - "0136-trailmap"
+priority: 4
 ---
 
 # RFC 0222 — trailmap: per-package pages for newcomers who know Rails but not trails
