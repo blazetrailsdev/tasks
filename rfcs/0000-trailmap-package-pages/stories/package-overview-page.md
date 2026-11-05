@@ -18,7 +18,9 @@ blocked-by: null
 ## Context
 
 The RFC's "Pages" section. Tiles and sparklines reuse `parity-graphs/_cards`
-(`trailmap/app/views/parity-graphs/`). Ranking for "Start here" is
+(`trailmap/app/views/parity-graphs/`). Sources: api / calls / call args /
+privates / tests / assertions from the existing compare tables; params and
+predicates from `package_mark_stats` (`emit-package-summary-json`). Ranking for "Start here" is
 `app/models/concerns/ranking.ts`, the same order `tasks next-bundle` uses.
 17 of 46 trails packages have a `packages/<pkg>/CLAUDE.md`.
 

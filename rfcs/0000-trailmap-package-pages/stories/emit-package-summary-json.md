@@ -40,6 +40,11 @@ JSON. Mark files: `scripts/parity/module-count-mark.json`,
       `@inventedArm`, `@perf`, `@inlinedFrom`, `@internal`), each mark and
       baseline count named above, and `PERMANENT-SKIP` tests grouped by cited
       `CLAUDE.md` section.
+- [ ] `packages[]` also carries the current params and predicates mismatch
+      counts per package (what `parity:api:params` / `parity:api:predicates`
+      measure against `param-name-mark.json` / `predicate-kind-mark.json`), so
+      the overview's params and predicates tiles have a source; stats.db has
+      no table for either today.
 - [ ] Tag counting reuses the JSDoc parsing the lint rules use, not a fresh
       regex, so a tag named in prose is not counted.
 - [ ] `files[]` has one row per Rails file api-compare pairs, with `tsFile`

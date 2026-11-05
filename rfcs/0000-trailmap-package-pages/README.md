@@ -13,6 +13,8 @@ packages:
 clusters:
   - package-summary-data
   - package-pages
+related-rfcs:
+  - "0136-trailmap"
 ---
 
 <!-- Unnumbered until merge: `scripts/finalize-rfc.mjs` swaps 0000 for the
@@ -183,8 +185,8 @@ All five reuse the layouts and partials of `rfc-pages`, `story-pages` and
 - For every package, the overview's api and tests tiles equal the latest
   `api_compare_stats` / `test_compare_stats` row for it.
 - The deviations page's `@noRailsEquivalent` count for activerecord equals
-  `grep -rc '@noRailsEquivalent' packages/activerecord/src` on the synced
-  commit.
+  `grep -ro '@noRailsEquivalent' packages/activerecord/src | wc -l` on the
+  synced commit, less any tag the lint rules' JSDoc parser rejects.
 - The unattributed open-story count shown on `/packages` is 0 after the
   backfill.
 
