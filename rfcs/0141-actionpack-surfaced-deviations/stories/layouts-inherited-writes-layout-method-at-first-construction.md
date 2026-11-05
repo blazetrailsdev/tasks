@@ -1,6 +1,6 @@
 ---
 title: "layouts-inherited-writes-layout-method-at-first-construction"
-status: in-progress
+status: done
 updated: 2026-11-05
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

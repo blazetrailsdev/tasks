@@ -1,6 +1,6 @@
 ---
 title: "trails db registers only databaseTasks configs, so a hidden primary makes the next database primary"
-status: in-progress
+status: done
 updated: 2026-11-05
 rfc: "0171-thor-port"
 cluster: null

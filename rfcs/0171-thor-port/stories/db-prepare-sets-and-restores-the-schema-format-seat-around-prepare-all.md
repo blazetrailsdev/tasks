@@ -1,6 +1,6 @@
 ---
 title: "trailties: db prepare sets and restores the schema_format seat around prepareAll; test:prepare skips format resolution"
-status: in-progress
+status: done
 updated: 2026-11-05
 rfc: "0171-thor-port"
 cluster: null

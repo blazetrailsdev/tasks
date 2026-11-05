@@ -1,6 +1,6 @@
 ---
 title: "devcontainer-generator-private-gsub-file-shadows-thor-gsub-file"
-status: claimed
+status: in-progress
 updated: 2026-11-05
 rfc: "0171-thor-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#9746
 claim: "2026-11-05T16:36:28Z"
 assignee: "actionmailer-base-types-from-included-modules"
 blocked-by: null

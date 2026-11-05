@@ -1,7 +1,7 @@
 ---
 title: "thor-group-help-classifies-invocation-names"
-status: ready
-updated: 2026-11-03
+status: in-progress
+updated: 2026-11-05
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9747
+claim: "2026-11-05T17:06:26Z"
+assignee: "system-testing-reaches-vite-and-vitest-from-published-source"
 blocked-by: null
 closed-reason: null
 ---

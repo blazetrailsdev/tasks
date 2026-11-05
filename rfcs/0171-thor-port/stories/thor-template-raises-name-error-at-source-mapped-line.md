@@ -1,7 +1,7 @@
 ---
 title: "thor-template-raises-name-error-at-source-mapped-line"
-status: ready
-updated: 2026-10-31
+status: in-progress
+updated: 2026-11-05
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9748
+claim: "2026-11-05T17:36:30Z"
+assignee: "actionmailer-base-test-port"
 blocked-by: null
 closed-reason: null
 ---

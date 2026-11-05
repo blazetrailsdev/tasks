@@ -1,6 +1,6 @@
 ---
 title: "actionpack's system-testing reaches vite and vitest from published non-test source"
-status: ready
+status: in-progress
 updated: 2026-11-05
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#9747
+claim: "2026-11-05T17:06:26Z"
+assignee: "system-testing-reaches-vite-and-vitest-from-published-source"
 blocked-by: null
 closed-reason: null
 ---

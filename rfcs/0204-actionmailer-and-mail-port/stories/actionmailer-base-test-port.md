@@ -1,6 +1,6 @@
 ---
 title: "Port actionmailer base_test.rb and delivery_methods_test.rb"
-status: ready
+status: in-progress
 updated: 2026-11-05
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9748
+claim: "2026-11-05T17:36:30Z"
+assignee: "actionmailer-base-test-port"
 blocked-by: null
 closed-reason: null
 ---
