@@ -1,7 +1,7 @@
 ---
 title: "Converge the module-eval namespace-read survivors to plain imports"
-status: ready
-updated: 2026-10-27
+status: closed
+updated: 2026-11-05
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: conversion
 packages: ["activerecord", "actionpack", "activesupport"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: premised on the 2026-10-28 no-lookup ruling, reversed by RFC 0213 (constantize-restored-over-namespaces, done); CLAUDE.md § Call-time constant resolution sanctions a namespace read for a module-eval read."
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "call-gate-reads-string-split-as-thor-arguments-split"
-status: in-progress
+status: done
 updated: 2026-11-05
 rfc: "0171-thor-port"
 cluster: null

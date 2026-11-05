@@ -1,6 +1,6 @@
 ---
 title: "trailmap: /packages/:name/work lists attributed stories by RFC with a done-over-time burndown"
-status: draft
+status: ready
 updated: 2026-11-05
 rfc: "0222-trailmap-package-pages"
 cluster: package-pages

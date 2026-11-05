@@ -1,7 +1,7 @@
 ---
 title: "framework-constantize-calls-become-imports-or-registries"
-status: blocked
-updated: 2026-10-30
+status: closed
+updated: 2026-11-05
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "Needs its acceptance criteria rewritten for RFC 0213; waits on constantize-restored-over-namespaces."
-closed-reason: null
+blocked-by: null
+closed-reason: "FALSIFIED: premised on the 2026-10-28 no-lookup ruling, reversed by RFC 0213 (constantize-restored-over-namespaces, done); constantize is constGet over TopLevel and registerX is retired."
 ---
 
 ## Context

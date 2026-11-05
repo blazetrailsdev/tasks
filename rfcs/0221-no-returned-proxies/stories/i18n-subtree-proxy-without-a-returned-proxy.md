@@ -1,7 +1,7 @@
 ---
 title: "I18n KeyValue's SubtreeProxy answers `[]` without a returned Proxy"
-status: draft
-updated: 2026-11-04
+status: ready
+updated: 2026-11-05
 rfc: "0221-no-returned-proxies"
 cluster: constructor-returned
 packages: ["i18n"]

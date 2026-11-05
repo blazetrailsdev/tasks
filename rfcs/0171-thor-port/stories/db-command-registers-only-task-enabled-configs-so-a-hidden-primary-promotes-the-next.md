@@ -1,7 +1,7 @@
 ---
 title: "trails db registers only databaseTasks configs, so a hidden primary makes the next database primary"
-status: draft
-updated: 2026-10-12
+status: in-progress
+updated: 2026-11-05
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9744
+claim: "2026-11-05T16:32:17Z"
+assignee: "db-command-registers-only-task-enabled-configs-so-a-hidden-primary-promotes-the-next"
 blocked-by: null
 closed-reason: null
 ---

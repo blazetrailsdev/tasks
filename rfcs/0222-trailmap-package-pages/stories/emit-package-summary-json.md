@@ -1,6 +1,6 @@
 ---
 title: "trails: scripts/parity/package-summary.ts emits per-package, per-site and CLAUDE.md-section rows into the parity artifact"
-status: draft
+status: in-progress
 updated: 2026-11-05
 rfc: "0222-trailmap-package-pages"
 cluster: package-summary-data
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9743
+claim: "2026-11-05T16:21:48Z"
+assignee: "emit-package-summary-json"
 blocked-by: null
 ---
 

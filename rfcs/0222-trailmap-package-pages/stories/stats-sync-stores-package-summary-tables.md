@@ -1,6 +1,6 @@
 ---
 title: "trailmap: stats-sync downloads parity-outputs and stores package summary tables"
-status: draft
+status: ready
 updated: 2026-11-05
 rfc: "0222-trailmap-package-pages"
 cluster: package-summary-data

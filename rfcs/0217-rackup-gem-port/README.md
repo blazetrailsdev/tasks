@@ -1,9 +1,9 @@
 ---
 rfc: "0217-rackup-gem-port"
 title: "Rackup: a direct port of rackup 2.2.1 as @blazetrails/rackup"
-status: active
+status: closed
 created: 2026-11-03
-updated: 2026-11-03
+updated: 2026-11-05
 owner: "@deanmarano"
 packages:
   - rackup

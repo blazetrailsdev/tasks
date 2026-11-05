@@ -1,7 +1,7 @@
 ---
 title: "delegate_missing_to installs its method_missing in the owner's prototype chain"
-status: draft
-updated: 2026-11-04
+status: ready
+updated: 2026-11-05
 rfc: "0221-no-returned-proxies"
 cluster: factory-returned
 packages: ["activesupport"]

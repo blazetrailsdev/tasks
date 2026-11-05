@@ -1,7 +1,7 @@
 ---
 title: "trailties' Rails module is seated as Trails while its class paths say Rails::"
-status: draft
-updated: 2026-10-28
+status: closed
+updated: 2026-11-05
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: trailties' generated table now names Trails::InfoController, matching TopLevel.Trails (verified 2026-11-05)."
 ---
 
 ## Context

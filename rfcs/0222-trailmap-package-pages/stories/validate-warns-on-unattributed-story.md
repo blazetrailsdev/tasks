@@ -1,6 +1,6 @@
 ---
 title: "tasks: validate warns on a new or modified story no package-attribution rule matches"
-status: draft
+status: ready
 updated: 2026-11-05
 rfc: "0222-trailmap-package-pages"
 cluster: package-pages

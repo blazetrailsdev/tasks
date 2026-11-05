@@ -1,6 +1,6 @@
 ---
 title: "trailmap: /packages/:name overview with gate tiles, story counts and a start-here box"
-status: draft
+status: ready
 updated: 2026-11-05
 rfc: "0222-trailmap-package-pages"
 cluster: package-pages

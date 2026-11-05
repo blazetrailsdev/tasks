@@ -1,6 +1,6 @@
 ---
 title: "trailmap: Story.touchingPackage resolves a story's packages from its own list, its paths, then a one-package RFC"
-status: draft
+status: claimed
 updated: 2026-11-05
 rfc: "0222-trailmap-package-pages"
 cluster: package-pages
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-05T16:21:48Z"
+assignee: "emit-package-summary-json"
 blocked-by: null
 ---
 

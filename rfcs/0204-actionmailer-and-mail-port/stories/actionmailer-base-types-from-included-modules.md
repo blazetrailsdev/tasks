@@ -1,6 +1,6 @@
 ---
 title: "Type ActionMailer::Base's included members from the real modules"
-status: ready
+status: claimed
 updated: 2026-11-05
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-05T16:36:28Z"
+assignee: "actionmailer-base-types-from-included-modules"
 blocked-by: null
 closed-reason: null
 ---

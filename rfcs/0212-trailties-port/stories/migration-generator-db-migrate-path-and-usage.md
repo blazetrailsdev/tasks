@@ -1,6 +1,6 @@
 ---
 title: "migration-generator-db-migrate-path-and-usage"
-status: in-progress
+status: done
 updated: 2026-11-05
 rfc: "0212-trailties-port"
 cluster: null

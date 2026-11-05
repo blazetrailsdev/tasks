@@ -1,7 +1,7 @@
 ---
 title: "trailties: db prepare sets and restores the schema_format seat around prepareAll; test:prepare skips format resolution"
-status: draft
-updated: 2026-10-09
+status: in-progress
+updated: 2026-11-05
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9744
+claim: "2026-11-05T16:32:21Z"
+assignee: "db-prepare-sets-and-restores-the-schema-format-seat-around-prepare-all"
 blocked-by: null
 closed-reason: null
 ---

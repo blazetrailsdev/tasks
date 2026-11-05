@@ -1,7 +1,7 @@
 ---
 title: "StringInquirer trap answers only respond_to_missing? names (then/toJSON read undefined)"
-status: draft
-updated: 2026-11-04
+status: ready
+updated: 2026-11-05
 rfc: "0221-no-returned-proxies"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "ActionMailer::Base::NullMail answers every method with nil (Proxy)"
-status: in-progress
+status: done
 updated: 2026-11-05
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null

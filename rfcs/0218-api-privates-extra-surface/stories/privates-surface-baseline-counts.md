@@ -1,6 +1,6 @@
 ---
 title: "Measure the privates lane per package on main and record the baseline"
-status: claimed
+status: done
 updated: 2026-11-05
 rfc: "0218-api-privates-extra-surface"
 cluster: api-compare

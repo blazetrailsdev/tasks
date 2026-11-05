@@ -1,7 +1,7 @@
 ---
 title: "Trailtie::Configuration answers config names through the prototype chain"
-status: draft
-updated: 2026-11-04
+status: ready
+updated: 2026-11-05
 rfc: "0221-no-returned-proxies"
 cluster: constructor-returned
 packages: ["trailties"]

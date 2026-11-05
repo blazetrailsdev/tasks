@@ -1,7 +1,7 @@
 ---
 title: "rbFBinding resolves top-level constants without returning a Proxy over self"
-status: draft
-updated: 2026-11-04
+status: ready
+updated: 2026-11-05
 rfc: "0221-no-returned-proxies"
 cluster: factory-returned
 packages: ["ruby-compat", "activerecord", "rack", "thor", "trailties"]

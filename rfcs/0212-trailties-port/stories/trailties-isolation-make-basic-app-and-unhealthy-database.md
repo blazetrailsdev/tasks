@@ -1,6 +1,6 @@
 ---
 title: "trailties-isolation-make-basic-app-and-unhealthy-database"
-status: ready
+status: claimed
 updated: 2026-11-05
 rfc: "0212-trailties-port"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-05T16:36:28Z"
+assignee: "actionmailer-base-types-from-included-modules"
 blocked-by: null
 closed-reason: null
 ---

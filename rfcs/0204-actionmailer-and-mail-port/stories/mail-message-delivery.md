@@ -1,7 +1,7 @@
 ---
 title: "mail-message-delivery"
-status: ready
-updated: 2026-11-03
+status: done
+updated: 2026-11-05
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
 packages: []
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9738
 claim: null
 assignee: null
 blocked-by: null

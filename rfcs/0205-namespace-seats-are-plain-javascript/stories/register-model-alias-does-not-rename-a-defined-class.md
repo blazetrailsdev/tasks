@@ -1,7 +1,7 @@
 ---
 title: "activerecord: registering a model under an alias does not rename the class"
-status: ready
-updated: 2026-10-18
+status: closed
+updated: 2026-11-05
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages:
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: premised on the 2026-10-28 no-lookup ruling, reversed by RFC 0213 (constantize-restored-over-namespaces, done); registerModel is retired and constants are seated via constSet on the owner."
 ---
 
 ## Context

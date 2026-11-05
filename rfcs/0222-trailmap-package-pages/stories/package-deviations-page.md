@@ -1,6 +1,6 @@
 ---
 title: "trailmap: /packages/:name/deviations shows receipts, marks, permanent skips and ratified rules"
-status: draft
+status: ready
 updated: 2026-11-05
 rfc: "0222-trailmap-package-pages"
 cluster: package-pages

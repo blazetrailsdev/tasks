@@ -1,6 +1,6 @@
 ---
 title: "Mailer subclasses render in their implied layout (Layouts#inherited)"
-status: ready
+status: in-progress
 updated: 2026-11-05
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9744
+claim: "2026-11-05T16:06:39Z"
+assignee: "move-db-commands-onto-databases-rake-tasks-part-2"
 blocked-by: null
 closed-reason: null
 ---

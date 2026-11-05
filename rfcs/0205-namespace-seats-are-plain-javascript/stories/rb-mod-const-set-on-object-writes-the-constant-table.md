@@ -1,7 +1,7 @@
 ---
 title: "rbModConstSet(Object, …) does not write the top-level constant table constantize reads"
-status: draft
-updated: 2026-10-28
+status: closed
+updated: 2026-11-05
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: premised on the 2026-10-28 no-lookup ruling, reversed by RFC 0213 (constantize-restored-over-namespaces, done); RCLASS_CONST_TBL and registerConstant no longer exist on main (verified 2026-11-05)."
 ---
 
 ## Context
