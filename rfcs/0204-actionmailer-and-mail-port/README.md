@@ -18,6 +18,7 @@ clusters:
   - actionmailer
   - trailties
 priority: 2
+max-est-loc: 800
 ---
 
 # RFC 0204 — ActionMailer, and the mail gem it builds messages with
@@ -145,6 +146,10 @@ pin the gem's answers.
 - **nodemailer's `createTransport`** for SMTP: rejected, see Transport edges.
 
 ## Rollout
+
+`max-est-loc` is lifted to 800 for one story, `mail-message-spec-port`: one
+spec file ported whole, by owner ruling (2026-11-05). Every other story stays
+under 700.
 
 Every `lib` file of `mail` (outside the retriever methods), `mini_mime`,
 `Net::SMTP`'s client surface and ActionMailer has an owning story.

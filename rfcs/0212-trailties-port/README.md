@@ -21,6 +21,7 @@ related-rfcs:
   - "0104-twitter-app-full-stack-integration"
   - "0204-actionmailer-and-mail-port"
 priority: 2
+max-est-loc: 2500
 ---
 
 # RFC 0212 — Port the rest of railties into trailties, and its test suite
@@ -169,6 +170,12 @@ The `zeitwerk-build-time-autoloader` RFC proposes to reverse this (2026-10-30).
   `parity:test`'s one-file-per-Rails-file mapping.
 
 ## Rollout
+
+`max-est-loc` is lifted to 2500 for the three generator-test ports onto
+`TestCase` (`port-app-generator-test-onto-test-case`,
+`port-plugin-generator-test-onto-test-case`,
+`port-remaining-generator-tests-onto-test-case`), each a whole Rails test file
+ported in one PR, by owner ruling (2026-11-05). Every other story stays under 700.
 
 1. Harness: `activesupport-testing-isolation-subprocess`,
    `trailties-isolation-abstract-unit-generation`,
