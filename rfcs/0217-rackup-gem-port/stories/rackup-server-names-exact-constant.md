@@ -1,7 +1,7 @@
 ---
 title: "Rackup::Handler::SERVER_NAMES is Rackup's exact constant"
-status: done
-updated: 2026-11-04
+status: closed
+updated: 2026-11-05
 rfc: "0217-rackup-gem-port"
 cluster: null
 packages: []
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: "2026-11-04T21:06:46Z"
-assignee: "rackup-server-names-exact-constant"
+claim: null
+assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "PERMANENT: by repo-owner ruling on trails#9727 (2026-11-04), Rackup::Handler::SERVER_NAMES is the handlers trails ships, vite then node, in place of Rackup's puma falcon webrick (vendor/rackup/v2.2.1/lib/rackup/handler.rb:61-62); a bun handler may join the list later."
 ---
 
 ## Context

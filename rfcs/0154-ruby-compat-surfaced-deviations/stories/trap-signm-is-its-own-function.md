@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat trap calls a separate trapSignm, as sig_trap calls trap_signm"
-status: draft
-updated: 2026-11-04
+status: in-progress
+updated: 2026-11-05
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9727
+claim: "2026-11-05T02:35:22Z"
+assignee: "trap-signm-is-its-own-function"
 blocked-by: null
 closed-reason: null
 ---

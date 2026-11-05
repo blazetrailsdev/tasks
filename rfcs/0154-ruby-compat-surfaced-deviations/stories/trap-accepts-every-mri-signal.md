@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat trap accepts every signal MRI's trap_signm does"
-status: draft
-updated: 2026-11-04
+status: in-progress
+updated: 2026-11-05
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9727
+claim: "2026-11-05T02:35:19Z"
+assignee: "trap-accepts-every-mri-signal"
 blocked-by: null
 closed-reason: null
 ---
