@@ -1,7 +1,7 @@
 ---
 title: "ActionController render_to_string is untyped where render is typed"
-status: ready
-updated: 2026-10-19
+status: in-progress
+updated: 2026-11-05
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9758
+claim: "2026-11-05T21:06:28Z"
+assignee: "red-5f798086"
 blocked-by: null
 closed-reason: null
 ---

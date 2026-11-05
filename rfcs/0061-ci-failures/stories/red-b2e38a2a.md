@@ -1,6 +1,6 @@
 ---
 title: "Active Record MariaDB Tests (1) failing on main @b2e38a2a"
-status: ready
+status: closed
 updated: 2026-11-05
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-05T21:28:42Z"
+assignee: "red-b2e38a2a"
 blocked-by: null
-closed-reason: null
+closed-reason: "Infra: activestorage-media-binaries apt install timed out downloading from slow azure.archive.ubuntu.com mirror; no tests ran"
 ---
 
 ## Context

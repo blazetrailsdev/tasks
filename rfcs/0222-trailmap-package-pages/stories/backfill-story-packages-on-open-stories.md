@@ -1,6 +1,6 @@
 ---
 title: "tasks: give every open story with no usable package attribution an explicit packages list"
-status: ready
+status: in-progress
 updated: 2026-11-05
 rfc: "0222-trailmap-package-pages"
 cluster: package-pages
@@ -9,9 +9,9 @@ deps: [story-touching-package-scope]
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: tasks#321
+claim: "2026-11-05T21:25:18Z"
+assignee: "backfill-story-packages-on-open-stories"
 blocked-by: null
 ---
 

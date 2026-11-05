@@ -1,6 +1,6 @@
 ---
 title: "Make every script, lint rule, config and CI glob accept lib/ + test/ beside src/"
-status: draft
+status: ready
 updated: 2026-11-05
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: layout-tooling

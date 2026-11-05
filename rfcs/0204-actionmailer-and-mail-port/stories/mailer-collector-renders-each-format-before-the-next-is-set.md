@@ -1,6 +1,6 @@
 ---
 title: "mailer-collector-renders-each-format-before-the-next-is-set"
-status: ready
+status: claimed
 updated: 2026-11-05
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-05T21:36:24Z"
+assignee: "actionmailer-base-test-remaining-attachments-multipart-defaults"
 blocked-by: null
 closed-reason: null
 ---

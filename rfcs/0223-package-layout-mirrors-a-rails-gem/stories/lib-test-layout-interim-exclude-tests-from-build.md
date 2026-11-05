@@ -1,6 +1,6 @@
 ---
 title: "Exclude colocated tests from every package's published build"
-status: draft
+status: in-progress
 updated: 2026-11-05
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: layout-tooling
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9759
+claim: "2026-11-05T21:27:18Z"
+assignee: "lib-test-layout-interim-exclude-tests-from-build"
 blocked-by: null
 ---
 

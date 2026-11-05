@@ -1,6 +1,6 @@
 ---
 title: "Active Record MariaDB Tests (2) failing on main @0e4ecadd"
-status: ready
+status: closed
 updated: 2026-11-05
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-05T21:53:07Z"
+assignee: "red-0e4ecadd"
 blocked-by: null
-closed-reason: null
+closed-reason: "Infrastructure: apt-get install of system packages from azure.archive.ubuntu.com stalled and failed after retries in Active Record MariaDB Tests (2), before any test ran; not a code failure"
 ---
 
 ## Context
