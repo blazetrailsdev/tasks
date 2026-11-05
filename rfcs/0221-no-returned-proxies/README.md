@@ -1,9 +1,9 @@
 ---
 rfc: "0221-no-returned-proxies"
 title: "No returned Proxies: method_missing dispatch lives in the prototype chain"
-status: draft
+status: active
 created: 2026-11-04
-updated: 2026-11-04
+updated: 2026-11-05
 owner: "@deanmarano"
 packages:
   - actionpack
