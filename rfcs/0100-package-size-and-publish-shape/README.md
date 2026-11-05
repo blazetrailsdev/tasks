@@ -14,6 +14,7 @@ packages:
   - "i18n"
   - "globalid"
   - "did-you-mean"
+  - "trailties"
 clusters: []
 related-rfcs:
   - "0192-package-entry-point-boot-cost"
