@@ -1,7 +1,7 @@
 ---
 title: "rackup: Handler::Node loads through Handler.get, not an eager index import"
-status: ready
-updated: 2026-11-04
+status: claimed
+updated: 2026-11-05
 rfc: "0217-rackup-gem-port"
 cluster: null
 packages: []
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-05T12:36:28Z"
+assignee: "rackup-handler-node-loads-through-handler-get"
 blocked-by: null
 closed-reason: null
 ---

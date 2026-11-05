@@ -1,7 +1,7 @@
 ---
 title: "port-model-generator-remaining-skips"
-status: ready
-updated: 2026-11-03
+status: claimed
+updated: 2026-11-05
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-05T12:36:28Z"
+assignee: "rackup-handler-node-loads-through-handler-get"
 blocked-by: null
 closed-reason: null
 ---

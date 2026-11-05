@@ -1,7 +1,7 @@
 ---
 title: "Move app:template onto railties' framework.rake task over Thor's apply"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-11-05
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["port-rails-command-rake-command", "port-thor-actions-apply"]
 deps-rfc: []
 est-loc: 150
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9735
+claim: "2026-11-05T12:10:03Z"
+assignee: "move-app-template-command-onto-framework-rake-task"
 blocked-by: null
 closed-reason: null
 ---

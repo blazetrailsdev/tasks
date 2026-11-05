@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat trap calls a separate trapSignm, as sig_trap calls trap_signm"
-status: in-progress
+status: done
 updated: 2026-11-05
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

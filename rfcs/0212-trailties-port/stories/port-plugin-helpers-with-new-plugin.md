@@ -1,7 +1,7 @@
 ---
 title: "port-plugin-helpers-with-new-plugin"
 status: ready
-updated: 2026-11-03
+updated: 2026-11-05
 rfc: "0212-trailties-port"
 cluster: null
 packages: []

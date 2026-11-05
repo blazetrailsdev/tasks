@@ -1,7 +1,7 @@
 ---
 title: "Handler.default picks node/vite; drop Trails::Server's invented fallback"
-status: in-progress
-updated: 2026-11-04
+status: done
+updated: 2026-11-05
 rfc: "0217-rackup-gem-port"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat trap accepts every signal MRI's trap_signm does"
-status: in-progress
+status: done
 updated: 2026-11-05
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

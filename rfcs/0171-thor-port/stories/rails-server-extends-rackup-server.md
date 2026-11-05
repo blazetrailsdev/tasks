@@ -1,7 +1,7 @@
 ---
 title: "rails-server-extends-rackup-server"
-status: in-progress
-updated: 2026-11-04
+status: done
+updated: 2026-11-05
 rfc: "0171-thor-port"
 cluster: null
 packages: []
