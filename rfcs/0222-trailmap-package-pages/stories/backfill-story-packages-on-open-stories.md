@@ -1,6 +1,6 @@
 ---
 title: "tasks: give every open story with no usable package attribution an explicit packages list"
-status: in-progress
+status: done
 updated: 2026-11-05
 rfc: "0222-trailmap-package-pages"
 cluster: package-pages

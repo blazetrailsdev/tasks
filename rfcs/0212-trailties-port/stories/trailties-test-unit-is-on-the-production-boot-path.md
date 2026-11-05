@@ -1,6 +1,6 @@
 ---
 title: "A production build reaches the CLI, and the TypeScript compiler through it: split a production entry from the dev CLI"
-status: in-progress
+status: done
 updated: 2026-11-05
 rfc: "0212-trailties-port"
 cluster: null

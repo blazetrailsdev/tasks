@@ -1,6 +1,6 @@
 ---
 title: "share_lock_test.rb unported entry still names tests trails#8943 ported live"
-status: in-progress
+status: done
 updated: 2026-11-05
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "trailmap: stats-sync downloads parity-outputs and stores package summary tables"
-status: ready
+status: in-progress
 updated: 2026-11-05
 rfc: "0222-trailmap-package-pages"
 cluster: package-summary-data
@@ -9,9 +9,9 @@ deps: [emit-package-summary-json, emit-package-file-rows]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#119
+claim: "2026-11-05T22:19:15Z"
+assignee: "stats-sync-stores-package-summary-tables"
 blocked-by: null
 ---
 

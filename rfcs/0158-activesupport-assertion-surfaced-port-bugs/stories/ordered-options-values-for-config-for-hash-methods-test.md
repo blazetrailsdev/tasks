@@ -1,6 +1,6 @@
 ---
 title: "OrderedOptions lacks Hash#values, blocking config_for makes all hash methods available"
-status: claimed
+status: in-progress
 updated: 2026-11-05
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: trails#9760
 claim: "2026-11-05T21:36:24Z"
 assignee: "actionmailer-base-test-remaining-attachments-multipart-defaults"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "activesupport: HashWithIndifferentAccess#transform_keys! drops the to_enum arm"
-status: in-progress
+status: done
 updated: 2026-11-05
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "production-graph-lazy-require-edges"
-status: in-progress
+status: done
 updated: 2026-11-05
 rfc: "0212-trailties-port"
 cluster: null
