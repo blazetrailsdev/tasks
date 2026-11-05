@@ -2,7 +2,7 @@
 title: "trailmap: Story.touchingPackage resolves a story's packages from its own list, its paths, then a one-package RFC"
 status: draft
 updated: 2026-11-05
-rfc: "0000-trailmap-package-pages"
+rfc: "0222-trailmap-package-pages"
 cluster: package-pages
 packages: [activerecord]
 deps: []

@@ -2,7 +2,7 @@
 title: "trailmap: /packages/:name/work lists attributed stories by RFC with a done-over-time burndown"
 status: draft
 updated: 2026-11-05
-rfc: "0000-trailmap-package-pages"
+rfc: "0222-trailmap-package-pages"
 cluster: package-pages
 packages: [actionpack, actionview]
 deps: [packages-index-page, story-touching-package-scope]

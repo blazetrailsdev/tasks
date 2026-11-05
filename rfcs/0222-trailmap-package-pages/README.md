@@ -1,5 +1,5 @@
 ---
-rfc: "0000-trailmap-package-pages"
+rfc: "0222-trailmap-package-pages"
 title: "trailmap: per-package pages for newcomers who know Rails but not trails"
 status: draft
 created: 2026-11-05
@@ -17,10 +17,7 @@ related-rfcs:
   - "0136-trailmap"
 ---
 
-<!-- Unnumbered until merge: `scripts/finalize-rfc.mjs` swaps 0000 for the
-     assigned number at merge. -->
-
-# RFC — trailmap: per-package pages for newcomers who know Rails but not trails
+# RFC 0222 — trailmap: per-package pages for newcomers who know Rails but not trails
 
 ## Summary
 

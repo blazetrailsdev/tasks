@@ -2,7 +2,7 @@
 title: "tasks: give every open story with no usable package attribution an explicit packages list"
 status: draft
 updated: 2026-11-05
-rfc: "0000-trailmap-package-pages"
+rfc: "0222-trailmap-package-pages"
 cluster: package-pages
 packages: []
 deps: [story-touching-package-scope]

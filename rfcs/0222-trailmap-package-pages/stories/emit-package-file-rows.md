@@ -2,7 +2,7 @@
 title: "trails: package-summary.ts adds one row per Rails file api-compare pairs"
 status: draft
 updated: 2026-11-05
-rfc: "0000-trailmap-package-pages"
+rfc: "0222-trailmap-package-pages"
 cluster: package-summary-data
 packages: [scripts]
 deps: [emit-package-summary-json]

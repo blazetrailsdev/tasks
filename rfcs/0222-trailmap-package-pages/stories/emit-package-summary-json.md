@@ -2,7 +2,7 @@
 title: "trails: scripts/parity/package-summary.ts emits per-package, per-site and CLAUDE.md-section rows into the parity artifact"
 status: draft
 updated: 2026-11-05
-rfc: "0000-trailmap-package-pages"
+rfc: "0222-trailmap-package-pages"
 cluster: package-summary-data
 packages: [scripts]
 deps: []

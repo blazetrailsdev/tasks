@@ -2,7 +2,7 @@
 title: "trailmap: stats-sync downloads parity-outputs and stores package summary tables"
 status: draft
 updated: 2026-11-05
-rfc: "0000-trailmap-package-pages"
+rfc: "0222-trailmap-package-pages"
 cluster: package-summary-data
 packages: [activerecord]
 deps: [emit-package-summary-json, emit-package-file-rows]
