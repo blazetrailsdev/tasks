@@ -51,7 +51,6 @@ deps:
     lib-test-layout-tse-compiler,
     lib-test-layout-tzinfo,
     lib-test-layout-vitest-matchers,
-    lib-test-layout-website,
     lib-test-layout-zeitwerk,
   ]
 deps-rfc: []
@@ -72,7 +71,7 @@ packages migrated. Once every package story is done, the `src` arm is dead.
 
 - [ ] `scripts/layout/package-roots.ts` and every caller assume `lib/` +
       `test/` only; the interim test excludes are gone.
-- [ ] A Preflight test fails if any `packages/*/src/` directory or any
+- [ ] A Preflight test fails if any `packages/*/src/` directory (except `website`) or any
       `packages/*/lib/**/*.test.ts` exists.
 - [ ] Root `CLAUDE.md` "Tests live next to source files" line reads "Tests
       live in `packages/<pkg>/test/`, laid out as the upstream gem's `test/`

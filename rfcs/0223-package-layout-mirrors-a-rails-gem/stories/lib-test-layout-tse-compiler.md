@@ -18,7 +18,7 @@ blocked-by: null
 ## Context
 
 `packages/tse-compiler/src/` holds 5 `*.test.ts` files at trails `b2e38a2ae5`.
-Target test layout: test/ mirroring lib/ (no Ruby counterpart; RFC open question 2 must be settled first).
+Target test layout: test/ mirroring lib/ (no Ruby counterpart).
 Procedure and rules: the RFC README's "What a package PR does" and "Where a
 test lands".
 
@@ -35,6 +35,8 @@ test lands".
 - [ ] `scripts/layout/src-references.ts tse-compiler` prints nothing.
 - [ ] `pnpm parity:api` and `pnpm parity:test` deltas for tse-compiler are exactly 0
       (matched and total); every ratchet gate is green with no mark edit.
+- [ ] Shipped testing modules stay in `lib/` behind their testing exports;
+      `scripts/layout/server-path-closure.ts` adds no violation for this package.
 - [ ] `git log --follow` reaches pre-move history for a sampled moved test.
 - [ ] PR body states it is a mechanical move under CLAUDE.md's
       single-mechanical-rename exception to the LOC ceiling.

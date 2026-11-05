@@ -35,6 +35,8 @@ test lands".
 - [ ] `scripts/layout/src-references.ts html-sanitizer` prints nothing.
 - [ ] `pnpm parity:api` and `pnpm parity:test` deltas for html-sanitizer are exactly 0
       (matched and total); every ratchet gate is green with no mark edit.
+- [ ] Shipped testing modules stay in `lib/` behind their testing exports;
+      `scripts/layout/server-path-closure.ts` adds no violation for this package.
 - [ ] `git log --follow` reaches pre-move history for a sampled moved test.
 - [ ] PR body states it is a mechanical move under CLAUDE.md's
       single-mechanical-rename exception to the LOC ceiling.

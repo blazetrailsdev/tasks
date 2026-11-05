@@ -18,7 +18,7 @@ blocked-by: null
 ## Context
 
 `packages/et-orbi/src/` holds 3 `*.test.ts` files at trails `b2e38a2ae5`.
-Target test layout: the upstream spec/ tree's layout, placed under test/ (RFC open question 1).
+Target test layout: the upstream spec/ tree's layout, placed under test/ (never spec/).
 Procedure and rules: the RFC README's "What a package PR does" and "Where a
 test lands".
 
@@ -35,6 +35,8 @@ test lands".
 - [ ] `scripts/layout/src-references.ts et-orbi` prints nothing.
 - [ ] `pnpm parity:api` and `pnpm parity:test` deltas for et-orbi are exactly 0
       (matched and total); every ratchet gate is green with no mark edit.
+- [ ] Shipped testing modules stay in `lib/` behind their testing exports;
+      `scripts/layout/server-path-closure.ts` adds no violation for this package.
 - [ ] `git log --follow` reaches pre-move history for a sampled moved test.
 - [ ] PR body states it is a mechanical move under CLAUDE.md's
       single-mechanical-rename exception to the LOC ceiling.

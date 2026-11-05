@@ -37,6 +37,10 @@ The RFC README's "Inventory" section lists every assumption (124 files in
 - [ ] `scripts/layout/src-references.ts [<pkg>]` lists every repo reference to
       `packages/<pkg>/src` outside the tasks repo; used as each package PR's
       done-check.
+- [ ] `scripts/layout/server-path-closure.ts` walks each package's built
+      `dist/` import graph from `.` and every non-testing export and fails on a
+      testing module, a vitest import or a `test/` path; runs in CI with an
+      only-shrink list of today's violations, one story filed per violation.
 - [ ] A throwaway local move of a small package (not committed) shows
       `pnpm parity:api`, `parity:test`, all ratchet gates, lint and
       `ci-suite-coverage` unchanged.

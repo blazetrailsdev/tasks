@@ -51,7 +51,6 @@ packages:
   - tse-compiler
   - tzinfo
   - vitest-matchers
-  - website
   - zeitwerk
 clusters:
   - layout-tooling
@@ -150,9 +149,34 @@ the gem's matching Rails directory when one exists (`test/models`,
 in `lib/` and is flagged in the PR body; it is a layering finding, not part of
 the move.
 
-Gems whose upstream uses `spec/` (thor, mail, fugit, raabro, et-orbi) still
-use `test/` at the package root, with the spec tree's layout inside it (see
-Open questions).
+Every package uses `test/`, never `spec/` (owner ruling, 2026-11-05): a gem
+whose upstream is RSpec (thor, mail, fugit, raabro, et-orbi) lays its spec
+tree's layout out inside `test/`. A package with no Ruby counterpart
+(`vitest-matchers`, `trails-tsc`, `activerecord-cli`, `tse-compiler`) gets the
+same `lib/` + `test/` shape, `test/` mirroring `lib/`.
+
+### Shipped testing code, and a server path free of it
+
+Testing code is shipped: `ActiveSupport::Testing`, `ActionDispatch::Integration`,
+`ActionController::TestCase`, `ActionMailer::TestHelper`, `rack-test`,
+fixtures support and the like are library code in Rails (`lib/`) and stay in
+`lib/` here, published under their existing testing subpath exports
+(`@blazetrails/activesupport/testing/*`, …). Only test-suite-private code (the
+package's own tests, canonical models, fixtures, schema mirror, suite support)
+moves to `test/`, which is never published.
+
+Shipping it must not put it on the server path (owner ruling, 2026-11-05). A
+production app's import of a package's main entry (`.`) and of every
+non-testing subpath export must not reach, transitively, any testing module,
+any vitest/`@blazetrails/vitest-matchers` import, or anything under `test/`.
+The tooling-prep story adds `scripts/layout/server-path-closure.ts`, which
+walks the built `dist/` import graph from each non-testing export and fails on
+such a module; the set of testing modules is declared per package (its testing
+subpath exports and what only they reach). It runs in CI from the first PR
+that lands it, with an only-shrink list of today's violations, each to be
+fixed by moving the import behind the testing entry (Rails gets this from
+`require "active_support/testing/..."` being opt-in). A package story may not
+add a violation, and the RFC is not done until the list is empty.
 
 The move table is generated, not hand-written: the tooling-prep story adds
 `scripts/layout/plan-test-moves.ts <pkg>`, which prints `old → new` for every
@@ -283,6 +307,8 @@ Prose:
 - **Converting tests to the package's public entry point** (Rails tests
   `require "active_record"`): imports keep their relative specifiers.
 - **Renaming any test or `describe`:** names are `parity:test` keys.
+- **`packages/website`:** a SvelteKit app, out of CI; it keeps its
+  framework's `src/` and has no story (owner ruling, 2026-11-05).
 - **Moving `dx-tests/`, `virtualized-dx-tests/` or `packages/*/scripts/`:**
   they already sit outside `src/`.
 
@@ -312,33 +338,28 @@ Prose:
 
 ## Verification
 
-- `find packages -path '*/node_modules' -prune -o -path '*/src' -type d -print`
+- `find packages -path '*/node_modules' -prune -o -path '*/src' -type d -print` (outside `packages/website`)
   prints nothing, and no `*.test.ts` exists under any `packages/*/lib/`.
 - No `dist/**/*.test.js` in any built package.
 - `pnpm parity:api` and `pnpm parity:test` totals unchanged by every package
   PR (delta exactly 0, matched and total), and every ratchet mark unchanged.
 - `git log --follow` on a sample moved file reaches its pre-move history.
 - `scripts/layout/src-references.ts` reports zero references repo-wide.
+- `scripts/layout/server-path-closure.ts` reports zero violations, and its
+  exclude list is deleted.
 
 ## Open questions
 
-1. **`spec/` gems.** thor, mail, fugit, raabro, et-orbi are RSpec upstream.
-   Options: `test/` with the spec tree inside (decision 1 read literally), or
-   `spec/`. Recommendation: `test/`, per the decision; the per-gem tree inside
-   keeps the path mapping.
-2. **Packages with no Ruby counterpart** (`website`, `vitest-matchers`,
-   `trails-tsc`, `activerecord-cli`, `tse-compiler`). Recommendation: same
-   `lib/` + `test/` shape, `test/` mirroring `lib/`; `website` is SvelteKit and
-   may keep its framework's `src/` (to be ruled before its story is claimed).
-3. **Cross-package test helper imports** (`@blazetrails/activesupport/testing/*`
-   aliases in `vitest.config.ts`, `rack-test`, `actionpack` testing exports).
-   Library-shipped testing modules (`ActiveSupport::Testing`,
-   `ActionDispatch::Integration`) are `lib/` in Rails too and stay in `lib/`;
-   only test-suite-private helpers move.
-4. **Subpath imports for tests** (`"imports": { "#lib/*": … }`) instead of
+1. **Subpath imports for tests** (`"imports": { "#lib/*": … }`) instead of
    `../../lib/...` relative specifiers. Recommendation: not in this RFC
    (mechanical moves only); file separately if wanted.
+
+Resolved 2026-11-05 by the repo owner: `spec/` gems use `test/`; `website`
+stays as it is; shipped testing code stays in `lib/` behind testing exports,
+with a guarded server path that imports none of it.
 
 ## Changelog
 
 - 2026-11-05: initial RFC
+- 2026-11-05: owner rulings — always `test/`, `website` out of scope, shipped
+  testing code stays in `lib/` with a server-path closure guard
