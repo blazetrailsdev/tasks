@@ -3,6 +3,7 @@ title: "Incremental walker + perf budget"
 status: draft
 updated: 2026-06-17
 rfc: "0035-tsserver-editor-plugin"
+packages: [trails-tsc]
 cluster: null
 deps: ["lsp-plugin-ar-dispatch"]
 deps-rfc: []

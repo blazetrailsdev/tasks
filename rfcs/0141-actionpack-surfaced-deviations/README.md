@@ -7,6 +7,7 @@ updated: 2026-10-14
 priority: 5
 owner: "@deanmarano"
 packages:
+  - scripts
   - "actionpack"
   - "trailties"
   - "actionview"

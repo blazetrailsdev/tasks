@@ -4,7 +4,7 @@ status: blocked
 updated: 2026-10-09
 rfc: "0123-blocked-convergence-holding"
 cluster: null
-packages: []
+packages: [activerecord]
 deps: []
 deps-rfc: []
 est-loc: null

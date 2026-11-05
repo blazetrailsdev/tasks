@@ -4,7 +4,7 @@ status: ready
 updated: 2026-11-03
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
-packages: []
+packages: [mail]
 deps: []
 deps-rfc: []
 est-loc: 250

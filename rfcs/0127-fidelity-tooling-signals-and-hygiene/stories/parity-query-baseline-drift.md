@@ -3,6 +3,7 @@ title: "parity:query has 8 unregistered failures and 20 stale known-gap registra
 status: ready
 updated: 2026-07-31
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
+packages: [scripts]
 cluster: null
 deps: []
 deps-rfc: []

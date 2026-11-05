@@ -6,6 +6,7 @@ created: 2026-09-08
 updated: 2026-10-27
 owner: "@deanmarano"
 packages:
+  - scripts
   - "trailties"
   # The two encryption boot stories carried in at the sunset of
   # 0113-branch-and-guard-parity (2026-09-09) also touch activerecord/src/encryption.

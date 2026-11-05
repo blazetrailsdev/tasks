@@ -3,6 +3,7 @@ title: "rails-file-structure method-order CI step re-runs the whole ruleset"
 status: ready
 updated: 2026-07-30
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
+packages: [activemodel, arel]
 cluster: null
 deps: []
 deps-rfc: []

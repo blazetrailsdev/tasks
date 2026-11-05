@@ -4,7 +4,7 @@ status: draft
 updated: 2026-09-03
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
-packages: []
+packages: [website]
 deps: []
 deps-rfc: []
 est-loc: null

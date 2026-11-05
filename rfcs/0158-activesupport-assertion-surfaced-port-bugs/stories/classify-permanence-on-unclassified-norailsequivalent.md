@@ -4,7 +4,7 @@ status: draft
 updated: 2026-08-27
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
-packages: []
+packages: [scripts]
 deps: []
 deps-rfc: []
 est-loc: 10

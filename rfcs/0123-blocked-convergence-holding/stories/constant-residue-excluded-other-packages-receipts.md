@@ -4,7 +4,7 @@ status: blocked
 updated: 2026-11-03
 rfc: "0123-blocked-convergence-holding"
 cluster: null
-packages: []
+packages: [scripts]
 deps:
   - constant-residue-excluded-receipts-burndown
 deps-rfc: []

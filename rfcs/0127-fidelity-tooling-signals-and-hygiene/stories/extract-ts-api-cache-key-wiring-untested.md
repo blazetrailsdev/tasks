@@ -3,6 +3,7 @@ title: "extract-ts-api's two cache keys have no test that each input is folded i
 status: ready
 updated: 2026-07-27
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
+packages: [scripts]
 cluster: null
 deps: []
 deps-rfc: []

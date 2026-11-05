@@ -4,7 +4,7 @@ status: ready
 updated: 2026-08-24
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
-packages: []
+packages: [actionpack, activemodel, arel]
 deps: ["rails-privates-manifest-package-dirs-drift"]
 deps-rfc: []
 est-loc: 60

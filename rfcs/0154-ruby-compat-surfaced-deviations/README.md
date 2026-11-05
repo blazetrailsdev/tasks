@@ -6,6 +6,7 @@ created: 2026-09-17
 updated: 2026-09-17
 owner: "@deanmarano"
 packages:
+  - scripts
   - "ruby-compat"
   - "activesupport"
   # binmode-write-emits-latin1-where-mri-emits-the-strings-own-bytes, rehomed

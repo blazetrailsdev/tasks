@@ -3,6 +3,7 @@ title: "assertion-mismatch mark reseed silently ratchets packages the PR never t
 status: ready
 updated: 2026-08-28
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
+packages: [scripts]
 cluster: null
 deps: []
 deps-rfc: []

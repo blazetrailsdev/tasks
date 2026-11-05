@@ -4,7 +4,7 @@ status: draft
 updated: 2026-09-06
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: arm-parity-tooling
-packages: []
+packages: [scripts]
 deps: []
 deps-rfc: []
 est-loc: 120

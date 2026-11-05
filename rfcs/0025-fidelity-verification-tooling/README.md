@@ -6,6 +6,8 @@ created: 2026-06-12
 updated: 2026-08-17
 owner: "@deanmarano"
 packages:
+  - scripts
+  - website
   - activerecord
   - arel
   - activesupport

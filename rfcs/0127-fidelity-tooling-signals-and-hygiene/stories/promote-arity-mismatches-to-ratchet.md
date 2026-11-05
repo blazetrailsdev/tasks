@@ -3,6 +3,7 @@ title: "Promote arity mismatches from advisory to an only-shrink ratchet"
 status: ready
 updated: 2026-08-28
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
+packages: [scripts]
 cluster: null
 deps: []
 deps-rfc: []

@@ -4,7 +4,7 @@ status: draft
 updated: 2026-09-17
 rfc: "0061-ci-failures"
 cluster: null
-packages: []
+packages: [activerecord]
 deps: []
 deps-rfc: []
 est-loc: 15

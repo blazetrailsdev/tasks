@@ -4,7 +4,7 @@ status: draft
 updated: 2026-09-29
 rfc: "0168-rack-cache-gem-port"
 cluster: null
-packages: []
+packages: [scripts]
 deps: []
 deps-rfc: []
 est-loc: 120

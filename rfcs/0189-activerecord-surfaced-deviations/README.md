@@ -6,6 +6,7 @@ created: 2026-10-10
 updated: 2026-10-14
 owner: "@deanmarano"
 packages:
+  - scripts
   - "activerecord"
   - "activemodel"
   - "ruby-compat"

@@ -4,7 +4,7 @@ status: blocked
 updated: 2026-09-25
 rfc: "0123-blocked-convergence-holding"
 cluster: null
-packages: []
+packages: [activerecord]
 deps:
   - reopen-rfc-0087-constructor-arm-for-association-io-at-assignment
 deps-rfc: []

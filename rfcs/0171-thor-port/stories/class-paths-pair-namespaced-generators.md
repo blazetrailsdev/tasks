@@ -4,7 +4,7 @@ status: draft
 updated: 2026-11-05
 rfc: "0171-thor-port"
 cluster: null
-packages: []
+packages: [scripts]
 deps: []
 deps-rfc: []
 est-loc: 120

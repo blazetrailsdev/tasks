@@ -6,6 +6,7 @@ created: 2026-08-25
 updated: 2026-09-24
 owner: "@deanmarano"
 packages:
+  - scripts
   - "trails-tsc"
   - "activerecord-cli"
   - "trailties"

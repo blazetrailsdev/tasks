@@ -4,7 +4,7 @@ status: ready
 updated: 2026-08-10
 rfc: "0097-parity-output-sharding"
 cluster: api-compare
-packages: []
+packages: [scripts]
 deps: ["shared-shard-helper"]
 deps-rfc: []
 est-loc: 260

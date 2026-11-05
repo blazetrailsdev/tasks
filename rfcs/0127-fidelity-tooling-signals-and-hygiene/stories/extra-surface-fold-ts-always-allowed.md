@@ -3,6 +3,7 @@ title: "extra-surface: give TS_ALWAYS_ALLOWED reasoned, stale-checked entries"
 status: ready
 updated: 2026-07-27
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
+packages: [scripts]
 cluster: null
 deps: []
 deps-rfc: []

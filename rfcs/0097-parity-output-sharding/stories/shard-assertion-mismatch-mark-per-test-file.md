@@ -4,7 +4,7 @@ status: draft
 updated: 2026-09-17
 rfc: "0097-parity-output-sharding"
 cluster: null
-packages: []
+packages: [scripts]
 deps: []
 deps-rfc: []
 est-loc: 250

@@ -4,7 +4,7 @@ status: blocked
 updated: 2026-10-22
 rfc: "0136-trailmap"
 cluster: null
-packages: []
+packages: [trails-tsc]
 deps: []
 deps-rfc: []
 est-loc: 100

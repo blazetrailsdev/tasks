@@ -3,6 +3,7 @@ title: "tasks: pre-commit hook stderr is swallowed on successful mutations"
 status: ready
 updated: 2026-07-30
 rfc: "0025-fidelity-verification-tooling"
+packages: [scripts]
 cluster: null
 deps: []
 deps-rfc: []

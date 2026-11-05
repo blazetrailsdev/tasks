@@ -4,7 +4,7 @@ status: draft
 updated: 2026-10-21
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: lint
-packages: []
+packages: [scripts]
 deps: []
 deps-rfc: []
 est-loc: 90

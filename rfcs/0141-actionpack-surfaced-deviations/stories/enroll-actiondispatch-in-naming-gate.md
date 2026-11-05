@@ -4,7 +4,7 @@ status: ready
 updated: 2026-10-19
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
-packages: []
+packages: [scripts]
 deps:
   - response-to-a-passes-rack-headers-to-hash
 deps-rfc: []

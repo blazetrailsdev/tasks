@@ -4,7 +4,7 @@ status: draft
 updated: 2026-09-17
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
-packages: []
+packages: [activesupport, ruby-compat]
 deps: []
 deps-rfc: []
 est-loc: 80
