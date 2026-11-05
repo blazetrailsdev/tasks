@@ -3,6 +3,7 @@ title: "rails-private-jsdoc is still registered against an empty manifest in the
 status: ready
 updated: 2026-07-27
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
+packages: [scripts]
 cluster: null
 deps: []
 deps-rfc: []

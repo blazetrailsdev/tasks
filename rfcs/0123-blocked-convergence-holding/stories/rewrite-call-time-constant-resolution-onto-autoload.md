@@ -4,7 +4,7 @@ status: blocked
 updated: 2026-09-29
 rfc: "0123-blocked-convergence-holding"
 cluster: autoload
-packages: []
+packages: [activerecord]
 deps:
   - converge-activerecord-association-slots-onto-autoload
   - converge-activerecord-core-slots-onto-autoload

@@ -3,6 +3,7 @@ title: "Add a raise-message parity signal to parity:api"
 status: ready
 updated: 2026-08-28
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
+packages: [scripts]
 cluster: null
 deps: []
 deps-rfc: []

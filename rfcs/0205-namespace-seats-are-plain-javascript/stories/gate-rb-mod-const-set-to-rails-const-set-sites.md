@@ -4,7 +4,7 @@ status: ready
 updated: 2026-10-23
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
-packages: []
+packages: [scripts]
 deps:
   - sweep-arel-seats-to-plain-assignment
   - sweep-activerecord-core-seats-to-plain-assignment

@@ -4,7 +4,7 @@ status: ready
 updated: 2026-09-01
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
-packages: []
+packages: [scripts]
 deps: []
 deps-rfc: []
 est-loc: null

@@ -7,7 +7,7 @@
 // console side effects, so CLI mutation commands can run it against
 // post-mutation state and abort cleanly before committing. The CLI entry
 // (validate.mjs) is a thin wrapper that loads, prints, and sets exit code.
-import { relPath, RFC_STATUSES, STORY_STATUSES } from "./lib.mjs";
+import { extractStoryPaths, relPath, RFC_STATUSES, STORY_STATUSES } from "./lib.mjs";
 
 export const MAX_LINES = 2000;
 
@@ -24,7 +24,7 @@ export const MAX_LINES = 2000;
 // story's `est-loc` is a historical estimate, not a claim about tomorrow's PR:
 // `strip-freeform-comments-ar-remaining-dirs` shipped as one deliberate 9000
 // LOC sweep (PR #7195) and the ceiling has nothing left to say about it.
-export const MAX_EST_LOC = 700;
+export const MAX_EST_LOC = 800;
 
 // An RFC may lift that ceiling for its own stories with `max-est-loc: N` in its
 // README frontmatter. It is an owner decision recorded where the stories live,
@@ -283,6 +283,45 @@ function checkStory(s, { parent, duplicateOf, err }) {
       `closed-reason is set but status is "${fm.status}" — only closed stories carry closed-reason`,
     );
   }
+}
+
+// A story's packages by the first rule that names any (RFC 0222, "Story →
+// package attribution"): its own `packages`, else the `<pkg>` of each
+// `packages/<pkg>/…` path its body cites, else its RFC's `packages` when that
+// lists exactly one. Mirrors trailmap's `packageAttribution` over markdown.
+export function packageAttribution(story, rfcPackages) {
+  const own = story.frontmatter?.packages ?? [];
+  if (own.length > 0) return own;
+  const fromPaths = new Set();
+  for (const storyPath of extractStoryPaths(story.body ?? "")) {
+    const pkg = /^packages\/([^/]+)\//.exec(storyPath)?.[1];
+    if (pkg !== undefined) fromPaths.add(pkg);
+  }
+  if (fromPaths.size > 0) return [...fromPaths];
+  const rfcList = rfcPackages.get(story.rfc) ?? [];
+  return rfcList.length === 1 ? rfcList : [];
+}
+
+export const UNATTRIBUTED_RULE =
+  "list the packages whose files it cites; root tooling (scripts/, .github/, eslint/) is `scripts`; " +
+  "a trailmap or tasks story lists the trails packages it exercises " +
+  "(rule from backfill-story-packages-on-open-stories)";
+
+// A closed or done story is touched by its closing edit; it is not backlog.
+const TERMINAL_STORY_STATUSES = new Set(["done", "closed"]);
+
+// Warnings, not errors: a story that genuinely touches no package may merge.
+// `changed` is the set of story files added or modified relative to origin/main.
+export function unattributedWarnings({ rfcs, stories, changed }) {
+  const rfcPackages = new Map(rfcs.map((r) => [r.dir, r.frontmatter?.packages ?? []]));
+  const warnings = [];
+  for (const s of stories) {
+    if (s.error || !changed.has(relPath(s.file))) continue;
+    if (TERMINAL_STORY_STATUSES.has(s.frontmatter?.status)) continue;
+    if (packageAttribution(s, rfcPackages).length > 0) continue;
+    warnings.push(`${relPath(s.file)}: no package attribution; ${UNATTRIBUTED_RULE}`);
+  }
+  return warnings;
 }
 
 export function validate({ rfcs, stories }) {

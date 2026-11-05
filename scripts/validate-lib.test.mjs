@@ -7,7 +7,12 @@
 // Standalone runner, no framework: collect failures and throw at the end so an
 // uncaught exception sets a non-zero exit code. No node:* imports, no process.*
 // references — the same purity constraints the validator itself holds to.
-import { MAX_EST_LOC, effectiveStoryStatus, validate } from "./validate-lib.mjs";
+import {
+  MAX_EST_LOC,
+  effectiveStoryStatus,
+  unattributedWarnings,
+  validate,
+} from "./validate-lib.mjs";
 
 const failures = [];
 function test(name, fn) {
@@ -390,6 +395,49 @@ test("est-loc above the ceiling is legal once the story is closed", () => {
     }).errors,
   );
 });
+
+{
+  const changedOf = (...ss) => new Set(ss.map((x) => x.file));
+  const run = (rfcPkgs, s) =>
+    unattributedWarnings({
+      rfcs: [rfc({}, { packages: rfcPkgs })],
+      stories: [s],
+      changed: changedOf(s),
+    });
+
+  test("a story's own packages attribute it", () => {
+    assert(run([], story({}, { packages: ["arel"] })).length === 0, "expected no warning");
+  });
+  test("a cited packages/<pkg>/ path attributes it", () => {
+    const s = story({ body: "See packages/activerecord/src/base.ts:12." });
+    assert(run(["arel", "activemodel"], s).length === 0, "expected no warning");
+  });
+  test("a one-package RFC attributes it", () => {
+    assert(run(["arel"], story()).length === 0, "expected no warning");
+  });
+  test("an unattributed changed story warns, naming the backfill rule", () => {
+    const w = run(["arel", "activemodel"], story({ body: "cites scripts/x.ts only" }));
+    assert(w.length === 1, `expected one warning, got ${w.length}`);
+    assert(w[0].includes("backfill-story-packages-on-open-stories"), w[0]);
+  });
+  test("an unattributed story not changed against origin/main does not warn", () => {
+    const s = story();
+    const w = unattributedWarnings({
+      rfcs: [rfc({}, { packages: [] })],
+      stories: [s],
+      changed: new Set(),
+    });
+    assert(w.length === 0, "expected no warning");
+  });
+  test("a done or closed unattributed story does not warn", () => {
+    for (const status of ["done", "closed"]) {
+      assert(run([], story({}, { status })).length === 0, `expected no warning for ${status}`);
+    }
+  });
+  test("an unattributed story is a warning, not a validate error", () => {
+    expectClean(validate({ rfcs: [rfc({}, { packages: [] })], stories: [story()] }).errors);
+  });
+}
 
 if (failures.length) {
   throw new Error(`${failures.length} test(s) failed:\n  ${failures.join("\n  ")}`);

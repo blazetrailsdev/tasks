@@ -4,7 +4,7 @@ status: ready
 updated: 2026-10-14
 rfc: "0123-blocked-convergence-holding"
 cluster: null
-packages: []
+packages: [scripts]
 deps:
   - activerecord-core-initialize-is-bases-constructor
   - activerecord-fixtures-timezone-and-controller-runtime-initialize-inlined

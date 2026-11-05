@@ -4,7 +4,7 @@ status: draft
 updated: 2026-10-27
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
-packages: []
+packages: [actionpack]
 deps: []
 deps-rfc: []
 est-loc: 150

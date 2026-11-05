@@ -6,6 +6,7 @@ created: 2026-09-28
 updated: 2026-09-28
 owner: "@deanmarano"
 packages:
+  - scripts
   - rack-cache
   - actionpack
   - trailties

@@ -3,6 +3,7 @@ title: "Flag Mirrors: anchors that name no real Rails method"
 status: ready
 updated: 2026-07-27
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
+packages: [activerecord]
 cluster: null
 deps: []
 deps-rfc: []

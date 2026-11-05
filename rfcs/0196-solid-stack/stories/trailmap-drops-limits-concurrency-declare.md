@@ -4,7 +4,7 @@ status: draft
 updated: 2026-11-01
 rfc: "0196-solid-stack"
 cluster: null
-packages: []
+packages: [solid-queue]
 deps: []
 deps-rfc: []
 est-loc: 20

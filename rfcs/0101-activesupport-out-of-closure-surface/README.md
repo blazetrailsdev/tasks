@@ -6,6 +6,7 @@ created: 2026-08-12
 updated: 2026-08-25
 owner: "@deanmarano"
 packages:
+  - scripts
   - "activesupport"
   - "trailties"
 clusters: []

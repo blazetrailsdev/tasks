@@ -4,11 +4,25 @@
 // non-zero on any failure. Intended to run in CI and via the pre-commit
 // hook. The validation rules live in validate-lib.mjs so CLI mutation
 // commands can reuse them against in-memory state and fail fast.
-import { loadAll } from "./lib.mjs";
-import { validate } from "./validate-lib.mjs";
+import { execFileSync } from "node:child_process";
+import { loadAll, REPO_ROOT } from "./lib.mjs";
+import { unattributedWarnings, validate } from "./validate-lib.mjs";
 
 const { rfcs, stories } = loadAll();
 const { errors } = validate({ rfcs, stories });
+
+let changed = new Set();
+try {
+  const out = execFileSync(
+    "git",
+    ["diff", "--name-only", "--diff-filter=AM", "origin/main", "--", "rfcs/"],
+    { cwd: REPO_ROOT, encoding: "utf8" },
+  );
+  changed = new Set(out.split("\n").filter(Boolean));
+} catch {
+  // No origin/main (a shallow or detached checkout): nothing to compare against.
+}
+for (const w of unattributedWarnings({ rfcs, stories, changed })) console.warn(`warning: ${w}`);
 
 if (errors.length) {
   console.error(`validation failed (${errors.length} error${errors.length === 1 ? "" : "s"}):`);

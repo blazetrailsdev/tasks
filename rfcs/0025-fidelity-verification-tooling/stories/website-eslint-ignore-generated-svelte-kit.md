@@ -3,6 +3,7 @@ title: "website: add generated .svelte-kit/** to the eslint global ignores"
 status: ready
 updated: 2026-07-30
 rfc: "0025-fidelity-verification-tooling"
+packages: [website]
 cluster: null
 deps: []
 deps-rfc: []

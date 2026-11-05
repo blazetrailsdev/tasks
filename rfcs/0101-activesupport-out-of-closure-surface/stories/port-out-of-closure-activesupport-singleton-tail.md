@@ -4,7 +4,7 @@ status: draft
 updated: 2026-08-31
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
-packages: []
+packages: [scripts]
 deps: []
 deps-rfc: []
 est-loc: null

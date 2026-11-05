@@ -4,7 +4,7 @@ status: blocked
 updated: 2026-09-24
 rfc: "0125-typescript-7-ground-floor"
 cluster: null
-packages: []
+packages: [scripts]
 deps:
   - recheck-ts7-api-surface
 deps-rfc: []

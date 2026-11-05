@@ -6,6 +6,8 @@ created: 2026-07-04
 updated: 2026-08-03
 owner: "@deanmarano"
 packages:
+  - activerecord
+  - scripts
   - "actionpack"
   - "trailties"
 clusters: []

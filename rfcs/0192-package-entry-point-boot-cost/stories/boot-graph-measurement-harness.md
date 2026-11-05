@@ -4,7 +4,7 @@ status: draft
 updated: 2026-10-14
 rfc: "0192-package-entry-point-boot-cost"
 cluster: "measurement"
-packages: []
+packages: [ruby-compat]
 deps: []
 deps-rfc: []
 est-loc: 320

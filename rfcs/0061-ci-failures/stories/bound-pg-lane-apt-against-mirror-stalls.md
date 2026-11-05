@@ -4,7 +4,7 @@ status: draft
 updated: 2026-10-22
 rfc: "0061-ci-failures"
 cluster: null
-packages: []
+packages: [scripts]
 deps: []
 deps-rfc: []
 est-loc: 15

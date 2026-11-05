@@ -6,6 +6,7 @@ created: 2026-09-24
 updated: 2026-09-24
 owner: "@deanmarano"
 packages:
+  - scripts
   - "activesupport"
   - "date"
   - "activerecord"

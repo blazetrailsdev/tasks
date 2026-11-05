@@ -6,6 +6,7 @@ created: 2026-09-20
 updated: 2026-09-21
 owner: "@deanmarano"
 packages:
+  - i18n
   - "activerecord"
   - "activemodel"
   - "activesupport"

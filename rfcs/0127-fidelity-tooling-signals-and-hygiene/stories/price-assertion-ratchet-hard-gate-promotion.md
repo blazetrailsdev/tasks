@@ -3,6 +3,7 @@ title: "Measure the assertion-mismatch burn rate and price promoting the ratchet
 status: ready
 updated: 2026-08-01
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
+packages: [scripts]
 cluster: null
 deps: []
 deps-rfc: []

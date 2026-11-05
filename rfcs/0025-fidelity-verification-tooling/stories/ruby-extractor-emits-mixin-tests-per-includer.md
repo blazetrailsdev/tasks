@@ -4,7 +4,7 @@ status: draft
 updated: 2026-09-26
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
-packages: []
+packages: [scripts]
 deps: []
 deps-rfc: []
 est-loc: 200

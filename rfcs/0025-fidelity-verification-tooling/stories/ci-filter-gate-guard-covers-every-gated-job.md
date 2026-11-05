@@ -3,6 +3,7 @@ title: "Extend the CI filter/gate drift guard past unit-tests to every gated job
 status: ready
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
+packages: [scripts]
 cluster: null
 deps: []
 deps-rfc: []

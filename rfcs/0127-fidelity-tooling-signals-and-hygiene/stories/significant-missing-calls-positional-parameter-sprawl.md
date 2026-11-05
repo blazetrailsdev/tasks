@@ -3,6 +3,7 @@ title: "significantMissingCalls has eight positional parameters; collapse the de
 status: ready
 updated: 2026-07-30
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
+packages: [scripts]
 cluster: null
 deps: []
 deps-rfc: []

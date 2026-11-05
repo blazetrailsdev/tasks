@@ -4,7 +4,7 @@ status: draft
 updated: 2026-08-24
 rfc: "0025-fidelity-verification-tooling"
 cluster: null
-packages: []
+packages: [activerecord]
 deps: []
 deps-rfc: []
 est-loc: 120

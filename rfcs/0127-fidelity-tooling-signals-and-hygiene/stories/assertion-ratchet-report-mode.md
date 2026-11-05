@@ -3,6 +3,7 @@ title: "Report mode for the assertion ratchet so a burndown can be scoped off a 
 status: ready
 updated: 2026-08-01
 rfc: "0127-fidelity-tooling-signals-and-hygiene"
+packages: [scripts]
 cluster: null
 deps: []
 deps-rfc: []

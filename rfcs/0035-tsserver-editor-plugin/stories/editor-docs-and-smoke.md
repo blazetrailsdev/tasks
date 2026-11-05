@@ -3,6 +3,7 @@ title: "Editor install docs + tsserver smoke; supersede plan Phase 2"
 status: draft
 updated: 2026-06-17
 rfc: "0035-tsserver-editor-plugin"
+packages: [activerecord]
 cluster: null
 deps: ["lsp-position-remap-mvp", "lsp-diagnostic-remap", "lsp-perf-incremental"]
 deps-rfc: []

@@ -3,6 +3,7 @@ title: "Seed the body-pins whole-surface floor at first release"
 status: blocked
 updated: 2026-07-27
 rfc: "0025-fidelity-verification-tooling"
+packages: [scripts]
 cluster: null
 deps: []
 deps-rfc: []

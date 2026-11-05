@@ -3,6 +3,7 @@ title: "sync-stats: let --reparse-logs be scoped to a PR/date range"
 status: draft
 updated: 2026-07-31
 rfc: "0025-fidelity-verification-tooling"
+packages: [scripts]
 cluster: null
 deps: []
 deps-rfc: []
