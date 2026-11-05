@@ -5,7 +5,7 @@ updated: 2026-11-05
 rfc: "0000-trailmap-package-pages"
 cluster: package-pages
 packages: [actionpack, actionview]
-deps: [package-overview-page]
+deps: [packages-index-page, story-touching-package-scope]
 deps-rfc: []
 est-loc: 200
 priority: null

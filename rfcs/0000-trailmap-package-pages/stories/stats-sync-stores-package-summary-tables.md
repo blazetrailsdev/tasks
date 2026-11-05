@@ -5,7 +5,7 @@ updated: 2026-11-05
 rfc: "0000-trailmap-package-pages"
 cluster: package-summary-data
 packages: [activerecord]
-deps: [emit-package-summary-json]
+deps: [emit-package-summary-json, emit-package-file-rows]
 deps-rfc: []
 est-loc: 350
 priority: null
@@ -27,10 +27,12 @@ artifact (90-day retention). trailmap reads stats.db read-only through
 
 ## Acceptance criteria
 
-- [ ] A migration under `db/stats-sync-migrate/` adds `package_tag_stats`,
-      `package_mark_stats`, `package_file_stats` (keyed by
-      `merge_commit_sha`, `pr_number`, `package`, plus `ruby_file` for files)
-      and `package_tag_sites` (latest commit only).
+- [ ] A migration under `db/stats-sync-migrate/` adds the seven tables of
+      the RFC's "Data" table — `package_meta`, `package_tag_stats`,
+      `package_mark_stats`, `package_file_stats`, `package_tag_sites`,
+      `package_skip_tests`, `claude_md_sections` — with exactly those columns;
+      the per-commit ones keyed by `merge_commit_sha`, `pr_number`, the three
+      latest-only ones replaced on each sync.
 - [ ] The sync downloads `parity-outputs-<sha>` for each merged commit it
       syncs (`gh run download`, through the existing `gh` helper and its
       rate-limit budget) and upserts the rows.

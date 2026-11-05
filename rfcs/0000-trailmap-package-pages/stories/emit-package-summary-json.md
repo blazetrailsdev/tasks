@@ -1,5 +1,5 @@
 ---
-title: "trails: scripts/parity/package-summary.ts emits per-package, per-site and per-file rows into the parity artifact"
+title: "trails: scripts/parity/package-summary.ts emits per-package, per-site and CLAUDE.md-section rows into the parity artifact"
 status: draft
 updated: 2026-11-05
 rfc: "0000-trailmap-package-pages"
@@ -7,7 +7,7 @@ cluster: package-summary-data
 packages: [scripts]
 deps: []
 deps-rfc: []
-est-loc: 450
+est-loc: 400
 priority: null
 pr: null
 claim: null
@@ -32,26 +32,28 @@ JSON. Mark files: `scripts/parity/module-count-mark.json`,
 ## Acceptance criteria
 
 - [ ] `pnpm parity:packages` runs `scripts/parity/package-summary.ts` and writes
-      `scripts/parity/output/package-summary.json` with three arrays:
-      `packages`, `tagSites`, `files`, shaped as in the RFC.
-- [ ] `packages[]` carries `railsCounterpart` (or `null`), `description`, a
-      count per tag (`@noRailsEquivalent` split `PERMANENT` / `CONVERGEABLE`,
-      `@missingRailsCall`, `@missingRailsArgs`, `@missingRailsName`,
-      `@inventedArm`, `@perf`, `@inlinedFrom`, `@internal`), each mark and
-      baseline count named above, and `PERMANENT-SKIP` tests grouped by cited
-      `CLAUDE.md` section.
-- [ ] `packages[]` also carries the current params and predicates mismatch
-      counts per package (what `parity:api:params` / `parity:api:predicates`
-      measure against `param-name-mark.json` / `predicate-kind-mark.json`), so
-      the overview's params and predicates tiles have a source; stats.db has
-      no table for either today.
+      `scripts/parity/output/package-summary.json` with `packages`, `tagSites`
+      and `claudeSections`, shaped as in the RFC's "Data" section;
+      `emit-package-file-rows` adds `files`.
+- [ ] `packages[]` has one entry per `packages/*/package.json`, carrying
+      `railsCounterpart` (or `null`), `description`, `claudeMd` (path or
+      `null`), a count per tag (`@noRailsEquivalent` split `PERMANENT` /
+      `CONVERGEABLE`, `@missingRailsCall`, `@missingRailsArgs`,
+      `@missingRailsName`, `@inventedArm`, `@perf`, `@inlinedFrom`,
+      `@internal`), each mark and baseline count named above, and
+      `PERMANENT-SKIP` tests grouped by cited section anchor.
+- [ ] Params and predicates are `matched` / `total` per package: name-matched
+      pairs compared, less the pairs in `output/param-name-mismatches.json`
+      and the predicate-kind measurement (`lint-predicate-kinds.ts`) — the
+      same shape as the api and calls gates, so a tile can trend a percent.
+- [ ] `claudeSections[]` lists every `##` / `###` heading of the root and
+      package `CLAUDE.md` files with its GitHub anchor and first paragraph; a
+      cited section (`PERMANENT-SKIP:` line or receipt) resolves to an anchor
+      in that list, and an unresolved citation fails the script.
 - [ ] Tag counting reuses the JSDoc parsing the lint rules use, not a fresh
       regex, so a tag named in prose is not counted.
-- [ ] `files[]` has one row per Rails file api-compare pairs, with `tsFile`
-      `null` for an unported file, methods matched / missing, tests matched /
-      total.
-- [ ] The `Stage parity outputs` step copies `package-summary.json` and the
-      per-file api-comparison JSON into the artifact.
+- [ ] The `Stage parity outputs` step copies `package-summary.json` into the
+      artifact.
 - [ ] A unit test over a fixture tree pins each count.
 
 ## Verification

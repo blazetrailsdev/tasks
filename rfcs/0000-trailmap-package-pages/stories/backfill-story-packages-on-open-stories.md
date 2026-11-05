@@ -27,6 +27,13 @@ so this is a prose edit in the tasks repo.
 
 - [ ] Every open story `Story.unattributed()` returns gets a `packages:` list
       read off its body's file citations; a story that touches no package
-      gets `packages: [scripts]` or the repo it targets, not an invented one.
-- [ ] `/packages` shows 0 unattributed open stories after ingest.
+      follows this rule: a trails story lists the packages whose files it
+      cites; a story on trails' root tooling (`scripts/`, `.github/`, `eslint/`)
+      lists `scripts`, the workspace package those live in; a trailmap or
+      tasks story lists the trails packages it exercises, as RFC 0200's
+      stories do (`packages: [actionview]`); a story none of these fit keeps
+      `packages: []` and the PR body names it with a reason.
+- [ ] `Story.unattributed()` returns only the stories the PR body names, at
+      the commit the backfill merges; `validate-warns-on-unattributed-story`
+      keeps it there.
 - [ ] Docs-only: no code change.

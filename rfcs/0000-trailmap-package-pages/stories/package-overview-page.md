@@ -22,7 +22,9 @@ The RFC's "Pages" section. Tiles and sparklines reuse `parity-graphs/_cards`
 privates / tests / assertions from the existing compare tables; params and
 predicates from `package_mark_stats` (`emit-package-summary-json`). Ranking for "Start here" is
 `app/models/concerns/ranking.ts`, the same order `tasks next-bundle` uses.
-17 of 46 trails packages have a `packages/<pkg>/CLAUDE.md`.
+17 of 46 trails packages have a `packages/<pkg>/CLAUDE.md`;
+`package_meta.claude_md` says which, and `description` / `rails_counterpart`
+come from the same row.
 
 ## Acceptance criteria
 
