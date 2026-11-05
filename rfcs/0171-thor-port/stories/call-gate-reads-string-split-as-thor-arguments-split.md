@@ -1,7 +1,7 @@
 ---
 title: "call-gate-reads-string-split-as-thor-arguments-split"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-11-05
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9739
+claim: "2026-11-05T14:06:37Z"
+assignee: "mail-delivery-methods-specs-remainder"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Move app:template onto railties' framework.rake task over Thor's apply"
-status: in-progress
+status: done
 updated: 2026-11-05
 rfc: "0171-thor-port"
 cluster: null

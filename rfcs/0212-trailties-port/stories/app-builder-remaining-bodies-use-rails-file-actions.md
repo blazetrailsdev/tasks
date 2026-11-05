@@ -1,6 +1,6 @@
 ---
 title: "app-builder-remaining-bodies-use-rails-file-actions"
-status: in-progress
+status: done
 updated: 2026-11-05
 rfc: "0212-trailties-port"
 cluster: null

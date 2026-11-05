@@ -1,7 +1,7 @@
 ---
 title: "app-update-command-and-api-public-files-test"
 status: ready
-updated: 2026-11-04
+updated: 2026-11-05
 rfc: "0171-thor-port"
 cluster: null
 packages: []

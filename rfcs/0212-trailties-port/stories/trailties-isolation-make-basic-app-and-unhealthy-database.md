@@ -1,7 +1,7 @@
 ---
 title: "trailties-isolation-make-basic-app-and-unhealthy-database"
 status: ready
-updated: 2026-11-01
+updated: 2026-11-05
 rfc: "0212-trailties-port"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "console-sandbox-rollback-and-irb-helpers"
 status: ready
-updated: 2026-11-01
+updated: 2026-11-05
 rfc: "0171-thor-port"
 cluster: null
 packages: []

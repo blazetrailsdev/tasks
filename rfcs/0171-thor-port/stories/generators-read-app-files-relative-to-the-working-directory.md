@@ -1,7 +1,7 @@
 ---
 title: "generators-read-app-files-relative-to-the-working-directory"
-status: ready
-updated: 2026-10-29
+status: in-progress
+updated: 2026-11-05
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9740
+claim: "2026-11-05T14:36:30Z"
+assignee: "mail-field-seats-declared-per-class"
 blocked-by: null
 closed-reason: null
 ---
