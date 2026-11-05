@@ -27,7 +27,7 @@ trails' `generate` (`packages/trailties/src/generators/actions.ts`) instead push
 `pendingGenerators`, consumed by `commands/app.ts` and
 `generators/rails/authentication/authentication-generator.ts#runPendingGenerators`. `rails_command`
 is unported; there is no ruby-compat `Shellwords.split` for its inline arm.
-`afterInstall` / `afterInstallCallbacks` live in the same file but belong to `app_base.rb`.
+`afterInstall` / `afterInstallCallbacks` live in the same file; Rails has no `after_install` at all.
 
 Also: `execute_command` now runs `bin/<executor>` as Rails does, so the authentication generator's
 `executeCommand("pnpm", "install --silent")` runs `bin/pnpm`; Rails' analogue is `execute_command :bundle`
