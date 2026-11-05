@@ -24,7 +24,7 @@ export const MAX_LINES = 2000;
 // story's `est-loc` is a historical estimate, not a claim about tomorrow's PR:
 // `strip-freeform-comments-ar-remaining-dirs` shipped as one deliberate 9000
 // LOC sweep (PR #7195) and the ceiling has nothing left to say about it.
-export const MAX_EST_LOC = 700;
+export const MAX_EST_LOC = 800;
 
 // An RFC may lift that ceiling for its own stories with `max-est-loc: N` in its
 // README frontmatter. It is an owner decision recorded where the stories live,
