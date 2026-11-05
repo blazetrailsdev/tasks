@@ -53,7 +53,7 @@ A trails-only arm converges by deletion or by its owning story, not by a bare pa
 
 ## Acceptance criteria
 
-- [ ] Each listed call passes Rails' bare path; no `File.join(this.destinationRoot, …)` remains
+- [ ] The credentials (`credentials_generator.rb:16,34-39`) and encrypted_file (`encrypted_file_generator.rb:10-15`) calls pass Rails' bare path. The devcontainer (`devcontainer_generator.rb:49`) and db:system:change (`change_generator.rb:49,190,199`) rows are already faithful: Rails builds those paths with `File.expand_path(…, destination_root)`, not bare; no `File.join(this.destinationRoot, …)` remains
       where Rails reads a relative path.
 - [ ] Their tests run inside the destination (`Dir.chdir` in `beforeEach`/`afterEach`), as the
       key-file generator tests do.

@@ -36,5 +36,5 @@ against `bin/bundle`. Decide the trails executor (a `bin/` script or `pnpm` dire
 ## Acceptance criteria
 
 - [ ] `generate` and `railsCommand` mirror Rails' bodies; `pendingGenerators` is gone and its two consumers go through `railsCommand`.
-- [ ] `afterInstall` moves to the file mirroring `app_base.rb`.
-- [ ] The authentication generator's install step runs a command that exists in a generated app.
+- [ ] `afterInstall` / `afterInstallCallbacks` are deleted: Rails 8.0.2 defines no `after_install` anywhere in `railties/lib` (only `AppGenerator#after_bundle`, `rails/app/app_generator.rb:602`), and nothing in trails calls them.
+- [ ] The authentication generator's install step runs a command that exists in a generated app (`pnpm install`). Routing it through `execute_command` is split out to `authentication-enable-bcrypt-through-execute-command`.
