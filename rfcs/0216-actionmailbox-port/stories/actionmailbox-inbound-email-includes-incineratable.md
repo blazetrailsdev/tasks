@@ -5,7 +5,8 @@ updated: 2026-11-06
 rfc: "0216-actionmailbox-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - actionmailbox-incineration-and-inbound-email-tests
 deps-rfc: []
 est-loc: 5
 priority: null
