@@ -1,6 +1,6 @@
 ---
 title: "stubAnyInstance intercepts new Klass and awaits its block"
-status: draft
+status: closed
 updated: 2026-11-06
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: duplicate of stub-any-instance-does-not-intercept-js-new"
 ---
 
 ## Context

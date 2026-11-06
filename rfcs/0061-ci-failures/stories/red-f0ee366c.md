@@ -1,6 +1,6 @@
 ---
 title: "Lint (rails-and-scripts) failing on main @f0ee366c"
-status: ready
+status: done
 updated: 2026-11-06
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: trails#9765
+claim: "2026-11-06T01:45:46Z"
+assignee: "red-f0ee366c"
 blocked-by: null
 closed-reason: null
 ---

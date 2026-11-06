@@ -1,7 +1,7 @@
 ---
 title: "Exclude colocated tests from every package's published build"
-status: in-progress
-updated: 2026-11-05
+status: done
+updated: 2026-11-06
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: layout-tooling
 packages: [scripts]

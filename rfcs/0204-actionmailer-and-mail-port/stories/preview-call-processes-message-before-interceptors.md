@@ -1,6 +1,6 @@
 ---
 title: "Preview.call awaits the processed message before preview interceptors"
-status: draft
+status: closed
 updated: 2026-11-06
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: duplicate of preview-call-awaits-message-delivery-before-interceptors"
 ---
 
 ## Context

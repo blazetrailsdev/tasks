@@ -1,7 +1,7 @@
 ---
 title: "AbstractController.action_methods returns a Set"
-status: in-progress
-updated: 2026-11-05
+status: done
+updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

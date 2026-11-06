@@ -1,7 +1,7 @@
 ---
 title: "mail-message-yaml"
-status: ready
-updated: 2026-11-03
+status: claimed
+updated: 2026-11-06
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
 packages: [mail]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-06T01:57:03Z"
+assignee: "mail-header-field-specs-and-content-field-rows"
 blocked-by: null
 closed-reason: null
 ---
