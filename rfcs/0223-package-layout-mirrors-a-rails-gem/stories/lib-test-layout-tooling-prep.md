@@ -28,9 +28,10 @@ The RFC README's "Inventory" section lists every assumption (124 files in
 ## Acceptance criteria
 
 - [ ] One helper (e.g. `scripts/layout/package-roots.ts`) answers, per package,
-      its library root (`src` or `lib`) and test roots (`src` or `test`); every
-      inventoried script, eslint rule, config and CI step reads it or a glob
-      covering both layouts. No output changes on main today.
+      its library root (`src` or `lib`) and test roots (`src` or `test`);
+      api-compare's `packageSrcDir`, `walkPackageTsFiles` and test-compare's
+      `getPackageTestFiles` read it. No output changes on main today. The rest
+      of the inventory is `lib-test-layout-tooling-inventory-rest`.
 - [ ] `scripts/layout/plan-test-moves.ts <pkg> [--apply]` prints and applies
       the `old → new` table by the RFC's "Where a test lands" rules, using the
       test-compare manifest; covered by a unit test on a fixture package.
@@ -40,7 +41,8 @@ The RFC README's "Inventory" section lists every assumption (124 files in
 - [ ] `scripts/layout/server-path-closure.ts` walks each package's built
       `dist/` import graph from `.` and every non-testing export and fails on a
       testing module, a vitest import or a `test/` path; runs in CI with an
-      only-shrink list of today's violations, one story filed per violation.
-- [ ] A throwaway local move of a small package (not committed) shows
-      `pnpm parity:api`, `parity:test`, all ratchet gates, lint and
-      `ci-suite-coverage` unchanged.
+      only-shrink list of today's violations, each row naming the story filed
+      for its root import edge.
+- The throwaway-move verification moved to
+  `lib-test-layout-tooling-inventory-rest`, since it needs the whole inventory
+  wired (scope split on trails#9785, 2026-11-06).
