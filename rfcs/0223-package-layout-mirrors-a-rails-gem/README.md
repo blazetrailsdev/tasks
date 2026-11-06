@@ -186,15 +186,25 @@ package PR is that script's output plus the rewrites below.
 
 ### What a package PR does (mechanical only)
 
-1. `git mv packages/<pkg>/src packages/<pkg>/lib`, in its own commit, so
-   rename detection is 100%.
-2. `plan-test-moves --apply`, in a second commit.
-3. Path rewrites, in a third: relative imports in moved tests and in `lib/`
-   files that imported a moved helper; the package's `tsconfig.json`,
-   new `tsconfig.test.json`, `package.json` scripts/`bin`/`files` that name
-   `src`; every repo-wide reference enumerated by
-   `scripts/layout/src-references.ts <pkg>` (tooling-prep), which must print
-   nothing afterwards.
+1. `git mv packages/<pkg>/src packages/<pkg>/lib`, plus the package
+   `tsconfig.json` `rootDir`/`include` and every `eslint.config.mjs` /
+   `eslint/*.mjs` `files` glob naming `packages/<pkg>/src`, in one commit.
+   The pre-commit hook runs type-aware ESLint over every staged file, and a
+   `lib/` file no tsconfig includes fails to parse, so a bare `git mv` cannot
+   be committed (`--no-verify` is forbidden). Renames stay 100%.
+2. `plan-test-moves <pkg> --apply`, plus the moved tests' relative import
+   specifiers and the final `tsconfig.json` / `tsconfig.test.json`, in a
+   second commit. With a moved test's imports unresolved, the hook's
+   `eslint --fix` (`no-unnecessary-type-assertion`) strips casts it cannot
+   type, so the specifiers ride with the move. The commit's content diff is
+   specifiers and tsconfig only.
+3. Repo-wide path rewrites, in a third: test path strings (`new URL(...)`,
+   `vi.doMock(...)`), `package.json` scripts/`bin`/`files` that name `src`,
+   and every reference `scripts/layout/src-references.ts <pkg>` enumerates,
+   which must print nothing afterwards. A mark file keyed by path (e.g.
+   `scripts/parity/import-cycles-mark.json`) is re-keyed here: its rows move
+   from `src/` to `lib/` with every count unchanged. That is a path rewrite,
+   not a mark edit.
 4. No behaviour change, no test rename (test names are parity keys), no
    content edit beyond import specifiers and path strings.
 

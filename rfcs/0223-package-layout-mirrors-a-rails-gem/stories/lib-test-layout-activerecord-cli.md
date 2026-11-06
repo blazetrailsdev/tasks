@@ -24,9 +24,10 @@ test lands".
 
 ## Acceptance criteria
 
-- [ ] Commit 1 is `git mv packages/activerecord-cli/src packages/activerecord-cli/lib` alone; commit 2 is
-      `scripts/layout/plan-test-moves.ts activerecord-cli --apply`; commit 3 holds only
-      import-specifier and path-string rewrites.
+- [ ] Commits follow the RFC's "What a package PR does": commit 1 is
+      `git mv packages/activerecord-cli/src packages/activerecord-cli/lib` with the package tsconfig
+      and ESLint globs; commit 2 is `plan-test-moves activerecord-cli --apply` with the
+      moved tests' import specifiers; commit 3 holds only path-string rewrites.
 - [ ] No `*.test.ts`, `*.trails.test.ts` or test-only helper remains under
       `packages/activerecord-cli/lib/`; `packages/activerecord-cli/src/` no longer exists.
 - [ ] `tsconfig.json` is `rootDir lib`, `include lib` with no test exclude;
@@ -34,7 +35,8 @@ test lands".
       `package.json` `exports` are unchanged.
 - [ ] `scripts/layout/src-references.ts activerecord-cli` prints nothing.
 - [ ] `pnpm parity:api` and `pnpm parity:test` deltas for activerecord-cli are exactly 0
-      (matched and total); every ratchet gate is green with no mark edit.
+      (matched and total); every ratchet gate is green with no mark count change
+      (a path-keyed mark row is re-keyed `src/` → `lib/` only).
 - [ ] Shipped testing modules stay in `lib/` behind their testing exports;
       `scripts/layout/server-path-closure.ts` adds no violation for this package.
 - [ ] `git log --follow` reaches pre-move history for a sampled moved test.
