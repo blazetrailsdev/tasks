@@ -5,7 +5,8 @@ updated: 2026-11-06
 rfc: "0171-thor-port"
 cluster: null
 packages: [scripts]
-deps: []
+deps:
+  - ruby-manifest-extracts-cross-gem-rails-generators
 deps-rfc: []
 est-loc: 120
 priority: null
