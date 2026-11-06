@@ -40,5 +40,3 @@ the first prototype-chain conversion of an instance-level dispatch.
 - [ ] Wherever a caller needed `then` hidden (an `await` or `Promise.resolve`
       must not adopt the object), a test awaits the value and gets the object
       itself back.
-- [ ] This site's row in the `no-returned-proxy-lint-gate` list is deleted,
-      and `stripThenable` leaves the rule's helper list.

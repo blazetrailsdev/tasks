@@ -49,5 +49,4 @@ the first prototype-chain conversion of an instance-level dispatch.
 - [ ] Identity holds: `x instanceof Klass` and
       `Object.getPrototypeOf(x) === Klass.prototype` are both true.
 - [ ] The row in `docs/method-missing-definers.md` (if any) reads
-      `Proxy (proto chain)`, and this site's row in the
-      `no-returned-proxy-lint-gate` list is deleted.
+      `Proxy (proto chain)`.

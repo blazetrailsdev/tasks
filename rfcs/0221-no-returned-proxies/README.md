@@ -41,7 +41,8 @@ installs the handler in the prototype chain and returns nothing:
 other wraps an object and hands the wrapper back to the caller: a constructor
 ending in `return new Proxy(this, …)`, or a factory returning
 `new Proxy(target, …)`. This RFC retires the second shape. Every site that
-returns a Proxy gets one story, and a lint gate stops new ones.
+returns a Proxy gets one story, and once they have all landed a lint rule
+keeps the count at zero.
 
 ## Motivation
 
@@ -92,12 +93,12 @@ used as a cross-check. 37 return the Proxy to a caller, and each has a story:
 | `constructor-returned` | `return new Proxy(this, …)` in a constructor (or allocator)                        | 21      |
 | `delegator`            | `return methodMissingProxy(this, …)`, plus retiring the helper                     | 5       |
 | `factory-returned`     | a function or exported `const` whose value is a `new Proxy(…)` over another object | 11      |
-| `gate`                 | the lint rule                                                                      | 1       |
+| `gate`                 | the lint rule, last                                                                | 1       |
 
 Two files with two sites share a story (`mime-type.ts`, `time-with-zone.ts`).
 `delegate.ts` has three. Sizes come from each handler's length (2–38 lines)
 plus a subclass test: 40 for a handler under ~15 lines, 60 to ~30, 100 above
-that or with several call sites. The 38 stories total about 2,180 lines, and
+that or with several call sites. The 38 stories total about 2,140 lines, and
 none exceeds 120. Each story's `## Context` names the trails `file:line`
 and the Rails or gem `file:line` it mirrors.
 
@@ -145,11 +146,17 @@ the non-Proxy shape that Rails or Ruby uses instead.
 
 ### The gate
 
-`no-returned-proxy-lint-gate` lands first. It enrolls today's sites in an
-only-shrink list, one row per story, so no new returned Proxy can appear while
-the burndown runs. Each story deletes its row. The gate is not a deviation
-register for new work: CLAUDE.md, "A documented deviation is debt, not
-permission".
+`no-returned-proxy-lint-gate` lands **last**. It depends on every conversion
+story, so the rule is born reporting zero sites and has no enrollment list,
+baseline or exemption mechanism: from the day it lands, a returned Proxy in
+`packages/*/src` is an error. Leading with an only-shrink list would have
+given the burndown a register of sanctioned rows to live in; ending with the
+rule means it only ever states the finished invariant (CLAUDE.md, "A
+documented deviation is debt, not permission").
+
+While the burndown runs, review holds the line: a new returned Proxy is
+converged in its own PR or filed as a sibling story in this RFC and added to
+the gate's `deps`.
 
 ## Relationship to the ahead-of-time compile RFC
 
@@ -192,26 +199,24 @@ on Node too, for the identity and fidelity reasons above.
 
 ## Rollout
 
-1. **Gate:** `no-returned-proxy-lint-gate`, so the count can only fall.
-   Every other story lists it in `deps`, so the ready queue cannot offer a
-   conversion before the gate exists.
-2. **The live defect and the subclass-heavy bases first:**
+1. **The live defect and the subclass-heavy bases first:**
    `string-inquirer-method-missing-in-prototype-chain`,
    `ordered-options-method-missing-in-prototype-chain`,
    `ruby-compat-delegator-delegates-through-prototype-chain`,
    `i18n-subtree-proxy-without-a-returned-proxy`.
-3. **Remaining `constructor-returned` and `delegator` stories**, in any
+2. **Remaining `constructor-returned` and `delegator` stories**, in any
    order; then `retire-method-missing-proxy-helper`, which depends on the
    four delegator stories.
-4. **`factory-returned` stories**, in any order. The five non-dispatch
+3. **`factory-returned` stories**, in any order. The five non-dispatch
    stories (`database-configuration-…`, `errors-empty-array-…`,
    `psych-adapter-yaml-…`, `strip-thenable-…`, `rb-f-binding-…`) do not
-   depend on the prototype-chain form and can run alongside phase 2.
+   depend on the prototype-chain form and can run alongside phase 1.
+4. **Gate:** `no-returned-proxy-lint-gate`, which depends on every story
+   above and lands with nothing to report.
 
 ## Verification
 
-- The gate's enrollment list reaches **0 rows** (37 at birth) and is deleted
-  with its last story.
+- The lint rule lands with no enrollment list and reports zero sites.
 - `git grep -nE "return new Proxy\(|return methodMissingProxy\(" packages/*/src`
   outside tests answers nothing.
 - Every `Proxy` row in `docs/method-missing-definers.md` reads
@@ -221,8 +226,8 @@ on Node too, for the identity and fidelity reasons above.
 
 1. **Do the five non-dispatch factory stories belong here?** They return a
    Proxy, so they meet the RFC's rule, but none is `method_missing`.
-   Recommendation: keep them, since the gate would otherwise need permanent
-   rows for them. Resolve before `status: active`.
+   Recommendation: keep them, since the gate could not otherwise land with
+   zero sites. Resolve before `status: active`.
 2. **Where does the frozen-write `FrozenError` for a native Array come from**
    (`errors-empty-array-without-a-proxy`)? If the repo has no convention, that
    story converges on a frozen array raising JS `TypeError` and records the
@@ -230,6 +235,8 @@ on Node too, for the identity and fidelity reasons above.
 
 ## Changelog
 
+- 2026-11-06: the lint rule lands last, with no enrollment list; conversion
+  stories no longer depend on it (owner ruling).
 - 2026-11-04: review: every story depends on the gate; the gate covers
   helper returns; explicit-member and non-dispatch stories get their own
   criteria.

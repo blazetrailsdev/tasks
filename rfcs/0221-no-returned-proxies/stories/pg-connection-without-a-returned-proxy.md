@@ -43,5 +43,3 @@ the first prototype-chain conversion of an instance-level dispatch.
       reaches; the PR lists the converted call sites.
 - [ ] A test declares a subclass with a `#private` field, constructs it, and
       reads the field, and the ported members are tested.
-- [ ] This site's row in the `no-returned-proxy-lint-gate` list is deleted.
-- [ ] `pgConnection` leaves the `no-returned-proxy-lint-gate` rule's helper list.

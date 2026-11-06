@@ -37,4 +37,3 @@ the first prototype-chain conversion of an instance-level dispatch.
       with existing tests passing unchanged.
 - [ ] A test pins the behaviour the Proxy existed for (the default, the
       raise, the deferral, the hidden member) on the new shape.
-- [ ] This site's row in the `no-returned-proxy-lint-gate` list is deleted.

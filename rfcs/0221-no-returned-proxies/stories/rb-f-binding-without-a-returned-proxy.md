@@ -42,5 +42,3 @@ the first prototype-chain conversion of an instance-level dispatch.
       constant seated on `TopLevel` resolves.
 - [ ] A name that is both a member of `self` and a top-level constant resolves
       to the member, as `key in target` did before.
-- [ ] This site's row in the `no-returned-proxy-lint-gate` list is deleted,
-      and `rbFBinding` leaves the rule's helper list.
