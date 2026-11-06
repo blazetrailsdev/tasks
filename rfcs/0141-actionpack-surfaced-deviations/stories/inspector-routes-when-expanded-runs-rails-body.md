@@ -1,6 +1,6 @@
 ---
 title: "inspector 'routes when expanded' runs the Rails body with Source Location rows"
-status: claimed
+status: ready
 updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: "2026-11-06T15:47:08Z"
-assignee: "action-controller-test-request-create-drops-the-env-config-merge"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

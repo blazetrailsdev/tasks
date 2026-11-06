@@ -1,7 +1,7 @@
 ---
 title: "trails server wraps the application in a lambda because RackApp is function-only"
-status: draft
-updated: 2026-09-30
+status: ready
+updated: 2026-11-06
 rfc: "0171-thor-port"
 cluster: null
 packages: []

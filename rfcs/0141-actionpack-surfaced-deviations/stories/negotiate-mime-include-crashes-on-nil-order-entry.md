@@ -1,6 +1,6 @@
 ---
 title: "negotiate_mime's order.include? crashes on a nil Mime[mime] entry"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

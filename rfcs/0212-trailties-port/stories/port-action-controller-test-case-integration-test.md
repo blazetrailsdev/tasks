@@ -1,7 +1,7 @@
 ---
 title: "Port ActionControllerTestCaseIntegrationTest (executor around each controller test request)"
-status: draft
-updated: 2026-10-02
+status: claimed
+updated: 2026-11-06
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 160
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-06T16:17:50Z"
+assignee: "test-helper-constant-row-loads-without-test-case"
 blocked-by: null
 closed-reason: null
 ---

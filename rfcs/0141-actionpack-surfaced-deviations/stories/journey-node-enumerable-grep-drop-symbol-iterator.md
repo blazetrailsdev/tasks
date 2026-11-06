@@ -1,6 +1,6 @@
 ---
 title: "Journey: offsets and build_followpos iterate a Node through Symbol.iterator, not find_all / each"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

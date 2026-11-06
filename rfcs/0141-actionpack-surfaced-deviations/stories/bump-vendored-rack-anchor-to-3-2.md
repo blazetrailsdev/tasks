@@ -1,6 +1,6 @@
 ---
 title: "rack: bump the vendored Rack anchor from 3.1.14 to 3.2 and re-baseline"
-status: claimed
+status: ready
 updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: "2026-11-06T15:47:08Z"
-assignee: "action-controller-test-request-create-drops-the-env-config-merge"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

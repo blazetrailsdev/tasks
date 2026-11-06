@@ -1,7 +1,7 @@
 ---
 title: "Pilot: move ruby-compat to lib/ + test/"
-status: ready
-updated: 2026-11-05
+status: claimed
+updated: 2026-11-06
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: layout-migration
 packages: [ruby-compat]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-06T16:21:35Z"
+assignee: "lib-test-layout-ruby-compat"
 blocked-by: null
 ---
 

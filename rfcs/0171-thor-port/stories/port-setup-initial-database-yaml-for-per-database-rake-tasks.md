@@ -1,7 +1,7 @@
 ---
 title: "port-setup-initial-database-yaml-for-per-database-rake-tasks"
-status: draft
-updated: 2026-11-05
+status: ready
+updated: 2026-11-06
 rfc: "0171-thor-port"
 cluster: null
 packages: []

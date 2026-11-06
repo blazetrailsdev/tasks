@@ -1,7 +1,7 @@
 ---
 title: "I18n KeyValue's SubtreeProxy answers `[]` without a returned Proxy"
-status: ready
-updated: 2026-11-05
+status: claimed
+updated: 2026-11-06
 rfc: "0221-no-returned-proxies"
 cluster: constructor-returned
 packages: ["i18n"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-06T16:42:09Z"
+assignee: "app-generator-action-methods-method-missing-in-prototype-chain"
 blocked-by: null
 ---
 

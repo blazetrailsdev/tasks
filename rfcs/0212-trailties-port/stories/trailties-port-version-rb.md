@@ -1,7 +1,7 @@
 ---
 title: "trailties: port Rails.version and drop its version.rb exclusion row"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-11-06
 rfc: "0212-trailties-port"
 cluster: null
 packages: ["trailties"]

@@ -1,7 +1,7 @@
 ---
 title: "Reconcile isolation Rack#app (async) with rack-test Methods' app read"
-status: draft
-updated: 2026-11-05
+status: ready
+updated: 2026-11-06
 rfc: "0212-trailties-port"
 cluster: null
 packages: []

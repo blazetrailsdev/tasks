@@ -1,6 +1,6 @@
 ---
 title: "Request#format is a getter while MimeNegotiation#format takes Rails' optional _view_path"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

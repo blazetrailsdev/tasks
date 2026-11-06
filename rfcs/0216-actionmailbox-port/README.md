@@ -15,6 +15,7 @@ clusters:
   - amb-ingress
   - amb-engine
   - amb-ingress-deferred
+priority: 4
 ---
 
 # RFC 0216 — Port ActionMailbox, core and the Relay ingress first

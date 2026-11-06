@@ -1,7 +1,7 @@
 ---
 title: "Rails::Command.with_argv uses Array#replace (rbAryReplace) and ARGV.dup"
-status: draft
-updated: 2026-11-05
+status: claimed
+updated: 2026-11-06
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 10
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-06T16:17:50Z"
+assignee: "test-helper-constant-row-loads-without-test-case"
 blocked-by: null
 closed-reason: null
 ---

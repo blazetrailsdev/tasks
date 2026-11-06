@@ -1,7 +1,7 @@
 ---
 title: "trailties-server-command-ports-server-and-server-command-classes"
-status: draft
-updated: 2026-10-23
+status: ready
+updated: 2026-11-06
 rfc: "0171-thor-port"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "class-paths pairs same-named generators across Rails/TestUnit/ActiveRecord namespaces"
-status: draft
-updated: 2026-11-05
+status: ready
+updated: 2026-11-06
 rfc: "0171-thor-port"
 cluster: null
 packages: [scripts]

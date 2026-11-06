@@ -1,7 +1,7 @@
 ---
 title: "PluginBuilder#testDummyClean passes its block in inside()'s config slot"
-status: draft
-updated: 2026-11-05
+status: claimed
+updated: 2026-11-06
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-06T16:17:50Z"
+assignee: "test-helper-constant-row-loads-without-test-case"
 blocked-by: null
 closed-reason: null
 ---

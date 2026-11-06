@@ -1,7 +1,7 @@
 ---
 title: "ActiveModel::Errors' EMPTY_ARRAY raises FrozenError without a Proxy"
-status: ready
-updated: 2026-11-05
+status: blocked
+updated: 2026-11-06
 rfc: "0221-no-returned-proxies"
 cluster: factory-returned
 packages: ["activemodel"]
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-06T16:42:09Z"
+assignee: "app-generator-action-methods-method-missing-in-prototype-chain"
+blocked-by: "Owner decision: no ruby-compat frozen-native-Array convention exists; without a Proxy, errors.test.ts:500-511/684-695 assert FrozenError on .push and .length=0 of a frozen [], which V8 can only raise as TypeError. Needs a ruling (e.g. FrozenError Symbol.hasInstance over frozen-array TypeError, or a PERMANENT arm)."
 ---
 
 ## Context

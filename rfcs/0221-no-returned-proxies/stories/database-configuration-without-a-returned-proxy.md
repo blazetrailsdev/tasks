@@ -1,7 +1,7 @@
 ---
 title: "databaseConfiguration answers a missing env with `shared` without a Proxy"
-status: ready
-updated: 2026-11-05
+status: blocked
+updated: 2026-11-06
 rfc: "0221-no-returned-proxies"
 cluster: factory-returned
 packages: ["trailties"]
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Needs ActiveRecord DatabaseConfigurations (database-configurations.ts isHash/Object.entries) to accept a ruby-compat Hash with a default before databaseConfiguration (trailties/src/database.ts:135) can return Hash.new(shared).merge(yaml) (railties configuration.rb:457); callers and database.test.ts read it as a plain object."
 ---
 
 ## Context
