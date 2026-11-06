@@ -1,7 +1,7 @@
 ---
 title: "Integration::Session default_url_options is an instance field, not UrlFor's class_attribute"
-status: ready
-updated: 2026-10-19
+status: claimed
+updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-06T04:47:24Z"
+assignee: "mail-message-spec-port-remaining"
 blocked-by: null
 closed-reason: null
 ---

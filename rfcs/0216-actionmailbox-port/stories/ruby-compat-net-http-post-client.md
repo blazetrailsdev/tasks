@@ -1,6 +1,6 @@
 ---
 title: "Port the Net::HTTP client surface ActionMailbox::Relayer calls"
-status: ready
+status: in-progress
 updated: 2026-11-06
 rfc: "0216-actionmailbox-port"
 cluster: amb-infra
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#9775
+claim: "2026-11-06T04:17:07Z"
+assignee: "actionmailbox-package-and-parity-enrollment"
 blocked-by: null
 closed-reason: null
 ---

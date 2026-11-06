@@ -1,6 +1,6 @@
 ---
 title: "AbstractController::Collector#method_missing re-sends the name it was given, with no underscore or camelize in the body"
-status: ready
+status: claimed
 updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-06T04:47:24Z"
+assignee: "mail-message-spec-port-remaining"
 blocked-by: null
 closed-reason: null
 ---

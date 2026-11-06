@@ -1,6 +1,6 @@
 ---
 title: "mail-message-spec-port-remaining"
-status: ready
+status: claimed
 updated: 2026-11-06
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-06T04:47:24Z"
+assignee: "mail-message-spec-port-remaining"
 blocked-by: null
 closed-reason: null
 ---
