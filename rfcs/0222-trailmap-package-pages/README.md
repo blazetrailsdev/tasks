@@ -1,9 +1,9 @@
 ---
 rfc: "0222-trailmap-package-pages"
 title: "trailmap: per-package pages for newcomers who know Rails but not trails"
-status: active
+status: closed
 created: 2026-11-05
-updated: 2026-11-05
+updated: 2026-11-06
 owner: "@deanmarano"
 packages:
   - actionpack

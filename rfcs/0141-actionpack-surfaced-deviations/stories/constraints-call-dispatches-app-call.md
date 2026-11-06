@@ -1,6 +1,6 @@
 ---
 title: "Constraints::CALL dispatches app.call through an invented callableOf helper"
-status: claimed
+status: done
 updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: trails#9782
 claim: "2026-11-06T13:47:07Z"
 assignee: "mail-raw-source-stays-bytes-through-header-and-field"
 blocked-by: null

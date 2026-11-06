@@ -1,6 +1,6 @@
 ---
 title: "Port ActionMailbox::Relayer and its test"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0216-actionmailbox-port"
 cluster: amb-ingress

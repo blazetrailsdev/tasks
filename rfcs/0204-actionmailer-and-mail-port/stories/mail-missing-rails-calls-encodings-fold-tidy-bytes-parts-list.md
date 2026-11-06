@@ -1,6 +1,6 @@
 ---
 title: "mail: converge missing calls in Encodings.defined?, UnstructuredField#fold, Unicode.tidy_bytes, PartsList#initialize"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null

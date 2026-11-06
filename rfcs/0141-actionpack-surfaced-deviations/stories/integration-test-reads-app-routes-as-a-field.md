@@ -1,7 +1,7 @@
 ---
 title: "IntegrationTest#_routes reads app.routes as a field; Rails calls app.routes"
-status: ready
-updated: 2026-10-19
+status: claimed
+updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-06T14:17:07Z"
+assignee: "inspector-routes-when-expanded-runs-rails-body"
 blocked-by: null
 closed-reason: null
 ---

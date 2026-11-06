@@ -1,7 +1,7 @@
 ---
 title: "Request#format is a getter while MimeNegotiation#format takes Rails' optional _view_path"
-status: ready
-updated: 2026-07-27
+status: claimed
+updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages:
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-06T14:47:07Z"
+assignee: "mail-raw-source-stays-bytes-through-header-and-field"
 blocked-by: null
 closed-reason: null
 ---
