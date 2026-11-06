@@ -1,6 +1,6 @@
 ---
 title: "test-unit-railtie-line-filtering-and-rake-tasks"
-status: claimed
+status: in-progress
 updated: 2026-11-06
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#9790
 claim: "2026-11-06T16:47:07Z"
 assignee: "mail-raw-source-stays-bytes-through-header-and-field"
 blocked-by: null

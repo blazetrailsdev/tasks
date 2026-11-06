@@ -1,6 +1,6 @@
 ---
 title: "Port the fourteen request_forgery_protection form/token-tag tests now that TestCase answers assert_select"
-status: claimed
+status: in-progress
 updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#9790
 claim: "2026-11-06T16:47:07Z"
 assignee: "mail-raw-source-stays-bytes-through-header-and-field"
 blocked-by: null

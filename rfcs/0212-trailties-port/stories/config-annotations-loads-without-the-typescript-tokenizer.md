@@ -1,6 +1,6 @@
 ---
 title: "trailties: config.annotations answers Annotation under the production entry"
-status: ready
+status: in-progress
 updated: 2026-11-06
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9792
+claim: "2026-11-06T17:17:14Z"
+assignee: "config-annotations-loads-without-the-typescript-tokenizer"
 blocked-by: null
 closed-reason: null
 ---

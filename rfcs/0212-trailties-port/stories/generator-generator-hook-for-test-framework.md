@@ -1,6 +1,6 @@
 ---
 title: "GeneratorGenerator: directory + hook_for :test_framework"
-status: ready
+status: claimed
 updated: 2026-11-06
 rfc: "0212-trailties-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-06T17:47:08Z"
+assignee: "generator-generator-hook-for-test-framework"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "TestHelper's constant row is seated only once TestCase loads"
-status: claimed
+status: in-progress
 updated: 2026-11-06
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#9789
 claim: "2026-11-06T16:17:50Z"
 assignee: "test-helper-constant-row-loads-without-test-case"
 blocked-by: null

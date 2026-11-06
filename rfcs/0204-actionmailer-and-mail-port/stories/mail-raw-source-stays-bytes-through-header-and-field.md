@@ -1,6 +1,6 @@
 ---
 title: "Mail raw source stays bytes through Header and Field instead of a UTF-8 decode at the scan sites"
-status: claimed
+status: in-progress
 updated: 2026-11-06
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#9790
 claim: "2026-11-06T16:47:07Z"
 assignee: "mail-raw-source-stays-bytes-through-header-and-field"
 blocked-by: null

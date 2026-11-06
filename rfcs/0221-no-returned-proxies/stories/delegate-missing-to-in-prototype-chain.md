@@ -1,6 +1,6 @@
 ---
 title: "delegate_missing_to installs its method_missing in the owner's prototype chain"
-status: claimed
+status: ready
 updated: 2026-11-06
 rfc: "0221-no-returned-proxies"
 cluster: factory-returned
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 100
 priority: null
 pr: null
-claim: "2026-11-06T16:42:09Z"
-assignee: "app-generator-action-methods-method-missing-in-prototype-chain"
+claim: null
+assignee: null
 blocked-by: null
 ---
 

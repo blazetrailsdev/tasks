@@ -1,6 +1,6 @@
 ---
 title: "BroadcastLogger forwards to its broadcasts through the prototype chain"
-status: claimed
+status: in-progress
 updated: 2026-11-06
 rfc: "0221-no-returned-proxies"
 cluster: constructor-returned
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#9791
 claim: "2026-11-06T16:42:09Z"
 assignee: "app-generator-action-methods-method-missing-in-prototype-chain"
 blocked-by: null
