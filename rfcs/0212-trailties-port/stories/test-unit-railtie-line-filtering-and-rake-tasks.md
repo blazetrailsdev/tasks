@@ -1,6 +1,6 @@
 ---
 title: "test-unit-railtie-line-filtering-and-rake-tasks"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0212-trailties-port"
 cluster: null

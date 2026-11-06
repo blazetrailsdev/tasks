@@ -1,6 +1,6 @@
 ---
 title: "trailties-move-tests-remaining"
-status: claimed
+status: in-progress
 updated: 2026-11-06
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
+pr: trails#9798
 claim: "2026-11-06T19:47:38Z"
 assignee: "port-remaining-app-generator-tests"
 blocked-by: null

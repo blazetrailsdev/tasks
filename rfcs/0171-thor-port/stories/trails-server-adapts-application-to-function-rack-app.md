@@ -1,6 +1,6 @@
 ---
 title: "trails server wraps the application in a lambda because RackApp is function-only"
-status: claimed
+status: done
 updated: 2026-11-06
 rfc: "0171-thor-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#9798
 claim: "2026-11-06T19:47:38Z"
 assignee: "port-remaining-app-generator-tests"
 blocked-by: null

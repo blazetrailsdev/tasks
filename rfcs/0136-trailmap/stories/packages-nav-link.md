@@ -1,6 +1,6 @@
 ---
 title: "trailmap: link /packages from the top nav in both apps"
-status: draft
+status: ready
 updated: 2026-11-06
 rfc: "0136-trailmap"
 cluster: null

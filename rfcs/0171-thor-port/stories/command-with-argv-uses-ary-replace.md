@@ -1,6 +1,6 @@
 ---
 title: "Rails::Command.with_argv uses Array#replace (rbAryReplace) and ARGV.dup"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0171-thor-port"
 cluster: null

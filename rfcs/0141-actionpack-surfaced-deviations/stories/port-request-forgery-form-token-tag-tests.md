@@ -1,6 +1,6 @@
 ---
 title: "Port the fourteen request_forgery_protection form/token-tag tests now that TestCase answers assert_select"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

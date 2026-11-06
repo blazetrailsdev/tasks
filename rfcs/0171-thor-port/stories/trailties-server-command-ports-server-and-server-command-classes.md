@@ -1,6 +1,6 @@
 ---
 title: "trailties-server-command-ports-server-and-server-command-classes"
-status: ready
+status: done
 updated: 2026-11-06
 rfc: "0171-thor-port"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9727
+claim: "2026-11-06T20:47:37Z"
+assignee: "trailties-env-helpers-with-rails-env-and-rack-env"
 blocked-by: null
 closed-reason: null
 ---

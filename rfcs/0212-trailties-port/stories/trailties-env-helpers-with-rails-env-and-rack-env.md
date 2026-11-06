@@ -1,6 +1,6 @@
 ---
 title: "trailties-env-helpers-with-rails-env-and-rack-env"
-status: ready
+status: in-progress
 updated: 2026-11-06
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9802
+claim: "2026-11-06T20:47:37Z"
+assignee: "trailties-env-helpers-with-rails-env-and-rack-env"
 blocked-by: null
 closed-reason: null
 ---

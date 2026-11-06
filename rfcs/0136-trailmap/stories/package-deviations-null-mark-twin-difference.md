@@ -1,6 +1,6 @@
 ---
 title: "trailmap: /packages/:name/deviations renders a mark with null value, matched and total differently in trails and Rails"
-status: draft
+status: ready
 updated: 2026-11-06
 rfc: "0136-trailmap"
 cluster: null

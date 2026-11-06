@@ -1,6 +1,6 @@
 ---
 title: "Build trailmap test stats schema from the stats-sync migrations"
-status: draft
+status: ready
 updated: 2026-11-06
 rfc: "0136-trailmap"
 cluster: null

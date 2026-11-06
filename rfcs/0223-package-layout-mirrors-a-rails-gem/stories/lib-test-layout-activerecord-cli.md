@@ -1,7 +1,7 @@
 ---
 title: "Move activerecord-cli to lib/ + test/"
 status: ready
-updated: 2026-11-05
+updated: 2026-11-06
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: layout-migration
 packages: [activerecord-cli]

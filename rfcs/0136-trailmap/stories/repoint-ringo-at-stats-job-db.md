@@ -1,6 +1,6 @@
 ---
 title: "Repoint ringo's statsDBPath at stats-job.db before stats.db is retired"
-status: draft
+status: ready
 updated: 2026-11-06
 rfc: "0136-trailmap"
 cluster: null

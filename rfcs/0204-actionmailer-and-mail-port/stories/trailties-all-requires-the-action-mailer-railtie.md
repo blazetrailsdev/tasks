@@ -1,6 +1,6 @@
 ---
 title: "trailties/all requires action_mailer/railtie, which its loadPath table omits"
-status: draft
+status: in-progress
 updated: 2026-11-06
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9801
+claim: "2026-11-06T20:32:37Z"
+assignee: "trailties-all-requires-the-action-mailer-railtie"
 blocked-by: null
 closed-reason: null
 ---

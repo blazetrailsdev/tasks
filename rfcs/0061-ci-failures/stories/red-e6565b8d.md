@@ -1,6 +1,6 @@
 ---
 title: "Action Pack Tests failing on main @e6565b8d"
-status: ready
+status: closed
 updated: 2026-11-06
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-06T20:55:05Z"
+assignee: "red-e6565b8d"
 blocked-by: null
-closed-reason: null
+closed-reason: "Flake: StaticTest 'serves gzip files with not modified' got 200 vs 304 once on run 42289035910; commit e6565b8d touched no actionpack code; test passes 6/6 locally on e6565b8d; no fixture mutation found."
 ---
 
 ## Context

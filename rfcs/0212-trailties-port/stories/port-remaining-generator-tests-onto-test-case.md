@@ -1,7 +1,7 @@
 ---
 title: "port-remaining-generator-tests-onto-test-case"
-status: ready
-updated: 2026-11-03
+status: done
+updated: 2026-11-06
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 1500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9800
+claim: "2026-11-06T20:17:06Z"
+assignee: "port-remaining-generator-tests-onto-test-case"
 blocked-by: null
 closed-reason: null
 ---

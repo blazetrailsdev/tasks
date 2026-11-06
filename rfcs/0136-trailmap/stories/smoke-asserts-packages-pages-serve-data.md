@@ -1,6 +1,6 @@
 ---
 title: "smoke-prod tier 2 asserts /packages serves package data"
-status: draft
+status: ready
 updated: 2026-11-06
 rfc: "0136-trailmap"
 cluster: null

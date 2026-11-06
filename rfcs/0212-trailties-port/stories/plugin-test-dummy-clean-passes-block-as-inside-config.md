@@ -1,6 +1,6 @@
 ---
 title: "PluginBuilder#testDummyClean passes its block in inside()'s config slot"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0212-trailties-port"
 cluster: null
