@@ -1,6 +1,6 @@
 ---
 title: "Message#encoded decodes a Uint8Array body as latin1"
-status: draft
+status: ready
 updated: 2026-11-06
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null

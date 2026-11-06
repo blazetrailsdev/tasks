@@ -1,7 +1,7 @@
 ---
 title: "Assertion comparer folds helpers called through the test-class instance"
-status: ready
-updated: 2026-10-19
+status: in-progress
+updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9770
+claim: "2026-11-06T02:28:02Z"
+assignee: "ruby-compat-io-read-async-to-eof"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "mail-header-field-specs-and-content-field-rows"
-status: claimed
+status: in-progress
 updated: 2026-11-06
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#9767
 claim: "2026-11-06T01:57:03Z"
 assignee: "mail-header-field-specs-and-content-field-rows"
 blocked-by: null

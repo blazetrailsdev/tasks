@@ -1,7 +1,7 @@
 ---
 title: "test-case-constant-table-rows"
-status: ready
-updated: 2026-11-05
+status: claimed
+updated: 2026-11-06
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-06T02:57:10Z"
+assignee: "activejob-test-adapter-payload-bare-keys"
 blocked-by: null
 closed-reason: null
 ---

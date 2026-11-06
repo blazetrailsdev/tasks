@@ -1,7 +1,7 @@
 ---
 title: "trailmap: /packages lists every package grouped by Rails counterpart and trails-only"
-status: ready
-updated: 2026-11-05
+status: in-progress
+updated: 2026-11-06
 rfc: "0222-trailmap-package-pages"
 cluster: package-pages
 packages: [actionpack, actionview]
@@ -9,9 +9,9 @@ deps: [stats-sync-stores-package-summary-tables, story-touching-package-scope]
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#120
+claim: "2026-11-06T02:02:03Z"
+assignee: "packages-index-page"
 blocked-by: null
 ---
 

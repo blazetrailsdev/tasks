@@ -1,7 +1,7 @@
 ---
 title: "mail-message-parses-binary-raw-source"
-status: ready
-updated: 2026-11-04
+status: in-progress
+updated: 2026-11-06
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9768
+claim: "2026-11-06T02:07:05Z"
+assignee: "mail-message-parses-binary-raw-source"
 blocked-by: null
 closed-reason: null
 ---

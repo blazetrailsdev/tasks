@@ -1,7 +1,7 @@
 ---
 title: "preview-call-awaits-message-delivery-before-interceptors"
-status: ready
-updated: 2026-11-05
+status: done
+updated: 2026-11-06
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9760
 claim: null
 assignee: null
 blocked-by: null

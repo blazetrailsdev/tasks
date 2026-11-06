@@ -1,7 +1,7 @@
 ---
 title: "mail-message-equals-and-initialize-copy-dup"
-status: in-progress
-updated: 2026-11-05
+status: done
+updated: 2026-11-06
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
 packages: []

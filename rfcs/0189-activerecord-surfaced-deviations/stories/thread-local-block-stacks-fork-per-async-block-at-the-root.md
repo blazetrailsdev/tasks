@@ -1,7 +1,7 @@
 ---
 title: "activerecord/activesupport: thread-local block stacks fork per async block at the root, not in Encryption::Contexts"
-status: ready
-updated: 2026-11-05
+status: in-progress
+updated: 2026-11-06
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -12,9 +12,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#9769
+claim: "2026-11-06T02:17:06Z"
+assignee: "mail-smtp-tls-settings-and-null-sender-specs"
 blocked-by: null
 closed-reason: null
 ---
