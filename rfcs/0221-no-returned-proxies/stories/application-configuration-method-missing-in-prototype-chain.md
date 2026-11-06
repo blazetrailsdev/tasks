@@ -1,6 +1,6 @@
 ---
 title: "Application::Configuration's Custom answers config names through the prototype chain"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0221-no-returned-proxies"
 cluster: constructor-returned

@@ -1,6 +1,6 @@
 ---
 title: "GeneratorGenerator: directory + hook_for :test_framework"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0212-trailties-port"
 cluster: null

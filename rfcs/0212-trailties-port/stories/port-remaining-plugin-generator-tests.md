@@ -1,6 +1,6 @@
 ---
 title: "port-remaining-plugin-generator-tests"
-status: draft
+status: closed
 updated: 2026-11-06
 rfc: "0212-trailties-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: duplicates port-plugin-generator-test-onto-test-case, which stays open for the tests trails#9797 leaves unported"
 ---
 
 ## Context

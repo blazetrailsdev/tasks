@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat-optparse-initialize-banner-width-indent"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0171-thor-port"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "trailties: port FullStackConsoleTest 'app helper method'"
-status: claimed
+status: done
 updated: 2026-11-06
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: null
+pr: trails#9796
 claim: "2026-11-06T18:47:05Z"
 assignee: "port-full-stack-console-app-helper-method"
 blocked-by: null

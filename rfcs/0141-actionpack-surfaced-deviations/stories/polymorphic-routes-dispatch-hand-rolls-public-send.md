@@ -1,6 +1,6 @@
 ---
 title: "HelperMethodBuilder's handle_string/class/model_call hand-roll public_send"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

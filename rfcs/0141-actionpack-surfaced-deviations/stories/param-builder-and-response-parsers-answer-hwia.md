@@ -1,6 +1,6 @@
 ---
 title: "ParamBuilder#make_params answers a null-prototype object, not a HashWithIndifferentAccess"
-status: ready
+status: claimed
 updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-06T19:47:38Z"
+assignee: "port-remaining-app-generator-tests"
 blocked-by: null
 closed-reason: null
 ---

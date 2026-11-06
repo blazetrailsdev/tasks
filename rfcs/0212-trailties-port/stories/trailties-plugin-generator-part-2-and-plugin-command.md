@@ -1,7 +1,7 @@
 ---
 title: "Port PluginGenerator, part 2, and the plugin command"
-status: ready
-updated: 2026-10-30
+status: in-progress
+updated: 2026-11-06
 rfc: "0212-trailties-port"
 cluster: tt-surface
 packages: ["trailties"]
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9797
+claim: "2026-11-06T19:28:11Z"
+assignee: "port-plugin-generator-test-onto-test-case"
 blocked-by: null
 closed-reason: null
 ---

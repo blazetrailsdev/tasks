@@ -1,6 +1,6 @@
 ---
 title: "trailties: port the nine remaining Rails::DBConsoleTest cases"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0171-thor-port"
 cluster: null

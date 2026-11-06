@@ -1,6 +1,6 @@
 ---
 title: "ImageProcessing::Chainable builders answer operations through the prototype chain"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0221-no-returned-proxies"
 cluster: factory-returned
