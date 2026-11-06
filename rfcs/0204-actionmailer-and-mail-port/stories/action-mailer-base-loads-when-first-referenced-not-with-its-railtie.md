@@ -1,6 +1,6 @@
 ---
 title: "ActionMailer::Base loads when first referenced, not when its railtie is imported"
-status: draft
+status: in-progress
 updated: 2026-11-06
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9805
+claim: "2026-11-06T21:29:49Z"
+assignee: "action-mailer-base-loads-when-first-referenced-not-with-its-railtie"
 blocked-by: null
 closed-reason: null
 ---

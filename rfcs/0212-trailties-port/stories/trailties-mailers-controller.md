@@ -1,7 +1,7 @@
 ---
 title: "Port Rails::MailersController (mailer previews)"
-status: ready
-updated: 2026-11-03
+status: claimed
+updated: 2026-11-06
 rfc: "0212-trailties-port"
 cluster: tt-surface
 packages: ["trailties", "actionmailer"]
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-06T21:17:06Z"
+assignee: "trailties-mailers-controller"
 blocked-by: null
 closed-reason: null
 ---

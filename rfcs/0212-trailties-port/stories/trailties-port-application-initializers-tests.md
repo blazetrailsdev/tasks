@@ -1,7 +1,7 @@
 ---
 title: "Pilot: port railties' test/application/initializers tests onto the isolation harness"
-status: ready
-updated: 2026-10-30
+status: claimed
+updated: 2026-11-06
 rfc: "0212-trailties-port"
 cluster: tt-tests
 packages: ["trailties"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 600
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-06T21:47:06Z"
+assignee: "trailties-port-application-initializers-tests"
 blocked-by: null
 closed-reason: null
 ---
