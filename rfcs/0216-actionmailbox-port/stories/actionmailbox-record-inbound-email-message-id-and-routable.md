@@ -1,6 +1,6 @@
 ---
 title: "Port ActionMailbox::Record, InboundEmail, its MessageId and Routable concerns, RoutingJob and the migration"
-status: ready
+status: in-progress
 updated: 2026-11-06
 rfc: "0216-actionmailbox-port"
 cluster: amb-core
@@ -17,9 +17,9 @@ deps:
 deps-rfc: []
 est-loc: 500
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#9808
+claim: "2026-11-06T22:17:10Z"
+assignee: "actionmailbox-record-inbound-email-message-id-and-routable"
 blocked-by: null
 closed-reason: null
 ---

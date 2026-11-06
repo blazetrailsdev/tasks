@@ -1,6 +1,6 @@
 ---
 title: "Port Rails::MailersController (mailer previews)"
-status: claimed
+status: in-progress
 updated: 2026-11-06
 rfc: "0212-trailties-port"
 cluster: tt-surface
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: trails#9806
 claim: "2026-11-06T21:17:06Z"
 assignee: "trailties-mailers-controller"
 blocked-by: null
