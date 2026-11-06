@@ -1,14 +1,14 @@
 ---
 title: "Port the Net::HTTP client surface ActionMailbox::Relayer calls"
-status: draft
-updated: 2026-11-03
+status: ready
+updated: 2026-11-06
 rfc: "0216-actionmailbox-port"
 cluster: amb-infra
 packages: ["ruby-compat"]
 deps: []
 deps-rfc: []
 est-loc: 450
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

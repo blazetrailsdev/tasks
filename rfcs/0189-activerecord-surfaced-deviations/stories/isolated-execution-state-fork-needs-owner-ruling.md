@@ -1,6 +1,6 @@
 ---
 title: "isolated-execution-state-fork-needs-owner-ruling"
-status: draft
+status: closed
 updated: 2026-11-06
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'PERMANENT: the repo owner ratified the one IsolatedExecutionState.fork opening call on 2026-11-05 (CLAUDE.md, "A thread-local block stack forks per async block"); receipts are PERMANENT in trails#9769.'
 ---
 
 ## Context

@@ -1,14 +1,14 @@
 ---
 title: "Port the Sendgrid ingress controller (deferred wave)"
-status: draft
-updated: 2026-11-03
+status: ready
+updated: 2026-11-06
 rfc: "0216-actionmailbox-port"
 cluster: amb-ingress-deferred
 packages: ["actionmailbox"]
 deps: ["actionmailbox-base-controller-and-relay-ingress"]
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 9
 pr: null
 claim: null
 assignee: null

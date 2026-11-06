@@ -1,7 +1,7 @@
 ---
 title: "AbstractController::Collector#method_missing re-sends the name it was given, with no underscore or camelize in the body"
 status: ready
-updated: 2026-10-19
+updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

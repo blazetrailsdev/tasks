@@ -1,7 +1,7 @@
 ---
 title: "BenchmarkLogger's debug/info/warn/error accept Logger's block form, as fatal does"
-status: ready
-updated: 2026-10-19
+status: in-progress
+updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9772
+claim: "2026-11-06T03:17:13Z"
+assignee: "mail-message-encoded-decodes-uint8array-body-as-latin1"
 blocked-by: null
 closed-reason: null
 ---

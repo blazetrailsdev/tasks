@@ -1,14 +1,14 @@
 ---
 title: "Create packages/actionmailbox and enroll it in parity:api and parity:test"
-status: draft
-updated: 2026-11-03
+status: ready
+updated: 2026-11-06
 rfc: "0216-actionmailbox-port"
 cluster: amb-infra
 packages: ["actionmailbox"]
 deps: []
 deps-rfc: []
 est-loc: 300
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

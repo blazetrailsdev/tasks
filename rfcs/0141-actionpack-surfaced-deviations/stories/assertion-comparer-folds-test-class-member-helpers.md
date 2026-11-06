@@ -1,6 +1,6 @@
 ---
 title: "Assertion comparer folds helpers called through the test-class instance"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

@@ -1,14 +1,14 @@
 ---
 title: "Port ActionMailbox::Router, Router::Route and the Routing concern"
-status: draft
-updated: 2026-11-03
+status: ready
+updated: 2026-11-06
 rfc: "0216-actionmailbox-port"
 cluster: amb-core
 packages: ["actionmailbox"]
 deps: ["actionmailbox-test-helper-and-test-case"]
 deps-rfc: []
 est-loc: 400
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null

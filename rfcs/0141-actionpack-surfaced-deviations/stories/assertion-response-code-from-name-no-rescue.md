@@ -1,6 +1,6 @@
 ---
 title: "AssertionResponse#code_from_name lets Rack's status_code raise"
-status: claimed
+status: in-progress
 updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: trails#9773
 claim: "2026-11-06T02:57:10Z"
 assignee: "activejob-test-adapter-payload-bare-keys"
 blocked-by: null

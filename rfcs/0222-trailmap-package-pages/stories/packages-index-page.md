@@ -1,6 +1,6 @@
 ---
 title: "trailmap: /packages lists every package grouped by Rails counterpart and trails-only"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0222-trailmap-package-pages"
 cluster: package-pages

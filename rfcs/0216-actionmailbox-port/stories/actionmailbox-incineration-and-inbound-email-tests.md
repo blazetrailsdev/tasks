@@ -1,14 +1,14 @@
 ---
 title: "Port InboundEmail::Incineratable, Incineration and IncinerationJob, and the InboundEmail tests"
-status: draft
-updated: 2026-11-03
+status: ready
+updated: 2026-11-06
 rfc: "0216-actionmailbox-port"
 cluster: amb-core
 packages: ["actionmailbox"]
 deps: ["actionmailbox-base-and-callbacks", "port-activejob-exceptions"]
 deps-rfc: []
 est-loc: 350
-priority: null
+priority: 7
 pr: null
 claim: null
 assignee: null

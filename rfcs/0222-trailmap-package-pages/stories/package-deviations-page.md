@@ -1,7 +1,7 @@
 ---
 title: "trailmap: /packages/:name/deviations shows receipts, marks, permanent skips and ratified rules"
-status: ready
-updated: 2026-11-05
+status: in-progress
+updated: 2026-11-06
 rfc: "0222-trailmap-package-pages"
 cluster: package-pages
 packages: [actionpack, actionview]
@@ -9,9 +9,9 @@ deps: [packages-index-page, stats-sync-stores-package-summary-tables, story-touc
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#121
+claim: "2026-11-06T03:19:55Z"
+assignee: "package-deviations-page"
 blocked-by: null
 ---
 

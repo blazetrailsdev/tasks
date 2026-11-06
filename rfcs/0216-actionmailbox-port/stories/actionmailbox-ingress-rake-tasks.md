@@ -1,14 +1,14 @@
 ---
 title: "Port ActionMailbox's ingress rake tasks (exim, postfix, qmail)"
-status: draft
-updated: 2026-11-03
+status: ready
+updated: 2026-11-06
 rfc: "0216-actionmailbox-port"
 cluster: amb-ingress
 packages: ["actionmailbox"]
 deps: ["actionmailbox-relayer"]
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 4
 pr: null
 claim: null
 assignee: null

@@ -1,14 +1,14 @@
 ---
 title: "Port ActionMailbox::Base and ActionMailbox::Callbacks"
-status: draft
-updated: 2026-11-03
+status: ready
+updated: 2026-11-06
 rfc: "0216-actionmailbox-port"
 cluster: amb-core
 packages: ["actionmailbox"]
 deps: ["actionmailbox-router-route-and-routing"]
 deps-rfc: []
 est-loc: 450
-priority: null
+priority: 6
 pr: null
 claim: null
 assignee: null

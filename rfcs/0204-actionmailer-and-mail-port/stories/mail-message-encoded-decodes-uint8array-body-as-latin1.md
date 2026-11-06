@@ -1,6 +1,6 @@
 ---
 title: "Message#encoded decodes a Uint8Array body as latin1"
-status: ready
+status: in-progress
 updated: 2026-11-06
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9772
+claim: "2026-11-06T03:17:13Z"
+assignee: "mail-message-encoded-decodes-uint8array-body-as-latin1"
 blocked-by: null
 closed-reason: null
 ---
