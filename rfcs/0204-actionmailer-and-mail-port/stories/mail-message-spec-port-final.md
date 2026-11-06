@@ -1,6 +1,6 @@
 ---
 title: "mail-message-spec-port-final"
-status: draft
+status: closed
 updated: 2026-11-06
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of mail-message-spec-port-rest, which stays open for the remainder after trails#9781"
 ---
 
 ## Context

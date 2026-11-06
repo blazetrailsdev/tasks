@@ -1,6 +1,6 @@
 ---
 title: "activejob-test-adapter-payload-bare-keys"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null

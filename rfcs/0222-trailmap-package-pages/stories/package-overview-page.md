@@ -1,6 +1,6 @@
 ---
 title: "trailmap: /packages/:name overview with gate tiles, story counts and a start-here box"
-status: claimed
+status: in-progress
 updated: 2026-11-06
 rfc: "0222-trailmap-package-pages"
 cluster: package-pages
@@ -9,7 +9,7 @@ deps: [packages-index-page]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trailmap#122
 claim: "2026-11-06T12:56:48Z"
 assignee: "package-overview-page"
 blocked-by: null

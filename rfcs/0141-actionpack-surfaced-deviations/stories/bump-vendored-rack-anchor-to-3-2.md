@@ -1,6 +1,6 @@
 ---
 title: "rack: bump the vendored Rack anchor from 3.1.14 to 3.2 and re-baseline"
-status: ready
+status: claimed
 updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-06T13:47:07Z"
+assignee: "mail-raw-source-stays-bytes-through-header-and-field"
 blocked-by: null
 closed-reason: null
 ---

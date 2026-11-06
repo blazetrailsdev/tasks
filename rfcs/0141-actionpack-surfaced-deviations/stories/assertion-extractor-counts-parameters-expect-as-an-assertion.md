@@ -1,6 +1,6 @@
 ---
 title: "Assertion extractor counts Parameters#expect as an assertion"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

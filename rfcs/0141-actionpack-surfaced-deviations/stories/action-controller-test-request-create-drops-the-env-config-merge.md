@@ -1,6 +1,6 @@
 ---
 title: "ActionController::TestRequest.create seeds rack.request.cookie_hash with a plain object, not with_indifferent_access"
-status: in-progress
+status: claimed
 updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: trails#9773
-claim: "2026-11-06T02:57:10Z"
-assignee: "activejob-test-adapter-payload-bare-keys"
+pr: null
+claim: "2026-11-06T13:47:07Z"
+assignee: "mail-raw-source-stays-bytes-through-header-and-field"
 blocked-by: null
 closed-reason: null
 ---

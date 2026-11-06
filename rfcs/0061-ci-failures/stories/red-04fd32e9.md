@@ -1,6 +1,6 @@
 ---
 title: "Active Record SQLite Tests (1) failing on main @04fd32e9"
-status: ready
+status: closed
 updated: 2026-11-06
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-06T13:24:50Z"
+assignee: "red-04fd32e9"
 blocked-by: null
-closed-reason: null
+closed-reason: "Flake: SQLite BusyException 'database is locked' in sqlite-database-tasks.trails.test.ts structure_dump round trip; passes locally 3/3; failing commit touched only actionmailbox/mail"
 ---
 
 ## Context

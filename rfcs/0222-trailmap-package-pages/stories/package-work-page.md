@@ -1,6 +1,6 @@
 ---
 title: "trailmap: /packages/:name/work lists attributed stories by RFC with a done-over-time burndown"
-status: claimed
+status: in-progress
 updated: 2026-11-06
 rfc: "0222-trailmap-package-pages"
 cluster: package-pages
@@ -9,7 +9,7 @@ deps: [packages-index-page, story-touching-package-scope]
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trailmap#122
 claim: "2026-11-06T12:56:48Z"
 assignee: "package-overview-page"
 blocked-by: null

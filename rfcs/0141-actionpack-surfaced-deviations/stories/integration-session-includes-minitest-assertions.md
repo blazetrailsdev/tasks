@@ -1,7 +1,7 @@
 ---
 title: "Integration::Session includes Minitest::Assertions (child session assert bubbles up)"
-status: ready
-updated: 2026-10-19
+status: done
+updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9053
+claim: "2026-11-06T13:17:13Z"
+assignee: "mail-message-spec-port-rest"
 blocked-by: null
 closed-reason: null
 ---

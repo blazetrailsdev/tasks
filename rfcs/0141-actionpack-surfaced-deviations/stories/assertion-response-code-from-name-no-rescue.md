@@ -1,6 +1,6 @@
 ---
 title: "AssertionResponse#code_from_name lets Rack's status_code raise"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
