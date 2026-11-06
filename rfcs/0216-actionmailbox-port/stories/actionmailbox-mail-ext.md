@@ -1,6 +1,6 @@
 ---
 title: "Port ActionMailbox's mail_ext reopenings of Mail::Address, Mail::Message and Mail"
-status: ready
+status: done
 updated: 2026-11-06
 rfc: "0216-actionmailbox-port"
 cluster: amb-core
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9778
+claim: "2026-11-06T12:17:04Z"
+assignee: "actionmailbox-mail-ext"
 blocked-by: null
 closed-reason: null
 ---

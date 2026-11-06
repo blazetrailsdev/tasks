@@ -1,6 +1,6 @@
 ---
 title: "trailmap: /packages/:name/files maps each Rails file to its TS port, method and test match, and open stories"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0222-trailmap-package-pages"
 cluster: package-pages

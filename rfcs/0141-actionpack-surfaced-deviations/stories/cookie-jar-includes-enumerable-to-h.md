@@ -1,6 +1,6 @@
 ---
 title: "CookieJar includes Enumerable; to_h comes from Enumerable, not a hand-written method"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

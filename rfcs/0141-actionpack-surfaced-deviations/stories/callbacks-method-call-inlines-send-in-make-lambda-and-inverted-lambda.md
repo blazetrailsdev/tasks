@@ -1,6 +1,6 @@
 ---
 title: "Callbacks MethodCall extracts a private send helper Rails inlines, so its property arm cannot be receipted"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

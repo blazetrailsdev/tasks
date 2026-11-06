@@ -1,6 +1,6 @@
 ---
 title: "Integration::Session default_url_options is an instance field, not UrlFor's class_attribute"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

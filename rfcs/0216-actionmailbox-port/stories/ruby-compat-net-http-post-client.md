@@ -1,6 +1,6 @@
 ---
 title: "Port the Net::HTTP client surface ActionMailbox::Relayer calls"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0216-actionmailbox-port"
 cluster: amb-infra

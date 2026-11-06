@@ -1,6 +1,6 @@
 ---
 title: "Mail raw source stays bytes through Header and Field instead of a UTF-8 decode at the scan sites"
-status: draft
+status: ready
 updated: 2026-11-06
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null

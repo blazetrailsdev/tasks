@@ -1,6 +1,6 @@
 ---
 title: "failOn accepts a Proc message; drop assertRecognizes msg cast"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

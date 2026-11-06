@@ -1,6 +1,6 @@
 ---
 title: "actionpack: move 14 trails-only freshWhen/expiresIn tests out of the Rails FragmentCachingTest describe"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

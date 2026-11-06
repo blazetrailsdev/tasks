@@ -1,6 +1,6 @@
 ---
 title: "Port ActionMailbox::Relayer and its test"
-status: ready
+status: claimed
 updated: 2026-11-06
 rfc: "0216-actionmailbox-port"
 cluster: amb-ingress
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-06T12:47:08Z"
+assignee: "actionmailbox-relayer"
 blocked-by: null
 closed-reason: null
 ---

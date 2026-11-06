@@ -1,6 +1,6 @@
 ---
 title: "activerecord/activesupport: thread-local block stacks fork per async block at the root, not in Encryption::Contexts"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
