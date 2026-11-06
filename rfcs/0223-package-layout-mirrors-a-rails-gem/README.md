@@ -136,6 +136,9 @@ For each moved file, in order:
    to that Rails file's path, through the conventions table
    (`test/cases/relation/where_test.rb` → `test/cases/relation/where.test.ts`;
    `_test.rb` → `.test.ts`, snake → kebab, `PATH_SEGMENT_ALIASES` applied).
+   The path is the comparison's `conventionTsFile`, so a per-file override in
+   test-compare's table wins (ruby/spec `core/kernel/catch_spec.rb` →
+   `kernel-catch.test.ts`), and a moved test stays where `parity:test` finds it.
 2. **It is a `*.trails.test.ts`** sibling of a file placed by rule 1: it lands
    beside that file.
 3. **Otherwise** it lands under the gem's main test directory at its `lib/`
