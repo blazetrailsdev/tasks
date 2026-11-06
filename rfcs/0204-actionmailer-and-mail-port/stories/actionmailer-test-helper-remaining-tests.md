@@ -1,6 +1,6 @@
 ---
 title: "actionmailer-test-helper-remaining-tests"
-status: ready
+status: in-progress
 updated: 2026-11-05
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9764
+claim: "2026-11-05T23:06:30Z"
+assignee: "actionmailer-test-helper-remaining-tests"
 blocked-by: null
 closed-reason: null
 ---

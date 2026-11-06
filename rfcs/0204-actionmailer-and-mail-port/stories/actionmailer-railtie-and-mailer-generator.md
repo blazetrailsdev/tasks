@@ -1,7 +1,7 @@
 ---
 title: "Port ActionMailer::Railtie and the mailer generator"
-status: ready
-updated: 2026-10-29
+status: done
+updated: 2026-11-05
 rfc: "0204-actionmailer-and-mail-port"
 cluster: actionmailer
 packages: ["actionmailer", "trailties"]
@@ -9,9 +9,9 @@ deps: ["actionmailer-test-helper-test-case-and-preview"]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9763
+claim: "2026-11-05T23:04:35Z"
+assignee: "actionmailer-railtie-and-mailer-generator"
 blocked-by: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "actionmailer-base-test-view-paths-fallback-locale-asset-host"
-status: draft
+status: ready
 updated: 2026-11-05
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
