@@ -5,7 +5,7 @@ updated: 2026-11-05
 rfc: "0221-no-returned-proxies"
 cluster: factory-returned
 packages: ["actionview"]
-deps: ["no-returned-proxy-lint-gate"]
+deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
