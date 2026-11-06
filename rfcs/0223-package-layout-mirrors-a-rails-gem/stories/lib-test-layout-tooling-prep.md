@@ -1,6 +1,6 @@
 ---
 title: "Make every script, lint rule, config and CI glob accept lib/ + test/ beside src/"
-status: claimed
+status: in-progress
 updated: 2026-11-06
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: layout-tooling
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9785
 claim: "2026-11-06T14:52:38Z"
 assignee: "lib-test-layout-tooling-prep"
 blocked-by: null

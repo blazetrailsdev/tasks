@@ -1,7 +1,7 @@
 ---
 title: "HelperMethodBuilder's handle_string/class/model_call hand-roll public_send"
-status: ready
-updated: 2026-10-19
+status: claimed
+updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-06T15:47:08Z"
+assignee: "action-controller-test-request-create-drops-the-env-config-merge"
 blocked-by: null
 closed-reason: null
 ---

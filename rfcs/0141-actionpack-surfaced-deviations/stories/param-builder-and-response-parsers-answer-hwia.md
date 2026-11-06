@@ -1,7 +1,7 @@
 ---
 title: "ParamBuilder#make_params answers a null-prototype object, not a HashWithIndifferentAccess"
 status: ready
-updated: 2026-10-19
+updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

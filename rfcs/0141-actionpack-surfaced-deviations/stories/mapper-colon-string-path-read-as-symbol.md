@@ -1,6 +1,6 @@
 ---
 title: "Mapper reads a ':action' String path as a Symbol and draws a static route"
-status: claimed
+status: done
 updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#9783
 claim: "2026-11-06T14:17:07Z"
 assignee: "inspector-routes-when-expanded-runs-rails-body"
 blocked-by: null

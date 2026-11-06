@@ -1,7 +1,7 @@
 ---
 title: "Mime::Type#respond_to_missing? drops its super arm"
-status: ready
-updated: 2026-10-19
+status: in-progress
+updated: 2026-11-06
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9787
+claim: "2026-11-06T15:17:08Z"
+assignee: "call-gate-credits-include-on-hash-literal-ivar"
 blocked-by: null
 closed-reason: null
 ---
