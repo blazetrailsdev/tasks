@@ -1,6 +1,6 @@
 ---
 title: "Active Record PostgreSQL Tests (3) failing on main @e4e5b791"
-status: ready
+status: closed
 updated: 2026-11-06
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-06T18:41:19Z"
+assignee: "red-e4e5b791"
 blocked-by: null
-closed-reason: null
+closed-reason: "Infra flake: PG shard 3 failed in 'install postgresql-client-17' step — curl (56) fetching apt.postgresql.org key; no tests ran"
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat-optparse-initialize-banner-width-indent"
-status: claimed
+status: in-progress
 updated: 2026-11-06
 rfc: "0171-thor-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#9793
 claim: "2026-11-06T17:47:08Z"
 assignee: "generator-generator-hook-for-test-framework"
 blocked-by: null

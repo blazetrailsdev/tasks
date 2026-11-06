@@ -1,6 +1,6 @@
 ---
 title: "CredentialsGenerator renders through EncryptedConfiguration#change and template"
-status: ready
+status: claimed
 updated: 2026-11-06
 rfc: "0171-thor-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-06T18:47:05Z"
+assignee: "port-full-stack-console-app-helper-method"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "trailties: port the nine remaining Rails::DBConsoleTest cases"
-status: ready
+status: in-progress
 updated: 2026-11-06
 rfc: "0171-thor-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9795
+claim: "2026-11-06T18:17:05Z"
+assignee: "generators-templates-path-source-paths"
 blocked-by: null
 closed-reason: null
 ---
