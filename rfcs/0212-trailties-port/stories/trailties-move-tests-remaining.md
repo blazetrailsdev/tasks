@@ -1,6 +1,6 @@
 ---
 title: "trailties-move-tests-remaining"
-status: claimed
+status: ready
 updated: 2026-11-06
 rfc: "0212-trailties-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 600
 priority: null
 pr: null
-claim: "2026-11-06T04:47:24Z"
-assignee: "mail-message-spec-port-remaining"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

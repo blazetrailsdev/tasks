@@ -1,6 +1,6 @@
 ---
 title: "trailties-move-tests-rest"
-status: draft
+status: closed
 updated: 2026-11-06
 rfc: "0212-trailties-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: duplicate of trailties-move-tests-remaining, which stays open (PR 9776 moved nothing in the end)"
 ---
 
 ## Context

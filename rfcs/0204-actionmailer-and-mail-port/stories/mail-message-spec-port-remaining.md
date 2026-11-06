@@ -1,6 +1,6 @@
 ---
 title: "mail-message-spec-port-remaining"
-status: claimed
+status: in-progress
 updated: 2026-11-06
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9776
 claim: "2026-11-06T04:47:24Z"
 assignee: "mail-message-spec-port-remaining"
 blocked-by: null
