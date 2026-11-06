@@ -1,7 +1,7 @@
 ---
 title: "port-app-generator-test-onto-test-case"
-status: ready
-updated: 2026-11-03
+status: in-progress
+updated: 2026-11-06
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 2500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9777
+claim: "2026-11-06T10:17:07Z"
+assignee: "port-app-generator-test-onto-test-case"
 blocked-by: null
 closed-reason: null
 ---
