@@ -5,7 +5,8 @@ updated: 2026-11-07
 rfc: "0216-actionmailbox-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - actionmailbox-base-and-callbacks
 deps-rfc: []
 est-loc: 30
 priority: null
