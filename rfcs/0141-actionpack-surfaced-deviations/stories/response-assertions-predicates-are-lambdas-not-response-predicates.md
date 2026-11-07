@@ -1,7 +1,7 @@
 ---
 title: "ResponseAssertions: RESPONSE_PREDICATES, response_code and the redirect handle still diverge from response.rb"
-status: ready
-updated: 2026-10-19
+status: in-progress
+updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9830
+claim: "2026-11-07T13:17:16Z"
+assignee: "inspector-routes-when-expanded-runs-rails-body"
 blocked-by: null
 closed-reason: null
 ---

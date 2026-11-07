@@ -1,7 +1,7 @@
 ---
 title: "Response#to_a's @headers.to_hash answers a plain object from a JS-class Rack::Headers"
 status: ready
-updated: 2026-10-19
+updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

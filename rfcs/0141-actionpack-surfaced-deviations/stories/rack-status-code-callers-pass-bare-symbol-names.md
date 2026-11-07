@@ -1,6 +1,6 @@
 ---
 title: "Rack status callers pass bare names, so status_code reads non-numeric Strings as Symbols"
-status: ready
+status: in-progress
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9830
+claim: "2026-11-07T13:17:16Z"
+assignee: "inspector-routes-when-expanded-runs-rails-body"
 blocked-by: null
 closed-reason: null
 ---

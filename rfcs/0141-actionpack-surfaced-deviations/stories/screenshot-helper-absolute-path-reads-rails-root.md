@@ -1,7 +1,7 @@
 ---
 title: "screenshot-helper.test.ts asserts paths with toMatch where Rails stubs Rails.root and asserts equality"
-status: ready
-updated: 2026-10-19
+status: claimed
+updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-07T13:47:15Z"
+assignee: "burn-down-newly-measured-assertion-mismatches"
 blocked-by: null
 closed-reason: null
 ---

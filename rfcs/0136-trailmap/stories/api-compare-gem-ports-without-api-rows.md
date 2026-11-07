@@ -1,6 +1,6 @@
 ---
 title: "trails: api:compare writes no rows for nine gem ports that test:compare measures"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0136-trailmap"
 cluster: null

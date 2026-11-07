@@ -1,6 +1,6 @@
 ---
 title: "Rack::Request::Helpers#xhr? ports as isXhr(), not an xhr getter"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "strong_parameters error classes extend Error, not ArgumentError / IndexError; InvalidParameterKey has an invented constructor"
-status: ready
-updated: 2026-10-19
+status: done
+updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9389
+claim: "2026-11-07T13:47:15Z"
+assignee: "burn-down-newly-measured-assertion-mismatches"
 blocked-by: null
 closed-reason: null
 ---

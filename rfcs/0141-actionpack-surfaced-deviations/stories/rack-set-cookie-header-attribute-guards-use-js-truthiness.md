@@ -1,6 +1,6 @@
 ---
 title: "Rack set_cookie_header attribute guards use JS truthiness, not Ruby's"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

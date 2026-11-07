@@ -1,6 +1,6 @@
 ---
 title: "trails: date, html-sanitizer, image-processing, nokogiri and tzinfo have no Rails counterpart in the package summary"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0136-trailmap"
 cluster: null

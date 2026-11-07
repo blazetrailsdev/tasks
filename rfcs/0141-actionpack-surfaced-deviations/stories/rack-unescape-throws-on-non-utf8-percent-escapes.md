@@ -1,6 +1,6 @@
 ---
 title: "Rack::Utils.unescape throws on a non-UTF-8 percent-escape; decode_www_form_component is ported twice privately"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
