@@ -1,6 +1,6 @@
 ---
 title: "Port ActionMailbox::Engine and config/routes.rb, and load the engine from trailties/all"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0216-actionmailbox-port"
 cluster: amb-engine

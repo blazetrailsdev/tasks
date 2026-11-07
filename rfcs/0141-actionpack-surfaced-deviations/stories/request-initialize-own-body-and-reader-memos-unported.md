@@ -1,7 +1,7 @@
 ---
 title: "ActionDispatch::Request#initialize's own body and the reader memos it seeds are unported"
-status: ready
-updated: 2026-10-19
+status: in-progress
+updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9828
+claim: "2026-11-07T12:17:14Z"
+assignee: "actionmailer-smtp-settings-typed-and-railtie"
 blocked-by: null
 closed-reason: null
 ---

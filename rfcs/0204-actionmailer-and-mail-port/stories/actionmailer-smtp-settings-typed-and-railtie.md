@@ -1,6 +1,6 @@
 ---
 title: "actionmailer: type smtpSettings on Base and port the action_mailer railtie"
-status: ready
+status: in-progress
 updated: 2026-11-07
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#9828
+claim: "2026-11-07T12:17:14Z"
+assignee: "actionmailer-smtp-settings-typed-and-railtie"
 blocked-by: null
 ---
 

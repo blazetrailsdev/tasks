@@ -1,7 +1,7 @@
 ---
 title: "Port ActionMailbox::Router, Router::Route and the Routing concern"
-status: ready
-updated: 2026-11-06
+status: claimed
+updated: 2026-11-07
 rfc: "0216-actionmailbox-port"
 cluster: amb-core
 packages: ["actionmailbox"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-07T12:47:05Z"
+assignee: "actionmailbox-router-route-and-routing"
 blocked-by: null
 closed-reason: null
 ---
