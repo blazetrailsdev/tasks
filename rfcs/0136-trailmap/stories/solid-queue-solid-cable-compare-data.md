@@ -1,6 +1,6 @@
 ---
 title: "trails: solid-queue and solid-cable have no api or test compare data"
-status: claimed
+status: blocked
 updated: 2026-11-07
 rfc: "0136-trailmap"
 cluster: null
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trailmap#127
 claim: "2026-11-07T04:46:56Z"
 assignee: "api-compare-gem-ports-without-api-rows"
-blocked-by: null
+blocked-by: "api rows fixed by trailmap#127's parser; verify both tiles on /packages/solid-queue after the next sync"
 closed-reason: null
 ---
 

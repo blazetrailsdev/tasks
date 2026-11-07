@@ -1,6 +1,6 @@
 ---
 title: "trailmap: /packages/:name says a trails-only package has no Rails counterpart instead of showing empty tiles"
-status: claimed
+status: in-progress
 updated: 2026-11-07
 rfc: "0136-trailmap"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trailmap#127
 claim: "2026-11-07T04:46:56Z"
 assignee: "api-compare-gem-ports-without-api-rows"
 blocked-by: null

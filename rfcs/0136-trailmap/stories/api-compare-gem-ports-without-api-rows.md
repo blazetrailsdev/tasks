@@ -1,6 +1,6 @@
 ---
 title: "trails: api:compare writes no rows for nine gem ports that test:compare measures"
-status: claimed
+status: in-progress
 updated: 2026-11-07
 rfc: "0136-trailmap"
 cluster: null
@@ -20,7 +20,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#9825
 claim: "2026-11-07T04:46:56Z"
 assignee: "api-compare-gem-ports-without-api-rows"
 blocked-by: null

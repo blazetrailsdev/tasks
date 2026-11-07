@@ -1,6 +1,6 @@
 ---
 title: "trailmap: /packages/actionpack shows its api and test compare numbers"
-status: claimed
+status: blocked
 updated: 2026-11-07
 rfc: "0136-trailmap"
 cluster: null
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trailmap#127
 claim: "2026-11-07T04:46:56Z"
 assignee: "api-compare-gem-ports-without-api-rows"
-blocked-by: null
+blocked-by: "code in trailmap#127; AC4 needs trails#9825's compareKeys synced, then tandem SAME on stats-job.db"
 closed-reason: null
 ---
 
