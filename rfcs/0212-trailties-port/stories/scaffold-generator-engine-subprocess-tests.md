@@ -7,6 +7,8 @@ cluster: null
 packages: []
 deps:
   - trailties-plugin-generator-part-2-and-plugin-command
+  - port-trailties-plugin-command
+  - port-plugin-helpers-with-new-plugin
 deps-rfc: []
 est-loc: 250
 priority: null
