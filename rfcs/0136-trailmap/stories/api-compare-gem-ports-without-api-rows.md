@@ -3,8 +3,19 @@ title: "trails: api:compare writes no rows for nine gem ports that test:compare 
 status: ready
 updated: 2026-11-06
 rfc: "0136-trailmap"
-cluster: packages-missing-data
-packages: []
+cluster: null
+packages:
+  [
+    "scripts",
+    "did-you-mean",
+    "et-orbi",
+    "mini-magick",
+    "mini-mime",
+    "net-smtp",
+    "rack-session",
+    "rack-test",
+    "ruby-compat",
+  ]
 deps: []
 deps-rfc: []
 est-loc: 80

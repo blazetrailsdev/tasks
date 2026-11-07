@@ -3,8 +3,8 @@ title: "trails: solid-queue and solid-cable have no api or test compare data"
 status: ready
 updated: 2026-11-06
 rfc: "0136-trailmap"
-cluster: packages-missing-data
-packages: []
+cluster: null
+packages: ["scripts", "solid-queue", "solid-cable"]
 deps: []
 deps-rfc: []
 est-loc: 80

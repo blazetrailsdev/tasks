@@ -3,8 +3,9 @@ title: "trailmap: /packages/:name says a trails-only package has no Rails counte
 status: ready
 updated: 2026-11-06
 rfc: "0136-trailmap"
-cluster: packages-missing-data
-packages: []
+cluster: null
+packages:
+  ["activerecord-cli", "ruby-compat", "trails-tsc", "tse-compiler", "vitest-matchers", "website"]
 deps: []
 deps-rfc: []
 est-loc: 40
