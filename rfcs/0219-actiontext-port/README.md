@@ -1,9 +1,9 @@
 ---
 rfc: "0219-actiontext-port"
 title: "Port ActionText (server side) over Trix and @rails/actiontext from npm"
-status: draft
+status: active
 created: 2026-11-03
-updated: 2026-11-03
+updated: 2026-11-07
 owner: "@deanmarano"
 packages:
   - actiontext
