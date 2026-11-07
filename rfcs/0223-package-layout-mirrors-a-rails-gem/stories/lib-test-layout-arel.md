@@ -7,7 +7,7 @@ cluster: layout-migration
 packages: [arel]
 deps: [lib-test-layout-ruby-compat]
 deps-rfc: []
-est-loc: null
+est-loc: 330
 priority: null
 pr: null
 claim: null

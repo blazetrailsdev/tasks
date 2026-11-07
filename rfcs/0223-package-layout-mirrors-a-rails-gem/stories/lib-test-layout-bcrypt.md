@@ -7,7 +7,7 @@ cluster: layout-migration
 packages: [bcrypt]
 deps: [lib-test-layout-ruby-compat]
 deps-rfc: []
-est-loc: null
+est-loc: 40
 priority: null
 pr: null
 claim: null

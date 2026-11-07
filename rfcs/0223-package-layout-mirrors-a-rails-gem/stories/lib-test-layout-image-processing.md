@@ -7,7 +7,7 @@ cluster: layout-migration
 packages: [image-processing]
 deps: [lib-test-layout-ruby-compat]
 deps-rfc: []
-est-loc: null
+est-loc: 50
 priority: null
 pr: trails#9803
 claim: "2026-11-06T20:32:15Z"

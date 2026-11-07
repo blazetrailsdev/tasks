@@ -7,7 +7,7 @@ cluster: layout-migration
 packages: [actionpack]
 deps: [lib-test-layout-ruby-compat]
 deps-rfc: []
-est-loc: null
+est-loc: 940
 priority: null
 pr: null
 claim: null

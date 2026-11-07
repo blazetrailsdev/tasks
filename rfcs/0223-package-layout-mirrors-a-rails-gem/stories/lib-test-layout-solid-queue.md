@@ -7,7 +7,7 @@ cluster: layout-migration
 packages: [solid-queue]
 deps: [lib-test-layout-ruby-compat]
 deps-rfc: []
-est-loc: null
+est-loc: 80
 priority: null
 pr: null
 claim: null

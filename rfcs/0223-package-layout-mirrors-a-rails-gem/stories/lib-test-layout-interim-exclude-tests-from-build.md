@@ -7,7 +7,7 @@ cluster: layout-tooling
 packages: [scripts]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 150
 priority: null
 pr: trails#9759
 claim: "2026-11-05T21:27:18Z"

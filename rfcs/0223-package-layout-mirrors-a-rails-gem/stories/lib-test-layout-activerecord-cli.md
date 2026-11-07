@@ -7,7 +7,7 @@ cluster: layout-migration
 packages: [activerecord-cli]
 deps: [lib-test-layout-ruby-compat]
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null

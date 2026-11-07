@@ -7,7 +7,7 @@ cluster: layout-migration
 packages: [ruby-compat]
 deps: [lib-test-layout-tooling-prep]
 deps-rfc: []
-est-loc: null
+est-loc: 370
 priority: null
 pr: trails#9794
 claim: "2026-11-06T16:21:35Z"

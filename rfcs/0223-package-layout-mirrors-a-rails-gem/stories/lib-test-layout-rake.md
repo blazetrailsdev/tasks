@@ -7,7 +7,7 @@ cluster: layout-migration
 packages: [rake]
 deps: [lib-test-layout-ruby-compat]
 deps-rfc: []
-est-loc: null
+est-loc: 170
 priority: null
 pr: null
 claim: null
