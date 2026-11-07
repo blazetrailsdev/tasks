@@ -1,6 +1,6 @@
 ---
 title: "actionmailer: type smtpSettings on Base and port the action_mailer railtie"
-status: draft
+status: ready
 updated: 2026-11-07
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -13,7 +13,6 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
 ---
 
 ## Context
