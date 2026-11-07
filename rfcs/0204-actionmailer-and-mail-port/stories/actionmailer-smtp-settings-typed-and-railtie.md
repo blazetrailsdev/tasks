@@ -13,7 +13,6 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
 ---
 
 ## Context
