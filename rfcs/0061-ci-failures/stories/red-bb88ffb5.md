@@ -1,6 +1,6 @@
 ---
 title: "Trailties Tests failing on main @bb88ffb5"
-status: ready
+status: closed
 updated: 2026-11-07
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-07T15:15:19Z"
+assignee: "red-bb88ffb5"
 blocked-by: null
-closed-reason: null
+closed-reason: "Flake: db-system-change.test.ts 'change to existing database' got undefined mod.default from TSE compiled-template import (tse.ts:76) in CI; bb88ffb5 only touched ruby-compat Delegator; test passes 4/4 locally on bb88ffb5"
 ---
 
 ## Context

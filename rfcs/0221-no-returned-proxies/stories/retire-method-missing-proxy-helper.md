@@ -1,7 +1,7 @@
 ---
 title: "Delete ruby-compat's methodMissingProxy once no caller returns it"
-status: ready
-updated: 2026-11-05
+status: in-progress
+updated: 2026-11-07
 rfc: "0221-no-returned-proxies"
 cluster: delegator
 packages: ["ruby-compat"]
@@ -15,9 +15,9 @@ deps:
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9835
+claim: "2026-11-07T15:17:14Z"
+assignee: "retire-method-missing-proxy-helper"
 blocked-by: null
 ---
 

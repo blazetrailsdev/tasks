@@ -1,6 +1,6 @@
 ---
 title: "test-response-html-parsed-body-at-xpath"
-status: claimed
+status: in-progress
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#9834
 claim: "2026-11-07T14:47:10Z"
 assignee: "inspector-routes-when-expanded-runs-rails-body"
 blocked-by: null

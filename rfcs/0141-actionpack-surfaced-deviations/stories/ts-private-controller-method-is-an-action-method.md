@@ -1,6 +1,6 @@
 ---
 title: "actionpack: a controller method declared TypeScript-private is an action method (abstract_controller/base.rb:77-107)"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

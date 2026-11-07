@@ -1,7 +1,7 @@
 ---
 title: "migration_template takes a source template PATH and expands it through find_in_source_paths"
-status: ready
-updated: 2026-10-08
+status: claimed
+updated: 2026-11-07
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: 6
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-07T15:47:15Z"
+assignee: "response-to-a-passes-rack-headers-to-hash"
 blocked-by: null
 closed-reason: null
 ---
