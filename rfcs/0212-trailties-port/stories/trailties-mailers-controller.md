@@ -1,6 +1,6 @@
 ---
 title: "Port Rails::MailersController (mailer previews)"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0212-trailties-port"
 cluster: tt-surface

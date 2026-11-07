@@ -1,6 +1,6 @@
 ---
 title: "Port ActionMailbox::Record, InboundEmail, its MessageId and Routable concerns, RoutingJob and the migration"
-status: in-progress
+status: done
 updated: 2026-11-06
 rfc: "0216-actionmailbox-port"
 cluster: amb-core

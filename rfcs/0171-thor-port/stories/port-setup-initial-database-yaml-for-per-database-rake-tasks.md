@@ -1,6 +1,6 @@
 ---
 title: "port-setup-initial-database-yaml-for-per-database-rake-tasks"
-status: ready
+status: in-progress
 updated: 2026-11-06
 rfc: "0171-thor-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9812
+claim: "2026-11-06T23:47:05Z"
+assignee: "port-setup-initial-database-yaml-for-per-database-rake-tasks"
 blocked-by: null
 closed-reason: null
 ---

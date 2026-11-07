@@ -1,6 +1,6 @@
 ---
 title: "net-http-sni-check-uses-resolv-ip-regexes"
-status: draft
+status: done
 updated: 2026-11-06
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9804
 claim: null
 assignee: null
 blocked-by: null

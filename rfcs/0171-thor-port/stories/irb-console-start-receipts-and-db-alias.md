@@ -1,6 +1,6 @@
 ---
 title: "irb-console-start-receipts-and-db-alias"
-status: ready
+status: in-progress
 updated: 2026-11-06
 rfc: "0171-thor-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9811
+claim: "2026-11-06T23:17:15Z"
+assignee: "irb-console-start-receipts-and-db-alias"
 blocked-by: null
 closed-reason: null
 ---
