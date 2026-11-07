@@ -1,6 +1,6 @@
 ---
 title: "Rack status callers pass bare names, so status_code reads non-numeric Strings as Symbols"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

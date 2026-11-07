@@ -1,6 +1,6 @@
 ---
 title: "stripThenable hides `then` without returning a Proxy"
-status: ready
+status: blocked
 updated: 2026-11-07
 rfc: "0221-no-returned-proxies"
 cluster: factory-returned
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Owner decision needed: an own-property then shadow that disappears after one read cannot survive multi-step promise chains. return rel.load() from an async block (connection-handlers-multi-db.test.ts:117-123) and inBatches enumerators (batch yield then AsyncEnumerable#first) both re-read then and adopt the relation as its records. Identity with the original object (stripThenable(x) === x) conflicts with relations staying awaitable after load. See trails#9821 (closed)."
 ---
 
 ## Context

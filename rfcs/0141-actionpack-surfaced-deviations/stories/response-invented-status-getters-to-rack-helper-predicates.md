@@ -1,6 +1,6 @@
 ---
 title: "Delete Response's invented status getters in favour of Rack::Response::Helpers predicates"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

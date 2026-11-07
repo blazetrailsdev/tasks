@@ -1,6 +1,6 @@
 ---
 title: "RoutesProxy#method_missing is split into a Proxy trap and an invented _dispatch"
-status: claimed
+status: in-progress
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
+pr: trails#9832
 claim: "2026-11-07T13:47:15Z"
 assignee: "burn-down-newly-measured-assertion-mismatches"
 blocked-by: null

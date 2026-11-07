@@ -1,7 +1,7 @@
 ---
 title: "TestRequest#assign_parameters stringifies path parameters instead of calling to_param"
-status: ready
-updated: 2026-10-19
+status: claimed
+updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: ["actionpack"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-07T14:47:10Z"
+assignee: "inspector-routes-when-expanded-runs-rails-body"
 blocked-by: null
 closed-reason: null
 ---

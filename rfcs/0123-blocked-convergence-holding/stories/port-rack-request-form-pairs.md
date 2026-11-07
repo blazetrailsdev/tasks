@@ -1,7 +1,7 @@
 ---
 title: "port-rack-request-form-pairs"
-status: blocked
-updated: 2026-09-29
+status: in-progress
+updated: 2026-11-07
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -10,10 +10,10 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9831
 claim: "2026-09-02T18:45:08Z"
 assignee: "converge-env-for-symbol-opts-onto-colon-spelling"
-blocked-by: "Blocked on a vendor/rack bump to 3.2, which is a project-level decision outside this bundle. vendor/sources.lock.json pins rack v3.1.14 (the Rack that Rails v8.0.2, the vendored rails anchor, targets); 3.1's request.rb defines no form_pairs, so the @noRailsEquivalent receipt cannot be removed and any port stays novel surface. Rack 3.2's form_pairs (request.rb:499-533) also restructures POST (:539-548) to delegate to it, dropping 3.1's RACK_REQUEST_FORM_INPUT memoization and stream-changed warn that trails' POST currently mirrors verbatim — so porting form_pairs alone would either duplicate the parse or diverge POST from the vendored anchor. Its parse arm reads query_parser.parse_query_pairs (:523), which neither vendored Rack 3.1 nor trails defines. Unblock by bumping the rack anchor (and re-baselining the package's parity scores) under its own story."
+blocked-by: null
 closed-reason: null
 ---
 

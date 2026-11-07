@@ -1,6 +1,6 @@
 ---
 title: "crass: port Crass::Scanner and read it from @s, as tokenizer.rb does"
-status: ready
+status: draft
 updated: 2026-11-07
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null

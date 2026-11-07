@@ -1,6 +1,6 @@
 ---
 title: "Rack::Request::Env: getHeader reads null on a miss; eachHeader returns env / an enumerator"
-status: claimed
+status: in-progress
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#9831
 claim: "2026-11-07T10:47:07Z"
 assignee: "port-plugin-helpers-with-new-plugin"
 blocked-by: null

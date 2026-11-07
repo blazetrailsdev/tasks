@@ -1,7 +1,7 @@
 ---
 title: "UrlFor's action_methods override is ported but never installed"
-status: ready
-updated: 2026-07-27
+status: done
+updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9771
+claim: "2026-11-07T14:47:10Z"
+assignee: "inspector-routes-when-expanded-runs-rails-body"
 blocked-by: null
 closed-reason: null
 ---

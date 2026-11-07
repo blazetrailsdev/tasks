@@ -1,6 +1,6 @@
 ---
 title: "trailties' welcome and PWA controllers expand skip_forgery_protection by hand"
-status: claimed
+status: in-progress
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: null
+pr: trails#9832
 claim: "2026-11-07T13:47:15Z"
 assignee: "burn-down-newly-measured-assertion-mismatches"
 blocked-by: null

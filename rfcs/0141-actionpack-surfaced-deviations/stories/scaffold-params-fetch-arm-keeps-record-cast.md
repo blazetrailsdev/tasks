@@ -1,6 +1,6 @@
 ---
 title: "The no-attributes scaffold's params.fetch arm still casts to Record<string, unknown>"
-status: claimed
+status: ready
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 50
 priority: null
 pr: null
-claim: "2026-11-07T13:47:15Z"
-assignee: "burn-down-newly-measured-assertion-mismatches"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

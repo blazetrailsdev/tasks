@@ -1,6 +1,6 @@
 ---
 title: "inspector 'routes when expanded' runs the Rails body with Source Location rows"
-status: ready
+status: blocked
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-07T14:47:10Z"
+assignee: "inspector-routes-when-expanded-runs-rails-body"
+blocked-by: "waits on lib-test-layout-actionpack: test frames must leave src/action-dispatch, which test-compare's actiondispatch root (scripts/test-compare/compare.ts:1753) requires until actionpack moves to lib/test"
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "ActionDispatch::Response#commit! / #sending! return early where Rails re-runs the hook"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

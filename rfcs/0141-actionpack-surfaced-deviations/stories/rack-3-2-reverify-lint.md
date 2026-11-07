@@ -1,6 +1,6 @@
 ---
 title: "rack-3-2-reverify-lint"
-status: draft
+status: in-progress
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9831
+claim: "2026-11-07T14:01:49Z"
+assignee: "rack-3-2-reverify-lint"
 blocked-by: null
 closed-reason: null
 ---

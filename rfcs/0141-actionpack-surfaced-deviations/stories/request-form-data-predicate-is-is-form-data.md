@@ -1,6 +1,6 @@
 ---
 title: "Request#form_data? ports as isFormData, not a formData getter"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

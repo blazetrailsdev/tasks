@@ -1,6 +1,6 @@
 ---
 title: "Port ActionMailbox::Router, Router::Route and the Routing concern"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0216-actionmailbox-port"
 cluster: amb-core

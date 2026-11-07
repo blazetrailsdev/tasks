@@ -1,6 +1,6 @@
 ---
 title: "in-batches-yields-a-relation-without-a-proxy-view"
-status: draft
+status: closed
 updated: 2026-11-07
 rfc: "0221-no-returned-proxies"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: premised on trails#9821 landing; that PR was closed unmerged, so stripThenable still returns a Proxy everywhere."
 ---
 
 ## Context

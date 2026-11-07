@@ -1,7 +1,7 @@
 ---
 title: "UrlForOptions is object; type it as full_url_for's arms"
-status: ready
-updated: 2026-10-19
+status: in-progress
+updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9833
+claim: "2026-11-07T14:17:06Z"
+assignee: "test-request-default-env-seats-binary-strings"
 blocked-by: null
 closed-reason: null
 ---
