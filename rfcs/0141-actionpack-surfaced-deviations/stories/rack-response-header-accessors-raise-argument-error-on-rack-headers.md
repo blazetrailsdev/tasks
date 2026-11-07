@@ -5,7 +5,8 @@ updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps:
+  - rack-response-headers-is-a-rack-headers
 deps-rfc: []
 est-loc: 150
 priority: null
