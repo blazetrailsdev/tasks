@@ -1,6 +1,6 @@
 ---
 title: "trailmap: build the scratch stats schema with the Stats pool's migrationContext, not a hand-rolled migration loop"
-status: draft
+status: closed
 updated: 2026-11-07
 rfc: "0136-trailmap"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone: its fallback (pool.migrationContext migrating its own pool) was ruled non-Rails when pool-migration-context-migrates-its-own-connection was closed (trails#9574: Rails 8.0 Migrator also goes through migration_connection; trailmap tests keep pointing Base at the database). test/models/stats-schema.ts:32 execMigration loop on trailmap origin/main ec6013a is the Rails-consistent shape."
 ---
 
 ## Context

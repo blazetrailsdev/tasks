@@ -1,6 +1,6 @@
 ---
 title: "trails-cli-outside-app-dispatch-mirrors-cli-rb"
-status: draft
+status: ready
 updated: 2026-11-07
 rfc: "0171-thor-port"
 cluster: null

@@ -12,7 +12,7 @@ priority: null
 pr: trailmap#127
 claim: "2026-11-07T04:46:56Z"
 assignee: "api-compare-gem-ports-without-api-rows"
-blocked-by: "alert in trailmap#127; after deploy, set btwhooks STATS_SYNC_LOG to stats-sync-job.log"
+blocked-by: "trailmap#127 merged+deployed 2026-11-07; operator step still open: btwhooks STATS_SYNC_LOG is still /home/dean/github/blazetrailsdev/stats-sync.log, not stats-sync-job.log"
 closed-reason: null
 ---
 

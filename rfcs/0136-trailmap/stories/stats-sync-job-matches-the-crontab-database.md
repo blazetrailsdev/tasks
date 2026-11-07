@@ -1,7 +1,7 @@
 ---
 title: "Compare the job's stats database with the crontab's before cutover"
-status: blocked
-updated: 2026-11-01
+status: ready
+updated: 2026-11-07
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: "2026-11-01T14:56:30Z"
-assignee: "attribute-rejects-a-name-that-shadows-base"
-blocked-by: "The trial has not started: on 2026-11-01 dokku worker=0 and stats-job.db does not exist, so there is no job run to compare. Needs the seed (scripts/seed-stats-job-db.sh), dokku config and worker=1, then nightly runs."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

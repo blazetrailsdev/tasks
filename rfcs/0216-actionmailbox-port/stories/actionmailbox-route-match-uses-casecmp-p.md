@@ -1,6 +1,6 @@
 ---
 title: "Route#isMatch String arm uses a ported String#casecmp?"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0216-actionmailbox-port"
 cluster: null

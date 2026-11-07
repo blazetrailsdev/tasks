@@ -1,7 +1,7 @@
 ---
 title: "port-application-command-and-argv-scrubber"
-status: ready
-updated: 2026-10-04
+status: in-progress
+updated: 2026-11-07
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -12,9 +12,9 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9845
+claim: "2026-11-07T20:22:41Z"
+assignee: "frameworks-test-runs-in-isolation-via-register-spec-type"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "trails-new-edge-and-main-options"
-status: ready
-updated: 2026-09-28
+status: in-progress
+updated: 2026-11-07
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 7
-pr: null
-claim: null
-assignee: null
+pr: trails#9844
+claim: "2026-11-07T20:15:25Z"
+assignee: "benchmark-generator-adds-ips-dependency"
 blocked-by: null
 closed-reason: null
 ---

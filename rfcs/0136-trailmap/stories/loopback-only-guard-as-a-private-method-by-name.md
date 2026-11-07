@@ -1,7 +1,7 @@
 ---
 title: "LoopbackOnly: register requireLoopback by name as a private method once trails supports both"
-status: blocked
-updated: 2026-10-29
+status: ready
+updated: 2026-11-07
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: "2026-10-29T12:51:28Z"
-assignee: "loopback-only-guard-as-a-private-method-by-name"
-blocked-by: "trails story ts-private-controller-method-is-an-action-method (0141) not landed; ownPublicMethodNames still counts TS-private methods"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

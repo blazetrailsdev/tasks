@@ -1,7 +1,7 @@
 ---
 title: "OptionParser#banner defaults to 'Usage: prog [options]'"
-status: draft
-updated: 2026-11-06
+status: ready
+updated: 2026-11-07
 rfc: "0171-thor-port"
 cluster: null
 packages: []

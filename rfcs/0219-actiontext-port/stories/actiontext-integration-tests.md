@@ -1,7 +1,7 @@
 ---
 title: "Port the controller, job and mailer render integration tests"
-status: draft
-updated: 2026-11-03
+status: ready
+updated: 2026-11-07
 rfc: "0219-actiontext-port"
 cluster: at-engine
 packages: ["actiontext"]

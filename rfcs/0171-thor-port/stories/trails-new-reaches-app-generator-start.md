@@ -1,7 +1,7 @@
 ---
 title: "trails-new-reaches-app-generator-start"
-status: ready
-updated: 2026-09-28
+status: done
+updated: 2026-11-07
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["split-app-generator-into-thor-commands"]
 deps-rfc: []
 est-loc: 300
 priority: 7
-pr: null
-claim: null
-assignee: null
+pr: trails#9586
+claim: "2026-11-07T20:15:25Z"
+assignee: "benchmark-generator-adds-ips-dependency"
 blocked-by: null
 closed-reason: null
 ---

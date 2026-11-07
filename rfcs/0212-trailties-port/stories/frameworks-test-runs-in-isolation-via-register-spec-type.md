@@ -1,6 +1,6 @@
 ---
 title: "frameworks-test-runs-in-isolation-via-register-spec-type"
-status: ready
+status: in-progress
 updated: 2026-11-07
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9845
+claim: "2026-11-07T20:22:41Z"
+assignee: "frameworks-test-runs-in-isolation-via-register-spec-type"
 blocked-by: null
 closed-reason: null
 ---

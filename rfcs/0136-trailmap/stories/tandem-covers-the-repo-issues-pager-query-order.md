@@ -1,7 +1,7 @@
 ---
 title: "script/tandem compares the repo issues pager links between the two apps"
 status: blocked
-updated: 2026-11-01
+updated: 2026-11-07
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: trailmap#106
 claim: "2026-11-01T14:56:30Z"
 assignee: "attribute-rejects-a-name-that-shadows-base"
-blocked-by: "Tandem shows ?page=2&state=closed DIFF because the deployed Rails image has the pre-#102 hand-written URL. Rerun after the next Rails deploy and close on SAME."
+blocked-by: "Still live 2026-11-07: trailmap-rails container dates 2026-10-26, before trailmap#102; rerun script/tandem after the next Rails deploy and close on SAME"
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "info-controller-renders-rails-info-templates"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

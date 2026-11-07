@@ -1,7 +1,7 @@
 ---
 title: "Port the action_text_rich_texts migration, dummy schema, models and fixtures"
-status: draft
-updated: 2026-11-03
+status: ready
+updated: 2026-11-07
 rfc: "0219-actiontext-port"
 cluster: at-models
 packages: ["actiontext"]

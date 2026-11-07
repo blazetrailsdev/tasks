@@ -1,6 +1,6 @@
 ---
 title: "TestRequest DEFAULT_ENV seats .b binary strings as Rails does"
-status: ready
+status: blocked
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-07T20:15:25Z"
+assignee: "benchmark-generator-adds-ips-dependency"
+blocked-by: "Awaiting owner decision: b() seats make URL#host/rawHostWithPort/remoteIp answer Uint8Array, breaking every ${host} URL interpolation and toBe('test.host') assertion across actionpack/actionview unless each reader decodes; approach and size need re-deciding"
 closed-reason: null
 ---
 

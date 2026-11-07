@@ -1,7 +1,7 @@
 ---
 title: "trailmap: suggested and draft dots on the pane page"
 status: blocked
-updated: 2026-10-29
+updated: 2026-11-07
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-10-29T12:51:28Z"
 assignee: "loopback-only-guard-as-a-private-method-by-name"
-blocked-by: "trailmap half done in this PR; needs ringo (btwebooks) per-pane endpoint to send pane_input"
+blocked-by: "trailmap half landed (pane-format.js:77 reads pane_input); ringo per-pane endpoint (webhook/panescreen.go) still sends no pane_input, re-checked 2026-11-07"
 closed-reason: null
 ---
 

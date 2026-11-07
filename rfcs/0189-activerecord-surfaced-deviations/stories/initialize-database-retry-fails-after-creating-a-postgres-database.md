@@ -1,6 +1,6 @@
 ---
 title: "initializeDatabase's NoDatabaseError retry leases from the stale pool after creating a PostgreSQL database"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

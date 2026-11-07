@@ -1,6 +1,6 @@
 ---
 title: "trails-cli-has-no-app-loader-exec-app"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0171-thor-port"
 cluster: null

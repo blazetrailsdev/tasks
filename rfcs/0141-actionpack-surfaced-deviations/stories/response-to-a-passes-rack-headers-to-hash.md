@@ -1,6 +1,6 @@
 ---
 title: "Response#to_a's @headers.to_hash answers a plain object from a JS-class Rack::Headers"
-status: ready
+status: blocked
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-07T20:15:25Z"
+assignee: "benchmark-generator-adds-ips-dependency"
+blocked-by: "Owner decision (2026-11-07): deferred from bundle. Headers extends Map leaves ~190 TS errors, 154 in rack headers.test.ts (headers_test.rb calls default/defaultProc/rassoc/flatten/keepIf/compareByIdentity on Headers); needs ~25 Hash methods re-implemented, ~300+ LOC, resize before scheduling"
 closed-reason: null
 ---
 

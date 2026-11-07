@@ -15,6 +15,7 @@ clusters:
   - at-models
   - at-views
   - at-engine
+priority: 4
 ---
 
 # RFC 0219 — Port ActionText (server side) over Trix and @rails/actiontext from npm

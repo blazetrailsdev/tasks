@@ -1,7 +1,7 @@
 ---
 title: "Port ActionText::Content and Rendering, with content_test"
-status: draft
-updated: 2026-11-03
+status: ready
+updated: 2026-11-07
 rfc: "0219-actiontext-port"
 cluster: at-content
 packages: ["actiontext"]

@@ -1,6 +1,6 @@
 ---
 title: "Converge db:system:change generator edits onto Rails private helpers"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0212-trailties-port"
 cluster: null

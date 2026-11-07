@@ -1,6 +1,6 @@
 ---
 title: "TestParser loads the TypeScript compiler on first use so Runner imports it directly"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0212-trailties-port"
 cluster: null

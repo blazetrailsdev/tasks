@@ -1,7 +1,7 @@
 ---
 title: "trailmap: send a message to a pane from its live view"
-status: blocked
-updated: 2026-10-22
+status: ready
+updated: 2026-11-07
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: "2026-10-22T19:15:33Z"
-assignee: "send-a-message-to-a-pane-from-its-live-view"
-blocked-by: "prerequisite: ringo (deanmarano/btwebooks) has no endpoint that sends a line of text to a pane — only GET /pane/<n>/screen and /ask/answer for parked questions. Per AC, POST /pane/<n>/send (JSON {text}, digits-only id, length cap, 404/410 for a gone pane, text refusal body) must be specified and built in ringo first."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

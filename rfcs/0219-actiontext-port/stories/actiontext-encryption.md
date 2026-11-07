@@ -1,7 +1,7 @@
 ---
 title: "Port ActionText::Encryption, EncryptedRichText and model_encryption_test"
-status: draft
-updated: 2026-11-03
+status: ready
+updated: 2026-11-07
 rfc: "0219-actiontext-port"
 cluster: at-models
 packages: ["actiontext"]

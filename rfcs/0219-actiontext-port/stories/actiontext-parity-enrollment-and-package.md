@@ -1,7 +1,7 @@
 ---
 title: "Create packages/actiontext and enroll it in parity:api and parity:test"
-status: draft
-updated: 2026-11-03
+status: ready
+updated: 2026-11-07
 rfc: "0219-actiontext-port"
 cluster: at-infra
 packages: ["actiontext"]

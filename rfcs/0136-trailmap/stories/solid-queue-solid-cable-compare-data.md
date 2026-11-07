@@ -12,7 +12,7 @@ priority: null
 pr: trailmap#127
 claim: "2026-11-07T04:46:56Z"
 assignee: "api-compare-gem-ports-without-api-rows"
-blocked-by: "api rows fixed by trailmap#127's parser; verify both tiles on /packages/solid-queue after the next sync"
+blocked-by: "trailmap#127 merged and deployed 2026-11-07 11:56Z; verify both tiles on /packages/solid-queue after the next nightly sync (last was 08:00, pre-deploy)"
 closed-reason: null
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Port ActionText::Record, RichText, Serialization and has_rich_text"
-status: draft
-updated: 2026-11-03
+status: ready
+updated: 2026-11-07
 rfc: "0219-actiontext-port"
 cluster: at-models
 packages: ["actiontext"]

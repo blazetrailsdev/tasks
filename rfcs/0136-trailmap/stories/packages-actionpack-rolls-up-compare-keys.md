@@ -12,7 +12,7 @@ priority: null
 pr: trailmap#127
 claim: "2026-11-07T04:46:56Z"
 assignee: "api-compare-gem-ports-without-api-rows"
-blocked-by: "code in trailmap#127; AC4 needs trails#9825's compareKeys synced, then tandem SAME on stats-job.db"
+blocked-by: "trailmap#127 merged and deployed 2026-11-07 11:56Z, after that day's 08:00 sync; AC4 (tandem SAME on stats-job.db) awaits the next nightly sync"
 closed-reason: null
 ---
 

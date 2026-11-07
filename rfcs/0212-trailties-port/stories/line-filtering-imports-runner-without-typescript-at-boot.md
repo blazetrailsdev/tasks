@@ -1,6 +1,6 @@
 ---
 title: "LineFiltering imports Runner directly once runner.ts no longer pulls typescript at load"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0212-trailties-port"
 cluster: null
