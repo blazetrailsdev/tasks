@@ -15,6 +15,7 @@ packages:
   - "scripts"
   - "actionview"
   - "html-sanitizer"
+  - "nokogiri"
 clusters:
   - "denominator"
   - "call-gate"
