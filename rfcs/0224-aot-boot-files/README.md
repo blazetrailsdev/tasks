@@ -10,7 +10,6 @@ packages:
   - trailties
   - actionpack
   - "trails-tsc"
-max-est-loc: 600
 clusters: []
 ---
 
