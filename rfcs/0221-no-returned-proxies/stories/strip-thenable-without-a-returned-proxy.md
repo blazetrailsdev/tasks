@@ -5,7 +5,8 @@ updated: 2026-11-07
 rfc: "0221-no-returned-proxies"
 cluster: factory-returned
 packages: ["activesupport"]
-deps: []
+deps:
+  - strip-thenable-lifetime-of-hidden-then
 deps-rfc: []
 est-loc: 100
 priority: null
