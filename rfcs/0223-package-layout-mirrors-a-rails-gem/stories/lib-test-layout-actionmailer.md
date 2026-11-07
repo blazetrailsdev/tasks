@@ -1,6 +1,6 @@
 ---
 title: "Move actionmailer to lib/ + test/"
-status: ready
+status: in-progress
 updated: 2026-11-07
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: layout-migration
@@ -9,9 +9,9 @@ deps: [lib-test-layout-ruby-compat]
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9839
+claim: "2026-11-07T17:09:23Z"
+assignee: "lib-test-layout-actioncable"
 blocked-by: null
 ---
 

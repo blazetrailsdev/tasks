@@ -1,7 +1,7 @@
 ---
 title: "test_unit generators extend TestUnit::Generators::Base"
-status: draft
-updated: 2026-11-06
+status: done
+updated: 2026-11-07
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9789
+claim: "2026-11-07T17:17:13Z"
+assignee: "app-generator-adds-master-key-and-credentials"
 blocked-by: null
 closed-reason: null
 ---

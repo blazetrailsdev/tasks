@@ -1,6 +1,6 @@
 ---
 title: "Route#isMatch String arm uses a ported String#casecmp?"
-status: draft
+status: in-progress
 updated: 2026-11-07
 rfc: "0216-actionmailbox-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9841
+claim: "2026-11-07T17:17:13Z"
+assignee: "app-generator-adds-master-key-and-credentials"
 blocked-by: null
 closed-reason: null
 ---

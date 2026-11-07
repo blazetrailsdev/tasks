@@ -1,6 +1,6 @@
 ---
 title: "Port the integration_test generator"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0212-trailties-port"
 cluster: null

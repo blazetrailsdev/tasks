@@ -1,7 +1,7 @@
 ---
 title: "Move actioncable to lib/ + test/"
-status: ready
-updated: 2026-11-06
+status: in-progress
+updated: 2026-11-07
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: layout-migration
 packages: [actioncable]
@@ -9,9 +9,9 @@ deps: [lib-test-layout-ruby-compat]
 deps-rfc: []
 est-loc: 230
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9839
+claim: "2026-11-07T17:09:23Z"
+assignee: "lib-test-layout-actioncable"
 blocked-by: null
 ---
 

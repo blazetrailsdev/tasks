@@ -1,6 +1,6 @@
 ---
 title: "Router test RootMailbox extends ActionMailbox::Base"
-status: draft
+status: ready
 updated: 2026-11-07
 rfc: "0216-actionmailbox-port"
 cluster: null

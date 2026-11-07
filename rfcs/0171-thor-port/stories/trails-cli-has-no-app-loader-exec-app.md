@@ -1,7 +1,7 @@
 ---
 title: "trails-cli-has-no-app-loader-exec-app"
-status: ready
-updated: 2026-09-28
+status: in-progress
+updated: 2026-11-07
 rfc: "0171-thor-port"
 cluster: null
 packages: ["trailties"]
@@ -13,9 +13,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: 6
-pr: null
-claim: null
-assignee: null
+pr: trails#9842
+claim: "2026-11-07T17:47:13Z"
+assignee: "actionmailbox-router-test-root-mailbox-extends-base"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "UploadedFile#initialize drops the encode!/force_encoding UTF-8 arm for filename and head"
-status: claimed
+status: blocked
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: "2026-11-07T16:47:12Z"
-assignee: "burn-down-newly-measured-assertion-mismatches"
-blocked-by: null
+claim: null
+assignee: null
+blocked-by: "needs owner decision: making Rack::Multipart::Parser hand an ASCII-8BIT filename/head out as a Uint8Array (CLAUDE.md 'A String has no encoding tag either') reds ~20 rack multipart/multipart_parser tests that compare data[:filename] with a string literal (Ruby binary==UTF-8 for ASCII); decide how those assertions port before the UploadedFile encode/force_encoding arm can land"
 closed-reason: null
 ---
 

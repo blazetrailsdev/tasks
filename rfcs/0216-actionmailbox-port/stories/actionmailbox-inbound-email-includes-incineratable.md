@@ -1,7 +1,7 @@
 ---
 title: "Include Incineratable in ActionMailbox::InboundEmail in Rails' order"
-status: draft
-updated: 2026-11-06
+status: ready
+updated: 2026-11-07
 rfc: "0216-actionmailbox-port"
 cluster: null
 packages: []

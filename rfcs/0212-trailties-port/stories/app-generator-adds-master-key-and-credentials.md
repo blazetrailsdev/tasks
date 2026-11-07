@@ -1,7 +1,7 @@
 ---
 title: "app-generator-adds-master-key-and-credentials"
-status: draft
-updated: 2026-11-06
+status: blocked
+updated: 2026-11-07
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-07T17:17:13Z"
+assignee: "app-generator-adds-master-key-and-credentials"
+blocked-by: "generator steps land in trails#9841; the two un-skips need secret-key-base-credentials-arm (Configuration#secretKeyBase credentials arm)"
 closed-reason: null
 ---
 

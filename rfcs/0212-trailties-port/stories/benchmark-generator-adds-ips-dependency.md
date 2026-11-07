@@ -1,7 +1,7 @@
 ---
 title: "BenchmarkGenerator adds the benchmark-ips dependency like Rails' add_ips_to_gemfile"
-status: draft
-updated: 2026-11-06
+status: ready
+updated: 2026-11-07
 rfc: "0212-trailties-port"
 cluster: null
 packages: []

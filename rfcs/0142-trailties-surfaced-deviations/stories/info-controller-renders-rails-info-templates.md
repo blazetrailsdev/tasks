@@ -1,6 +1,6 @@
 ---
 title: "info-controller-renders-rails-info-templates"
-status: claimed
+status: in-progress
 updated: 2026-11-07
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 7
-pr: null
+pr: trails#9838
 claim: "2026-11-07T16:47:12Z"
 assignee: "burn-down-newly-measured-assertion-mismatches"
 blocked-by: null

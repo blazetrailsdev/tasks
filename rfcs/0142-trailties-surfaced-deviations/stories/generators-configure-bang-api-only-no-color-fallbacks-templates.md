@@ -1,6 +1,6 @@
 ---
 title: "generators-configure-bang-api-only-no-color-fallbacks-templates"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
