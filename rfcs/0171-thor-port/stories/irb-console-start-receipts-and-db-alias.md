@@ -5,7 +5,8 @@ updated: 2026-11-06
 rfc: "0171-thor-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - port-irb-setup-conf-and-run-for-irb-console
 deps-rfc: []
 est-loc: null
 priority: null
