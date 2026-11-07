@@ -5,7 +5,9 @@ updated: 2026-11-01
 rfc: "0136-trailmap"
 cluster: null
 packages: []
-deps: ["repoint-ringo-at-stats-job-db"]
+deps:
+  - repoint-ringo-at-stats-job-db
+  - stats-sync-job-matches-the-crontab-database
 deps-rfc: []
 est-loc: 100
 priority: null
