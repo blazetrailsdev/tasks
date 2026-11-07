@@ -1,6 +1,6 @@
 ---
 title: "trailties-all-loads-action-mailer-railtie"
-status: ready
+status: done
 updated: 2026-11-07
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9801
+claim: "2026-11-07T22:15:20Z"
+assignee: "trailties-all-loads-action-mailer-railtie"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "trails build writes an entry that installs the autoload imports, so an AOT build sees every app file"
-status: draft
+status: in-progress
 updated: 2026-11-07
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 130
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9850
+claim: "2026-11-07T22:18:32Z"
+assignee: "trails-build-writes-an-entry-that-installs-the-autoload-imports"
 blocked-by: null
 closed-reason: null
 ---
