@@ -13,6 +13,25 @@ packages:
   - trails-tsc
   - "activerecord-cli"
   - "activestorage"
+  - "scripts"
+  - "did-you-mean"
+  - "et-orbi"
+  - "mini-magick"
+  - "mini-mime"
+  - "net-smtp"
+  - "rack-session"
+  - "rack-test"
+  - "ruby-compat"
+  - "tse-compiler"
+  - "vitest-matchers"
+  - "website"
+  - "date"
+  - "html-sanitizer"
+  - "image-processing"
+  - "nokogiri"
+  - "tzinfo"
+  - "solid-queue"
+  - "solid-cable"
 clusters: []
 priority: 4
 ---
