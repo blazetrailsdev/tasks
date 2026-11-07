@@ -1,7 +1,7 @@
 ---
 title: "irb-console-start-receipts-and-db-alias"
-status: in-progress
-updated: 2026-11-06
+status: done
+updated: 2026-11-07
 rfc: "0171-thor-port"
 cluster: null
 packages: []

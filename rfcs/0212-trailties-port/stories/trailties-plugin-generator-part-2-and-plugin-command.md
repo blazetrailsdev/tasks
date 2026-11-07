@@ -1,7 +1,7 @@
 ---
 title: "Port PluginGenerator, part 2, and the plugin command"
-status: in-progress
-updated: 2026-11-06
+status: done
+updated: 2026-11-07
 rfc: "0212-trailties-port"
 cluster: tt-surface
 packages: ["trailties"]

@@ -1,7 +1,7 @@
 ---
 title: "remove-plugin-lookup-test-filter"
-status: ready
-updated: 2026-11-01
+status: done
+updated: 2026-11-07
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9797
+claim: "2026-11-07T10:47:07Z"
+assignee: "port-plugin-helpers-with-new-plugin"
 blocked-by: null
 closed-reason: null
 ---

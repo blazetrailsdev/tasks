@@ -1,7 +1,7 @@
 ---
 title: "Port ActionMailbox::Engine and config/routes.rb, and load the engine from trailties/all"
-status: ready
-updated: 2026-11-06
+status: in-progress
+updated: 2026-11-07
 rfc: "0216-actionmailbox-port"
 cluster: amb-engine
 packages: ["actionmailbox", "trailties"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#9826
+claim: "2026-11-07T10:17:09Z"
+assignee: "actionmailbox-engine-routes-and-trailties-wiring"
 blocked-by: null
 closed-reason: null
 ---

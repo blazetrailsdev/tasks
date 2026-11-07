@@ -1,7 +1,7 @@
 ---
 title: "trailties-move-tests-remaining"
-status: in-progress
-updated: 2026-11-06
+status: done
+updated: 2026-11-07
 rfc: "0212-trailties-port"
 cluster: null
 packages: [scripts]
