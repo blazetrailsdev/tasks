@@ -1,7 +1,7 @@
 ---
 title: "trails: date, html-sanitizer, image-processing, nokogiri and tzinfo have no Rails counterpart in the package summary"
 status: ready
-updated: 2026-11-06
+updated: 2026-11-07
 rfc: "0136-trailmap"
 cluster: null
 packages: ["scripts", "date", "html-sanitizer", "image-processing", "nokogiri", "tzinfo"]

@@ -1,7 +1,7 @@
 ---
 title: "trailmap: /packages/:name says a trails-only package has no Rails counterpart instead of showing empty tiles"
 status: ready
-updated: 2026-11-06
+updated: 2026-11-07
 rfc: "0136-trailmap"
 cluster: null
 packages:

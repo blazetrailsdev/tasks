@@ -1,6 +1,6 @@
 ---
 title: "stripThenable hides `then` without returning a Proxy"
-status: ready
+status: in-progress
 updated: 2026-11-07
 rfc: "0221-no-returned-proxies"
 cluster: factory-returned
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9821
+claim: "2026-11-07T03:17:27Z"
+assignee: "strip-thenable-without-a-returned-proxy"
 blocked-by: null
 ---
 

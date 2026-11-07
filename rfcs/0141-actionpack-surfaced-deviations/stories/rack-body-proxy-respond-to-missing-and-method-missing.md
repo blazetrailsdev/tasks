@@ -1,7 +1,7 @@
 ---
 title: "Rack::BodyProxy respond_to_missing?/method_missing diverge from body_proxy.rb (invented delegate, no super/include_all)"
-status: ready
-updated: 2026-10-19
+status: in-progress
+updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9822
+claim: "2026-11-07T03:06:36Z"
+assignee: "mail-structured-fields-parse-binary-values-without-utf8-decode"
 blocked-by: null
 closed-reason: null
 ---

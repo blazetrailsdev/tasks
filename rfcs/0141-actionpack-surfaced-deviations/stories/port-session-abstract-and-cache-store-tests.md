@@ -1,6 +1,6 @@
 ---
 title: "Port the abstract-store, abstract-secure-store and cache-store session tests"
-status: claimed
+status: in-progress
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["cache-store-async-over-npm-clients", "middleware-stack-callbacks-and-ses
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#9820
 claim: "2026-11-07T02:47:09Z"
 assignee: "permit-and-expect-reject-array-filters-at-compile-time"
 blocked-by: null

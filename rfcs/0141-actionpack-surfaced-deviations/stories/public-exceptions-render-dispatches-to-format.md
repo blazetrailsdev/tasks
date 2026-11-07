@@ -1,6 +1,6 @@
 ---
 title: "PublicExceptions#render_html filters I18n.locale through an invented LOCALE_RE"
-status: claimed
+status: in-progress
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: null
+pr: trails#9820
 claim: "2026-11-07T02:47:09Z"
 assignee: "permit-and-expect-reject-array-filters-at-compile-time"
 blocked-by: null

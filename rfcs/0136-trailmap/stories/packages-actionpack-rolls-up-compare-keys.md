@@ -1,7 +1,7 @@
 ---
 title: "trailmap: /packages/actionpack shows its api and test compare numbers"
 status: ready
-updated: 2026-11-06
+updated: 2026-11-07
 rfc: "0136-trailmap"
 cluster: null
 packages: ["actionpack"]

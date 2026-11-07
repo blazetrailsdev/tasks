@@ -1,6 +1,6 @@
 ---
 title: "trailmap: /packages/:name/deviations renders a NULL mark matched as 'null / 0' (twins disagree)"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0136-trailmap"
 cluster: null

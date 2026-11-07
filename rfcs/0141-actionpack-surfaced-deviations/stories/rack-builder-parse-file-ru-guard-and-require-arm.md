@@ -1,6 +1,6 @@
 ---
 title: "rack: Builder.parse_file takes the .ru guard and the require arm"
-status: claimed
+status: in-progress
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#9820
 claim: "2026-11-07T02:47:09Z"
 assignee: "permit-and-expect-reject-array-filters-at-compile-time"
 blocked-by: null

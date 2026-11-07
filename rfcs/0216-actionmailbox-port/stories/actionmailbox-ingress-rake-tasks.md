@@ -1,7 +1,7 @@
 ---
 title: "Port ActionMailbox's ingress rake tasks (exim, postfix, qmail)"
-status: ready
-updated: 2026-11-06
+status: in-progress
+updated: 2026-11-07
 rfc: "0216-actionmailbox-port"
 cluster: amb-ingress
 packages: ["actionmailbox"]
@@ -9,9 +9,9 @@ deps: ["actionmailbox-relayer"]
 deps-rfc: []
 est-loc: 200
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#9823
+claim: "2026-11-07T03:47:13Z"
+assignee: "actionmailbox-ingress-rake-tasks"
 blocked-by: null
 closed-reason: null
 ---

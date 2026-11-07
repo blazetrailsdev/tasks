@@ -1,7 +1,7 @@
 ---
 title: "Mail structured fields parse binary header values byte-wise instead of a UTF-8 decode in Field#parseField"
-status: draft
-updated: 2026-11-06
+status: in-progress
+updated: 2026-11-07
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9822
+claim: "2026-11-07T03:06:36Z"
+assignee: "mail-structured-fields-parse-binary-values-without-utf8-decode"
 blocked-by: null
 closed-reason: null
 ---

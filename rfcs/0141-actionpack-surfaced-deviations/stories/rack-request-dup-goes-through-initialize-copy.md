@@ -1,7 +1,7 @@
 ---
 title: "Rack::Request: drop the invented dup(); req.dup is rbObjDup through Env#initializeCopy"
-status: ready
-updated: 2026-10-22
+status: in-progress
+updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9822
+claim: "2026-11-07T03:06:36Z"
+assignee: "mail-structured-fields-parse-binary-values-without-utf8-decode"
 blocked-by: null
 closed-reason: null
 ---
