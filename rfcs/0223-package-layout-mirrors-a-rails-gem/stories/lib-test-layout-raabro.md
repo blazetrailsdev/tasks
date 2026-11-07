@@ -1,6 +1,6 @@
 ---
 title: "Move raabro to lib/ + test/"
-status: claimed
+status: ready
 updated: 2026-11-07
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: layout-migration
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 70
 priority: null
 pr: null
-claim: "2026-11-07T00:48:28Z"
-assignee: "lib-test-layout-actioncable"
+claim: null
+assignee: null
 blocked-by: null
 ---
 

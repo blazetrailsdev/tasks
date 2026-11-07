@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat's lazy `yaml` backend is resolved without a Proxy"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0221-no-returned-proxies"
 cluster: factory-returned

@@ -1,6 +1,6 @@
 ---
 title: "permit / expect type a filter as string or hash; Rails flattens nested array filters"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

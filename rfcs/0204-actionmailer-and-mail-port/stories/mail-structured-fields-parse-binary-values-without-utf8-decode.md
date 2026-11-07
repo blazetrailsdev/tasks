@@ -1,6 +1,6 @@
 ---
 title: "Mail structured fields parse binary header values byte-wise instead of a UTF-8 decode in Field#parseField"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Burn down the assertion mismatches first measured for actionpack, rack and trailties"
 status: ready
-updated: 2026-09-01
+updated: 2026-11-07
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: [scripts]

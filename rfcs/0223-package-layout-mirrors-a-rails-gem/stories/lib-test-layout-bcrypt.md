@@ -1,6 +1,6 @@
 ---
 title: "Move bcrypt to lib/ + test/"
-status: claimed
+status: done
 updated: 2026-11-07
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: layout-migration
@@ -9,7 +9,7 @@ deps: [lib-test-layout-ruby-compat]
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#9815
 claim: "2026-11-07T00:48:28Z"
 assignee: "lib-test-layout-actioncable"
 blocked-by: null

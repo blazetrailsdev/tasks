@@ -1,6 +1,6 @@
 ---
 title: "reloader.test.ts drives a real ActiveSupport::Reloader subclass, not a stub"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "rbFBinding resolves top-level constants without returning a Proxy over self"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0221-no-returned-proxies"
 cluster: factory-returned

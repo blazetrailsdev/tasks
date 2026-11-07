@@ -1,7 +1,7 @@
 ---
 title: "trailties/all requires action_mailer/railtie, which its loadPath table omits"
-status: in-progress
-updated: 2026-11-06
+status: done
+updated: 2026-11-07
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
 packages: []

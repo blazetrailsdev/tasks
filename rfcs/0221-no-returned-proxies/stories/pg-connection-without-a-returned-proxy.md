@@ -1,6 +1,6 @@
 ---
 title: "pgConnection returns a Connection, not a Proxy over one"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0221-no-returned-proxies"
 cluster: factory-returned

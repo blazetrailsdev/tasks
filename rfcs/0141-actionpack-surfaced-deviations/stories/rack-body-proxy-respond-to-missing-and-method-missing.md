@@ -1,6 +1,6 @@
 ---
 title: "Rack::BodyProxy respond_to_missing?/method_missing diverge from body_proxy.rb (invented delegate, no super/include_all)"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

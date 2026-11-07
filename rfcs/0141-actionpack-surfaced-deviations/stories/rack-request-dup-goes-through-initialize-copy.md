@@ -1,6 +1,6 @@
 ---
 title: "Rack::Request: drop the invented dup(); req.dup is rbObjDup through Env#initializeCopy"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

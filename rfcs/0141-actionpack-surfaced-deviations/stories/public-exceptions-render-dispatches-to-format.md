@@ -1,6 +1,6 @@
 ---
 title: "PublicExceptions#render_html filters I18n.locale through an invented LOCALE_RE"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

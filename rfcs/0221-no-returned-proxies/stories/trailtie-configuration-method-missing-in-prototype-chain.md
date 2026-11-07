@@ -1,6 +1,6 @@
 ---
 title: "Trailtie::Configuration answers config names through the prototype chain"
-status: claimed
+status: blocked
 updated: 2026-11-07
 rfc: "0221-no-returned-proxies"
 cluster: constructor-returned
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#9814
 claim: "2026-11-07T00:47:13Z"
 assignee: "multibyte-chars-method-missing-in-prototype-chain"
-blocked-by: null
+blocked-by: "Owner decision needed: a prototype-chain set trap cannot intercept assignment to a getter-only accessor (config.eagerLoadNamespaces = 1 throws TypeError before the trap; Rails railtie/configuration.rb:99-111 raises NoMethodError via method_missing). Converging needs either a setter per config reader or keeping the returned Proxy. Found in trails#9814 (dynamic-options.test.ts:36)."
 ---
 
 ## Context

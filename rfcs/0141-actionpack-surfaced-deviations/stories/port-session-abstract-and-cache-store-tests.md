@@ -1,6 +1,6 @@
 ---
 title: "Port the abstract-store, abstract-secure-store and cache-store session tests"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

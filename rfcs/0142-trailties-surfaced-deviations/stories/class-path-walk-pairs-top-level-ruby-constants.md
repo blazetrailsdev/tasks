@@ -1,6 +1,6 @@
 ---
 title: "class-path-walk-pairs-top-level-ruby-constants"
-status: draft
+status: closed
 updated: 2026-11-07
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: a top-level Ruby constant needs no table row (its JS name is its Ruby path); class-paths' receipt demand now skips it in trails#9812"
 ---
 
 # Pair top-level Ruby constants in the class-path walk (DummyConfig)

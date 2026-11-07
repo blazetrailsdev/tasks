@@ -1,7 +1,7 @@
 ---
 title: "Rack::Response#has_header? / get_header / set_header / delete_header raise ArgumentError unless String and act on a Rack::Headers"
 status: ready
-updated: 2026-10-19
+updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
