@@ -17,3 +17,8 @@ closed-reason: null
 ---
 
 cron-wrapper.sh mails EMAIL through msmtp on failure; StatsSyncJob writes only the verdict line. Port the alert, and point the btwhooks stats watcher at stats-sync-job.log, before the crontab is removed.
+
+The mail path exists now: trailmap#125 vendored `@blazetrails/actionmailer`, so
+the alert is a mailer delivered from the job. Ringo's `STATS_SYNC_LOG` still
+names the crontab's `stats-sync.log`; point it at the job's log as part of this
+story.
