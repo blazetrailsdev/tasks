@@ -14,6 +14,7 @@ packages:
   # The parity tooling itself lives in trails' scripts/.
   - "scripts"
   - "actionview"
+  - "html-sanitizer"
 clusters:
   - "denominator"
   - "call-gate"
