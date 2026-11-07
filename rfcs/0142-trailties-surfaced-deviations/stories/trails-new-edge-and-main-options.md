@@ -1,6 +1,6 @@
 ---
 title: "trails-new-edge-and-main-options"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

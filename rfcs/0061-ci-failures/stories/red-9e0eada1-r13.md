@@ -1,6 +1,6 @@
 ---
 title: "Unit Tests (2), Active Record PostgreSQL Tests (1) failing on main @9e0eada1"
-status: ready
+status: closed
 updated: 2026-11-07
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-07T21:32:37Z"
+assignee: "red-9e0eada1-r13"
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a code break: hosted runner image rolled ubuntu-latest from 24.04 to 26.04 (ImageMagick 7.1.2, new ffprobe); same image-processing/mini-magick/audio-analyzer failures as red-3045df8b, fixed by trails#9847 pinning runs-on to ubuntu-24.04."
 ---
 
 ## Context

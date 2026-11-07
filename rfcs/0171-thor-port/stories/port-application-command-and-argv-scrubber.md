@@ -1,6 +1,6 @@
 ---
 title: "port-application-command-and-argv-scrubber"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0171-thor-port"
 cluster: null

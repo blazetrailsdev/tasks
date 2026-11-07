@@ -1,6 +1,6 @@
 ---
 title: "Ruby manifest extracts lib/rails/generators classes from activerecord/actioncable/activejob/actionmailer"
-status: ready
+status: in-progress
 updated: 2026-11-07
 rfc: "0171-thor-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9848
+claim: "2026-11-07T21:13:13Z"
+assignee: "port-integration-system-multidb-actiontext-generators"
 blocked-by: null
 closed-reason: null
 ---

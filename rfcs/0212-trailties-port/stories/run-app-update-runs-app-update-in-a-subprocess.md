@@ -1,6 +1,6 @@
 ---
 title: "run-app-update-runs-app-update-in-a-subprocess"
-status: ready
+status: claimed
 updated: 2026-11-07
 rfc: "0212-trailties-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-07T21:45:36Z"
+assignee: "run-app-update-runs-app-update-in-a-subprocess"
 blocked-by: null
 closed-reason: null
 ---

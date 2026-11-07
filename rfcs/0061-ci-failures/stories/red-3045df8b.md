@@ -1,6 +1,6 @@
 ---
 title: "Unit Tests (2), Active Record MariaDB Tests (1), Active Record PostgreSQL Tests (1), Active Record SQLite Tests (1) failing on main @3045df8b"
-status: ready
+status: done
 updated: 2026-11-07
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: trails#9847
+claim: "2026-11-07T21:27:48Z"
+assignee: "red-3045df8b"
 blocked-by: null
 closed-reason: null
 ---

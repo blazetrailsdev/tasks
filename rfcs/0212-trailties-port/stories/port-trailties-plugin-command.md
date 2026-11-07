@@ -1,6 +1,6 @@
 ---
 title: "port-trailties-plugin-command"
-status: ready
+status: in-progress
 updated: 2026-11-07
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9846
+claim: "2026-11-07T21:15:24Z"
+assignee: "port-trailties-plugin-command"
 blocked-by: null
 closed-reason: null
 ---
