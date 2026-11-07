@@ -1,7 +1,7 @@
 ---
 title: "PerFormTokensControllerTest reads the token through assert_select and Base64.urlsafe_decode64"
-status: ready
-updated: 2026-10-19
+status: done
+updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9819
+claim: "2026-11-07T02:17:10Z"
+assignee: "mail-structured-fields-parse-binary-values-without-utf8-decode"
 blocked-by: null
 closed-reason: null
 ---

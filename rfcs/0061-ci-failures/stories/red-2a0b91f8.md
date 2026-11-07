@@ -1,6 +1,6 @@
 ---
 title: "Unit Tests (2) failing on main @2a0b91f8"
-status: ready
+status: done
 updated: 2026-11-07
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: trails#9818
+claim: "2026-11-07T02:19:10Z"
+assignee: "red-2a0b91f8"
 blocked-by: null
 closed-reason: null
 ---

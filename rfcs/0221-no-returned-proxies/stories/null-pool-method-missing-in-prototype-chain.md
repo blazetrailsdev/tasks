@@ -1,6 +1,6 @@
 ---
 title: "ConnectionPool's NullPool raises through the prototype chain"
-status: claimed
+status: done
 updated: 2026-11-07
 rfc: "0221-no-returned-proxies"
 cluster: constructor-returned
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#9814
 claim: "2026-11-07T00:47:13Z"
 assignee: "multibyte-chars-method-missing-in-prototype-chain"
 blocked-by: null

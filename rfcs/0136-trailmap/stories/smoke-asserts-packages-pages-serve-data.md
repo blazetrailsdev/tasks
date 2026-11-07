@@ -1,7 +1,7 @@
 ---
 title: "smoke-prod tier 2 asserts /packages serves package data"
-status: ready
-updated: 2026-11-06
+status: in-progress
+updated: 2026-11-07
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#126
+claim: "2026-11-07T01:47:08Z"
+assignee: "deviations-mark-null-matched-renders-null"
 blocked-by: null
 closed-reason: null
 ---

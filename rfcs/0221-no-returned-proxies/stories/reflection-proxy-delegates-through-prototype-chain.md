@@ -1,7 +1,7 @@
 ---
 title: "AssociationScope's ReflectionProxy delegates through the prototype chain"
-status: ready
-updated: 2026-11-05
+status: in-progress
+updated: 2026-11-07
 rfc: "0221-no-returned-proxies"
 cluster: delegator
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9817
+claim: "2026-11-07T01:47:10Z"
+assignee: "reflection-proxy-delegates-through-prototype-chain"
 blocked-by: null
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "ParamBuilder#make_params answers a null-prototype object, not a HashWithIndifferentAccess"
-status: ready
-updated: 2026-11-06
+status: closed
+updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-07T02:17:10Z"
+assignee: "mail-structured-fields-parse-binary-values-without-utf8-decode"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: packages/actionpack/CLAUDE.md § 'Request params are a null-prototype plain object (ParamBuilder#make_params)' — owner ruling 2026-10-18 keeps makeParams a null-prototype object and closed the sibling HWIA story as PERMANENT; the response-parser half landed in trails#9076."
 ---
 
 ## Context

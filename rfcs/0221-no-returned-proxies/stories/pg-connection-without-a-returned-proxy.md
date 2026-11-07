@@ -1,6 +1,6 @@
 ---
 title: "pgConnection returns a Connection, not a Proxy over one"
-status: ready
+status: in-progress
 updated: 2026-11-07
 rfc: "0221-no-returned-proxies"
 cluster: factory-returned
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9816
+claim: "2026-11-07T01:17:06Z"
+assignee: "pg-connection-without-a-returned-proxy"
 blocked-by: null
 ---
 

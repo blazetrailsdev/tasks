@@ -1,7 +1,7 @@
 ---
 title: "Port the abstract-store, abstract-secure-store and cache-store session tests"
-status: ready
-updated: 2026-10-19
+status: claimed
+updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: ["actionpack"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-07T02:47:09Z"
+assignee: "permit-and-expect-reject-array-filters-at-compile-time"
 blocked-by: null
 closed-reason: null
 ---

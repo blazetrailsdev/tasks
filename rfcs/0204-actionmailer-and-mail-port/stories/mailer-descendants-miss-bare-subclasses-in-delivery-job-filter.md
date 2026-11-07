@@ -1,6 +1,6 @@
 ---
 title: "ActionMailer::Base.descendants misses bare subclasses in delivery_job_filter"
-status: draft
+status: done
 updated: 2026-11-07
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9819
+claim: "2026-11-07T02:17:10Z"
+assignee: "mail-structured-fields-parse-binary-values-without-utf8-decode"
 blocked-by: null
 closed-reason: null
 ---
