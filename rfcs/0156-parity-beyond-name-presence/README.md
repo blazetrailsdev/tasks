@@ -16,6 +16,9 @@ packages:
   - "actionview"
   - "html-sanitizer"
   - "nokogiri"
+  - "date"
+  - "image-processing"
+  - "tzinfo"
 clusters:
   - "denominator"
   - "call-gate"
