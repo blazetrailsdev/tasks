@@ -1,6 +1,6 @@
 ---
 title: "Rack::Request::Env: getHeader reads null on a miss; eachHeader returns env / an enumerator"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

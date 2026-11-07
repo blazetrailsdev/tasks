@@ -1,6 +1,6 @@
 ---
 title: "withRoutesHelpers rejects a real RouteSet at the type level"
-status: claimed
+status: in-progress
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#9836
 claim: "2026-11-07T15:47:15Z"
 assignee: "response-to-a-passes-rack-headers-to-hash"
 blocked-by: null

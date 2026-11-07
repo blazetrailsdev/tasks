@@ -1,6 +1,6 @@
 ---
 title: "test-response-html-parsed-body-at-xpath"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

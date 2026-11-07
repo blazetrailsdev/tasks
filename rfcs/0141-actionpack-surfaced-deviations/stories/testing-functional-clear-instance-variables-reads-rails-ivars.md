@@ -1,6 +1,6 @@
 ---
 title: "Testing::Functional#clear_instance_variables_between_requests and #recycle! read and write the ivars Rails does"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

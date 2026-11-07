@@ -1,6 +1,6 @@
 ---
 title: "Burn down the assertion mismatches first measured for actionpack, rack and trailties"
-status: ready
+status: claimed
 updated: 2026-11-07
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-07T16:47:12Z"
+assignee: "burn-down-newly-measured-assertion-mismatches"
 blocked-by: null
 closed-reason: null
 ---

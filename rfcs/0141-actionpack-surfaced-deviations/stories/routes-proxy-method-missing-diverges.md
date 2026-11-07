@@ -1,6 +1,6 @@
 ---
 title: "RoutesProxy#method_missing is split into a Proxy trap and an invented _dispatch"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

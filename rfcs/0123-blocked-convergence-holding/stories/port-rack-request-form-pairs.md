@@ -1,6 +1,6 @@
 ---
 title: "port-rack-request-form-pairs"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0123-blocked-convergence-holding"
 cluster: null

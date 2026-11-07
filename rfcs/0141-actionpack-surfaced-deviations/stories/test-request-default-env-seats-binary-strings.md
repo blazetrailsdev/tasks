@@ -1,6 +1,6 @@
 ---
 title: "TestRequest DEFAULT_ENV seats .b binary strings as Rails does"
-status: ready
+status: claimed
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-07T16:47:12Z"
+assignee: "burn-down-newly-measured-assertion-mismatches"
 blocked-by: null
 closed-reason: null
 ---

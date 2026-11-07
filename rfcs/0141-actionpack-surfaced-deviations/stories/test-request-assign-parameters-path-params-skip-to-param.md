@@ -1,6 +1,6 @@
 ---
 title: "TestRequest#assign_parameters stringifies path parameters instead of calling to_param"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

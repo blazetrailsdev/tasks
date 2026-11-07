@@ -1,6 +1,6 @@
 ---
 title: "rack: bump the vendored Rack anchor from 3.1.14 to 3.2 and re-baseline"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

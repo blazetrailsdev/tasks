@@ -1,6 +1,6 @@
 ---
 title: "actionview: ViewPaths._prefixes memoizes the abstract-superclass arm and guards a missing isAbstract; Rails does neither (view_paths.rb:23-29)"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

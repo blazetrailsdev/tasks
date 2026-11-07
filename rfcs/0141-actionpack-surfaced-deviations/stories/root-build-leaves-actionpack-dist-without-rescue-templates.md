@@ -1,6 +1,6 @@
 ---
 title: "Root build leaves actionpack's dist without its rescue templates, so a packed actionpack can't render error pages"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "trailties' welcome and PWA controllers expand skip_forgery_protection by hand"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

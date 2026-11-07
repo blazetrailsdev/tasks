@@ -1,7 +1,7 @@
 ---
 title: "Port the integration_test generator"
-status: ready
-updated: 2026-10-08
+status: in-progress
+updated: 2026-11-07
 rfc: "0212-trailties-port"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["port-generators-hook-for-and-app-generators-options"]
 deps-rfc: []
 est-loc: 150
 priority: 6
-pr: null
-claim: null
-assignee: null
+pr: trails#9837
+claim: "2026-11-07T16:17:07Z"
+assignee: "with-integration-routing-is-a-namespace-not-a-concern"
 blocked-by: null
 closed-reason: null
 ---

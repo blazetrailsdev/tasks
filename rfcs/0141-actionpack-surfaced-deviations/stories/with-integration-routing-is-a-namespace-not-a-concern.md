@@ -1,7 +1,7 @@
 ---
 title: "WithIntegrationRouting is a TS namespace: IntegrationTest installs its with_routing / create_routes / reset_routes by hand"
-status: ready
-updated: 2026-10-19
+status: in-progress
+updated: 2026-11-07
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9837
+claim: "2026-11-07T16:17:07Z"
+assignee: "with-integration-routing-is-a-namespace-not-a-concern"
 blocked-by: null
 closed-reason: null
 ---
