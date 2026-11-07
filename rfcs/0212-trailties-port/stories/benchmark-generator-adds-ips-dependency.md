@@ -5,7 +5,8 @@ updated: 2026-11-07
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - converge-generators-actions-gemfile-family-onto-package-json
 deps-rfc: []
 est-loc: 120
 priority: null
