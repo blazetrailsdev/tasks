@@ -1,7 +1,7 @@
 ---
 title: "Port ActionMailbox::TestHelper and ActionMailbox::TestCase"
-status: ready
-updated: 2026-11-06
+status: in-progress
+updated: 2026-11-07
 rfc: "0216-actionmailbox-port"
 cluster: amb-core
 packages: ["actionmailbox"]
@@ -9,9 +9,9 @@ deps: ["actionmailbox-record-inbound-email-message-id-and-routable"]
 deps-rfc: []
 est-loc: 250
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#9824
+claim: "2026-11-07T04:17:04Z"
+assignee: "actionmailbox-test-helper-and-test-case"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "StatsSyncJob failures alert like the cron wrapper did"
-status: ready
+status: claimed
 updated: 2026-11-07
 rfc: "0136-trailmap"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 100
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-07T04:46:56Z"
+assignee: "api-compare-gem-ports-without-api-rows"
 blocked-by: null
 closed-reason: null
 ---

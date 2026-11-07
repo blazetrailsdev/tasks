@@ -1,6 +1,6 @@
 ---
 title: "trailmap: /packages/actionpack shows its api and test compare numbers"
-status: ready
+status: claimed
 updated: 2026-11-07
 rfc: "0136-trailmap"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-07T04:46:56Z"
+assignee: "api-compare-gem-ports-without-api-rows"
 blocked-by: null
 closed-reason: null
 ---
