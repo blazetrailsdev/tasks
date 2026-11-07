@@ -1,7 +1,7 @@
 ---
 title: "ActionMailer::Base loads when first referenced, not when its railtie is imported"
-status: in-progress
-updated: 2026-11-06
+status: done
+updated: 2026-11-07
 rfc: "0204-actionmailer-and-mail-port"
 cluster: null
 packages: []

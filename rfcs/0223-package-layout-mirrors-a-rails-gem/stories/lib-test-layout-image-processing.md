@@ -1,7 +1,7 @@
 ---
 title: "Move image-processing to lib/ + test/"
-status: in-progress
-updated: 2026-11-06
+status: done
+updated: 2026-11-07
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: layout-migration
 packages: [image-processing]

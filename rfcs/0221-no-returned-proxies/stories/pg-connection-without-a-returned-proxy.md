@@ -1,7 +1,7 @@
 ---
 title: "pgConnection returns a Connection, not a Proxy over one"
 status: ready
-updated: 2026-11-05
+updated: 2026-11-07
 rfc: "0221-no-returned-proxies"
 cluster: factory-returned
 packages: ["activerecord"]

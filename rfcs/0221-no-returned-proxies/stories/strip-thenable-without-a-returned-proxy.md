@@ -1,7 +1,7 @@
 ---
 title: "stripThenable hides `then` without returning a Proxy"
 status: ready
-updated: 2026-11-05
+updated: 2026-11-07
 rfc: "0221-no-returned-proxies"
 cluster: factory-returned
 packages: ["activesupport"]

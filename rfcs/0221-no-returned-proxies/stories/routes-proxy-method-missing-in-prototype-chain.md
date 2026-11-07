@@ -1,7 +1,7 @@
 ---
 title: "RoutesProxy answers url helpers through the prototype chain"
-status: ready
-updated: 2026-11-05
+status: claimed
+updated: 2026-11-07
 rfc: "0221-no-returned-proxies"
 cluster: constructor-returned
 packages: ["actionpack"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-07T00:47:13Z"
+assignee: "multibyte-chars-method-missing-in-prototype-chain"
 blocked-by: null
 ---
 
