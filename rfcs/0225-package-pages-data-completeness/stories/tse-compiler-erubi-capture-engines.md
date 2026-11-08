@@ -1,6 +1,6 @@
 ---
 title: "tse-compiler-erubi-capture-engines"
-status: draft
+status: blocked
 updated: 2026-11-08
 rfc: "0225-package-pages-data-completeness"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-08T21:35:21Z"
+assignee: "tse-compiler-erubi-capture-engines"
+blocked-by: "waiting on trails#9874 (ports Erubi::Engine into packages/tse-compiler/lib/erubi.ts + test/test.test.ts); capture engines subclass Engine, which is not on main yet"
 closed-reason: null
 ---
 

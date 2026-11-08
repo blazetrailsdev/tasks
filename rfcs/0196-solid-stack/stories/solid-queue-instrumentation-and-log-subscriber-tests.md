@@ -1,6 +1,6 @@
 ---
 title: "Port solid-queue instrumentation_test and log_subscriber_test"
-status: ready
+status: in-progress
 updated: 2026-11-08
 rfc: "0196-solid-stack"
 cluster: solid-stack
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#9885
+claim: "2026-11-08T21:34:33Z"
+assignee: "solid-queue-instrumentation-and-log-subscriber-tests"
 blocked-by: null
 closed-reason: null
 ---

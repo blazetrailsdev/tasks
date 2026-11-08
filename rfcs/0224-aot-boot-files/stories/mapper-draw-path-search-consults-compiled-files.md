@@ -1,6 +1,6 @@
 ---
 title: "Mapper#draw's path search finds a registered compiled routes file"
-status: in-progress
+status: done
 updated: 2026-11-08
 rfc: "0224-aot-boot-files"
 cluster: null

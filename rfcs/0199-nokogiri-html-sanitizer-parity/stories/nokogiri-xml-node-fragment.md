@@ -1,6 +1,6 @@
 ---
 title: "nokogiri-xml-node-fragment"
-status: draft
+status: ready
 updated: 2026-11-08
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
