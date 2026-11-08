@@ -5,7 +5,8 @@ updated: 2026-11-08
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - secret-key-base-credentials-arm
 deps-rfc: []
 est-loc: null
 priority: null
