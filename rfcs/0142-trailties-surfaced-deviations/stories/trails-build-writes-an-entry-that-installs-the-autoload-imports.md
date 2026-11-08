@@ -1,7 +1,7 @@
 ---
 title: "trails build writes an entry that installs the autoload imports, so an AOT build sees every app file"
-status: in-progress
-updated: 2026-11-07
+status: done
+updated: 2026-11-08
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trails-tsc", "zeitwerk"]
