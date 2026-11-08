@@ -31,8 +31,9 @@ solid-cache (`:852`) and tzinfo (`:868`) turn their tests tile off silently.
 - [ ] `UpstreamPackage` gains `testsExcludedReason?: string`. `validateSources`
       refuses `compareTests: false` without one, and `vendor/sources.test.ts`
       covers the refusal.
-- [ ] Every current `compareTests: false` entry gets a reason. An entry that a
-      sibling story in this RFC is about to enroll says so and names that story.
+- [ ] Every current `compareTests: false` entry gets a reason that names the
+      story enrolling it: this RFC's enrollment stories, or 0196's
+      `solid-cache-package-skeleton` for solid-cache.
 - [ ] `package-summary.ts` appends the reason to the description as
       `(Not in parity:test: …)`, alongside the api one, with a test in
       `package-summary.test.ts`.

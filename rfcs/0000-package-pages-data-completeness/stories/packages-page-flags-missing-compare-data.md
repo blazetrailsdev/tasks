@@ -1,5 +1,5 @@
 ---
-title: "trailmap: after each sync, report packages with a counterpart but no api or tests rows"
+title: "trailmap (repo blazetrailsdev/trailmap): after each sync, report packages with a counterpart but no api or tests rows"
 status: draft
 updated: 2026-11-07
 rfc: "0000-package-pages-data-completeness"
@@ -36,7 +36,9 @@ trailmap#127 already mails a failed sync.
 - [ ] A test seeds one package with each shape (complete, missing api with no
       reason, missing tests with a reason) and asserts that only the
       no-reason one is reported.
-- [ ] On the first sync after trails#9825, did-you-mean, et-orbi, mini-magick,
-      mini-mime, net-smtp, rack-session and rack-test have api tiles, and
-      image-processing, html-sanitizer, date and nokogiri have a counterpart.
-      Record the check's output in the PR.
+- [ ] The check runs against a fixture of the 2026-11-07 snapshot, which has
+      no api rows for did-you-mean, et-orbi, mini-magick, mini-mime, net-smtp,
+      rack-session, rack-test, solid-cable and solid-queue, and NULL
+      `compare_keys` for actionpack. It reports exactly those 10 packages.
+- [ ] The PR lands in blazetrailsdev/trailmap, and this story is closed with
+      `tasks done <id> --pr trailmap#N`.

@@ -38,5 +38,15 @@ in `test/`.
       erubi's, map them with `RUBY_FILE_TS_OVERRIDES` or record unported files.
       Do not rename or restructure the package here. A low percentage is
       expected.
+- [ ] The source's package entry is named `erubi` with `portedBy: "tse-compiler"`,
+      so `compareKeysOf("tse-compiler")` returns `["erubi"]`
+      (`scripts/parity/package-summary.ts` `entriesOf`). A test in
+      `package-summary.test.ts` asserts it. No `PACKAGE_DIR_OVERRIDES` row is
+      needed unless api-compare keys the rows by another name. If it does, add
+      `erubi: "tse-compiler"` in `scripts/api-compare/config.ts`.
+- [ ] `vendor/fetch.ts`'s completeness check (`:227`) finds
+      `vendor/erubi/v1.13.1/test/`.
+- [ ] After the next sync, `/packages/tse-compiler` shows an api tile and a
+      tests tile.
 - [ ] `package-summary.test.ts` drops `tse-compiler` from the no-counterpart
       list, and `railsCounterpartOf("tse-compiler")` returns `"erubi"`.
