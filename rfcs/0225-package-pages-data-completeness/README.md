@@ -22,6 +22,7 @@ related-rfcs:
   - 0222-trailmap-package-pages
   - 0199-nokogiri-html-sanitizer-parity
   - 0223-package-layout-mirrors-a-rails-gem
+priority: 2
 ---
 
 # RFC 0225 — Package pages data completeness

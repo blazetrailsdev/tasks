@@ -1,6 +1,6 @@
 ---
 title: "parity:test: enroll racc tests under the nokogiri package"
-status: draft
+status: ready
 updated: 2026-11-08
 rfc: "0225-package-pages-data-completeness"
 cluster: test-enrollment

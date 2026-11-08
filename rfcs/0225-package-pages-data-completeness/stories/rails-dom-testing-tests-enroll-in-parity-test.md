@@ -1,6 +1,6 @@
 ---
 title: "parity:test: enroll rails-dom-testing's tests under actionview"
-status: draft
+status: ready
 updated: 2026-11-08
 rfc: "0225-package-pages-data-completeness"
 cluster: test-enrollment

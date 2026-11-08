@@ -1,6 +1,6 @@
 ---
 title: "parity:test: enroll image_processing's test/ so /packages/image-processing gets a tests tile"
-status: draft
+status: ready
 updated: 2026-11-08
 rfc: "0225-package-pages-data-completeness"
 cluster: test-enrollment

@@ -1,17 +1,17 @@
 ---
 title: "Seat each gem port's top-level module so class-paths can table it"
-status: draft
-updated: 2026-11-07
+status: claimed
+updated: 2026-11-08
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
 packages: ["nokogiri", "html-sanitizer", "date", "image-processing", "tzinfo"]
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: null
+priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-08T12:45:20Z"
+assignee: "nokogiri-xml-node-children-writer"
 blocked-by: null
 ---
 

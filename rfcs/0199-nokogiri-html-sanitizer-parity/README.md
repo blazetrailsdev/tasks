@@ -15,6 +15,7 @@ clusters: []
 related-rfcs:
   - "0176-actionview-helpers"
   - "0193-small-gem-ports-parity-100"
+priority: 4
 ---
 
 # RFC 0199 — Nokogiri and rails-html-sanitizer to parity

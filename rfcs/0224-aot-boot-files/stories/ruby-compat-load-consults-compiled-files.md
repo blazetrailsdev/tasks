@@ -1,6 +1,6 @@
 ---
 title: "Kernel#load and #require consult a map of compiled files before import(url)"
-status: ready
+status: in-progress
 updated: 2026-11-08
 rfc: "0224-aot-boot-files"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9863
+claim: "2026-11-08T12:40:56Z"
+assignee: "ruby-compat-load-consults-compiled-files"
 blocked-by: null
 closed-reason: null
 ---
