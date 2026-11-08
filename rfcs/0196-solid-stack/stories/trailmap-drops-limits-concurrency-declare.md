@@ -1,14 +1,14 @@
 ---
 title: "trailmap drops its limitsConcurrency declare and hand-written bin/jobs"
-status: draft
-updated: 2026-11-01
+status: ready
+updated: 2026-11-08
 rfc: "0196-solid-stack"
 cluster: null
 packages: [solid-queue]
 deps: []
 deps-rfc: []
 est-loc: 20
-priority: null
+priority: 16
 pr: null
 claim: null
 assignee: null

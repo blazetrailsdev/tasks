@@ -1,6 +1,6 @@
 ---
 title: "The perry native ladder boots through the generated entry and /up answers 200"
-status: draft
+status: ready
 updated: 2026-11-08
 rfc: "0224-aot-boot-files"
 cluster: null

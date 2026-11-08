@@ -1,7 +1,7 @@
 ---
 title: "Port solid_queue:install"
-status: blocked
-updated: 2026-10-26
+status: closed
+updated: 2026-11-08
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-queue"]
@@ -14,8 +14,8 @@ est-loc: 150
 pr: null
 claim: "2026-10-26T17:35:59Z"
 assignee: "port-solid-queue-recurring-job"
-blocked-by: "needs Thor::Actions#template (thor-actions-template-is-unported) and generator source_root/template files (generators-have-no-thor-source-paths-or-template-files)"
-closed-reason: null
+blocked-by: null
+closed-reason: "Delivered by trails#9582 (8baa86b106): packages/solid-queue/src/generators/solid-queue/install/install-generator.ts + templates (bin/jobs, queue.yml, recurring.yml, queue_schema) on origin/main; blocker deps were satisfied"
 ---
 
 ## Context

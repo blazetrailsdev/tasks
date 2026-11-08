@@ -1,14 +1,14 @@
 ---
 title: "IrreversibleMigration is exported from activerecord"
-status: draft
-updated: 2026-10-31
+status: ready
+updated: 2026-11-08
 rfc: "0196-solid-stack"
 cluster: null
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 15
 pr: null
 claim: null
 assignee: null

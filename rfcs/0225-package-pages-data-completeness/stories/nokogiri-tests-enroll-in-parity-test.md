@@ -1,7 +1,7 @@
 ---
 title: "parity:test: enroll nokogiri tests under the nokogiri package"
 status: draft
-updated: 2026-11-07
+updated: 2026-11-08
 rfc: "0225-package-pages-data-completeness"
 cluster: test-enrollment
 packages: ["nokogiri", "scripts"]

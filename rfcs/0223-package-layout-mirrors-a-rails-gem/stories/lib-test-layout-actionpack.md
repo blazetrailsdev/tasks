@@ -1,7 +1,7 @@
 ---
 title: "Move actionpack to lib/ + test/"
-status: in-progress
-updated: 2026-11-07
+status: done
+updated: 2026-11-08
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: layout-migration
 packages: [actionpack]

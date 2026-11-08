@@ -1,7 +1,7 @@
 ---
 title: "AppGenerator runs the Solid install generators unless --skip-solid"
 status: ready
-updated: 2026-10-26
+updated: 2026-11-08
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["trailties"]
@@ -19,7 +19,7 @@ claim: null
 assignee: null
 blocked-by: null
 closed-reason: null
-priority: 9
+priority: 13
 ---
 
 ## Context

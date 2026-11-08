@@ -1,6 +1,6 @@
 ---
 title: "The boot sites that load app files by path go through rbFLoad / rbFRequireFile"
-status: draft
+status: ready
 updated: 2026-11-08
 rfc: "0224-aot-boot-files"
 cluster: null

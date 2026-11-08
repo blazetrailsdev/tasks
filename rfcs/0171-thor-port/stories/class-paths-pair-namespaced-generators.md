@@ -1,6 +1,6 @@
 ---
 title: "class-paths pairs same-named generators across Rails/TestUnit/ActiveRecord namespaces"
-status: claimed
+status: in-progress
 updated: 2026-11-08
 rfc: "0171-thor-port"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#9862
 claim: "2026-11-08T01:45:24Z"
 assignee: "class-paths-pair-namespaced-generators"
 blocked-by: null

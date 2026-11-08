@@ -1,14 +1,14 @@
 ---
 title: "generators-lookup-reaches-package-generators"
-status: draft
-updated: 2026-10-29
+status: ready
+updated: 2026-11-08
 rfc: "0196-solid-stack"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 8
 pr: null
 claim: null
 assignee: null

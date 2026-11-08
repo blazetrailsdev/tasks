@@ -1,6 +1,6 @@
 ---
 title: "Kernel#load and #require consult a map of compiled files before import(url)"
-status: draft
+status: ready
 updated: 2026-11-08
 rfc: "0224-aot-boot-files"
 cluster: null
