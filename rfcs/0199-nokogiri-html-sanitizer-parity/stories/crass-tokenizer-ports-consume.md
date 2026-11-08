@@ -1,6 +1,6 @@
 ---
 title: "crass-tokenizer-ports-consume"
-status: ready
+status: in-progress
 updated: 2026-11-08
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9888
+claim: "2026-11-08T22:20:27Z"
+assignee: "crass-tokenizer-ports-consume"
 blocked-by: null
 closed-reason: null
 ---

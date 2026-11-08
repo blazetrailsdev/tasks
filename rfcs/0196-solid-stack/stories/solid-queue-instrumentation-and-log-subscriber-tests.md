@@ -1,6 +1,6 @@
 ---
 title: "Port solid-queue instrumentation_test and log_subscriber_test"
-status: in-progress
+status: done
 updated: 2026-11-08
 rfc: "0196-solid-stack"
 cluster: solid-stack

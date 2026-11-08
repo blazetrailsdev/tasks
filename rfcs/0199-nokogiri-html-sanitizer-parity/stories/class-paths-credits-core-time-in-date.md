@@ -1,6 +1,6 @@
 ---
 title: "class-paths-credits-core-time-in-date"
-status: ready
+status: done
 updated: 2026-11-08
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9887
+claim: "2026-11-08T22:05:25Z"
+assignee: "class-paths-credits-core-time-in-date"
 blocked-by: null
 closed-reason: null
 ---

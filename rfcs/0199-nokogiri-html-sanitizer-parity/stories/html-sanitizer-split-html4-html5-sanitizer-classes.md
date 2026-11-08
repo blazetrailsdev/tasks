@@ -1,6 +1,6 @@
 ---
 title: "html-sanitizer-split-html4-html5-sanitizer-classes"
-status: ready
+status: claimed
 updated: 2026-11-08
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-08T22:50:32Z"
+assignee: "html-sanitizer-split-html4-html5-sanitizer-classes"
 blocked-by: null
 closed-reason: null
 ---
