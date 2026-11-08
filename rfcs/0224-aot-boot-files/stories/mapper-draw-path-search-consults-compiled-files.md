@@ -1,6 +1,6 @@
 ---
 title: "Mapper#draw's path search finds a registered compiled routes file"
-status: draft
+status: in-progress
 updated: 2026-11-08
 rfc: "0224-aot-boot-files"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 1
+pr: trails#9884
+claim: "2026-11-08T20:45:20Z"
+assignee: "mapper-draw-path-search-consults-compiled-files"
 blocked-by: null
 closed-reason: null
 ---

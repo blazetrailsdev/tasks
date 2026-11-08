@@ -1,6 +1,6 @@
 ---
 title: "Move arel to lib/ + test/"
-status: claimed
+status: in-progress
 updated: 2026-11-08
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: layout-migration
@@ -9,7 +9,7 @@ deps: [lib-test-layout-ruby-compat]
 deps-rfc: []
 est-loc: 330
 priority: null
-pr: null
+pr: trails#9882
 claim: "2026-11-08T19:45:25Z"
 assignee: "lib-test-layout-arel"
 blocked-by: null
