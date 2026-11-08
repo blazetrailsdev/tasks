@@ -1,7 +1,7 @@
 ---
 title: "Move actionpack to lib/ + test/"
-status: ready
-updated: 2026-11-06
+status: in-progress
+updated: 2026-11-07
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: layout-migration
 packages: [actionpack]
@@ -9,9 +9,9 @@ deps: [lib-test-layout-ruby-compat]
 deps-rfc: []
 est-loc: 940
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9853
+claim: "2026-11-07T23:15:40Z"
+assignee: "lib-test-layout-actionpack"
 blocked-by: null
 ---
 

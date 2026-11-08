@@ -1,6 +1,6 @@
 ---
 title: "Move actionmailer to lib/ + test/"
-status: in-progress
+status: done
 updated: 2026-11-07
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: layout-migration

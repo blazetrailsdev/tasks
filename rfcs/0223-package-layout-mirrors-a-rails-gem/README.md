@@ -55,7 +55,7 @@ packages:
 clusters:
   - layout-tooling
   - layout-migration
-priority: 5
+priority: 3
 ---
 
 # RFC 0223 — Package layout mirrors a Rails gem: lib/ and test/
