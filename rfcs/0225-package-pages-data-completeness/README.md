@@ -1,5 +1,5 @@
 ---
-rfc: "0000-package-pages-data-completeness"
+rfc: "0225-package-pages-data-completeness"
 title: "Every package with an upstream counterpart shows api and tests data on trailmap's Packages page"
 status: active
 created: 2026-11-07
@@ -24,9 +24,7 @@ related-rfcs:
   - 0223-package-layout-mirrors-a-rails-gem
 ---
 
-<!-- Unnumbered until merge: scripts/finalize-rfc.mjs swaps 0000 for the assigned number at merge. -->
-
-# RFC — Package pages data completeness
+# RFC 0225 — Package pages data completeness
 
 ## Summary
 

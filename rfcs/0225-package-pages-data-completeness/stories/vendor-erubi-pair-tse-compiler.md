@@ -2,7 +2,7 @@
 title: "vendor erubi 1.13.1 as tse-compiler's counterpart and enroll it in parity:api and parity:test"
 status: draft
 updated: 2026-11-07
-rfc: "0000-package-pages-data-completeness"
+rfc: "0225-package-pages-data-completeness"
 cluster: pairing
 packages: ["tse-compiler", "scripts"]
 deps: []

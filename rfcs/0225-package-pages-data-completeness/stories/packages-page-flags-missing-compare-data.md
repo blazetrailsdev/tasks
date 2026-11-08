@@ -2,7 +2,7 @@
 title: "trailmap (repo blazetrailsdev/trailmap): after each sync, report packages with a counterpart but no api or tests rows"
 status: draft
 updated: 2026-11-07
-rfc: "0000-package-pages-data-completeness"
+rfc: "0225-package-pages-data-completeness"
 cluster: trailmap-checks
 packages: []
 deps: [sources-tests-excluded-reason]

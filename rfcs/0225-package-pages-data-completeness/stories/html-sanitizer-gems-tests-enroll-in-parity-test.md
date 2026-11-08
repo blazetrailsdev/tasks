@@ -2,7 +2,7 @@
 title: "parity:test: enroll rails-html-sanitizer, loofah and crass tests under html-sanitizer"
 status: draft
 updated: 2026-11-07
-rfc: "0000-package-pages-data-completeness"
+rfc: "0225-package-pages-data-completeness"
 cluster: test-enrollment
 packages: ["html-sanitizer", "scripts"]
 deps: [sources-tests-excluded-reason]

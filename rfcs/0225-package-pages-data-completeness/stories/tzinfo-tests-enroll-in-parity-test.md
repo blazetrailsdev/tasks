@@ -2,7 +2,7 @@
 title: "parity:test: enroll tzinfo's test/ so /packages/tzinfo gets a tests tile"
 status: draft
 updated: 2026-11-07
-rfc: "0000-package-pages-data-completeness"
+rfc: "0225-package-pages-data-completeness"
 cluster: test-enrollment
 packages: ["tzinfo", "scripts"]
 deps: [sources-tests-excluded-reason, tzinfo-port-mirrors-lib-tzinfo-files]
