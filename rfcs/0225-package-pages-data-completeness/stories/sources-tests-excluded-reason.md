@@ -1,6 +1,6 @@
 ---
 title: "vendor/sources: every compareTests: false carries a testsExcludedReason, shown on the package page"
-status: claimed
+status: in-progress
 updated: 2026-11-08
 rfc: "0225-package-pages-data-completeness"
 cluster: pairing
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#9864
 claim: "2026-11-08T12:59:54Z"
 assignee: "sources-tests-excluded-reason"
 blocked-by: null

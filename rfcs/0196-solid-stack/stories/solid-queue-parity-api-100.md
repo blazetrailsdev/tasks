@@ -1,6 +1,6 @@
 ---
 title: "solid-queue parity:api reaches 100% (dynamic methods, og_interruptible, arity)"
-status: ready
+status: claimed
 updated: 2026-11-08
 rfc: "0196-solid-stack"
 cluster: solid-stack
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-08T13:45:22Z"
+assignee: "solid-queue-parity-api-100"
 blocked-by: null
 closed-reason: null
 ---

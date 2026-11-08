@@ -1,6 +1,6 @@
 ---
 title: "Port solid-queue jobs_lifecycle, concurrency_controls, recurring_tasks and lifecycle_hooks integration tests"
-status: ready
+status: in-progress
 updated: 2026-11-08
 rfc: "0196-solid-stack"
 cluster: solid-stack
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#9866
+claim: "2026-11-08T13:15:37Z"
+assignee: "solid-cable-test-parity-100"
 blocked-by: null
 closed-reason: null
 ---

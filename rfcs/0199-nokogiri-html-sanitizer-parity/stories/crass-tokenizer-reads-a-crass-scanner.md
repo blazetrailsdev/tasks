@@ -1,6 +1,6 @@
 ---
 title: "crass: port Crass::Scanner and read it from @s, as tokenizer.rb does"
-status: claimed
+status: in-progress
 updated: 2026-11-08
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 3
-pr: null
+pr: trails#9865
 claim: "2026-11-08T12:45:20Z"
 assignee: "nokogiri-xml-node-children-writer"
 blocked-by: null

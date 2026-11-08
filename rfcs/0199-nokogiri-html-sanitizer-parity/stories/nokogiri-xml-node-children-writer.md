@@ -1,6 +1,6 @@
 ---
 title: "nokogiri: port XML::Node#children= with coerce"
-status: claimed
+status: in-progress
 updated: 2026-11-08
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 1
-pr: null
+pr: trails#9865
 claim: "2026-11-08T12:45:20Z"
 assignee: "nokogiri-xml-node-children-writer"
 blocked-by: null
