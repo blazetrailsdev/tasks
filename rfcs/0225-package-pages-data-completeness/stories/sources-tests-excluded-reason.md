@@ -1,6 +1,6 @@
 ---
 title: "vendor/sources: every compareTests: false carries a testsExcludedReason, shown on the package page"
-status: in-progress
+status: done
 updated: 2026-11-08
 rfc: "0225-package-pages-data-completeness"
 cluster: pairing

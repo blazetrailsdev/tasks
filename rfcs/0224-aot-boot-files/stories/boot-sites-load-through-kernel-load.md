@@ -1,6 +1,6 @@
 ---
 title: "The boot sites that load app files by path go through rbFLoad / rbFRequireFile"
-status: ready
+status: done
 updated: 2026-11-08
 rfc: "0224-aot-boot-files"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["ruby-compat-load-consults-compiled-files"]
 deps-rfc: []
 est-loc: 220
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9867
+claim: "2026-11-08T14:09:11Z"
+assignee: "boot-sites-load-through-kernel-load"
 blocked-by: null
 closed-reason: null
 ---

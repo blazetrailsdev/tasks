@@ -1,6 +1,6 @@
 ---
 title: "parity:test: enroll rails-dom-testing's tests under actionview"
-status: ready
+status: claimed
 updated: 2026-11-08
 rfc: "0225-package-pages-data-completeness"
 cluster: test-enrollment
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-08T14:45:24Z"
+assignee: "image-processing-tests-enroll-in-parity-test"
 blocked-by: null
 ---
 

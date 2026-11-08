@@ -1,6 +1,6 @@
 ---
 title: "port-irb-setup-conf-and-run-for-irb-console"
-status: in-progress
+status: done
 updated: 2026-11-08
 rfc: "0171-thor-port"
 cluster: null

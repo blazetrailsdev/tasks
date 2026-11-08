@@ -1,6 +1,6 @@
 ---
 title: "parity:test: enroll rails-html-sanitizer, loofah and crass tests under html-sanitizer"
-status: ready
+status: done
 updated: 2026-11-08
 rfc: "0225-package-pages-data-completeness"
 cluster: test-enrollment
@@ -9,9 +9,9 @@ deps: [sources-tests-excluded-reason]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9868
+claim: "2026-11-08T14:15:25Z"
+assignee: "html-sanitizer-gems-tests-enroll-in-parity-test"
 blocked-by: null
 ---
 
