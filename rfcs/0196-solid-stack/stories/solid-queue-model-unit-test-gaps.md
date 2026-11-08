@@ -1,6 +1,6 @@
 ---
 title: "Port solid-queue's missing model and unit tests (claimed/failed execution, process, supervisor, hooks)"
-status: in-progress
+status: done
 updated: 2026-11-08
 rfc: "0196-solid-stack"
 cluster: solid-stack

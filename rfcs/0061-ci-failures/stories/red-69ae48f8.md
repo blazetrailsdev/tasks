@@ -1,6 +1,6 @@
 ---
 title: "Trailties Tests failing on main @69ae48f8"
-status: ready
+status: closed
 updated: 2026-11-08
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-08T16:04:02Z"
+assignee: "red-69ae48f8"
 blocked-by: null
-closed-reason: null
+closed-reason: "Flake: AppGeneratorTest > master option failed once (tse.ts:76 compiled-template import had no default); 69ae48f8 touched no trailties/thor/ruby-compat code, test passes locally, and Trailties Tests is green on the next main run 42497191263 (815df3f0)."
 ---
 
 ## Context

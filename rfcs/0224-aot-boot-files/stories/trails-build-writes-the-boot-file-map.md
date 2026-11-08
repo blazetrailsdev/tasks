@@ -1,6 +1,6 @@
 ---
 title: "trails build writes .trails/boot.generated.js and the entry installs it"
-status: in-progress
+status: done
 updated: 2026-11-08
 rfc: "0224-aot-boot-files"
 cluster: null

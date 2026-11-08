@@ -1,6 +1,6 @@
 ---
 title: "nokogiri: port XML::Node#children= with coerce"
-status: in-progress
+status: done
 updated: 2026-11-08
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null

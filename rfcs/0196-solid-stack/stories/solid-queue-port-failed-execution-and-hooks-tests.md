@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-port-failed-execution-and-hooks-tests"
-status: in-progress
+status: done
 updated: 2026-11-08
 rfc: "0196-solid-stack"
 cluster: null

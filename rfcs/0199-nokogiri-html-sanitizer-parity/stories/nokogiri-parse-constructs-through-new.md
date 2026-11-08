@@ -1,6 +1,6 @@
 ---
 title: "nokogiri: parse through new, as XML::Document.parse and HTML5::DocumentFragment.parse do"
-status: in-progress
+status: done
 updated: 2026-11-08
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null

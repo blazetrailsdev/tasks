@@ -1,7 +1,7 @@
 ---
 title: "trails-cli-outside-app-dispatch-mirrors-cli-rb"
-status: ready
-updated: 2026-11-07
+status: in-progress
+updated: 2026-11-08
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9873
+claim: "2026-11-08T16:45:23Z"
+assignee: "trails-cli-outside-app-dispatch-mirrors-cli-rb"
 blocked-by: null
 closed-reason: null
 ---

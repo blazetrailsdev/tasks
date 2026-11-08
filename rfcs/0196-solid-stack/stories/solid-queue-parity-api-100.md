@@ -1,6 +1,6 @@
 ---
 title: "solid-queue parity:api reaches 100% (dynamic methods, og_interruptible, arity)"
-status: in-progress
+status: done
 updated: 2026-11-08
 rfc: "0196-solid-stack"
 cluster: solid-stack

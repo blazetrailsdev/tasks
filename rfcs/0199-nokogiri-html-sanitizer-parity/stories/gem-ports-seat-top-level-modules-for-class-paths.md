@@ -1,6 +1,6 @@
 ---
 title: "Seat each gem port's top-level module so class-paths can table it"
-status: in-progress
+status: done
 updated: 2026-11-08
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
