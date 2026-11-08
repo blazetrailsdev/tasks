@@ -27,8 +27,18 @@ actionview's tests tile leaves out this gem entirely.
 
 ## Acceptance criteria
 
-- [ ] `testPath: "test"`, `compareTests: true`, registered in
-      `scripts/test-compare/`.
-- [ ] `pnpm parity:test` reports a `rails-dom-testing` row, and trailmap sums
-      it into actionview's tile through compare keys. actionview's own row has
-      a zero delta.
+- [ ] In `vendor/sources.ts`, `rails-dom-testing` each get `testPath` and
+      `compareTests: true`, in the same shape as mini_mime's entry
+      (`vendor/sources.ts:1009-1013`). Each `testsExcludedReason` from
+      `sources-tests-excluded-reason` is deleted.
+- [ ] `vendor/sources.test.ts` asserts that `testPathsManifest()` contains each
+      key, as it already does for `rack-session` (`:80`).
+- [ ] Each Ruby test file with no TS counterpart is a row in
+      `scripts/parity/unported-files/<key>.ts`, which `test-compare/compare.ts`
+      reads through `isTestFileUnported`. A row is a whole file, never a glob.
+- [ ] trailmap sums the `rails-dom-testing` row into actionview's tile
+      through `compareKeysOf("actionview")`, and actionview's own row has a
+      zero delta.
+- [ ] `pnpm parity:test` writes a row under each key, and every other
+      package's delta is zero. No tests are ported here: a low percentage is
+      expected, because this story adds the tile, not the coverage.

@@ -13,7 +13,6 @@ packages:
   - actionview
   - tzinfo
   - scripts
-  - trailmap
 clusters:
   - test-enrollment
   - pairing
@@ -54,7 +53,7 @@ Why each gap in the snapshot happened, as of 2026-11-07:
 | actionpack api and tests "no data"                                                                                                                               | `package_meta.compare_keys` NULL; rows sit under `actiondispatch`, `actioncontroller`, `abstractcontroller`, `actionpackversion` | fixed by trails#9825 and trailmap#127; verified by `packages-actionpack-rolls-up-compare-keys` (0136) after the next sync                              |
 | api "no data" for did-you-mean, et-orbi, mini-magick, mini-mime, net-smtp, rack-session, rack-test, solid-cable, solid-queue                                     | the sync parser matched the package with `(\w+)`, so hyphenated keys were dropped                                                | fixed by trailmap#127; solid-\* verified by `solid-queue-solid-cable-compare-data` (0136); the rest by `packages-page-flags-missing-compare-data` here |
 | image-processing, html-sanitizer, date, nokogiri listed trails-only                                                                                              | `railsCounterpartOf` skipped `compareApi: false` entries                                                                         | fixed by trails#9825 (api enrolled for all of them); the page shows it after the next sync. The latest synced commit (pr 9819) predates it             |
-| trails-only labelling for true trails-only packages                                                                                                              |                                                                                                                                  | `packages-page-names-trails-only-packages` (0136, in progress)                                                                                         |
+| empty sections for packages with no counterpart look like broken data                                                                                            | the page rendered NULL `rails_counterpart` as blank tiles                                                                        | `packages-page-names-trails-only-packages` (0136, in progress)                                                                                         |
 | tests tile missing for image-processing, html-sanitizer (rails-html-sanitizer, loofah, crass), nokogiri (nokogiri, racc), actionview's rails-dom-testing, tzinfo | `compareTests: false` in `vendor/sources.ts`, with no reason recorded                                                            | **this RFC**                                                                                                                                           |
 | tse-compiler listed trails-only                                                                                                                                  | erubi (Rails 8.0.2 locks 1.13.1, `vendor/rails/v8.0.2/Gemfile.lock:201`) is not vendored                                         | **this RFC**                                                                                                                                           |
 
@@ -68,10 +67,10 @@ the page will not reflect it until the 2026-11-08 sync.
    `apiExcludedReason` (`validateSources`). The package summary appends it to
    the package's description. A missing tile then always says why.
 2. **Enroll test-compare for every vendored gem with a TS port.** One story
-   per gem family, following the shape of `sqlite3-gem-tests-enroll-in-parity-test`.
-   Each story sets `testPath`, flips `compareTests`, registers the package in
-   `scripts/test-compare/`, and records each Rails test file with no TS
-   counterpart as an `unported-files` row. Enrollment ports no tests: a low
+   per gem family, following mini_mime's entry (`vendor/sources.ts:1009-1013`).
+   Each story sets `testPath`, flips `compareTests`, asserts the key in
+   `vendor/sources.test.ts`, and records each Rails test file with no TS
+   counterpart as a row in `scripts/parity/unported-files/<key>.ts`. Enrollment ports no tests: a low
    percentage is fine, but a missing tile is not.
 3. **Pair tse-compiler with erubi.** Vendor erubi v1.13.1 with
    `portedBy: "tse-compiler"` and enroll api and tests. tse-compiler then drops

@@ -4,7 +4,7 @@ status: draft
 updated: 2026-11-07
 rfc: "0000-package-pages-data-completeness"
 cluster: trailmap-checks
-packages: ["trailmap"]
+packages: []
 deps: [sources-tests-excluded-reason]
 deps-rfc: []
 est-loc: 200

@@ -25,11 +25,19 @@ and 10/434); there is no tests tile.
 
 ## Acceptance criteria
 
-- [ ] Both gems have a `testPath` and `compareTests: true`, and are registered
-      in `scripts/test-compare/`.
-- [ ] Unported Ruby test files are `unported-files` rows, grouped by
-      directory if the register allows, otherwise one row each. If the row
-      count would push the PR past the LOC ceiling, enroll nokogiri here and
-      file racc as its own story.
-- [ ] `pnpm parity:test` reports `nokogiri` and `racc`. Every other package's
-      delta is zero.
+- [ ] In `vendor/sources.ts`, `nokogiri` and `racc` each get `testPath` and
+      `compareTests: true`, in the same shape as mini_mime's entry
+      (`vendor/sources.ts:1009-1013`). Each `testsExcludedReason` from
+      `sources-tests-excluded-reason` is deleted.
+- [ ] `vendor/sources.test.ts` asserts that `testPathsManifest()` contains each
+      key, as it already does for `rack-session` (`:80`).
+- [ ] Each Ruby test file with no TS counterpart is a row in
+      `scripts/parity/unported-files/<key>.ts`, which `test-compare/compare.ts`
+      reads through `isTestFileUnported`. A row is a whole file, never a glob.
+- [ ] nokogiri has 103 test files, so most of them are unported rows. If
+      nokogiri's and racc's rows together push the PR past the LOC ceiling,
+      enroll nokogiri here and file `racc-tests-enroll-in-parity-test` with
+      `tasks new`.
+- [ ] `pnpm parity:test` writes a row under each key, and every other
+      package's delta is zero. No tests are ported here: a low percentage is
+      expected, because this story adds the tile, not the coverage.

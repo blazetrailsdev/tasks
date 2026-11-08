@@ -1,13 +1,16 @@
 ---
 rfc: "0199-nokogiri-html-sanitizer-parity"
 title: "Nokogiri and rails-html-sanitizer to parity"
-status: closed
+status: active
 created: 2026-10-19
-updated: 2026-10-19
+updated: 2026-11-07
 owner: "@deanmarano"
 packages:
   - "nokogiri"
   - "html-sanitizer"
+  - "date"
+  - "image-processing"
+  - "tzinfo"
 clusters: []
 related-rfcs:
   - "0176-actionview-helpers"
@@ -179,3 +182,4 @@ list --rfc 0176-actionview-helpers` shows none of the six, and no README
 
 - 2026-10-19: initial RFC, split out of `0176-actionview-helpers` at the repo
   owner's direction; six stories to be rehomed after merge, one vendoring story filed.
+- 2026-11-07: reopened (active) for the four stories trails#9825 filed (tasks#325); `date`, `image-processing`, `tzinfo` declared for `gem-ports-seat-top-level-modules-for-class-paths`.

@@ -28,9 +28,17 @@ files. `packages/html-sanitizer/test/` already has `rails-api.test.ts`,
 
 ## Acceptance criteria
 
-- [ ] All three gems have a `testPath` and `compareTests: true`, and are
-      registered in `scripts/test-compare/`. Their rows roll up under
-      `html-sanitizer`'s compare keys.
-- [ ] A Ruby test file with no TS counterpart is an `unported-files` row.
-- [ ] `pnpm parity:test` reports all three keys. Every other package's delta is
-      zero.
+- [ ] In `vendor/sources.ts`, `rails-html-sanitizer`, `loofah` and `crass` each get `testPath` and
+      `compareTests: true`, in the same shape as mini_mime's entry
+      (`vendor/sources.ts:1009-1013`). Each `testsExcludedReason` from
+      `sources-tests-excluded-reason` is deleted.
+- [ ] `vendor/sources.test.ts` asserts that `testPathsManifest()` contains each
+      key, as it already does for `rack-session` (`:80`).
+- [ ] Each Ruby test file with no TS counterpart is a row in
+      `scripts/parity/unported-files/<key>.ts`, which `test-compare/compare.ts`
+      reads through `isTestFileUnported`. A row is a whole file, never a glob.
+- [ ] The three keys roll up into `/packages/html-sanitizer` through
+      `compareKeysOf("html-sanitizer")`.
+- [ ] `pnpm parity:test` writes a row under each key, and every other
+      package's delta is zero. No tests are ported here: a low percentage is
+      expected, because this story adds the tile, not the coverage.

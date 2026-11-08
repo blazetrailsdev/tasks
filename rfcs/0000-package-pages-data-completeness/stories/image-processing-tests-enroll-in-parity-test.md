@@ -27,9 +27,15 @@ by trails#9825.
 
 ## Acceptance criteria
 
-- [ ] `testPath: "test"`, `compareTests: true`, registered in
-      `scripts/test-compare/` like `sqlite3-gem-tests-enroll-in-parity-test`.
-      `vendor/sources.test.ts`'s `testPathsManifest` lists it.
-- [ ] `pnpm parity:test` reports an `image-processing` row. Every other
-      package's delta is zero.
-- [ ] No tests are ported here. A low percentage is expected.
+- [ ] In `vendor/sources.ts`, `image-processing` each get `testPath` and
+      `compareTests: true`, in the same shape as mini_mime's entry
+      (`vendor/sources.ts:1009-1013`). Each `testsExcludedReason` from
+      `sources-tests-excluded-reason` is deleted.
+- [ ] `vendor/sources.test.ts` asserts that `testPathsManifest()` contains each
+      key, as it already does for `rack-session` (`:80`).
+- [ ] Each Ruby test file with no TS counterpart is a row in
+      `scripts/parity/unported-files/<key>.ts`, which `test-compare/compare.ts`
+      reads through `isTestFileUnported`. A row is a whole file, never a glob.
+- [ ] `pnpm parity:test` writes a row under each key, and every other
+      package's delta is zero. No tests are ported here: a low percentage is
+      expected, because this story adds the tile, not the coverage.
