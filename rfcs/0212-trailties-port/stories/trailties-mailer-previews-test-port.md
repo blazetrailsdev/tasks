@@ -1,7 +1,7 @@
 ---
 title: "trailties-mailer-previews-test-port"
-status: claimed
-updated: 2026-11-07
+status: in-progress
+updated: 2026-11-08
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9855
 claim: "2026-11-07T22:45:22Z"
 assignee: "trailties-mailer-previews-test-port"
 blocked-by: null

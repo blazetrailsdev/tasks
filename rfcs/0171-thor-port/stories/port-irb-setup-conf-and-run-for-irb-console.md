@@ -1,7 +1,7 @@
 ---
 title: "port-irb-setup-conf-and-run-for-irb-console"
-status: ready
-updated: 2026-11-07
+status: claimed
+updated: 2026-11-08
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-08T00:45:28Z"
+assignee: "port-irb-setup-conf-and-run-for-irb-console"
 blocked-by: null
 closed-reason: null
 ---

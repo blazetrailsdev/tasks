@@ -1,7 +1,7 @@
 ---
 title: "trailties-port-application-initializers-load-path-remaining-tests"
-status: ready
-updated: 2026-11-07
+status: in-progress
+updated: 2026-11-08
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9854
+claim: "2026-11-08T00:15:22Z"
+assignee: "trailties-port-application-initializers-load-path-remaining-tests"
 blocked-by: null
 closed-reason: null
 ---
