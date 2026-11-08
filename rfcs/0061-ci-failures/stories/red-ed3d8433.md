@@ -1,6 +1,6 @@
 ---
 title: "Active Record PostgreSQL Tests (1) failing on main @ed3d8433"
-status: ready
+status: closed
 updated: 2026-11-08
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-08T18:38:42Z"
+assignee: "red-ed3d8433"
 blocked-by: null
-closed-reason: null
+closed-reason: "Infra flake: curl (56) fetching postgresql.org apt signing key in the pg client install step before any tests ran; no code break."
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "Move i18n to lib/ + test/"
-status: ready
-updated: 2026-11-06
+status: claimed
+updated: 2026-11-08
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: layout-migration
 packages: [i18n]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 110
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-08T18:45:24Z"
+assignee: "lib-test-layout-activemodel"
 blocked-by: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "mapper-draw-loads-through-compiled-files"
-status: ready
+status: in-progress
 updated: 2026-11-08
 rfc: "0224-aot-boot-files"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9876
+claim: "2026-11-08T18:15:19Z"
+assignee: "mapper-draw-loads-through-compiled-files"
 blocked-by: null
 closed-reason: null
 ---

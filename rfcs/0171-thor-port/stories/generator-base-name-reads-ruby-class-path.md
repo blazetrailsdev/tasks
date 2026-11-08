@@ -1,6 +1,6 @@
 ---
 title: "generator-base-name-reads-ruby-class-path"
-status: in-progress
+status: done
 updated: 2026-11-08
 rfc: "0171-thor-port"
 cluster: null

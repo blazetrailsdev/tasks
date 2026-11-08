@@ -1,7 +1,7 @@
 ---
 title: "Move actionview to lib/ + test/"
-status: ready
-updated: 2026-11-06
+status: in-progress
+updated: 2026-11-08
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: layout-migration
 packages: [actionview]
@@ -9,9 +9,9 @@ deps: [lib-test-layout-ruby-compat]
 deps-rfc: []
 est-loc: 390
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9877
+claim: "2026-11-08T18:34:33Z"
+assignee: "lib-test-layout-actionview"
 blocked-by: null
 ---
 
