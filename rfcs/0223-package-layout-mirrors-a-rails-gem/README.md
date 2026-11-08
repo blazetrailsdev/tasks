@@ -3,8 +3,9 @@ rfc: "0223-package-layout-mirrors-a-rails-gem"
 title: "Package layout mirrors a Rails gem: lib/ and test/"
 status: active
 created: 2026-11-05
-updated: 2026-11-05
+updated: 2026-11-07
 owner: "@deanmarano"
+max-est-loc: 3000
 packages:
   - actioncable
   - actionmailer
@@ -338,6 +339,8 @@ Prose:
 
 ## Rollout
 
+`max-est-loc` is 3000 because the per-package `git mv` stories for actionpack (940), activesupport (880) and activerecord (2970) are mechanical renames with import-path rewrites. Each must land in one PR so a package is never half-moved, and the CLAUDE.md single-mechanical-rename exception covers them.
+
 1. Phase 0 — `lib-test-layout-interim-exclude-tests-from-build`,
    `lib-test-layout-tooling-prep` (independent).
 2. Phase 1 (pilot) — `lib-test-layout-ruby-compat`. Its PR body records any
@@ -377,3 +380,4 @@ with a guarded server path that imports none of it.
 - 2026-11-05: initial RFC
 - 2026-11-05: owner rulings — always `test/`, `website` out of scope, shipped
   testing code stays in `lib/` with a server-path closure guard
+- 2026-11-07: `max-est-loc: 3000` for the three large mechanical package moves (see Rollout).
