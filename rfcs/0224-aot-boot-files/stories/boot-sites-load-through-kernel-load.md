@@ -25,13 +25,18 @@ the action-controller trailtie's helpers, and `loadSeed`.
 
 ## Change
 
-Each site calls `rbFLoad` (routes, sub-routes, initializers, seeds) or
-`rbFRequireFile` (environments, helpers) instead, which matches Rails'
-`load`/`require`. Leave `configFor` and `database` on their own reads unless the
-RFC's open question gets settled first.
+The sites that only load a file call `rbFLoad` (routes, initializers, seeds) or
+`rbFRequireFile` (environments, and `Application#requireEnvironmentBang`)
+instead, which matches Rails' `load`/`require`. Leave `configFor` and
+`database` on their own reads unless the RFC's open question gets settled
+first. `Mapper#draw` and the action-controller trailtie's helpers read the
+loaded file's exports, which neither port returns; they move to
+`mapper-draw-loads-through-compiled-files`.
 
 ## Acceptance
 
-- None of the eight sites calls `import(pathToFileURL` directly.
+- `RoutesReloader#loadPaths`, `load_environment_config`,
+  `loadConfigInitializer`, `loadSeed` and `requireEnvironmentBang` do not call
+  `import(pathToFileURL` directly.
 - Existing boot, routes-reload and seed tests pass unchanged.
-- One test per site shows that a `registerCompiledFiles` thunk is used.
+- One test per converted site shows that a `registerCompiledFiles` thunk is used.
