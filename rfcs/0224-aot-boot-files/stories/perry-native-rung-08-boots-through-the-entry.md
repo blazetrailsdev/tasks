@@ -1,6 +1,6 @@
 ---
 title: "The perry native ladder boots through the generated entry and /up answers 200"
-status: ready
+status: blocked
 updated: 2026-11-08
 rfc: "0224-aot-boot-files"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-08T17:01:06Z"
+assignee: "perry-native-rung-08-boots-through-the-entry"
+blocked-by: "perry wall 31: a Proxy in the prototype chain (RFC 0221, #9791, Generators.prototype) is never consulted; boot overflows in Configuration.appGenerators. Rungs 07/08 already import the entry on branch examples/perry-native (38657dc16b, 5742dade39)."
 closed-reason: null
 ---
 

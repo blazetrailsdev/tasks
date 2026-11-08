@@ -1,6 +1,6 @@
 ---
 title: "rails-dom-testing-port-dom-assertions-and-parser-selection-tests"
-status: draft
+status: claimed
 updated: 2026-11-08
 rfc: "0225-package-pages-data-completeness"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-08T17:45:28Z"
+assignee: "rails-dom-testing-port-dom-assertions-and-parser-selection-tests"
 blocked-by: null
 closed-reason: null
 ---

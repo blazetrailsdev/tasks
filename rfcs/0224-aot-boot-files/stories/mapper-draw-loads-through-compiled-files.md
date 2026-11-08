@@ -1,6 +1,6 @@
 ---
 title: "mapper-draw-loads-through-compiled-files"
-status: draft
+status: ready
 updated: 2026-11-08
 rfc: "0224-aot-boot-files"
 cluster: null

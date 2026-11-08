@@ -1,6 +1,6 @@
 ---
 title: "tse-compiler: mirror erubi's files so parity:api and parity:test credit erubi"
-status: draft
+status: in-progress
 updated: 2026-11-08
 rfc: "0225-package-pages-data-completeness"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9874
+claim: "2026-11-08T17:15:22Z"
+assignee: "nokogiri-html-sanitizer-misplaced-tests-renamed"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Cold-node boot test of .trails/entry.generated.js covering an out-of-root engine"
-status: draft
+status: claimed
 updated: 2026-11-08
 rfc: "0224-aot-boot-files"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-08T17:45:28Z"
+assignee: "rails-dom-testing-port-dom-assertions-and-parser-selection-tests"
 blocked-by: null
 closed-reason: null
 ---
