@@ -1,6 +1,6 @@
 ---
 title: "Move activerecord-cli to lib/ + test/"
-status: claimed
+status: in-progress
 updated: 2026-11-08
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: layout-migration
@@ -9,7 +9,7 @@ deps: [lib-test-layout-ruby-compat]
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#9878
 claim: "2026-11-08T18:45:24Z"
 assignee: "lib-test-layout-activemodel"
 blocked-by: null

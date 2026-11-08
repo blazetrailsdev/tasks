@@ -1,7 +1,7 @@
 ---
 title: "Move activesupport to lib/ + test/"
-status: ready
-updated: 2026-11-06
+status: in-progress
+updated: 2026-11-08
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: layout-migration
 packages: [activesupport]
@@ -9,9 +9,9 @@ deps: [lib-test-layout-ruby-compat]
 deps-rfc: []
 est-loc: 880
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9879
+claim: "2026-11-08T19:21:22Z"
+assignee: "lib-test-layout-activesupport"
 blocked-by: null
 ---
 

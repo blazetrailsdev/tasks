@@ -1,6 +1,6 @@
 ---
 title: "Cold-node boot test of .trails/entry.generated.js covering an out-of-root engine"
-status: in-progress
+status: done
 updated: 2026-11-08
 rfc: "0224-aot-boot-files"
 cluster: null

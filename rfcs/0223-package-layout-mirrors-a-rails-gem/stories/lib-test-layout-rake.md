@@ -1,7 +1,7 @@
 ---
 title: "Move rake to lib/ + test/"
-status: ready
-updated: 2026-11-06
+status: claimed
+updated: 2026-11-08
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: layout-migration
 packages: [rake]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 170
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-08T19:45:25Z"
+assignee: "lib-test-layout-arel"
 blocked-by: null
 ---
 

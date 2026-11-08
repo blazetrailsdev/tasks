@@ -1,6 +1,6 @@
 ---
 title: "rails-dom-testing-port-dom-assertions-and-parser-selection-tests"
-status: in-progress
+status: done
 updated: 2026-11-08
 rfc: "0225-package-pages-data-completeness"
 cluster: null
