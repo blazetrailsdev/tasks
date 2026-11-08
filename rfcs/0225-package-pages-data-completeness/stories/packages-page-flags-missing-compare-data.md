@@ -1,6 +1,6 @@
 ---
 title: "trailmap (repo blazetrailsdev/trailmap): after each sync, report packages with a counterpart but no api or tests rows"
-status: ready
+status: done
 updated: 2026-11-08
 rfc: "0225-package-pages-data-completeness"
 cluster: trailmap-checks
@@ -9,9 +9,9 @@ deps: [sources-tests-excluded-reason]
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#129
+claim: "2026-11-08T15:15:20Z"
+assignee: "packages-page-flags-missing-compare-data"
 blocked-by: null
 ---
 

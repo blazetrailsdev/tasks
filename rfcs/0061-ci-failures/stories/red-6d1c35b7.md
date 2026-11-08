@@ -1,6 +1,6 @@
 ---
 title: "Trailties Tests failing on main @6d1c35b7"
-status: ready
+status: closed
 updated: 2026-11-08
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-08T15:29:06Z"
+assignee: "red-6d1c35b7"
 blocked-by: null
-closed-reason: null
+closed-reason: "Flake: AppGeneratorTest > master option failed once (tse.ts:76 compiled template module had no default export); passes locally 3/3 and the rerun of run 42492102949 is green. Failing commit did not touch trailties."
 ---
 
 ## Context

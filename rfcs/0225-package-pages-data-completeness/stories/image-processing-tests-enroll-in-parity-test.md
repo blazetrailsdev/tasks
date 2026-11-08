@@ -1,6 +1,6 @@
 ---
 title: "parity:test: enroll image_processing's test/ so /packages/image-processing gets a tests tile"
-status: claimed
+status: done
 updated: 2026-11-08
 rfc: "0225-package-pages-data-completeness"
 cluster: test-enrollment
@@ -9,7 +9,7 @@ deps: [sources-tests-excluded-reason]
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#9870
 claim: "2026-11-08T14:45:24Z"
 assignee: "image-processing-tests-enroll-in-parity-test"
 blocked-by: null

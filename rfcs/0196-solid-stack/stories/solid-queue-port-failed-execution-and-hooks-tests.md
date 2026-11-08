@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-port-failed-execution-and-hooks-tests"
-status: draft
+status: in-progress
 updated: 2026-11-08
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9869
+claim: "2026-11-08T15:05:23Z"
+assignee: "solid-queue-port-failed-execution-and-hooks-tests"
 blocked-by: null
 closed-reason: null
 ---

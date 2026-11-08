@@ -1,6 +1,6 @@
 ---
 title: "trails build writes .trails/boot.generated.js and the entry installs it"
-status: ready
+status: in-progress
 updated: 2026-11-08
 rfc: "0224-aot-boot-files"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["boot-sites-load-through-kernel-load"]
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9871
+claim: "2026-11-08T15:45:23Z"
+assignee: "trails-build-writes-the-boot-file-map"
 blocked-by: null
 closed-reason: null
 ---
