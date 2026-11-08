@@ -1,6 +1,6 @@
 ---
 title: "console-prompt-resolves-unloaded-autoload-constants"
-status: draft
+status: in-progress
 updated: 2026-11-08
 rfc: "0171-thor-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9856
+claim: "2026-11-08T01:49:23Z"
+assignee: "console-prompt-resolves-unloaded-autoload-constants"
 blocked-by: null
 closed-reason: null
 ---

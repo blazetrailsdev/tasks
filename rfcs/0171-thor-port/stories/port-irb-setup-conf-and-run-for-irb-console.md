@@ -1,6 +1,6 @@
 ---
 title: "port-irb-setup-conf-and-run-for-irb-console"
-status: claimed
+status: in-progress
 updated: 2026-11-08
 rfc: "0171-thor-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9856
 claim: "2026-11-08T00:45:28Z"
 assignee: "port-irb-setup-conf-and-run-for-irb-console"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "port-integration-system-multidb-actiontext-generators"
-status: in-progress
-updated: 2026-11-07
+status: done
+updated: 2026-11-08
 rfc: "0212-trailties-port"
 cluster: null
 packages: []

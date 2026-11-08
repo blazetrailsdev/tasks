@@ -1,7 +1,7 @@
 ---
 title: "Ruby manifest extracts lib/rails/generators classes from activerecord/actioncable/activejob/actionmailer"
-status: in-progress
-updated: 2026-11-07
+status: done
+updated: 2026-11-08
 rfc: "0171-thor-port"
 cluster: null
 packages: []
