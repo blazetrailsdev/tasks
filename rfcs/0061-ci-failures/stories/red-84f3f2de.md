@@ -1,6 +1,6 @@
 ---
 title: "Active Record SQLite Tests (2) failing on main @84f3f2de"
-status: ready
+status: closed
 updated: 2026-11-09
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-09T00:40:34Z"
+assignee: "red-84f3f2de"
 blocked-by: null
-closed-reason: null
+closed-reason: "Flake: solid-queue instrumentation 'enqueuing recurring task emits enqueue_recurring_task event' — last scheduler enqueue hit ActiveRecord::Deadlocked (SQLite busy under shard load) so the final event had no active_job_id; passes locally, 84f3f2de touched no solid-queue code"
 ---
 
 ## Context

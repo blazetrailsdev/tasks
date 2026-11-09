@@ -1,7 +1,7 @@
 ---
 title: "Declare the live tasks database in config/database.ts and retire the connecting initializer"
-status: ready
-updated: 2026-11-07
+status: in-progress
+updated: 2026-11-09
 rfc: "0136-trailmap"
 cluster: null
 packages: ["activerecord", "trailties"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#131
+claim: "2026-11-09T00:05:27Z"
+assignee: "declare-the-tasks-database-in-config-database"
 blocked-by: null
 closed-reason: null
 ---

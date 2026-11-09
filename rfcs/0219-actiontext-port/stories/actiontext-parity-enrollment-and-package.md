@@ -1,7 +1,7 @@
 ---
 title: "Create packages/actiontext and enroll it in parity:api and parity:test"
-status: claimed
-updated: 2026-11-08
+status: in-progress
+updated: 2026-11-09
 rfc: "0219-actiontext-port"
 cluster: at-infra
 packages: ["actiontext"]
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#9893
 claim: "2026-11-08T23:50:38Z"
 assignee: "actiontext-parity-enrollment-and-package"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "nokogiri: HTML5 document and node mutation surface (create_element, inner_html=, replace, ancestors, matches?)"
-status: claimed
-updated: 2026-11-08
+status: in-progress
+updated: 2026-11-09
 rfc: "0219-actiontext-port"
 cluster: at-infra
 packages: ["nokogiri"]
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#9893
 claim: "2026-11-08T23:50:38Z"
 assignee: "actiontext-parity-enrollment-and-package"
 blocked-by: null

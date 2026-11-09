@@ -1,7 +1,7 @@
 ---
 title: "solid-queue-integration-concurrency-controls-tests"
-status: draft
-updated: 2026-11-08
+status: ready
+updated: 2026-11-09
 rfc: "0196-solid-stack"
 cluster: null
 packages: []

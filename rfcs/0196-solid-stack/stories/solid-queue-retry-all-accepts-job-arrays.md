@@ -1,7 +1,7 @@
 ---
 title: "FailedExecution.retryAll / discardAllFromJobs accept a job Array as Rails does"
-status: draft
-updated: 2026-11-08
+status: ready
+updated: 2026-11-09
 rfc: "0196-solid-stack"
 cluster: null
 packages: []

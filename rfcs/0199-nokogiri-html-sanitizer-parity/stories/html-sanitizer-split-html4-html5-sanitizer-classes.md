@@ -1,7 +1,7 @@
 ---
 title: "html-sanitizer-split-html4-html5-sanitizer-classes"
-status: claimed
-updated: 2026-11-08
+status: in-progress
+updated: 2026-11-09
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9894
 claim: "2026-11-08T22:50:32Z"
 assignee: "html-sanitizer-split-html4-html5-sanitizer-classes"
 blocked-by: null

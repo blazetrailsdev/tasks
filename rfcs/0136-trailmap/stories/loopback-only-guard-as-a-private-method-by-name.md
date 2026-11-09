@@ -1,7 +1,7 @@
 ---
 title: "LoopbackOnly: register requireLoopback by name as a private method once trails supports both"
-status: ready
-updated: 2026-11-07
+status: in-progress
+updated: 2026-11-09
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#130
+claim: "2026-11-09T00:20:13Z"
+assignee: "loopback-only-guard-as-a-private-method-by-name"
 blocked-by: null
 closed-reason: null
 ---

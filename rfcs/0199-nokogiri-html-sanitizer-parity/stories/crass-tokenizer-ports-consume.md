@@ -1,7 +1,7 @@
 ---
 title: "crass-tokenizer-ports-consume"
-status: in-progress
-updated: 2026-11-08
+status: done
+updated: 2026-11-09
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
 packages: []

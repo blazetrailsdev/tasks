@@ -1,7 +1,7 @@
 ---
 title: "trailmap: store audit reports as Active Storage Disk blobs"
-status: ready
-updated: 2026-11-07
+status: claimed
+updated: 2026-11-09
 rfc: "0136-trailmap"
 cluster: null
 packages: ["activestorage", "activerecord"]
@@ -12,8 +12,8 @@ deps-rfc: []
 est-loc: 600
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-09T00:50:20Z"
+assignee: "schedule-continuous-trails-tracking"
 blocked-by: null
 closed-reason: null
 ---

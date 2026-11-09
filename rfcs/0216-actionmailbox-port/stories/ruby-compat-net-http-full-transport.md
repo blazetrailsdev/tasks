@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat-net-http-full-transport"
-status: in-progress
-updated: 2026-11-08
+status: done
+updated: 2026-11-09
 rfc: "0216-actionmailbox-port"
 cluster: null
 packages: []

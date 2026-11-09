@@ -1,6 +1,6 @@
 ---
 title: "html-sanitizer-seat-trails-namespace"
-status: draft
+status: closed
 updated: 2026-11-09
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: trails#9889 already seats Rails::HTML at Trails::HTML; parity:class-paths:check is green on trails#9894"
 ---
 
 ## Context
