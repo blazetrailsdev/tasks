@@ -69,10 +69,14 @@ packages migrated. Once every package story is done, the `src` arm is dead.
 
 ## Acceptance criteria
 
-- [ ] `scripts/layout/package-roots.ts` and every caller assume `lib/` +
+- [ ] `scripts/layout/package-roots.mts` and every caller assume `lib/` +
       `test/` only; the interim test excludes are gone.
 - [ ] A Preflight test fails if any `packages/*/src/` directory (except `website`) or any
       `packages/*/lib/**/*.test.ts` exists.
 - [ ] Root `CLAUDE.md` "Tests live next to source files" line reads "Tests
       live in `packages/<pkg>/test/`, laid out as the upstream gem's `test/`
       tree", if a package story has not already changed it.
+- [ ] The two test-side `lib`-then-`src` probes are deleted:
+      `packages/trailties/test/production-boot.trails.test.ts` (~line 31) and
+      `packages/activesupport/test/cache/file-store-lock-worker-hooks.trails.mjs`
+      (left in place by `layout-package-roots-named-exports-under-tsx-eval`).
