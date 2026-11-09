@@ -1,6 +1,6 @@
 ---
 title: "port-app-generator-minimal-meta-option"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

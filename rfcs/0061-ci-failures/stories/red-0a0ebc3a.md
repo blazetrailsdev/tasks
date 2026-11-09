@@ -1,6 +1,6 @@
 ---
 title: "Active Record MariaDB Tests (1) failing on main @0a0ebc3a"
-status: ready
+status: closed
 updated: 2026-11-09
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-09T22:17:34Z"
+assignee: "red-0a0ebc3a"
 blocked-by: null
-closed-reason: null
+closed-reason: "Flake: solid-queue instrumentation 'enqueuing recurring task emits enqueue_recurring_task event' (timing-dependent 1.01s scheduler tick; last event lacked active_job_id) failed on MariaDB shard 1; commit 0a0ebc3a touched only activesupport/activestorage/trailties, test passes locally 3/3 and on prior main runs."
 ---
 
 ## Context

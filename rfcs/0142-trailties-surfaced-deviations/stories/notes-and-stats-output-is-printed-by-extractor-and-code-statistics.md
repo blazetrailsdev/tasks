@@ -1,6 +1,6 @@
 ---
 title: "notes-and-stats-output-is-printed-by-extractor-and-code-statistics"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

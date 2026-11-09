@@ -1,6 +1,6 @@
 ---
 title: "actioncable test adapter resolves through pubsub_adapter's require, not a test_help import"
-status: draft
+status: in-progress
 updated: 2026-11-09
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9936
+claim: "2026-11-09T22:53:48Z"
+assignee: "actioncable-test-adapter-resolves-by-pubsub-require"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Seat the actionmailbox dummy app's ApplicationMailbox and MessagesMailbox for tests"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0216-actionmailbox-port"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "test-unit-controller-template-emits-test-class"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
