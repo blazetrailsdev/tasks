@@ -1,6 +1,6 @@
 ---
 title: "trails build lists app/helpers in the boot file map"
-status: draft
+status: in-progress
 updated: 2026-11-09
 rfc: "0224-aot-boot-files"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9901
+claim: "2026-11-09T03:26:20Z"
+assignee: "trails-build-lists-the-helpers-in-the-boot-file-map"
 blocked-by: null
 closed-reason: null
 ---

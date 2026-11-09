@@ -1,7 +1,7 @@
 ---
 title: "Port Rails::Generators::Actions indentation/indent/with_indentation"
-status: draft
-updated: 2026-11-08
+status: claimed
+updated: 2026-11-09
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-09T03:50:32Z"
+assignee: "actions-gem-and-benchmark-ips-dependency"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "zeitwerk-namespace-body-autoloads-own-children"
-status: draft
-updated: 2026-11-08
+status: ready
+updated: 2026-11-09
 rfc: "0212-trailties-port"
 cluster: null
 packages: []

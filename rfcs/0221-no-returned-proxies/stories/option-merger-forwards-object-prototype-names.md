@@ -1,7 +1,7 @@
 ---
 title: "OptionMerger forwards Object.prototype names, as its undef_method sweep does"
-status: draft
-updated: 2026-11-07
+status: closed
+updated: 2026-11-09
 rfc: "0221-no-returned-proxies"
 cluster: null
 packages: []
@@ -9,11 +9,11 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9900
+claim: "2026-11-09T03:05:26Z"
+assignee: "option-merger-forwards-object-prototype-names"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: a Proxy get trap intercepts every lookup reaching it, including names its target inherits from Object.prototype, so OptionMerger already forwards toString/valueOf/hasOwnProperty to its context on main; trails#9900 adds only a regression test (story also cited src/option-merger.ts; the file is lib/option-merger.ts)"
 ---
 
 ## Context

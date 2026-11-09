@@ -1,7 +1,7 @@
 ---
 title: "Decide the lifetime of stripThenable's hidden then"
-status: draft
-updated: 2026-11-07
+status: claimed
+updated: 2026-11-09
 rfc: "0221-no-returned-proxies"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-09T03:50:32Z"
+assignee: "actions-gem-and-benchmark-ips-dependency"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Port the api-only generators override and mailer-views tests (generators_test.rb:154-177)"
-status: draft
-updated: 2026-11-07
+status: in-progress
+updated: 2026-11-09
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9902
+claim: "2026-11-09T03:08:50Z"
+assignee: "action-dispatch-configure-converge-on-load-blocks"
 blocked-by: null
 closed-reason: null
 ---
