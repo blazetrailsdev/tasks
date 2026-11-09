@@ -1,6 +1,6 @@
 ---
 title: "plan-test-moves places test files in test-helpers dirs by rules 1-3"
-status: claimed
+status: in-progress
 updated: 2026-11-09
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: trails#9916
 claim: "2026-11-09T13:20:31Z"
 assignee: "port-help-and-version-commands-for-split-namespace"
 blocked-by: null

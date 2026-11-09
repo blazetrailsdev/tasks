@@ -1,6 +1,6 @@
 ---
 title: "server-path-activesupport-index-testing"
-status: claimed
+status: in-progress
 updated: 2026-11-09
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#9915
 claim: "2026-11-09T13:51:27Z"
 assignee: "server-path-activesupport-index-testing"
 blocked-by: null

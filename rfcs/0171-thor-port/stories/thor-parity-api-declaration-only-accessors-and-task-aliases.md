@@ -1,6 +1,6 @@
 ---
 title: "Thor parity:api: base.rb/actions.rb accessors and *_task aliases read as declaration-only (16 rows)"
-status: claimed
+status: in-progress
 updated: 2026-11-09
 rfc: "0171-thor-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 3
-pr: null
+pr: trails#9916
 claim: "2026-11-09T13:20:31Z"
 assignee: "port-help-and-version-commands-for-split-namespace"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Port Rails::Command::HelpCommand / VersionCommand so split_namespace's help/version arms resolve"
-status: claimed
+status: in-progress
 updated: 2026-11-09
 rfc: "0171-thor-port"
 cluster: null
@@ -14,7 +14,7 @@ deps:
 deps-rfc: []
 est-loc: 160
 priority: 1
-pr: null
+pr: trails#9916
 claim: "2026-11-09T13:20:31Z"
 assignee: "port-help-and-version-commands-for-split-namespace"
 blocked-by: null

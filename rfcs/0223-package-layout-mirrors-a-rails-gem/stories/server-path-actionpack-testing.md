@@ -1,6 +1,6 @@
 ---
 title: "server-path-actionpack-testing"
-status: ready
+status: claimed
 updated: 2026-11-09
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-09T14:20:28Z"
+assignee: "server-path-actionmailer-testing"
 blocked-by: null
 closed-reason: null
 ---
