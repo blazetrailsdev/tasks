@@ -2,7 +2,7 @@
 title: "trailties: generator Ruby class paths are seated before their static blocks read rbModName"
 status: blocked
 updated: 2026-11-09
-rfc: "0171-thor-port"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
