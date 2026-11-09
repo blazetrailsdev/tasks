@@ -38,6 +38,10 @@ an engine's own test database and dummy schema.
 - The migration is ported at its Rails file name and is what the dummy
   schema loads.
 - The dummy schema, models and fixtures are mirrored as written (names,
-  columns, rows), not added to activerecord's `schema.rb` mirror.
+  columns, rows), not added to activerecord's `schema.rb` mirror. Lines that
+  need unported ActionText code (`has_rich_text`, `ActionText::Attachable`,
+  `rich_texts.yml`'s `ActionText::FixtureSet.attachment`, `QueryHelpers`,
+  `create_file_blob`) are carried by
+  `actiontext-dummy-models-rich-text-and-fixtures`.
 - The test helper is the counterpart of `test_helper.rb`, on all three
   adapters.
