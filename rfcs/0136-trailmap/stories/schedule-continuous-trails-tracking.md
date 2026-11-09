@@ -1,6 +1,6 @@
 ---
 title: "schedule-continuous-trails-tracking"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0136-trailmap"
 cluster: null

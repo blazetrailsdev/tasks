@@ -1,7 +1,7 @@
 ---
 title: "Port solid-queue jobs_lifecycle, concurrency_controls, recurring_tasks and lifecycle_hooks integration tests"
-status: in-progress
-updated: 2026-11-08
+status: done
+updated: 2026-11-09
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-queue"]
