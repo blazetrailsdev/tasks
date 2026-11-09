@@ -1,6 +1,6 @@
 ---
 title: "Port Rails::Command::HelpCommand / VersionCommand so split_namespace's help/version arms resolve"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0171-thor-port"
 cluster: null

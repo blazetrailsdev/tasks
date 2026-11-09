@@ -1,6 +1,6 @@
 ---
 title: "Thor parity:api: base.rb/actions.rb accessors and *_task aliases read as declaration-only (16 rows)"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0171-thor-port"
 cluster: null

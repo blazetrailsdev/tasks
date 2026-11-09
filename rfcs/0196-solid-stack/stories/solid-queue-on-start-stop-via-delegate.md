@@ -1,6 +1,6 @@
 ---
 title: "SolidQueue.on_start/on_stop via delegate to: Supervisor"
-status: claimed
+status: in-progress
 updated: 2026-11-09
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#9918
 claim: "2026-11-09T14:35:33Z"
 assignee: "lib-test-layout-tooling-inventory-rest"
 blocked-by: null

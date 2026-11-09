@@ -1,7 +1,7 @@
 ---
 title: "converge-generators-actions-gemfile-family-onto-package-json"
 status: ready
-updated: 2026-10-29
+updated: 2026-11-09
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

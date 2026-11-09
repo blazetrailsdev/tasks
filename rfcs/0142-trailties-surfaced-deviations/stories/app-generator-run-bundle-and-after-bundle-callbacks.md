@@ -1,7 +1,7 @@
 ---
 title: "app-generator-run-bundle-and-after-bundle-callbacks"
-status: ready
-updated: 2026-10-31
+status: in-progress
+updated: 2026-11-09
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9921
+claim: "2026-11-09T15:35:24Z"
+assignee: "solid-queue-retry-all-accepts-job-arrays"
 blocked-by: null
 closed-reason: null
 ---

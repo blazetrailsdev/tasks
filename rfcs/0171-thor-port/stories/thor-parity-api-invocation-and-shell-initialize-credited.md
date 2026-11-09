@@ -1,6 +1,6 @@
 ---
 title: "Thor parity:api: credit Thor::Invocation / Thor::Shell #initialize after constructor inlining"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0171-thor-port"
 cluster: null

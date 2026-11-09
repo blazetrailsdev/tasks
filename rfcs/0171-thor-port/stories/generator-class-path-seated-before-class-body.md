@@ -1,6 +1,6 @@
 ---
 title: "trailties: generator Ruby class paths are seated before their static blocks read rbModName"
-status: in-progress
+status: blocked
 updated: 2026-11-09
 rfc: "0171-thor-port"
 cluster: null
@@ -12,7 +12,7 @@ priority: 4
 pr: trails#9917
 claim: "2026-11-09T14:50:23Z"
 assignee: "generator-class-path-seated-before-class-body"
-blocked-by: null
+blocked-by: "needs owner ruling: a class can't seat its own path from its static block without constSet (CLAUDE.md limits constSet to Rails const_set sites); the TDZ name-match in trails#9917 is unsound"
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Thor parity:api: CapturableERB superclass reads ERB, not TSE"
-status: claimed
+status: in-progress
 updated: 2026-11-09
 rfc: "0171-thor-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 4
-pr: null
+pr: trails#9918
 claim: "2026-11-09T14:35:33Z"
 assignee: "lib-test-layout-tooling-inventory-rest"
 blocked-by: null

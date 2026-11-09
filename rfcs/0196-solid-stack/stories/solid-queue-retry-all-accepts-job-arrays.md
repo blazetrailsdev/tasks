@@ -1,6 +1,6 @@
 ---
 title: "FailedExecution.retryAll / discardAllFromJobs accept a job Array as Rails does"
-status: ready
+status: in-progress
 updated: 2026-11-09
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9921
+claim: "2026-11-09T15:35:24Z"
+assignee: "solid-queue-retry-all-accepts-job-arrays"
 blocked-by: null
 closed-reason: null
 ---

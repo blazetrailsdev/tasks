@@ -1,6 +1,6 @@
 ---
 title: "tzinfo: split lib/index.ts into one file per lib/tzinfo/*.rb so parity:api pairs it"
-status: claimed
+status: in-progress
 updated: 2026-11-09
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: "2026-11-09T14:20:28Z"
-assignee: "server-path-actionmailer-testing"
+pr: trails#9920
+claim: "2026-11-09T15:20:25Z"
+assignee: "establish-connection-reads-database-url-set-after-boot"
 blocked-by: null
 closed-reason: null
 ---
