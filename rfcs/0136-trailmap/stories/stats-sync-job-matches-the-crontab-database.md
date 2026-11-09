@@ -1,6 +1,6 @@
 ---
 title: "Compare the job's stats database with the crontab's before cutover"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0136-trailmap"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "rake-command-drops-invented-rakefile-guards"
-status: draft
-updated: 2026-11-08
+status: in-progress
+updated: 2026-11-09
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9899
+claim: "2026-11-09T02:50:22Z"
+assignee: "rake-command-drops-invented-rakefile-guards"
 blocked-by: null
 closed-reason: null
 ---

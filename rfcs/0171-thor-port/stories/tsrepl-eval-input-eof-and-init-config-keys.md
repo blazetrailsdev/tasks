@@ -1,7 +1,7 @@
 ---
 title: "TSREPL: EOF is not a forced exit; seat remaining init_config keys"
-status: draft
-updated: 2026-11-08
+status: in-progress
+updated: 2026-11-09
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9898
+claim: "2026-11-09T02:35:29Z"
+assignee: "generator-base-name-generator-name-memoize"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat-optparse-visit-add-banner"
-status: draft
-updated: 2026-11-08
+status: ready
+updated: 2026-11-09
 rfc: "0171-thor-port"
 cluster: null
 packages: []

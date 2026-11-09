@@ -1,6 +1,6 @@
 ---
 title: "Declare the live tasks database in config/database.ts and retire the connecting initializer"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0136-trailmap"
 cluster: null

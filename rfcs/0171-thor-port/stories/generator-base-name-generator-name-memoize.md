@@ -1,7 +1,7 @@
 ---
 title: "trailties: GeneratorBase.baseName / generatorName memoize as @base_name ||= does"
-status: draft
-updated: 2026-11-08
+status: blocked
+updated: 2026-11-09
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
-blocked-by: null
+pr: trails#9898
+claim: "2026-11-09T02:35:29Z"
+assignee: "generator-base-name-generator-name-memoize"
+blocked-by: "Memoizing freezes a wrong name: generator static {} blocks (classOption/addSharedOptionsFor -> defaultForOption, base.ts:425) call baseName/generatorName before the constants.*.generated.ts table seats the Ruby class path, so @base_name ||= would cache e.g. AppGenerator's pre-seat name (CI on trails#9898). Needs class paths seated before class bodies run."
 closed-reason: null
 ---
 

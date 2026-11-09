@@ -1,6 +1,6 @@
 ---
 title: "html-sanitizer-split-html4-html5-sanitizer-classes"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
