@@ -1,6 +1,6 @@
 ---
 title: "zeitwerk-namespace-body-autoloads-own-children"
-status: ready
+status: in-progress
 updated: 2026-11-09
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9904
+claim: "2026-11-09T04:35:25Z"
+assignee: "zeitwerk-namespace-body-autoloads-own-children"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "trailties-load-path-require-in-application-class-body"
-status: ready
+status: in-progress
 updated: 2026-11-09
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9903
+claim: "2026-11-09T04:05:29Z"
+assignee: "trailties-load-path-require-in-application-class-body"
 blocked-by: null
 closed-reason: null
 ---
