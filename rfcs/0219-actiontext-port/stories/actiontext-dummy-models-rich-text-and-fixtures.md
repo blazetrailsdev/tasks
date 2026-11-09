@@ -1,6 +1,6 @@
 ---
 title: "actiontext-dummy-models-rich-text-and-fixtures"
-status: draft
+status: ready
 updated: 2026-11-09
 rfc: "0219-actiontext-port"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "printing-commands-omits-commander-commands"
-status: blocked
-updated: 2026-11-03
+status: closed
+updated: 2026-11-09
 rfc: "0171-thor-port"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: "2026-11-03T14:42:08Z"
 assignee: "unplaced-rails-classes-get-a-constant-table"
-blocked-by: "db/new/app listing lands with retire-commander-cli-onto-rails-command-invoke (story acceptance names it)"
-closed-reason: null
+blocked-by: null
+closed-reason: "Blocker landed: retire-commander-cli-onto-rails-command-invoke merged (trails#9922, 56d9d124ae). origin/main has no 'commander' in packages/trailties/{package.json,lib}; db/app/new are Command::Base subclasses under lib/commands/{db,app,application.ts}, so printingCommands (lib/command.ts:125) walking subclasses lists them."
 ---
 
 ## Context

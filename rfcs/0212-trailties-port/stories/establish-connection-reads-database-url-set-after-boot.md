@@ -1,6 +1,6 @@
 ---
 title: "establish-connection-reads-database-url-set-after-boot"
-status: claimed
+status: closed
 updated: 2026-11-09
 rfc: "0212-trailties-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: "2026-11-09T18:50:32Z"
 assignee: "establish-connection-reads-database-url-set-after-boot"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: Rails' establish_connection and DatabaseConfigurations#resolve never re-read ENV (activerecord/lib/active_record/connection_handling.rb:50-54, database_configurations.rb:174-307). The Rails test passes only because ActiveRecord::Base loads lazily, so the active_record.initialize_database on_load block (railtie.rb:256-262) builds the configurations after ENV['DATABASE_URL'] is set. In trails, runLoadHooks('active_record', Base) runs when base.ts is evaluated (packages/activerecord/src/base.ts:2497), and Base is imported before boot. Adding an ENV re-read would invent behavior Rails doesn't have."
 ---
 
 ## Context

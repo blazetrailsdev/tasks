@@ -1,6 +1,6 @@
 ---
 title: "nokogiri-html5-create-element-namespace-definitions"
-status: draft
+status: ready
 updated: 2026-11-09
 rfc: "0219-actiontext-port"
 cluster: null

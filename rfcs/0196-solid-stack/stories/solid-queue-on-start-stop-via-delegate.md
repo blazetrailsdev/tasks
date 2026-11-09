@@ -1,6 +1,6 @@
 ---
 title: "SolidQueue.on_start/on_stop via delegate to: Supervisor"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0196-solid-stack"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Port ActionMailbox::BaseController and the Relay ingress controller"
-status: ready
-updated: 2026-11-06
+status: in-progress
+updated: 2026-11-09
 rfc: "0216-actionmailbox-port"
 cluster: amb-ingress
 packages: ["actionmailbox"]
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: 6
-pr: null
-claim: null
-assignee: null
+pr: trails#9925
+claim: "2026-11-09T19:04:46Z"
+assignee: "actionmailbox-base-and-callbacks"
 blocked-by: null
 closed-reason: null
 ---
