@@ -5,7 +5,8 @@ updated: 2026-11-09
 rfc: "0171-thor-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - generator-class-path-seated-before-class-body
 deps-rfc: []
 est-loc: 30
 priority: null
