@@ -5,7 +5,8 @@ updated: 2026-11-09
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
-deps: []
+deps:
+  - in-batches-block-sites-drop-strip-thenable
 deps-rfc: []
 est-loc: 120
 priority: null
