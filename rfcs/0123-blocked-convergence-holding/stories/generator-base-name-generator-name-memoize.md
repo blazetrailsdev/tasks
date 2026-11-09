@@ -2,7 +2,7 @@
 title: "trailties: GeneratorBase.baseName / generatorName memoize as @base_name ||= does"
 status: blocked
 updated: 2026-11-09
-rfc: "0171-thor-port"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps:
