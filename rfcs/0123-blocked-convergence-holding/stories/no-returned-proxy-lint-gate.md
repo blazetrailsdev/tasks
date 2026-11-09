@@ -2,7 +2,7 @@
 title: "Lint rule: a constructor or exported function may not return a Proxy"
 status: ready
 updated: 2026-11-05
-rfc: "0221-no-returned-proxies"
+rfc: "0123-blocked-convergence-holding"
 cluster: gate
 packages: ["ruby-compat"]
 deps:
