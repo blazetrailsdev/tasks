@@ -1,7 +1,7 @@
 ---
 title: "trailmap: send a message to a pane from its live view"
-status: ready
-updated: 2026-11-07
+status: in-progress
+updated: 2026-11-09
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#132
+claim: "2026-11-09T01:05:16Z"
+assignee: "send-a-message-to-a-pane-from-its-live-view"
 blocked-by: null
 closed-reason: null
 ---

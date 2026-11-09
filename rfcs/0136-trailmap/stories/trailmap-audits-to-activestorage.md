@@ -1,6 +1,6 @@
 ---
 title: "trailmap: store audit reports as Active Storage Disk blobs"
-status: claimed
+status: blocked
 updated: 2026-11-09
 rfc: "0136-trailmap"
 cluster: null
@@ -15,7 +15,7 @@ priority: null
 pr: null
 claim: "2026-11-09T00:50:20Z"
 assignee: "schedule-continuous-trails-tracking"
-blocked-by: null
+blocked-by: "pnpm build fails: trails-tsc build-views loads config/initializers before engine initializers, so Audit's hasOneAttached is undefined (trails-tsc-build-views-runs-initializers-before-engines). WIP on branch wip/trailmap-audits-to-activestorage (an earlier attempt also hit an attach-upload bug)."
 closed-reason: null
 ---
 

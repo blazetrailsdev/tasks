@@ -1,7 +1,7 @@
 ---
 title: "Move trailties to lib/ + test/"
-status: claimed
-updated: 2026-11-08
+status: in-progress
+updated: 2026-11-09
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: layout-migration
 packages: [trailties]
@@ -9,7 +9,7 @@ deps: [lib-test-layout-ruby-compat]
 deps-rfc: []
 est-loc: 670
 priority: null
-pr: null
+pr: trails#9897
 claim: "2026-11-08T21:50:23Z"
 assignee: "lib-test-layout-trailties"
 blocked-by: null

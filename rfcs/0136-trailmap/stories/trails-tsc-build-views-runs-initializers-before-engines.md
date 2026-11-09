@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc build-views loads config/initializers without running engine initializers"
-status: draft
+status: ready
 updated: 2026-11-09
 rfc: "0136-trailmap"
 cluster: null

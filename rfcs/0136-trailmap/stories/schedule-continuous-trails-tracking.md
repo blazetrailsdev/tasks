@@ -1,6 +1,6 @@
 ---
 title: "schedule-continuous-trails-tracking"
-status: claimed
+status: in-progress
 updated: 2026-11-09
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trailmap#133
 claim: "2026-11-09T00:50:20Z"
 assignee: "schedule-continuous-trails-tracking"
 blocked-by: null
