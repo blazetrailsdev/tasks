@@ -14,6 +14,7 @@ packages:
   - "ruby-compat"
   - "actionview"
   - "actionpack"
+  - "trailties"
 clusters:
   - "schema"
   - "api-compare"
@@ -33,6 +34,7 @@ clusters:
   - "lint-registers"
   - "unported-tests"
   - "conversion"
+  - "factory-returned"
 related-rfcs:
   - "0078-sti-schema-reflection-fidelity"
   - "0096-naming-identifier-burndown"

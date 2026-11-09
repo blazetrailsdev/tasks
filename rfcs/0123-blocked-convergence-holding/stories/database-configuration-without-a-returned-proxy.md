@@ -2,7 +2,7 @@
 title: "databaseConfiguration answers a missing env with `shared` without a Proxy"
 status: blocked
 updated: 2026-11-06
-rfc: "0221-no-returned-proxies"
+rfc: "0123-blocked-convergence-holding"
 cluster: factory-returned
 packages: ["trailties"]
 deps: []
