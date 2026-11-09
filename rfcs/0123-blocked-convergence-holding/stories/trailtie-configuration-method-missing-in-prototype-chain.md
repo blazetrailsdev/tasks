@@ -2,7 +2,7 @@
 title: "Trailtie::Configuration answers config names through the prototype chain"
 status: blocked
 updated: 2026-11-07
-rfc: "0221-no-returned-proxies"
+rfc: "0123-blocked-convergence-holding"
 cluster: constructor-returned
 packages: ["trailties"]
 deps: []
