@@ -49,7 +49,10 @@ out="$(mktemp)"
 trap 'rm -f "$out"' EXIT
 "$LOGIN_SHELL" -lc "cd '$here' && pnpm -s trails:track" >"$out" 2>&1
 status=$?
-"$LOGIN_SHELL" -lc "cd '$here' && pnpm -s trails:status" >"$(git -C "$here" rev-parse --path-format=absolute --git-common-dir)/trails-status.txt" 2>&1
+# Written to a temp file and renamed, so the dashboard never reads a half-written one.
+status_file="$(git -C "$here" rev-parse --path-format=absolute --git-common-dir)/trails-status.txt"
+"$LOGIN_SHELL" -lc "cd '$here' && pnpm -s trails:status" >"$status_file.tmp" 2>&1
+mv -f "$status_file.tmp" "$status_file"
 
 open="$(gh issue list -R "$REPO" --state open --search "\"$TITLE\" in:title" \
   --json number --jq '.[0].number // empty' 2>/dev/null)"
