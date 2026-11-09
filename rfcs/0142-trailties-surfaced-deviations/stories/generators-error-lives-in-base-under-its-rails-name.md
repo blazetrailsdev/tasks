@@ -1,6 +1,6 @@
 ---
 title: "generators-error-lives-in-base-under-its-rails-name"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

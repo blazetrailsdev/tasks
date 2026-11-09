@@ -1,6 +1,6 @@
 ---
 title: "app-generator-run-bundle-and-after-bundle-callbacks"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

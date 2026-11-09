@@ -1,6 +1,6 @@
 ---
 title: "Retire commander: bin/trails dispatches through Rails::Command.invoke (cli.rb), and the dependency is removed"
-status: ready
+status: in-progress
 updated: 2026-11-09
 rfc: "0171-thor-port"
 cluster: null
@@ -23,9 +23,9 @@ deps:
 deps-rfc: []
 est-loc: 350
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9922
+claim: "2026-11-09T16:05:23Z"
+assignee: "retire-commander-cli-onto-rails-command-invoke"
 blocked-by: null
 closed-reason: null
 ---

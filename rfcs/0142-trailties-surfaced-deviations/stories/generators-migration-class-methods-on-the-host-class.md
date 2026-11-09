@@ -1,7 +1,7 @@
 ---
 title: "generators-migration-class-methods-on-the-host-class"
-status: ready
-updated: 2026-10-31
+status: in-progress
+updated: 2026-11-09
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9922
+claim: "2026-11-09T16:05:23Z"
+assignee: "retire-commander-cli-onto-rails-command-invoke"
 blocked-by: null
 closed-reason: null
 ---
