@@ -1,6 +1,6 @@
 ---
 title: "nokogiri-xml-node-fragment"
-status: ready
+status: in-progress
 updated: 2026-11-08
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9891
+claim: "2026-11-08T23:20:42Z"
+assignee: "nokogiri-xml-node-fragment"
 blocked-by: null
 closed-reason: null
 ---

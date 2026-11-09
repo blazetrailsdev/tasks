@@ -1,6 +1,6 @@
 ---
 title: "nokogiri-parse-options-full-port"
-status: ready
+status: in-progress
 updated: 2026-11-08
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9890
+claim: "2026-11-08T23:05:23Z"
+assignee: "nokogiri-parse-options-full-port"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat-net-http-full-transport"
-status: ready
-updated: 2026-11-07
+status: in-progress
+updated: 2026-11-08
 rfc: "0216-actionmailbox-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9892
+claim: "2026-11-08T23:35:28Z"
+assignee: "ruby-compat-net-http-full-transport"
 blocked-by: null
 closed-reason: null
 ---
