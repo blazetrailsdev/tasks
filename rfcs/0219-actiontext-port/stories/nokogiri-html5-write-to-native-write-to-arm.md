@@ -1,6 +1,6 @@
 ---
 title: "Nokogiri HTML5 Node#write_to AS_XML arm calls native_write_to with encoding and indent"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0219-actiontext-port"
 cluster: null

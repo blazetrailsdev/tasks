@@ -1,7 +1,7 @@
 ---
 title: "port-app-generator-minimal-meta-option"
-status: ready
-updated: 2026-09-28
+status: in-progress
+updated: 2026-11-09
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 7
-pr: null
-claim: null
-assignee: null
+pr: trails#9934
+claim: "2026-11-09T21:05:40Z"
+assignee: "trailties-mailer-previews-test-port-remaining"
 blocked-by: null
 closed-reason: null
 ---

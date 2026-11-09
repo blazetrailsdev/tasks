@@ -1,6 +1,6 @@
 ---
 title: "trailties-port-application-initializers-frameworks-tests-rest"
-status: claimed
+status: in-progress
 updated: 2026-11-09
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9932
 claim: "2026-11-09T20:50:39Z"
 assignee: "trailties-port-application-initializers-frameworks-tests-rest"
 blocked-by: null

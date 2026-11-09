@@ -1,6 +1,6 @@
 ---
 title: "trailties-mailer-previews-test-port-remaining"
-status: ready
+status: in-progress
 updated: 2026-11-09
 rfc: "0212-trailties-port"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9934
+claim: "2026-11-09T21:05:40Z"
+assignee: "trailties-mailer-previews-test-port-remaining"
 blocked-by: null
 closed-reason: null
 ---

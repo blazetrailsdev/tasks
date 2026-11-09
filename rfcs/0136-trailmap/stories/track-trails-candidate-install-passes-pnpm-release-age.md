@@ -1,6 +1,6 @@
 ---
 title: "track-trails: candidate install is refused by pnpm 12's minimumReleaseAge on vendored tarballs"
-status: claimed
+status: ready
 updated: 2026-11-09
 rfc: "0136-trailmap"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: "2026-11-09T20:55:16Z"
-assignee: "e2e-cover-the-pane-message-box"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

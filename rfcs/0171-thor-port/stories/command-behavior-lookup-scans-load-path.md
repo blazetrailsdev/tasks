@@ -1,6 +1,6 @@
 ---
 title: "Rails::Command::Behavior.lookup/lookup! scan the load path instead of a hand LOAD_PATH table"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0171-thor-port"
 cluster: null

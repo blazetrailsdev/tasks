@@ -1,6 +1,6 @@
 ---
 title: "tse-compiler-erubi-capture-block-eval-tests"
-status: draft
+status: closed
 updated: 2026-11-09
 rfc: "0225-package-pages-data-completeness"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "sunsetting 0225: the goal (erubi paired with tse-compiler, tests tile present) landed in trails#9864/#9874/#9926 — vendor/sources.ts erubi entry with portedBy tse-compiler and testPath test, packages/tse-compiler/lib/capture-block.ts. This draft is test-porting (raising the percentage), a non-goal of 0225, and no active RFC's charter covers erubi test porting; reopen under a tse-compiler RFC if one is chartered."
 ---
 
 ## Context

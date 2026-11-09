@@ -1,6 +1,6 @@
 ---
 title: "actionpack-precompiled-fixture-under-test"
-status: ready
+status: done
 updated: 2026-11-09
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9930
+claim: "2026-11-09T21:17:30Z"
+assignee: "actionpack-precompiled-fixture-under-test"
 blocked-by: null
 closed-reason: null
 ---

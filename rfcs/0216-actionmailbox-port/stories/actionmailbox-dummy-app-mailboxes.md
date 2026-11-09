@@ -1,7 +1,7 @@
 ---
 title: "Seat the actionmailbox dummy app's ApplicationMailbox and MessagesMailbox for tests"
-status: ready
-updated: 2026-11-07
+status: in-progress
+updated: 2026-11-09
 rfc: "0216-actionmailbox-port"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9934
+claim: "2026-11-09T21:05:40Z"
+assignee: "trailties-mailer-previews-test-port-remaining"
 blocked-by: null
 closed-reason: null
 ---

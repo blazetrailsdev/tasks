@@ -1,6 +1,6 @@
 ---
 title: "active_storage.services reads config/storage.ts through the compiled-file map: test"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0224-aot-boot-files"
 cluster: null

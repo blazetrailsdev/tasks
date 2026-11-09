@@ -1,7 +1,7 @@
 ---
 title: "notes-and-stats-output-is-printed-by-extractor-and-code-statistics"
-status: ready
-updated: 2026-11-01
+status: in-progress
+updated: 2026-11-09
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9934
+claim: "2026-11-09T21:05:40Z"
+assignee: "trailties-mailer-previews-test-port-remaining"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "trailmap's typescript devDependency matches trailties' 7.1 nightly peer"
-status: claimed
+status: done
 updated: 2026-11-09
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: trailmap#135
 claim: "2026-11-09T20:55:16Z"
 assignee: "e2e-cover-the-pane-message-box"
 blocked-by: null

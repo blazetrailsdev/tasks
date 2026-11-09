@@ -1,6 +1,6 @@
 ---
 title: "reload-autoloads-constant-on-first-reference"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0212-trailties-port"
 cluster: null

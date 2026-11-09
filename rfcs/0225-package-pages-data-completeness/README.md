@@ -1,9 +1,9 @@
 ---
 rfc: "0225-package-pages-data-completeness"
 title: "Every package with an upstream counterpart shows api and tests data on trailmap's Packages page"
-status: active
+status: closed
 created: 2026-11-07
-updated: 2026-11-07
+updated: 2026-11-09
 owner: "@deanmarano"
 packages:
   - tse-compiler
