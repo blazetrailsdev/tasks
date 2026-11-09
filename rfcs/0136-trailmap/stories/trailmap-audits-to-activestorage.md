@@ -8,6 +8,7 @@ packages: ["activestorage", "activerecord"]
 deps:
   - trailmap-app-files-define-their-constants
   - trailmap-bump-trails-to-the-autoloader-importer
+  - trails-tsc-build-views-runs-initializers-before-engines
 deps-rfc: []
 est-loc: 600
 priority: null
