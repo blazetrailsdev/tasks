@@ -20,6 +20,10 @@
 #             succeeds again closes it.
 #   Whose environment.  Cron's PATH has no pnpm. The run goes through the
 #             login shell, which is the environment the CLI is used from.
+#
+# After every run, `pnpm trails:status` is written to .git/trails-status.txt —
+# beside tasks.db, inside the directory trailmap's container mounts — and the
+# trailmap dashboard shows it, so "which trails, how far behind" needs no ssh.
 set -uo pipefail
 
 here="$(cd "$(dirname "$0")/.." && pwd)"
@@ -45,6 +49,7 @@ out="$(mktemp)"
 trap 'rm -f "$out"' EXIT
 "$LOGIN_SHELL" -lc "cd '$here' && pnpm -s trails:track" >"$out" 2>&1
 status=$?
+"$LOGIN_SHELL" -lc "cd '$here' && pnpm -s trails:status" >"$(git -C "$here" rev-parse --path-format=absolute --git-common-dir)/trails-status.txt" 2>&1
 
 open="$(gh issue list -R "$REPO" --state open --search "\"$TITLE\" in:title" \
   --json number --jq '.[0].number // empty' 2>/dev/null)"
