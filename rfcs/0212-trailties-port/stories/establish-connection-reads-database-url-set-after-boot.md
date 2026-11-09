@@ -1,6 +1,6 @@
 ---
 title: "establish-connection-reads-database-url-set-after-boot"
-status: ready
+status: claimed
 updated: 2026-11-09
 rfc: "0212-trailties-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-09T18:50:32Z"
+assignee: "establish-connection-reads-database-url-set-after-boot"
 blocked-by: null
 closed-reason: null
 ---

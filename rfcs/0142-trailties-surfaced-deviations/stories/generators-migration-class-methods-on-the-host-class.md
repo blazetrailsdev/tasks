@@ -1,6 +1,6 @@
 ---
 title: "generators-migration-class-methods-on-the-host-class"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

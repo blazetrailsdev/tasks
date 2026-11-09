@@ -1,6 +1,6 @@
 ---
 title: "trails build lists config.helpersPaths entries outside app/helpers in the boot file map"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0224-aot-boot-files"
 cluster: null

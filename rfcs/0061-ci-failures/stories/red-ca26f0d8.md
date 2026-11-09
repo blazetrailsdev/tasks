@@ -1,6 +1,6 @@
 ---
 title: "Active Record PostgreSQL Tests (2) failing on main @ca26f0d8"
-status: ready
+status: closed
 updated: 2026-11-09
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-09T18:48:23Z"
+assignee: "red-ca26f0d8"
 blocked-by: null
-closed-reason: null
+closed-reason: "Flake: solid-queue instrumentation 'enqueuing recurring task emits enqueue_recurring_task event' is timing-dependent (every-second scheduler + sleep(1.01)); last event lacked active_job_id. Head commit ca26f0d8 touched only actionpack/actionview; test passes locally."
 ---
 
 ## Context

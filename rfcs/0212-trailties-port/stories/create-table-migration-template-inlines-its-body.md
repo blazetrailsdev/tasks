@@ -1,6 +1,6 @@
 ---
 title: "create-table-migration-template-inlines-its-body"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0212-trailties-port"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "layout-plan-test-moves-apply-registers-package-and-moves-non-ts"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "parity:test: enroll tzinfo's test/ so /packages/tzinfo gets a tests tile"
-status: ready
-updated: 2026-11-08
+status: done
+updated: 2026-11-09
 rfc: "0225-package-pages-data-completeness"
 cluster: test-enrollment
 packages: ["tzinfo", "scripts"]
@@ -9,9 +9,9 @@ deps: [sources-tests-excluded-reason, tzinfo-port-mirrors-lib-tzinfo-files]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9924
+claim: "2026-11-09T18:35:26Z"
+assignee: "tzinfo-tests-enroll-in-parity-test"
 blocked-by: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "tzinfo: split lib/index.ts into one file per lib/tzinfo/*.rb so parity:api pairs it"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
