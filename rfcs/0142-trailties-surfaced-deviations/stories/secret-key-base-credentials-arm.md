@@ -1,7 +1,7 @@
 ---
 title: "secret-key-base-credentials-arm"
-status: draft
-updated: 2026-09-29
+status: done
+updated: 2026-11-09
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9928
+claim: "2026-11-09T20:22:12Z"
+assignee: "secret-key-base-credentials-arm"
 blocked-by: null
 closed-reason: null
 ---

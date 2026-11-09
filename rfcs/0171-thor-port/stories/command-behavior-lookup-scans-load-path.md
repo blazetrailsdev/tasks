@@ -1,6 +1,6 @@
 ---
 title: "Rails::Command::Behavior.lookup/lookup! scan the load path instead of a hand LOAD_PATH table"
-status: claimed
+status: in-progress
 updated: 2026-11-09
 rfc: "0171-thor-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 1
-pr: null
+pr: trails#9927
 claim: "2026-11-09T19:35:25Z"
 assignee: "command-behavior-lookup-scans-load-path"
 blocked-by: null

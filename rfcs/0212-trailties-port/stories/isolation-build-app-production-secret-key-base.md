@@ -1,6 +1,6 @@
 ---
 title: "isolation-build-app-production-secret-key-base"
-status: ready
+status: done
 updated: 2026-11-09
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9928
+claim: "2026-11-09T20:05:49Z"
+assignee: "isolation-build-app-production-secret-key-base"
 blocked-by: null
 closed-reason: null
 ---

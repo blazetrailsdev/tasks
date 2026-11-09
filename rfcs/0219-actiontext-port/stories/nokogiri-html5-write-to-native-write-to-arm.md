@@ -1,6 +1,6 @@
 ---
 title: "Nokogiri HTML5 Node#write_to AS_XML arm calls native_write_to with encoding and indent"
-status: claimed
+status: in-progress
 updated: 2026-11-09
 rfc: "0219-actiontext-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#9927
 claim: "2026-11-09T19:35:25Z"
 assignee: "command-behavior-lookup-scans-load-path"
 blocked-by: null

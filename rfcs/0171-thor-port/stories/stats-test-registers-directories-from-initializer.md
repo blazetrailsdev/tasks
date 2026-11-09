@@ -1,6 +1,6 @@
 ---
 title: "stats test registers directories from an app initializer"
-status: claimed
+status: in-progress
 updated: 2026-11-09
 rfc: "0171-thor-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 2
-pr: null
+pr: trails#9927
 claim: "2026-11-09T19:35:25Z"
 assignee: "command-behavior-lookup-scans-load-path"
 blocked-by: null

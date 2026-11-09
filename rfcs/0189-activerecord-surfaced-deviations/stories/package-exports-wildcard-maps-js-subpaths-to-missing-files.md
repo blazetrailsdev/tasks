@@ -1,6 +1,6 @@
 ---
 title: "The ./* exports wildcard maps a .js subpath to .js.d.ts and .js.js, which do not exist"
-status: claimed
+status: in-progress
 updated: 2026-11-09
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -14,7 +14,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 9
-pr: null
+pr: trails#9927
 claim: "2026-11-09T19:35:25Z"
 assignee: "command-behavior-lookup-scans-load-path"
 blocked-by: null

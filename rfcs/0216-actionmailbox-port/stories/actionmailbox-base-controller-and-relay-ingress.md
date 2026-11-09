@@ -1,6 +1,6 @@
 ---
 title: "Port ActionMailbox::BaseController and the Relay ingress controller"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0216-actionmailbox-port"
 cluster: amb-ingress

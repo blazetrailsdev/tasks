@@ -1,6 +1,6 @@
 ---
 title: "active_storage.services reads config/storage.ts through the compiled-file map: test"
-status: draft
+status: in-progress
 updated: 2026-11-09
 rfc: "0224-aot-boot-files"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9929
+claim: "2026-11-09T20:35:25Z"
+assignee: "reload-autoloads-constant-on-first-reference"
 blocked-by: null
 closed-reason: null
 ---

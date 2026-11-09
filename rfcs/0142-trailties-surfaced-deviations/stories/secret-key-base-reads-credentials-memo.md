@@ -1,6 +1,6 @@
 ---
 title: "secret-key-base-reads-credentials-memo"
-status: draft
+status: closed
 updated: 2026-11-09
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: parity:api:calls credits the _credentials memo read in secretKeyBase as Rails' credentials call (configuration.rb:509), so there is no missing call to receipt; the boot-time warm is receipted by @inventedArm credentials on initializeBang (trails#9928)."
 ---
 
 ## Context

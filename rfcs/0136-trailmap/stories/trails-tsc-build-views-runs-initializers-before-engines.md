@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc build-views loads config/initializers without running engine initializers"
-status: ready
+status: claimed
 updated: 2026-11-09
 rfc: "0136-trailmap"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-09T20:55:16Z"
+assignee: "e2e-cover-the-pane-message-box"
 blocked-by: null
 closed-reason: null
 ---

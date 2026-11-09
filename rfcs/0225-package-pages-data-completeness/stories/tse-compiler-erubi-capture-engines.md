@@ -1,6 +1,6 @@
 ---
 title: "tse-compiler-erubi-capture-engines"
-status: claimed
+status: done
 updated: 2026-11-09
 rfc: "0225-package-pages-data-completeness"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9926
 claim: "2026-11-09T19:50:24Z"
 assignee: "tse-compiler-erubi-capture-engines"
 blocked-by: null
