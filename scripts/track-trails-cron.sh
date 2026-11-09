@@ -21,7 +21,8 @@
 #   Whose environment.  Cron's PATH has no pnpm. The run goes through the
 #             login shell, which is the environment the CLI is used from.
 #
-# After every run, `pnpm trails:status` is written to .git/trails-status.txt —
+# After every run, `pnpm trails:status` is written to trails-status.txt in the
+# main checkout's .git (the git common dir) —
 # beside tasks.db, inside the directory trailmap's container mounts — and the
 # trailmap dashboard shows it, so "which trails, how far behind" needs no ssh.
 set -uo pipefail
@@ -49,10 +50,16 @@ out="$(mktemp)"
 trap 'rm -f "$out"' EXIT
 "$LOGIN_SHELL" -lc "cd '$here' && pnpm -s trails:track" >"$out" 2>&1
 status=$?
-# Written to a temp file and renamed, so the dashboard never reads a half-written one.
-status_file="$(git -C "$here" rev-parse --path-format=absolute --git-common-dir)/trails-status.txt"
-"$LOGIN_SHELL" -lc "cd '$here' && pnpm -s trails:status" >"$status_file.tmp" 2>&1
-mv -f "$status_file.tmp" "$status_file"
+# Written to a temp file and renamed only on success, so the dashboard never
+# reads a half-written file and a failed status run keeps the last good one.
+git_dir="$(git -C "$here" rev-parse --path-format=absolute --git-common-dir 2>/dev/null)"
+if [ -n "$git_dir" ]; then
+  status_file="$git_dir/trails-status.txt"
+  trap 'rm -f "$out" "$status_file.tmp"' EXIT
+  if "$LOGIN_SHELL" -lc "cd '$here' && pnpm -s trails:status" >"$status_file.tmp" 2>&1; then
+    mv -f "$status_file.tmp" "$status_file"
+  fi
+fi
 
 open="$(gh issue list -R "$REPO" --state open --search "\"$TITLE\" in:title" \
   --json number --jq '.[0].number // empty' 2>/dev/null)"

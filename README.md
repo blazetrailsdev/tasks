@@ -120,8 +120,9 @@ commented on by each further failure and closed by the next success — because
 cron's own report is mail nobody reads. A bump it makes is the
 `chore(vendor): track trails <sha>` commit, so `git log --grep 'track trails'`
 lists every move the job made. Each run also writes `pnpm trails:status` to
-`.git/trails-status.txt`, beside `tasks.db`, and the trailmap dashboard
-(`/dashboard`) shows it.
+`trails-status.txt` in the main checkout's `.git`, beside `tasks.db`, and the
+trailmap dashboard (`/dashboard`) shows it. A failed status run leaves the
+previous snapshot in place.
 
 Bumping by hand still works and is still a normal thing to do:
 
