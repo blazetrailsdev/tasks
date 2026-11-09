@@ -1,7 +1,7 @@
 ---
 title: "tse-compiler: mirror erubi's files so parity:api and parity:test credit erubi"
-status: in-progress
-updated: 2026-11-08
+status: done
+updated: 2026-11-09
 rfc: "0225-package-pages-data-completeness"
 cluster: null
 packages: []

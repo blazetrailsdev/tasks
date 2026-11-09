@@ -1,6 +1,6 @@
 ---
 title: "zeitwerk-namespace-body-autoloads-own-children"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0212-trailties-port"
 cluster: null

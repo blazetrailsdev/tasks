@@ -1,6 +1,6 @@
 ---
 title: "Decide the lifetime of stripThenable's hidden then"
-status: ready
+status: blocked
 updated: 2026-11-09
 rfc: "0123-blocked-convergence-holding"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-09T12:20:24Z"
+assignee: "generators-actions-indentation-helpers"
+blocked-by: "Tried on trails generators-actions-indentation-helpers bundle: a one-microtask own then:undefined (queueMicrotask delete) passes all of relation.test.ts incl. loaded all/reload, but fails 90 batches/has-many tests: batches.ts:464,549 pass stripThenable(rel) into a block that holds it across awaits, and an async-generator yield re-awaits it. Needs those block/yield sites converged off stripThenable first (a story per site), then the microtask lifetime lands."
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "engine-tests-run-in-isolation-via-register-spec-type"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0212-trailties-port"
 cluster: null

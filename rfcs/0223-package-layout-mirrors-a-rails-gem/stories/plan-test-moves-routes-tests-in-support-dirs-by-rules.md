@@ -1,7 +1,7 @@
 ---
 title: "plan-test-moves places test files in test-helpers dirs by rules 1-3"
-status: draft
-updated: 2026-11-08
+status: ready
+updated: 2026-11-09
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "lib-test-layout-ar-activestorage-lib-off-test-helpers"
-status: draft
-updated: 2026-11-05
+status: ready
+updated: 2026-11-09
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
 packages: []

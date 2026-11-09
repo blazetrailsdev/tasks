@@ -1,6 +1,6 @@
 ---
 title: "Port the api-only generators override and mailer-views tests (generators_test.rb:154-177)"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0212-trailties-port"
 cluster: null

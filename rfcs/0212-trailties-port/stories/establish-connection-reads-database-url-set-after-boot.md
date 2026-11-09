@@ -1,6 +1,6 @@
 ---
 title: "establish-connection-reads-database-url-set-after-boot"
-status: draft
+status: ready
 updated: 2026-11-09
 rfc: "0212-trailties-port"
 cluster: null

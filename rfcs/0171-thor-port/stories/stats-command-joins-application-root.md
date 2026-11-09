@@ -1,6 +1,6 @@
 ---
 title: "stats-command-joins-application-root"
-status: ready
+status: in-progress
 updated: 2026-11-09
 rfc: "0171-thor-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9908
+claim: "2026-11-09T12:35:28Z"
+assignee: "stats-command-joins-application-root"
 blocked-by: null
 closed-reason: null
 ---

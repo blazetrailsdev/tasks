@@ -1,6 +1,6 @@
 ---
 title: "Port Rails::Generators::Actions indentation/indent/with_indentation"
-status: ready
+status: in-progress
 updated: 2026-11-09
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9907
+claim: "2026-11-09T12:20:24Z"
+assignee: "generators-actions-indentation-helpers"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "parity:test: rename misplaced nokogiri, loofah and crass TS test files to the conventional paths"
-status: in-progress
-updated: 2026-11-08
+status: done
+updated: 2026-11-09
 rfc: "0225-package-pages-data-completeness"
 cluster: null
 packages: []

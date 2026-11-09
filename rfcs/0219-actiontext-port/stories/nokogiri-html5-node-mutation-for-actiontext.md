@@ -1,6 +1,6 @@
 ---
 title: "nokogiri: HTML5 document and node mutation surface (create_element, inner_html=, replace, ancestors, matches?)"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0219-actiontext-port"
 cluster: at-infra

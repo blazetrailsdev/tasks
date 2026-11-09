@@ -1,7 +1,7 @@
 ---
 title: "Port the action_text_rich_texts migration, dummy schema, models and fixtures"
-status: ready
-updated: 2026-11-07
+status: in-progress
+updated: 2026-11-09
 rfc: "0219-actiontext-port"
 cluster: at-models
 packages: ["actiontext"]
@@ -9,9 +9,9 @@ deps: ["actiontext-parity-enrollment-and-package", "activestorage-migrations-and
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9909
+claim: "2026-11-09T12:50:24Z"
+assignee: "actiontext-migration-and-test-database"
 blocked-by: null
 closed-reason: null
 ---

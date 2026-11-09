@@ -1,7 +1,7 @@
 ---
 title: "lib-test-layout-tooling-inventory-rest"
-status: draft
-updated: 2026-11-06
+status: ready
+updated: 2026-11-09
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
 packages: []

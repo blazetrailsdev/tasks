@@ -1,6 +1,6 @@
 ---
 title: "isolation-build-app-production-secret-key-base"
-status: draft
+status: ready
 updated: 2026-11-09
 rfc: "0212-trailties-port"
 cluster: null

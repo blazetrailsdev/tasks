@@ -1,7 +1,7 @@
 ---
 title: "actionpack-precompiled-fixture-under-test"
-status: draft
-updated: 2026-11-07
+status: ready
+updated: 2026-11-09
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
 packages: []

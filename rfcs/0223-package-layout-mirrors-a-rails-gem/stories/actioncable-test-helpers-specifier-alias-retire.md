@@ -1,7 +1,7 @@
 ---
 title: "Retire the @blazetrails/actioncable/test-helpers specifier alias"
-status: draft
-updated: 2026-11-07
+status: ready
+updated: 2026-11-09
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
 packages: []
