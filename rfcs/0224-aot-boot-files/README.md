@@ -10,6 +10,7 @@ packages:
   - trailties
   - actionpack
   - "trails-tsc"
+  - "activestorage"
 clusters: []
 priority: 3
 ---
