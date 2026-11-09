@@ -2,7 +2,7 @@
 title: "Decide the lifetime of stripThenable's hidden then"
 status: ready
 updated: 2026-11-09
-rfc: "0221-no-returned-proxies"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
