@@ -1,6 +1,6 @@
 ---
 title: "trails build lists config.helpersPaths entries outside app/helpers in the boot file map"
-status: ready
+status: in-progress
 updated: 2026-11-09
 rfc: "0224-aot-boot-files"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9913
+claim: "2026-11-09T13:05:48Z"
+assignee: "create-table-migration-template-inlines-its-body"
 blocked-by: null
 closed-reason: null
 ---

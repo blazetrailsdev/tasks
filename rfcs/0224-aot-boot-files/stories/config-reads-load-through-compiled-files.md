@@ -1,6 +1,6 @@
 ---
 title: "database.ts, configFor and storage.ts read through the compiled-file map"
-status: draft
+status: done
 updated: 2026-11-09
 rfc: "0224-aot-boot-files"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9911
+claim: "2026-11-09T13:13:09Z"
+assignee: "config-reads-load-through-compiled-files"
 blocked-by: null
 closed-reason: null
 ---

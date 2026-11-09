@@ -1,6 +1,6 @@
 ---
 title: "Active Record SQLite Tests (1) failing on main @5ee0f0b7"
-status: closed
+status: done
 updated: 2026-11-09
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,11 +9,11 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
+pr: trails#9912
 claim: "2026-11-09T12:18:29Z"
 assignee: "red-5ee0f0b7"
 blocked-by: null
-closed-reason: "Flake: solid-queue instrumentation 'enqueuing recurring task emits enqueue_recurring_task event' is timing-dependent (sleep 1.01 window; last event from a duplicate tick lacks active_job_id); passes 3/3 locally, no code change"
+closed-reason: null
 ---
 
 ## Context

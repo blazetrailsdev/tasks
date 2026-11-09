@@ -1,6 +1,6 @@
 ---
 title: "server-path-actionview-testing-resolvers"
-status: ready
+status: in-progress
 updated: 2026-11-09
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9914
+claim: "2026-11-09T13:35:32Z"
+assignee: "establish-connection-reads-database-url-set-after-boot"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "lib-test-layout-tooling-inventory-ar-sites"
-status: draft
+status: closed
 updated: 2026-11-09
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate: the remaining sites stay in lib-test-layout-tooling-inventory-rest, which trails#9913 only partly converged and no longer closes."
 ---
 
 ## Context

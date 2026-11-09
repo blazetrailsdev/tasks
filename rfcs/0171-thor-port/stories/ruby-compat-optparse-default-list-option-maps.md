@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: give OptionParser::List short/long maps and seed DefaultList"
-status: draft
+status: ready
 updated: 2026-11-09
 rfc: "0171-thor-port"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null

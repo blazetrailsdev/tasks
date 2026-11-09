@@ -1,6 +1,6 @@
 ---
 title: "trailties: generator Ruby class paths are seated before their static blocks read rbModName"
-status: draft
+status: ready
 updated: 2026-11-09
 rfc: "0171-thor-port"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 4
 pr: null
 claim: null
 assignee: null

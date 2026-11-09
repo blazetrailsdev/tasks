@@ -1,6 +1,6 @@
 ---
 title: "Thor parity:api: credit Thor::Invocation / Thor::Shell #initialize after constructor inlining"
-status: ready
+status: claimed
 updated: 2026-11-09
 rfc: "0171-thor-port"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-09T13:20:31Z"
+assignee: "port-help-and-version-commands-for-split-namespace"
 blocked-by: null
 closed-reason: null
 ---

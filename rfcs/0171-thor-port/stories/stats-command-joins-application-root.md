@@ -1,6 +1,6 @@
 ---
 title: "stats-command-joins-application-root"
-status: in-progress
+status: done
 updated: 2026-11-09
 rfc: "0171-thor-port"
 cluster: null
