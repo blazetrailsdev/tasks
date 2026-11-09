@@ -2,7 +2,7 @@
 title: "stripThenable hides `then` without returning a Proxy"
 status: blocked
 updated: 2026-11-07
-rfc: "0221-no-returned-proxies"
+rfc: "0123-blocked-convergence-holding"
 cluster: factory-returned
 packages: ["activesupport"]
 deps:
