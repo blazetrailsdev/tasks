@@ -39,3 +39,6 @@ split at the 800-LOC ceiling; still unported:
 - [ ] `Timestamp.create`, `Timestamp.for`, `forTime`, `forDatetime`, `forTimestamp`, `isTimeLike`,
       `forTimeLike` ported at their Ruby names in `packages/tzinfo/lib/timestamp.ts`.
 - [ ] `tc_timestamp.rb`'s `test_create_*` and `test_for_*` tests ported by name.
+- [ ] `tc_timestamp.rb`'s `test_compare` (`:362-395`) and `test_eql` (`:397-430`) ported, one inline
+      `expect` per Rails assertion (`Timestamp#compareTo` / `#eql` already exist; these were cut for
+      the LOC ceiling).
