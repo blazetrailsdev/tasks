@@ -1,6 +1,6 @@
 ---
 title: "mail-common-address-field-utf8-arm-misreads-decoded-string"
-status: draft
+status: ready
 updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "zeitwerk-kernel-require-loader-arm-calls-original-require"
-status: draft
+status: ready
 updated: 2026-11-10
 rfc: "0229-tooling-gems-residual-parity"
 cluster: null

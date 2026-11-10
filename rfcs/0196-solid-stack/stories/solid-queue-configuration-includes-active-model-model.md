@@ -1,7 +1,7 @@
 ---
 title: "solid-queue-configuration-includes-active-model-model"
-status: ready
-updated: 2026-11-09
+status: in-progress
+updated: 2026-11-10
 rfc: "0196-solid-stack"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9967
+claim: "2026-11-10T20:18:55Z"
+assignee: "solid-queue-configuration-includes-active-model-model"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Port ActionText module, Fragment, HtmlConversion and PlainTextConversion"
-status: ready
-updated: 2026-11-07
+status: claimed
+updated: 2026-11-10
 rfc: "0219-actiontext-port"
 cluster: at-content
 packages: ["actiontext"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-10T20:55:23Z"
+assignee: "actiontext-module-fragment-and-conversions"
 blocked-by: null
 closed-reason: null
 ---

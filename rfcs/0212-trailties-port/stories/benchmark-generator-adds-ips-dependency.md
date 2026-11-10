@@ -1,7 +1,7 @@
 ---
 title: "BenchmarkGenerator adds the benchmark-ips dependency like Rails' add_ips_to_gemfile"
-status: in-progress
-updated: 2026-11-09
+status: closed
+updated: 2026-11-10
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
@@ -14,7 +14,7 @@ pr: trails#9935
 claim: "2026-11-09T21:42:03Z"
 assignee: "benchmark-generator-adds-ips-dependency"
 blocked-by: null
-closed-reason: null
+closed-reason: "Its PR trails#9935 closed unmerged 2026-11-09; owner ruled 2026-11-10 that trails does not port benchmark-ips (Node native benchmarking covers generated benchmarks; trails#9943 closed)"
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "Port InboundEmail::Incineratable, Incineration and IncinerationJob, and the InboundEmail tests"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0216-actionmailbox-port"
 cluster: amb-core

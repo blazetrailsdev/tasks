@@ -1,7 +1,7 @@
 ---
 title: "port-plugin-helpers-with-new-plugin"
-status: blocked
-updated: 2026-11-07
+status: ready
+updated: 2026-11-10
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -12,9 +12,9 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: "2026-11-07T10:47:07Z"
-assignee: "port-plugin-helpers-with-new-plugin"
-blocked-by: "scaffold-generator-engine-subprocess-tests waiting on port-trailties-plugin-command: no bin/trails plugin command exists for with_new_plugin to shell out to"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

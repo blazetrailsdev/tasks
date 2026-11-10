@@ -1,7 +1,7 @@
 ---
 title: "Rack::Lint InputWrapper#read admits a binary (Uint8Array) buffer"
-status: draft
-updated: 2026-10-21
+status: done
+updated: 2026-11-10
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9966
+claim: "2026-11-10T20:25:04Z"
+assignee: "rack-lint-input-read-admits-binary-buffer"
 blocked-by: null
 closed-reason: null
 ---

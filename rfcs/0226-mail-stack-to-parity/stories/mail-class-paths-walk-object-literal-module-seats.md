@@ -1,6 +1,6 @@
 ---
 title: "mail-class-paths-walk-object-literal-module-seats"
-status: draft
+status: ready
 updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null

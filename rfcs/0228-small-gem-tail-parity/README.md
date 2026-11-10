@@ -1,9 +1,9 @@
 ---
 rfc: "0228-small-gem-tail-parity"
 title: "Small-gem tail: date, builder, rack and actionview residuals"
-status: active
+status: closed
 created: 2026-11-09
-updated: 2026-11-09
+updated: 2026-11-10
 owner: "@deanmarano"
 packages:
   - "date"

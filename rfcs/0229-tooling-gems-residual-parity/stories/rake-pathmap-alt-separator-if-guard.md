@@ -1,6 +1,6 @@
 ---
 title: "rake pathmap tests mirror Rails' if File::ALT_SEPARATOR guard instead of vacuous ternaries"
-status: draft
+status: ready
 updated: 2026-11-10
 rfc: "0229-tooling-gems-residual-parity"
 cluster: null

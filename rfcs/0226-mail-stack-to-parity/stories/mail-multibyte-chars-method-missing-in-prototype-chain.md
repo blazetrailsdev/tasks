@@ -1,6 +1,6 @@
 ---
 title: "mail-multibyte-chars-method-missing-in-prototype-chain"
-status: draft
+status: ready
 updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null

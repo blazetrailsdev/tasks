@@ -1,6 +1,6 @@
 ---
 title: "Port rack's spec_static dot-segment admin-header tests"
-status: ready
+status: done
 updated: 2026-11-10
 rfc: "0228-small-gem-tail-parity"
 cluster: null
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#9965
+claim: "2026-11-10T20:19:53Z"
+assignee: "rack-static-dot-segment-admin-header-tests"
 blocked-by: null
 closed-reason: null
 ---

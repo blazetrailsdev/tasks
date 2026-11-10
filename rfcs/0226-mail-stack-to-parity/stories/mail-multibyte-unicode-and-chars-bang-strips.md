@@ -1,6 +1,6 @@
 ---
 title: "Port Mail::Multibyte::Unicode's Codepoint / UnicodeDatabase surface and Chars' strip bangs"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null

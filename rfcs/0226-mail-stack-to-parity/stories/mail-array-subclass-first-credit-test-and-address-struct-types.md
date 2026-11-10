@@ -1,6 +1,6 @@
 ---
 title: "Test Array-subclass first credit; type AddressListStruct addresses"
-status: draft
+status: ready
 updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null

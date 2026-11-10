@@ -1,7 +1,7 @@
 ---
 title: "actions-gem-and-benchmark-ips-dependency"
-status: blocked
-updated: 2026-11-09
+status: closed
+updated: 2026-11-10
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: "2026-11-09T03:50:32Z"
 assignee: "actions-gem-and-benchmark-ips-dependency"
-blocked-by: "Owner decision needed: shape of the Gemfile family (gem/gem_group/github) in trails. A package.json gem has no meaning for indentation, and the benchmark template uses performance.now() with no npm counterpart to benchmark-ips. Overlaps converge-generators-actions-gemfile-family-onto-package-json."
-closed-reason: null
+blocked-by: null
+closed-reason: "Generators::Actions#gem landed (packages/trailties/lib/generators/actions.ts:44); the benchmark-ips half is dead by owner ruling 2026-11-10 that trails does not port benchmark-ips (see port-benchmark-ips-gem-for-generated-benchmarks, trails#9943 closed)"
 ---
 
 ## Context

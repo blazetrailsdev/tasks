@@ -1,7 +1,7 @@
 ---
 title: "Port the scaffold tests that run inside a generated engine"
-status: blocked
-updated: 2026-11-07
+status: ready
+updated: 2026-11-10
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,9 +13,9 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: "2026-11-07T10:47:07Z"
-assignee: "port-plugin-helpers-with-new-plugin"
-blocked-by: "waiting on port-trailties-plugin-command"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

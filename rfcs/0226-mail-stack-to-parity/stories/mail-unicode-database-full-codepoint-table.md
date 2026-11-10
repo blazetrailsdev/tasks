@@ -1,6 +1,6 @@
 ---
 title: "Mail UnicodeDatabase seats every codepoint as Marshal.load does"
-status: draft
+status: ready
 updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "server-path-railtie-integration-test-hooks"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
