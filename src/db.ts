@@ -2,7 +2,7 @@
  * Connection bootstrap + the read-model write-through.
  *
  * Importing `./models/index.js` (not the individual model files) is required:
- * that barrel is what calls registerModel(), and association targets are named
+ * that barrel is what seats the models (see models/index.ts), and association targets are named
  * by string with no autoloader behind them.
  */
 import { renameSync, writeFileSync } from "node:fs";

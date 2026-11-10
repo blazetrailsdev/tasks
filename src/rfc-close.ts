@@ -87,7 +87,7 @@ export async function closeRfcIfComplete(rfcId: string | null | undefined): Prom
 
 /**
  * Register the callback. Called once from the models barrel, next to
- * `registerModel`, so importing models is what arms the rule.
+ * model seating, so importing models is what arms the rule.
  */
 export function registerRfcAutoClose(): void {
   Story.afterSave(async (story: Story) => {
