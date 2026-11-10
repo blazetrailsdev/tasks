@@ -21,7 +21,9 @@ closed-reason: null
 
 `multibyte/unicode.rb` is 12/32: `Codepoint` (accessors, `initialize`,
 `swapcase_mapping`), `UnicodeDatabase#load` / `dirname` / `filename`,
-`Unicode.default_normalization_form(=)`, `reorder_characters`
+`Unicode.default_normalization_form(=)` (already a property in
+`packages/mail/lib/multibyte/unicode.ts:83`, so a credit-story row),
+`reorder_characters`
 (`vendor/mail/2.8.1/lib/mail/multibyte/unicode.rb:1-405`). `multibyte/chars.rb`
 is 33/36: `lstrip!`, `rstrip!`, `strip!`. `Chars` wraps `@wrapped_string`, so
 the bangs reassign the wrapped value; that is portable under
