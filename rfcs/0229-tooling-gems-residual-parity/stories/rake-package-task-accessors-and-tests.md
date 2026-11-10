@@ -1,6 +1,6 @@
 ---
 title: "Port Rake::PackageTask's accessors, initialize / init and naming, with test_rake_package_task.rb"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0229-tooling-gems-residual-parity"
 cluster: null

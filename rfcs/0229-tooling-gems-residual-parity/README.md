@@ -11,6 +11,7 @@ packages:
   - "thor"
   - "rackup"
 clusters: []
+priority: 3
 ---
 
 # RFC 0229 — Tooling gems residual parity: rake, zeitwerk, thor and rackup

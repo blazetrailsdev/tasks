@@ -1,6 +1,6 @@
 ---
 title: "parity:test reports tzinfo's 961 Ruby tests instead of 0/0"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0231-tzinfo-to-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: 'Run actionview''s "layouts are included" now that its blocker is done'
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0228-small-gem-tail-parity"
 cluster: null

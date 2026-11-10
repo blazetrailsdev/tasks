@@ -1,6 +1,6 @@
 ---
 title: "Port message_spec.rb's remaining missing-required-fields, deliver, replying and parts examples"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "The build entry registers the yaml Psych adapter statically"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0224-aot-boot-files"
 cluster: null
