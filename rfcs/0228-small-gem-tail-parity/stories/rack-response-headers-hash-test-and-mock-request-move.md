@@ -1,6 +1,6 @@
 ---
 title: "Port rack's Response headers-hash ArgumentError test and move the misplaced mock-request test"
-status: claimed
+status: in-progress
 updated: 2026-11-10
 rfc: "0228-small-gem-tail-parity"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 3
-pr: null
+pr: trails#9948
 claim: "2026-11-10T13:44:28Z"
 assignee: "rake-guarded-tests-and-thread-history-path"
 blocked-by: null

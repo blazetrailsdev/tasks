@@ -1,6 +1,6 @@
 ---
 title: "parity:api credits MiniMime's PReadFile class arm"
-status: ready
+status: in-progress
 updated: 2026-11-10
 rfc: "0227-media-gems-residual-parity"
 cluster: null
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9952
+claim: "2026-11-10T14:13:58Z"
+assignee: "mini-mime-pread-file-credited"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "mail-unstructured-field-utf8-arm-misreads-decoded-string"
-status: draft
+status: done
 updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9949
 claim: null
 assignee: null
 blocked-by: null

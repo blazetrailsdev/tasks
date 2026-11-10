@@ -1,6 +1,6 @@
 ---
 title: "mail-mime-messages-spec"
-status: draft
+status: closed
 updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: duplicate of mail-mime-messages-and-example-emails-specs, which stays open for mime_messages_spec.rb"
 ---
 
 # Port mime_messages_spec.rb

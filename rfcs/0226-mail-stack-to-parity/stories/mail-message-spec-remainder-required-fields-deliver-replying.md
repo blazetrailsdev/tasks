@@ -1,6 +1,6 @@
 ---
 title: "Port message_spec.rb's remaining missing-required-fields, deliver, replying and parts examples"
-status: ready
+status: in-progress
 updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 550
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#9951
+claim: "2026-11-10T14:04:49Z"
+assignee: "mini-mime-full-parity-with-mime-types-test"
 blocked-by: null
 closed-reason: null
 ---

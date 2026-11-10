@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-recurring-enqueue-event-flake"
-status: draft
+status: ready
 updated: 2026-11-10
 rfc: "0196-solid-stack"
 cluster: null

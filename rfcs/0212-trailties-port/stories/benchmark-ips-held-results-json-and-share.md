@@ -1,6 +1,6 @@
 ---
 title: "benchmark-ips-held-results-json-and-share"
-status: draft
+status: closed
 updated: 2026-11-10
 rfc: "0212-trailties-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: owner ruled (2026-11-10) that trails does not port benchmark-ips; the parent port trails#9943 was closed."
 ---
 
 ## Context

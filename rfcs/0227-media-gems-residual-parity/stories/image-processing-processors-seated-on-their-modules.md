@@ -1,6 +1,6 @@
 ---
 title: "Seat ImageProcessing::MiniMagick::Processor and ::Vips::Processor on their modules so parity:api credits them"
-status: claimed
+status: in-progress
 updated: 2026-11-10
 rfc: "0227-media-gems-residual-parity"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#9948
 claim: "2026-11-10T13:44:28Z"
 assignee: "rake-guarded-tests-and-thread-history-path"
 blocked-by: null

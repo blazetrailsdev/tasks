@@ -1,6 +1,6 @@
 ---
 title: "Port rake's two platform- and version-guarded tests and move the thread-history test file"
-status: claimed
+status: in-progress
 updated: 2026-11-10
 rfc: "0229-tooling-gems-residual-parity"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 2
-pr: null
+pr: trails#9948
 claim: "2026-11-10T13:44:28Z"
 assignee: "rake-guarded-tests-and-thread-history-path"
 blocked-by: null

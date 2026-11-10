@@ -1,6 +1,6 @@
 ---
 title: "Port actionmailer/test/caching_test.rb"
-status: ready
+status: in-progress
 updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#9952
+claim: "2026-11-10T14:13:58Z"
+assignee: "mini-mime-pread-file-credited"
 blocked-by: null
 closed-reason: null
 ---

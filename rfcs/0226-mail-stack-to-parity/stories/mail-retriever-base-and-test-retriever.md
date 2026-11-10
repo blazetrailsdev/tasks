@@ -1,6 +1,6 @@
 ---
 title: "Port Mail's retriever_method surface, Retriever base and TestRetriever"
-status: claimed
+status: in-progress
 updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: 2
-pr: null
+pr: trails#9950
 claim: "2026-11-10T13:34:18Z"
 assignee: "mail-multibyte-unicode-and-chars-bang-strips"
 blocked-by: null

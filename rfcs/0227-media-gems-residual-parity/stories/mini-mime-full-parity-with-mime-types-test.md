@@ -1,6 +1,6 @@
 ---
 title: "Port mini_mime's full-parity-with-mime-types test over vendored mime-types data"
-status: ready
+status: in-progress
 updated: 2026-11-10
 rfc: "0227-media-gems-residual-parity"
 cluster: null
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9951
+claim: "2026-11-10T14:04:49Z"
+assignee: "mini-mime-full-parity-with-mime-types-test"
 blocked-by: null
 closed-reason: null
 ---

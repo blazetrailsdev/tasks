@@ -1,6 +1,6 @@
 ---
 title: "Active Record MariaDB Tests (1) failing on main @fecdf636"
-status: ready
+status: closed
 updated: 2026-11-10
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-10T14:14:55Z"
+assignee: "red-fecdf636"
 blocked-by: null
-closed-reason: null
+closed-reason: "Flake: solid-queue instrumentation 'enqueuing recurring task emits enqueue_recurring_task event' on MariaDB (1); last scheduler tick interrupted at stop so payload lacked active_job_id. Commit fecdf636 touched only actioncable/trailties; test passes locally."
 ---
 
 ## Context

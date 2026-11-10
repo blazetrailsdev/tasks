@@ -1,6 +1,6 @@
 ---
 title: "Port builder's Ruby 1.8 $KCODE arm of TestUtfMarkup under its own guard"
-status: ready
+status: in-progress
 updated: 2026-11-10
 rfc: "0228-small-gem-tail-parity"
 cluster: null
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#9952
+claim: "2026-11-10T14:13:58Z"
+assignee: "mini-mime-pread-file-credited"
 blocked-by: null
 closed-reason: null
 ---
