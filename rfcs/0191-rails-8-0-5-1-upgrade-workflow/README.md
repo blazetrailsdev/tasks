@@ -1,7 +1,7 @@
 ---
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 title: "Rails 8.0.5.2 upgrade workflow: the first bump of the source of truth, the bump ledger that keeps main green, and the scoping of 8.1"
-status: draft
+status: active
 created: 2026-10-13
 updated: 2026-11-10
 owner: "@deanmarano"
