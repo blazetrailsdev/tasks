@@ -22,6 +22,9 @@ importers:
       '@blazetrails/activerecord':
         specifier: file:vendor/blazetrails-activerecord-0.1.0.tgz
         version: file:vendor/blazetrails-activerecord-0.1.0.tgz(typescript@5.9.3)
+      '@blazetrails/activesupport':
+        specifier: file:vendor/blazetrails-activesupport-0.1.0.tgz
+        version: file:vendor/blazetrails-activesupport-0.1.0.tgz
       '@blazetrails/date':
         specifier: file:vendor/blazetrails-date-0.1.0.tgz
         version: file:vendor/blazetrails-date-0.1.0.tgz

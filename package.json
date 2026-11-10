@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@blazetrails/activerecord": "file:vendor/blazetrails-activerecord-0.1.0.tgz",
+    "@blazetrails/activesupport": "file:vendor/blazetrails-activesupport-0.1.0.tgz",
     "@blazetrails/date": "file:vendor/blazetrails-date-0.1.0.tgz"
   },
   "devDependencies": {
