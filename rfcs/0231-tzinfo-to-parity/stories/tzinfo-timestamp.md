@@ -1,5 +1,5 @@
 ---
-title: "Port TZInfo::Timestamp and tc_timestamp.rb"
+title: "Port TZInfo::Timestamp instance surface and its tc_timestamp.rb tests"
 status: in-progress
 updated: 2026-11-10
 rfc: "0231-tzinfo-to-parity"
@@ -29,5 +29,8 @@ unported. Every period and transition class reads `Timestamp`, so it comes first
 
 ## Acceptance criteria
 
-- [ ] `packages/tzinfo/lib/timestamp.ts` ports all 27 members at their Ruby names.
-- [ ] `test/timestamp.test.ts` ports `tc_timestamp.rb` by name.
+- [ ] `packages/tzinfo/lib/timestamp.ts` ports the constructor, `initialize!`, `new!`, `Timestamp.utc`
+      and every instance member at their Ruby names.
+- [ ] `test/timestamp.test.ts` ports `tc_timestamp.rb`'s tests for those members by name.
+- `Timestamp.create`, `Timestamp.for` and its `for_*` helpers, with their tests, are
+  `tzinfo-timestamp-create-and-for` (split at the PR LOC ceiling).
