@@ -37,11 +37,11 @@ trailmap's numbers for this tail predate several merges. `pnpm parity:api` /
 | rack-session | 98 / 98     | 124 / 124 (1 PERMANENT skip)                     | none: at parity                                                                                                               |
 | rack-test    | 108 / 108   | 234 / 234 (1 PERMANENT skip)                     | none: at parity                                                                                                               |
 | actioncable  | 496 / 496   | 215 / 215 (2 PERMANENT skips)                    | none: at parity                                                                                                               |
-| actionview   | 3057 / 3057 | 2562 / 2562, 46 skipped (39 PERMANENT)           | this RFC + `html-sanitizer-port-scrubbers`, `html-sanitizer-safe-list-sanitize-css` (0123)                                    |
+| actionview   | 3057 / 3057 | 2562 / 2562, 46 skipped (41 PERMANENT)           | this RFC + `html-sanitizer-port-scrubbers`, `html-sanitizer-safe-list-sanitize-css` (0123)                                    |
 
 ## Design
 
-Four stories. rack's multipart gap (10 missing, 3 misplaced) is
+Five stories. rack's multipart gap (10 missing, 3 misplaced) is
 `rack-3-2-port-remaining-multipart-specs`' acceptance list verbatim, and the
 `public interface` headers skip is `ruby-compat-hash-answers-rack-headers-public-interface`'s;
 neither is re-filed.
@@ -58,15 +58,21 @@ neither is re-filed.
 
 ## Rollout
 
-1. `date-infinity-unary-plus`, `builder-markupbuilder-duplicate-named-tests`,
-   `rack-static-dot-segment-and-response-headers-tests`,
-   `actionview-layouts-are-included-unblocked`
+1. `date-infinity-unary-plus`, `builder-utf-markup-kcode-arm-tests`,
+   `rack-static-dot-segment-admin-header-tests`,
+   `rack-response-headers-hash-test-and-mock-request-move`,
+   `actionview-layouts-are-included-unblocked` (all independent)
 
 ## Verification
 
-`pnpm parity:api` date 10/10; `pnpm parity:test` builder 98/98, rack 0
-misplaced with only the owned multipart and headers gaps left; actionview's only
-skips are `PERMANENT-SKIP` or owned by a named story.
+- `pnpm parity:api`: date 10/10.
+- `pnpm parity:test`: builder 98/98.
+- rack 947/960. The 13 left are the 10 missing and 3 misplaced multipart tests
+  that `rack-3-2-port-remaining-multipart-specs` owns. The one open skip
+  ("public interface") is owned by
+  `ruby-compat-hash-answers-rack-headers-public-interface`.
+- actionview has 45 skips: 41 `PERMANENT-SKIP` and 4 owned by
+  `html-sanitizer-port-scrubbers` / `html-sanitizer-safe-list-sanitize-css`.
 
 ## Open questions
 
@@ -75,3 +81,4 @@ None open: each residual has one obvious port.
 ## Changelog
 
 - 2026-11-09: initial RFC; Open Questions resolved above, so it lands `active`.
+- 2026-11-09: revised for review feedback.

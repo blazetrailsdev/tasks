@@ -28,4 +28,9 @@ done (0141). actionview's other open skips are owned by
 
 ## Acceptance criteria
 
-- [ ] The test runs with its Rails body, its BLOCKED line removed.
+- [ ] The test runs with its Rails body, its BLOCKED line removed, and passes.
+- [ ] If it still fails, the cause is fixed when it is a ported arm under
+      100 LOC. Otherwise a new story is filed in this RFC and the skip's
+      `BLOCKED:` line names it.
+- [ ] Measured outcome: actionview's skipped count goes from 46 to 45, with its
+      41 `PERMANENT-SKIP`s unchanged, or stays 46 with the new blocker named.
