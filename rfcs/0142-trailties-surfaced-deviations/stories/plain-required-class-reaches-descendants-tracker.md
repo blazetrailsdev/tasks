@@ -2,7 +2,7 @@
 title: "plain-required-class-reaches-descendants-tracker"
 status: draft
 updated: 2026-11-10
-rfc: "0212-trailties-port"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
