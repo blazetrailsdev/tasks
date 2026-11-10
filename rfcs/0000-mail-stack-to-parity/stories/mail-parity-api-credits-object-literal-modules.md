@@ -41,7 +41,9 @@ So ~330 of the 472 missing rows are an extractor gap, not a port gap.
 This is a trails PR in shared tooling (`scripts/api-compare/`), not a mail
 change: every package's credit runs through the same extractor, so a wider rule
 can raise or lower another package's matched count. The last criterion guards
-that.
+that. The same gap hides ported members elsewhere: rake's `FileUtilsExt` and
+`PrivateReader::ClassMethods` and zeitwerk's `Registry`. Stories in the
+tooling-gems RFC depend on this one for that reason.
 
 ## Acceptance criteria
 
@@ -55,4 +57,5 @@ that.
       writable, so the writers are ported and count as matched.
 - [ ] Each extractor change has a fixture test in `scripts/api-compare/`.
 - [ ] `pnpm parity:api` mail matched rises by at least 330 (to at least
-      1135 / 1277), with no other package's matched count falling.
+      1135 / 1277), rake's and zeitwerk's rise by the object-literal rows their
+      stories name, and no package's matched count falls.
