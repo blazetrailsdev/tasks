@@ -29,6 +29,8 @@ files. They are an RSpec-protocol matcher API (`matches?`, `description`,
 ## Acceptance criteria
 
 - [ ] `packages/mail/lib/matchers/has-sent-mail.ts` and `attachment-matchers.ts`
-      port every member at its Ruby name (`isMatches` for `matches?`).
+      port every member at its Ruby name as CLAUDE.md's predicate rule
+      translates it (`matches?` is `isMatches`, `matches_on_sender?` is
+      `isMatchesOnSender`), which is what `parity:api` matches on.
 - [ ] A `*.trails.test.ts` exercises each matcher against `TestMailer.deliveries`,
       positive and negated, since the gem has no spec to port.

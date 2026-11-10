@@ -47,12 +47,19 @@ One story per Ruby file or spec cluster, each under the 700 LOC ceiling.
 The api-credit story lands first so the remaining missing rows are real.
 
 Prior art checked: `0204-actionmailer-and-mail-port` is closed with every story
-done or closed; open neighbours are referenced, not re-filed:
-`enumerator-map-and-singleton-for-mail` (0154, `Configuration` includes
-`Singleton`), `stub-any-instance-does-not-intercept-js-new` (owns the two
-skipped `delivery_methods_test.rb` tests),
-`actionmailer-base-url-for-default-url-options-typed` (0142) and
-`passwords-mailer-resolves-against-a-ported-actionmailer` (0142).
+done or closed. Four open neighbours touch these packages. None of them blocks a
+story here, so they are referenced, not dep-linked or re-filed:
+
+- `enumerator-map-and-singleton-for-mail` (RFC `0154-ruby-compat-surfaced-deviations`):
+  makes `Configuration` include `Singleton`. The retriever story adds methods to
+  `Configuration` and works with or without it.
+- `stub-any-instance-does-not-intercept-js-new` (RFC
+  `0158-activesupport-assertion-surfaced-port-bugs`): owns the two skipped
+  `delivery_methods_test.rb` tests, which this RFC leaves alone.
+- `actionmailer-base-url-for-default-url-options-typed` and
+  `passwords-mailer-resolves-against-a-ported-actionmailer` (RFC
+  `0142-trailties-surfaced-deviations`): trailties-side typing and generator
+  work.
 
 ## Non-goals
 
@@ -67,6 +74,12 @@ skipped `delivery_methods_test.rb` tests),
   ported; crediting them is the honest number.
 
 ## Rollout
+
+The only hard orderings are the stories' `deps`: the retriever base before POP3,
+IMAP and the network spec; check-delivery-params before the SMTP / sendmail
+specs; the net-smtp path move before its new tests. Everything else in a phase,
+and across phases 2 and 3, can run in parallel; the phases are grouping, with
+the api-credit story first so later api numbers are real.
 
 1. `mail-parity-api-credits-object-literal-modules`, `net-smtp-tests-at-convention-paths`
 2. Port gaps: `mail-check-delivery-params`, `mail-retriever-base-and-test-retriever`,
@@ -85,7 +98,8 @@ skipped `delivery_methods_test.rb` tests),
 
 ## Verification
 
-`pnpm parity:api`: mail 1277/1277, actionmailer 230/230. `pnpm parity:test`:
+`pnpm parity:api`: mail 1277/1277 (no scoped skips are added, so the
+denominator does not move), actionmailer 230/230. `pnpm parity:test`:
 mail, actionmailer and net-smtp each 100% matched, with only `PERMANENT-SKIP`
 skips and 0 misplaced.
 
@@ -95,9 +109,11 @@ skips and 0 misplaced.
    Resolved: by the constant the gem names, resolved at call time and stubbed
    by the spec doubles; a real client is a Non-goal.
 2. **Do the RSpec matchers port at all?** Resolved: yes, as plain classes at
-   their Ruby names; they are public gem API, and RSpec's protocol methods are
+   their Ruby names, translated by the usual rules (`matches?` is `isMatches`);
+   they are public gem API, and RSpec's protocol methods are
    ordinary methods.
 
 ## Changelog
 
 - 2026-11-09: initial RFC; Open Questions resolved above, so it lands `active`.
+- 2026-11-09: revised for review feedback.

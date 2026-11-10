@@ -38,6 +38,11 @@ surface that exists but is not credited:
 
 So ~330 of the 472 missing rows are an extractor gap, not a port gap.
 
+This is a trails PR in shared tooling (`scripts/api-compare/`), not a mail
+change: every package's credit runs through the same extractor, so a wider rule
+can raise or lower another package's matched count. The last criterion guards
+that.
+
 ## Acceptance criteria
 
 - [ ] `scripts/api-compare/extract-ts-api.ts` credits the members of an exported
@@ -46,8 +51,8 @@ So ~330 of the 472 missing rows are an extractor gap, not a port gap.
 - [ ] A ruby-compat `Struct.new(...)` field list credits the Ruby `Struct.new`
       members (reader and writer) on the named struct constant.
 - [ ] A Ragel table accessor ported as a data property credits both the Ruby
-      reader and its `=` writer, or the writer is a scoped skip in
-      `scripts/parity/conventions.ts` with its reason.
+      reader and its `=` writer. There is no scoped skip: a data property is
+      writable, so the writers are ported and count as matched.
 - [ ] Each extractor change has a fixture test in `scripts/api-compare/`.
-- [ ] `pnpm parity:api` mail matched rises by at least 300, with no other
-      package's matched count falling.
+- [ ] `pnpm parity:api` mail matched rises by at least 330 (to at least
+      1135 / 1277), with no other package's matched count falling.

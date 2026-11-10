@@ -24,7 +24,10 @@ closed-reason: null
 interceptors, `raise_delivery_errors`) and `spec/mail/multipart_report_spec.rb`
 (21 tests: `multipart/report` bounce parsing over `spec/fixtures/emails/error_emails/`)
 have no TS files. Observer / interceptor registration is on `Mail`
-(`packages/mail/lib/mail.ts:104-140`).
+(`packages/mail/lib/mail.ts:104-140`). The spec also configures retrievers:
+`retriever_method :pop3, …` in its `Mail.defaults` block (`network_spec.rb:22`),
+"default delivery and retriever methods" (:30) and "should set the retriever
+method" (:56). That is why it depends on the retriever-base story.
 
 ## Acceptance criteria
 
