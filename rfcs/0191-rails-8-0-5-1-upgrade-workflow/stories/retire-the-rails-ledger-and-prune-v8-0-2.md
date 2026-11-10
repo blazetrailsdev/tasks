@@ -1,5 +1,5 @@
 ---
-title: "Close out: the Rails ledger is empty and deleted, v8.0.2 is pruned, the floor is retaken at v8.1.4"
+title: "Close out: the Rails ledger is empty and deleted, v8.0.2 is pruned, the floor is retaken at v8.0.5.2"
 status: draft
 updated: 2026-10-13
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
