@@ -1,14 +1,15 @@
 ---
-title: "Port Rake::FileUtilsExt's verbose / nowrite / when_writing / rake_output_message / rake_check_options and the flag accessors"
+title: "Confirm Rake::FileUtilsExt's helpers are credited in it and its four includers once object-literal modules are credited"
 status: draft
 updated: 2026-11-09
 rfc: "0000-tooling-gems-residual-parity"
 cluster: null
 packages:
   - "rake"
-deps: []
+deps:
+  - "mail-parity-api-credits-object-literal-modules"
 deps-rfc: []
-est-loc: 300
+est-loc: 60
 priority: null
 pr: null
 claim: null
@@ -21,16 +22,17 @@ closed-reason: null
 
 `pnpm parity:api` (2026-11-09) misses `verbose`, `nowrite`, `when_writing`,
 `rake_output_message`, `rake_check_options` in `file_utils_ext.rb` (7/16, plus
-`verbose_flag(=)`, `nowrite_flag(=)`) and again in every file whose module
-includes or extends `FileUtilsExt`: `dsl_definition.rb` (16/21), `file_list.rb`
-(the `Rake#…` rows), `tasklib.rb` (16/21), `loaders/makefile.rb` (19/24).
-Source: `vendor/rake/v13.2.1/lib/rake/file_utils_ext.rb:1-134`. Ported once in
-`packages/rake/lib/file-utils-ext.ts` and mixed in by `include()` / `extend()`,
-the includers are credited too.
+`verbose_flag(=)`, `nowrite_flag(=)`) and again in each file whose module mixes
+in `FileUtilsExt`: `dsl_definition.rb`, `file_list.rb`, `tasklib.rb`,
+`loaders/makefile.rb`. All nine exist in the `FileUtilsExt` object-literal module
+(`packages/rake/lib/file-utils-ext.ts:60-101`), mixed in by `include(DSL,
+FileUtilsExt)` / `extend(Rake, FileUtilsExt)` (`dsl-definition.ts:88-90`). This
+is the extractor gap that `mail-parity-api-credits-object-literal-modules` (in
+the mail-stack RFC) fixes for every package, not a port.
 
 ## Acceptance criteria
 
-- [ ] The nine members are ported at their Ruby names in `file-utils-ext.ts`.
-- [ ] `DSL`, `FileList`, `TaskLib` and `MakefileLoader` get them through the
-      Ruby `include` / `extend`, not a copy.
-- [ ] `pnpm parity:api` shows the five files complete for these names.
+- [ ] After that story lands, `pnpm parity:api` credits the nine names in
+      `file_utils_ext.rb` and the five mixed-in names in each of the four
+      includers. Any includer row still missing is because it is not mixed in
+      the Ruby way, and is fixed with `include()` / `extend()`.

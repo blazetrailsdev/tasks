@@ -44,12 +44,14 @@ Each target count is closed by named stories.
 
 rake's 74 missing api rows:
 
-- `rake-file-utils-ext-flags-and-output-helpers` closes 29: nine in
-  `file_utils_ext.rb`, plus five names × four includers.
+- `rake-file-utils-ext-flags-and-output-helpers` closes 29 (nine in
+  `file_utils_ext.rb`, plus five names × four includers). They already exist,
+  so it closes them by confirming the credit fix, as does `PrivateReader`'s one.
 - `rake-clean` closes 4.
 - `rake-package-task-accessors-and-tests` and `rake-package-task-define-archives`
   close `packagetask.rb`'s 36.
-- `rake-extension-private-reader-and-file-list-remainder` closes 5.
+- `rake-extension-private-reader-and-file-list-remainder` closes the other
+  4 (`rake_extension`, `to_s`, and the two moved `Rake` functions).
 
 zeitwerk's 12:
 
@@ -91,6 +93,12 @@ parity counts.
   its `__name` alias is observable, so half of it ports.
 
 ## Rollout
+
+Many "missing" rows here are members of object-literal modules
+(`FileUtilsExt`, `Registry`, `PrivateReader::ClassMethods`) that the extractor
+does not credit. One generic fix, `mail-parity-api-credits-object-literal-modules`
+in the mail-stack RFC, closes them for every package, and the rake and zeitwerk
+stories that rely on it list it in `deps`.
 
 The only ordering is the `deps`: the `FileUtilsExt` story before both
 package-task stories, and accessors before archives. Everything else, in both

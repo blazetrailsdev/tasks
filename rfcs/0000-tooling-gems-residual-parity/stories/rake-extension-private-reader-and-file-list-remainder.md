@@ -1,5 +1,5 @@
 ---
-title: "Port Module#rake_extension, PrivateReader and FileList#to_s / each_dir_parent / from_pathname, with their tests"
+title: "Port Module#rake_extension and FileList#to_s, and move each_dir_parent / from_pathname into file_list's file"
 status: draft
 updated: 2026-11-09
 rfc: "0000-tooling-gems-residual-parity"
@@ -8,7 +8,7 @@ packages:
   - "rake"
 deps: []
 deps-rfc: []
-est-loc: 200
+est-loc: 150
 priority: null
 pr: null
 claim: null
@@ -19,13 +19,18 @@ closed-reason: null
 
 ## Context
 
-`pnpm parity:api`: `ext/core.rb` 0/1 (`Module#rake_extension`, no TS file),
-`private_reader.rb` 0/1 (`PrivateReader#private_reader`), `file_list.rb`
-`FileList#to_s`, `Rake.each_dir_parent`, `Rake.from_pathname`
-(`vendor/rake/v13.2.1/lib/rake/file_list.rb`). `pnpm parity:test`: `test_rake_extension.rb` (3,
-`rake_extension`) and `test_rake_reduce_compat.rb` (1) are unported.
+`pnpm parity:api`: `ext/core.rb` 0/1 (`Module#rake_extension`, no TS file) and
+`FileList#to_s` (`vendor/rake/v13.2.1/lib/rake/file_list.rb`) are unported. `Rake.each_dir_parent`
+and `Rake.from_pathname` are ported, but in `packages/rake/lib/rake-module.ts:67`
+rather than `file-list.ts`, where Ruby defines them (`file_list.rb`'s
+`class << self` on `Rake`). `PrivateReader#private_reader` exists in
+`private-reader.ts`'s `ClassMethods` object literal, so it is credited by
+`mail-parity-api-credits-object-literal-modules`. `pnpm parity:test`:
+`test_rake_extension.rb` (3) and `test_rake_reduce_compat.rb` (1) are unported.
 
 ## Acceptance criteria
 
-- [ ] The five members are ported at their Ruby names and files.
+- [ ] `rake_extension` and `FileList#toString` are ported at their Ruby files.
+- [ ] `eachDirParent` / `fromPathname` move to `file-list.ts`, with their importers
+      updated.
 - [ ] `test_rake_extension.rb` and `test_rake_reduce_compat.rb` are ported by name.
