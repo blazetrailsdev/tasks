@@ -5,7 +5,9 @@ updated: 2026-11-10
 rfc: "0219-actiontext-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - actiontext-content-and-rendering
+  - actiontext-trix-attachment-and-attachment
 deps-rfc: []
 est-loc: 20
 priority: null
