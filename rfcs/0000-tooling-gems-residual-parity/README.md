@@ -40,6 +40,28 @@ test.
 
 ## Design
 
+Each target count is closed by named stories.
+
+rake's 74 missing api rows:
+
+- `rake-file-utils-ext-flags-and-output-helpers` closes 29: nine in
+  `file_utils_ext.rb`, plus five names × four includers.
+- `rake-clean` closes 4.
+- `rake-package-task-accessors-and-tests` and `rake-package-task-define-archives`
+  close `packagetask.rb`'s 36.
+- `rake-extension-private-reader-and-file-list-remainder` closes 5.
+
+zeitwerk's 12:
+
+- `zeitwerk-registry-inceptions-and-cref-map-remainder` closes 5:
+  `Inceptions#unregister`, `Registry.loaders`, `.autoloads`, `Loader#inceptions`
+  and `Cref::Map#initialize`.
+- `zeitwerk-internal-and-kernel-require-alias` closes 7: `Internal#internal`, its
+  four includer rows and the two `Kernel` aliases.
+
+rackup's one miss is a helper Minitest also runs as a test, so it is ported as one. thor needs no story: api 504/504, tests
+791/791, and its one skip is a visibility `PERMANENT-SKIP`.
+
 rake: the `FileUtilsExt` helpers first (they credit four other files), then
 `clean.rb`, `packagetask.rb`, the pathmap tests and the small remainder.
 zeitwerk: `Registry::Inceptions` and the registry readers, then `internal` and
@@ -54,6 +76,14 @@ parity counts.
 ## Non-goals
 
 - **Skips already carrying `PERMANENT-SKIP`** with a cited CLAUDE.md section.
+- **thor-adjacent stories in RFCs `0142-trailties-surfaced-deviations` and
+  `0154-ruby-compat-surfaced-deviations`** (`thor-directory-compiled-sibling-test`,
+  `generator-base-tags-thor-actions-initialize`,
+  `ruby-compat-generic-include-for-thor-enum-check`,
+  `thor-terminal-dynamic-width-needs-backtick-with-inherited-stdin`): they fix
+  trailties' generators or ruby-compat helpers, and none moves thor's own counts.
+- **`zeitwerk-kernel-require-load-path-feature-arm`** (0154): an arm inside the
+  patched `require`, not a missing member.
 
 ## Alternatives considered
 
@@ -62,9 +92,14 @@ parity counts.
 
 ## Rollout
 
+The only ordering is the `deps`: the `FileUtilsExt` story before both
+package-task stories, and accessors before archives. Everything else, in both
+phases, can run in parallel.
+
 1. `rake-file-utils-ext-flags-and-output-helpers`, `zeitwerk-registry-inceptions-and-cref-map-remainder`,
-   `rackup-options-server-helper-is-not-a-test`
-2. `rake-clean`, `rake-package-task`, `rake-path-map-tests`,
+   `rackup-options-server-runs-as-a-test`
+2. `rake-clean`, `rake-package-task-accessors-and-tests`,
+   `rake-package-task-define-archives`, `rake-guarded-tests-and-thread-history-path`, `rake-path-map-tests`,
    `rake-extension-private-reader-and-file-list-remainder`,
    `zeitwerk-internal-and-kernel-require-alias`,
    `zeitwerk-eager-loads-gems-and-on-load-survives-reloads`
@@ -77,9 +112,11 @@ zeitwerk, thor and rackup each 100% matched, 0 misplaced, every skip
 
 ## Open questions
 
-1. **Does a helper named `test_*` count as a test?** Resolved: no; Minitest
-   calls it with no arguments and it would raise, so the extractor skips it.
+1. **Is rackup's `test_options_server` a test?** Resolved: yes. It takes only
+   a splat, so Minitest runs it with no arguments; it is ported as that test
+   and the extractor is unchanged.
 
 ## Changelog
 
 - 2026-11-09: initial RFC; Open Questions resolved above, so it lands `active`.
+- 2026-11-09: revised for review feedback.

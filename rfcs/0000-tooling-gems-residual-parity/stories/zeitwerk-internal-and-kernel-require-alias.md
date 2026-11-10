@@ -6,8 +6,7 @@ rfc: "0000-tooling-gems-residual-parity"
 cluster: null
 packages:
   - "zeitwerk"
-deps:
-  - "zeitwerk-registry-inceptions-and-cref-map-remainder"
+deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
@@ -37,4 +36,5 @@ observable half. `zeitwerk-kernel-require-load-path-feature-arm` (0154) owns the
       `__name` alias; each Ruby `internal :name` call site calls it.
 - [ ] `zeitwerk_original_require` is the alias over ruby-compat's `require`, and
       the patched `require` calls it at the gem's two sites.
-- [ ] `pnpm parity:api` reports zeitwerk 147/147.
+- [ ] `pnpm parity:api` reports zeitwerk 147/147 once the registry story has
+      also landed (the two stories close disjoint rows).
