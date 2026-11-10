@@ -5,7 +5,8 @@ updated: 2026-11-10
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: post-flip
 packages: ["scripts", "html-sanitizer"]
-deps: []
+deps:
+  - bump-nokogiri-to-v1-19-7
 deps-rfc: []
 est-loc: 400
 priority: null
