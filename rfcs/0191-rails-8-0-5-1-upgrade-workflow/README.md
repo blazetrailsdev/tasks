@@ -20,6 +20,7 @@ packages:
   - "bcrypt"
   - "pg"
   - "sqlite3"
+  - "nokogiri"
 clusters:
   - tooling
   - entry
