@@ -5,7 +5,8 @@ updated: 2026-11-10
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: post-flip
 packages: ["scripts", "html-sanitizer", "actionview"]
-deps: []
+deps:
+  - bump-loofah-to-v2-25-3
 deps-rfc: []
 est-loc: 200
 priority: null
