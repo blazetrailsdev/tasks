@@ -27,8 +27,11 @@ packages:
   - "bcrypt"
   - "pg"
   - "sqlite3"
-  - "nokogiri"
-  - "html-sanitizer"
+  - "thor"
+  - "zeitwerk"
+  - "mini-magick"
+  - "solid-queue"
+  - "solid-cable"
 clusters:
   - tooling
   - entry
