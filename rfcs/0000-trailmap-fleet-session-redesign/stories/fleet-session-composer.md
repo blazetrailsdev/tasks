@@ -18,8 +18,8 @@ blocked-by: null
 ## Context
 
 `POST fleet/pane/:id/send` (`config/routes.ts:76`, `FleetController#message`,
-`app/controllers/fleet-controller.ts:135`) types a line into a pane, and only
-the pane page calls it today (`app/assets/javascripts/pane.js`).
+`app/controllers/fleet-controller.ts:135`) types a line into a pane. Only the
+pane page calls it today (`app/assets/javascripts/pane.js`).
 
 ## Acceptance criteria
 
@@ -28,8 +28,8 @@ the pane page calls it today (`app/assets/javascripts/pane.js`).
 - [ ] Sent text appears in the session log as a user entry. A failure shows
       the controller's error inline.
 - [ ] A merged or paneless session shows no message box.
-- [ ] The e2e suite sends one message through the box.
 
 ## Verification
 
-- `./scripts/dashboard-e2e.sh` (the CI `dashboard-e2e` job) sends one message through the card and asserts the controller saw it.
+- `./scripts/dashboard-e2e.sh` (the CI `dashboard-e2e` job) sends one message through the card and asserts the controller saw
+  it.

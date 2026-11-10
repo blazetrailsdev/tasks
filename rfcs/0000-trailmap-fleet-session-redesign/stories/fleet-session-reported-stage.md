@@ -1,13 +1,13 @@
 ---
-title: "trailmap: show the stage a session reports, over the derived one"
+title: "trailmap: show a spawn's reported Self review stage"
 status: draft
 updated: 2026-11-10
 rfc: "0000-trailmap-fleet-session-redesign"
 cluster: fleet-stage-signal
 packages: [actionview]
-deps: [fleet-session-stage]
+deps: [fleet-session-stage, fleet-session-bundle-stories, tasks-session-stage-verb]
 deps-rfc: []
-est-loc: 300
+est-loc: 150
 priority: null
 pr: null
 claim: null
@@ -17,23 +17,19 @@ blocked-by: null
 
 ## Context
 
-`sessionStage` derives a stage from the envelope, and Drafting versus Self
-review is a guess. The RFC's open question 1 decides who reports the stage,
-and recommends ringo inferring it from the events it already handles. This
-story stays `draft` until that is decided.
+`sessionStage` takes an optional reported stage and honors it for a spawn
+with no PR only (RFC "A session and its stage"). `tasks-session-stage-verb`
+adds the field. This story reads it into the page.
 
 ## Acceptance criteria
 
-- [ ] Open question 1 is answered in the RFC, and the reporting side is
-      filed in its own repo if it is not trailmap.
-- [ ] trailmap reads the reported stage into the session object, and
-      `sessionStage` returns it when present.
-- [ ] A card whose stage is derived, not reported, shows that, for example
-      with a hollow current node.
-- [ ] Verification: on a day's envelope sample, every session's reported
-      stage is shown.
+- [ ] `fleet/stories` answers each story's `stage`, and also answers for a
+      spawn's `story` id (`?story=<id>`), since a spawn has no PR yet.
+- [ ] The page passes the spawn's reported stage to `sessionStage`.
+- [ ] A spawn whose story reports `self` renders Self review, and a merged PR
+      whose story still reports `self` renders Merged.
 
 ## Verification
 
-- A fixture envelope carrying a reported stage that differs from the derived
-  one, asserted in `pnpm vitest run test/assets/fleet-format.test.js`.
+- `pnpm vitest run test/assets/fleet-format.test.js` and `pnpm vitest run test/controllers/fleet-controller.test.ts`
+  for both fixtures.

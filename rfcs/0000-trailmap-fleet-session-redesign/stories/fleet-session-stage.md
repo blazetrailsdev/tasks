@@ -18,30 +18,29 @@ blocked-by: null
 ## Context
 
 A session is a PR row or a spawn row. `prRow` (`app/assets/javascripts/fleet-format.js:928`)
-reads `pr.draft`, `pr.merged`, `pr.ciStatus`, `pr.reviewCycles`,
-`pr.nextAction` and `pr.paneStatus`, and the reviewer list comes from
-`reviewerLine` (`:203`). `spawnRow` (`:864`) renders a spawn with no PR. The
-RFC's table maps these to six stages.
+reads `draft`, `merged`, `ciStatus`, `reviewCycles` and `paneStatus`,
+`reviewerLine` (`:203`) reads the reviewer list, and `spawnRow` (`:864`)
+renders a spawn with its `story`. The RFC's "A session and its stage" gives a
+six-row decision list that is total by construction.
 
 ## Acceptance criteria
 
-- [ ] `sessionStage(pr | spawn, reviewers)` in `fleet-format.js` returns one
-      of `drafting`, `self`, `ringo`, `ci`, `ready`, `merged`, applying the
-      RFC's rules top to bottom over `merged`, `draft`, `ciStatus`,
-      `reviewCycles`, `openFindings` and the reviewer list.
-- [ ] It prefers a reported stage field when the input carries one, so
-      `fleet-session-reported-stage` needs no change here.
-- [ ] `test/assets/fleet-format.test.js` covers each stage and the ambiguous
-      inputs: a draft PR with CI red and no reviewer, a merged PR with CI
-      failing, and a reviewer assigned to a non-draft PR.
+- [ ] `sessionStage(row, reviewers, reported = null)` in `fleet-format.js`
+      returns one of `drafting`, `self`, `ringo`, `ci`, `ready`, `merged` by
+      the RFC's decision list, first match wins.
+- [ ] `reported` is honored for row 2 only: a spawn with no PR and
+      `reported === "self"` returns `self`. Every other row ignores it.
+- [ ] Tests cover each of the six rows and these boundaries: - a draft PR, no reviewer, `reviewCycles` above 0, `openFindings` 0
+      (row 6, Getting CI green); - a draft PR, no reviewer, `reviewCycles` 0, CI failing (row 4, Self
+      review); - a non-draft PR with a reviewer assigned (row 3); - a merged PR with CI failing (row 1); - a non-draft PR, CI passing, `openFindings` above 0 (row 3); - a spawn with no PR and `reported` set to `merged` (row 2, Drafting).
 - [ ] No rendering changes in this story.
 
 ## Verification
 
-- `pnpm vitest run test/assets/fleet-format.test.js`, with one case per table row and the three ambiguous inputs.
+- `pnpm vitest run test/assets/fleet-format.test.js`.
 
 ## Notes
 
-The function is written to move: `server-render-the-dashboards-pr-rows`
+The function is written to move. `server-render-the-dashboards-pr-rows`
 (RFC 0136) ports `fleet-format.js`'s pure functions to a helper over
 `PrState`, and these tests become that helper's specification.

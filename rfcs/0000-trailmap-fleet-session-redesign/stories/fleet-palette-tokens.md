@@ -1,5 +1,5 @@
 ---
-title: "trailmap: natural palette and type tokens in application.css"
+title: "trailmap: natural palette, stage marks and type tokens in application.css"
 status: draft
 updated: 2026-11-10
 rfc: "0000-trailmap-fleet-session-redesign"
@@ -18,25 +18,23 @@ blocked-by: null
 ## Context
 
 `app/assets/stylesheets/application.css` (932 lines) defines its colors on
-`:root` (`:11`) with a dark set (`:30`). The concept in trailmap#136
-(`concepts/redesign/palette.css`) defines the target tokens: terracotta
-`#c2603f`, forest `#2f5d46`, mustard `#d4a72c`, soil `#5a3e2b`, clay
-`#b9a088`, cream `#faf5ec`, surface `#f4ecde`, ink `#2b211a` / `#6b5a4c` /
-`#7a6756`, one color per stage, and Fraunces / Inter / JetBrains Mono.
+`:root` (`:11`) with a dark set (`:30`). The RFC's "Palette and type" table
+gives every light and dark value, including the six stage marks, which are
+darker than the decorative clay and mustard so they meet 3:1. The concept is
+trailmap#136 (`concepts/redesign/palette.css`).
 
 ## Acceptance criteria
 
-- [ ] `:root` carries the palette, the six `--st-*` stage colors and the
-      three font tokens; existing token names keep working, or every use is
-      renamed in the same PR.
-- [ ] A dark set redefines them under `prefers-color-scheme: dark`.
-- [ ] Every trailmap page renders with the new tokens and no layout change.
-      The dashboard e2e and `class-collisions.test.ts` pass.
-- [ ] Body text and muted text meet 4.5:1 contrast on the page background in
+- [ ] `:root` carries every token in the RFC's table, the six `--st-*` stage
+      marks and the three font tokens. Existing token names keep working, or
+      every use is renamed in the same PR.
+- [ ] The dark column is applied under `prefers-color-scheme: dark`.
+- [ ] A unit test over the token values asserts 4.5:1 for each text token
+      and 3:1 for each stage mark, against the background and the surface, in
       both themes.
+- [ ] Every trailmap page renders with the new tokens and no layout change.
 
 ## Verification
 
-- `pnpm vitest run test/assets/class-collisions.test.ts` and `./scripts/dashboard-e2e.sh` (the CI `dashboard-e2e` job) pass.
-- A contrast check of `--ink`, `--ink-2` and `--ink-3` on `--bg` in both
-  themes, with each ratio quoted in the PR body.
+- `pnpm vitest run test/assets/class-collisions.test.ts`, the new contrast
+  test, and `./scripts/dashboard-e2e.sh` (the CI `dashboard-e2e` job).

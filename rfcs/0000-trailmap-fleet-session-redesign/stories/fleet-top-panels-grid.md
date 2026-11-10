@@ -1,5 +1,5 @@
 ---
-title: "trailmap: Fleet header row and two-column panel grid"
+title: "trailmap: Fleet header row, search field and two-column panel grid"
 status: draft
 updated: 2026-11-10
 rfc: "0000-trailmap-fleet-session-redesign"
@@ -20,23 +20,23 @@ blocked-by: null
 `app/views/dashboard/index.html.tse` stacks the Fleet cards in one column:
 status pills (`#eventsPill`, `#tmuxPill`, `#mainCIPills`, `#watchPill`,
 `#agentPills`, `#pauseBtn`), `#askPanel`, `#ciFixerPanel`, `#usageGroup`,
-`#spawnLoopPanel`, the broadcast card and `#spawnPanel`. `dashboard.js` fills
-them by id. The concept in trailmap#136 (`b-stepper-list.html`) puts the title
-and pills in one header row, with Broadcast and Spawn buttons, and pairs the
-panels on one grid: Waiting on you with Usage, CI fixer with Loop. Pause sits
-inside Loop.
+`#spawnLoopPanel`, the broadcast card and `#spawnPanel`, and `dashboard.js`
+fills them by id. The RFC's "The top section" gives the target: a header row
+with pills, a search field and Broadcast and Spawn buttons, and a two-column
+grid pairing Waiting on you with Usage, and CI fixer with Loop.
 
 ## Acceptance criteria
 
-- [ ] The header row and the two-column grid replace the stacked cards. Grid
-      rows share a height.
+- [ ] The header row and the two-column grid replace the stacked cards, and
+      grid rows share a height.
+- [ ] The header has a search field (inert until `fleet-palette-search`) and
+      a search button shown below 700px.
 - [ ] Every element id `dashboard.js` writes to survives, so no rendering
       code changes beyond selectors.
-- [ ] The main-CI state is shown once, in the CI fixer panel; the pill only
+- [ ] Main CI's state is shown once, in the CI fixer panel, and the pill
       links to it.
-- [ ] The broadcast and spawn forms stay reachable from the header buttons
-      until `fleet-command-palette` hosts them.
-- [ ] The dashboard e2e passes.
+- [ ] The broadcast and spawn forms stay in place, reachable from the header
+      buttons, until `fleet-palette-actions` moves them.
 
 ## Verification
 
