@@ -5,7 +5,8 @@ updated: 2026-11-10
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
-deps: []
+deps:
+  - converge-cache-store-merged-options
 deps-rfc: []
 est-loc: 600
 priority: null
