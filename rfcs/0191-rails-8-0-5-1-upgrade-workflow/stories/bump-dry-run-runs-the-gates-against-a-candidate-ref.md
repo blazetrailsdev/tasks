@@ -18,6 +18,9 @@ closed-reason: null
 
 ## Context
 
+Target: `rails` `v8.0.5.2` (RFC § 1). The 2026-10-13 figures below were
+measured at `v8.0.5.1`.
+
 RFC § 2 "How the size was measured" and § 7. Scoping these bumps took a
 hand-assembled dry run: `pnpm parity:api:drift --ref v8.1.4` extracts the
 candidate's Ruby API to `scripts/api-compare/output/rails-api@v8.1.4.json`
@@ -46,7 +49,7 @@ these numbers today is a red `main`.
       test-name ratchet, inlined-from citation spans, fixtures and models
       comparison, Schema Parity, Query Parity) is either exercised or listed
       under "not exercised" with the upstream count that predicts it. This
-      settles the RFC's Open question 7.
+      settles the RFC's Open question 3.
 - [ ] It writes a ledger seed: the DRIFT and STALE pairs keyed as body pins
       are, and the matched tests whose assertion signature or gate changed.
 - [ ] It attributes every new call, call-argument, parameter, block, arm and
@@ -55,8 +58,18 @@ these numbers today is a red `main`.
       unpinned pairs.
 - [ ] It prints the per-package tables of RFC § 2 (files, defs, pins, tests).
 - [ ] For `--source rails --ref v8.0.5.1` it reproduces 141 DRIFT and 12
-      STALE, and for `--ref v8.1.4` 728 and 125, or the PR body explains each
-      difference by commits merged since `25cc7a1876`.
+      STALE, or the PR body explains each difference by commits merged since
+      `25cc7a1876` and by the five packages enrolled since.
+- [ ] It is run for `--source rails --ref v8.0.5.2` (the RFC's target,
+      commit `235c597b100321b6bd2d62f8df63707f42b25b2d`) over all sixteen
+      Rails packages, and the RFC's § 2 tables, the gate table in
+      § Motivation and the seed estimate in § 3 are replaced with its
+      figures in a tasks-repo edit, with a dated Changelog line.
+- [ ] Schema Parity and Query Parity: the report states whether
+      `scripts/parity/pipeline/schema/ruby/Gemfile` can be generated for the
+      candidate and what the canonical-schema delta is (at `v8.0.5.2`:
+      `authors.published_author_id`, `book_identifiers`, `cpk_posts_tags`,
+      `postgresql_specific_schema.rb`).
 - [ ] Unit tests cover the manifest merge and the attribution, in a
       `scripts/` test directory registered wherever a new one must be.
 

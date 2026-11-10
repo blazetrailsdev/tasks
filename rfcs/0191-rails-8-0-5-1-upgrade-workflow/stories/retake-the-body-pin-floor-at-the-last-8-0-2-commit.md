@@ -4,7 +4,21 @@ status: draft
 updated: 2026-10-13
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: entry
-packages: [scripts, activerecord, activesupport, actionpack, actionview, activejob, trailties]
+packages:
+  [
+    scripts,
+    activerecord,
+    activesupport,
+    actionpack,
+    actionview,
+    activejob,
+    actioncable,
+    actionmailer,
+    activestorage,
+    actionmailbox,
+    actiontext,
+    trailties,
+  ]
 deps:
   [
     entry-check-data-layer-parity-is-closed-on-8-0-2,
@@ -29,7 +43,10 @@ RFC § 4, criterion 2. The ledger is seeded from pin DRIFT, so a matched pair
 with no pin can change upstream without a row. 898 matched pairs under the
 `rails` source are unpinned on 2026-10-13: activerecord 178, activesupport 82,
 actiondispatch 92, actioncontroller 72, abstractcontroller 9, actionpackversion
-1, actionview 299, activejob 3, trailties 162. 16 of them change in v8.0.5.1 and
+1, actionview 299, activejob 3, trailties 162. Not counted then: actioncable,
+actionmailer, activestorage, actionmailbox and actiontext, enrolled since
+(`vendor/sources.ts:171-221`); activestorage alone changes 22 files over
+`v8.0.2...v8.0.5.2`. 16 of them change by v8.0.5.1 (the target is now v8.0.5.2) and
 carry 2 of the 39 new gate rows (77 and 13 of 183 for v8.1.4).
 
 This is a second pass over RFC 0159's
@@ -49,10 +66,11 @@ still `v8.0.2`.
 - [ ] `pnpm parity:api` reports 0 unpinned for arel, activemodel,
       activerecord, activerecord-test-support, activesupport, actiondispatch,
       actioncontroller, abstractcontroller, actionpackversion, actionview,
-      activejob and trailties.
+      activejob, actioncable, actionmailer, activestorage, actionmailbox,
+      actiontext and trailties.
 - [ ] No existing pin's `reason` or digest changes; the diff only adds rows
       at `ref: v8.0.2`.
-- [ ] The dry run's unattributed residue for `rails` at `v8.0.5.1` is 0 rows on
+- [ ] The dry run's unattributed residue for `rails` at `v8.0.5.2` is 0 rows on
       unpinned pairs.
 
 ## Notes

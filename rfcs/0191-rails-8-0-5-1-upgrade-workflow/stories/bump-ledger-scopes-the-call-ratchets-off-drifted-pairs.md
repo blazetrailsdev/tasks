@@ -18,6 +18,9 @@ closed-reason: null
 
 ## Context
 
+Counts below were measured at `v8.0.5.1` on 2026-10-13; the target is now
+`v8.0.5.2` (RFC § 1), and the dry run gives the figures there.
+
 RFC § 3, ledger rule 3. Measured for `rails` `v8.0.2` → `v8.0.5.1`: 22 new
 call rows, 10 new argument-shape rows and 7 naming failures. All 39 sit on a
 pair whose Ruby body changed: 37 on drifted pins and 2 on unpinned pairs. The
@@ -35,7 +38,7 @@ red on `v8.1.4` (5 receipts, 2 rows), so they are scoped here too.
 - [ ] Each lint prints how many rows it skipped for the ledger, so the
       suspended debt is visible in every CI log.
 - [ ] The dry run, with the ledger seeded, reports these gates green for
-      `rails` at `v8.0.5.1`, and lists any row on a newly matched pair for
+      `rails` at `v8.0.5.2`, and lists any row on a newly matched pair for
       the flip PR to fix.
 - [ ] Tests cover one skipped row and one still-counted row per lint.
 

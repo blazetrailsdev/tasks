@@ -18,6 +18,9 @@ closed-reason: null
 
 ## Context
 
+Counts below were measured at `v8.0.5.1` on 2026-10-13; the target is now
+`v8.0.5.2` (RFC § 1), and the dry run gives the figures there.
+
 RFC § 3, ledger rule 3. Measured for `rails` `v8.0.2` → `v8.0.5.1`: 2
 parameter-name, 4 block-parameter and 2 missing-throw arm dimensions grow
 past their marks. The extra-surface ratchet stays green on this bump; on
@@ -45,7 +48,7 @@ whether the seed needs a third kind for those.
       schema is extended here.
 - [ ] Each lint prints how many rows it skipped for the ledger.
 - [ ] The dry run, with the ledger seeded, reports these gates green for
-      `rails` at `v8.0.5.1`.
+      `rails` at `v8.0.5.2`.
 - [ ] Tests cover one skipped row and one still-counted row per lint.
 
 ## Definition of done

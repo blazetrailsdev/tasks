@@ -47,4 +47,8 @@ run (replaces hand-running the drift report for scoping).
       to do on touching a ledgered unit.
 - [ ] Anything in the RFC's plan that the real flip contradicted is corrected
       in the RFC's Changelog and in the runbook.
+- [ ] The runbook's first step checks that the target line is inside Rails'
+      maintenance window (rubyonrails.org/maintenance) and records the tag's
+      `^{}` commit SHA, and names gemspec floors as the one way a gem is
+      forced to move with Rails.
 - [ ] `pnpm vitest run scripts/vendor-citations.test.ts` passes.

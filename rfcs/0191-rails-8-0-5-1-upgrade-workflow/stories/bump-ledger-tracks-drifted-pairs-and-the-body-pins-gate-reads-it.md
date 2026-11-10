@@ -20,14 +20,15 @@ closed-reason: null
 
 RFC § 3 "The bump ledger". `lint-body-pins.ts` exits 1 on any DRIFT or STALE
 pin (`scripts/api-compare/lint-body-pins.ts:74-112`). For `rails` `v8.0.2` →
-`v8.0.5.1` that is 141 DRIFT and 12 STALE across 82 Ruby files (728 and 125
-across 288 for `v8.1.4`), which is the burn-down's worklist and cannot be
+`v8.0.5.1` that was 141 DRIFT and 12 STALE across 82 Ruby files on 2026-10-13
+(728 and 125 across 288 for `v8.1.4`); the target is now `v8.0.5.2`, which
+adds about 36 changed Ruby files, which is the burn-down's worklist and cannot be
 cleared in one PR. This story adds the
 ledger and teaches the one gate that defines it. The other ratchets follow in
 `bump-ledger-scopes-the-call-ratchets-off-drifted-pairs` and
 `bump-ledger-scopes-the-signature-and-surface-ratchets-off-drifted-pairs`.
 
-Blocked on the RFC's Open question 1: do not start before the owner rules.
+The owner accepted the ledger on 2026-11-10 (RFC Open question 1).
 
 ## Acceptance criteria
 

@@ -30,7 +30,7 @@ which cannot be named in `deps-rfc` until it has a number; add that edge with
 ## Acceptance criteria
 
 - [ ] `scripts/parity/bump-ledger/rails.json` has no rows and is deleted.
-- [ ] `pnpm parity:api:pins` reports 0 DRIFT and 0 STALE at `v8.0.5.1`; pairs
+- [ ] `pnpm parity:api:pins` reports 0 DRIFT and 0 STALE at `v8.0.5.2`; pairs
       matched during the burn-down are pinned with
       `pnpm parity:api:pins:all`, leaving 0 unpinned in the Rails packages.
 - [ ] `git grep 'vendor/rails/v8\.0\.2'` is empty.

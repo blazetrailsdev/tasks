@@ -19,8 +19,9 @@ closed-reason: null
 ## Context
 
 RFC § 5. trails has no release tags. The recommendation is an annotated tag
-`rails-8.0.2` on the last `main` commit before the flip, and no stable branch
-(Open question 6). The tag is placed after the flip merges, on the flip
+`rails-8.0.2` on the last `main` commit before the flip, and no stable branch.
+The owner deferred the branch policy (RFC Open question 2) to this story on
+2026-11-10. The tag is placed after the flip merges, on the flip
 commit's parent, so there is no window in which another PR can land between
 the tagged commit and the flip.
 
@@ -29,7 +30,7 @@ agent's only on the owner's explicit go-ahead in that session.
 
 ## Acceptance criteria
 
-- [ ] The flip PR (`v8.0.2` → `v8.0.5.1`) has merged. The commit to tag is its parent on `main`
+- [ ] The flip PR (`v8.0.2` → `v8.0.5.2`) has merged. The commit to tag is its parent on `main`
       (trails merges by squash only, so the flip commit has one parent), and `vendor/sources.ts` at
       that commit still reads `ref: "v8.0.2"`.
 - [ ] That commit's `main` CI run was green. If it was not, the commit is
@@ -39,7 +40,11 @@ agent's only on the owner's explicit go-ahead in that session.
       message carries the `parity:api` and `parity:test` summary rows for
       every package and the Rails SHA
       `3235827585d87661942c91bc81f64f56d710f0b2`.
-- [ ] No branch is created.
+- [ ] Before tagging, the owner is asked the branch policy: tags only
+      (recommended; a `<major>-<minor>-stable` branch cut from the tag when a
+      published line needs a fix) or a stable branch at each flip. The
+      ruling is recorded in the RFC's Resolved list, and no branch is
+      created unless it says so.
 
 ## Definition of done
 

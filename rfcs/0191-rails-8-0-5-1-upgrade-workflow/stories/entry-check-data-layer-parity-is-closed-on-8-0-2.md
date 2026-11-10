@@ -21,12 +21,17 @@ closed-reason: null
 RFC § 4. The `rails-8.0.2` tag is meant to mark a complete data layer. On
 2026-10-13 (trails `25cc7a1876`): arel 1052/1052 methods and 739/739 tests,
 activemodel 821/821 and 1037/1037, activerecord 6980/6980 and 8801/8830.
-The owner ruled on 2026-10-13 that RFC 0175 closes before the flip.
+The owner ruled on 2026-10-13 that RFC 0175 closes before the flip; the
+tasks DB records it `closed` (141 stories done or closed) on 2026-11-10.
+Five Rails packages were enrolled after the 2026-10-13 figures
+(actioncable, actionmailer, activestorage, actionmailbox, actiontext;
+`vendor/sources.ts:171-221`).
 
 ## Acceptance criteria
 
 - [ ] `API_COMPARE_FORCE=1 pnpm parity:api` and `pnpm parity:test` are run on
-      current `main` and the three packages' rows are recorded in the story.
+      current `main` and every `rails`-source package's row (all sixteen) is recorded in the
+      story, replacing the RFC's § "Where we are" table.
 - [ ] The latest `main` CI run is green.
 - [ ] The count of open stories whose body cites a Rails `file:line` is
       recorded, since those go stale at the flip.

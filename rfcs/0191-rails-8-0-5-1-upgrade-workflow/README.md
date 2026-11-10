@@ -1,9 +1,9 @@
 ---
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
-title: "Rails 8.0.5.1 upgrade workflow: the first bump of the source of truth, the bump ledger that keeps main green, and the scoping of 8.1"
+title: "Rails 8.0.5.2 upgrade workflow: the first bump of the source of truth, the bump ledger that keeps main green, and the scoping of 8.1"
 status: draft
 created: 2026-10-13
-updated: 2026-10-13
+updated: 2026-11-10
 owner: "@deanmarano"
 packages:
   - "scripts"
@@ -15,6 +15,13 @@ packages:
   - "actionview"
   - "activejob"
   - "trailties"
+  - "actioncable"
+  - "actionmailer"
+  - "activestorage"
+  - "actionmailbox"
+  - "actiontext"
+  - "html-sanitizer"
+  - "nokogiri"
   - "rack"
   - "rack-session"
   - "bcrypt"
@@ -35,40 +42,49 @@ related-rfcs:
   - "0025-fidelity-verification-tooling"
 ---
 
-# RFC 0191 — Rails 8.0.5.1 upgrade workflow
+# RFC 0191 — Rails 8.0.5.2 upgrade workflow
 
 ## Summary
 
 trails mirrors Rails `v8.0.2`. This RFC plans its first move of that source
-of truth: to **`v8.0.5.1`** (`beef74d4cebf42a01cd1df79e9de00df725b64fd`, tagged
-2026-07-29), the last release of the 8.0 line. It decides sequence, gating and
+of truth: to **`v8.0.5.2`** (commit `235c597b100321b6bd2d62f8df63707f42b25b2d`,
+annotated tag object `3ada6507aac5e05bf097c1213649d5076826db02`, released
+2026-11-04), the highest 8.0 tag and, by Rails' maintenance policy, very likely
+the last release of the 8.0 line (§ 1). It decides sequence, gating and
 tagging. It ports no Rails code and holds no porting stories: the burn-down is
 one story here that generates a separate RFC after the flip.
 
 The RFC was first drafted for `v8.1.4`. The owner ruled on 2026-10-13 to do
-`v8.0.5.1` first, as its own upgrade, and to plan 8.1 afterwards from what
+the 8.0 line's last release first (then `v8.0.5.1`; retargeted to `v8.0.5.2`
+on 2026-11-10 when that security release shipped), as its own upgrade, and to plan 8.1 afterwards from what
 this one teaches. The 8.1 measurements are kept in § 8, and the last story
 here writes the 8.1 RFC.
 
 The mechanical procedure exists (vendor/README.md § "Upgrading a source
 (bumping `ref`)", designed by RFC 0159). What it does not answer is how `main`
 stays green between the one-line `ref` bump and the last re-verified body. A
-dry run of every gate against the v8.0.5.1 manifests shows the bump turns
-**ten CI gates red at once**, on **141 drifted and 12 stale body pins across
-82 Ruby files**, and no baseline may widen to absorb it.
+dry run of every gate against the `v8.0.5.1` manifests (2026-10-13) showed the
+bump turns **ten CI gates red at once**, on **141 drifted and 12 stale body
+pins across 82 Ruby files**, and no baseline may widen to absorb it.
+`v8.0.5.2` adds 20 commits on top: 36 more changed Ruby files under ported
+paths, all security fixes (§ 1, "What 8.0.5.2 adds"), so the measured figures
+are a floor and the dry-run story re-measures them at the new target.
 
 The recommendation is one flip PR on `main` followed by a burn-down on `main`,
 made possible by a **bump ledger**: a committed, only-shrink list of the ported
 units whose upstream definition changed, which scopes the per-unit ratchets off
-those units until each is re-verified. The ledger (Open question 1) and the
-branch policy (2) are the owner's to rule on. Every dry run, flip and ledger
+those units until each is re-verified. The owner accepted the ledger on
+2026-11-10; the branch policy is deferred to the tag story. Every dry run, flip and ledger
 count is kept in the stats DB (§ 7).
 
 ## Motivation
 
 ### Where we are
 
-Measured on trails `25cc7a1876` on 2026-10-13 with `API_COMPARE_FORCE=1 pnpm
+Measured on trails `25cc7a1876` on 2026-10-13 (the five later-enrolled Rails
+packages, actioncable, actionmailer, activestorage, actionmailbox and
+actiontext, were not yet in `vendor/sources.ts` and are not in this table;
+`entry-check-data-layer-parity-is-closed-on-8-0-2` re-takes it) with `API_COMPARE_FORCE=1 pnpm
 parity:api` and `pnpm parity:test`:
 
 | Package       | Methods   | Tests     | Unpinned matched bodies |
@@ -90,8 +106,8 @@ nothing is published, and trails has no release tags.
 ### What the bump does to `main` today
 
 None of this was assumed. Each gate in ci.yml's `rails-comparison` job was run
-against the v8.0.5.1 Ruby manifests (the method is in § "How the size was
-measured"). Percentages are not gated; ratchets are.
+against the `v8.0.5.1` Ruby manifests on 2026-10-13 (the method is in § "How
+the size was measured"). The dry-run story re-runs it at `v8.0.5.2`. Percentages are not gated; ratchets are.
 
 | Gate (ci.yml step)                                                                                                                          | Result at the flip commit                                            |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
@@ -143,25 +159,83 @@ changed bodies.
 
 ### 1. Target and scope
 
-**Decision (owner, 2026-10-13): `rails` moves from `v8.0.2` to `v8.0.5.1`.
+**Decision (owner, 2026-10-13): `rails` moves from `v8.0.2` to `v8.0.5.2`.
 The 8.1 upgrade is a separate RFC that follows this one.**
 
-`v8.0.5.1` was resolved with `git ls-remote --tags
-https://github.com/rails/rails 'v8.0*'`; it is the highest 8.0 tag. It takes
-in three patch releases (`8.0.3`, `8.0.4`, `8.0.5`) and three security
-releases (`8.0.2.1`, `8.0.4.1`, `8.0.5.1`).
+`v8.0.5.2` was resolved on 2026-11-10 with `git ls-remote --tags
+https://github.com/rails/rails 'v8.0*'`: it is the highest 8.0 tag, and
+`refs/tags/v8.0.5.2^{}` is commit `235c597b100321b6bd2d62f8df63707f42b25b2d`.
+`vendor:fetch` locks the commit SHA, not the tag object. It takes in three
+patch releases (`8.0.3`, `8.0.4`, `8.0.5`) and four security releases
+(`8.0.2.1`, `8.0.4.1`, `8.0.5.1`, `8.0.5.2`).
+
+**The 8.0 line is at the end of its maintenance window.** Rails' policy
+(rubyonrails.org/maintenance, read 2026-11-10) gives 8.0.x bug fixes until
+2026-05-07 and security fixes until **2026-11-07**. `v8.0.5.2` shipped three
+days before that end, so no further 8.0 release is expected; a later 8.0
+backport would be published to git only, not as a tag the rule below could
+resolve. The target therefore does not move again. 8.1.x has security support
+until 2027-10-10, and its highest tag is now `v8.1.4.1`
+(`3f290b759c8e2ffe7c257951b1255740751355e4`), so the 8.1 RFC is on a
+supported line. The practical consequence is that once this flip lands, the
+only upstream security fixes trails can follow are on 8.1, which argues for
+not letting the burn-down drag.
+
+#### What 8.0.5.2 adds over 8.0.5.1
+
+`v8.0.5.1...v8.0.5.2` is 20 commits and 95 files, released 2026-11-04, every
+change a GHSA fix apart from the version strings. No 8.0.x patch release
+(`8.0.6`) exists. Under the paths `vendor/sources.ts` maps (each package's
+`libPath` plus `extraLibPaths`), measured with `git diff --shortstat`:
+
+| Package          | Files | +/-      | What changed                                                                                                  |
+| ---------------- | ----- | -------- | ------------------------------------------------------------------------------------------------------------- |
+| activestorage    | 12    | +199/-30 | new `image_magick.rb` and `policy.xml`, analyzers, `engine.rb`, `blob.rb`, `filename.rb`, `streaming.rb`, GCS |
+| actiondispatch   | 5     | +58/-8   | `mime_negotiation.rb`, `cookies.rb`, session `abstract_store.rb`, `cache_store.rb`, `cookie_store.rb`         |
+| actionview       | 4     | +43/-13  | `sanitize_helper.rb`, `tag_helper.rb`, `text_helper.rb`                                                       |
+| actioncontroller | 3     | +35/-14  | `live.rb`, `rendering.rb`, `strong_parameters.rb`                                                             |
+| activesupport    | 2     | +3/-19   | `inflector/methods.rb` (`safe_constantize`)                                                                   |
+| actionmailbox    | 2     | +2/-2    | mailgun ingress controller                                                                                    |
+| every other      | 1     | +1/-1    | `gem_version.rb` only (activerecord, activemodel, actioncable, actionmailer, actiontext, activejob, railties) |
+
+Tests: 36 test files change (+1,637/-111, one added shared file,
+`actionpack/test/dispatch/session/store_shared_tests.rb`, plus
+`activestorage/test/image_magick_test.rb` and
+`railties/test/application/active_storage/engine_integration_test.rb`). The
+activerecord test schema, models and fixtures do not change between `v8.0.5.1`
+and `v8.0.5.2`; between `v8.0.2` and either they change in 11 files
+(`schema.rb` +13: `authors.published_author_id`, `book_identifiers`,
+`cpk_posts_tags`; `postgresql_specific_schema.rb`; 7 models; 2 fixture files),
+none of which the canonical `test-schema.ts` has yet
+(`mirror-the-v8-0-5-2-activerecord-test-schema-models-and-fixtures`).
+
+Two consequences for this RFC beyond the size:
+
+- **Five more Rails packages are in scope.** actioncable, actionmailer,
+  activestorage, actionmailbox and actiontext were enrolled in
+  `vendor/sources.ts` (`:171-221`) after the 2026-10-13 measurement, so their
+  pins, tests and `gem-version.ts` constants (12 files now, against six) are
+  part of the floor, the ledger seed and the flip. Over `v8.0.2...v8.0.5.2`
+  activestorage alone changes 22 files (+436/-58).
+- **A gemspec floor moved.** `actionview.gemspec` now requires
+  `rails-html-sanitizer ~> 1.6, >= 1.7.2` (GHSA-2p2f-4rq4-gjwc), which in turn
+  requires loofah `>= 2.25.3` and nokogiri `>= 1.19.5`. This is the first
+  dependent source this RFC _must_ move rather than may.
 
 Why this target first:
 
 - **It is a fifth of the size.** 169 method bodies change, against 917 to
-  `v8.1.4`. The ledger, the dry run and the flip PR get their first real use
-  on about 170 units, not about 930, with seven gates the dry run could not
-  exercise.
-- **Most of it is 8.1 work anyway.** 132 of the 169 changed bodies are
-  byte-identical in `v8.1.4`, and 45 of the 46 added defs exist there. Of the
-  other 37 bodies, 36 change again in 8.1.4 and one reverts. So about 78% of
-  this burn-down comes straight off the 8.1 one.
-- **It carries the security fixes** trails is currently three releases behind.
+  `v8.1.4` (both measured from `v8.0.2` at `v8.0.5.1`; `v8.0.5.2` adds the
+  bodies in the table above). The ledger, the dry run and the flip PR get
+  their first real use on about 200 units, not about 930.
+- **Most of it is 8.1 work anyway.** 132 of the 169 bodies changed by
+  `v8.0.5.1` are byte-identical in `v8.1.4`, and 45 of the 46 added defs exist
+  there. `v8.1.4.1` was released 14 minutes after `v8.0.5.2` with 21 GHSAs
+  to 8.0.5.2's 19, so the 8.0.5.2 fixes are expected to carry over the same way; the 8.1 RFC's dry run confirms it.
+- **It carries the security fixes** trails is currently four releases behind.
+
+Bodies changed from `v8.0.2` to `v8.0.5.1` (2026-10-13; the dry run adds the
+8.0.5.2 bodies and the five later-enrolled packages):
 
 | Package            | Bodies changed in 8.0.5.1 | Of those, identical in 8.1.4 |
 | ------------------ | ------------------------- | ---------------------------- |
@@ -179,56 +253,92 @@ Why this target first:
 
 Options not taken:
 
-- **Go straight to `v8.1.4`.** One flip instead of two, and 8.1 sooner. The
+- **Go straight to `v8.1.4.1`.** One flip instead of two, and 8.1 sooner. The
   first use of the machinery would be on the large bump.
+- **Stop at `v8.0.5.1`, as first drafted.** The flip has not happened, so
+  retargeting costs one re-run of the dry run; stopping short would leave
+  trails behind the nineteen GHSA fixes it carries on the line it mirrors.
 - **Wait for 8.2.** No tag exists. Each release skipped makes the next diff
   larger.
 
-**Dependent sources.** Rails' gemspec constraints are unchanged between the
-two tags apart from railties gaining `tsort >= 0.2`. What moved is what
-`Gemfile.lock` resolves, compared here with `vendor/sources.lock.json`:
+**Dependent sources.** Two gemspec constraints change between `v8.0.2` and
+`v8.0.5.2`: railties gains `tsort >= 0.2`, and actionview's
+`rails-html-sanitizer` floor rises to `>= 1.7.2`. Otherwise what moves is
+what `Gemfile.lock` resolves, compared here with `vendor/sources.lock.json` as
+of 2026-11-10 (lock columns read from each tag's `Gemfile.lock`):
 
-| Source            | Pinned  | 8.0.2 lock | 8.0.5.1 lock | 8.1.4 lock | Compare enrolled | Moves?  |
-| ----------------- | ------- | ---------- | ------------ | ---------- | ---------------- | ------- |
-| rack              | 3.1.14  | 3.1.12     | 3.2.1        | 3.2.6      | api + tests      | **yes** |
-| rack-session      | 2.1.0   | 2.1.0      | 2.1.1        | 2.1.2      | api + tests      | **yes** |
-| thor              | 1.3.2   | 1.3.2      | 1.4.0        | 1.5.0      | api + tests      | **yes** |
-| sqlite3           | 2.6.0   | 2.6.0      | 2.7.3        | 2.9.4      | api              | **yes** |
-| pg                | 1.5.9   | 1.5.9      | 1.6.2        | 1.6.3      | api              | **yes** |
-| minitest          | 5.27.0  | 5.25.4     | 6.0.0        | 6.0.6      | off (anchor)     | anchor  |
-| rails-dom-testing | 2.2.0   | 2.2.0      | 2.3.0        | 2.3.0      | off (anchor)     | anchor  |
-| bcrypt-ruby       | 3.1.20  | 3.1.20     | 3.1.20       | 3.1.22     | api + tests      | no      |
-| date              | 3.4.1   | 3.4.1      | 3.4.1        | 3.5.1      | tests only       | no      |
-| rack-test         | 2.2.0   | 2.2.0      | 2.2.0        | 2.2.0      | tests            | no      |
-| i18n              | 1.14.8  | 1.14.7     | 1.14.7       | 1.14.8     | api + tests      | no      |
-| globalid          | 1.3.0   | 1.2.1      | 1.2.1        | 1.3.0      | api + tests      | no      |
-| msgpack           | 1.8.0   | 1.8.0      | 1.8.0        | 1.8.0      | api + tests      | no      |
-| mysql2            | 0.5.6   | 0.5.6      | 0.5.6        | 0.5.6      | api              | no      |
-| did_you_mean      | 1.6.3   | not locked | not locked   | not locked | api + tests      | no      |
-| ruby              | v3_3_11 |            |              |            | off (anchor)     | no      |
+| Source                                                                                                  | Pinned  | 8.0.2 lock | 8.0.5.2 lock | 8.1.4 lock | Compare enrolled | Moves?                 |
+| ------------------------------------------------------------------------------------------------------- | ------- | ---------- | ------------ | ---------- | ---------------- | ---------------------- |
+| rails-html-sanitizer                                                                                    | 1.6.2   | 1.6.2      | 1.7.2        | not read   | api + tests      | **must** (gemspec)     |
+| loofah                                                                                                  | 2.24.0  | 2.24.0     | 2.25.3       | not read   | api + tests      | **must** (sanitizer)   |
+| nokogiri                                                                                                | 1.18.3  | 1.18.3     | 1.19.7       | not read   | api + tests      | **must** (loofah)      |
+| rack-session                                                                                            | 2.1.0   | 2.1.0      | 2.1.1        | 2.1.2      | api + tests      | yes                    |
+| thor                                                                                                    | 1.3.2   | 1.3.2      | 1.4.0        | 1.5.0      | api + tests      | yes                    |
+| sqlite3                                                                                                 | 2.6.0   | 2.6.0      | 2.7.3        | 2.9.4      | api              | yes                    |
+| pg                                                                                                      | 1.5.9   | 1.5.9      | 1.6.2        | 1.6.3      | api              | yes                    |
+| zeitwerk                                                                                                | 2.7.2   | 2.7.2      | 2.7.3        | not read   | api + tests      | yes                    |
+| mini_magick                                                                                             | 5.2.0   | 5.2.0      | 5.3.1        | not read   | api + tests      | yes                    |
+| solid_queue                                                                                             | 1.1.3   | 1.1.3      | 1.2.1        | not read   | api + tests      | yes (dev Gemfile only) |
+| solid_cable                                                                                             | 3.0.7   | 3.0.7      | 3.0.12       | not read   | api + tests      | yes (dev Gemfile only) |
+| racc                                                                                                    | 1.8.0   | 1.8.1      | 1.8.1        | not read   | tests (anchor)   | yes                    |
+| minitest                                                                                                | 5.27.0  | 5.25.4     | 6.0.0        | 6.0.6      | off (anchor)     | anchor                 |
+| rails-dom-testing                                                                                       | 2.2.0   | 2.2.0      | 2.3.0        | 2.3.0      | off (anchor)     | anchor                 |
+| rack                                                                                                    | 3.2.8   | 3.1.12     | 3.2.1        | 3.2.6      | api + tests      | no (pin leads)         |
+| bcrypt-ruby                                                                                             | 3.1.20  | 3.1.20     | 3.1.20       | 3.1.22     | api + tests      | no                     |
+| date                                                                                                    | 3.4.1   | 3.4.1      | 3.4.1        | 3.5.1      | tests only       | no                     |
+| rack-test                                                                                               | 2.2.0   | 2.2.0      | 2.2.0        | 2.2.0      | tests            | no                     |
+| i18n                                                                                                    | 1.14.8  | 1.14.7     | 1.14.7       | 1.14.8     | api + tests      | no (pin leads)         |
+| globalid                                                                                                | 1.3.0   | 1.2.1      | 1.2.1        | 1.3.0      | api + tests      | no (pin leads)         |
+| msgpack                                                                                                 | 1.8.0   | 1.8.0      | 1.8.0        | 1.8.0      | api + tests      | no                     |
+| mysql2                                                                                                  | 0.5.6   | 0.5.6      | 0.5.6        | 0.5.6      | api              | no                     |
+| tzinfo, marcel, mail, mini_mime, net-smtp, builder, erubi, crass, image_processing, rackup, solid_cache | = lock  |            | unchanged    |            |                  | no                     |
+| did_you_mean                                                                                            | 1.6.3   | not locked | not locked   | not locked | api + tests      | no                     |
+| ruby                                                                                                    | v3_3_11 |            |              |            | off (anchor)     | no                     |
 
-Two pins already lead the 8.0.5.1 lock (i18n and globalid), so "pin equals
-Rails' lock" was never an invariant. The rule this RFC sets: **a dependent
-source moves to the version the target Rails `Gemfile.lock` resolves, unless
-its pin is already at or past it.**
+Three pins already lead the 8.0.5.2 lock (rack, i18n and globalid), so "pin
+equals Rails' lock" was never an invariant. The rule this RFC sets: **a
+dependent source moves to the version the target Rails `Gemfile.lock`
+resolves, unless its pin is already at or past it.** A gem that only Rails'
+development `Gemfile` pulls in (solid_queue, solid_cable) follows the same
+rule; `size-and-sequence-the-dependent-source-bumps` may argue it out with the
+owner.
 
-**Order: Rails first and alone, then each gem as its own bump.** Rails'
-gemspecs accept every currently pinned gem version, so no gem has to move
-before Rails. The reverse is less safe: Rails 8.0.2's own suite ran against
-rack 3.1.12, so bumping rack first would put actionpack bodies verified
-against 8.0.2 on a rack Rails never ran them against. The five gem diffs have
-not been sized at these tags (the 2026-10-13 gem measurements were against the
-8.1.4 lock's versions). `size-and-sequence-the-dependent-source-bumps` runs
-their dry runs after the Rails flip and files one story each. It also puts one
-question to the owner: whether a gem stops at the 8.0.5.1 lock's version, or
-waits and moves once with the 8.1 upgrade. A gem bump may overlap the Rails
-burn-down, since the ledger is keyed per source.
+**Order: Rails first and alone, then each gem as its own bump; the gemspec
+chain next, before the burn-down reaches the sanitizer helpers.** No pinned
+gem blocks the Rails flip itself: the ported actionview code runs on trails'
+own `html-sanitizer` package, which no gemspec check reads, and bumping a gem
+first would put bodies verified against 8.0.2 on a gem version Rails 8.0.2
+never ran against. But `v8.0.5.2`'s `sanitize_helper.rb`, `text_helper.rb`
+(`highlight`, `simple_format`) and their new tests assume
+rails-html-sanitizer 1.7.2's output, so the three-gem chain is bumped right
+after the flip, nokogiri first, then loofah, then rails-html-sanitizer, each
+its own story here (`bump-nokogiri-to-v1-19-7`, `bump-loofah-to-v2-25-3`,
+`bump-rails-html-sanitizer-to-v1-7-2`), and the burn-down stories for those
+two actionview files depend on the last. The remaining movers are sized after
+the flip by `size-and-sequence-the-dependent-source-bumps`, which files one
+story each and puts one question to the owner: whether a gem stops at the
+8.0.5.2 lock's version, or waits and moves once with the 8.1 upgrade. A gem
+bump may overlap the Rails burn-down, since the ledger is keyed per source.
+
+Upstream diffs of the three chain gems (GitHub compare, 2026-11-10; `lib/`
+and test directories only):
+
+| Gem                  | Range             | Commits | lib files, +/- | test files, + |
+| -------------------- | ----------------- | ------- | -------------- | ------------- |
+| nokogiri             | v1.18.3...v1.19.7 | 169     | 29, +353/-151  | 39, +3,430    |
+| loofah               | v2.24.0...v2.25.3 | 71      | 5, +225/-78    | 8, +856       |
+| rails-html-sanitizer | v1.6.2...v1.7.2   | 57      | 3, +14/-21     | 4, +177       |
 
 ### 2. The size of the upgrade
 
 All numbers are `v8.0.2` → `v8.0.5.1`, measured 2026-10-13 from a candidate
 fetched beside the active version (`pnpm vendor:fetch --source rails --ref
-v8.0.5.1`, step 1 of the procedure). No lockfile or gate was touched.
+v8.0.5.1`, step 1 of the procedure). No lockfile or gate was touched. They
+predate both the retarget to `v8.0.5.2` and the enrolment of actioncable,
+actionmailer, activestorage, actionmailbox and actiontext, so they are a
+floor: § 1 "What 8.0.5.2 adds" gives the file-level delta, and
+`bump-dry-run-runs-the-gates-against-a-candidate-ref` re-measures every table
+here at `v8.0.5.2` over all sixteen Rails packages and replaces them.
 
 **Ruby source and body pins**, under the `libPath` each package ports (`git
 diff --no-index -M --numstat`; pins from `lint-body-pins.ts` and method parity
@@ -304,8 +414,8 @@ methods as ported where 388 pins drift), and there is no test-side report.
 
 ### 3. The transition on `main`
 
-**Decision (recommended; Open question 1): one flip PR, then a burn-down on
-`main`, with a bump ledger.**
+**Decision (owner, 2026-11-10, Open question 1): one flip PR, then a
+burn-down on `main`, with a bump ledger.**
 
 #### The bump ledger
 
@@ -344,7 +454,7 @@ story id that owns it. The rules:
    whose pin already matches the active digest is stale, and stale is red.
 5. **A straddling PR is refused.** A PR whose merge base predates the flip and
    which edits `body-pins.json` fails until it is rebased, so a body verified
-   against 8.0.2 cannot be pinned at the 8.0.5.1 digest by accident.
+   against 8.0.2 cannot be pinned at the 8.0.5.2 digest by accident.
 6. **Empty means deleted.** The RFC closes when the file has no rows and is
    removed. No trails release is tagged while a ledger has rows (§ 5).
 
@@ -363,7 +473,9 @@ Retaking the floor first pins the 16 changing pairs, which then drift too. So
 the pair seed at the flip is **about 169 rows** (153 + 16, plus any unpinned
 pair that upstream removed, which today's measurement cannot see). The dry run
 after the floor is retaken gives the exact figure, and that figure is what
-§ Verification checks.
+§ Verification checks. At `v8.0.5.2` the seed also takes the drifted pairs in
+the files of § 1's delta table and in the five later-enrolled packages, so
+"about 169" is a lower bound; a figure near 200 is expected.
 
 #### The test half
 
@@ -420,7 +532,7 @@ which is what Open question 3 tracks.
 
 One PR, mechanical throughout, in separate commits:
 
-1. `ref: "v8.0.5.1"` in `vendor/sources.ts` and the re-locked
+1. `ref: "v8.0.5.2"` in `vendor/sources.ts` and the re-locked
    `vendor/sources.lock.json`.
 2. The dry-run report and the seeded ledger.
 3. `pnpm vendor:recite` (103 citations, 47 files), as its own commit.
@@ -446,7 +558,7 @@ becomes a tooling story, not an exception.
   unit upstream did not change, which is over 98% of the pins. Burn-down PRs
   branch from `main`, are file-sized, and are independent of each other. Cost:
   a tooling change to roughly a dozen lint scripts, and a `main` that is a mix
-  of 8.0.2-verified and 8.0.5.1-verified bodies until the ledger is empty.
+  of 8.0.2-verified and 8.0.5.2-verified bodies until the ledger is empty.
 - **One flip PR, burn-down on `main`, no gate change.** What the procedure
   says today. `main` is red on ten gates for the whole burn-down, so every
   unrelated PR is red too and a new regression is indistinguishable from the
@@ -463,7 +575,7 @@ becomes a tooling story, not an exception.
   branch rewrites, so the branch pays a growing merge and re-verification tax
   and ends in one unreviewable merge. Rejected.
 - **Pre-port against the candidate tree before the flip.** The gates measure
-  8.0.2 until the flip. A body changed to match 8.0.5.1 gains call and
+  8.0.2 until the flip. A body changed to match 8.0.5.2 gains call and
   argument rows against 8.0.2, and a method that exists only in the new tree
   is unreceipted extra surface in packages pinned at `novel === 0`. Only the
   tooling, the dry run and the story generation can be done ahead. Rejected
@@ -475,7 +587,7 @@ becomes a tooling story, not an exception.
 #### Parallel work during the burn-down
 
 - An agent on an unrelated story sees a green `main` and unchanged gates.
-- An agent touching a ledgered method reads `vendor/rails/v8.0.5.1/`, the
+- An agent touching a ledgered method reads `vendor/rails/v8.0.5.2/`, the
   only active tree. `v8.0.2` stays fetchable beside it
   (`pnpm vendor:fetch --source rails --ref v8.0.2`) for reading what changed,
   and is pruned last.
@@ -494,7 +606,8 @@ becomes a tooling story, not an exception.
 1. **The dry-run command and the ledger have merged**, and a dry run on
    current `main` reports no red gate on a unit outside the ledger.
 2. **Zero unpinned matched bodies in every package under the `rails`
-   source** (898 today). RFC 0159's `pin-the-body-hash-floor-before-the-first-bump`
+   source** (898 on 2026-10-13, before the five later-enrolled packages were
+   counted). RFC 0159's `pin-the-body-hash-floor-before-the-first-bump`
    took the whole-surface floor on 2026-09-25 (trails#8100); the 898 are pairs
    matched since then by ports that did not pin their file.
    `pnpm parity:api:pins:all` retakes the floor in one PR immediately before
@@ -506,17 +619,16 @@ becomes a tooling story, not an exception.
    commit is the flip commit's single parent and gets the tag.
 4. **The data layer is closed out: arel, activemodel and activerecord at 100%
    on `parity:api` and `parity:test`, and RFC 0175 closed.** Ruled by the
-   owner on 2026-10-13: RFC 0175 finishes first, and is being burned down
-   now. Methods are there today; activerecord tests are 8801/8830. The reason
-   is the tag: `rails-8.0.2` marks a complete data layer on the tree it was
-   ported against. For scale, RFC 0175 has 45 of 130 stories open (13,900
-   est-loc) and closed 82 in the 14 days since 2026-09-30; the five ledger
-   and dry-run stories of this RFC (about 2,350 est-loc) have to merge first
-   in any case.
+   owner on 2026-10-13: RFC 0175 finishes first. **RFC 0175 is closed** (141
+   stories done or closed, read from the tasks DB on 2026-11-10);
+   `entry-check-data-layer-parity-is-closed-on-8-0-2` confirms the 100% figures
+   on current `main`. The reason is the tag: `rails-8.0.2` marks a complete
+   data layer on the tree it was ported against.
 
 **Need not be true:**
 
-- actionpack, actionview, activejob or trailties parity. The flip moves their
+- actionpack, actionview, actioncable, activejob, actionmailer,
+  activestorage, actionmailbox, actiontext or trailties parity. The flip moves their
   denominators and their ledger rows; it does not need them finished.
 - Pins on the non-Rails gems (thor has 367 unpinned). Each gem's own bump
   retakes its own floor.
@@ -526,7 +638,10 @@ becomes a tooling story, not an exception.
 
 ### 5. Branching and tagging
 
-Recommended; branch policy is the owner's (Open question 2).
+The tag rule below is the plan. The branch policy (Open question 2) is
+deferred by the owner (2026-11-10) to `tag-the-last-rails-8-0-2-commit`, which
+asks it before tagging; until then the default is the recommendation, tags
+only. The flip does not depend on the answer.
 
 - **Every Rails flip tags its parent `rails-<old>`.** This flip's parent gets
   an annotated tag `rails-8.0.2`: the complete data layer on the tree it was
@@ -561,7 +676,7 @@ Recommended; branch policy is the owner's (Open question 2).
 **Deferred to the 8.1 upgrade RFC**, which
 `write-the-retrospective-and-scope-the-rails-8-1-upgrade` opens. Nothing is
 published and this bump changes no package version, so neither question has to
-be answered to flip to `v8.0.5.1`. The analysis is recorded here so it is not
+be answered to flip to `v8.0.5.2`. The analysis is recorded here so it is not
 redone.
 
 Three schemes were asked for:
@@ -574,7 +689,7 @@ Three schemes were asked for:
 - **(c) trails matches Rails' full version.** A trails-only fix has no number:
   `8.0.5.2` is not semver and would collide with a real Rails release,
   `8.0.5-1` sorts before `8.0.5`, and npm ignores `8.0.5+1`. This bump shows
-  a second problem: `8.0.5.1` itself has four segments and is not a valid npm
+  a second problem: `8.0.5.2` itself has four segments and is not a valid npm
   version. Rejected.
 
 **Recommendation carried forward: (b).**
@@ -605,7 +720,7 @@ soon after.
 
 **What this RFC does do for versioning: the mirrored ref is recorded.** In
 each `package.json`, a generated `mirrors` field: `{ "source": "rails",
-"ref": "v8.0.5.1", "sha": "beef74d4cebf…" }`, written from
+"ref": "v8.0.5.2", "sha": "235c597b100…" }`, written from
 `sources.lock.json` and checked in CI so it cannot drift from the registry. It
 is regenerated in the flip PR, so the check is never off. `mirrors.ref` means
 "the ref the gates measure this package against". It does not claim every
@@ -648,29 +763,48 @@ Nothing writes to the DB but the sync. The dry-run report is a JSON file
 committed by the flip PR, and the ledger gate prints a summary line in the
 `rails-comparison` log that the sync parses as it parses the compare
 summaries, so a rebuilt DB recovers the whole history from the repo and CI.
-Both of today's measurements (`v8.0.5.1` in § 2, `v8.1.4` in § 8) are
+Both 2026-10-13 measurements (`v8.0.5.1` in § 2, `v8.1.4` in § 8) are
 backfilled as the first reports, marked as transcribed by hand. The
 retrospective reads its figures back out of these tables, which is their
 first use.
 
 #### The runbook
 
-As it will be written into vendor/README.md § "Upgrading a source":
+As it will be written into vendor/README.md § "Upgrading a source (bumping
+`ref`)", whose seven existing steps (RFC 0159) it keeps and wraps. Every
+command below exists today except the two marked _new_:
 
-1. Resolve the target tag from the upstream remote. Read its `Gemfile.lock`
-   against `sources.lock.json` and apply the dependent-source rule of § 1.
-2. Fetch the candidate beside the active version. Run the dry run. Put its
-   tables in the upgrade RFC and commit its report.
-3. Check the entry criteria. Retake the pin floor for the source's packages.
-4. Open the flip PR: `ref`, lockfile, report, seeded ledger, recite, stale
-   deletions, regenerated artifacts, version constants, `mirrors` fields.
-5. Once it merges, tag its parent commit `rails-<old>`.
-6. Generate the burn-down stories and write their ids into the ledger rows.
-7. Burn down: re-verify, re-pin, delete the row. Port what is new. Delete what
-   is gone.
-8. When the ledger is empty: delete it, re-read the rewritten citations,
-   `pnpm vendor:fetch --prune`, write the retrospective, close the RFC.
-9. Bump the dependent sources by the same steps, smallest first.
+1. **Resolve the target.** `git ls-remote --tags <url> 'v<major>.<minor>*'`;
+   record the tag and its `^{}` commit SHA. Read the tag's `Gemfile.lock` and
+   every `*.gemspec` diff against `vendor/sources.lock.json`, apply the
+   dependent-source rule of § 1, and note any gemspec floor that forces a gem.
+   Check the line is still inside Rails' maintenance window.
+2. **Fetch beside and dry-run** (existing step 1 and 2).
+   `pnpm vendor:fetch --source rails --ref <tag>` clones
+   `vendor/rails/<tag>/` without touching the lockfile; then _new_
+   `pnpm parity:bump:dry-run --source rails --ref <tag>`. Put its tables in the
+   upgrade RFC and commit its report.
+3. **Entry.** Check § 4. Retake the pin floor with
+   `pnpm parity:api:pins:all` on the old ref, as late as possible.
+4. **Flip PR** (existing steps 3 to 5): `ref` in `vendor/sources.ts`;
+   `pnpm vendor:fetch --source rails`, which adopts the candidate and re-locks
+   `vendor/sources.lock.json`; the report and the seeded ledger;
+   `pnpm vendor:recite --check` saved, then `pnpm vendor:recite` in its own
+   commit; `pnpm parity:api:inlined:fix`; stale deletions outside the ledger
+   with the gates' `:tighten` commands; regenerated artifacts; version
+   constants; `mirrors` fields.
+5. **Tag** the flip commit's parent `rails-<old>`.
+6. **Generate** the burn-down stories (_new_ generator) and write their ids
+   into the ledger rows.
+7. **Burn down** (existing step 6): re-verify each ledgered body against the
+   new tree, `pnpm tsx scripts/api-compare/body-pins.ts --pin <ruby-file>`,
+   which deletes the row; `pnpm parity:api:pins` shows what is left. Port
+   what is new, delete what is gone. Re-read each recited citation.
+8. **Close**: ledger empty and deleted, `pnpm parity:api:pins` at 0 DRIFT and
+   0 STALE, `pnpm vendor:fetch --prune --source rails` (existing step 7),
+   retrospective, RFC closed.
+9. **Dependent sources** by the same steps, gemspec-forced ones first, then
+   smallest first.
 
 Documents that change, in `document-the-minor-bump-runbook`:
 
@@ -688,13 +822,15 @@ Documents that change, in `document-the-minor-bump-runbook`:
   on touching a ledgered unit. Its `vendor/rails/v8.0.2/` citations move with
   `vendor:recite`.
 
-### 8. The next bump: v8.1.4
+### 8. The next bump: 8.1
 
 Not planned here. Recorded so the 8.1 RFC starts from numbers, and so the
 tooling is built for the larger case. The right-hand column is `v8.0.2` →
 `v8.1.4` (`c3466ea00d7121798e3aa3144ffdf7174b81d8cb`, tagged 2026-09-24, the
-highest `v8.1*` tag; no `v8.2*` tag exists), measured 2026-10-13. It is
-superseded by a dry run from the `v8.0.5.1` base when this RFC closes.
+highest `v8.1*` tag then; no `v8.2*` tag exists), measured 2026-10-13. Since
+then `v8.1.4.1` (`3f290b759c8e2ffe7c257951b1255740751355e4`, 2026-11-04, 21
+GHSAs) is the highest 8.1 tag. All of this is superseded by a dry run from the
+`v8.0.5.2` base when this RFC closes.
 
 | Measure                                | v8.0.5.1         | v8.1.4               |
 | -------------------------------------- | ---------------- | -------------------- |
@@ -752,78 +888,89 @@ more:
 
 1. **Tooling, on 8.0.2.** `bump-dry-run-runs-the-gates-against-a-candidate-ref`,
    then `bump-ledger-tracks-drifted-pairs-and-the-body-pins-gate-reads-it`,
-   `bump-ledger-scopes-the-call-ratchets-off-drifted-pairs`,
+   then in parallel `bump-ledger-scopes-the-call-ratchets-off-drifted-pairs`,
    `bump-ledger-scopes-the-signature-and-surface-ratchets-off-drifted-pairs`,
    `bump-ledger-scopes-the-test-ratchets-off-changed-rails-tests` and
    `bump-history-is-recorded-in-the-stats-db`.
-   `record-the-mirrored-ref-in-each-package` is independent.
-2. **Entry.** `entry-check-data-layer-parity-is-closed-on-8-0-2`, then
-   `retake-the-body-pin-floor-at-the-last-8-0-2-commit`.
-3. **Flip.** `flip-the-rails-ref-to-v8-0-5-1`, then
-   `tag-the-last-rails-8-0-2-commit` on its parent.
-4. **Post-flip.** `generate-the-rails-8-0-5-1-burn-down-stories`,
-   `reread-the-recited-rails-citations-against-v8-0-5-1` and
-   `size-and-sequence-the-dependent-source-bumps` in parallel, then
+   `record-the-mirrored-ref-in-each-package` and
+   `entry-check-data-layer-parity-is-closed-on-8-0-2` are independent.
+2. **Entry.** `retake-the-body-pin-floor-at-the-last-8-0-2-commit`, as late
+   as possible.
+3. **Flip.** `flip-the-rails-ref-to-v8-0-5-1` (the slug predates the retarget;
+   it flips to `v8.0.5.2`), then `tag-the-last-rails-8-0-2-commit` on its
+   parent.
+4. **Post-flip, in parallel.** `generate-the-rails-8-0-5-1-burn-down-stories`,
+   `reread-the-recited-rails-citations-against-v8-0-5-1`,
+   `mirror-the-v8-0-5-2-activerecord-test-schema-models-and-fixtures`,
+   the gemspec-forced chain `bump-nokogiri-to-v1-19-7` →
+   `bump-loofah-to-v2-25-3` → `bump-rails-html-sanitizer-to-v1-7-2`, and
+   `size-and-sequence-the-dependent-source-bumps` for every other mover. Then
    `document-the-minor-bump-runbook`, which waits for the generator. The
    burn-down itself runs in the generated RFC.
 5. **Close.** `retire-the-rails-ledger-and-prune-v8-0-2`, then
    `write-the-retrospective-and-scope-the-rails-8-1-upgrade`.
 
 Story clusters are the phase names: `tooling`, `entry`, `flip`, `post-flip`
-and `close`.
+and `close`. Story slugs that say `8-0-5-1` were kept on the retarget because
+a slug is a story's database id; their titles and bodies say `v8.0.5.2`.
 
 ## Verification
 
 - Before the flip: the dry run on `main` reports **0** red gates on units
   outside the ledger seed, and **0** unpinned matched bodies in the Rails
-  packages (898 today).
+  packages (898 on 2026-10-13, before five packages were enrolled).
 - The flip PR's CI is green, and so is the first unrelated PR merged after it.
 - At the flip commit the Rails ledger holds exactly the rows the dry run
-  computes after the floor is retaken: about 169 pair rows (141 drift, 12
-  removed, and the 16 newly pinned pairs that change) and at most 36 test
-  rows. It only shrinks from there. `git log -p` on the file shows no added
+  computes after the floor is retaken at `v8.0.5.2` (at least 169 pair
+  rows, as measured at `v8.0.5.1`, plus the 8.0.5.2 delta and the five
+  later-enrolled packages; the dry-run report states the figure) and at most
+  the number of matched tests that change in place. It only shrinks from there. `git log -p` on the file shows no added
   row outside a lockfile `ref` change.
 - At close: the ledger file is gone, `pnpm parity:api:pins` reports 0 DRIFT
-  and 0 STALE with `rails` at `v8.0.5.1`, `git grep 'vendor/rails/v8\.0\.2'`
+  and 0 STALE with `rails` at `v8.0.5.2`, `git grep 'vendor/rails/v8\.0\.2'`
   is empty, and no call, argument, parameter, block, arm, extra-surface or
   assertion baseline or mark is wider than at the `rails-8.0.2` tag.
 - The stats DB answers, for this bump: rows predicted, rows at the flip, and
   days from flip to empty ledger.
 - `vendor/README.md` holds a runbook that names every command used, and an
-  8.1 upgrade RFC is open with a dry run from the `v8.0.5.1` base.
+  8.1 upgrade RFC is open with a dry run from the `v8.0.5.2` base.
 
 ## Open questions
 
 <!-- Every question here must be resolved or explicitly deferred (to a named
      follow-up RFC/story) before this RFC moves to `status: active`. -->
 
-1. **Is the bump ledger acceptable?** (Owner.) It suspends the per-unit
-   ratchets on about 169 pairs and up to 36 tests for the length of the
-   burn-down, which is a new register in a repo whose rule is that registers
-   only shrink. Recommendation: yes, because its rows are generated from two
-   upstream tags and it is the only option that keeps `main` green without
-   widening a baseline. Alternative: accept a red `main` on ten gates for the
-   burn-down, with a merge freeze on everything but burn-down PRs.
-2. **Branch policy.** (Owner.) Recommendation: tags only; a
-   `<major>-<minor>-stable` branch is cut lazily from the tag when a published
-   line needs a fix. Alternative: cut a stable branch at each flip.
-3. **Does the ledger cover gates the dry run could not exercise?** The
-   rails-private, method-order and test-name lints and the two real-Rails
-   parity jobs may report new debt at the flip that is not keyed by pair or
-   test. Deferred to `bump-dry-run-runs-the-gates-against-a-candidate-ref`,
-   which must either exercise them or list them as residual risk with a count.
+None open. Every question below is resolved or deferred to a named story.
 
 Resolved or deferred:
 
-- **Target.** Resolved 2026-10-13 by the owner: `v8.0.5.1` first, as this
-  RFC; 8.1 as a follow-up.
+- **Is the bump ledger acceptable?** (Open question 1.) Resolved 2026-11-10
+  by the owner: yes, as designed in § 3. It suspends the per-unit ratchets on
+  the seeded pairs and changed tests for the length of the burn-down; its
+  rows are generated from two upstream tags and only shrink.
+- **Branch policy.** (Open question 2.) Deferred 2026-11-10 by the owner to
+  `tag-the-last-rails-8-0-2-commit`, which asks it before placing the tag.
+  Until answered the default is the recommendation (tags only; a
+  `<major>-<minor>-stable` branch cut from the tag when a published line
+  needs a fix). Nothing before the tag depends on it.
+- **Does the ledger cover gates the dry run could not exercise?** (Open
+  question 3.) Deferred to `bump-dry-run-runs-the-gates-against-a-candidate-ref`,
+  which must either exercise the rails-private, method-order and test-name
+  lints, the fixtures and models comparison and the two real-Rails parity jobs,
+  or list each as residual risk with a count.
+- **Which 8.0 release?** Resolved 2026-11-10: `v8.0.5.2`, the highest 8.0
+  tag, and the last expected (8.0.x security support ended 2026-11-07, § 1).
+
+- **Target.** Resolved 2026-10-13 by the owner: the last 8.0 release first,
+  as this RFC (then `v8.0.5.1`); 8.1 as a follow-up.
 - **Is closing RFC 0175 an entry criterion?** Resolved 2026-10-13 by the
   owner: yes. § 4, criterion 4.
 - **Version scheme, and release timing.** Deferred to the 8.1 upgrade RFC
   opened by `write-the-retrospective-and-scope-the-rails-8-1-upgrade`. § 6.
-- **Do dependent gems stop at the 8.0.5.1 lock's versions?** Deferred to
+- **Do dependent gems stop at the 8.0.5.2 lock's versions?** Deferred to
   `size-and-sequence-the-dependent-source-bumps`, which asks it with the dry
-  runs in hand.
+  runs in hand. It does not apply to the gemspec-forced chain (nokogiri,
+  loofah, rails-html-sanitizer), which moves to the 8.0.5.2 lock's versions.
 
 ## Changelog
 
@@ -839,3 +986,15 @@ Resolved or deferred:
   `v8.0.5.1`, the gates re-run against its manifests, the 8.1.4 flip and
   version-scheme stories removed, the 8.1.4 measurements moved to § 8, and a
   closing story added that writes the 8.1 RFC.
+- 2026-11-10: retargeted to `v8.0.5.2` (commit `235c597b`, released
+  2026-11-04, 19 GHSAs over `v8.0.5.1`); 8.0.x security support ended
+  2026-11-07, so it is the line's last release. § 1 gains the 8.0.5.1 →
+  8.0.5.2 delta, the maintenance-window note, the five Rails packages enrolled
+  since 2026-10-13, the `rails-html-sanitizer >= 1.7.2` gemspec floor and the
+  re-read dependent-source table; the 2026-10-13 measurements are kept as a
+  floor, labelled `v8.0.5.1`, for the dry run to replace. The runbook names
+  every command. Owner rulings: the ledger is accepted (Open question 1); the
+  branch policy is deferred to the tag story (2). Stories added for the
+  sanitizer chain and the activerecord test schema; RFC moved to `active`.
+  The directory slug and the `8-0-5-1` story slugs are kept, since they are
+  database ids.

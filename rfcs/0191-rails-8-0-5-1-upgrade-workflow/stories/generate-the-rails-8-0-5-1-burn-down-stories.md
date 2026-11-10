@@ -1,5 +1,5 @@
 ---
-title: "Build the burn-down story generator and generate the 8.0.5.1 stories"
+title: "Build the burn-down story generator and generate the 8.0.5.2 stories"
 status: draft
 updated: 2026-10-13
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
@@ -18,11 +18,15 @@ closed-reason: null
 
 ## Context
 
-RFC § 7, item 4. This RFC holds no porting stories. After the flip the work is 82 Ruby
+RFC § 7, item 4. This RFC holds no porting stories. Target `v8.0.5.2`; the
+slug predates the retarget. Measured at `v8.0.5.1` on 2026-10-13, the work
+was 82 Ruby
 files with a drifted or stale pin (activerecord 35, activesupport 12, arel 11,
 actiondispatch 9, actionview 6, actioncontroller 5, trailties 3, activemodel
 1), 46 defs added and 22 removed upstream, and 112 tests added, 5 removed and
-36 changed in place. The generator is reused by the 8.1 upgrade.
+36 changed in place; `v8.0.5.2` adds about 36 files (RFC § 1 delta table)
+and five more packages, and the seeded ledger is the authority. The generator
+is reused by the 8.1 upgrade.
 
 ## Acceptance criteria
 
@@ -34,13 +38,17 @@ actiondispatch 9, actionview 6, actioncontroller 5, trailties 3, activemodel
       `body-pins.ts --pin <ruby-file>` and an empty ledger for that file.
 - [ ] A file whose work exceeds one PR is split along method groups.
 - [ ] The stories are authored as a new RFC,
-      `rfcs/0000-rails-8-0-5-1-burn-down/` in the tasks repo, opened as its
+      `rfcs/0000-rails-8-0-5-2-burn-down/` in the tasks repo, opened as its
       own PR, with `deps` in the order arel, activemodel, activesupport,
-      activerecord, actionpack, actionview, trailties.
+      activerecord, actionpack, actionview, actioncable, activejob,
+      actionmailer, activestorage, actionmailbox, actiontext, trailties.
+- [ ] The stories for `actionview/lib/action_view/helpers/sanitize_helper.rb`
+      and `text_helper.rb` carry a cross-RFC dep on
+      `bump-rails-html-sanitizer-to-v1-7-2` (RFC § 1, Order).
 - [ ] After that RFC merges, each ledger row's `story` field is filled in,
       and the ledger gate reds on a row without one.
 - [ ] The generator has tests, and takes the source and the two refs as
-      arguments with nothing specific to 8.0.5.1 in it.
+      arguments with nothing specific to 8.0.5.2 in it.
 
 ## Definition of done
 

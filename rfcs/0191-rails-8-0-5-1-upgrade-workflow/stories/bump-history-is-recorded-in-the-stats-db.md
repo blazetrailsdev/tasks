@@ -28,7 +28,7 @@ already holds per-merge-commit compare figures, for example
 `api_compare_stats` and `test_compare_stats` keyed on
 (`merge_commit_sha`, `package`) (`sync.ts:885-911`). It has nothing about a
 `ref` bump: what was predicted, when the flip landed, or how fast the ledger
-emptied. The first measurements of the 8.0.5.1 and 8.1.4 bumps exist only as tables in the
+emptied. The 2026-10-13 measurements (`v8.0.5.1` and `v8.1.4`) exist only as tables in the
 RFC and in gitignored output files.
 
 The DB is the owner's and lives on one machine, so nothing writes to it but
@@ -56,7 +56,7 @@ logs, so a rebuilt DB has the same history.
       kind, rows), parsed from the summary line.
 - [ ] Existing DBs gain the tables through the same add-if-missing path
       `sync.ts` uses for its other late tables.
-- [ ] The two 2026-10-13 measurements, `v8.0.5.1` in RFC § 2 and `v8.1.4`
+- [ ] The two 2026-10-13 measurements, `v8.0.5.1` in RFC § 2 (the target is now `v8.0.5.2`, whose dry run is the first machine-written report) and `v8.1.4`
       in § 8, are backfilled as report files with `"method": "manual"`,
       transcribed from the RFC's tables, so the first predictions are in the
       history.

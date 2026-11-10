@@ -1,5 +1,5 @@
 ---
-title: "Re-read every recited Rails citation against the v8.0.5.1 tree"
+title: "Re-read every recited Rails citation against the v8.0.5.2 tree"
 status: draft
 updated: 2026-10-13
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
@@ -21,14 +21,15 @@ closed-reason: null
 vendor/README.md § "Upgrading a source", step 6: `vendor:recite` rewrites only
 the version segment, and a green citation gate is not evidence the citation
 still points at the same code. 103 `vendor/rails/v8.0.2/…` citations sat in 47
-files on 2026-10-13: 20 under `scripts/`, 7 in ruby-compat, 6 under `docs/`,
+files on 2026-10-13 (161 in 63 on 2026-11-10): 20 under `scripts/`, 7 in ruby-compat, 6 under `docs/`,
 3 each under `vendor/` and `eslint/`, CLAUDE.md, README.md and a handful of
-package files. 189 Ruby files under the ported paths changed in this bump.
+package files. 189 Ruby files under the ported paths changed by `v8.0.5.1`, and `v8.0.5.2`
+changes 224 over `v8.0.2` under the paths `vendor/sources.ts` maps today.
 
 ## Acceptance criteria
 
 - [ ] For each file in the pre-rewrite `vendor:recite --check` list, every
-      citation's file exists in `vendor/rails/v8.0.5.1/` and its line or range
+      citation's file exists in `vendor/rails/v8.0.5.2/` and its line or range
       holds the code the surrounding text describes. A moved range is
       corrected; a citation whose code is gone is rewritten or removed with
       the prose that depended on it.

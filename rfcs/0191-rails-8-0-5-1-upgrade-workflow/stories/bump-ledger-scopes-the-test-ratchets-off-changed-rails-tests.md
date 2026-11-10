@@ -18,6 +18,9 @@ closed-reason: null
 
 ## Context
 
+Counts below were measured at `v8.0.5.1` on 2026-10-13; the target is now
+`v8.0.5.2` (RFC § 1), and the dry run gives the figures there.
+
 RFC § 3 "The test half". The test side has no body pins. For `rails`
 `v8.0.2` → `v8.0.5.1` the flip reds two test gates: `compare.ts --gates
 --check` (1 activerecord gate-mismatch against a hard zero,
@@ -48,7 +51,7 @@ used there.
 - [ ] A test row is stale, and red, once the matched TS test agrees with the
       new Rails test on every axis the ledger suspended.
 - [ ] The dry run with the ledger seeded reports both test gates green for
-      `rails` at `v8.0.5.1`.
+      `rails` at `v8.0.5.2`.
 
 ## Definition of done
 
