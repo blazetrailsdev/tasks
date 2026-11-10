@@ -1,6 +1,6 @@
 ---
 title: "parity:api credits MiniMime's PReadFile class arm"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0227-media-gems-residual-parity"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Port the Mailgun ingress controller (deferred wave)"
-status: ready
-updated: 2026-11-06
+status: claimed
+updated: 2026-11-10
 rfc: "0216-actionmailbox-port"
 cluster: amb-ingress-deferred
 packages: ["actionmailbox"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: 9
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-10T17:43:59Z"
+assignee: "actionmailbox-incineration-and-inbound-email-tests"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Close Date::Infinity#+@ with the unary-plus scoped skip Duration already has"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0228-small-gem-tail-parity"
 cluster: null

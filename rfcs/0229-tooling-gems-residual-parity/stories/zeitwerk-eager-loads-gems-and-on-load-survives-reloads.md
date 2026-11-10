@@ -1,6 +1,6 @@
 ---
 title: 'Port zeitwerk''s two unreceipted skipped tests: "eager loads gems" and "on_load survives reloads"'
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0229-tooling-gems-residual-parity"
 cluster: null

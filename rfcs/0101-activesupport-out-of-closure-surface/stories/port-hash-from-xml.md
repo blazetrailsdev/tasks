@@ -1,6 +1,6 @@
 ---
 title: "port-hash-from-xml"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null

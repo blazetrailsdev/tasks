@@ -1,6 +1,6 @@
 ---
 title: "Port rake/clean.rb's Cleaner and test_rake_clean.rb"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0229-tooling-gems-residual-parity"
 cluster: null

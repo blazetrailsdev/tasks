@@ -1,6 +1,6 @@
 ---
 title: "Seat ImageProcessing::MiniMagick::Processor and ::Vips::Processor on their modules so parity:api credits them"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0227-media-gems-residual-parity"
 cluster: null

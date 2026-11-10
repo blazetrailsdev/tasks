@@ -1,7 +1,7 @@
 ---
 title: "tasks CLI smoke: leaseConnection() result has no selectAll against trails 15d54db"
-status: ready
-updated: 2026-11-09
+status: done
+updated: 2026-11-10
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: tasks#336
+claim: "2026-11-10T17:33:51Z"
+assignee: "tasks-cli-smoke-select-all-is-not-a-function"
 blocked-by: null
 closed-reason: null
 ---

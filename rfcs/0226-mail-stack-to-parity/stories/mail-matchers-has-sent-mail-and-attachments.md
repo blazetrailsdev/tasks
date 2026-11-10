@@ -1,6 +1,6 @@
 ---
 title: "Port Mail::Matchers (has_sent_mail and attachment matchers)"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null

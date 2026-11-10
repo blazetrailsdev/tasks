@@ -1,6 +1,6 @@
 ---
 title: "Port rake's two platform- and version-guarded tests and move the thread-history test file"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0229-tooling-gems-residual-parity"
 cluster: null

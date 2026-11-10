@@ -1,7 +1,7 @@
 ---
 title: "server-path-railtie-integration-test-hooks"
-status: ready
-updated: 2026-11-09
+status: in-progress
+updated: 2026-11-10
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9962
+claim: "2026-11-10T17:14:27Z"
+assignee: "server-path-railtie-integration-test-hooks"
 blocked-by: null
 closed-reason: null
 ---

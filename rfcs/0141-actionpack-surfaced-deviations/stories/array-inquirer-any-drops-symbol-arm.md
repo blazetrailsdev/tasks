@@ -1,7 +1,7 @@
 ---
 title: "array-inquirer-any-drops-symbol-arm"
-status: ready
-updated: 2026-10-19
+status: claimed
+updated: 2026-11-10
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-10T17:58:14Z"
+assignee: "array-inquirer-any-drops-symbol-arm"
 blocked-by: null
 closed-reason: null
 ---

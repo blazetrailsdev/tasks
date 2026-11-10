@@ -1,6 +1,6 @@
 ---
 title: "Port builder's Ruby 1.8 $KCODE arm of TestUtfMarkup under its own guard"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0228-small-gem-tail-parity"
 cluster: null

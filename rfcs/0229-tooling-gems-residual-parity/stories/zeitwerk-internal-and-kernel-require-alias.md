@@ -1,6 +1,6 @@
 ---
 title: "Port Zeitwerk::Internal#internal and Kernel#zeitwerk_original_require"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0229-tooling-gems-residual-parity"
 cluster: null

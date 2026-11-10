@@ -1,6 +1,6 @@
 ---
 title: "Port Module#rake_extension and FileList#to_s, and move each_dir_parent / from_pathname into file_list's file"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0229-tooling-gems-residual-parity"
 cluster: null
