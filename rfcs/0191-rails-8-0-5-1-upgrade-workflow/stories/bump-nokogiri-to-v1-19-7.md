@@ -5,7 +5,8 @@ updated: 2026-11-10
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: post-flip
 packages: ["scripts", "nokogiri"]
-deps: []
+deps:
+  - flip-the-rails-ref-to-v8-0-5-1
 deps-rfc: []
 est-loc: 600
 priority: null
@@ -36,7 +37,7 @@ RFC 0191's dry run and ledger, which are per source.
 ## Acceptance criteria
 
 - [ ] `git ls-remote --tags https://github.com/sparklemotion/nokogiri.git
-    'v1.19.7'` is recorded with its `^{}` commit SHA.
+  'v1.19.7'` is recorded with its `^{}` commit SHA.
 - [ ] The nokogiri pin floor is retaken on `v1.18.3` first
       (`pnpm parity:api:pins:all` scoped to nokogiri), in its own commit or PR.
 - [ ] `pnpm parity:bump:dry-run --source nokogiri --ref v1.19.7` is run and
