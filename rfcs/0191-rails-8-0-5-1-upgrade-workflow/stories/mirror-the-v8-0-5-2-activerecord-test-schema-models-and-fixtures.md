@@ -5,7 +5,8 @@ updated: 2026-11-10
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: post-flip
 packages: ["activerecord"]
-deps: []
+deps:
+  - flip-the-rails-ref-to-v8-0-5-1
 deps-rfc: []
 est-loc: 250
 priority: null
