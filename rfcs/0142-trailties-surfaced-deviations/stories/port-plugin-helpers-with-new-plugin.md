@@ -2,7 +2,7 @@
 title: "port-plugin-helpers-with-new-plugin"
 status: blocked
 updated: 2026-11-07
-rfc: "0212-trailties-port"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps:
