@@ -9,6 +9,7 @@ deps:
   - generate-the-rails-8-0-5-1-burn-down-stories
   - reread-the-recited-rails-citations-against-v8-0-5-1
   - document-the-minor-bump-runbook
+  - mirror-the-v8-0-5-2-activerecord-test-schema-models-and-fixtures
 deps-rfc: []
 est-loc: 50
 priority: null
