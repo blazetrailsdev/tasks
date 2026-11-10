@@ -1,7 +1,7 @@
 ---
 title: "Port rack's Response headers-hash ArgumentError test and move the misplaced mock-request test"
-status: draft
-updated: 2026-11-09
+status: ready
+updated: 2026-11-10
 rfc: "0228-small-gem-tail-parity"
 cluster: null
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

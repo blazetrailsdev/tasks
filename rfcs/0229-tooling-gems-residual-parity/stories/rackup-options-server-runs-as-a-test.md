@@ -1,7 +1,7 @@
 ---
 title: "Port rackup's test_options_server as the test Minitest runs it as"
-status: draft
-updated: 2026-11-09
+status: ready
+updated: 2026-11-10
 rfc: "0229-tooling-gems-residual-parity"
 cluster: null
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

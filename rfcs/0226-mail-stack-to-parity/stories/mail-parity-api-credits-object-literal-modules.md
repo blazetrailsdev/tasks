@@ -1,7 +1,7 @@
 ---
 title: "parity:api credits mail's object-literal modules: Mail's module functions and the Ragel parser tables and structs"
-status: draft
-updated: 2026-11-09
+status: claimed
+updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages:
@@ -9,10 +9,10 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 300
-priority: null
+priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-10T12:34:00Z"
+assignee: "mail-parity-api-credits-object-literal-modules"
 blocked-by: null
 closed-reason: null
 ---

@@ -10,6 +10,7 @@ packages:
   - "actionmailer"
   - "net-smtp"
 clusters: []
+priority: 2
 ---
 
 # RFC 0226 — Mail stack to parity: mail, actionmailer and net-smtp

@@ -1,7 +1,7 @@
 ---
 title: "Port smtp_spec.rb's OpenSSL::SSL::VERIFY_NONE examples and the sendmail_spec remainder"
-status: draft
-updated: 2026-11-09
+status: ready
+updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps:
   - "mail-check-delivery-params"
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

@@ -1,7 +1,7 @@
 ---
 title: "Port Mail::IMAP retriever and imap_spec.rb over the spec's MockIMAP"
-status: draft
-updated: 2026-11-09
+status: ready
+updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps:
   - "mail-retriever-base-and-test-retriever"
 deps-rfc: []
 est-loc: 500
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

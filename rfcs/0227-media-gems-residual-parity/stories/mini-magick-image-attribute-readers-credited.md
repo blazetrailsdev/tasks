@@ -1,7 +1,7 @@
 ---
 title: "parity:api credits MiniMagick::Image's attribute-generated readers"
-status: draft
-updated: 2026-11-09
+status: ready
+updated: 2026-11-10
 rfc: "0227-media-gems-residual-parity"
 cluster: null
 packages:

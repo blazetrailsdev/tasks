@@ -1,7 +1,7 @@
 ---
 title: "Run marcel's InputWrapper test against Rack 3's Lint::Wrapper::InputWrapper"
-status: draft
-updated: 2026-11-09
+status: ready
+updated: 2026-11-10
 rfc: "0227-media-gems-residual-parity"
 cluster: null
 packages:

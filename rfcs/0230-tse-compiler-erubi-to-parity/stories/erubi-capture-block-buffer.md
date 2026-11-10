@@ -1,7 +1,7 @@
 ---
 title: "Port Erubi::CaptureBlockEngine::Buffer (<<, |, capture and h)"
 status: draft
-updated: 2026-11-09
+updated: 2026-11-10
 rfc: "0230-tse-compiler-erubi-to-parity"
 cluster: null
 packages:

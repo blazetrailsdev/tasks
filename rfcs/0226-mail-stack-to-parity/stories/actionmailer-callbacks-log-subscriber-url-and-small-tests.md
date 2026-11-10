@@ -1,7 +1,7 @@
 ---
 title: "Port callbacks, log_subscriber, url, asset_host, form_builder and i18n_with_controller tests"
-status: draft
-updated: 2026-11-09
+status: ready
+updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 500
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

@@ -1,7 +1,7 @@
 ---
 title: "Port the Format1 and Format2 definer and definition modules"
 status: draft
-updated: 2026-11-09
+updated: 2026-11-10
 rfc: "0231-tzinfo-to-parity"
 cluster: null
 packages:

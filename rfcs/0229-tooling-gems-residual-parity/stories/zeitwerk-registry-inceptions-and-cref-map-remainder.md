@@ -1,7 +1,7 @@
 ---
 title: "Port Zeitwerk::Registry::Inceptions and the Registry / Loader / Cref::Map remainder"
-status: draft
-updated: 2026-11-09
+status: ready
+updated: 2026-11-10
 rfc: "0229-tooling-gems-residual-parity"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps:
   - mail-parity-api-credits-object-literal-modules
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

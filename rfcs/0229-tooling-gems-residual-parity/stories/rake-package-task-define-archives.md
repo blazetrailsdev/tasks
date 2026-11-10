@@ -1,7 +1,7 @@
 ---
 title: "Port Rake::PackageTask#define's tar / zip archive bodies"
-status: draft
-updated: 2026-11-09
+status: ready
+updated: 2026-11-10
 rfc: "0229-tooling-gems-residual-parity"
 cluster: null
 packages:
@@ -11,7 +11,7 @@ deps:
   - "rake-file-utils-ext-flags-and-output-helpers"
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

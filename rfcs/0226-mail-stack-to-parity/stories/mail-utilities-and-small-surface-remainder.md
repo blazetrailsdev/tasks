@@ -1,7 +1,7 @@
 ---
 title: "Port Mail::Utilities.has_constant? / get_constant, IndifferentHash's has_key? / member? / fetch, VERSION, and the mb_chars utilities specs"
-status: draft
-updated: 2026-11-09
+status: ready
+updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps:
   - "mail-parity-api-credits-object-literal-modules"
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

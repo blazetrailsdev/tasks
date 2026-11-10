@@ -1,7 +1,7 @@
 ---
 title: "Port TZInfo::Timestamp and tc_timestamp.rb"
 status: draft
-updated: 2026-11-09
+updated: 2026-11-10
 rfc: "0231-tzinfo-to-parity"
 cluster: null
 packages:

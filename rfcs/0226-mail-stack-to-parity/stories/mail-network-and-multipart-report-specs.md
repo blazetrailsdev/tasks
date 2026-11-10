@@ -1,7 +1,7 @@
 ---
 title: "Port network_spec.rb and multipart_report_spec.rb"
-status: draft
-updated: 2026-11-09
+status: ready
+updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps:
   - "mail-retriever-base-and-test-retriever"
 deps-rfc: []
 est-loc: 550
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

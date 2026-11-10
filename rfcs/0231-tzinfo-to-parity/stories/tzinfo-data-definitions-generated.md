@@ -1,7 +1,7 @@
 ---
 title: "Vendor tzinfo-data and generate its definition modules, so RubyDataSource is the default on every platform"
 status: draft
-updated: 2026-11-09
+updated: 2026-11-10
 rfc: "0231-tzinfo-to-parity"
 cluster: null
 packages:

@@ -1,7 +1,7 @@
 ---
 title: 'Run actionview''s "layouts are included" now that its blocker is done'
-status: draft
-updated: 2026-11-09
+status: ready
+updated: 2026-11-10
 rfc: "0228-small-gem-tail-parity"
 cluster: null
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

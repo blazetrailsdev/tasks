@@ -11,6 +11,7 @@ packages:
   - "mini-mime"
   - "marcel"
 clusters: []
+priority: 2
 ---
 
 # RFC 0227 — Media gems residual parity: image-processing, mini-magick, mini-mime and marcel
