@@ -21,6 +21,7 @@ packages:
   - "pg"
   - "sqlite3"
   - "nokogiri"
+  - "html-sanitizer"
 clusters:
   - tooling
   - entry
