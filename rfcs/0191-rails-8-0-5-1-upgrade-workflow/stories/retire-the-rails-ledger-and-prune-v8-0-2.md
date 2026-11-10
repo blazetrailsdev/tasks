@@ -6,11 +6,9 @@ rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: close
 packages: [scripts]
 deps:
-  [
-    generate-the-rails-8-0-5-1-burn-down-stories,
-    reread-the-recited-rails-citations-against-v8-0-5-1,
-    document-the-minor-bump-runbook,
-  ]
+  - generate-the-rails-8-0-5-1-burn-down-stories
+  - reread-the-recited-rails-citations-against-v8-0-5-1
+  - document-the-minor-bump-runbook
 deps-rfc: []
 est-loc: 50
 priority: null
