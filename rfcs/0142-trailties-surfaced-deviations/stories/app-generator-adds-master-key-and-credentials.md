@@ -2,7 +2,7 @@
 title: "app-generator-adds-master-key-and-credentials"
 status: blocked
 updated: 2026-11-07
-rfc: "0212-trailties-port"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
