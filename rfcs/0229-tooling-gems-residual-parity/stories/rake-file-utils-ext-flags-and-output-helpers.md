@@ -1,6 +1,6 @@
 ---
 title: "Confirm Rake::FileUtilsExt's helpers are credited in it and its four includers once object-literal modules are credited"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0229-tooling-gems-residual-parity"
 cluster: null
