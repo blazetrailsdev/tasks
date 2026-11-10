@@ -1,6 +1,6 @@
 ---
 title: "Port mime_messages_spec.rb and example_emails_spec.rb"
-status: ready
+status: claimed
 updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 600
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-10T13:54:04Z"
+assignee: "mini-magick-image-attribute-readers-credited"
 blocked-by: null
 closed-reason: null
 ---

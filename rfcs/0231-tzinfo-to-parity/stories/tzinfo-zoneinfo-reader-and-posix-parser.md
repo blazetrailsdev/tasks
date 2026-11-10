@@ -1,6 +1,6 @@
 ---
 title: "Port ZoneinfoReader and PosixTimeZoneParser"
-status: draft
+status: ready
 updated: 2026-11-10
 rfc: "0231-tzinfo-to-parity"
 cluster: null
@@ -11,7 +11,7 @@ deps:
   - "tzinfo-data-source-base"
 deps-rfc: []
 est-loc: 650
-priority: null
+priority: 6
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "Move net-smtp's tests to the convention paths parity:test expects"
-status: ready
+status: in-progress
 updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#9946
+claim: "2026-11-10T13:13:58Z"
+assignee: "date-infinity-unary-plus"
 blocked-by: null
 closed-reason: null
 ---

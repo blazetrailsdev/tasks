@@ -1,6 +1,6 @@
 ---
 title: "Timezone's remaining 31 members read periods from the DataSource, retiring the Intl stand-in"
-status: draft
+status: ready
 updated: 2026-11-10
 rfc: "0231-tzinfo-to-parity"
 cluster: null
@@ -12,7 +12,7 @@ deps:
   - "tzinfo-data-definitions-generated"
 deps-rfc: []
 est-loc: 650
-priority: null
+priority: 10
 pr: null
 claim: null
 assignee: null

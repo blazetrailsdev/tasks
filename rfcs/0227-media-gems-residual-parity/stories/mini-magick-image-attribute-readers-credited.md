@@ -1,6 +1,6 @@
 ---
 title: "parity:api credits MiniMagick::Image's attribute-generated readers"
-status: ready
+status: claimed
 updated: 2026-11-10
 rfc: "0227-media-gems-residual-parity"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-10T13:54:04Z"
+assignee: "mini-magick-image-attribute-readers-credited"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Port ActionMailer.eager_load!, Base#instrument_payload / instrument_name / _protected_ivars, Parameterized#params, and stop counting mailer methods named test_* as tests"
-status: claimed
+status: in-progress
 updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 2
-pr: null
+pr: trails#9945
 claim: "2026-11-10T12:34:00Z"
 assignee: "mail-parity-api-credits-object-literal-modules"
 blocked-by: null

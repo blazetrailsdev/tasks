@@ -1,6 +1,6 @@
 ---
 title: "Port rake/clean.rb's Cleaner and test_rake_clean.rb"
-status: ready
+status: in-progress
 updated: 2026-11-10
 rfc: "0229-tooling-gems-residual-parity"
 cluster: null
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9946
+claim: "2026-11-10T13:13:58Z"
+assignee: "date-infinity-unary-plus"
 blocked-by: null
 closed-reason: null
 ---

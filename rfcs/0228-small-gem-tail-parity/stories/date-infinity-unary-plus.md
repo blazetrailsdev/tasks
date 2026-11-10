@@ -1,6 +1,6 @@
 ---
 title: "Close Date::Infinity#+@ with the unary-plus scoped skip Duration already has"
-status: ready
+status: in-progress
 updated: 2026-11-10
 rfc: "0228-small-gem-tail-parity"
 cluster: null
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#9946
+claim: "2026-11-10T13:13:58Z"
+assignee: "date-infinity-unary-plus"
 blocked-by: null
 closed-reason: null
 ---

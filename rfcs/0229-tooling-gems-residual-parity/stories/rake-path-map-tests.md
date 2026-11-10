@@ -1,6 +1,6 @@
 ---
 title: "Port rake's pathmap test files"
-status: ready
+status: in-progress
 updated: 2026-11-10
 rfc: "0229-tooling-gems-residual-parity"
 cluster: null
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9947
+claim: "2026-11-10T13:23:59Z"
+assignee: "rackup-options-server-runs-as-a-test"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: 'Run actionview''s "layouts are included" now that its blocker is done'
-status: ready
+status: in-progress
 updated: 2026-11-10
 rfc: "0228-small-gem-tail-parity"
 cluster: null
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9947
+claim: "2026-11-10T13:23:59Z"
+assignee: "rackup-options-server-runs-as-a-test"
 blocked-by: null
 closed-reason: null
 ---

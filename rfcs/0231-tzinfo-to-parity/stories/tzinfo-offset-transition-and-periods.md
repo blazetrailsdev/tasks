@@ -1,6 +1,6 @@
 ---
 title: "Finish TimezoneOffset, TimezoneTransition, TimezonePeriod and port OffsetTimezonePeriod / TransitionsTimezonePeriod"
-status: draft
+status: ready
 updated: 2026-11-10
 rfc: "0231-tzinfo-to-parity"
 cluster: null
@@ -10,7 +10,7 @@ deps:
   - "tzinfo-timestamp"
 deps-rfc: []
 est-loc: 550
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

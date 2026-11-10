@@ -1,6 +1,6 @@
 ---
 title: "Port StringDeduper, RubyCoreSupport.untaint and TZInfo.eager_load!, with the version, Ruby-Time and city-zone tests"
-status: draft
+status: ready
 updated: 2026-11-10
 rfc: "0231-tzinfo-to-parity"
 cluster: null
@@ -10,7 +10,7 @@ deps:
   - "tzinfo-timezone-reads-the-data-source"
 deps-rfc: []
 est-loc: 450
-priority: null
+priority: 11
 pr: null
 claim: null
 assignee: null

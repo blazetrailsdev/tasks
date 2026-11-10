@@ -1,6 +1,6 @@
 ---
 title: "Port TransitionRule's hierarchy and AnnualRules"
-status: draft
+status: ready
 updated: 2026-11-10
 rfc: "0231-tzinfo-to-parity"
 cluster: null
@@ -10,7 +10,7 @@ deps:
   - "tzinfo-offset-transition-and-periods"
 deps-rfc: []
 est-loc: 500
-priority: null
+priority: 4
 pr: null
 claim: null
 assignee: null

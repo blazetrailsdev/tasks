@@ -1,6 +1,6 @@
 ---
 title: "Port Zeitwerk::Internal#internal and Kernel#zeitwerk_original_require"
-status: ready
+status: claimed
 updated: 2026-11-10
 rfc: "0229-tooling-gems-residual-parity"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 200
 priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-10T13:44:28Z"
+assignee: "rake-guarded-tests-and-thread-history-path"
 blocked-by: null
 closed-reason: null
 ---

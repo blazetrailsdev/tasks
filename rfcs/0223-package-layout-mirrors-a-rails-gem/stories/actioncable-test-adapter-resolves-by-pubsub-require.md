@@ -1,7 +1,7 @@
 ---
 title: "actioncable test adapter resolves through pubsub_adapter's require, not a test_help import"
-status: in-progress
-updated: 2026-11-09
+status: done
+updated: 2026-11-10
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
 packages: []

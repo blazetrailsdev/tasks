@@ -1,6 +1,6 @@
 ---
 title: "Port TZInfo::Timestamp and tc_timestamp.rb"
-status: draft
+status: ready
 updated: 2026-11-10
 rfc: "0231-tzinfo-to-parity"
 cluster: null
@@ -10,7 +10,7 @@ deps:
   - "tzinfo-parity-test-credits-tc-files"
 deps-rfc: []
 est-loc: 600
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

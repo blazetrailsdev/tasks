@@ -1,6 +1,6 @@
 ---
 title: "parity:test reports tzinfo's 961 Ruby tests instead of 0/0"
-status: draft
+status: in-progress
 updated: 2026-11-10
 rfc: "0231-tzinfo-to-parity"
 cluster: null
@@ -9,10 +9,10 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 1
+pr: trails#9947
+claim: "2026-11-10T13:23:59Z"
+assignee: "rackup-options-server-runs-as-a-test"
 blocked-by: null
 closed-reason: null
 ---
