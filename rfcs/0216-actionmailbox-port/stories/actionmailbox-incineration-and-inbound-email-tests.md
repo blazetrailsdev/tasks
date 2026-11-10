@@ -1,6 +1,6 @@
 ---
 title: "Port InboundEmail::Incineratable, Incineration and IncinerationJob, and the InboundEmail tests"
-status: claimed
+status: in-progress
 updated: 2026-11-10
 rfc: "0216-actionmailbox-port"
 cluster: amb-core
@@ -9,7 +9,7 @@ deps: ["actionmailbox-base-and-callbacks", "port-activejob-exceptions"]
 deps-rfc: []
 est-loc: 350
 priority: 7
-pr: null
+pr: trails#9964
 claim: "2026-11-10T17:43:59Z"
 assignee: "actionmailbox-incineration-and-inbound-email-tests"
 blocked-by: null
