@@ -98,7 +98,9 @@ Many "missing" rows here are members of object-literal modules
 (`FileUtilsExt`, `Registry`, `PrivateReader::ClassMethods`) that the extractor
 does not credit. One generic fix, `mail-parity-api-credits-object-literal-modules`
 in the mail-stack RFC, closes them for every package, and the rake and zeitwerk
-stories that rely on it list it in `deps`.
+stories that rely on it name it in their Context. The `deps` edge is added with
+`tasks set-deps` once the mail-stack RFC merges, because `validate` refuses a
+dep on a story that is not ingested yet.
 
 The only ordering is the `deps`: the `FileUtilsExt` story before both
 package-task stories, and accessors before archives. Everything else, in both

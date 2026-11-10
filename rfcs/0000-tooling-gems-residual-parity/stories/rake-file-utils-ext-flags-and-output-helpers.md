@@ -6,8 +6,7 @@ rfc: "0000-tooling-gems-residual-parity"
 cluster: null
 packages:
   - "rake"
-deps:
-  - "mail-parity-api-credits-object-literal-modules"
+deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
