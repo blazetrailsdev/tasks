@@ -1,7 +1,7 @@
 ---
 title: "Nokogiri HTML5::Document answers to_xml / write_to through Node; port test_to_xml"
-status: draft
-updated: 2026-11-09
+status: ready
+updated: 2026-11-10
 rfc: "0219-actiontext-port"
 cluster: null
 packages: []

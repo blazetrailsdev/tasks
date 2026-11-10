@@ -1,6 +1,6 @@
 ---
 title: "plain_text_conversion_test: assert through Content and unskip the attachment test"
-status: draft
+status: ready
 updated: 2026-11-10
 rfc: "0219-actiontext-port"
 cluster: null

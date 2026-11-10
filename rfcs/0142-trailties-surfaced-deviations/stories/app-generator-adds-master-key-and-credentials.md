@@ -1,6 +1,6 @@
 ---
 title: "app-generator-adds-master-key-and-credentials"
-status: ready
+status: in-progress
 updated: 2026-11-10
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9974
+claim: "2026-11-10T22:42:14Z"
+assignee: "app-generator-adds-master-key-and-credentials"
 blocked-by: null
 closed-reason: null
 ---

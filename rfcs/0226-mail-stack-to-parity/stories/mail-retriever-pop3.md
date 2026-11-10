@@ -1,6 +1,6 @@
 ---
 title: "Port Mail::POP3 retriever and pop3_spec.rb over the spec's MockPOP3"
-status: claimed
+status: in-progress
 updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null
@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: 2
-pr: null
+pr: trails#9973
 claim: "2026-11-10T21:41:46Z"
 assignee: "mail-retriever-pop3"
 blocked-by: null

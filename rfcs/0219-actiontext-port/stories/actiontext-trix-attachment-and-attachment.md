@@ -1,7 +1,7 @@
 ---
 title: "Port TrixAttachment, Attachment, AttachmentGallery and the Attachments mixins"
-status: ready
-updated: 2026-11-07
+status: in-progress
+updated: 2026-11-10
 rfc: "0219-actiontext-port"
 cluster: at-content
 packages: ["actiontext"]
@@ -9,9 +9,9 @@ deps: ["actiontext-module-fragment-and-conversions"]
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9975
+claim: "2026-11-10T22:24:33Z"
+assignee: "actiontext-trix-attachment-and-attachment"
 blocked-by: null
 closed-reason: null
 ---
