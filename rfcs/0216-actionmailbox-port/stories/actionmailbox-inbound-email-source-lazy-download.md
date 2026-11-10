@@ -1,7 +1,7 @@
 ---
 title: "InboundEmail#source reads raw_email.download without explicit attachment/blob loads"
-status: draft
-updated: 2026-11-09
+status: ready
+updated: 2026-11-10
 rfc: "0216-actionmailbox-port"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "Port ActionText module, Fragment, HtmlConversion and PlainTextConversion"
-status: claimed
+status: in-progress
 updated: 2026-11-10
 rfc: "0219-actiontext-port"
 cluster: at-content
@@ -9,7 +9,7 @@ deps: ["actiontext-parity-enrollment-and-package", "nokogiri-html5-node-mutation
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: trails#9970
 claim: "2026-11-10T20:55:23Z"
 assignee: "actiontext-module-fragment-and-conversions"
 blocked-by: null

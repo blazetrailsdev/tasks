@@ -1,9 +1,9 @@
 ---
 rfc: "0227-media-gems-residual-parity"
 title: "Media gems residual parity: image-processing, mini-magick, mini-mime and marcel"
-status: active
+status: closed
 created: 2026-11-09
-updated: 2026-11-09
+updated: 2026-11-10
 owner: "@deanmarano"
 packages:
   - "image-processing"

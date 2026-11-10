@@ -1,7 +1,7 @@
 ---
 title: "port-non-accessor-rows-from-level-keyed-set"
 status: ready
-updated: 2026-10-19
+updated: 2026-11-10
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: [scripts]

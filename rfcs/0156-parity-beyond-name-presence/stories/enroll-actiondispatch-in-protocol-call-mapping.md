@@ -1,7 +1,7 @@
 ---
 title: "enroll-actiondispatch-in-protocol-call-mapping"
-status: ready
-updated: 2026-10-19
+status: in-progress
+updated: 2026-11-10
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: [scripts]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9971
+claim: "2026-11-10T21:12:09Z"
+assignee: "burn-down-newly-measured-assertion-mismatches"
 blocked-by: null
 closed-reason: null
 ---

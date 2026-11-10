@@ -1,7 +1,7 @@
 ---
 title: "actionmailbox tests boot their own dummy app and roll back per test"
-status: draft
-updated: 2026-11-09
+status: ready
+updated: 2026-11-10
 rfc: "0216-actionmailbox-port"
 cluster: null
 packages: []

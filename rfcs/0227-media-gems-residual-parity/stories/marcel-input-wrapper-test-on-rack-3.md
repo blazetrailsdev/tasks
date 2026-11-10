@@ -1,6 +1,6 @@
 ---
 title: "Run marcel's InputWrapper test against Rack 3's Lint::Wrapper::InputWrapper"
-status: ready
+status: closed
 updated: 2026-11-10
 rfc: "0227-media-gems-residual-parity"
 cluster: null
@@ -12,10 +12,10 @@ deps-rfc: []
 est-loc: 50
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-10T21:29:39Z"
+assignee: "marcel-input-wrapper-test-on-rack-3"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: rack 3.2.8 Lint::Wrapper::InputWrapper has no rewind (vendor/rack/v3.2.8/lib/rack/lint.rb:495-570) and marcel 1.0.4 calls io.rewind unconditionally (magic.rb:141); verified in MRI 3.3: Marcel::MimeType.for(wrapper) raises NoMethodError. The test only holds on rack 2, so the existing skip stands."
 ---
 
 ## Context
