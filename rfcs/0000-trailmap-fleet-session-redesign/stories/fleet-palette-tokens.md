@@ -4,7 +4,7 @@ status: draft
 updated: 2026-11-10
 rfc: "0000-trailmap-fleet-session-redesign"
 cluster: fleet-shell
-packages: []
+packages: [actionview]
 deps: []
 deps-rfc: []
 est-loc: 250
@@ -34,3 +34,9 @@ blocked-by: null
       The dashboard e2e and `class-collisions.test.ts` pass.
 - [ ] Body text and muted text meet 4.5:1 contrast on the page background in
       both themes.
+
+## Verification
+
+- `pnpm vitest run test/assets/class-collisions.test.ts` and `./scripts/dashboard-e2e.sh` (the CI `dashboard-e2e` job) pass.
+- A contrast check of `--ink`, `--ink-2` and `--ink-3` on `--bg` in both
+  themes, with each ratio quoted in the PR body.

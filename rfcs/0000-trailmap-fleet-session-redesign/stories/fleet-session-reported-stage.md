@@ -4,7 +4,7 @@ status: draft
 updated: 2026-11-10
 rfc: "0000-trailmap-fleet-session-redesign"
 cluster: fleet-stage-signal
-packages: []
+packages: [actionview]
 deps: [fleet-session-stage]
 deps-rfc: []
 est-loc: 300
@@ -18,8 +18,9 @@ blocked-by: null
 ## Context
 
 `sessionStage` derives a stage from the envelope, and Drafting versus Self
-review is a guess. The RFC's open question 1 decides who reports the stage:
-ringo, or the agent through a tasks verb or a pane status line.
+review is a guess. The RFC's open question 1 decides who reports the stage,
+and recommends ringo inferring it from the events it already handles. This
+story stays `draft` until that is decided.
 
 ## Acceptance criteria
 
@@ -31,3 +32,8 @@ ringo, or the agent through a tasks verb or a pane status line.
       with a hollow current node.
 - [ ] Verification: on a day's envelope sample, every session's reported
       stage is shown.
+
+## Verification
+
+- A fixture envelope carrying a reported stage that differs from the derived
+  one, asserted in `pnpm vitest run test/assets/fleet-format.test.js`.

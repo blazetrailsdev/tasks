@@ -4,7 +4,7 @@ status: draft
 updated: 2026-11-10
 rfc: "0000-trailmap-fleet-session-redesign"
 cluster: fleet-search
-packages: []
+packages: [actionview, activerecord]
 deps: [fleet-session-list, fleet-session-bundle-stories]
 deps-rfc: []
 est-loc: 600
@@ -34,3 +34,8 @@ buttons open it.
       requests, and the header Broadcast and Spawn buttons open the palette
       on those actions.
 - [ ] It is a dialog with focus trapped while open.
+
+## Verification
+
+- `pnpm vitest run test/assets/fleet-format.test.js` for ranking and filtering, and `./scripts/dashboard-e2e.sh` (the CI `dashboard-e2e` job) for open, navigate, Esc and
+  one action.

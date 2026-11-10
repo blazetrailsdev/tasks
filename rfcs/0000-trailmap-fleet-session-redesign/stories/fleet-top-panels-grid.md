@@ -4,7 +4,7 @@ status: draft
 updated: 2026-11-10
 rfc: "0000-trailmap-fleet-session-redesign"
 cluster: fleet-shell
-packages: []
+packages: [actionview]
 deps: [fleet-palette-tokens]
 deps-rfc: []
 est-loc: 400
@@ -37,3 +37,9 @@ inside Loop.
 - [ ] The broadcast and spawn forms stay reachable from the header buttons
       until `fleet-command-palette` hosts them.
 - [ ] The dashboard e2e passes.
+
+## Verification
+
+- `./scripts/dashboard-e2e.sh` (the CI `dashboard-e2e` job) passes with selector updates only.
+- `git diff --stat` shows no change under `app/controllers/` or to a control
+  request in `fleet-format.js`.

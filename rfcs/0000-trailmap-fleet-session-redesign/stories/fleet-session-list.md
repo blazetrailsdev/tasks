@@ -4,7 +4,7 @@ status: draft
 updated: 2026-11-10
 rfc: "0000-trailmap-fleet-session-redesign"
 cluster: fleet-sessions
-packages: []
+packages: [actionview]
 deps: [fleet-palette-tokens, fleet-session-stage]
 deps-rfc: []
 est-loc: 600
@@ -33,8 +33,22 @@ repo.
       age and the stepper. Its stage is not repeated as a chip.
 - [ ] One stage header, pinned while scrolling, aligns its six columns with
       the card steppers.
-- [ ] Today's row controls (merge, cleanup, the worker and reviewer pane
-      lines, queued notifications from `queuedUnder`) stay reachable from the
-      card.
+- [ ] Today's row controls stay reachable: the worker and reviewer pane
+      lines, cleanup and queued notifications (`queuedUnder`) move into the
+      expanded card, and merge stays on Ready to merge cards, beside the PR
+      link (RFC open question 3).
 - [ ] The repo header shows one count: active sessions.
+- [ ] The card renderer is a pure function in `fleet-format.js` with unit
+      tests, as `prRow` is today.
 - [ ] The dashboard e2e passes, with updated selectors.
+
+## Verification
+
+- `pnpm vitest run test/assets/fleet-format.test.js` and `./scripts/dashboard-e2e.sh` (the CI `dashboard-e2e` job).
+
+## Notes
+
+RFC 0136's `server-render-the-dashboards-pr-rows` takes `prRow`'s tests as
+the specification for a server partial. Once this lands, that story's
+specification is the session card's tests instead. Say so in the PR body,
+and update that story's Context in the same PR.

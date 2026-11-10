@@ -4,7 +4,7 @@ status: draft
 updated: 2026-11-10
 rfc: "0000-trailmap-fleet-session-redesign"
 cluster: fleet-sessions
-packages: []
+packages: [actionview]
 deps: []
 deps-rfc: []
 est-loc: 250
@@ -26,11 +26,22 @@ RFC's table maps these to six stages.
 ## Acceptance criteria
 
 - [ ] `sessionStage(pr | spawn, reviewers)` in `fleet-format.js` returns one
-      of `drafting`, `self`, `ringo`, `ci`, `ready`, `merged`, by the RFC's
-      table.
+      of `drafting`, `self`, `ringo`, `ci`, `ready`, `merged`, applying the
+      RFC's rules top to bottom over `merged`, `draft`, `ciStatus`,
+      `reviewCycles`, `openFindings` and the reviewer list.
 - [ ] It prefers a reported stage field when the input carries one, so
       `fleet-session-reported-stage` needs no change here.
 - [ ] `test/assets/fleet-format.test.js` covers each stage and the ambiguous
       inputs: a draft PR with CI red and no reviewer, a merged PR with CI
       failing, and a reviewer assigned to a non-draft PR.
 - [ ] No rendering changes in this story.
+
+## Verification
+
+- `pnpm vitest run test/assets/fleet-format.test.js`, with one case per table row and the three ambiguous inputs.
+
+## Notes
+
+The function is written to move: `server-render-the-dashboards-pr-rows`
+(RFC 0136) ports `fleet-format.js`'s pure functions to a helper over
+`PrState`, and these tests become that helper's specification.

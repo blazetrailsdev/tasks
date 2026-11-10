@@ -4,7 +4,7 @@ status: draft
 updated: 2026-11-10
 rfc: "0000-trailmap-fleet-session-redesign"
 cluster: fleet-shell
-packages: []
+packages: [actionview]
 deps: [fleet-top-panels-grid, fleet-session-list, fleet-session-detail]
 deps-rfc: []
 est-loc: 300
@@ -31,3 +31,7 @@ stage named under each stepper, and the palette as a full-screen sheet.
 - [ ] At 390px `document.documentElement.scrollWidth` is 390 on the page, with
       one card expanded and with the palette open, asserted in the e2e
       suite.
+
+## Verification
+
+- `./scripts/dashboard-e2e.sh` (the CI `dashboard-e2e` job) at a 390×844 viewport, asserting the `scrollWidth` in three states.

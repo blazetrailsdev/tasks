@@ -5,7 +5,10 @@ status: draft
 created: 2026-11-10
 updated: 2026-11-10
 owner: "@deanmarano"
-packages: []
+packages:
+  - actionpack
+  - actionview
+  - activerecord
 clusters:
   - fleet-shell
   - fleet-sessions
@@ -57,8 +60,38 @@ does not answer "where is each agent in its work".
   (`/panes/:id`) calls it.
 - **The top of the page is a column of cards** in
   `app/views/dashboard/index.html.tse`, each a different width and height.
+- **The transcript is already reachable, from a different page.** trailmap
+  serves the session archive (`sessions/:owner/:repo/:pr`,
+  `sessions/transcript`, `config/routes.ts:84-92`, shipped by
+  `serve-session-transcripts-and-files` in trailmap#82), but nothing on the
+  Fleet page links a row to it.
 
 ## Design
+
+### Relation to RFC 0136
+
+RFC 0136 moves the Fleet page's PR rows from browser rendering to server
+rendering. `server-render-the-dashboards-pr-rows` turns `prRow` and its
+`fleet-format.js` tests into a `.tse` partial driven by `pr_states`, and
+`render-the-reviewer-line-on-the-dashboard` replaces the browser's reviewer
+fetch with models. Both wait on `move-tracker-state-into-the-database`, which
+is blocked on ringo's dual write.
+
+This RFC does not wait for them, and it does not compete with them:
+
+- Every new piece of row logic (`sessionStage`, the card, the stepper, the
+  repo ordering) is a pure function in `fleet-format.js` with unit tests, the
+  shape that 0136's story already plans to move. When
+  `server-render-the-dashboards-pr-rows` lands, its specification is the
+  session card's tests rather than `prRow`'s, and the stage function becomes
+  a helper over `PrState`.
+- The one new read, bundle stories, comes from trailmap's own tasks database,
+  not ringo. It is fetched on the reviewer list's cadence and moves into the
+  server render with the reviewer line. It is the only browser fetch this RFC
+  adds, and it has a named place to go.
+- Nothing here touches `pr_states`, ringo's envelope or the 0136 phase gates.
+  `soak-trailmap-as-the-fleet-dashboard` soaks whatever the page is at the
+  time.
 
 ### Palette and type
 
@@ -83,19 +116,23 @@ forms move into the ⌘K palette. Every control keeps its current
 
 A session is a PR row or a spawn row from the existing envelope, keyed by its
 pane. Its stage is computed by one pure function, `sessionStage`, in
-`fleet-format.js`:
+`fleet-format.js`. Its inputs are the envelope's PR state (`PRState`,
+`webhook/tracker.go:22`): `draft`, `merged`, `ciStatus`, `reviewCycles`,
+`openFindings`, plus the reviewer list keyed `owner/repo#pr`. Rules are
+checked top to bottom, and the first match wins:
 
-| Stage                | Derived from the envelope                                            |
-| -------------------- | -------------------------------------------------------------------- |
-| Drafting             | a spawn with no PR                                                   |
-| Self review          | a draft PR with no reviewer assigned and no review cycle             |
-| Reviewer convergence | a draft PR with a reviewer assigned, or a review cycle under way     |
-| Getting CI green     | a PR whose review is done and whose `ciStatus` is pending or failing |
-| Ready to merge       | a PR out of draft with `ciStatus` passing                            |
-| Merged               | `merged`                                                             |
+| Stage                | Rule                                                                          |
+| -------------------- | ----------------------------------------------------------------------------- |
+| Merged               | `merged`                                                                      |
+| Drafting             | a spawn with no PR                                                            |
+| Self review          | a draft PR with no reviewer assigned and `reviewCycles` 0                     |
+| Reviewer convergence | a draft PR with a reviewer assigned, or `openFindings` above 0                |
+| Ready to merge       | not draft, `ciStatus` passing, `openFindings` 0                               |
+| Getting CI green     | everything else: review done (or out of draft), `ciStatus` pending or failing |
 
-The derived stage is a stopgap. Drafting and Self review cannot be told apart
-for a session that opens its PR late, and review state is inferred. The
+The derived stage is a stopgap. A session that reviews its own work before
+opening a PR shows as Drafting until the PR exists, and review state is
+inferred from counters. The
 `fleet-stage-signal` cluster has the session report its own stage, and
 `sessionStage` prefers a reported stage whenever one is present.
 
@@ -113,18 +150,23 @@ stepper and the card's colored edge, not repeated as a chip.
 ### Bundle stories
 
 A session's stories are the open stories whose `pr` matches its PR, read from
-the tasks database trailmap already opens (`config/database.ts:37-54`). They
-are served with the reviewer list rather than added to ringo's envelope, which
-trailmap does not own. A session with no PR has no stories until it opens one.
+the tasks database trailmap already opens (`config/database.ts:37-54`). A
+`fleet/stories` read serves them, and the page fetches it on the reviewer
+poll's cadence (`pollReviewers`, `app/assets/javascripts/dashboard.js:308`).
+They are not added to ringo's envelope, which trailmap does not own. A session
+with no PR has no stories until it opens one.
 
 ### Expanding a session
 
 A card expands in place. On the left is the session log; on the right are the
 RFC, branch, a diff bar against the LOC ceiling, reviewer or CI progress, and
-an "Open pane" link. The first log is built from what trailmap sees: stage
-changes and PR events (opened, reviewed, CI failed, merged) recorded as frames
-arrive. A transcript of tool calls is a later story. Under the log, a message
-box posts to `fleet/pane/:id/send`.
+an "Open pane" link. Reviewer progress is `reviewCycles` and `openFindings`
+from the PR state, and CI progress is `ciStatus`; nothing is invented. The
+first log is built from what trailmap sees: stage changes and PR events
+(opened, reviewed, CI failed, merged) recorded as frames arrive.
+`fleet-session-transcript-log` merges the session's transcript in from the
+archive routes trailmap already serves. Under the log, a message box posts to
+`fleet/pane/:id/send`.
 
 ### Search
 
@@ -141,9 +183,10 @@ the stepper. The palette opens as a full-screen sheet.
 
 ## Non-goals
 
-- **Changing ringo's event envelope:** trailmap relays it and does not own it.
-  New data comes from trailmap's own sources, except the stage report in
-  `fleet-stage-signal`, which is negotiated there.
+- **Changing ringo's event envelope in this RFC:** trailmap relays it and does
+  not own it. New data comes from trailmap's own sources. The one exception is
+  a reported stage, and if open question 1 puts it in the envelope, that
+  change is filed in ringo and `fleet-session-reported-stage` only reads it.
 - **Retiring ringo's own dashboard:** `/dashboard` still sits beside ringo's
   `/` until it is verified against the live fleet (`config/routes.ts:50-53`).
 - **Redesigning the other trailmap pages:** they pick up the palette tokens and
@@ -168,7 +211,8 @@ the stepper. The palette opens as a full-screen sheet.
 4. Search: `fleet-command-palette`.
 5. Mobile: `fleet-mobile-layout`.
 6. Stage signal and transcript: `fleet-session-reported-stage`,
-   `fleet-session-transcript-log`.
+   `fleet-session-transcript-log`. Each stays `draft` until its open question
+   (1 and 2) is decided; phases 1–5 do not wait on them.
 
 ## Verification
 
@@ -187,15 +231,34 @@ the stepper. The palette opens as a full-screen sheet.
 
 ## Open questions
 
-1. **Where a session reports its stage.** Ringo could infer it from what it
-   already watches, or the agent could report it, for example a
-   `tasks stage <id> <stage>` verb or a status line ringo reads from the pane.
-   The second is exact but touches every agent's instructions. Owner decision
-   before `fleet-session-reported-stage` is ready.
-2. **What the transcript source is.** The session's Claude Code transcript is
-   on the host ringo runs on. Should ringo serve it, and how much of it (tool
-   calls only, or messages too)? Owner decision before
-   `fleet-session-transcript-log`.
-3. **Merge from the list.** Today each PR row has a merge button. The concept
-   moves merge into the expanded card. Keep a list-level merge for Ready
-   sessions?
+<!-- Every question here must be resolved or explicitly deferred (to a named
+     follow-up RFC/story) before this RFC moves to `status: active`. -->
+
+1. **Who reports a session's stage.** The options are (a) ringo infers it
+   from events it already handles (PR opened, reviewer spawned, CI result);
+   (b) the agent runs a `tasks stage <id> <stage>` verb at each transition;
+   (c) ringo reads a status line the agent prints in its pane.
+   **Recommendation:** (a). Ringo already sees every transition except
+   Drafting → Self review, and that one gap is acceptable. (b) and (c) change
+   every agent's instructions to produce data ringo can already see.
+   Deferred to `fleet-session-reported-stage`, which is `draft` until this is
+   decided. Nothing else depends on it, because `sessionStage` is written to
+   prefer a reported stage.
+2. **Whether the archive holds a live session's transcript.** The routes exist
+   (trailmap#82), but the archive may only be written when a session ends.
+   **Recommendation:** check ringo's archive writer before
+   `fleet-session-transcript-log` is promoted. If it is end-of-session only,
+   that story shows the archived transcript for merged sessions and the
+   event log for live ones, and files the live-write change against ringo.
+3. **Merge from the list.** Today every PR row has a merge button
+   (`prRow`, `fleet-format.js:928`). **Recommendation:** keep it, on Ready
+   to merge cards only, beside the PR link. It is the one action taken from
+   the list without reading the detail, and removing it would make merging
+   slower than it is today. `fleet-session-list` is written this way.
+
+## Changelog
+
+- 2026-11-10: initial RFC
+- 2026-11-10: self-review. Aligned with RFC 0136's server-render plan; the
+  stage rules now use real `PRState` fields; the transcript uses the
+  existing archive routes; the open questions have recommendations

@@ -4,7 +4,7 @@ status: draft
 updated: 2026-11-10
 rfc: "0000-trailmap-fleet-session-redesign"
 cluster: fleet-session-detail
-packages: []
+packages: [actionpack]
 deps: [fleet-session-detail]
 deps-rfc: []
 est-loc: 200
@@ -29,3 +29,7 @@ the pane page calls it today (`app/assets/javascripts/pane.js`).
       the controller's error inline.
 - [ ] A merged or paneless session shows no message box.
 - [ ] The e2e suite sends one message through the box.
+
+## Verification
+
+- `./scripts/dashboard-e2e.sh` (the CI `dashboard-e2e` job) sends one message through the card and asserts the controller saw it.
