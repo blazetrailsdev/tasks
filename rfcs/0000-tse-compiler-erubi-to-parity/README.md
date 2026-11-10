@@ -1,7 +1,7 @@
 ---
 rfc: "0000-tse-compiler-erubi-to-parity"
 title: "tse-compiler (erubi) to parity"
-status: active
+status: draft
 created: 2026-11-09
 updated: 2026-11-09
 owner: "@deanmarano"
@@ -18,52 +18,72 @@ clusters: []
 ## Summary
 
 Close the last erubi gaps in `packages/tse-compiler`, the package that ports
-erubi 1.13.1 as trails' template compiler.
+erubi 1.13.1.
 
 ## Motivation
 
 Enrollment is done: `vendor-erubi-pair-tse-compiler` and
-`tse-compiler-mirror-erubi-files` (0225, done) vendored erubi and paired it with
-tse-compiler, and `tse-compiler-erubi-capture-engines` ported the capture
-engines. trailmap's "api 0/23, tests 0/39, never enrolled" predates them.
-`pnpm parity:api` / `parity:test` on 2026-11-09: erubi api 21/23, tests 38/39 by
-file with seven Ruby examples unmatched by name.
+`tse-compiler-mirror-erubi-files` (RFC `0225-package-pages-data-completeness`,
+done) vendored erubi and paired it with tse-compiler, and
+`tse-compiler-erubi-capture-engines` ported the capture engines. trailmap's
+"api 0/23, tests 0/39, never enrolled" predates them. `pnpm parity:api` /
+`parity:test` on 2026-11-09: erubi api 21/23, tests 38/39 by file, with seven
+Ruby examples unmatched by name.
 
 ## Design
 
-Two stories: the `Buffer` surface, then the eval-only describe, which the
-closed `tse-compiler-erubi-capture-block-eval-tests` left for "a tse-compiler
-RFC". That story is closed, so its successor is filed here under a new id
-rather than reopened across RFCs.
+**`Buffer`.** It ports as a class holding its content in a string field, with
+`<<`, `|`, `capture` and `h` matching the gem's semantics: `capture` saves,
+clears, yields, returns what the block appended and restores in a `finally`.
+This mirrors ActionView's `OutputBuffer`; it is a buffer object, not a mutable
+String carrier.
+
+**Eval-only examples.** Seven examples assert only on the result of evaluating
+the generated Ruby. The ported engine emits Ruby, and trails cannot evaluate
+Ruby in process, so these examples need an owner ruling (open question 1)
+before they can be ported.
+
+No open story overlaps this RFC: the TSE stories in RFCs
+`0140-actionview-rendering-core` and `0176-actionview-helpers` are all done or
+closed, and the one predecessor, `tse-compiler-erubi-capture-block-eval-tests`,
+is closed and its scope is refiled here under new ids.
 
 ## Non-goals
 
-- **TSE-specific divergences from ERB syntax** (`.tse` delimiters, the stand-in
-  harness): those belong to actionview's rendering RFCs.
+- **TSE's own template language** (`.tse` delimiters, the JS emitter in
+  `emit-js.ts`, the stand-in harness): actionview's rendering RFCs own it, and
+  it is not erubi.
 
 ## Alternatives considered
 
-- **Park the eval describe as `PERMANENT-SKIP`.** Rejected: tse-compiler emits
-  JS, so the eval is available; there is no language shortcoming.
+- **Assert the eval-only examples through `emit-js.ts`.** Rejected: that is the
+  TSE compiler, not the erubi engine under test, so it would test the wrong
+  code under the gem's names.
 
 ## Rollout
 
-1. `erubi-capture-block-buffer`
-2. `erubi-capture-block-engine-eval-describe`
+1. `erubi-capture-block-buffer` (no dependency on the question).
+2. `erubi-capture-block-engine-eval-describe` and
+   `erubi-eval-only-examples-outside-the-describe`, once open question 1 is ruled.
 
 ## Verification
 
-`pnpm parity:api`: erubi 23/23. `pnpm parity:test`: erubi 100% of Ruby examples
+`pnpm parity:api`: erubi 23/23. `pnpm parity:test`: every erubi Ruby example
 matched by name.
 
 ## Open questions
 
-1. **How does `Buffer < ::String` port with no mutable String carrier?**
-   Resolved: as a class holding its content, the `OutputBuffer` shape; it is a
-   buffer object, not a String carrier.
-2. **How does an eval-only erubi test port?** Resolved: evaluate the emitted JS
-   and assert on its output.
+1. **How does an example that asserts only on `eval` of the generated Ruby
+   port, with no Ruby evaluator in trails?** Options: (a) a `PERMANENT-SKIP`
+   ratified in CLAUDE.md § "Runtime facts Node does not expose", with each test
+   body kept as the Ruby body; (b) run the generated src through the vendored
+   MRI in a test lane CI provisions; (c) replace each eval assertion with a
+   comparison against src that MRI's erubi generated, checked in as a fixture.
+   Recommendation: (a), since (b) adds an MRI dependency to CI and (c) changes
+   what the test asserts. This needs the repo owner's ruling, so the RFC stays
+   `draft` until then.
 
 ## Changelog
 
-- 2026-11-09: initial RFC; Open Questions resolved above, so it lands `active`.
+- 2026-11-09: initial RFC; lands `draft` until its open question is ruled on.
+- 2026-11-09: revised for review feedback.
