@@ -1,6 +1,6 @@
 ---
 title: "trailties-mailer-previews-reload-and-preview-paths-tests"
-status: claimed
+status: done
 updated: 2026-11-10
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9942
 claim: "2026-11-10T00:53:50Z"
 assignee: "trailties-mailer-previews-reload-and-preview-paths-tests"
 blocked-by: null

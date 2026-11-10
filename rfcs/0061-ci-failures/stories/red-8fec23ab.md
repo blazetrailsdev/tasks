@@ -1,6 +1,6 @@
 ---
 title: "Active Record MariaDB Tests (1) failing on main @8fec23ab"
-status: ready
+status: closed
 updated: 2026-11-10
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-10T01:17:15Z"
+assignee: "red-8fec23ab"
 blocked-by: null
-closed-reason: null
+closed-reason: "Flake: solid-queue InstrumentationTest 'enqueuing recurring task emits enqueue_recurring_task event' raced a second 'every second' tick in the 1.01s window (last event was the skipped/AlreadyRecorded arm, no active_job_id). Test mirrors Rails verbatim; #9938 touched no solid-queue code; prior main runs green."
 ---
 
 ## Context

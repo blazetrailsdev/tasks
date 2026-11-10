@@ -1,6 +1,6 @@
 ---
 title: "port-the-last-cache-store-behavior-cases"
-status: draft
+status: closed
 updated: 2026-11-10
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate: the remainder stays on port-the-remaining-cache-store-behavior-cases, which trails#9942 references without closing"
 ---
 
 # Port the last 19 CacheStoreBehavior cases

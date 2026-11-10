@@ -1,6 +1,6 @@
 ---
 title: "Trails-only test: Dependencies.clear seats a new app constant"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0212-trailties-port"
 cluster: null

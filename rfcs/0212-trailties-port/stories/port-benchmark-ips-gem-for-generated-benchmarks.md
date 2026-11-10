@@ -1,6 +1,6 @@
 ---
 title: "port-benchmark-ips-gem-for-generated-benchmarks"
-status: claimed
+status: in-progress
 updated: 2026-11-10
 rfc: "0212-trailties-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9943
 claim: "2026-11-10T00:41:27Z"
 assignee: "port-benchmark-ips-gem-for-generated-benchmarks"
 blocked-by: null

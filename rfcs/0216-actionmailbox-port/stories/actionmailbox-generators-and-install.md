@@ -1,6 +1,6 @@
 ---
 title: "Port the mailbox and action_mailbox:install generators and the install task"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0216-actionmailbox-port"
 cluster: amb-engine

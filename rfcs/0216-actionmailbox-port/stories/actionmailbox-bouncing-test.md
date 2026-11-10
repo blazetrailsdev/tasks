@@ -1,6 +1,6 @@
 ---
 title: "Port ActionMailbox's bouncing test and its BounceMailer"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0216-actionmailbox-port"
 cluster: amb-core

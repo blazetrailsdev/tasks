@@ -1,6 +1,6 @@
 ---
 title: "port-active-record-message-pack-initializer"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0212-trailties-port"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "frameworks-test-use-frameworks-and-active-support-bare"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0212-trailties-port"
 cluster: null
