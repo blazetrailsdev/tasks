@@ -2,7 +2,7 @@
 title: "trailmap: message, spawn and broadcast actions in the palette"
 status: draft
 updated: 2026-11-10
-rfc: "0000-trailmap-fleet-session-redesign"
+rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-search
 packages: [actionview]
 deps: [fleet-palette-search, fleet-session-composer]

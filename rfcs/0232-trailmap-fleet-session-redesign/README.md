@@ -1,5 +1,5 @@
 ---
-rfc: "0000-trailmap-fleet-session-redesign"
+rfc: "0232-trailmap-fleet-session-redesign"
 title: "trailmap: a session-focused Fleet page"
 status: draft
 created: 2026-11-10
@@ -19,12 +19,7 @@ related-rfcs:
   - "0136-trailmap"
 ---
 
-<!-- Unnumbered until merge: copy this dir to `rfcs/0000-your-slug`, keep `rfc:`
-     as 0000-your-slug and the H1 below number-free. `scripts/finalize-rfc.mjs`
-     swaps 0000 for the assigned number at merge. Never use a `draft-` prefix —
-     `draft` is a lifecycle status, not a dir prefix (see top-level README). -->
-
-# RFC — trailmap: a session-focused Fleet page
+# RFC 0232 — trailmap: a session-focused Fleet page
 
 ## Summary
 

@@ -2,7 +2,7 @@
 title: "trailmap: render each PR or spawn as a session card with a stage stepper"
 status: draft
 updated: 2026-11-10
-rfc: "0000-trailmap-fleet-session-redesign"
+rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-sessions
 packages: [actionview]
 deps: [fleet-palette-tokens, fleet-session-stage]

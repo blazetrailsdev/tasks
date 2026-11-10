@@ -2,7 +2,7 @@
 title: "trailmap: archived transcript steps in a merged session's log"
 status: draft
 updated: 2026-11-10
-rfc: "0000-trailmap-fleet-session-redesign"
+rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-session-detail
 packages: [actionpack]
 deps: [fleet-session-detail]

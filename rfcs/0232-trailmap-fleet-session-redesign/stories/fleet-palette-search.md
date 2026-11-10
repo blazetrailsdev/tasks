@@ -2,7 +2,7 @@
 title: "trailmap: ⌘K palette searching sessions, stories and PRs"
 status: draft
 updated: 2026-11-10
-rfc: "0000-trailmap-fleet-session-redesign"
+rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-search
 packages: [actionview, activerecord]
 deps: [fleet-top-panels-grid, fleet-session-bundle-stories]

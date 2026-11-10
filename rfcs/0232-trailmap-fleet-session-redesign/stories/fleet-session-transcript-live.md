@@ -2,7 +2,7 @@
 title: "trailmap: live transcript steps in a running session's log"
 status: draft
 updated: 2026-11-10
-rfc: "0000-trailmap-fleet-session-redesign"
+rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-session-detail
 packages: [actionpack]
 deps: [fleet-session-transcript-archived]

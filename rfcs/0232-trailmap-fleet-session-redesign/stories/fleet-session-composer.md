@@ -2,7 +2,7 @@
 title: "trailmap: message a session from its expanded card"
 status: draft
 updated: 2026-11-10
-rfc: "0000-trailmap-fleet-session-redesign"
+rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-session-detail
 packages: [actionpack]
 deps: [fleet-session-detail]

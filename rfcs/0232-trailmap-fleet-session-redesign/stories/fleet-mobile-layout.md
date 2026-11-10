@@ -2,7 +2,7 @@
 title: "trailmap: full-bleed Fleet layout below 700px"
 status: draft
 updated: 2026-11-10
-rfc: "0000-trailmap-fleet-session-redesign"
+rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-shell
 packages: [actionview]
 deps: [fleet-top-panels-grid, fleet-session-grouping, fleet-session-detail, fleet-palette-search]

@@ -2,7 +2,7 @@
 title: "trailmap: Fleet header row, search field and two-column panel grid"
 status: draft
 updated: 2026-11-10
-rfc: "0000-trailmap-fleet-session-redesign"
+rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-shell
 packages: [actionview]
 deps: [fleet-palette-tokens]

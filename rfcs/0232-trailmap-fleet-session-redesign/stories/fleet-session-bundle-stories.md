@@ -2,7 +2,7 @@
 title: "trailmap: link every story in a session's bundle"
 status: draft
 updated: 2026-11-10
-rfc: "0000-trailmap-fleet-session-redesign"
+rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-sessions
 packages: [actionpack, activerecord]
 deps: [fleet-session-card]

@@ -2,7 +2,7 @@
 title: "tasks: a `stage` verb and DB-owned field for a story's session stage"
 status: draft
 updated: 2026-11-10
-rfc: "0000-trailmap-fleet-session-redesign"
+rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-stage-signal
 packages: []
 deps: []

@@ -2,7 +2,7 @@
 title: "trailmap: expand a session card to its controls, event log and details"
 status: draft
 updated: 2026-11-10
-rfc: "0000-trailmap-fleet-session-redesign"
+rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-session-detail
 packages: [actionview, actionpack]
 deps: [fleet-session-card]
