@@ -2,7 +2,7 @@
 title: "activesupport: wrap's Fiber deadlocks on a ThreadLoadInterlockAwareMonitor held by the Fiber that started it"
 status: blocked
 updated: 2026-11-04
-rfc: "0212-trailties-port"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
