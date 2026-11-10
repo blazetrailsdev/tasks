@@ -6,7 +6,8 @@ rfc: "0000-tooling-gems-residual-parity"
 cluster: null
 packages:
   - "zeitwerk"
-deps: []
+deps:
+  - mail-parity-api-credits-object-literal-modules
 deps-rfc: []
 est-loc: 250
 priority: null
