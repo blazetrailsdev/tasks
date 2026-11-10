@@ -1,5 +1,5 @@
 ---
-title: "Port StringDeduper, RubyCoreSupport, TZInfo.eager_load! and the London / Melbourne / New York zone tests"
+title: "Port StringDeduper, RubyCoreSupport.untaint and TZInfo.eager_load!, with the version, Ruby-Time and city-zone tests"
 status: draft
 updated: 2026-11-09
 rfc: "0000-tzinfo-to-parity"
@@ -28,5 +28,7 @@ No TS files for `vendor/tzinfo/v2.0.6/lib/tzinfo/string_deduper.rb` (4) and `rub
 
 ## Acceptance criteria
 
-- [ ] The three members' files are ported (`untaint` per Ruby 3's no-op).
+- [ ] `string_deduper.rb` (`StringDeduper`), `ruby_core_support.rb`
+      (`RubyCoreSupport.untaint`, a no-op on Ruby 3 as in the gem) and
+      `TZInfo.eager_load!` in `tzinfo.rb` are ported.
 - [ ] The eight test files are ported by name.

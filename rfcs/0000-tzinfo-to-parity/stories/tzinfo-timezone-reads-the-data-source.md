@@ -9,6 +9,7 @@ packages:
 deps:
   - "tzinfo-timezone-subclasses"
   - "tzinfo-zoneinfo-data-source"
+  - "tzinfo-data-definitions-generated"
 deps-rfc: []
 est-loc: 650
 priority: null
@@ -39,4 +40,7 @@ neighbours this story may close as a side effect; it does not re-file them.
       `DataSource.get`, not from `Intl`.
 - [ ] The `@boundary-file` Intl path is deleted, or each remaining use is a
       receipted boundary.
-- [ ] Both test files are ported by name; activesupport's TimeZone tests stay green.
+- [ ] `create_default_data_source`'s selection test and the `tc_data_source.rb`
+      examples deferred from `tzinfo-data-source-base` are ported here.
+- [ ] Both test files are ported by name; activesupport's TimeZone tests stay
+      green on the generated tzinfo-data, with no host `zoneinfo` required.

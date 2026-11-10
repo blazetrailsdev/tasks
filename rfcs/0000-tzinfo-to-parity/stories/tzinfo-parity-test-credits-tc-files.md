@@ -35,3 +35,7 @@ the per-package result. Ruby tests: `vendor/tzinfo/v2.0.6/test/tc_*.rb`, `vendor
       that fails on the current code.
 - [ ] The 45 unexpandable `define_method` loops are expanded or listed with
       their reason, as other packages' are.
+- [ ] `test/test_utils.rb` (the shared assertions and fixture helpers) is ported
+      as `packages/tzinfo/test/support/test-utils.ts`. The `ts_all*.rb` files
+      are suite runners that only `require` the `tc_*` files and define no
+      tests, so they are not mapped; the comparer must not count them.

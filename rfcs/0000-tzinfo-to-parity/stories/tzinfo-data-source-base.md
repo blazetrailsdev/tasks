@@ -30,6 +30,10 @@ TS file. Nor do `data_sources/timezone_info.rb` (4), `data_timezone_info.rb` (5)
 
 ## Acceptance criteria
 
-- [ ] The six files are ported with every member; `DataSource.get` picks the
-      default source by `create_default_data_source`'s order.
-- [ ] Their test files are ported by name.
+- [ ] The six files are ported with every member. `DataSource.get` / `set`
+      work with an explicitly set source; `create_default_data_source` is ported
+      but its selection test lands in `tzinfo-timezone-reads-the-data-source`,
+      once both concrete sources exist.
+- [ ] Their test files are ported by name, except the `tc_data_source.rb`
+      examples that need `RubyDataSource` or `ZoneinfoDataSource`, which move
+      with that selection test.

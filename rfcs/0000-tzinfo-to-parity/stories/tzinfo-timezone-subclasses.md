@@ -1,5 +1,5 @@
 ---
-title: "Port InfoTimezone, LinkedTimezone and TimezoneProxy"
+title: "Port LinkedTimezone and TimezoneProxy"
 status: draft
 updated: 2026-11-09
 rfc: "0000-tzinfo-to-parity"
@@ -21,13 +21,16 @@ closed-reason: null
 
 ## Context
 
-No TS files for `vendor/tzinfo/v2.0.6/lib/tzinfo/info_timezone.rb` (3), `linked_timezone.rb` (5),
-`timezone_proxy.rb` (9); `data_timezone.rb` (4) is owned by
-`tzinfo-data-timezone-is-a-real-subclass` (0223), which this story builds on.
-Tests: `tc_info_timezone.rb`, `tc_linked_timezone.rb`, `tc_timezone_proxy.rb`,
-`tc_data_timezone.rb`.
+No TS files for `vendor/tzinfo/v2.0.6/lib/tzinfo/linked_timezone.rb` (5) or
+`timezone_proxy.rb` (9). `info_timezone.rb` and `data_timezone.rb`, and their
+tests `tc_info_timezone.rb` and `tc_data_timezone.rb`, are owned by
+`tzinfo-data-timezone-is-a-real-subclass` (RFC
+`0223-package-layout-mirrors-a-rails-gem`). `LinkedTimezone` subclasses
+`InfoTimezone`, so this story builds on that one. Tests:
+`tc_linked_timezone.rb`, `tc_timezone_proxy.rb`.
 
 ## Acceptance criteria
 
-- [ ] The three classes are ported as `Timezone` subclasses with every member.
-- [ ] The four test files are ported by name.
+- [ ] `LinkedTimezone` (an `InfoTimezone`) and `TimezoneProxy` (a `Timezone`)
+      are ported with every member.
+- [ ] The two test files are ported by name.
