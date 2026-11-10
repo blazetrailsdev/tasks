@@ -1,6 +1,6 @@
 ---
 title: "The build entry registers the yaml Psych adapter statically"
-status: draft
+status: in-progress
 updated: 2026-11-10
 rfc: "0224-aot-boot-files"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9944
+claim: "2026-11-10T02:35:07Z"
+assignee: "the-build-entry-registers-the-yaml-psych-adapter"
 blocked-by: null
 closed-reason: null
 ---
