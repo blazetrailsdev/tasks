@@ -1,6 +1,6 @@
 ---
 title: "server-path-activemodel-lint"
-status: ready
+status: in-progress
 updated: 2026-11-09
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9938
+claim: "2026-11-09T23:17:32Z"
+assignee: "server-path-activemodel-lint"
 blocked-by: null
 closed-reason: null
 ---
