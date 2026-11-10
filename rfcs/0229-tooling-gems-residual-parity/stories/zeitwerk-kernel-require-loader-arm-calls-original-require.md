@@ -5,7 +5,8 @@ updated: 2026-11-10
 rfc: "0229-tooling-gems-residual-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - zeitwerk-kernel-require-load-path-feature-arm
 deps-rfc: []
 est-loc: null
 priority: null
