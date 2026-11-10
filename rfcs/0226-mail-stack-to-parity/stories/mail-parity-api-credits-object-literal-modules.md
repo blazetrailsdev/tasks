@@ -1,6 +1,6 @@
 ---
 title: "parity:api credits mail's object-literal modules: Mail's module functions and the Ragel parser tables and structs"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null

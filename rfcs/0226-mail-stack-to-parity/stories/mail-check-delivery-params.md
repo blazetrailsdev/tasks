@@ -1,6 +1,6 @@
 ---
 title: "Port Mail::CheckDeliveryParams and check_delivery_params_spec.rb"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null

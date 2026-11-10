@@ -1,6 +1,6 @@
 ---
 title: "Port Module#rake_extension and FileList#to_s, and move each_dir_parent / from_pathname into file_list's file"
-status: ready
+status: in-progress
 updated: 2026-11-10
 rfc: "0229-tooling-gems-residual-parity"
 cluster: null
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 150
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9957
+claim: "2026-11-10T16:14:13Z"
+assignee: "rake-extension-private-reader-and-file-list-remainder"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Port TZInfo::Timestamp and tc_timestamp.rb"
-status: ready
+status: in-progress
 updated: 2026-11-10
 rfc: "0231-tzinfo-to-parity"
 cluster: null
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 600
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9960
+claim: "2026-11-10T16:24:38Z"
+assignee: "tzinfo-timestamp"
 blocked-by: null
 closed-reason: null
 ---

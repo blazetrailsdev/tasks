@@ -1,6 +1,6 @@
 ---
 title: "Port Mail::Utilities.has_constant? / get_constant, IndifferentHash's has_key? / member? / fetch, VERSION, and the mb_chars utilities specs"
-status: ready
+status: in-progress
 updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#9958
+claim: "2026-11-10T16:12:05Z"
+assignee: "rake-file-utils-ext-flags-and-output-helpers"
 blocked-by: null
 closed-reason: null
 ---

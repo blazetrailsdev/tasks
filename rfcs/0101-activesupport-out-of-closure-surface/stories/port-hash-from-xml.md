@@ -1,7 +1,7 @@
 ---
 title: "port-hash-from-xml"
-status: ready
-updated: 2026-08-13
+status: in-progress
+updated: 2026-11-10
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9959
+claim: "2026-11-10T16:34:44Z"
+assignee: "port-hash-from-xml"
 blocked-by: null
 closed-reason: null
 ---

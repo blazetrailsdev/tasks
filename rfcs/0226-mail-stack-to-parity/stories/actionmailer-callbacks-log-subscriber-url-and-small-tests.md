@@ -1,6 +1,6 @@
 ---
 title: "Port callbacks, log_subscriber, url, asset_host, form_builder and i18n_with_controller tests"
-status: ready
+status: in-progress
 updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#9961
+claim: "2026-11-10T16:24:49Z"
+assignee: "actionmailer-callbacks-log-subscriber-url-and-small-tests"
 blocked-by: null
 closed-reason: null
 ---
