@@ -31,11 +31,20 @@ exist (`packages/image-processing/lib/mini-magick.ts:75` `resizeToLimit`,
 `ImageProcessing::MiniMagick::Processor`
 (`vendor/image_processing/v1.14.0/lib/image_processing/mini_magick.rb`). The
 `Utils` modules and `MiniMagick#convert_shim`, `valid_image?` likewise.
+A grep of the 42 missing names against `mini-magick.ts` and `vips.ts`
+(2026-11-09) finds all of them already defined except one predicate spelling:
+`Processor.supportsResizeOnLoad` (`vips.ts:259`) for Ruby's
+`supports_resize_on_load?`, which CLAUDE.md's predicate rule spells
+`isSupportsResizeOnLoad`. `thumbnail` is ported and private, as in the gem; the
+`PERMANENT-SKIP`ped "applies thumbnail operation" test is about its
+visibility at `respond_to?`, not a missing method.
 
 ## Acceptance criteria
 
 - [ ] `Processor` and `Utils` are seated on their module objects as the Ruby
       nesting has them (CLAUDE.md § "Call-time constant resolution": a plain
       `Namespace.Name = Klass` seat).
-- [ ] Any member still missing after crediting is ported.
+- [ ] `supportsResizeOnLoad` is renamed `isSupportsResizeOnLoad` with its call
+      sites; no other member is expected to be missing. A residue after
+      seating is filed as its own story, not absorbed here.
 - [ ] `pnpm parity:api` reports image-processing 105/105.

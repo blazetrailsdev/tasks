@@ -6,7 +6,8 @@ rfc: "0000-media-gems-residual-parity"
 cluster: null
 packages:
   - "marcel"
-deps: []
+deps:
+  - "rack-lint-input-read-admits-binary-buffer"
 deps-rfc: []
 est-loc: 50
 priority: null
@@ -25,9 +26,15 @@ that conform to Rack::Lint::InputWrapper", parked because the constant is rack
 2's (`marcel.gemspec:25`), and trails ports rack 3.2.8 where it is
 `Rack::Lint::Wrapper::InputWrapper` (`vendor/rack/v3.2.8/lib/rack/lint.rb:71`,
 `:495`). The test checks that marcel reads a source that conforms to the
-wrapper's `read` contract, which the rack 3 class still meets.
+wrapper's `read` contract, which the rack 3 class still meets. Marcel reads
+with a binary buffer (`magic.rb:121`), and trails' wrapper rejects one until
+`rack-lint-input-read-admits-binary-buffer` (RFC
+`0154-ruby-compat-surfaced-deviations`) lands, so this story depends on it.
 
 ## Acceptance criteria
 
-- [ ] The test runs with the marcel body against rack 3's `InputWrapper`, with
-      its `PERMANENT-SKIP` line removed.
+- [ ] `@blazetrails/rack` becomes a devDependency of marcel (it has only
+      ruby-compat today, `packages/marcel/package.json:28-30`).
+- [ ] The test keeps its Ruby name, which is how `parity:test` matches it, and
+      its body uses `Rack::Lint::Wrapper::InputWrapper`. The `PERMANENT-SKIP`
+      line is removed.
