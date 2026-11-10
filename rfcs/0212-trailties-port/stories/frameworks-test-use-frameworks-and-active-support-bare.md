@@ -1,7 +1,7 @@
 ---
 title: "frameworks-test-use-frameworks-and-active-support-bare"
-status: draft
-updated: 2026-11-09
+status: in-progress
+updated: 2026-11-10
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9939
+claim: "2026-11-10T00:17:28Z"
+assignee: "frameworks-test-use-frameworks-and-active-support-bare"
 blocked-by: null
 closed-reason: null
 ---

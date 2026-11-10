@@ -1,7 +1,7 @@
 ---
 title: "port-benchmark-ips-gem-for-generated-benchmarks"
-status: draft
-updated: 2026-11-09
+status: claimed
+updated: 2026-11-10
 rfc: "0212-trailties-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-10T00:41:27Z"
+assignee: "port-benchmark-ips-gem-for-generated-benchmarks"
 blocked-by: null
 closed-reason: null
 ---

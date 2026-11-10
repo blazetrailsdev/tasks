@@ -1,7 +1,7 @@
 ---
 title: "Port the mailbox and action_mailbox:install generators and the install task"
-status: ready
-updated: 2026-11-06
+status: in-progress
+updated: 2026-11-10
 rfc: "0216-actionmailbox-port"
 cluster: amb-engine
 packages: ["actionmailbox", "trailties"]
@@ -13,9 +13,9 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: 6
-pr: null
-claim: null
-assignee: null
+pr: trails#9941
+claim: "2026-11-10T00:16:19Z"
+assignee: "actionmailbox-generators-and-install"
 blocked-by: null
 closed-reason: null
 ---

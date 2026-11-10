@@ -1,7 +1,7 @@
 ---
 title: "Port ActionMailbox's bouncing test and its BounceMailer"
-status: ready
-updated: 2026-11-06
+status: in-progress
+updated: 2026-11-10
 rfc: "0216-actionmailbox-port"
 cluster: amb-core
 packages: ["actionmailbox"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 120
 priority: 7
-pr: null
-claim: null
-assignee: null
+pr: trails#9941
+claim: "2026-11-10T00:16:19Z"
+assignee: "actionmailbox-generators-and-install"
 blocked-by: null
 closed-reason: null
 ---

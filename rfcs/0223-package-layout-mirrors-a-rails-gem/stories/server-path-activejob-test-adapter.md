@@ -1,7 +1,7 @@
 ---
 title: "server-path-activejob-test-adapter"
-status: in-progress
-updated: 2026-11-09
+status: done
+updated: 2026-11-10
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
 packages: []

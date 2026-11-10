@@ -1,7 +1,7 @@
 ---
 title: "port the remaining 42 CacheStoreBehavior cases into the behavior helper"
-status: ready
-updated: 2026-08-13
+status: claimed
+updated: 2026-11-10
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 600
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-10T00:53:50Z"
+assignee: "trailties-mailer-previews-reload-and-preview-paths-tests"
 blocked-by: null
 closed-reason: null
 ---
