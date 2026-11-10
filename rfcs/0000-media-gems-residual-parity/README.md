@@ -50,8 +50,10 @@ readers with the `attribute` macro, so the port is already faithful. The
 extractor learns to credit that macro, gated to an explicit class list so no
 other package's numbers move.
 
-**mini-mime:** `PReadFile` (both arms), then the parity test over vendored
-mime-types-data with a test-support stand-in for the six `MIME::Types` calls.
+**mini-mime:** `PReadFile` is already ported in both arms, and only the class
+arm inside a conditional static is uncredited, so that story is an extractor
+fix. The parity test runs over vendored mime-types-data, with a test-support
+stand-in for the six `MIME::Types` calls.
 
 **marcel:** run the skipped test against rack 3's wrapper once the 0154 binary
 buffer fix lands.
@@ -82,7 +84,7 @@ One phase. All stories can run in parallel; only marcel's waits on its 0154
 dependency.
 
 1. `image-processing-processors-seated-on-their-modules`,
-   `mini-magick-image-attribute-readers-credited`, `mini-mime-pread-file`,
+   `mini-magick-image-attribute-readers-credited`, `mini-mime-pread-file-credited`,
    `mini-mime-full-parity-with-mime-types-test`, `marcel-input-wrapper-test-on-rack-3`
 
 ## Verification
