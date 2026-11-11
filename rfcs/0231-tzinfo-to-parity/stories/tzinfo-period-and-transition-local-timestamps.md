@@ -5,7 +5,8 @@ updated: 2026-11-11
 rfc: "0231-tzinfo-to-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - tzinfo-with-offset-classes
 deps-rfc: []
 est-loc: null
 priority: null
