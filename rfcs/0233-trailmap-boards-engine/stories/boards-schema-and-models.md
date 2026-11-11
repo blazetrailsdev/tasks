@@ -2,7 +2,7 @@
 title: "Boards schema and models: Workspace, Board, List, Card and their relations"
 status: draft
 updated: 2026-11-11
-rfc: "0000-trailmap-boards-engine"
+rfc: "0233-trailmap-boards-engine"
 cluster: engine
 packages: []
 deps: [boards-engine-skeleton]

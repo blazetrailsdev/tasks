@@ -2,7 +2,7 @@
 title: "Drill the flip and rollback on a copy of the live database"
 status: draft
 updated: 2026-11-11
-rfc: "0000-trailmap-boards-engine"
+rfc: "0233-trailmap-boards-engine"
 cluster: flip
 packages: []
 deps: [boards-reverse-mirror, boards-ui-writes]

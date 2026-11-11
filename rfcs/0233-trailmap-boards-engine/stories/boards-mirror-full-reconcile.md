@@ -2,7 +2,7 @@
 title: "Mirror the task domain into boards: a full, idempotent reconcile"
 status: draft
 updated: 2026-11-11
-rfc: "0000-trailmap-boards-engine"
+rfc: "0233-trailmap-boards-engine"
 cluster: mirror
 packages: []
 deps: [boards-schema-and-models]

@@ -1,5 +1,5 @@
 ---
-rfc: "0000-trailmap-boards-engine"
+rfc: "0233-trailmap-boards-engine"
 title: "trailmap boards: a Trello-shaped engine run beside the task domain, then cut over"
 status: draft
 created: 2026-11-11
@@ -22,10 +22,7 @@ related-rfcs:
   - "0136-trailmap"
 ---
 
-<!-- Unnumbered until merge: `scripts/finalize-rfc.mjs` swaps 0000 for the
-     assigned number at merge. -->
-
-# RFC — trailmap boards: a Trello-shaped engine run beside the task domain, then cut over
+# RFC 0233 — trailmap boards: a Trello-shaped engine run beside the task domain, then cut over
 
 ## Summary
 

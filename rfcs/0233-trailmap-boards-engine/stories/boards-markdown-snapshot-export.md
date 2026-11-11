@@ -2,7 +2,7 @@
 title: "Markdown snapshot export of boards into the tasks repo"
 status: draft
 updated: 2026-11-11
-rfc: "0000-trailmap-boards-engine"
+rfc: "0233-trailmap-boards-engine"
 cluster: retire
 packages: []
 deps: [boards-authority-switch]

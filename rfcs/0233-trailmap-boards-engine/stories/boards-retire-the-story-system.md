@@ -2,7 +2,7 @@
 title: "Retire the story system once nothing reads it"
 status: draft
 updated: 2026-11-11
-rfc: "0000-trailmap-boards-engine"
+rfc: "0233-trailmap-boards-engine"
 cluster: retire
 packages: []
 deps:

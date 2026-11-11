@@ -2,7 +2,7 @@
 title: "Equivalence gate: boards answers ready, next-bundle, list and show as the task domain does"
 status: draft
 updated: 2026-11-11
-rfc: "0000-trailmap-boards-engine"
+rfc: "0233-trailmap-boards-engine"
 cluster: mirror
 packages: []
 deps: [boards-mirror-full-reconcile]

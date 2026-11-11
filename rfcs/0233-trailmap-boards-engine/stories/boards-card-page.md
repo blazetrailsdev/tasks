@@ -2,7 +2,7 @@
 title: "Read-only card page: description, relations, attachments and action log"
 status: draft
 updated: 2026-11-11
-rfc: "0000-trailmap-boards-engine"
+rfc: "0233-trailmap-boards-engine"
 cluster: ui
 packages: []
 deps: [boards-workspace-and-board-pages]

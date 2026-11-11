@@ -2,7 +2,7 @@
 title: "Card and board API routes that delegate to the task-domain verbs"
 status: draft
 updated: 2026-11-11
-rfc: "0000-trailmap-boards-engine"
+rfc: "0233-trailmap-boards-engine"
 cluster: cli
 packages: []
 deps: [boards-schema-and-models, move-mutation-verbs-onto-the-models]
