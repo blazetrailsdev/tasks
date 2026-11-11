@@ -108,32 +108,41 @@ nothing is published, and trails has no release tags.
 
 ### What the bump does to `main` today
 
-None of this was assumed. Each gate in ci.yml's `rails-comparison` job was run
-against the `v8.0.5.1` Ruby manifests on 2026-10-13 (the method is in § "How
-the size was measured"). The dry-run story re-runs it at `v8.0.5.2`. Percentages are not gated; ratchets are.
+None of this was assumed. `pnpm parity:bump:dry-run --source rails --ref
+v8.0.5.2` (trails `bump-dry-run-runs-the-gates-against-a-candidate-ref`)
+ran each gating step of ci.yml's `rails-comparison` job against the
+`v8.0.5.2` Ruby manifests on 2026-11-10, over all sixteen Rails packages, and
+left every tracked file byte-identical. It first re-cites the `@inlinedFrom`
+tags at the candidate's spans, as the flip PR will (`parity:api:inlined:fix`
+rewrites 41 files, 7 of whose tags cite a changed file), then restores them.
+Percentages are not gated; ratchets are.
 
-| Gate (ci.yml step)                                                                                                                          | Result at the flip commit                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------- |
-| Body-pins gate                                                                                                                              | **red**: 141 DRIFT, 12 STALE (`lint-body-pins.ts` exits 1 on either) |
-| Call-mismatches ratchet                                                                                                                     | **red**: 22 new rows                                                 |
-| Ratchet baseline reseed drift                                                                                                               | **red**: follows from the 22 new rows                                |
-| Call-argument ratchet                                                                                                                       | **red**: 10 new shape rows, 7 naming failures                        |
-| Missing-throw arm ratchet                                                                                                                   | **red**: 2 dimensions grow                                           |
-| Parameter-name ratchet                                                                                                                      | **red**: 2 dimensions grow                                           |
-| Block-parameter ratchet                                                                                                                     | **red**: 4 dimensions grow                                           |
-| Test comparison (`--gates --check`)                                                                                                         | **red**: 1 activerecord gate-mismatch against a hard zero            |
-| Assertion-mismatch ratchet                                                                                                                  | **red**: 7 package/dimension marks grow (actioncontroller 92 → 99)   |
-| Vendor citations (Preflight)                                                                                                                | **red** until `pnpm vendor:recite` runs: 103 citations in 47 files   |
-| Receipt audit, ruby-compat calls, extra-surface                                                                                             | green here; red on `v8.1.4` (§ 8)                                    |
-| API comparison, privates, arity and inheritance excludes, predicate-kind, inlined-from, ambiguous-parent, dependency lint, AR-closure guard | green                                                                |
+| Gate (ci.yml step)                                                                                                                                                           | Result at the flip commit                                                  |
+| ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| Body-pins gate                                                                                                                                                               | **red**: 182 DRIFT, 15 STALE (`lint-body-pins.ts` exits 1 on either)       |
+| Call-mismatches ratchet                                                                                                                                                      | **red**: 28 new rows                                                       |
+| Ratchet baseline reseed drift                                                                                                                                                | **red**: follows from the call-mismatches rows                             |
+| Call-argument ratchet                                                                                                                                                        | **red**: new shape rows, 7 naming failures, 1 stale `@missingRailsArgs`    |
+| Missing-throw arm ratchet                                                                                                                                                    | **red**: 2 dimensions grow                                                 |
+| Parameter-name ratchet                                                                                                                                                       | **red**: activerecord `tasks/database_tasks.rb` 0 → 1                      |
+| Block-parameter ratchet                                                                                                                                                      | **red**: `try` / `try!` (activesupport)                                    |
+| Extra-surface ratchet                                                                                                                                                        | **red**: actioncable total 0 → 1                                           |
+| Inlined-from staleness gate                                                                                                                                                  | **red**: 1 finding after the re-cite (`LoggerThreadSafeLevel#initialize`)  |
+| Test comparison (`--gates --check`)                                                                                                                                          | **red**: 1 activerecord gate-mismatch against a hard zero                  |
+| Assertion-mismatch ratchet                                                                                                                                                   | **red**: marks grow (actioncontroller assertion-count 0 → 7, among others) |
+| Vendor citations (Preflight)                                                                                                                                                 | **red** until `pnpm vendor:recite` runs                                    |
+| API comparison, privates, calls, extra-surface tags, receipt audit, ruby-compat calls, predicate-kind, class-path table, ambiguous-parent, dependency lint, AR-closure guard | green                                                                      |
 
-Not exercised by the dry run, because each reads the active version directory
-or runs real Rails: the rails-private JSDoc lint and its runtime artifact, the
-method-order lint (arel, activemodel), the test-name ratchet, the inlined-from
-citation spans, fixtures and models comparison (7 model files changed), and
-Schema Parity and Query Parity, whose Rails side installs `activerecord` at
-the version `build-gemfile.ts` derives from `sources.ts` (`schema.rb` itself
-is +13/-0).
+Not exercised, because each reads the active version directory or runs real
+Rails; the dry run reports the upstream count that predicts each instead
+(Open question 3): the rails-private JSDoc lint and its runtime artifact (220
+lib files change), the method-order lint (14 arel and activemodel lib files),
+the test-name ratchet (8 actionview test files), the fixtures comparison (2
+fixture files) and models comparison (7 model files), and Schema Parity and
+Query Parity. The schema-parity `Gemfile` can be generated for the candidate
+(`activerecord 8.0.5.2` is the tag's `RAILS_VERSION`), and the canonical-schema
+delta is `authors.published_author_id`, `book_identifiers` and
+`cpk_posts_tags` with their columns, plus `postgresql_specific_schema.rb`.
 
 So the procedure as written produces a `main` that stays red for as long as
 the burn-down takes, with every parallel agent's PR red behind it. Three rules
@@ -142,15 +151,21 @@ stacked, PRs are small, and no baseline widens.
 
 ### Why the new rows cannot simply be fixed in the flip PR
 
-All 39 new call and call-argument rows were attributed to their matched pair
-(22 call rows, 10 argument-shape rows and 7 naming rows):
+Every new call and call-argument row was attributed to its matched pair by
+the dry run (`v8.0.5.2`):
 
-| New rows on a pair whose…                   | Calls | Arguments |
-| ------------------------------------------- | ----- | --------- |
-| pin DRIFTED                                 | 20    | 17        |
-| body changed but the pair is unpinned       | 2     | 0         |
-| pair is newly matched by an upstream rename | 0     | 0         |
-| Ruby body did not change                    | 0     | 0         |
+| New rows on a pair whose…             | Calls | Arguments | Params | Blocks | Arms |
+| ------------------------------------- | ----- | --------- | ------ | ------ | ---- |
+| pin DRIFTED                           | 21    | 21        | 2      | 1      | 2    |
+| body changed but the pair is unpinned | 3     | 5         | 0      | 0      | 1    |
+| TS file holds a seeded pair           | 0     | 1         | 0      | 0      | 0    |
+| none of these                         | 0     | 0         | 1      | 2      | 0    |
+
+The three unattributed rows sit on unchanged Ruby bodies:
+`DatabaseTasks#schema_up_to_date?`'s parameter name and `Object#try` /
+`#try!`'s block parameter, which the candidate's re-extracted manifest reads
+differently. At `v8.0.5.1` the same attribution gave 17 + 3 call rows and
+17 + 3 + 1 argument rows, with the same three residue rows.
 
 Every new row is the same fact as a changed Ruby body. Fixing them is the
 burn-down. The table also shows what the pin floor is worth: with every
@@ -334,64 +349,67 @@ and test directories only):
 
 ### 2. The size of the upgrade
 
-All numbers are `v8.0.2` → `v8.0.5.1`, measured 2026-10-13 from a candidate
-fetched beside the active version (`pnpm vendor:fetch --source rails --ref
-v8.0.5.1`, step 1 of the procedure). No lockfile or gate was touched. They
-predate both the retarget to `v8.0.5.2` and the enrolment of actioncable,
-actionmailer, activestorage, actionmailbox and actiontext, so they are a
-floor: § 1 "What 8.0.5.2 adds" gives the file-level delta, and
-`bump-dry-run-runs-the-gates-against-a-candidate-ref` re-measures every table
-here at `v8.0.5.2` over all sixteen Rails packages and replaces them.
+All numbers are `v8.0.2` → `v8.0.5.2` (commit `235c597b`), measured
+2026-11-10 by `pnpm parity:bump:dry-run --source rails --ref v8.0.5.2` over
+all sixteen Rails packages, from a candidate fetched beside the active
+version. No lockfile, baseline, mark or pin was touched.
 
 **Ruby source and body pins**, under the `libPath` each package ports (`git
 diff --no-index -M --numstat`; pins from `lint-body-pins.ts` and method parity
-from `compare.ts`, both run on the v8.0.5.1 manifest):
+from `compare.ts`, both run on the merged `v8.0.5.2` manifest):
 
 | Package                   | Files changed | +lines   | -lines  | Pins DRIFT | Pins STALE | Ruby files with either | Unpinned pairs that change | Methods before | Methods after |
 | ------------------------- | ------------- | -------- | ------- | ---------- | ---------- | ---------------------- | -------------------------- | -------------- | ------------- |
 | arel                      | 9             | 31       | 9       | 20         | 0          | 11                     | 0                          | 1052/1052      | 1052/1058     |
-| activemodel               | 5             | 19       | 17      | 1          | 0          | 1                      | 0                          | 821/821        | 821/821       |
-| activerecord              | 56            | 464      | 272     | 66         | 0          | 35                     | 5                          | 6980/6980      | 6982/6993     |
+| activerecord              | 56            | 464      | 272     | 66         | 0          | 35                     | 3                          | 6987/6991      | 6989/7004     |
 | activerecord-test-support | 1             | 1        | 1       | 0          | 0          | 0                      | 0                          | 43/58          | 43/58         |
-| activesupport             | 40            | 284      | 195     | 26         | 11         | 12                     | 3                          | 2039/2187      | 2027/2179     |
-| actiondispatch            | 14            | 112      | 48      | 13         | 1          | 9                      | 0                          | 1723/1801      | 1722/1802     |
-| actioncontroller          | 5             | 50       | 11      | 5          | 0          | 5                      | 2                          | 801/803        | 801/808       |
-| abstractcontroller        | 3             | 3        | 14      | 0          | 0          | 0                      | 0                          | 132/132        | 132/132       |
-| actionview                | 23            | 92       | 51      | 6          | 0          | 6                      | 6                          | 1215/1482      | 1215/1486     |
-| activejob                 | 5             | 17       | 12      | 0          | 0          | 0                      | 0                          | 5/369          | 5/370         |
-| trailties                 | 27            | 146      | 78      | 4          | 0          | 3                      | 0                          | 789/1660       | 790/1668      |
-| **Total**                 | **189**       | **1221** | **710** | **141**    | **12**     | **82**                 | **16**                     |                |               |
+| activemodel               | 5             | 19       | 17      | 1          | 0          | 1                      | 0                          | 820/821        | 820/821       |
+| activesupport             | 40            | 286      | 213     | 27         | 12         | 12                     | 4                          | 2110/2266      | 2097/2257     |
+| actiondispatch            | 18            | 170      | 56      | 21         | 1          | 14                     | 0                          | 1801/1809      | 1801/1816     |
+| actioncontroller          | 6             | 85       | 25      | 9          | 0          | 5                      | 0                          | 852/854        | 852/859       |
+| abstractcontroller        | 3             | 3        | 14      | 0          | 0          | 0                      | 0                          | 178/178        | 178/178       |
+| actionpackversion         | 1             | 2        | 2       | 0          | 0          | 0                      | 0                          | 2/2            | 2/2           |
+| actionview                | 24            | 134      | 63      | 34         | 2          | 21                     | 0                          | 3057/3057      | 3057/3061     |
+| actioncable               | 4             | 18       | 5       | 0          | 0          | 0                      | 4                          | 496/496        | 497/497       |
+| activejob                 | 5             | 17       | 12      | 0          | 0          | 0                      | 5                          | 369/369        | 368/370       |
+| actionmailer              | 1             | 2        | 2       | 0          | 0          | 0                      | 0                          | 230/230        | 230/230       |
+| activestorage             | 16            | 287      | 33      | 0          | 0          | 0                      | 22                         | 631/631        | 631/655       |
+| actionmailbox             | 2             | 3        | 3       | 0          | 0          | 0                      | 2                          | 148/167        | 148/167       |
+| actiontext                | 2             | 4        | 4       | 0          | 0          | 0                      | 0                          | 99/253         | 99/253        |
+| trailties                 | 27            | 146      | 78      | 4          | 0          | 3                      | 7                          | 1661/1787      | 1662/1795     |
+| **Total**                 | **220**       | **1672** | **809** | **182**    | **15**     | **102**                | **47**                     |                |               |
 
-The totals include `actionpackversion`'s one changed file. Two files are
-added upstream (one each in activesupport and trailties) and none removed. At the level of every `def`, private ones included: 169 bodies
-change, 46 defs are added, 22 are removed and 12 signatures change;
-`parity:api:drift` reports +3 classes and no visibility flips. The data layer
-goes from 8853/8853 methods to 8855/8872, and the overall figure from
-17467/19511 (89.5%) to 17457/19541 (89.3%). A pin drifts where the digest of
-the first same-named body on the class's ancestor chain changes, which is why
-20 arel pins drift on 14 changed bodies.
+Re-run at `v8.0.5.1` the same command gives 159 DRIFT and 14 STALE where the
+2026-10-13 measurement gave 141 and 12. Per package the counts agree except
+actiondispatch (+1 DRIFT) and actionview (+17 DRIFT, +2 STALE): since
+`25cc7a1876` the actionview pins grew from 441 to 1180 and the actiondispatch
+pins from 1269 to 1393, so more of the bodies that changed are now pinned.
+The five packages enrolled since then have no pins yet; their changing pairs
+are in the unpinned column.
 
-**Tests** (`extract-ruby-tests.rb` over each `testPath`; 105 test files
-change, +2108/-151 lines):
+**Tests** (`extract-ruby-tests.rb` over each `testPath`):
 
-| Package          | Tests 8.0.2 | Tests 8.0.5.1 | Added   | Removed | Changed in place | Matched before | Matched after |
-| ---------------- | ----------- | ------------- | ------- | ------- | ---------------- | -------------- | ------------- |
-| arel             | 730         | 730           | 0       | 0       | 0                | 739/739        | 739/739       |
-| activemodel      | 1041        | 1043          | 2       | 0       | 0                | 1037/1037      | 1037/1039     |
-| activerecord     | 9035        | 9077          | 43      | 1       | 10               | 8801/8830      | 8800/8872     |
-| activesupport    | 3496        | 3519          | 26      | 3       | 9                | 2995/3325      | 2994/3345     |
-| actiondispatch   | 1689        | 1693          | 4       | 0       | 1                | 1163/1689      | 1163/1693     |
-| actioncontroller | 1942        | 1945          | 3       | 0       | 9                | 1651/1945      | 1651/1948     |
-| actionview       | 2507        | 2521          | 14      | 0       | 1                | 728/2507       | 728/2521      |
-| activejob        | 416         | 421           | 5       | 0       | 1                | 0/396          | 0/401         |
-| trailties        | 2419        | 2433          | 15      | 1       | 5                | 223/2419       | 223/2433      |
-| **Total**        | **23275**   | **23382**     | **112** | **5**   | **36**           |                |               |
+| Package            | Tests 8.0.2 | Tests 8.0.5.2 | Added   | Removed | Changed in place | Moved |
+| ------------------ | ----------- | ------------- | ------- | ------- | ---------------- | ----- |
+| arel               | 730         | 730           | 0       | 0       | 0                | 0     |
+| activerecord       | 9141        | 9183          | 43      | 1       | 10               | 0     |
+| activemodel        | 1041        | 1043          | 2       | 0       | 0                | 0     |
+| activesupport      | 3526        | 3550          | 27      | 3       | 9                | 0     |
+| actiondispatch     | 1670        | 1687          | 20      | 3       | 2                | 0     |
+| actioncontroller   | 1946        | 1962          | 18      | 2       | 10               | 0     |
+| abstractcontroller | 52          | 52            | 0       | 0       | 0                | 0     |
+| actionview         | 2579        | 2613          | 34      | 0       | 1                | 0     |
+| actioncable        | 216         | 218           | 2       | 0       | 0                | 0     |
+| activejob          | 416         | 421           | 5       | 0       | 1                | 0     |
+| actionmailer       | 255         | 255           | 0       | 0       | 0                | 0     |
+| activestorage      | 491         | 568           | 81      | 4       | 4                | 0     |
+| actionmailbox      | 105         | 107           | 2       | 0       | 2                | 0     |
+| actiontext         | 117         | 117           | 0       | 0       | 2                | 0     |
+| trailties          | 2419        | 2440          | 22      | 1       | 5                | 0     |
+| **Total**          | **24704**   | **24946**     | **256** | **14**  | **46**           | **0** |
 
 "Changed in place" is a test at the same path whose extracted assertions or
-gate differ. No test moves to a new describe path. The extractor counts and
-the comparer's denominators differ slightly (gated and generated tests), so
-read the two pairs of columns separately. Overall matched tests go from
-19579/26347 (74.3%) to 19577/26451 (74.0%).
+gate differ. No test moves to a new describe path.
 
 **What this means for the plan.** The burn-down is on the order of 82 files
 to re-verify, 46 defs and 112 tests to port, and 22 defs and 5 tests to
@@ -470,15 +488,13 @@ It needs the pin floor to be complete. 16 unpinned matched pairs change in
 this bump and 2 of the 39 new gate rows sit on them; with no pin there is no
 DRIFT row to seed from. Hence the entry criterion in § 4.
 
-**How many rows.** 141 DRIFT and 12 STALE are measured against today's pins.
-Both become ledger rows: DRIFT as `kind: "drift"`, STALE as `kind: "removed"`.
-Retaking the floor first pins the 16 changing pairs, which then drift too. So
-the pair seed at the flip is **about 169 rows** (153 + 16, plus any unpinned
-pair that upstream removed, which today's measurement cannot see). The dry run
-after the floor is retaken gives the exact figure, and that figure is what
-§ Verification checks. At `v8.0.5.2` the seed also takes the drifted pairs in
-the files of § 1's delta table and in the five later-enrolled packages, so
-"about 169" is a lower bound; a figure near 200 is expected.
+**How many rows.** The dry run at `v8.0.5.2` seeds **197 pair rows** (182
+`drift`, 15 `removed`) against today's pins, and **37 test rows** (the
+changed tests test-compare matches). 47 matched pairs change without a pin,
+most of them in the five later-enrolled packages; retaking the floor first
+pins them and they drift too, so the seed at the flip is about 244 pair rows.
+The dry run after the floor is retaken gives the exact figure, and that figure
+is what § Verification checks.
 
 #### The test half
 
@@ -957,10 +973,11 @@ Resolved or deferred:
   `<major>-<minor>-stable` branch cut from the tag when a published line
   needs a fix). Nothing before the tag depends on it.
 - **Does the ledger cover gates the dry run could not exercise?** (Open
-  question 3.) Deferred to `bump-dry-run-runs-the-gates-against-a-candidate-ref`,
-  which must either exercise the rails-private, method-order and test-name
-  lints, the fixtures and models comparison and the two real-Rails parity jobs,
-  or list each as residual risk with a count.
+  question 3.) Resolved 2026-11-10 by
+  `bump-dry-run-runs-the-gates-against-a-candidate-ref`: it exercises the
+  inlined-from citation spans (by re-citing and restoring them) and lists the
+  rest under "not exercised" with the upstream count that predicts each
+  (§ Motivation). Those gates stay residual risk for the flip PR.
 - **Which 8.0 release?** Resolved 2026-11-10: `v8.0.5.2`, the highest 8.0
   tag, and the last expected (8.0.x security support ended 2026-11-07, § 1).
 
@@ -1001,3 +1018,8 @@ Resolved or deferred:
   sanitizer chain and the activerecord test schema; RFC moved to `active`.
   The directory slug and the `8-0-5-1` story slugs are kept, since they are
   database ids.
+- 2026-11-10: § Motivation's gate and attribution tables, § 2's tables and
+  § 3's seed estimate replaced with `pnpm parity:bump:dry-run --source rails
+--ref v8.0.5.2` figures over all sixteen Rails packages (197 pair rows, 37
+  test rows); the `v8.0.5.1` re-run's difference from 2026-10-13 explained by
+  pins added since. Open question 3 resolved.
