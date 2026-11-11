@@ -1,7 +1,7 @@
 ---
 title: "Active Job serialize writes the current Time.zone name"
-status: ready
-updated: 2026-11-02
+status: done
+updated: 2026-11-11
 rfc: "0214-activejob-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9789
+claim: "2026-11-11T02:11:45Z"
+assignee: "activejob-serializes-the-current-timezone"
 blocked-by: null
 closed-reason: null
 ---

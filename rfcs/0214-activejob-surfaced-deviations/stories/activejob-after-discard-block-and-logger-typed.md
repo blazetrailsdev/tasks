@@ -1,7 +1,7 @@
 ---
 title: "activejob: type after_discard's block args and Base.logger instead of unknown"
-status: draft
-updated: 2026-11-09
+status: ready
+updated: 2026-11-11
 rfc: "0214-activejob-surfaced-deviations"
 cluster: null
 packages: []

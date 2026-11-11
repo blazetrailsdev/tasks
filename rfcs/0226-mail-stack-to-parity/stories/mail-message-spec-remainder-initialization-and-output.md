@@ -1,7 +1,7 @@
 ---
 title: "Port message_spec.rb's remaining initialization, plain-text, header, YAML, == and output examples"
 status: ready
-updated: 2026-11-10
+updated: 2026-11-11
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 500
-priority: 3
+priority: null
 pr: null
 claim: null
 assignee: null

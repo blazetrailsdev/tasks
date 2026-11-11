@@ -1,7 +1,7 @@
 ---
 title: "Port net-smtp's test_sslcontext.rb and the rest of test_starttls.rb"
 status: ready
-updated: 2026-11-10
+updated: 2026-11-11
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages:
@@ -10,7 +10,7 @@ deps:
   - "net-smtp-tests-at-convention-paths"
 deps-rfc: []
 est-loc: 400
-priority: 3
+priority: null
 pr: null
 claim: null
 assignee: null

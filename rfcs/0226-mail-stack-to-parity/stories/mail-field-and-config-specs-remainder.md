@@ -1,7 +1,7 @@
 ---
 title: "Port message_id_field_spec, envelope_spec, mail_spec and the single-example field-spec gaps"
 status: ready
-updated: 2026-11-10
+updated: 2026-11-11
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages:
@@ -9,7 +9,7 @@ packages:
 deps: []
 deps-rfc: []
 est-loc: 400
-priority: 3
+priority: null
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "A bump dry run runs every parity gate against a candidate ref without moving the active one"
-status: claimed
+status: in-progress
 updated: 2026-11-11
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: tooling
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
+pr: trails#9980
 claim: "2026-11-11T00:41:33Z"
 assignee: "bump-dry-run-runs-the-gates-against-a-candidate-ref"
 blocked-by: null

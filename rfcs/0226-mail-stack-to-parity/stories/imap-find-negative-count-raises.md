@@ -1,7 +1,7 @@
 ---
 title: "IMAP#find raises ArgumentError for a negative :count like Array#first"
-status: draft
-updated: 2026-11-10
+status: ready
+updated: 2026-11-11
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages: []
