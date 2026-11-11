@@ -1,6 +1,6 @@
 ---
 title: "actionpack: route-set url/path helper modules without live include"
-status: claimed
+status: in-progress
 updated: 2026-11-11
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: conversion
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: 8
-pr: null
+pr: trails#9985
 claim: "2026-11-11T01:11:37Z"
 assignee: "actionpack-route-set-helper-modules-without-live-include"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "server-path-trailties-console-integration-session"
-status: ready
-updated: 2026-11-09
+status: done
+updated: 2026-11-11
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9927
+claim: "2026-11-11T04:11:39Z"
+assignee: "server-path-trailties-console-integration-session"
 blocked-by: null
 closed-reason: null
 ---
