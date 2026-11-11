@@ -1,7 +1,7 @@
 ---
 title: "solid-queue-configuration-includes-active-model-model"
-status: in-progress
-updated: 2026-11-10
+status: done
+updated: 2026-11-11
 rfc: "0196-solid-stack"
 cluster: null
 packages: []

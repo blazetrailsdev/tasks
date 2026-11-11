@@ -1,6 +1,6 @@
 ---
 title: "Make the signed-id verifier memo per-class like Rails @signed_id_verifier"
-status: in-progress
+status: done
 updated: 2026-11-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

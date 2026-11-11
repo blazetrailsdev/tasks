@@ -1,6 +1,6 @@
 ---
 title: "auto-filtered-parameters-model-name-element"
-status: in-progress
+status: done
 updated: 2026-11-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

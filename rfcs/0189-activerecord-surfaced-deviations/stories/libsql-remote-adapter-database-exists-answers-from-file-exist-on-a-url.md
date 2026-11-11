@@ -1,6 +1,6 @@
 ---
 title: "LibSQLRemoteAdapter#databaseExists answers from File.exist? on the remote URL"
-status: in-progress
+status: done
 updated: 2026-11-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

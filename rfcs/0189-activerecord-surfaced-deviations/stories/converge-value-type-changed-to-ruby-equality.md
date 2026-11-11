@@ -1,6 +1,6 @@
 ---
 title: "Unskip test_changes_in_place_ignores_key_order now that Type::Value#changed? uses Ruby equality"
-status: in-progress
+status: done
 updated: 2026-11-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

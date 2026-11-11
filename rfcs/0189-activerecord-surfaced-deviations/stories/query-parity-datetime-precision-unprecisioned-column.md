@@ -1,6 +1,6 @@
 ---
 title: "quoted_date keeps sub-second precision for an unprecisioned DATETIME column"
-status: in-progress
+status: done
 updated: 2026-11-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

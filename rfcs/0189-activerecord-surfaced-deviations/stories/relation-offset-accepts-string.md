@@ -1,6 +1,6 @@
 ---
 title: "Drop the as-unknown-as-number cast in finder.test.ts now that Relation#offset accepts a string"
-status: in-progress
+status: done
 updated: 2026-11-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

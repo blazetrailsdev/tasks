@@ -1,6 +1,6 @@
 ---
 title: "activerecord: TokenDefinition#resolve_token compares payloads with =="
-status: in-progress
+status: done
 updated: 2026-11-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
