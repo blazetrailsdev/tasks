@@ -1,6 +1,6 @@
 ---
 title: "A bump dry run runs every parity gate against a candidate ref without moving the active one"
-status: in-progress
+status: done
 updated: 2026-11-11
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: tooling

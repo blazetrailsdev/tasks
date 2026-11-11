@@ -1,6 +1,6 @@
 ---
 title: "core-inherited-resets-ancestor-find-by-caches"
-status: draft
+status: blocked
 updated: 2026-11-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Owner ruling needed: core.rb:414-419 ancestor reset needs a definition-time inherited hook (e.g. at DescendantsTracker.registerSubclass), which root CLAUDE.md § 'inherited is deferred' says trails has none of"
 closed-reason: null
 ---
 
