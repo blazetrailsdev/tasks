@@ -399,7 +399,12 @@ gate differ. No test moves to a new describe path.
 **What this means for the plan.** Re-measured with `pnpm parity:bump:dry-run`
 against `v8.0.5.2`, the burn-down is on the order of 102 seed files to
 re-verify, about 60 net defs to port or remove, and 256 tests added, 14 removed
-and 46 changed upstream: roughly 130–150 PRs at the house size. activerecord is
+and 46 changed upstream: roughly 130–150 PRs at the house size if cut one per Ruby file. The
+burn-down is instead cut one PR per package (owner, 2026-11-11), with the LOC
+ceiling waived: each package's ledger rows, pin retake and upstream-added
+tests close together, and the ledger gate, not the reviewer, proves no row is
+skipped. activerecord splits by subsystem and actionview where its
+sanitizer-dependent helpers wait on the sanitizer bump, for about 20–25 PRs. activerecord is
 still the largest share of the drifted pins. The version-string surface is about
 145 versioned citations in 61 files, the `gem-version.ts` constants in six
 packages, `ActionDispatch`'s `VERSION`, and the generated schema-parity
@@ -746,7 +751,8 @@ own version. Story: `record-the-mirrored-ref-in-each-package`.
 3. A runbook in `vendor/README.md` (below) that a person or an agent can run
    end to end.
 4. A story generator: from a seeded ledger and the comparer's missing lists,
-   one story per Ruby file, written into a new burn-down RFC.
+   one story per package (split where a package is too large to review as
+   one), written into a new burn-down RFC.
 5. A history of every bump in the stats DB.
 6. A retrospective, and an 8.1 RFC scoped from it.
 
@@ -1010,3 +1016,4 @@ Resolved or deferred:
 --ref v8.0.5.2` figures over all sixteen Rails packages (197 pair rows, 37
   test rows); the `v8.0.5.1` re-run's difference from 2026-10-13 explained by
   pins added since. Open question 3 resolved.
+- 2026-11-11: burn-down cut one PR per package, about 20–25 PRs (owner).
