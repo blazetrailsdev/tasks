@@ -5,7 +5,13 @@ updated: 2026-11-11
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: entry
 packages: [arel, activemodel, activerecord]
-deps: []
+deps:
+  - ar-through-association-source-reflection-delegate
+  - ar-encrypted-fixtures-initialize-credited
+  - ar-compat-v6-0-table-definition-belongs-to-credited
+  - ar-controller-runtime-initialize-inlined
+  - am-attributes-initialize-inlined
+  - ar-yaml-column-safe-load-inherited-tests
 deps-rfc: ["0175-activerecord-test-parity-100"]
 est-loc: 20
 priority: null
