@@ -1,7 +1,7 @@
 ---
 title: "zeitwerk-registry-attr-reader-credit"
-status: ready
-updated: 2026-11-10
+status: in-progress
+updated: 2026-11-11
 rfc: "0229-tooling-gems-residual-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9983
+claim: "2026-11-11T03:03:38Z"
+assignee: "zeitwerk-registry-attr-reader-credit"
 blocked-by: null
 closed-reason: null
 ---

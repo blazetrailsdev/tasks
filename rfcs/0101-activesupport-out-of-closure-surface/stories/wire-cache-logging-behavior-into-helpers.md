@@ -1,7 +1,7 @@
 ---
 title: "wire-cache-logging-behavior-into-helpers"
-status: ready
-updated: 2026-08-13
+status: in-progress
+updated: 2026-11-11
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9984
+claim: "2026-11-11T03:41:33Z"
+assignee: "wire-cache-logging-behavior-into-helpers"
 blocked-by: null
 closed-reason: null
 ---

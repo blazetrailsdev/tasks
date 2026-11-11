@@ -1,7 +1,7 @@
 ---
 title: "ActionMailer::Base declares the logger and configure statics it mixes in"
-status: ready
-updated: 2026-11-10
+status: in-progress
+updated: 2026-11-11
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9981
+claim: "2026-11-11T03:04:57Z"
+assignee: "actionmailer-base-declares-logger-and-configure"
 blocked-by: null
 closed-reason: null
 ---

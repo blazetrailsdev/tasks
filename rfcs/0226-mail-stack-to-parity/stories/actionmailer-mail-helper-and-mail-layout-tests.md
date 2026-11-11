@@ -1,6 +1,6 @@
 ---
 title: "Port mail_helper_test.rb and mail_layout_test.rb"
-status: ready
+status: in-progress
 updated: 2026-11-11
 rfc: "0226-mail-stack-to-parity"
 cluster: null
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9982
+claim: "2026-11-11T03:11:36Z"
+assignee: "actionmailer-mail-helper-and-mail-layout-tests"
 blocked-by: null
 closed-reason: null
 ---
