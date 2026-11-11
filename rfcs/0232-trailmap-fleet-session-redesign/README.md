@@ -100,34 +100,37 @@ This RFC does not wait for them, and it does not compete with them:
 
 ### Palette and type
 
-Tokens on `:root` in `app/assets/stylesheets/application.css`, light theme.
-The dark set is not designed yet (open question 4).
+Tokens on `:root` in `app/assets/stylesheets/application.css`. Dark follows
+`prefers-color-scheme`, and `data-theme` on `<html>` overrides it either way.
 
-| Token                | Light     |
-| -------------------- | --------- |
-| background           | `#fbf8f3` |
-| surface              | `#ffffff` |
-| surface 2            | `#f3eee6` |
-| line                 | `#e6ddd0` |
-| ink                  | `#1c1512` |
-| ink 2                | `#5c4f45` |
-| ink 3 (muted)        | `#74665a` |
-| action (button fill) | `#c7391f` |
-| green (links, ok)    | `#166534` |
-| yellow (attention)   | `#f2b705` |
-| soil                 | `#2a1f1a` |
-| Drafting             | `#64748b` |
-| Self review          | `#c2710c` |
-| Reviewer convergence | `#e0452a` |
-| Getting CI green     | `#2563eb` |
-| Ready to merge       | `#15963f` |
-| Merged               | `#7c3aed` |
+| Token                | Light     | Dark      |
+| -------------------- | --------- | --------- |
+| background           | `#fbf8f3` | `#16110e` |
+| surface              | `#ffffff` | `#1f1814` |
+| surface 2            | `#f3eee6` | `#2a211b` |
+| line                 | `#e6ddd0` | `#3a2f27` |
+| ink                  | `#1c1512` | `#f3ece4` |
+| ink 2                | `#5c4f45` | `#cbbfb3` |
+| ink 3 (muted)        | `#74665a` | `#a69689` |
+| action (button fill) | `#c7391f` | `#c7391f` |
+| green (links, ok)    | `#166534` | `#4ade80` |
+| yellow (attention)   | `#f2b705` | `#f2b705` |
+| soil                 | `#2a1f1a` | `#f3ece4` |
+| Drafting             | `#64748b` | `#94a3b8` |
+| Self review          | `#c2710c` | `#f59e0b` |
+| Reviewer convergence | `#e0452a` | `#ff6a4d` |
+| Getting CI green     | `#2563eb` | `#60a5fa` |
+| Ready to merge       | `#15963f` | `#34c06a` |
+| Merged               | `#7c3aed` | `#a78bfa` |
 
 Text meets 4.5:1 on the background (ink 3 is 5.23:1, and 4.80:1 on surface
 2), and white on the action fill is 5.21:1. The stage marks are UI that
 carries meaning, so each meets 3:1 on the background (3.50–5.38:1), and white
 icons on them meet 3:1 (3.71–5.70:1). Yellow is decorative only: text on it
-is ink. Every pair was measured with the WCAG relative-luminance formula on
+is ink. In dark, text is 6.55:1 or better and every stage mark 6.55–8.73:1 on the
+background; glyphs on a mark are drawn in the background color (an `--on-mark`
+token: white in light, background in dark), since white fails on the lighter
+marks. Every pair was measured with the WCAG relative-luminance formula on
 2026-11-11. The type is Fraunces for the brand, Inter for UI and JetBrains
 Mono for code.
 
@@ -421,10 +424,8 @@ into the expanded one.
    (`prRow`, `fleet-format.js:928`). **Decided:** keep it, on Ready to merge
    cards only, beside the PR link. `fleet-session-card` is written that way.
 
-4. **The dark theme.** The bolder palette replaced the earthy one, and its
-   dark values are not designed. **Recommendation:** ship light first, with
-   the old dark set removed, and design dark in a follow-up story before the
-   RFC goes `active`.
+4. **The dark theme.** **Decided:** supported. Its tokens are in the table,
+   and `fleet-palette-tokens` ships both themes.
 5. **Whether a red main counts under Needs you.** The CI fixer row is left
    out: a red main is not waiting on an answer. **Recommendation:** keep it
    out; the row is already first and tinted.
@@ -445,6 +446,7 @@ into the expanded one.
   three reads tabled; bundle request, lead and late-attribution rules; dark
   tokens and 3:1 stage marks; the list, palette and transcript stories split;
   reported stage through a tasks verb
+- 2026-11-11: dark tokens for the new palette; open question 4 decided
 - 2026-11-11: revised to the concept as it stands in trailmap#136. Renamed to
   Dashboard with no page title; bolder palette, light only; Waiting on you
   and CI fixer move into the session list; stalls with a message prod; the
