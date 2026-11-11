@@ -7,6 +7,7 @@ cluster: null
 packages: []
 deps:
   - discriminate-class-for-record-should-call-find-sti-class
+  - core-inherited-resets-ancestor-find-by-caches
 deps-rfc: []
 est-loc: 70
 priority: null
