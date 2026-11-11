@@ -1,7 +1,7 @@
 ---
 rfc: "0230-tse-compiler-erubi-to-parity"
 title: "tse-compiler (erubi) to parity"
-status: active
+status: closed
 created: 2026-11-09
 updated: 2026-11-11
 owner: "@deanmarano"

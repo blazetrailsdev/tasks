@@ -1,6 +1,6 @@
 ---
 title: "Port or park erubi's eval-only examples outside the CaptureBlockEngine describe"
-status: in-progress
+status: done
 updated: 2026-11-11
 rfc: "0230-tse-compiler-erubi-to-parity"
 cluster: null

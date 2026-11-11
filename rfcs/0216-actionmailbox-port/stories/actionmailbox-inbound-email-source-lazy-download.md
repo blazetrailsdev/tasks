@@ -1,7 +1,7 @@
 ---
 title: "InboundEmail#source reads raw_email.download without explicit attachment/blob loads"
-status: ready
-updated: 2026-11-10
+status: claimed
+updated: 2026-11-11
 rfc: "0216-actionmailbox-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-11T22:11:37Z"
+assignee: "actionmailbox-inbound-email-source-lazy-download"
 blocked-by: null
 closed-reason: null
 ---

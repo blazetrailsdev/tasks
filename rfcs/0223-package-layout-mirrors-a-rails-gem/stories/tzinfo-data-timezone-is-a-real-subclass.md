@@ -1,6 +1,6 @@
 ---
 title: "tzinfo-data-timezone-is-a-real-subclass"
-status: in-progress
+status: done
 updated: 2026-11-11
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
