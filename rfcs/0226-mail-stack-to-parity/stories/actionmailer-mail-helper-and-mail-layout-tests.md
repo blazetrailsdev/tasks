@@ -1,6 +1,6 @@
 ---
 title: "Port mail_helper_test.rb and mail_layout_test.rb"
-status: in-progress
+status: done
 updated: 2026-11-11
 rfc: "0226-mail-stack-to-parity"
 cluster: null

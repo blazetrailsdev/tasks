@@ -1,6 +1,6 @@
 ---
 title: "zeitwerk-registry-attr-reader-credit"
-status: in-progress
+status: done
 updated: 2026-11-11
 rfc: "0229-tooling-gems-residual-parity"
 cluster: null

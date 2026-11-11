@@ -1,7 +1,7 @@
 ---
 title: "converge-same-name-second-owner-call-rows"
-status: ready
-updated: 2026-11-10
+status: in-progress
+updated: 2026-11-11
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: [scripts]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9989
+claim: "2026-11-11T12:11:40Z"
+assignee: "burn-down-rfc0126-repairing-surfaced-call-rows"
 blocked-by: null
 closed-reason: null
 ---

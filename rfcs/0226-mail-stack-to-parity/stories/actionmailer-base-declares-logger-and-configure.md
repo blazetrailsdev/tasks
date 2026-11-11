@@ -1,6 +1,6 @@
 ---
 title: "ActionMailer::Base declares the logger and configure statics it mixes in"
-status: in-progress
+status: done
 updated: 2026-11-11
 rfc: "0226-mail-stack-to-parity"
 cluster: null

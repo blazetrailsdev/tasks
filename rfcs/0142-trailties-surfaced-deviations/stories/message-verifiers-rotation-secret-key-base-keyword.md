@@ -1,7 +1,7 @@
 ---
 title: Call gates read a block through Object.assign at new MessageVerifiers
-status: ready
-updated: 2026-11-09
+status: in-progress
+updated: 2026-11-11
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: [trailties]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9990
+claim: "2026-11-11T12:41:33Z"
+assignee: "message-verifiers-rotation-secret-key-base-keyword"
 blocked-by: null
 closed-reason: null
 ---

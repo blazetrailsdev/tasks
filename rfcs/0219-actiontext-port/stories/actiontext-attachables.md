@@ -1,6 +1,6 @@
 ---
 title: "Port Attachable, the three Attachables, and attachable/attachment/trix tests"
-status: in-progress
+status: done
 updated: 2026-11-11
 rfc: "0219-actiontext-port"
 cluster: at-content
