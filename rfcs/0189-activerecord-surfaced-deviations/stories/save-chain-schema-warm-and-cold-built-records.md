@@ -1,6 +1,6 @@
 ---
 title: "activerecord: the save chain's schema warm and records built against a cold schema cache"
-status: in-progress
+status: done
 updated: 2026-11-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

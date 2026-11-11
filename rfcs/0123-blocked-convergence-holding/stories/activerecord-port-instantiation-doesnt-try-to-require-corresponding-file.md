@@ -1,6 +1,6 @@
 ---
 title: "activerecord: port inheritance_test's 'instantiation doesnt try to require corresponding file' once instantiate resolves the type through find_sti_class"
-status: in-progress
+status: done
 updated: 2026-11-11
 rfc: "0123-blocked-convergence-holding"
 cluster: null

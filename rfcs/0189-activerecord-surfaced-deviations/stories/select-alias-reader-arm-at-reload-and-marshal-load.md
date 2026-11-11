@@ -1,6 +1,6 @@
 ---
 title: "activerecord: the select-alias reader arm at reload materializes the attribute set, and marshal_load's cannot be receipted"
-status: in-progress
+status: done
 updated: 2026-11-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

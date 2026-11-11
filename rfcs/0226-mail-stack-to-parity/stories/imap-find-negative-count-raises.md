@@ -1,6 +1,6 @@
 ---
 title: "IMAP#find raises ArgumentError for a negative :count like Array#first"
-status: ready
+status: done
 updated: 2026-11-11
 rfc: "0226-mail-stack-to-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9999
+claim: "2026-11-11T18:21:03Z"
+assignee: "imap-find-negative-count-raises"
 blocked-by: null
 closed-reason: null
 ---

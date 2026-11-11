@@ -1,6 +1,6 @@
 ---
 title: "core-inherited-resets-ancestor-find-by-caches"
-status: in-progress
+status: done
 updated: 2026-11-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

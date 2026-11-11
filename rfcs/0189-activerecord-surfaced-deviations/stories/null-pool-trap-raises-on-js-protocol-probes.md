@@ -1,6 +1,6 @@
 ---
 title: "activerecord: NullPool's trap raises NoMethodError on then/toJSON probes"
-status: in-progress
+status: done
 updated: 2026-11-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
