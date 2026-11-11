@@ -84,27 +84,12 @@ count is kept in the stats DB (§ 7).
 
 ### Where we are
 
-Measured on trails `25cc7a1876` on 2026-10-13 (the five later-enrolled Rails
-packages, actioncable, actionmailer, activestorage, actionmailbox and
-actiontext, were not yet in `vendor/sources.ts` and are not in this table;
-`entry-check-data-layer-parity-is-closed-on-8-0-2` re-takes it) with `API_COMPARE_FORCE=1 pnpm
-parity:api` and `pnpm parity:test`:
-
-| Package       | Methods   | Tests     | Unpinned matched bodies |
-| ------------- | --------- | --------- | ----------------------- |
-| arel          | 1052/1052 | 739/739   | 0                       |
-| activemodel   | 821/821   | 1037/1037 | 0                       |
-| activerecord  | 6980/6980 | 8801/8830 | 178                     |
-| activesupport | 2039/2187 | 2995/3325 | 82                      |
-| actionpack    | 2658/2738 | 2866/3686 | 174                     |
-| actionview    | 1215/1482 | 728/2507  | 299                     |
-| activejob     | 5/369     | 0/396     | 3                       |
-| trailties     | 789/1660  | 223/2419  | 162                     |
-
-actionpack is the sum of `actiondispatch`, `actioncontroller`,
-`abstractcontroller` and `actionpackversion`. `body-pins.json` holds 10,737
-pins, 9,786 of them at `ref: v8.0.2`. Every package is at version `0.1.0`,
-nothing is published, and trails has no release tags.
+The per-package table was re-taken on trails `876804dd8b` on 2026-11-11 for all
+sixteen `rails`-source packages, and it now lives in the § "Findings" of
+`entry-check-data-layer-parity-is-closed-on-8-0-2`. In short: arel is at
+100%, activemodel is at 820/821 methods and 1037/1037 tests, and activerecord
+is at 6987/6991 methods and 8940/8965 tests. Every package is at version
+`0.1.0`, nothing is published, and trails has no release tags.
 
 ### What the bump does to `main` today
 

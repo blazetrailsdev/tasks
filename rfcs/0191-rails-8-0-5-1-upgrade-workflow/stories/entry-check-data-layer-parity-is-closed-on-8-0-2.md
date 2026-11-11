@@ -44,3 +44,51 @@ Five Rails packages were enrolled after the 2026-10-13 figures
 
 This story changes no gate and ports nothing. A shortfall is reported, not
 fixed here.
+
+## Findings (2026-11-11, trails `876804dd8b`)
+
+Measured after `pnpm build` with `API_COMPARE_FORCE=1 pnpm parity:api` and
+`pnpm parity:test`. Without the build `parity:api` refuses to measure
+(47 packages had no `dist`).
+
+| Package            | Methods   | Tests     | Unpinned matched bodies |
+| ------------------ | --------- | --------- | ----------------------- |
+| arel               | 1052/1052 | 739/739   | 0                       |
+| activemodel        | 820/821   | 1037/1037 | 1                       |
+| activerecord       | 6987/6991 | 8940/8965 | 180                     |
+| activesupport      | 2110/2266 | 3065/3379 | 137                     |
+| actiondispatch     | 1801/1809 | 1627/1670 | 0                       |
+| actioncontroller   | 852/854   | 1921/1949 | 1                       |
+| abstractcontroller | 178/178   | 52/52     | 0                       |
+| actionpackversion  | 2/2       | n/a       | 0                       |
+| actionview         | 3057/3057 | 2524/2562 | 34                      |
+| actioncable        | 496/496   | 213/215   | 336                     |
+| activejob          | 369/369   | 395/395   | 192                     |
+| actionmailer       | 230/230   | 251/255   | 135                     |
+| activestorage      | 631/631   | 427/451   | 412                     |
+| actionmailbox      | 148/167   | 82/87     | 94                      |
+| actiontext         | 133/253   | 23/116    | 110                     |
+| trailties          | 1661/1787 | 679/2419  | 816                     |
+
+Overall: 26987/28857 methods (93.5%), 29100/33891 tests (85.9%).
+
+### Shortfalls (reported, not fixed here)
+
+- **Methods, data layer: not 100%.**
+  activemodel is missing `ActiveModel::Attributes#initialize`.
+  activerecord is missing `Associations::ThroughAssociation#source_reflection`,
+  `Encryption::EncryptedFixtures#initialize`,
+  `Migration::Compatibility::V6_0::TableDefinition#belongs_to` and
+  `Railties::ControllerRuntime#initialize`.
+- **Tests, activerecord: 8940/8965.** 17 are skipped, and 8 are missing in
+  `coders/yaml_column_test.rb`.
+- **CI on `main` is red.** The `876804dd8b` run failed the Active Record
+  SQLite (1, 2), PostgreSQL (1, 2, 3) and MariaDB (1, 2, 3) shards.
+  `96accbb487`, the commit before it, was green.
+- **RFC 0175 is closed** (`status: closed` in its README). That criterion is met.
+
+### Stale-citation exposure
+
+907 of 1608 open stories (not `done` or `closed`) cite a Rails
+`<file>.rb:<line>` in their body: 639 draft, 149 ready, 111 blocked,
+7 claimed and 1 in progress.
