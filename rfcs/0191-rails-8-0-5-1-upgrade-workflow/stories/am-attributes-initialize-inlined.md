@@ -1,6 +1,6 @@
 ---
 title: "ActiveModel::Attributes#initialize is inlined and tagged"
-status: claimed
+status: blocked
 updated: 2026-11-11
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: entry
@@ -12,7 +12,7 @@ priority: 1
 pr: null
 claim: "2026-11-11T16:58:08Z"
 assignee: "am-attributes-initialize-inlined"
-blocked-by: null
+blocked-by: "Needs a gate change or an operator ruling. Rails' ActiveModel::Model (model.rb) defines no initialize, and no framework class in vendor/rails/v8.0.2 includes ActiveModel::Attributes. The only constructor that runs this segment today is trails Model's, behind the guard isModuleIncluded(new.target, Attributes) at packages/activemodel/lib/model.ts:145. Tagging it @inlinedFrom ActiveModel::Attributes#initialize (with or without API#initialize) makes compare.ts:6855 throw: '@inlinedFrom was never compared, no Rails initialize paired: activemodel/model.ts Model#constructor'. The gate only pairs a tag with the Rails class's own initialize, so no tag site can pass for an open-set module whose initialize is inlined behind a guard. Fix it in compare.ts (pair a guarded segment with the module's initialize directly), or rule how parity:api credits Attributes#initialize."
 closed-reason: null
 ---
 

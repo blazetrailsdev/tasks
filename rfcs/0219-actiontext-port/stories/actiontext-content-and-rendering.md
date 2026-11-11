@@ -1,6 +1,6 @@
 ---
 title: "Port ActionText::Content and Rendering, with content_test"
-status: claimed
+status: in-progress
 updated: 2026-11-11
 rfc: "0219-actiontext-port"
 cluster: at-content
@@ -9,7 +9,7 @@ deps: ["actiontext-attachables"]
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
+pr: trails#9998
 claim: "2026-11-11T16:44:46Z"
 assignee: "actiontext-content-and-rendering"
 blocked-by: null
