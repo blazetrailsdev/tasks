@@ -1,7 +1,7 @@
 ---
 title: "trailmap: palette, stage marks and type tokens in application.css"
 status: draft
-updated: 2026-11-11
+updated: 2026-11-10
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-shell
 packages: [actionview]

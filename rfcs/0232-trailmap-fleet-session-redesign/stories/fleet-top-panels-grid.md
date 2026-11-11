@@ -1,7 +1,7 @@
 ---
 title: "trailmap: dashboard header row, search field and Usage and Loop panels"
 status: draft
-updated: 2026-11-11
+updated: 2026-11-10
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-shell
 packages: [actionview]

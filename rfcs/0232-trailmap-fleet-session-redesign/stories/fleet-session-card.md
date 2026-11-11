@@ -1,7 +1,7 @@
 ---
 title: "trailmap: render each PR or spawn as a session row with a stage stepper"
 status: draft
-updated: 2026-11-11
+updated: 2026-11-10
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-sessions
 packages: [actionview]
