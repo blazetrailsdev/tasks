@@ -1,7 +1,7 @@
 ---
 title: "Port or park erubi test.rb's eval-only CaptureBlockEngine describe"
-status: draft
-updated: 2026-11-10
+status: in-progress
+updated: 2026-11-11
 rfc: "0230-tse-compiler-erubi-to-parity"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10008
+claim: "2026-11-11T21:23:40Z"
+assignee: "erubi-capture-block-buffer"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Port Erubi::CaptureBlockEngine::Buffer (<<, |, capture and h)"
-status: draft
-updated: 2026-11-10
+status: in-progress
+updated: 2026-11-11
 rfc: "0230-tse-compiler-erubi-to-parity"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10008
+claim: "2026-11-11T21:23:40Z"
+assignee: "erubi-capture-block-buffer"
 blocked-by: null
 closed-reason: null
 ---

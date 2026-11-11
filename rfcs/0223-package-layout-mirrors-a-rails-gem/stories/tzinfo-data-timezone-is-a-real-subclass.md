@@ -1,7 +1,7 @@
 ---
 title: "tzinfo-data-timezone-is-a-real-subclass"
-status: ready
-updated: 2026-11-09
+status: in-progress
+updated: 2026-11-11
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10007
+claim: "2026-11-11T21:11:38Z"
+assignee: "tzinfo-data-timezone-is-a-real-subclass"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "enroll-activerecord-in-protocol-call-mapping"
-status: in-progress
-updated: 2026-11-10
+status: done
+updated: 2026-11-11
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: [scripts]
