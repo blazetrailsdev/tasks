@@ -1,9 +1,9 @@
 ---
 rfc: "0232-trailmap-fleet-session-redesign"
-title: "trailmap: a session-focused Fleet page"
+title: "trailmap: a session-focused dashboard"
 status: draft
 created: 2026-11-10
-updated: 2026-11-10
+updated: 2026-11-11
 owner: "@deanmarano"
 packages:
   - actionpack
@@ -19,20 +19,25 @@ related-rfcs:
   - "0136-trailmap"
 ---
 
-# RFC 0232 — trailmap: a session-focused Fleet page
+# RFC 0232 — trailmap: a session-focused dashboard
 
 ## Summary
 
 Rebuild trailmap's Fleet page (`/dashboard`) around agent sessions, following
-the concept in trailmap#136 (`concepts/redesign/b-stepper-list.html`). The
-page keeps every Fleet control it has today, laid out on one two-column grid.
-The PR list becomes a list of sessions, grouped by repo and ordered by stage.
-Each session shows a six-stage stepper: Drafting, Self review, Reviewer
-convergence, Getting CI green, Ready to merge, Merged. A session links its PR
-and every story in its bundle, and it expands to its controls, a session log
-and a message box. A ⌘K palette searches sessions, stories and PRs. The visual language is a
-new natural palette: terracotta, forest green, mustard, soil brown and warm
-neutrals.
+the concept in trailmap#136 (`concepts/redesign/b-stepper-list.html`), and
+rename it Dashboard. The page has no title; its top is the connection dots,
+Broadcast and Spawn, and two panels, Usage and Loop. The PR list becomes a
+list of sessions, grouped by repo and ordered by stage, each with a six-stage
+stepper: Drafting, Self review, Reviewer convergence, Getting CI green, Ready
+to merge, Merged. What used to live in panels lives in the rows: an agent's
+question is answered in its session's row, the CI fixer is a marked session
+row, and a session that has stalled short of its next stage offers one button
+that messages its agent. At Reviewer convergence the stepper branches into a
+loop showing the agent and the reviewer. A Needs you filter keeps only the
+rows that want something from the operator. A session links its PR and every
+story in its bundle, and expands to its controls, a session log and a message
+box. A ⌘K palette searches sessions, stories and PRs. The palette gives each
+stage its own saturated hue over warm neutrals.
 
 ## Motivation
 
@@ -95,52 +100,57 @@ This RFC does not wait for them, and it does not compete with them:
 
 ### Palette and type
 
-Tokens on `:root` in `app/assets/stylesheets/application.css`.
+Tokens on `:root` in `app/assets/stylesheets/application.css`, light theme.
+The dark set is not designed yet (open question 4).
 
-| Token                | Light     | Dark      |
-| -------------------- | --------- | --------- |
-| background           | `#faf5ec` | `#1d1510` |
-| surface              | `#fffdf8` | `#271c15` |
-| surface 2 (sand)     | `#f4ecde` | `#31241b` |
-| line                 | `#e4d6c1` | `#45342a` |
-| ink                  | `#2b211a` | `#f3e9da` |
-| ink 2                | `#6b5a4c` | `#c7b39c` |
-| ink 3 (muted)        | `#7a6756` | `#a08a75` |
-| terracotta (action)  | `#c2603f` | `#de7a56` |
-| forest               | `#2f5d46` | `#6fa57f` |
-| mustard (attention)  | `#d4a72c` | `#e6bd4a` |
-| soil                 | `#5a3e2b` | `#5a3e2b` |
-| Drafting mark        | `#8f7660` | `#b9a088` |
-| Self review mark     | `#a37b10` | `#e6bd4a` |
-| Reviewer convergence | `#c2603f` | `#de7a56` |
-| Getting CI green     | `#8a6d3b` | `#c99a5b` |
-| Ready to merge       | `#5f8f62` | `#93c07f` |
-| Merged               | `#2f5d46` | `#6fa57f` |
+| Token                | Light     |
+| -------------------- | --------- |
+| background           | `#fbf8f3` |
+| surface              | `#ffffff` |
+| surface 2            | `#f3eee6` |
+| line                 | `#e6ddd0` |
+| ink                  | `#1c1512` |
+| ink 2                | `#5c4f45` |
+| ink 3 (muted)        | `#74665a` |
+| action (button fill) | `#c7391f` |
+| green (links, ok)    | `#166534` |
+| yellow (attention)   | `#f2b705` |
+| soil                 | `#2a1f1a` |
+| Drafting             | `#64748b` |
+| Self review          | `#c2710c` |
+| Reviewer convergence | `#e0452a` |
+| Getting CI green     | `#2563eb` |
+| Ready to merge       | `#15963f` |
+| Merged               | `#7c3aed` |
 
-Text meets 4.5:1 on the background (ink 3 is 4.96:1 light, 5.47:1 dark). The
-stage marks are UI that carries meaning, so each meets 3:1 against the
-background and the surface. That is why the Drafting and Self review marks
-are darker than clay `#b9a088` (2.29:1) and mustard (2.07:1), which stay as
-decorative tones. Every pair was measured with the WCAG relative-luminance
-formula on 2026-11-10. The type is Fraunces for headings, Inter for UI and
-JetBrains Mono for code.
+Text meets 4.5:1 on the background (ink 3 is 5.23:1, and 4.80:1 on surface
+2), and white on the action fill is 5.21:1. The stage marks are UI that
+carries meaning, so each meets 3:1 on the background (3.50–5.38:1), and white
+icons on them meet 3:1 (3.71–5.70:1). Yellow is decorative only: text on it
+is ink. Every pair was measured with the WCAG relative-luminance formula on
+2026-11-11. The type is Fraunces for the brand, Inter for UI and JetBrains
+Mono for code.
 
 Stage never rests on color alone. Each stage has its own icon (pencil,
 magnifier, converging arrows, CI loop, flag, merge), and a step's state is
 its shape: a filled disc with a ring is current, a filled disc is done, and a
-dashed outline is still to come. The stepper carries `aria-label="Stage:
+small dot is still to come, so the current stage is the loudest mark in the
+row. The stepper carries `aria-label="Stage:
 <name>"`.
 
 ### The top section
 
-One header row holds the title, the connection pills (events, tmux, usage
-scraper, and one per agent kind with its live count), a search field (a
-search button below 700px), and Broadcast and Spawn buttons. Below it is one
-two-column grid whose rows share a height: Waiting on you beside Usage, and
-CI fixer beside Loop, which takes the Pause control. Every control keeps its
-current `data-action` and control request; only the markup and CSS change.
-The broadcast and spawn forms stay where they are until
-`fleet-palette-actions` moves them into the palette.
+The page has no visible title; the nav tab reads Dashboard, and an `h1` is
+kept for screen readers only. One header row holds the connection dots
+(events, tmux, usage scraper, and one per agent kind with its live count) and
+Broadcast and Spawn buttons. Below it, Usage and Loop sit side by side; Loop
+takes the Pause control and says when spawning is paused. There is no Waiting
+on you panel and no CI fixer panel: both move into the session list. The top
+bar keeps a search field (a search button below 700px). Every control keeps
+its current `data-action` and control request; only the markup and CSS
+change. The broadcast and spawn forms stay where they are until
+`fleet-palette-actions` moves them into the palette. ⌘K, which opens search,
+is the page's only keyboard shortcut.
 
 ### A session and its stage
 
@@ -178,17 +188,85 @@ by stage within a repo, Drafting first. One stage header sits above the
 list, pinned while scrolling. It names the six stages with their icons, in
 columns aligned with the card steppers, so the cards carry icons only.
 
-A card shows the PR link, the lead story and the bundle's other stories as
-links, a one-line note (the envelope's `lastAction`), and how long ago it
-changed (`lastTime`). Stage is shown by the stepper and the card's colored
-edge, not repeated as a chip. Merge sits on Ready to merge cards, beside the
+Each repo is one surface, and its sessions are rows on it divided by a
+hairline, each with a 3px edge in its stage's color. A row shows the PR link,
+the lead story and the bundle's other stories as links, a one-line note (the
+envelope's `lastAction`), and how long ago it changed (`lastTime`). Stage is
+shown by the stepper and the edge, not repeated as a chip. The right column
+shows one progress figure for the current stage above the age: LOC against
+the ceiling while drafting and in self review, findings converged
+(`openFindings` against the review's total) at Reviewer convergence, and
+checks passed while getting CI green. Merge sits on Ready to merge rows, in
+place of the figure. A failed check adds an "N check failed" flag beside the
 PR link.
+
+The top bar and the stage header are sticky, and the list scrolls under
+them. Beside the stage header, two chips filter the list: All, and Needs you,
+which keeps the rows with an open question, a failed check, a stall or a
+merge waiting, and hides repos with none. `?filter=needs` opens the page
+filtered. The CI fixer row is not in Needs you (open question 5).
 
 A merged PR stays in the envelope only until its worker pane is torn down
 (`teardownAt`, `cleanupPending`, `fleet-format.js:913`). While it is there,
 it folds into one "Merged" line at the end of its repo's list, which shows
 each PR link and lead story with its `lastTime`. Once ringo drops it, it is
 gone from the page, as it is today.
+
+### Questions in the row
+
+An agent's AskUserQuestion, which the Waiting on you panel shows today
+(`askCards`, `fleet-format.js:1082`), renders as a strip inside its session's
+row instead, matched by pane. The strip carries a "Waiting on you" flag, the
+question, a button per option and a free answer with Send, the same controls
+and `answer-ask` requests `askCards` builds. A question whose pane matches no
+session renders as a row of its own at the top of the list, so no question
+is lost. Every string is escaped, as `askCards` does today: it is the one
+part of the page a model wrote.
+
+### The CI fixer as a session
+
+The CI fixer is an agent session like any other, so it is a row in its
+repo's list, with its stepper, log and message box, instead of a panel. It
+is marked three ways: a tinted row, a solid "CI fixer" label beside a "main
+is red" flag, and first place in its repo whatever its stage. Its note is the
+fixer's phase and red checks (`fixerCards`, `fleet-format.js:272`). The row
+is the envelope's fixer entry joined to its worker's spawn or PR row by
+`story_id` or `pr`; a fixer with neither yet renders as a Drafting row with
+no PR.
+
+### Stalls
+
+A session whose agent is idle short of its next stage is stalled. Idle is
+the worker pane's status (`pane_status` not `working`, `waiting` or `error`;
+`paneDot`, `fleet-format.js:64`), held for the stall threshold (open question
+6). A stalled row carries a strip with "Stalled · idle 22m", the evidence
+(conditions met, ticked; the unmet one plain) and one button that sends a
+message to the agent through `fleet/pane/:id/send`. It never acts on the PR
+itself. A session with an open question is never also stalled.
+
+| Stage                | Idle and…                                     | Message                |
+| -------------------- | --------------------------------------------- | ---------------------- |
+| Self review          | no reviewer assigned                          | Request review?        |
+| Reviewer convergence | `openFindings` 0                              | Move on to CI?         |
+| Getting CI green     | `ciStatus` failing                            | Fix the failing check? |
+| Getting CI green     | `ciStatus` passing, `openFindings` 0, `draft` | Mark it ready?         |
+
+Today's "poke stalled agents" control (`/poke-stalled`, `fleet-format.js:523`)
+stays as the bulk action; the strip is the per-session one, with a message
+that names the next step.
+
+### The review loop
+
+At Reviewer convergence the stepper's line branches into a ring in place of
+the stage icon. The agent sits on top and the reviewer below; the one whose
+turn it is is filled, and an arc runs round the ring while either side is
+working (it stops under `prefers-reduced-motion`). The round, `reviewCycles`,
+is in the middle. A line above and below says what each side is doing: the
+worker's `lastAction`, and the reviewer's pane status from the reviewer
+entry (`pane_status`, `review_owed`). Whose turn it is follows from the two
+pane statuses: the side that is working, else the reviewer while
+`review_owed`, else the agent. The ring carries one `aria-label` with the
+round and both lines.
 
 ### Bundle stories
 
@@ -242,9 +320,12 @@ into them.
 
 ### Mobile
 
-Below 700px, panels and cards run full-bleed and the panels stack in one
-column. The top bar keeps the logo and the search button, and the stage
-header is hidden, so each card names its current stage under the stepper. The
+Below 700px, panels and rows run full-bleed in one column. Usage and Loop
+fold to a one-line summary each and open on tap; on a wide page the summary
+is out of the tab order, and the panels follow the viewport across 700px.
+The top bar keeps the logo and the search button. The stage header keeps only
+the filter chips, so each row names its current stage and progress figure
+under its stepper. Question and stall strips stack their controls. The
 palette opens as a full-screen sheet.
 
 ## Non-goals
@@ -262,8 +343,12 @@ palette opens as a full-screen sheet.
 
 - **A kanban board with a column per stage:** concept A in trailmap#136. It
   loses the repo grouping and is unusable at phone width.
-- **A dark rail-and-panel layout:** concept C in trailmap#136. It shows one
-  session at a time, and the Fleet controls have no place in it.
+- **A dark rail-and-panel layout:** concept C, dropped from trailmap#136. It
+  shows one session at a time, and the Fleet controls have no place in it.
+- **Keeping Waiting on you and CI fixer as panels:** both are about one
+  session, and a panel puts them a screen away from the session they concern.
+- **Single-key shortcuts for Broadcast and Spawn:** rejected; ⌘K is the only
+  shortcut, and both actions are palette rows.
 - **Adding stage and stories to ringo's envelope:** it puts trailmap's view
   model into ringo and couples two deploys. Bundle stories are already in the
   tasks database.
@@ -279,9 +364,11 @@ palette opens as a full-screen sheet.
 3. Detail: `fleet-session-detail`, `fleet-session-composer`,
    `fleet-session-transcript-archived`.
 4. Search: `fleet-palette-search`, `fleet-palette-actions`.
-5. Mobile: `fleet-mobile-layout`.
-6. Stage signal: `tasks-session-stage-verb`, `fleet-session-reported-stage`.
-7. Live transcript: `fleet-session-transcript-live`, `draft` until open
+5. In the rows: `fleet-session-question`, `fleet-ci-fixer-row`,
+   `fleet-session-stall`, `fleet-session-review-loop`, `fleet-needs-you-filter`.
+6. Mobile: `fleet-mobile-layout`.
+7. Stage signal: `tasks-session-stage-verb`, `fleet-session-reported-stage`.
+8. Live transcript: `fleet-session-transcript-live`, `draft` until open
    question 2 is decided.
 
 Every control stays reachable at every step. `fleet-session-card` keeps the
@@ -298,8 +385,12 @@ into the expanded one.
   drain, poke, reply, merge, cleanup, worker and reviewer panes, queued
   notifications) is reachable after each story merges. The dashboard e2e
   suite (`scripts/dashboard-e2e.sh`) asserts each one by selector.
-- Every stage mark meets 3:1 and every text token 4.5:1 on its background, in
-  both themes, by a unit test over the token values.
+- Every stage mark meets 3:1 and every text token 4.5:1 on its background,
+  by a unit test over the token values.
+- Every pending question renders in exactly one place: its session's row, or
+  its own row when no session matches its pane. A fixture test covers both.
+- Each stall rule fires on its fixture and not on its neighbours, and no row
+  with an open question is stalled.
 - At 390px wide the page has no horizontal scroll
   (`documentElement.scrollWidth === 390`) collapsed, with a card expanded and
   with the palette open, checked in the e2e suite.
@@ -330,6 +421,19 @@ into the expanded one.
    (`prRow`, `fleet-format.js:928`). **Decided:** keep it, on Ready to merge
    cards only, beside the PR link. `fleet-session-card` is written that way.
 
+4. **The dark theme.** The bolder palette replaced the earthy one, and its
+   dark values are not designed. **Recommendation:** ship light first, with
+   the old dark set removed, and design dark in a follow-up story before the
+   RFC goes `active`.
+5. **Whether a red main counts under Needs you.** The CI fixer row is left
+   out: a red main is not waiting on an answer. **Recommendation:** keep it
+   out; the row is already first and tinted.
+6. **How long idle counts as stalled.** The envelope gives `pane_status`, not
+   how long it has held. **Recommendation:** trailmap records the time each
+   pane's status last changed as frames arrive (it already records stage
+   changes for the log), and the threshold starts at 15 minutes, a constant
+   to tune against the live fleet.
+
 ## Changelog
 
 - 2026-11-10: initial RFC
@@ -341,3 +445,9 @@ into the expanded one.
   three reads tabled; bundle request, lead and late-attribution rules; dark
   tokens and 3:1 stage marks; the list, palette and transcript stories split;
   reported stage through a tasks verb
+- 2026-11-11: revised to the concept as it stands in trailmap#136. Renamed to
+  Dashboard with no page title; bolder palette, light only; Waiting on you
+  and CI fixer move into the session list; stalls with a message prod; the
+  review loop; the Needs you filter and per-stage progress; rows on one
+  surface per repo; Usage and Loop fold on mobile. Five new stories; open
+  questions 4–6
