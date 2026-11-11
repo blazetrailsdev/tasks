@@ -1,5 +1,5 @@
 ---
-title: "trailmap: natural palette, stage marks and type tokens in application.css"
+title: "trailmap: palette, stage marks and type tokens in application.css"
 status: draft
 updated: 2026-11-10
 rfc: "0232-trailmap-fleet-session-redesign"
@@ -19,8 +19,8 @@ blocked-by: null
 
 `app/assets/stylesheets/application.css` (932 lines) defines its colors on
 `:root` (`:11`) with a dark set (`:30`). The RFC's "Palette and type" table
-gives every light and dark value, including the six stage marks, which are
-darker than the decorative clay and mustard so they meet 3:1. The concept is
+gives every light and dark value, including the six stage marks, one
+saturated hue each. The concept is
 trailmap#136 (`concepts/redesign/palette.css`).
 
 ## Acceptance criteria
@@ -28,7 +28,10 @@ trailmap#136 (`concepts/redesign/palette.css`).
 - [ ] `:root` carries every token in the RFC's table, the six `--st-*` stage
       marks and the three font tokens. Existing token names keep working, or
       every use is renamed in the same PR.
-- [ ] The dark column is applied under `prefers-color-scheme: dark`.
+- [ ] The dark column is applied under `prefers-color-scheme: dark`, and
+      `data-theme` on `<html>` forces either theme.
+- [ ] Glyphs drawn on a stage mark use an `--on-mark` token (white in
+      light, the background in dark).
 - [ ] A unit test over the token values asserts 4.5:1 for each text token
       and 3:1 for each stage mark, against the background and the surface, in
       both themes.

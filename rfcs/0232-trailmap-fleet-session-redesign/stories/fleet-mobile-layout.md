@@ -1,11 +1,19 @@
 ---
-title: "trailmap: full-bleed Fleet layout below 700px"
+title: "trailmap: full-bleed dashboard layout below 700px"
 status: draft
 updated: 2026-11-10
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-shell
 packages: [actionview]
-deps: [fleet-top-panels-grid, fleet-session-grouping, fleet-session-detail, fleet-palette-search]
+deps:
+  [
+    fleet-top-panels-grid,
+    fleet-session-grouping,
+    fleet-session-detail,
+    fleet-palette-search,
+    fleet-session-question,
+    fleet-session-stall,
+  ]
 deps-rfc: []
 est-loc: 300
 priority: null
@@ -27,8 +35,12 @@ the RFC's "Mobile" describes.
       column.
 - [ ] The top bar shows the logo and the search button built by
       `fleet-top-panels-grid`.
-- [ ] The stage header is hidden, and each card names its current stage
-      under its stepper.
+- [ ] The stage header keeps only the filter chips, and each row names its
+      current stage and progress figure under its stepper.
+- [ ] Usage and Loop fold to a one-line summary and open on tap. On a wide
+      page they are always open and their summary is out of the tab order;
+      crossing 700px re-applies both.
+- [ ] Question and stall strips stack their controls.
 - [ ] The palette opens as a full-screen sheet.
 
 ## Verification
