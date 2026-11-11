@@ -1,7 +1,7 @@
 ---
 title: "CoreQueries builds ClassMethods through Concern#class_methods"
-status: ready
-updated: 2026-10-23
+status: in-progress
+updated: 2026-11-10
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9977
+claim: "2026-11-10T23:41:38Z"
+assignee: "concern-class-methods-builds-a-module"
 blocked-by: null
 closed-reason: null
 ---

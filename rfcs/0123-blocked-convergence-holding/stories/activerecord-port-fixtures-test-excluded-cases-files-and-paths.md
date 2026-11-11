@@ -1,7 +1,7 @@
 ---
 title: "activerecord: port the 28 fixtures_test.rb exclusions about fixture files and paths"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-11-10
 rfc: "0123-blocked-convergence-holding"
 cluster: unported-tests
 packages: ["activerecord"]
@@ -15,9 +15,9 @@ deps:
 deps-rfc: []
 est-loc: 550
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9976
+claim: "2026-11-10T23:11:34Z"
+assignee: "activerecord-assertion-kind-and-value-residue-to-zero"
 blocked-by: null
 closed-reason: null
 ---

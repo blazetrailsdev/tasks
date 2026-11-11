@@ -1,7 +1,7 @@
 ---
 title: "activerecord: the 3 assertion-kind and 1 assertion-value mismatches, and the mark to 0"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-11-10
 rfc: "0123-blocked-convergence-holding"
 cluster: skipped-tests
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["psych-load-and-safe-load", "string-encoding-tag-carrier-for-force-encodi
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9976
+claim: "2026-11-10T23:11:34Z"
+assignee: "activerecord-assertion-kind-and-value-residue-to-zero"
 blocked-by: null
 closed-reason: null
 ---

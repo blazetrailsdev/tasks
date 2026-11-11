@@ -1,6 +1,6 @@
 ---
 title: "Port TrixAttachment, Attachment, AttachmentGallery and the Attachments mixins"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0219-actiontext-port"
 cluster: at-content

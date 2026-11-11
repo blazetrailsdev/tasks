@@ -1,6 +1,6 @@
 ---
 title: "app-generator-adds-master-key-and-credentials"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

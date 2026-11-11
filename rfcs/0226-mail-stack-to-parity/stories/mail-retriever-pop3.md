@@ -1,6 +1,6 @@
 ---
 title: "Port Mail::POP3 retriever and pop3_spec.rb over the spec's MockPOP3"
-status: in-progress
+status: done
 updated: 2026-11-10
 rfc: "0226-mail-stack-to-parity"
 cluster: null
