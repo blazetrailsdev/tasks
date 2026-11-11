@@ -1,7 +1,7 @@
 ---
 title: "wire-cache-store-format-version-behavior-into-helpers"
-status: ready
-updated: 2026-08-13
+status: in-progress
+updated: 2026-11-11
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10006
+claim: "2026-11-11T20:41:34Z"
+assignee: "wire-cache-store-format-version-behavior-into-helpers"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Test Array-subclass first credit; type AddressListStruct addresses"
-status: ready
-updated: 2026-11-10
+status: in-progress
+updated: 2026-11-11
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10004
+claim: "2026-11-11T20:11:30Z"
+assignee: "mail-array-subclass-first-credit-test-and-address-struct-types"
 blocked-by: null
 closed-reason: null
 ---

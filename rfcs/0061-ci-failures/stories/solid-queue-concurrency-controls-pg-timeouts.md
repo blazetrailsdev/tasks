@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-concurrency-controls-pg-timeouts"
-status: closed
+status: in-progress
 updated: 2026-11-11
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,11 +9,11 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10005
+claim: "2026-11-11T20:19:15Z"
+assignee: "solid-queue-concurrency-controls-pg-timeouts"
 blocked-by: null
-closed-reason: "Flake, not deterministic: run 43062155456 attempt 2 passed concurrency-controls.test.ts on PG shard 3 (22.4s); main CI runs 43068969363, 43078653984, 43085435409 (post-#9996) passed all PG shards; file passes locally against PG in 24s."
+closed-reason: null
 ---
 
 ## Context

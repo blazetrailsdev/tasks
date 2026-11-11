@@ -1,6 +1,6 @@
 ---
 title: "cache-marshal-serializers-dump-through-ruby-compat-marshal"
-status: draft
+status: ready
 updated: 2026-11-11
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
