@@ -5,7 +5,10 @@ updated: 2026-11-11
 rfc: "0219-actiontext-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - actiontext-content-helper-and-views
+  - actiontext-record-rich-text-and-attribute
+  - actiontext-model-tests-and-fixture-set
 deps-rfc: []
 est-loc: null
 priority: null
