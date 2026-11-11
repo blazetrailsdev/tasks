@@ -1,7 +1,7 @@
 ---
 title: "whole-number Float loses its decimal point in SQL literals (Ruby Float#to_s)"
 status: ready
-updated: 2026-10-18
+updated: 2026-11-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

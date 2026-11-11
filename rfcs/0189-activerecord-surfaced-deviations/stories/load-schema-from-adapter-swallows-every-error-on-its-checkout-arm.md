@@ -1,7 +1,7 @@
 ---
 title: "activerecord: loadSchemaFromAdapter swallows every error on its checkout arm where load_schema re-raises"
 status: ready
-updated: 2026-10-18
+updated: 2026-11-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

@@ -1,7 +1,7 @@
 ---
 title: "A static class field for tableName / primaryKey / sequenceName / inheritanceColumn / ignoredColumns shadows Base's accessor"
 status: ready
-updated: 2026-10-18
+updated: 2026-11-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

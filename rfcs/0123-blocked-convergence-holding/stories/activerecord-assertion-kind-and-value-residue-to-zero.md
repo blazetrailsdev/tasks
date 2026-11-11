@@ -1,7 +1,7 @@
 ---
 title: "activerecord: the 3 assertion-kind and 1 assertion-value mismatches, and the mark to 0"
-status: in-progress
-updated: 2026-11-10
+status: done
+updated: 2026-11-11
 rfc: "0123-blocked-convergence-holding"
 cluster: skipped-tests
 packages: ["activerecord"]

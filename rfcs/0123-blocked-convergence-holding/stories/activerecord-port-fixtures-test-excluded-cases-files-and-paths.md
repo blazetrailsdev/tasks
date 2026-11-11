@@ -1,7 +1,7 @@
 ---
 title: "activerecord: port the 28 fixtures_test.rb exclusions about fixture files and paths"
-status: in-progress
-updated: 2026-11-10
+status: done
+updated: 2026-11-11
 rfc: "0123-blocked-convergence-holding"
 cluster: unported-tests
 packages: ["activerecord"]

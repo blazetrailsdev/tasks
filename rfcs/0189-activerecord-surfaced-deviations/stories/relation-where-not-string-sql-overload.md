@@ -1,7 +1,7 @@
 ---
 title: "Relation#whereNot / WhereChain#not accept no bare SQL string, unlike Rails' where.not"
-status: ready
-updated: 2026-10-18
+status: in-progress
+updated: 2026-11-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 20
-pr: null
-claim: null
-assignee: null
+pr: trails#9978
+claim: "2026-11-11T00:11:42Z"
+assignee: "signed-id-verifier-memo-not-per-class"
 blocked-by: null
 closed-reason: null
 ---
