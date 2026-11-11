@@ -32,6 +32,11 @@ Missing files: `offset_timezone_period.rb` (5), `transitions_timezone_period.rb`
 
 ## Acceptance criteria
 
-- [ ] Every listed member is ported; `TimezonePeriod` is abstract with the two
+- [ ] Every listed member is ported, except the five that return a
+      `TimestampWithOffset` (`TimezoneTransition#local_end_at` /
+      `#local_start_at`, `TimezonePeriod#local_starts_at` / `#local_ends_at` /
+      `timestamp_with_offset`) and their tests. Those wait on
+      `tzinfo-with-offset-classes` and belong to
+      `tzinfo-period-and-transition-local-timestamps`; `TimezonePeriod` is abstract with the two
       concrete subclasses, as in the gem.
 - [ ] The five test files are ported by name.
