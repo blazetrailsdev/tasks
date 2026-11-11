@@ -80,7 +80,12 @@ matched by name.
    what the test asserts. This needs the repo owner's ruling, so the RFC stays
    `draft` until then.
 
+   **Ruled 2026-11-11 by the operator: (a).** Each example is an `it.skip`
+   under a `PERMANENT-SKIP:` line citing CLAUDE.md § "Runtime facts Node does
+   not expose".
+
 ## Changelog
 
 - 2026-11-09: initial RFC; lands `draft` until its open question is ruled on.
 - 2026-11-09: revised for review feedback.
+- 2026-11-11: open question 1 ruled (a).
