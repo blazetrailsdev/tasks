@@ -1,6 +1,6 @@
 ---
 title: "Active Record MariaDB Tests (1) failing on main @badb7480"
-status: ready
+status: closed
 updated: 2026-11-11
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-11T13:58:52Z"
+assignee: "red-badb7480"
 blocked-by: null
-closed-reason: null
+closed-reason: "Infrastructure: apt-get update timed out against Ubuntu archive mirrors (3 attempts) in the media-debs install step before any test ran; not a code failure"
 ---
 
 ## Context

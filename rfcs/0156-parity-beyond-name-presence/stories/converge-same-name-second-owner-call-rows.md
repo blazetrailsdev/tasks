@@ -1,6 +1,6 @@
 ---
 title: "converge-same-name-second-owner-call-rows"
-status: in-progress
+status: done
 updated: 2026-11-11
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "burn-down-rfc0126-repairing-surfaced-call-rows"
-status: in-progress
+status: done
 updated: 2026-11-11
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
