@@ -1,7 +1,7 @@
 ---
 title: "assertion-response-symbol-keeps-colon"
-status: ready
-updated: 2026-10-19
+status: in-progress
+updated: 2026-11-11
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9987
+claim: "2026-11-11T11:11:37Z"
+assignee: "assertion-response-symbol-keeps-colon"
 blocked-by: null
 closed-reason: null
 ---

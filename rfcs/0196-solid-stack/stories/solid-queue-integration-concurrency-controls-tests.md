@@ -1,7 +1,7 @@
 ---
 title: "solid-queue-integration-concurrency-controls-tests"
-status: ready
-updated: 2026-11-09
+status: in-progress
+updated: 2026-11-11
 rfc: "0196-solid-stack"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9988
+claim: "2026-11-11T11:41:32Z"
+assignee: "solid-queue-integration-concurrency-controls-tests"
 blocked-by: null
 closed-reason: null
 ---
