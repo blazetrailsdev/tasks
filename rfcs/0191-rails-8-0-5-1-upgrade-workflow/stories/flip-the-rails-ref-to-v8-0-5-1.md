@@ -28,7 +28,7 @@ deps:
     bump-history-is-recorded-in-the-stats-db,
   ]
 deps-rfc: []
-est-loc: 400
+est-loc: 700
 priority: null
 pr: null
 claim: null
@@ -60,7 +60,12 @@ fourth segment is `PRE`. trails ports them in twelve files:
 Measured on 2026-10-13 at `v8.0.5.1`: 141 pins DRIFT and 12 go STALE in 82
 Ruby files, ten gates red without the ledger, 103 citations in 47 files. On
 2026-11-10, `git grep -c 'vendor/rails/v8\.0\.2/'` counts 161 citations in 63
-files. The dry run at `v8.0.5.2` gives the current figures.
+files. The dry run at `v8.0.5.2` (2026-11-11, trails#9980) gives 182 DRIFT
+and 15 STALE pins (197 pair rows) and 37 test rows, about 145 citations in 61
+files, and six new gate rows it attributes to no seed row:
+`schema_up_to_date?`, `try`, `try!`, `constRegexp`, `performAllLater` and
+`ConnectionError`. The estimate is raised to 700 for the larger seed and
+those six fixes.
 
 ## Acceptance criteria
 
@@ -101,6 +106,11 @@ One PR from `main`, in separate commits:
       test-schema delta is fixed by landing
       `mirror-the-v8-0-5-2-activerecord-test-schema-models-and-fixtures` in
       this PR's place in the sequence, not by an exclude.
+- [ ] The six unattributed rows the dry run reports at `v8.0.5.2`
+      (`schema_up_to_date?`, `try`, `try!`, `constRegexp`, `performAllLater`,
+      `ConnectionError`) are known reds: each is fixed here, or the PR stops
+      and files it as a tooling story, as for any other red outside the
+      ledger.
 - [ ] The PR body gives the `parity:api` / `parity:test` rows before and
       after.
 

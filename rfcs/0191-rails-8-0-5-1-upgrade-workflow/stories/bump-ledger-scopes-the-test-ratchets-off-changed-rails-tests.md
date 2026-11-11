@@ -19,7 +19,8 @@ closed-reason: null
 ## Context
 
 Counts below were measured at `v8.0.5.1` on 2026-10-13; the target is now
-`v8.0.5.2` (RFC § 1), and the dry run gives the figures there.
+`v8.0.5.2` (RFC § 1). The dry run there (2026-11-11, trails#9980) seeds
+exactly 37 test rows, changed and moved, out of 46 tests changed upstream.
 
 RFC § 3 "The test half". The test side has no body pins. For `rails`
 `v8.0.2` → `v8.0.5.1` the flip reds two test gates: `compare.ts --gates

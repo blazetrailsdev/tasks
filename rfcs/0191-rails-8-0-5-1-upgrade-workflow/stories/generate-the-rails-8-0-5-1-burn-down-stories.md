@@ -25,7 +25,10 @@ files with a drifted or stale pin (activerecord 35, activesupport 12, arel 11,
 actiondispatch 9, actionview 6, actioncontroller 5, trailties 3, activemodel
 1), 46 defs added and 22 removed upstream, and 112 tests added, 5 removed and
 36 changed in place; `v8.0.5.2` adds about 36 files (RFC § 1 delta table)
-and five more packages, and the seeded ledger is the authority. The generator
+and five more packages. The dry run at `v8.0.5.2` (2026-11-11) seeds 197
+pair rows in 102 Ruby files and 37 test rows, with 256 tests added, 14 removed
+and 46 changed upstream: on the order of 130–150 stories. The seeded ledger is
+the authority. The generator
 is reused by the 8.1 upgrade.
 
 ## Acceptance criteria

@@ -396,12 +396,14 @@ are in the unpinned column.
 "Changed in place" is a test at the same path whose extracted assertions or
 gate differ. No test moves to a new describe path.
 
-**What this means for the plan.** The burn-down is on the order of 82 files
-to re-verify, 46 defs and 112 tests to port, and 22 defs and 5 tests to
-remove: roughly a hundred PRs at the house size. activerecord is 47% of the
-drifted pins. The version-string surface is small: 103 versioned citations in
-47 files, the `gem-version.ts` constants in six packages, `ActionDispatch`'s
-`VERSION`, and the generated schema-parity `Gemfile`.
+**What this means for the plan.** Re-measured with `pnpm parity:bump:dry-run`
+against `v8.0.5.2`, the burn-down is on the order of 102 seed files to
+re-verify, about 60 net defs to port or remove, and 256 tests added, 14 removed
+and 46 changed upstream: roughly 130–150 PRs at the house size. activerecord is
+still the largest share of the drifted pins. The version-string surface is about
+145 versioned citations in 61 files, the `gem-version.ts` constants in six
+packages, `ActionDispatch`'s `VERSION`, and the generated schema-parity
+`Gemfile`.
 
 #### How the size was measured
 
