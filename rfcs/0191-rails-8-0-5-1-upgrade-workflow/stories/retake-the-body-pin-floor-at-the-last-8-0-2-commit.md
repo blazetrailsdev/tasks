@@ -50,9 +50,13 @@ actionmailer, activestorage, actionmailbox and actiontext, enrolled since
 carry 2 of the 39 new gate rows (77 and 13 of 183 for v8.1.4).
 
 On 2026-11-11 the count is 2,422 unpinned matched pairs, after the five
-packages enrolled since. The dry run at `v8.0.5.2` seeds 197 pair rows and
-attributes 8 new gate rows to unpinned pairs whose body changed, so pinning
-them grows the seed to about 244 pair rows.
+packages enrolled since. Of those, 45 change and 1 is removed at `v8.0.5.2`
+(activestorage 22, trailties 6, activesupport 4, actioncable 4, activejob 4,
+activerecord 3, actionmailbox 2, from the dry run's `body-hashes.json`
+snapshots on 2026-11-11). Once pinned, each becomes a DRIFT or STALE row, so
+the seed grows from 197 pair rows to 243. Separately, 8 of the dry run's new
+gate rows already land on such pairs (`unpinnedChanged`); the floor turns them
+into seeded rows.
 
 This is a second pass over RFC 0159's
 `pin-the-body-hash-floor-before-the-first-bump` (done, trails#8100), which
