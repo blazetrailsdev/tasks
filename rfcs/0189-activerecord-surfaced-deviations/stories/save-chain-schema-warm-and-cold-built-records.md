@@ -1,6 +1,6 @@
 ---
 title: "activerecord: the save chain's schema warm and records built against a cold schema cache"
-status: claimed
+status: in-progress
 updated: 2026-11-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 23
-pr: null
+pr: trails#9997
 claim: "2026-11-11T14:11:38Z"
 assignee: "model-schema-statics-as-fields-shadow-accessors"
 blocked-by: null

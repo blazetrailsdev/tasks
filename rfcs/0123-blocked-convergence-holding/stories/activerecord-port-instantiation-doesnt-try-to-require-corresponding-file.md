@@ -1,6 +1,6 @@
 ---
 title: "activerecord: port inheritance_test's 'instantiation doesnt try to require corresponding file' once instantiate resolves the type through find_sti_class"
-status: blocked
+status: in-progress
 updated: 2026-11-11
 rfc: "0123-blocked-convergence-holding"
 cluster: null
@@ -11,10 +11,10 @@ deps:
 deps-rfc: []
 est-loc: 70
 priority: null
-pr: null
+pr: trails#9995
 claim: "2026-11-11T13:11:34Z"
 assignee: "activerecord-port-instantiation-doesnt-try-to-require-corresponding-file"
-blocked-by: "Needs core-inherited-resets-ancestor-find-by-caches: Firm.find reuses a find-by statement cached before FirmOnTheFly exists (core.rb:414-419 ancestor reset unported)"
+blocked-by: null
 closed-reason: null
 ---
 

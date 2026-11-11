@@ -1,6 +1,6 @@
 ---
 title: "actionview: TagHelper/ActiveModelHelper/fixture modules drop defineModule for plain literals + markModuleObject"
-status: in-progress
+status: done
 updated: 2026-11-11
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Port ActionText::Content and Rendering, with content_test"
-status: ready
-updated: 2026-11-07
+status: claimed
+updated: 2026-11-11
 rfc: "0219-actiontext-port"
 cluster: at-content
 packages: ["actiontext"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 500
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-11T16:44:46Z"
+assignee: "actiontext-content-and-rendering"
 blocked-by: null
 closed-reason: null
 ---
