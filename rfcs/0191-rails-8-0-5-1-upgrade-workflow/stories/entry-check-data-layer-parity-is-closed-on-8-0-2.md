@@ -1,7 +1,7 @@
 ---
 title: "Entry check: the data layer is at 100% on Rails 8.0.2 and every gate is green"
-status: ready
-updated: 2026-11-10
+status: blocked
+updated: 2026-11-11
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: entry
 packages: [arel, activemodel, activerecord]
@@ -10,9 +10,9 @@ deps-rfc: ["0175-activerecord-test-parity-100"]
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-11T14:45:38Z"
+assignee: "entry-check-data-layer-parity-is-closed-on-8-0-2"
+blocked-by: "data layer not at 100%: 5 AR/AM methods + 8 AR tests (yaml_column) missing, main CI red at 876804dd8b; findings recorded in story (tasks aaa011434)"
 closed-reason: null
 ---
 

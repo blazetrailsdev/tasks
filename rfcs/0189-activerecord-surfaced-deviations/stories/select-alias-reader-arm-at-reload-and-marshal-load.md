@@ -1,7 +1,7 @@
 ---
 title: "activerecord: the select-alias reader arm at reload materializes the attribute set, and marshal_load's cannot be receipted"
-status: ready
-updated: 2026-10-18
+status: claimed
+updated: 2026-11-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 150
 priority: 26
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-11T14:11:38Z"
+assignee: "model-schema-statics-as-fields-shadow-accessors"
 blocked-by: null
 closed-reason: null
 ---

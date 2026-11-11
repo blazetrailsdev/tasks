@@ -1,6 +1,6 @@
 ---
 title: "Nested-attributes assigners omit attributes.with_indifferent_access, so reject_if sees the caller's carrier"
-status: ready
+status: claimed
 updated: 2026-11-11
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 80
 priority: 13
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-11T14:11:38Z"
+assignee: "model-schema-statics-as-fields-shadow-accessors"
 blocked-by: null
 closed-reason: null
 ---

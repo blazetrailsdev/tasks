@@ -1,6 +1,6 @@
 ---
 title: "semaphore-proxy-accepts-active-job-receiver"
-status: draft
+status: done
 updated: 2026-11-11
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#9988
 claim: null
 assignee: null
 blocked-by: null

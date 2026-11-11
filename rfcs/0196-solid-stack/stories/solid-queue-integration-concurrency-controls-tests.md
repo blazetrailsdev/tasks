@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-integration-concurrency-controls-tests"
-status: in-progress
+status: done
 updated: 2026-11-11
 rfc: "0196-solid-stack"
 cluster: null
