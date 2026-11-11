@@ -1,6 +1,6 @@
 ---
 title: "class-paths-resolve-for-entry-less-deep-imports"
-status: claimed
+status: closed
 updated: 2026-11-11
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: "2026-11-11T18:51:36Z"
 assignee: "class-paths-resolve-for-entry-less-deep-imports"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: deep-importing a module without its package entry is not a supported load path; the one case (trails#9376) was fixed by importing the entry, as a Rails app requires action_dispatch"
 ---
 
 ## Context

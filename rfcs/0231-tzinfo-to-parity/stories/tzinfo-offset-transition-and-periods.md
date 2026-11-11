@@ -1,7 +1,7 @@
 ---
 title: "Finish TimezoneOffset, TimezoneTransition, TimezonePeriod and port OffsetTimezonePeriod / TransitionsTimezonePeriod"
-status: ready
-updated: 2026-11-10
+status: in-progress
+updated: 2026-11-11
 rfc: "0231-tzinfo-to-parity"
 cluster: null
 packages:
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 550
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#10003
+claim: "2026-11-11T19:41:30Z"
+assignee: "tzinfo-offset-transition-and-periods"
 blocked-by: null
 closed-reason: null
 ---

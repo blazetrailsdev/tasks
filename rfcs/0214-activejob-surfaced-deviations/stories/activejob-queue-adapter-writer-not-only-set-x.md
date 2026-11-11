@@ -1,6 +1,6 @@
 ---
 title: "activejob: port queue_adapter= as a static setter, not only setQueueAdapter"
-status: ready
+status: in-progress
 updated: 2026-11-11
 rfc: "0214-activejob-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10002
+claim: "2026-11-11T19:11:38Z"
+assignee: "activejob-after-discard-block-and-logger-typed"
 blocked-by: null
 closed-reason: null
 ---

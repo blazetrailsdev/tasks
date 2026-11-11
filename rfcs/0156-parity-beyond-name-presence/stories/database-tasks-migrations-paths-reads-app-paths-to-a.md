@@ -1,7 +1,7 @@
 ---
 title: "database-tasks-migrations-paths-reads-app-paths-to-a"
-status: draft
-updated: 2026-11-10
+status: closed
+updated: 2026-11-11
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: converged in trails#9971; every reader is async, so the reader awaits Path#to_a"
 ---
 
 ## Context
