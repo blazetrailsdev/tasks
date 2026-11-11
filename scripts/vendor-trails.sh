@@ -62,26 +62,35 @@ for p in "${PKGS[@]}"; do
 done
 echo "$SHA" > "$VENDOR/TRAILS_PIN"
 
-# Rewrite pnpm.overrides so every @blazetrails/* resolves to a vendored tarball
-# instead of the registry (these packages are unpublished — npm 404s).
+# Rewrite the overrides so every @blazetrails/* resolves to a vendored tarball
+# instead of the registry (these packages are unpublished — npm 404s). They go
+# in pnpm-workspace.yaml, the top-level `overrides:` block, which is kept last
+# in the file: pnpm 11+ ignores `pnpm.overrides` in package.json.
 node -e '
 const fs=require("fs");
-const vendor=process.argv[1], pkgPath=process.argv[2];
+const [vendor,pkgPath,wsPath]=process.argv.slice(1);
 const overrides={};
 for(const f of fs.readdirSync(vendor).filter(f=>f.endsWith(".tgz")).sort()){
   const name="@blazetrails/"+f.replace(/^blazetrails-/,"").replace(/-\d+\.\d+\.\d+\.tgz$/,"");
   overrides[name]="file:./vendor/"+f;
 }
 const pkg=JSON.parse(fs.readFileSync(pkgPath,"utf8"));
-pkg.pnpm={...pkg.pnpm,overrides};
+if(pkg.pnpm){ delete pkg.pnpm.overrides; if(!Object.keys(pkg.pnpm).length) delete pkg.pnpm; }
 // Direct deps: activerecord for the models, date for the Temporal types the
 // column declarations reference. Everything else stays transitive.
 for(const n of ["@blazetrails/activerecord","@blazetrails/date"]){
   pkg.dependencies[n]=overrides[n].replace("file:./","file:");
 }
 fs.writeFileSync(pkgPath,JSON.stringify(pkg,null,2)+"\n");
-console.log("  overrides -> "+Object.keys(overrides).length+" packages");
-' "$VENDOR" "$HERE/package.json"
+const ws=fs.readFileSync(wsPath,"utf8");
+const at=ws.search(/^overrides:\s*$/m);
+if(at>=0 && /\n\S/.test(ws.slice(at).replace(/^overrides:.*\n/,"")))
+  throw new Error("pnpm-workspace.yaml: overrides must be the last top-level key");
+const head=(at>=0?ws.slice(0,at):ws).replace(/\n+$/,"");
+const block=["overrides:",...Object.entries(overrides).map(([n,v])=>"  "+JSON.stringify(n)+": "+JSON.stringify(v))].join("\n");
+fs.writeFileSync(wsPath,head+"\n\n"+block+"\n");
+console.log("  overrides -> "+Object.keys(overrides).length+" packages (pnpm-workspace.yaml)");
+' "$VENDOR" "$HERE/package.json" "$HERE/pnpm-workspace.yaml"
 
 echo "pinned trails @ $SHA"
 echo "now run: pnpm install"
