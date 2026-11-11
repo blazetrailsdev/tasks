@@ -1,7 +1,7 @@
 ---
 title: "Port TZInfo::Timestamp instance surface and its tc_timestamp.rb tests"
-status: in-progress
-updated: 2026-11-10
+status: done
+updated: 2026-11-11
 rfc: "0231-tzinfo-to-parity"
 cluster: null
 packages:

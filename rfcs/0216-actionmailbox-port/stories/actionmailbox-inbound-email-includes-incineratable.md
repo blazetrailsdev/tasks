@@ -1,7 +1,7 @@
 ---
 title: "Include Incineratable in ActionMailbox::InboundEmail in Rails' order"
-status: ready
-updated: 2026-11-07
+status: done
+updated: 2026-11-11
 rfc: "0216-actionmailbox-port"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 5
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9964
+claim: "2026-11-11T10:11:40Z"
+assignee: "actionmailbox-inbound-email-includes-incineratable"
 blocked-by: null
 closed-reason: null
 ---

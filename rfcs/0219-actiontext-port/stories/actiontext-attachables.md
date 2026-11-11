@@ -1,7 +1,7 @@
 ---
 title: "Port Attachable, the three Attachables, and attachable/attachment/trix tests"
-status: ready
-updated: 2026-11-07
+status: in-progress
+updated: 2026-11-11
 rfc: "0219-actiontext-port"
 cluster: at-content
 packages: ["actiontext"]
@@ -9,9 +9,9 @@ deps: ["actiontext-trix-attachment-and-attachment", "actiontext-migration-and-te
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9986
+claim: "2026-11-11T10:41:32Z"
+assignee: "actiontext-attachables"
 blocked-by: null
 closed-reason: null
 ---
