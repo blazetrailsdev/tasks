@@ -8,6 +8,7 @@ packages: []
 deps:
   - trailties-plugin-generator-part-2-and-plugin-command
   - port-trailties-plugin-command
+  - generated-plugin-bin-trails-cannot-boot
 deps-rfc: []
 est-loc: 120
 priority: null
