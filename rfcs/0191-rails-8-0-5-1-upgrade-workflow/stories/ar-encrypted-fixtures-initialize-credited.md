@@ -1,7 +1,7 @@
 ---
 title: "EncryptedFixtures#initialize's inlined segment is credited"
-status: ready
-updated: 2026-11-11
+status: in-progress
+updated: 2026-11-12
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: entry
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#10018
+claim: "2026-11-12T10:11:37Z"
+assignee: "ar-compat-v6-0-table-definition-belongs-to-credited"
 blocked-by: null
 closed-reason: null
 ---
