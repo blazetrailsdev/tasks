@@ -1,6 +1,6 @@
 ---
 title: "no-floating-promises runs repo-wide with ignoreVoid false, against an only-shrink mark"
-status: ready
+status: claimed
 updated: 2026-11-12
 rfc: "0234-no-void-promises"
 cluster: gate
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-12T15:45:33Z"
+assignee: "constructor-creates-no-promise-lint-rule"
 blocked-by: null
 closed-reason: null
 ---
