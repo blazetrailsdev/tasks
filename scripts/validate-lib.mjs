@@ -365,10 +365,13 @@ export function validate({ rfcs, stories }) {
   // number-keyed reference (index ordering, "RFC 0022" prose). finalize-rfc.mjs
   // is meant to hand out a unique number per merge; a duplicate means that
   // serialization slipped, so flag it — except the grandfathered pairs above.
+  // `0000-` is the unnumbered placeholder, not a number: a PR may carry several
+  // (e.g. a meta RFC plus its children), and auto-finalize-rfc numbers each in
+  // turn at merge, so placeholders never collide once numbered.
   const prefixDirs = new Map();
   for (const r of rfcs) {
     const m = r.dir.match(/^(\d{4})-/);
-    if (!m) continue;
+    if (!m || m[1] === "0000") continue;
     (prefixDirs.get(m[1]) ?? prefixDirs.set(m[1], []).get(m[1])).push(r);
   }
   for (const [prefix, group] of prefixDirs) {
