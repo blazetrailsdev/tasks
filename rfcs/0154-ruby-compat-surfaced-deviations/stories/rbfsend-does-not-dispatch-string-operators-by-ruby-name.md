@@ -1,7 +1,7 @@
 ---
 title: 'InjectIntoFile#invoke! spells String#+ directly, not rbFSend(…, "plus")'
-status: ready
-updated: 2026-10-23
+status: done
+updated: 2026-11-12
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-12T22:11:29Z"
+assignee: "gem-version-spaceship-for-rack-release-checks"
 blocked-by: null
 closed-reason: null
 ---

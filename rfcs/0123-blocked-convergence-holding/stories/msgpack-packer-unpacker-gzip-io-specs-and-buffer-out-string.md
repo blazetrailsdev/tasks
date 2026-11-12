@@ -1,6 +1,6 @@
 ---
 title: "msgpack-packer-unpacker-gzip-io-specs-and-buffer-out-string"
-status: in-progress
+status: done
 updated: 2026-11-12
 rfc: "0123-blocked-convergence-holding"
 cluster: null

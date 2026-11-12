@@ -1,7 +1,7 @@
 ---
 title: "AutoFilteredParameters#apply_filter never writes klass.filter_attributes and carries two invented guards"
-status: ready
-updated: 2026-10-18
+status: in-progress
+updated: 2026-11-12
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 100
 priority: 28
-pr: null
-claim: null
-assignee: null
+pr: trails#10045
+claim: "2026-11-12T22:41:56Z"
+assignee: "time-zone-converter-cast-bypasses-user-input-in-time-zone"
 blocked-by: null
 closed-reason: null
 ---

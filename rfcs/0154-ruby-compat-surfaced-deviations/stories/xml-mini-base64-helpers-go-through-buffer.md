@@ -1,7 +1,7 @@
 ---
 title: "XmlMini's Base64 helpers go through Buffer, not ruby-compat Base64"
-status: ready
-updated: 2026-10-23
+status: in-progress
+updated: 2026-11-12
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10043
+claim: "2026-11-12T22:11:29Z"
+assignee: "gem-version-spaceship-for-rack-release-checks"
 blocked-by: null
 closed-reason: null
 ---

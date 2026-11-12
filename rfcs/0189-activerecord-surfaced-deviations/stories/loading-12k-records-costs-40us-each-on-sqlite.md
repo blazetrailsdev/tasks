@@ -1,7 +1,7 @@
 ---
 title: "Loading records is ~5x the cost of plucking the same rows: 12.7k SQLite rows take 0.5s to instantiate"
-status: ready
-updated: 2026-10-18
+status: in-progress
+updated: 2026-11-12
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 30
-pr: null
-claim: null
-assignee: null
+pr: trails#10045
+claim: "2026-11-12T22:41:56Z"
+assignee: "time-zone-converter-cast-bypasses-user-input-in-time-zone"
 blocked-by: null
 closed-reason: null
 ---

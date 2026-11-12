@@ -1,6 +1,6 @@
 ---
 title: "activerecord: verify and pin the 59 protocol-definition pairs matched since the body-pin floor"
-status: in-progress
+status: done
 updated: 2026-11-12
 rfc: "0156-parity-beyond-name-presence"
 cluster: pins
