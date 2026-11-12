@@ -1,7 +1,7 @@
 ---
 title: "activerecord: verify and pin the 59 protocol-definition pairs matched since the body-pin floor"
-status: ready
-updated: 2026-10-19
+status: in-progress
+updated: 2026-11-12
 rfc: "0156-parity-beyond-name-presence"
 cluster: pins
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: ["port-hash-eql-rows-surfaced-by-scoring"]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10041
+claim: "2026-11-12T21:14:23Z"
+assignee: "burn-down-the-declaration-only-population"
 blocked-by: null
 closed-reason: null
 ---

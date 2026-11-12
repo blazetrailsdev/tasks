@@ -1,6 +1,6 @@
 ---
 title: "inlined-from-placement accepts @inlinedFrom on a static async new"
-status: in-progress
+status: done
 updated: 2026-11-12
 rfc: "0234-no-void-promises"
 cluster: gate

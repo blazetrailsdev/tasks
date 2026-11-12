@@ -1,7 +1,7 @@
 ---
 title: "Port ActionText::Record, RichText, Serialization and has_rich_text"
-status: ready
-updated: 2026-11-07
+status: claimed
+updated: 2026-11-12
 rfc: "0219-actiontext-port"
 cluster: at-models
 packages: ["actiontext"]
@@ -15,8 +15,8 @@ deps-rfc: []
 est-loc: 450
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-12T21:59:03Z"
+assignee: "actiontext-record-rich-text-and-attribute"
 blocked-by: null
 closed-reason: null
 ---

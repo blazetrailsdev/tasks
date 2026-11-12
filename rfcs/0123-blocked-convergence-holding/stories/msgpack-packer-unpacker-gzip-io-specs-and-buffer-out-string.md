@@ -1,7 +1,7 @@
 ---
 title: "msgpack-packer-unpacker-gzip-io-specs-and-buffer-out-string"
-status: ready
-updated: 2026-10-15
+status: in-progress
+updated: 2026-11-12
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10042
+claim: "2026-11-12T21:41:41Z"
+assignee: "msgpack-packer-unpacker-gzip-io-specs-and-buffer-out-string"
 blocked-by: null
 closed-reason: null
 ---

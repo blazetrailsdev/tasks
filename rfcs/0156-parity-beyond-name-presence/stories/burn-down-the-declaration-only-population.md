@@ -1,7 +1,7 @@
 ---
 title: "Burn down the declaration-only population parity:api measures"
 status: ready
-updated: 2026-09-01
+updated: 2026-11-12
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

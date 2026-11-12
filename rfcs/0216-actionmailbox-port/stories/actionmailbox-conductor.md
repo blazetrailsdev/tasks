@@ -1,6 +1,6 @@
 ---
 title: "Port the Rails conductor for ActionMailbox (controllers, views, layout)"
-status: in-progress
+status: done
 updated: 2026-11-12
 rfc: "0216-actionmailbox-port"
 cluster: amb-engine
