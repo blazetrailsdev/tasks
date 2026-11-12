@@ -1,6 +1,6 @@
 ---
 title: "activerecord-lib-test-infra-to-test"
-status: draft
+status: in-progress
 updated: 2026-11-12
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10036
+claim: "2026-11-12T19:06:52Z"
+assignee: "activerecord-lib-test-infra-to-test"
 blocked-by: null
 closed-reason: null
 ---

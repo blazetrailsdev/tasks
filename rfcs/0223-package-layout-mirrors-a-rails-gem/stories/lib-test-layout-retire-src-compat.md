@@ -1,7 +1,7 @@
 ---
 title: "Remove the src/ arms from layout tooling and add a no-src guard"
 status: ready
-updated: 2026-11-05
+updated: 2026-11-12
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: layout-tooling
 packages: [scripts]

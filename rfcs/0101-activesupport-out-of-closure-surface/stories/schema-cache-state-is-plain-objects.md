@@ -1,6 +1,6 @@
 ---
 title: "schema-cache-state-is-plain-objects"
-status: draft
+status: closed
 updated: 2026-11-12
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: trails#10024 dropped the global plain-object load rule; SchemaCache loads Maps as on main."
 ---
 
 ## Context

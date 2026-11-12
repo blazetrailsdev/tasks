@@ -1,6 +1,6 @@
 ---
 title: "executor_around_test_case runs vitest beforeEach outside the fixture transaction"
-status: draft
+status: closed
 updated: 2026-11-12
 rfc: "0216-actionmailbox-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: trails#10031 runs the executor's runBang in autorun's beforeEach before setup hooks, so setup is inside the run and the fixture transaction."
 ---
 
 ## Context

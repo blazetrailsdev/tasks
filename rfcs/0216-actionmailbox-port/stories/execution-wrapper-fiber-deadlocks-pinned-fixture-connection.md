@@ -1,6 +1,6 @@
 ---
 title: "ExecutionWrapper.wrap fiber deadlocks on the pinned fixture connection"
-status: draft
+status: closed
 updated: 2026-11-12
 rfc: "0216-actionmailbox-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: with trails#10031 the executor is active for the whole test, so ExecutionWrapper.wrap nests (no new Fiber) and the pinned connection is reused."
 ---
 
 ## Context
