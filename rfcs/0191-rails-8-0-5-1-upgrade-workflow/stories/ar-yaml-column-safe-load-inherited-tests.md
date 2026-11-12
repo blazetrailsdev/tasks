@@ -1,6 +1,6 @@
 ---
 title: "YAMLColumnTestWithSafeLoad runs YAMLColumnTest's inherited tests"
-status: in-progress
+status: done
 updated: 2026-11-12
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: entry
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 1
-pr: trails#10018
+pr: trails#10015
 claim: "2026-11-12T10:11:37Z"
 assignee: "ar-compat-v6-0-table-definition-belongs-to-credited"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "default_timezone: local is ignored by the datetime cast; its test is vacuous under TZ=UTC"
-status: in-progress
+status: done
 updated: 2026-11-12
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

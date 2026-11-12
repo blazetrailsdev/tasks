@@ -1,6 +1,6 @@
 ---
 title: "port-solid-queue-tasks"
-status: in-progress
+status: done
 updated: 2026-11-12
 rfc: "0196-solid-stack"
 cluster: null

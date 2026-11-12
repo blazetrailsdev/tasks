@@ -1,7 +1,7 @@
 ---
 title: "converge-module-eval-import-cycle-edges"
 status: ready
-updated: 2026-11-05
+updated: 2026-11-12
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []

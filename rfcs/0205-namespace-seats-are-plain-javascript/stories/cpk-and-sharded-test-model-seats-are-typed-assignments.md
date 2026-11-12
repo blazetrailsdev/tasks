@@ -1,7 +1,7 @@
 ---
 title: "cpk-and-sharded-test-model-seats-are-typed-assignments"
 status: ready
-updated: 2026-11-05
+updated: 2026-11-12
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []

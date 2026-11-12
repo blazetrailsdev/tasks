@@ -1,7 +1,7 @@
 ---
 title: "import-cycles: count reads in local functions called at module-eval time"
-status: ready
-updated: 2026-11-05
+status: in-progress
+updated: 2026-11-12
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: [scripts]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10020
+claim: "2026-11-12T11:11:40Z"
+assignee: "converge-module-eval-import-cycle-edges"
 blocked-by: null
 closed-reason: null
 ---

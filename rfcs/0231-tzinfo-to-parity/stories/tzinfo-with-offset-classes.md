@@ -1,7 +1,7 @@
 ---
 title: "Port WithOffset, TimeWithOffset, DateTimeWithOffset and TimestampWithOffset"
-status: ready
-updated: 2026-11-10
+status: blocked
+updated: 2026-11-12
 rfc: "0231-tzinfo-to-parity"
 cluster: null
 packages:
@@ -14,9 +14,9 @@ deps-rfc: []
 est-loc: 600
 priority: 3
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-12T11:41:33Z"
+assignee: "tzinfo-with-offset-classes"
+blocked-by: "waits on date-time-localtime-and-datetime-jd and date-time-subclass-preserving-surface: Time#localtime/gmtime/round/to_a, subclass-preserving Time.at/getlocal, DateTime.jd/to_datetime answering DateTime"
 closed-reason: null
 ---
 

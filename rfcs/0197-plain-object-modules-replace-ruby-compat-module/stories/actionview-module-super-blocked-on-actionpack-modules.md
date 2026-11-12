@@ -1,6 +1,6 @@
 ---
 title: "actionview-module-super-blocked-on-actionpack-modules"
-status: claimed
+status: in-progress
 updated: 2026-11-12
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10019
 claim: "2026-11-12T10:41:41Z"
 assignee: "actionview-module-super-blocked-on-actionpack-modules"
 blocked-by: null

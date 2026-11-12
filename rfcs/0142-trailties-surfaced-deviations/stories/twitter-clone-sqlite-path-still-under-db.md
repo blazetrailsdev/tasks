@@ -1,6 +1,6 @@
 ---
 title: "examples/twitter-clone and database.test.ts still carry the pre-storage/ sqlite3 path"
-status: in-progress
+status: done
 updated: 2026-11-12
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

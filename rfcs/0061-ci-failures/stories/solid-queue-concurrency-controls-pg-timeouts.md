@@ -1,7 +1,7 @@
 ---
 title: "solid-queue-concurrency-controls-pg-timeouts"
-status: in-progress
-updated: 2026-11-11
+status: done
+updated: 2026-11-12
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

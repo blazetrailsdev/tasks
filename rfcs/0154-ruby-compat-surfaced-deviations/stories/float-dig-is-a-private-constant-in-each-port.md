@@ -1,6 +1,6 @@
 ---
 title: "floatRoundOverflow reads FLOAT_DIG instead of a 15 literal"
-status: in-progress
+status: done
 updated: 2026-11-12
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
