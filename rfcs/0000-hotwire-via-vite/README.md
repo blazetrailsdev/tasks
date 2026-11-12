@@ -37,14 +37,13 @@ package boundaries, the runtime topology, the trailties convergence stories,
 the end-to-end verification and the open questions. Each gem port is its own
 RFC, scoped to its package:
 
-| RFC (slug)        | Package                   | Stories |
-| ----------------- | ------------------------- | ------- |
-| `rack-proxy-port` | `@blazetrails/rack-proxy` | 1       |
-
-| `vite-assets-port` | `@blazetrails/vite-assets` | 5 |
-| `vite-rails-port` | `@blazetrails/vite-rails` | 2 |
-| `turbo-rails-port` | `@blazetrails/turbo-rails` | 9 |
-| `stimulus-rails-port` | `@blazetrails/stimulus-rails` | 2 |
+| RFC (slug)            | Package                       | Stories |
+| --------------------- | ----------------------------- | ------- |
+| `rack-proxy-port`     | `@blazetrails/rack-proxy`     | 1       |
+| `vite-assets-port`    | `@blazetrails/vite-assets`    | 5       |
+| `vite-rails-port`     | `@blazetrails/vite-rails`     | 2       |
+| `turbo-rails-port`    | `@blazetrails/turbo-rails`    | 9       |
+| `stimulus-rails-port` | `@blazetrails/stimulus-rails` | 2       |
 
 The RFCs are cross-referenced by slug, and they are linked through story
 `deps` rather than `deps-rfc`. `finalize-rfc.mjs` rewrites a `0000-<slug>` id
@@ -170,16 +169,15 @@ Alternatives). The `hotwire-vite-claude-md-ruling` story lands this text as a ne
 
 ### Package boundaries
 
-| Package                   | Ports                            | Knows about Vite? |
-| ------------------------- | -------------------------------- | ----------------- |
-| `@blazetrails/rack-proxy` | `rack-proxy` gem's `Rack::Proxy` | no                |
-
-| `@blazetrails/vite-assets` | `vite_ruby/lib/vite_ruby{,.rb}`, `tasks/vite.rake`, `exe/vite` | yes |
-| `@blazetrails/vite-rails` | `vite_rails/lib/vite_rails{,.rb}`, `tasks/vite.rake` | yes |
-| `@blazetrails/turbo-rails` | `lib/turbo*`, `app/{channels,controllers,helpers,jobs,models}/turbo`, the frame layout | install template only |
-| `@blazetrails/stimulus-rails` | `lib/stimulus*`, `lib/generators/stimulus`, `lib/tasks`, `lib/install` | install template only |
-| `@blazetrails/actionview` | unchanged; `asset_url_helper.rb` stays pipeline-agnostic | no |
-| `@blazetrails/trailties` | generator default; retires `lib/assets/*`; `trails server` stops running inside Vite | through vite-rails |
+| Package                       | Ports                                                                                  | Knows about Vite?     |
+| ----------------------------- | -------------------------------------------------------------------------------------- | --------------------- |
+| `@blazetrails/rack-proxy`     | `rack-proxy` gem's `Rack::Proxy`                                                       | no                    |
+| `@blazetrails/vite-assets`    | `vite_ruby/lib/vite_ruby{,.rb}`, `tasks/vite.rake`, `exe/vite`                         | yes                   |
+| `@blazetrails/vite-rails`     | `vite_rails/lib/vite_rails{,.rb}`, `tasks/vite.rake`                                   | yes                   |
+| `@blazetrails/turbo-rails`    | `lib/turbo*`, `app/{channels,controllers,helpers,jobs,models}/turbo`, the frame layout | install template only |
+| `@blazetrails/stimulus-rails` | `lib/stimulus*`, `lib/generators/stimulus`, `lib/tasks`, `lib/install`                 | install template only |
+| `@blazetrails/actionview`     | unchanged; `asset_url_helper.rb` stays pipeline-agnostic                               | no                    |
+| `@blazetrails/trailties`      | generator default; retires `lib/assets/*`; `trails server` stops running inside Vite   | through vite-rails    |
 
 Each package mirrors its gem's file layout, so `parity:api` keys on it. The
 `vendor/sources.ts` entries from trails#10037 already map the lib paths.
