@@ -1,6 +1,6 @@
 ---
 title: "ActiveSupport callbacks and cache store await their promises instead of pre-observing them"
-status: draft
+status: ready
 updated: 2026-11-12
 rfc: "0234-no-void-promises"
 cluster: discarded-calls

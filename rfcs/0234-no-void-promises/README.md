@@ -39,6 +39,7 @@ clusters:
   - discarded-calls
   - background-work
   - tests
+priority: 2
 ---
 
 # RFC 0234 — No void promises; async initialize is an awaited static new

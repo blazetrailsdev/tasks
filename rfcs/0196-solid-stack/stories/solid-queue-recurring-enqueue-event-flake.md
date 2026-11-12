@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-recurring-enqueue-event-flake"
-status: ready
+status: claimed
 updated: 2026-11-12
 rfc: "0196-solid-stack"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-12T14:41:33Z"
+assignee: "solid-queue-recurring-enqueue-event-flake"
 blocked-by: null
 closed-reason: null
 ---

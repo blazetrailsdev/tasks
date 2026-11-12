@@ -1,6 +1,6 @@
 ---
 title: "http-authentication-controller-methods-are-namespaces-not-modules"
-status: ready
+status: in-progress
 updated: 2026-11-12
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10023
+claim: "2026-11-12T14:11:36Z"
+assignee: "authentication-generator-e2e-request-cycle"
 blocked-by: null
 closed-reason: null
 ---

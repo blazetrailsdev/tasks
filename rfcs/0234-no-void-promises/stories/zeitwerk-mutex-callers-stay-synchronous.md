@@ -1,6 +1,6 @@
 ---
 title: "Zeitwerk's Mutex#synchronize callers stay synchronous and raise on contention"
-status: draft
+status: ready
 updated: 2026-11-12
 rfc: "0234-no-void-promises"
 cluster: discarded-calls

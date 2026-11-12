@@ -1,6 +1,6 @@
 ---
 title: "ActiveModel and every other package's tests drop no promises"
-status: draft
+status: ready
 updated: 2026-11-12
 rfc: "0234-no-void-promises"
 cluster: tests

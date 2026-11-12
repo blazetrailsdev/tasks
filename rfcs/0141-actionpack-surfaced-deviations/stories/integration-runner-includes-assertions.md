@@ -1,7 +1,7 @@
 ---
 title: "integration-runner-includes-assertions"
 status: ready
-updated: 2026-10-19
+updated: 2026-11-12
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

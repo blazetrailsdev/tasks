@@ -1,6 +1,6 @@
 ---
 title: "mail-check-delivery-params-gem-deprecate-wrappers"
-status: in-progress
+status: closed
 updated: 2026-11-12
 rfc: "0226-mail-stack-to-parity"
 cluster: null
@@ -13,7 +13,7 @@ pr: trails#10021
 claim: "2026-11-12T12:11:39Z"
 assignee: "mail-check-delivery-params-gem-deprecate-wrappers"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: Gem::Deprecate is RubyGems package-manager machinery with no meaning in an npm package, and its 2023-06 removal date has passed; CheckDeliveryParams stays a plain port (trails#10021)."
 ---
 
 ## Context

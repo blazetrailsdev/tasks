@@ -1,7 +1,7 @@
 ---
 title: "Live::Buffer#write does not wait on a full SizedQueue, so an overfilling action never sees ClientDisconnected"
 status: ready
-updated: 2026-10-19
+updated: 2026-11-12
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

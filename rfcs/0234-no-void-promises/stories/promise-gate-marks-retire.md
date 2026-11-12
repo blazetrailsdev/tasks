@@ -1,6 +1,6 @@
 ---
 title: "The three promise-gate marks read 0 and are deleted, leaving plain errors"
-status: draft
+status: ready
 updated: 2026-11-12
 rfc: "0234-no-void-promises"
 cluster: gate

@@ -1,6 +1,6 @@
 ---
 title: "resetColumnInformation is awaited, or synchronous as in Rails"
-status: draft
+status: ready
 updated: 2026-11-12
 rfc: "0234-no-void-promises"
 cluster: discarded-calls

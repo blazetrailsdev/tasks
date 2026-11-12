@@ -1,6 +1,6 @@
 ---
 title: "trails CLAUDE.md ratifies no void promises and async initialize as static new"
-status: draft
+status: ready
 updated: 2026-11-12
 rfc: "0234-no-void-promises"
 cluster: gate
