@@ -31,7 +31,7 @@ This story changes repo tooling only (`eslint/`, `eslint.config.mjs`, `scripts/`
 - [ ] A type-aware rule reports, inside a `constructor` body: a thenable-typed call expression (dropped, voided, stored or chained), `.then` / `.catch` / `.finally`, and an `async` IIFE.
 - [ ] `new Thread(...)` from `@blazetrails/ruby-compat` is not reported; reading or storing its promise is.
 - [ ] A class declaring `static async new` must declare a `protected` or `private` constructor; a public one is reported.
-- [ ] RuleTester covers each arm; runs repo-wide against an only-shrink mark seeded at 6.
+- [ ] RuleTester covers each arm; runs repo-wide against an only-shrink mark seeded at the rule's own count: 17 on trails#10035, the six constructors above among them, the rest stored promises, a second promise in one constructor, and a public constructor beside `static async new`.
 
 ## Definition of done
 
