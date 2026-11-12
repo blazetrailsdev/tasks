@@ -51,9 +51,9 @@ faithful (`ViteRuby`, `ViteRuby::Config`), as with every port.
 `libEntryFile` `vite_ruby.rb`. `ViteRuby::Config` keeps its precedence
 order: defaults, then `config/vite.json`, then `VITE_RUBY_*` env vars, then
 explicit attrs. `DevServerProxy` subclasses `Rack::Proxy` from
-`@blazetrails/rack-proxy` (`rack-proxy-port`). The CLI is built on
-`@blazetrails/dry-cli` (`dry-cli-port`), depending on the meta RFC's open
-question 4. The shared `test/` directory is split by assigning the
+`@blazetrails/rack-proxy` (`rack-proxy-port`). The CLI is
+built on `@blazetrails/thor` instead of dry-cli (meta RFC open question 4).
+Command class names and `call` bodies are unchanged. The shared `test/` directory is split by assigning the
 vite_ruby files to this package in `vendor/sources.ts`.
 
 ## Non-goals
@@ -63,6 +63,10 @@ vite_ruby files to this package in `vendor/sources.ts`.
 - **The npm `vite` and `vite-plugin-ruby`.** These are dependencies, not ports.
 
 ## Alternatives considered
+
+- **Port dry-cli for `bin/vite`.** vite_ruby uses only its registry and option
+  DSL, and trails already runs its CLI on Thor. Rejected by the operator on
+  2026-11-12 (meta RFC open question 4).
 
 - **Name it `@blazetrails/vite-ruby`.** "ruby" is meaningless in a TypeScript
   package. Rejected by the operator on 2026-11-12.
@@ -89,7 +93,7 @@ vite_ruby files to this package in `vendor/sources.ts`.
 
 ## Open questions
 
-None of its own. The CLI waits on the meta RFC's open question 4.
+None.
 
 ## Changelog
 

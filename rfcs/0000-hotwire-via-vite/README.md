@@ -1,6 +1,6 @@
 ---
 rfc: "0000-hotwire-via-vite"
-title: "Hotwire via Vite (meta): ruling, trailties convergence, and the six gem-port RFCs"
+title: "Hotwire via Vite (meta): ruling, trailties convergence, and the five gem-port RFCs"
 status: draft
 created: 2026-11-12
 updated: 2026-11-12
@@ -19,7 +19,7 @@ clusters:
      as 0000-your-slug and the H1 below number-free. `scripts/finalize-rfc.mjs`
      swaps 0000 for the assigned number at merge. -->
 
-# RFC — Hotwire via Vite (meta): ruling, trailties convergence, and the six gem-port RFCs
+# RFC — Hotwire via Vite (meta): ruling, trailties convergence, and the five gem-port RFCs
 
 ## Summary
 
@@ -30,21 +30,21 @@ importmap-rails and propshaft. trails delivers it through Vite instead, by
 porting the `vite_ruby` and `vite_rails` gems. The JS libraries
 (`@hotwired/turbo-rails`, `@hotwired/stimulus`, `vite`, `vite-plugin-ruby`)
 are npm dependencies and are not ported. The Ruby gems around them are ported
-as six new packages, one RFC each.
+as five new packages, one RFC each.
 
 This is the meta RFC. It owns the cross-cutting pieces: the ruling, the
 package boundaries, the runtime topology, the trailties convergence stories,
 the end-to-end verification and the open questions. Each gem port is its own
 RFC, scoped to its package:
 
-| RFC (slug)            | Package                       | Stories |
-| --------------------- | ----------------------------- | ------- |
-| `rack-proxy-port`     | `@blazetrails/rack-proxy`     | 1       |
-| `dry-cli-port`        | `@blazetrails/dry-cli`        | 1       |
-| `vite-assets-port`    | `@blazetrails/vite-assets`    | 5       |
-| `vite-rails-port`     | `@blazetrails/vite-rails`     | 2       |
-| `turbo-rails-port`    | `@blazetrails/turbo-rails`    | 9       |
-| `stimulus-rails-port` | `@blazetrails/stimulus-rails` | 2       |
+| RFC (slug)        | Package                   | Stories |
+| ----------------- | ------------------------- | ------- |
+| `rack-proxy-port` | `@blazetrails/rack-proxy` | 1       |
+
+| `vite-assets-port` | `@blazetrails/vite-assets` | 5 |
+| `vite-rails-port` | `@blazetrails/vite-rails` | 2 |
+| `turbo-rails-port` | `@blazetrails/turbo-rails` | 9 |
+| `stimulus-rails-port` | `@blazetrails/stimulus-rails` | 2 |
 
 The RFCs are cross-referenced by slug, and they are linked through story
 `deps` rather than `deps-rfc`. `finalize-rfc.mjs` rewrites a `0000-<slug>` id
@@ -90,15 +90,16 @@ LOC, and 381 upstream tests. The JavaScript the gems ship is excluded:
 `turbo-rails/app/javascript/turbo/` is the npm `@hotwired/turbo-rails`, and
 `stimulus-rails/app/assets/javascripts/` is the npm `@hotwired/stimulus` build.
 
-Every gem the four depend on is already ported except two, each of which gets
-its own RFC and package (`rack-proxy-port`, `dry-cli-port`), both runtime
+Every gem the four depend on is already ported except two runtime
 dependencies of vite_ruby (`vite_ruby/vite_ruby.gemspec:22-26`):
 
 - `rack-proxy`. `ViteRuby::DevServerProxy < Rack::Proxy` at
-  `vite_ruby/lib/vite_ruby/dev_server_proxy.rb:6`.
+  `vite_ruby/lib/vite_ruby/dev_server_proxy.rb:6`. It gets its own RFC and
+  package (`rack-proxy-port`).
 - `dry-cli`. `ViteRuby::CLI` does `extend Dry::CLI::Registry` at
   `vite_ruby/lib/vite_ruby/cli.rb:7-18`, and every `CLI::*` command subclasses
-  `Dry::CLI::Command`, as in `cli/install.rb:6`.
+  `Dry::CLI::Command`, as in `cli/install.rb:6`. It is not ported. The CLI is
+  expressed on trails' existing Thor port instead (open question 4).
 
 ## Design
 
@@ -157,6 +158,9 @@ Alternatives). The `hotwire-vite-claude-md-ruling` story lands this text as a ne
 >   requests, and `bin/vite dev` runs Vite in its own process, as in
 >   vite_rails. `trailsPlugin` (Rack-inside-Vite) remains only as test
 >   infrastructure.
+> - dry-cli is not ported. `bin/vite` (`ViteRuby::CLI`) is built on
+>   `@blazetrails/thor`, with the gem's command class names and `call`
+>   bodies unchanged and one receipt on the base class and option DSL.
 > - importmap-rails' and propshaft's unported-files rows are permanent, as
 >   Trilogy's are. A Rails test arm that exists only for importmap or propshaft
 >   is dropped. `vite_hanami`, `vite_padrino` and `vite_plugin_legacy` are not
@@ -166,16 +170,16 @@ Alternatives). The `hotwire-vite-claude-md-ruling` story lands this text as a ne
 
 ### Package boundaries
 
-| Package                       | Ports                                                                                  | Knows about Vite?     |
-| ----------------------------- | -------------------------------------------------------------------------------------- | --------------------- |
-| `@blazetrails/rack-proxy`     | `rack-proxy` gem's `Rack::Proxy`                                                       | no                    |
-| `@blazetrails/dry-cli`        | `dry-cli` gem's `Dry::CLI`, `Registry`, `Command` (the subset vite_ruby uses)          | no                    |
-| `@blazetrails/vite-assets`    | `vite_ruby/lib/vite_ruby{,.rb}`, `tasks/vite.rake`, `exe/vite`                         | yes                   |
-| `@blazetrails/vite-rails`     | `vite_rails/lib/vite_rails{,.rb}`, `tasks/vite.rake`                                   | yes                   |
-| `@blazetrails/turbo-rails`    | `lib/turbo*`, `app/{channels,controllers,helpers,jobs,models}/turbo`, the frame layout | install template only |
-| `@blazetrails/stimulus-rails` | `lib/stimulus*`, `lib/generators/stimulus`, `lib/tasks`, `lib/install`                 | install template only |
-| `@blazetrails/actionview`     | unchanged; `asset_url_helper.rb` stays pipeline-agnostic                               | no                    |
-| `@blazetrails/trailties`      | generator default; retires `lib/assets/*`; `trails server` stops running inside Vite   | through vite-rails    |
+| Package                   | Ports                            | Knows about Vite? |
+| ------------------------- | -------------------------------- | ----------------- |
+| `@blazetrails/rack-proxy` | `rack-proxy` gem's `Rack::Proxy` | no                |
+
+| `@blazetrails/vite-assets` | `vite_ruby/lib/vite_ruby{,.rb}`, `tasks/vite.rake`, `exe/vite` | yes |
+| `@blazetrails/vite-rails` | `vite_rails/lib/vite_rails{,.rb}`, `tasks/vite.rake` | yes |
+| `@blazetrails/turbo-rails` | `lib/turbo*`, `app/{channels,controllers,helpers,jobs,models}/turbo`, the frame layout | install template only |
+| `@blazetrails/stimulus-rails` | `lib/stimulus*`, `lib/generators/stimulus`, `lib/tasks`, `lib/install` | install template only |
+| `@blazetrails/actionview` | unchanged; `asset_url_helper.rb` stays pipeline-agnostic | no |
+| `@blazetrails/trailties` | generator default; retires `lib/assets/*`; `trails server` stops running inside Vite | through vite-rails |
 
 Each package mirrors its gem's file layout, so `parity:api` keys on it. The
 `vendor/sources.ts` entries from trails#10037 already map the lib paths.
@@ -252,8 +256,7 @@ depends on the ruling, directly or through its deps, so none starts before
 ratification.
 
 1. Ruling (this RFC): `hotwire-vite-claude-md-ruling`.
-2. Leaf gems: `rack-proxy-port` (`rack-proxy-gem-port`) and `dry-cli-port`
-   (`dry-cli-gem-port`).
+2. Leaf gem: `rack-proxy-port` (`rack-proxy-gem-port`).
 3. `vite-assets-port`: `vite-assets-core-package`,
    `vite-assets-builder-commands-runner`, `vite-assets-dev-server-proxy`,
    `vite-assets-cli-and-binstub`, `vite-assets-rake-tasks`.
@@ -285,7 +288,6 @@ Verification section owns its row. This table rolls them up:
 | vite-assets    | 118                                        | exact count recorded by `vite-assets-core-package`           |
 | vite-rails     | 14                                         | exact count recorded by `vite-rails-package-and-tag-helpers` |
 | rack-proxy     | every public method in `lib/rack/proxy.rb` | every upstream test                                          |
-| dry-cli        | every public method in the ported files    | every spec for the ported files                              |
 
 A `PERMANENT-SKIP` is allowed for only three reasons, each citing the ratified
 section: an importmap-only arm, a Capybara-selector arm with no Vitest
@@ -336,13 +338,15 @@ updates this table.
    gem's hard-coded path shape, and only the directory segment the Vite layout
    forces changes. Each install story receipts that one segment. The
    ruling text records it.
-4. **dry-cli.** `bin/vite` is a Dry::CLI registry. Options: (a) port `dry-cli`
-   as `@blazetrails/dry-cli`, with its own vendored source and a story;
-   (b) express the commands as Thor, which trails already ports.
-   **Recommendation:** (a). (b) is a rewrite of the gem's decomposition.
-   Story `dry-cli-gem-port` carries option (a), and `vite-assets-cli-and-binstub` depends on it. `dry-cli-gem-port` depends on
-   the ruling story, so it is not built before the operator picks. If the
-   operator picks (b), it is closed as `wontfix` and the dep is dropped.
+4. **dry-cli (resolved: Thor).** `bin/vite` is a Dry::CLI registry. Options
+   were (a) port `dry-cli` as its own package, or (b) express the commands on
+   `@blazetrails/thor`, which trails already ports and which the `trails` CLI
+   and generators already use. **Decision:** (b), chosen by the operator on
+   2026-11-12. vite_ruby uses only dry-cli's registry and option DSL, and
+   all the command logic is in the `call` bodies, which are ported
+   unchanged. `ViteRuby::CLI` and each `CLI::*` class keep their names, so
+   `parity:api` still keys on them. The base class and option DSL are one
+   receipted deviation, which `vite-assets-cli-and-binstub` carries.
 5. **The npm package for Turbo (resolved).** The operator's original request
    named `@hotwired/turbo`. The gem's node template adds `@hotwired/turbo-rails`
    (`turbo_with_node.rb:10`), which wraps `@hotwired/turbo` and adds
@@ -373,3 +377,6 @@ updates this table.
   `vite-assets-import-boundary`.
 - 2026-11-12: OQ3 resolved. The operator chose `app/javascript` as the
   frontend source dir (`sourceCodeDir`), not `app/frontend`.
+- 2026-11-12: OQ4 resolved to Thor. Removed the `dry-cli-port` RFC and its
+  `dry-cli-gem-port` story. `vite-assets-cli-and-binstub` builds on
+  `@blazetrails/thor`.
