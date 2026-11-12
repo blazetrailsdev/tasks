@@ -2,8 +2,8 @@
 title: "Port ViteRails::CLI (vite:install for Rails) and the assets:precompile hook"
 status: draft
 updated: 2026-11-12
-rfc: "0000-hotwire-via-vite"
-cluster: vite
+rfc: "0000-vite-rails-port"
+cluster: vite-rails
 packages: [vite-rails]
 deps: [vite-rails-package-and-tag-helpers, vite-ruby-cli-and-binstub, vite-ruby-rake-tasks]
 deps-rfc: []

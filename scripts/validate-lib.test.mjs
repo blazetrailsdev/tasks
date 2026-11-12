@@ -274,6 +274,16 @@ test("the allowlisted 0022 prefix pair is not rejected", () => {
   );
 });
 
+test("several unnumbered 0000- placeholder RFCs are not rejected", () => {
+  const a = rfc({ dir: "0000-alpha", file: "rfcs/0000-alpha/README.md" }, { rfc: "0000-alpha" });
+  const b = rfc({ dir: "0000-beta", file: "rfcs/0000-beta/README.md" }, { rfc: "0000-beta" });
+  const errors = validate({ rfcs: [a, b], stories: [] }).errors;
+  assert(
+    !errors.some((e) => e.includes("duplicate RFC numeric prefix")),
+    `0000- placeholders must not collide but got:\n  ${errors.join("\n  ")}`,
+  );
+});
+
 // ── created/updated date format ──
 test("the literal YYYY-MM-DD placeholder is rejected", () => {
   const errors = validate({

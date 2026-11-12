@@ -2,8 +2,8 @@
 title: "Port Turbo::TestAssertions, IntegrationTestAssertions, Broadcastable::TestHelper and SystemTestHelper"
 status: draft
 updated: 2026-11-12
-rfc: "0000-hotwire-via-vite"
-cluster: turbo
+rfc: "0000-turbo-rails-port"
+cluster: turbo-rails
 packages: [turbo-rails]
 deps: [turbo-rails-broadcastable-class-methods-and-callbacks]
 deps-rfc: []

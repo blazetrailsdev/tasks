@@ -2,8 +2,8 @@
 title: "Port Turbo::Frames::FrameRequest, the frame layout, Native::Navigation and RequestIdTracking"
 status: draft
 updated: 2026-11-12
-rfc: "0000-hotwire-via-vite"
-cluster: turbo
+rfc: "0000-turbo-rails-port"
+cluster: turbo-rails
 packages: [turbo-rails]
 deps: [turbo-rails-package-helpers-and-turbo-stream-format]
 deps-rfc: []

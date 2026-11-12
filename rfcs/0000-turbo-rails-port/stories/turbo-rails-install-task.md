@@ -2,8 +2,8 @@
 title: "Port turbo:install (jsbundling branch) targeting the vite_rails entrypoint"
 status: draft
 updated: 2026-11-12
-rfc: "0000-hotwire-via-vite"
-cluster: turbo
+rfc: "0000-turbo-rails-port"
+cluster: turbo-rails
 packages: [turbo-rails]
 deps:
   [
@@ -35,17 +35,16 @@ with bun. Test: `vendor/turbo-rails/v2.0.23/test/installer_test.rb` (4).
 
 - The task picks bun when `using_bun?` is true and node otherwise, as
   upstream does with the importmap arm removed. The node template's
-  hard-coded `yarn add` runs the package manager vite_ruby detects from the
-  app's lockfile (pnpm, npm, yarn or bun), with a one-line receipt citing the
-  ratified section.
+  hard-coded `yarn add` becomes `pnpm add`, a one-token change
+  with a receipt citing the ratified section. trails apps use pnpm.
 - An end-to-end test runs `vite:install` and then this install task in a
   generated app, and asserts the entrypoint import and the `package.json`
   dependency.
 - `turbo:install`, `turbo:install:node` and `turbo:install:bun` are ported.
   The importmap arm and `turbo_with_importmap.rb` are dropped, citing the
   ratified CLAUDE.md section.
-- The entrypoint path follows the answer to RFC open question 3, with a
+- The entrypoint path follows the answer to hotwire-via-vite open question 3, with a
   receipt on the one changed segment.
 - The package added is `@hotwired/turbo-rails`, as `turbo_with_node.rb:10`
-  adds it (RFC open question 5).
+  adds it (hotwire-via-vite open question 5).
 - The non-importmap arms of `installer_test.rb` are ported.

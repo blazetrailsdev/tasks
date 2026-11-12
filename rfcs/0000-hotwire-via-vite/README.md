@@ -1,25 +1,16 @@
 ---
 rfc: "0000-hotwire-via-vite"
-title: "Hotwire via Vite: port turbo-rails, stimulus-rails, vite_ruby and vite_rails"
+title: "Hotwire via Vite (meta): ruling, trailties convergence, and the six gem-port RFCs"
 status: draft
 created: 2026-11-12
 updated: 2026-11-12
 owner: "@deanmarano"
 packages:
-  - "turbo-rails"
-  - "stimulus-rails"
-  - "vite-ruby"
-  - "vite-rails"
-  - "rack-proxy"
-  - "dry-cli"
   - "trailties"
-  - "actioncable"
-  - "activerecord"
+  - "vite-rails"
 clusters:
   - ruling
   - vite
-  - turbo
-  - stimulus
   - generator
 ---
 
@@ -27,7 +18,7 @@ clusters:
      as 0000-your-slug and the H1 below number-free. `scripts/finalize-rfc.mjs`
      swaps 0000 for the assigned number at merge. -->
 
-# RFC — Hotwire via Vite: port turbo-rails, stimulus-rails, vite_ruby and vite_rails
+# RFC — Hotwire via Vite (meta): ruling, trailties convergence, and the six gem-port RFCs
 
 ## Summary
 
@@ -38,7 +29,27 @@ importmap-rails and propshaft. trails delivers it through Vite instead, by
 porting the `vite_ruby` and `vite_rails` gems. The JS libraries
 (`@hotwired/turbo-rails`, `@hotwired/stimulus`, `vite`, `vite-plugin-ruby`)
 are npm dependencies and are not ported. The Ruby gems around them are ported
-as four new packages.
+as six new packages, one RFC each.
+
+This is the meta RFC. It owns the cross-cutting pieces: the ruling, the
+package boundaries, the runtime topology, the trailties convergence stories,
+the end-to-end verification and the open questions. Each gem port is its own
+RFC, scoped to its package:
+
+| RFC (slug)            | Package                       | Stories |
+| --------------------- | ----------------------------- | ------- |
+| `rack-proxy-port`     | `@blazetrails/rack-proxy`     | 1       |
+| `dry-cli-port`        | `@blazetrails/dry-cli`        | 1       |
+| `vite-ruby-port`      | `@blazetrails/vite-ruby`      | 5       |
+| `vite-rails-port`     | `@blazetrails/vite-rails`     | 2       |
+| `turbo-rails-port`    | `@blazetrails/turbo-rails`    | 9       |
+| `stimulus-rails-port` | `@blazetrails/stimulus-rails` | 2       |
+
+The RFCs are cross-referenced by slug, and they are linked through story
+`deps` rather than `deps-rfc`. `finalize-rfc.mjs` rewrites a `0000-<slug>` id
+only inside that RFC's own files, so a `deps-rfc` between RFCs that are not
+yet numbered would break at merge. Story ids do not change, so story deps
+survive finalization.
 
 ## Motivation
 
@@ -121,8 +132,9 @@ Alternatives). The `hotwire-vite-claude-md-ruling` story lands this text as a ne
 >   `config/vite.json` sets `sourceCodeDir: "app/javascript"`, so the
 >   templates write `app/javascript/entrypoints/application.js` (one changed
 >   path segment, receipted).
-> - The install templates' hard-coded `yarn add` runs the package manager
->   that vite_ruby detects from the app's lockfile. `turbo:install` and
+> - trails apps use pnpm. The generated app is a pnpm project
+>   (`pnpm-lock.yaml`), and the install templates' hard-coded `yarn add`
+>   becomes `pnpm add`, a receipted one-token change. yarn is not used. `turbo:install` and
 >   `stimulus:install` pick bun when `using_bun?` is true and node otherwise,
 >   as upstream does with the importmap arm removed.
 > - The npm package is `@hotwired/turbo-rails`, as `turbo_with_node.rb` adds
@@ -223,29 +235,34 @@ infrastructure (open question 2).
 
 ## Rollout
 
-1. Ruling: `hotwire-vite-claude-md-ruling`.
-2. Vite core: `rack-proxy-gem-port`, `dry-cli-gem-port`,
-   `vite-ruby-core-package`, `vite-ruby-builder-commands-runner`,
-   `vite-ruby-dev-server-proxy`, `vite-ruby-cli-and-binstub`,
-   `vite-ruby-rake-tasks`. Every story in phases 2-5 depends, directly or
-   through its deps, on the ruling, so none starts before ratification.
-3. Vite Rails: `vite-rails-package-and-tag-helpers`,
-   `vite-rails-install-and-precompile-hook`,
-   `retire-trailties-vite-assets-trailtie`, `vite-rails-dev-server-topology`,
-   `trailties-javascript-default-vite`.
-4. Turbo: `turbo-rails-dummy-test-app`,
+Each phase names the RFC that owns its stories. Every story outside phase 1
+depends on the ruling, directly or through its deps, so none starts before
+ratification.
+
+1. Ruling (this RFC): `hotwire-vite-claude-md-ruling`.
+2. Leaf gems: `rack-proxy-port` (`rack-proxy-gem-port`) and `dry-cli-port`
+   (`dry-cli-gem-port`).
+3. `vite-ruby-port`: `vite-ruby-core-package`,
+   `vite-ruby-builder-commands-runner`, `vite-ruby-dev-server-proxy`,
+   `vite-ruby-cli-and-binstub`, `vite-ruby-rake-tasks`.
+4. `vite-rails-port`: `vite-rails-package-and-tag-helpers`,
+   `vite-rails-install-and-precompile-hook`. Then this RFC's trailties
+   stories: `retire-trailties-vite-assets-trailtie`,
+   `vite-rails-dev-server-topology`, `trailties-javascript-default-vite`.
+5. `turbo-rails-port`: `turbo-rails-dummy-test-app`,
    `turbo-rails-package-helpers-and-turbo-stream-format`, then
    `turbo-rails-frames-native-and-request-id`, `turbo-rails-streams-tag-builder`,
    `turbo-rails-broadcasts-and-streams-channel`,
    `turbo-rails-broadcastable-instance-broadcasts`,
    `turbo-rails-broadcastable-class-methods-and-callbacks`,
    `turbo-rails-test-helpers`, `turbo-rails-install-task`.
-5. Stimulus: `stimulus-rails-package-and-install`,
+6. `stimulus-rails-port`: `stimulus-rails-package-and-install`,
    `stimulus-rails-controller-generator`.
 
 ## Verification
 
-Every package has `compareApi` and `compareTests` on. Per package:
+Every package has `compareApi` and `compareTests` on. Each child RFC's
+Verification section owns its row. This table rolls them up:
 
 | Package        | `parity:api` target (public)               | `parity:test` target                                         |
 | -------------- | ------------------------------------------ | ------------------------------------------------------------ |
@@ -329,3 +346,9 @@ updates this table.
   `vite-ruby-cli-and-tasks` into `vite-ruby-cli-and-binstub` and
   `vite-ruby-rake-tasks`. Verification targets are now per package, and
   rack-proxy and dry-cli are pinned.
+- 2026-11-12: split into a meta RFC (this one) plus one RFC per ported gem:
+  `rack-proxy-port`, `dry-cli-port`, `vite-ruby-port`, `vite-rails-port`,
+  `turbo-rails-port` and `stimulus-rails-port`. The stories moved unchanged,
+  with their `rfc:` and `cluster:` updated.
+- 2026-11-12: the operator chose pnpm. The install templates run `pnpm add`
+  instead of `yarn add`, and the generated app is a pnpm project.

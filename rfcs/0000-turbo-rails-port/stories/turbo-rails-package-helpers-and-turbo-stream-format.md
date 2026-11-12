@@ -2,8 +2,8 @@
 title: "Port turbo-rails Engine, turbo_stream MIME and renderer, view helpers"
 status: draft
 updated: 2026-11-12
-rfc: "0000-hotwire-via-vite"
-cluster: turbo
+rfc: "0000-turbo-rails-port"
+cluster: turbo-rails
 packages: [turbo-rails]
 deps: [turbo-rails-dummy-test-app]
 deps-rfc: []

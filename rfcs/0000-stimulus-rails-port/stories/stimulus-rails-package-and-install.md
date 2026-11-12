@@ -2,8 +2,8 @@
 title: "Create @blazetrails/stimulus-rails: Engine, Stimulus::Manifest, stimulus:install and stimulus:manifest tasks"
 status: draft
 updated: 2026-11-12
-rfc: "0000-hotwire-via-vite"
-cluster: stimulus
+rfc: "0000-stimulus-rails-port"
+cluster: stimulus-rails
 packages: [stimulus-rails]
 deps: [hotwire-vite-claude-md-ruling, vite-rails-install-and-precompile-hook]
 deps-rfc: []
@@ -34,9 +34,8 @@ closed-reason: null
 
 - The task picks bun when `using_bun?` is true and node otherwise, as
   upstream does with the importmap arm removed. The node template's
-  hard-coded `yarn add` runs the package manager vite_ruby detects from the
-  app's lockfile (pnpm, npm, yarn or bun), with a one-line receipt citing the
-  ratified section.
+  hard-coded `yarn add` becomes `pnpm add`, a one-token change
+  with a receipt citing the ratified section. trails apps use pnpm.
 - An end-to-end test runs `vite:install` and then this install task in a
   generated app, and asserts the entrypoint import and the `package.json`
   dependency.
@@ -44,6 +43,6 @@ closed-reason: null
   `compareTests` on.
 - The node and bun install arms are ported, and the importmap arm is dropped,
   citing the ratified section. The generated `controllers/index.js` follows
-  the answer to RFC open question 1, and the entrypoint path follows open
+  the answer to hotwire-via-vite open question 1, and the entrypoint path follows open
   question 3.
 - `manifest_test.rb` is ported under its upstream name.

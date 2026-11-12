@@ -2,8 +2,8 @@
 title: "Port the rack-proxy gem as @blazetrails/rack-proxy"
 status: draft
 updated: 2026-11-12
-rfc: "0000-hotwire-via-vite"
-cluster: vite
+rfc: "0000-rack-proxy-port"
+cluster: rack-proxy
 packages: [rack-proxy]
 deps: [hotwire-vite-claude-md-ruling]
 deps-rfc: []

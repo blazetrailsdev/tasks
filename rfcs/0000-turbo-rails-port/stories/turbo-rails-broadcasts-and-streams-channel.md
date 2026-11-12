@@ -2,8 +2,8 @@
 title: "Port Turbo::StreamsChannel, Streams::Broadcasts, the broadcast jobs and debouncers"
 status: draft
 updated: 2026-11-12
-rfc: "0000-hotwire-via-vite"
-cluster: turbo
+rfc: "0000-turbo-rails-port"
+cluster: turbo-rails
 packages: [turbo-rails, actioncable]
 deps: [turbo-rails-streams-tag-builder, turbo-rails-dummy-test-app]
 deps-rfc: []

@@ -2,8 +2,8 @@
 title: "Port Turbo::Broadcastable::ClassMethods, the commit callbacks and suppression"
 status: draft
 updated: 2026-11-12
-rfc: "0000-hotwire-via-vite"
-cluster: turbo
+rfc: "0000-turbo-rails-port"
+cluster: turbo-rails
 packages: [turbo-rails, activerecord]
 deps: [turbo-rails-broadcastable-instance-broadcasts]
 deps-rfc: []

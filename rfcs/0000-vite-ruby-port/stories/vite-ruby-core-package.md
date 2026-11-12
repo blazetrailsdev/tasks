@@ -2,8 +2,8 @@
 title: "Create @blazetrails/vite-ruby: ViteRuby, Config, Manifest and errors"
 status: draft
 updated: 2026-11-12
-rfc: "0000-hotwire-via-vite"
-cluster: vite
+rfc: "0000-vite-ruby-port"
+cluster: vite-ruby
 packages: [vite-ruby]
 deps: [hotwire-vite-claude-md-ruling]
 deps-rfc: []

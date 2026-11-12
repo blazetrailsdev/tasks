@@ -2,8 +2,8 @@
 title: "Port Turbo::Broadcastable's instance broadcast_* methods"
 status: draft
 updated: 2026-11-12
-rfc: "0000-hotwire-via-vite"
-cluster: turbo
+rfc: "0000-turbo-rails-port"
+cluster: turbo-rails
 packages: [turbo-rails, activerecord]
 deps: [turbo-rails-broadcasts-and-streams-channel, turbo-rails-dummy-test-app]
 deps-rfc: []

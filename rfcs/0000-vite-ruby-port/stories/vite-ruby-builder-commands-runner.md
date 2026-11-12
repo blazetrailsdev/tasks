@@ -2,8 +2,8 @@
 title: "Port ViteRuby::Builder, Build, Commands, Runner and CompatibilityCheck"
 status: draft
 updated: 2026-11-12
-rfc: "0000-hotwire-via-vite"
-cluster: vite
+rfc: "0000-vite-ruby-port"
+cluster: vite-ruby
 packages: [vite-ruby]
 deps: [vite-ruby-core-package]
 deps-rfc: []

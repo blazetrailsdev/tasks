@@ -2,8 +2,8 @@
 title: "Port ViteRuby::CLI and its commands, and the bin/vite binstub"
 status: draft
 updated: 2026-11-12
-rfc: "0000-hotwire-via-vite"
-cluster: vite
+rfc: "0000-vite-ruby-port"
+cluster: vite-ruby
 packages: [vite-ruby]
 deps: [vite-ruby-builder-commands-runner, dry-cli-gem-port]
 deps-rfc: []
@@ -22,7 +22,7 @@ closed-reason: null
 `build`, `clobber`, `dev`, `install`, `ssr`, `version`, `upgrade` and
 `upgrade_packages`. They are implemented in `cli/*.rb`, and
 `cli/install.rb:6-146` is the largest. `exe/vite` is the binstub. The CLI is
-built on `dry-cli` (`vite_ruby.gemspec:22`, RFC open question 4). The rake
+built on `dry-cli` (`vite_ruby.gemspec:22`, hotwire-via-vite open question 4). The rake
 tasks belong to `vite-ruby-rake-tasks`. Tests:
 `vendor/vite_ruby/v3.11.1/test/file_utils_test.rb` and `upgrade_test.rb`.
 
@@ -32,8 +32,8 @@ tasks belong to `vite-ruby-rake-tasks`. Tests:
   `@blazetrails/dry-cli`, ported under its Rails name. If the operator picks
   Thor instead, the `dry-cli-gem-port` dep is dropped and this story records
   the receipt.
-- `cli/install.rb`'s package-manager detection (lockfile to pnpm, npm, yarn or
-  bun) is ported as written. The turbo and stimulus install stories reuse it.
+- `cli/install.rb`'s package-manager detection is ported as written. A
+  generated trails app is a pnpm project, so it resolves to pnpm there.
 - `bin/vite` in a generated app runs `ViteRuby::CLI`.
 - `file_utils_test.rb` and `upgrade_test.rb` are ported under their upstream
   names.

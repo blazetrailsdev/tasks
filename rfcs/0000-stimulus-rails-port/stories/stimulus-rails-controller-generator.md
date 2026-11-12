@@ -2,8 +2,8 @@
 title: "Port StimulusGenerator (trails generate stimulus <name>)"
 status: draft
 updated: 2026-11-12
-rfc: "0000-hotwire-via-vite"
-cluster: stimulus
+rfc: "0000-stimulus-rails-port"
+cluster: stimulus-rails
 packages: [stimulus-rails, trailties]
 deps: [stimulus-rails-package-and-install]
 deps-rfc: []
@@ -29,6 +29,6 @@ closed-reason: null
 
 - `trails generate stimulus hello` writes
   `app/javascript/controllers/hello_controller.js` from the ported template,
-  with the template path from RFC open question 3.
+  with the template path from hotwire-via-vite open question 3.
 - `generator_test.rb` is ported under its upstream names. Any importmap-only
   arms are dropped, citing the ratified section.

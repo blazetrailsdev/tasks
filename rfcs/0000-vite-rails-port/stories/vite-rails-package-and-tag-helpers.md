@@ -2,8 +2,8 @@
 title: "Create @blazetrails/vite-rails: Engine and ViteRails::TagHelpers"
 status: draft
 updated: 2026-11-12
-rfc: "0000-hotwire-via-vite"
-cluster: vite
+rfc: "0000-vite-rails-port"
+cluster: vite-rails
 packages: [vite-rails]
 deps: [vite-ruby-core-package]
 deps-rfc: []
@@ -40,6 +40,6 @@ closed-reason: null
   `javascript_include_tag` / `stylesheet_link_tag` / `image_tag`, and do not
   override them.
 - The Spring arm of `vite_rails.bootstrap` is dropped with a receipt citing
-  the RFC non-goal.
+  the vite-rails-port non-goal.
 - `helper_test.rb` is ported under its upstream names. `vite-rails` gets
   `compareApi: true` and `compareTests: true` in `vendor/sources.ts`.

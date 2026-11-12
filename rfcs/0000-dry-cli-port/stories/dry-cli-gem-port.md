@@ -2,8 +2,8 @@
 title: "Port the dry-cli gem as @blazetrails/dry-cli"
 status: draft
 updated: 2026-11-12
-rfc: "0000-hotwire-via-vite"
-cluster: vite
+rfc: "0000-dry-cli-port"
+cluster: dry-cli
 packages: [dry-cli]
 deps: [hotwire-vite-claude-md-ruling]
 deps-rfc: []
@@ -23,7 +23,7 @@ closed-reason: null
 `ViteRuby::CLI::*` command subclasses `Dry::CLI::Command`
 (`cli/install.rb:6`). `vite_ruby.gemspec:22` depends on `dry-cli`. No trails
 package ports it, and `vendor/sources.ts` does not vendor it. This story is
-option (a) of RFC open question 4, and it depends on the ruling story, where
+option (a) of hotwire-via-vite open question 4, and it depends on the ruling story, where
 the operator picks. If the operator picks option (b) (Thor), close it as
 `wontfix` and drop it from `vite-ruby-cli-and-binstub`'s deps.
 

@@ -2,8 +2,8 @@
 title: "Port turbo-rails' test/dummy app as the turbo-rails test app"
 status: draft
 updated: 2026-11-12
-rfc: "0000-hotwire-via-vite"
-cluster: turbo
+rfc: "0000-turbo-rails-port"
+cluster: turbo-rails
 packages: [turbo-rails, activerecord]
 deps: [hotwire-vite-claude-md-ruling]
 deps-rfc: []
