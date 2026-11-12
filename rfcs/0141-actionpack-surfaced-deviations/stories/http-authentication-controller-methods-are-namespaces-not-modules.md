@@ -1,6 +1,6 @@
 ---
 title: "http-authentication-controller-methods-are-namespaces-not-modules"
-status: in-progress
+status: done
 updated: 2026-11-12
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

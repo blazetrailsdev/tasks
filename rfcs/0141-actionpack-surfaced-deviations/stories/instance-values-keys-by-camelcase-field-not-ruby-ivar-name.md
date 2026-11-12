@@ -1,6 +1,6 @@
 ---
 title: "instance-values-keys-by-camelcase-field-not-ruby-ivar-name"
-status: in-progress
+status: done
 updated: 2026-11-12
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

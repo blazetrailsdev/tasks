@@ -1,7 +1,7 @@
 ---
 title: "Move activerecord to lib/ + test/ (last)"
-status: claimed
-updated: 2026-11-09
+status: in-progress
+updated: 2026-11-12
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: layout-migration
 packages: [activerecord]
@@ -16,7 +16,7 @@ deps:
 deps-rfc: []
 est-loc: 2970
 priority: null
-pr: null
+pr: trails#10034
 claim: "2026-11-09T00:35:43Z"
 assignee: "lib-test-layout-activerecord"
 blocked-by: null

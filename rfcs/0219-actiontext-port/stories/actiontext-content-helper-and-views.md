@@ -1,6 +1,6 @@
 ---
 title: "Port ContentHelper and the ActionText view templates"
-status: in-progress
+status: done
 updated: 2026-11-12
 rfc: "0219-actiontext-port"
 cluster: at-views
