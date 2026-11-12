@@ -1,6 +1,6 @@
 ---
 title: "wire-cache-store-version-behavior-into-helpers"
-status: in-progress
+status: done
 updated: 2026-11-12
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null

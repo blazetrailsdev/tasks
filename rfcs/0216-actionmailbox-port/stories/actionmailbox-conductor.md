@@ -1,6 +1,6 @@
 ---
 title: "Port the Rails conductor for ActionMailbox (controllers, views, layout)"
-status: claimed
+status: in-progress
 updated: 2026-11-12
 rfc: "0216-actionmailbox-port"
 cluster: amb-engine
@@ -13,7 +13,7 @@ deps:
 deps-rfc: []
 est-loc: 500
 priority: 8
-pr: null
+pr: trails#10038
 claim: "2026-11-12T19:43:05Z"
 assignee: "actionmailbox-test-dummy-app-and-transactional-tests"
 blocked-by: null

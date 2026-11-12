@@ -1,6 +1,6 @@
 ---
 title: "Port the action_text:install generator, test_unit hook and rake task, wiring Trix and @rails/actiontext from npm"
-status: claimed
+status: in-progress
 updated: 2026-11-12
 rfc: "0219-actiontext-port"
 cluster: at-engine
@@ -13,7 +13,7 @@ deps:
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: trails#10039
 claim: "2026-11-12T19:50:08Z"
 assignee: "actiontext-install-generator-and-rake"
 blocked-by: null
