@@ -1,7 +1,7 @@
 ---
 title: "cache-marshal-serializers-dump-through-ruby-compat-marshal"
-status: ready
-updated: 2026-11-11
+status: claimed
+updated: 2026-11-12
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-12T12:41:31Z"
+assignee: "cache-marshal-serializers-dump-through-ruby-compat-marshal"
 blocked-by: null
 closed-reason: null
 ---

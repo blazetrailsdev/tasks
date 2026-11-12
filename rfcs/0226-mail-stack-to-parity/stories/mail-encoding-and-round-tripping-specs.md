@@ -1,7 +1,7 @@
 ---
 title: "Port encoding_spec.rb, round_tripping_spec.rb and the encodings / quoted-printable / unstructured-field fold remainders"
-status: ready
-updated: 2026-11-11
+status: in-progress
+updated: 2026-11-12
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10021
+claim: "2026-11-12T12:11:39Z"
+assignee: "mail-check-delivery-params-gem-deprecate-wrappers"
 blocked-by: null
 closed-reason: null
 ---

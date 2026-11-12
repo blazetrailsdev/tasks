@@ -1,6 +1,6 @@
 ---
 title: "Active Record MariaDB Tests (1) failing on main @d8b3d1f0"
-status: ready
+status: closed
 updated: 2026-11-12
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-12T12:06:47Z"
+assignee: "red-d8b3d1f0"
 blocked-by: null
-closed-reason: null
+closed-reason: "Flake: MariaDB (1) failed only at suite load of fixture-set/file.trails.test.ts with better-sqlite3 'Cannot find module ./methods/serialize' (file exists in the package); 4489 tests passed, file passes locally (9/9). Transient module-load failure, no code break."
 ---
 
 ## Context

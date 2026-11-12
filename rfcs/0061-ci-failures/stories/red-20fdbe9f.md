@@ -1,6 +1,6 @@
 ---
 title: "Active Record PostgreSQL Tests (1) failing on main @20fdbe9f"
-status: ready
+status: closed
 updated: 2026-11-12
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-12T12:25:57Z"
+assignee: "red-20fdbe9f"
 blocked-by: null
-closed-reason: null
+closed-reason: "Flake: PG(1) failed only on file.trails.test.ts at suite load with 'Cannot find module .../better-sqlite3/lib/index.js' while 336 other files loaded it; test untouched since #8733 and passes locally (9/9)."
 ---
 
 ## Context

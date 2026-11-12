@@ -1,7 +1,7 @@
 ---
 title: "mail-check-delivery-params-gem-deprecate-wrappers"
-status: ready
-updated: 2026-11-10
+status: in-progress
+updated: 2026-11-12
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10021
+claim: "2026-11-12T12:11:39Z"
+assignee: "mail-check-delivery-params-gem-deprecate-wrappers"
 blocked-by: null
 closed-reason: null
 ---
