@@ -5,7 +5,7 @@ updated: 2026-11-12
 rfc: "0000-hotwire-via-vite"
 cluster: vite
 packages: [vite-ruby]
-deps: []
+deps: [hotwire-vite-claude-md-ruling]
 deps-rfc: []
 est-loc: 450
 priority: null

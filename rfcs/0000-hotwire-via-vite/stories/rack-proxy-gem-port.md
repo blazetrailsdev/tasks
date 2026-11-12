@@ -5,7 +5,7 @@ updated: 2026-11-12
 rfc: "0000-hotwire-via-vite"
 cluster: vite
 packages: [rack-proxy]
-deps: []
+deps: [hotwire-vite-claude-md-ruling]
 deps-rfc: []
 est-loc: 250
 priority: null
@@ -25,8 +25,9 @@ ports it, and `vendor/sources.ts` does not vendor it.
 
 ## Acceptance criteria
 
-- `vendor/sources.ts` vendors `ncr/rack-proxy` at the version rubygems.org
-  reports as latest. Record the tag and SHA in `sources.lock.json`.
+- `vendor/sources.ts` vendors `ncr/rack-proxy` at `v2.0.1` (rubygems.org
+  latest on 2026-11-12, which satisfies `>= 0.6.1`). Record the SHA in
+  `sources.lock.json`.
 - `packages/rack-proxy` ports `Rack::Proxy` (`lib/rack/proxy.rb`) method for
   method: `call`, `perform_request`, `rewrite_env`, `rewrite_response` and
   the class `extract_http_request_headers` / `normalize_headers` helpers. It
@@ -34,3 +35,8 @@ ports it, and `vendor/sources.ts` does not vendor it.
   trails HTTP client, with a receipt.
 - The gem's tests are ported under their upstream names, and `compareApi` and
   `compareTests` are on.
+
+## Verification
+
+- `pnpm parity:api rack-proxy` and `pnpm parity:test rack-proxy` report no
+  missing methods or tests.

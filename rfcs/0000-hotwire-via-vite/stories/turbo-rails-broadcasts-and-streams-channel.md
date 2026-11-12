@@ -5,9 +5,9 @@ updated: 2026-11-12
 rfc: "0000-hotwire-via-vite"
 cluster: turbo
 packages: [turbo-rails, actioncable]
-deps: [turbo-rails-streams-tag-builder]
+deps: [turbo-rails-streams-tag-builder, turbo-rails-dummy-test-app]
 deps-rfc: []
-est-loc: 600
+est-loc: 500
 priority: null
 pr: null
 claim: null

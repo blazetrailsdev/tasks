@@ -29,8 +29,8 @@ which the RFC's boundaries ruling forbids. The bug filed as
 (0142-trailties-surfaced-deviations) comes from this design.
 `ViteRails::Engine`'s `vite_rails.helper` initializer
 (`vendor/vite_ruby/v3.11.1/vite_rails/lib/vite_rails/engine.rb:10-18`) is the shape this converges
-onto. RFC open question 2 decides what happens to
-`trailties/lib/server/vite-plugin.ts`.
+onto. `trailties/lib/server/vite-plugin.ts` is out of scope
+here and belongs to `vite-rails-dev-server-topology`.
 
 ## Acceptance criteria
 
@@ -39,4 +39,6 @@ onto. RFC open question 2 decides what happens to
 - Generated-app layouts use `vite_client_tag` and `vite_javascript_tag
 "application"`, the same as vite_rails' install template.
 - `asset-helpers-skip-vite-hook-outside-boot` is closed by this PR.
-- `trailsPlugin` is handled as RFC open question 2 decides.
+- `trailsPlugin` is not touched here. `vite-rails-dev-server-topology`
+  removes it from the generated app and keeps it as test-only
+  infrastructure (RFC open question 2).

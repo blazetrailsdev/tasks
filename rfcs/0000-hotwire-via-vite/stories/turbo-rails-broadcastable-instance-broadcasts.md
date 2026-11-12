@@ -5,7 +5,7 @@ updated: 2026-11-12
 rfc: "0000-hotwire-via-vite"
 cluster: turbo
 packages: [turbo-rails, activerecord]
-deps: [turbo-rails-broadcasts-and-streams-channel]
+deps: [turbo-rails-broadcasts-and-streams-channel, turbo-rails-dummy-test-app]
 deps-rfc: []
 est-loc: 400
 priority: null

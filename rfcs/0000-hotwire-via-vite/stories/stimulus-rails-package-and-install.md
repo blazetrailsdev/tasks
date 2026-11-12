@@ -5,7 +5,7 @@ updated: 2026-11-12
 rfc: "0000-hotwire-via-vite"
 cluster: stimulus
 packages: [stimulus-rails]
-deps: [hotwire-vite-claude-md-ruling]
+deps: [hotwire-vite-claude-md-ruling, vite-rails-install-and-precompile-hook]
 deps-rfc: []
 est-loc: 300
 priority: null
@@ -32,6 +32,14 @@ closed-reason: null
 
 ## Acceptance criteria
 
+- The task picks bun when `using_bun?` is true and node otherwise, as
+  upstream does with the importmap arm removed. The node template's
+  hard-coded `yarn add` runs the package manager vite_ruby detects from the
+  app's lockfile (pnpm, npm, yarn or bun), with a one-line receipt citing the
+  ratified section.
+- An end-to-end test runs `vite:install` and then this install task in a
+  generated app, and asserts the entrypoint import and the `package.json`
+  dependency.
 - `packages/stimulus-rails` mirrors `lib/stimulus`, with `compareApi` and
   `compareTests` on.
 - The node and bun install arms are ported, and the importmap arm is dropped,

@@ -5,7 +5,7 @@ updated: 2026-11-12
 rfc: "0000-hotwire-via-vite"
 cluster: vite
 packages: [dry-cli]
-deps: []
+deps: [hotwire-vite-claude-md-ruling]
 deps-rfc: []
 est-loc: 350
 priority: null
@@ -23,13 +23,15 @@ closed-reason: null
 `ViteRuby::CLI::*` command subclasses `Dry::CLI::Command`
 (`cli/install.rb:6`). `vite_ruby.gemspec:22` depends on `dry-cli`. No trails
 package ports it, and `vendor/sources.ts` does not vendor it. This story is
-option (a) of RFC open question 4. If the operator picks option (b) (Thor),
-close it as `wontfix` and drop it from `vite-ruby-cli-and-tasks`' deps.
+option (a) of RFC open question 4, and it depends on the ruling story, where
+the operator picks. If the operator picks option (b) (Thor), close it as
+`wontfix` and drop it from `vite-ruby-cli-and-binstub`'s deps.
 
 ## Acceptance criteria
 
-- `vendor/sources.ts` vendors `dry-rb/dry-cli` at the version rubygems.org
-  reports as latest that satisfies `vite_ruby.gemspec:22`. Record the tag and
+- `vendor/sources.ts` vendors `dry-rb/dry-cli` at `v1.4.1` (rubygems.org
+  latest on 2026-11-12). If it is outside the `vite_ruby.gemspec:22` range,
+  pin the newest version inside the range instead and record why. Record the
   SHA in `sources.lock.json`.
 - `packages/dry-cli` mirrors `lib/dry/cli/`: `Dry::CLI` (`call`), `Registry`
   (`register`, `before`, `after`), `Command` (`desc`, `argument`, `option`,

@@ -1,13 +1,13 @@
 ---
-title: "Create @blazetrails/turbo-rails: Engine, turbo_stream MIME and renderer, view helpers"
+title: "Port turbo-rails Engine, turbo_stream MIME and renderer, view helpers"
 status: draft
 updated: 2026-11-12
 rfc: "0000-hotwire-via-vite"
 cluster: turbo
 packages: [turbo-rails]
-deps: []
+deps: [turbo-rails-dummy-test-app]
 deps-rfc: []
-est-loc: 600
+est-loc: 450
 priority: null
 pr: null
 claim: null
@@ -43,10 +43,8 @@ initializer. `turbo-rails-broadcasts-and-streams-channel` extends it.
 
 ## Acceptance criteria
 
-- `packages/turbo-rails` exists, mirroring `lib/turbo` plus the `app/*/turbo`
+- `packages/turbo-rails` mirrors `lib/turbo` plus the `app/*/turbo`
   dirs mapped in `vendor/sources.ts`. `compareApi` and `compareTests` are on.
 - `Mime[:turbo_stream]` is registered, and `render turbo_stream: html` sets
   the content type, as the Rails renderer does.
-- The listed helper tests are ported under their upstream names, against the
-  gem's `test/dummy` app ported as a trails test app. No bespoke models are
-  added beyond the dummy's own.
+- The listed helper tests are ported under their upstream names, against the dummy app from `turbo-rails-dummy-test-app`.

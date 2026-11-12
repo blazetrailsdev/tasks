@@ -7,7 +7,7 @@ cluster: ruling
 packages: [trailties]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 40
 priority: null
 pr: null
 claim: null
@@ -32,8 +32,12 @@ The operator decided on 2026-11-12 that Vite, through ports of
 - The operator ratifies the section text, editing it if needed.
 - `trails/CLAUDE.md` gains the section under its own heading, worded as
   ratified, with "Ruled by the operator on <date>".
-- Open questions 1, 3 and 5 of this RFC are answered in the section.
-  Questions 2 and 4 are answered or deferred to their owner stories
-  (`retire-trailties-vite-assets-trailtie`, `dry-cli-gem-port`), and the RFC's
-  open questions section is updated to match.
+- The section settles RFC open questions 1 (the Stimulus manifest), 3 (the
+  entrypoint path) and 5 (`@hotwired/turbo-rails`), plus the install
+  templates' package-manager rule. The draft text already carries each
+  recommendation, and the operator confirms or edits each one.
+- The operator picks option (a) or (b) for open question 4, which
+  `dry-cli-gem-port` waits on. Open question 2 stays with
+  `vite-rails-dev-server-topology`.
+- The RFC's open questions section is updated to match what was ratified.
 - The ratification date replaces `<ratification date>` in the RFC's draft text.
