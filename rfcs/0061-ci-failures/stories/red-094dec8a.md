@@ -1,6 +1,6 @@
 ---
 title: "Active Record PostgreSQL Tests (3) failing on main @094dec8a"
-status: ready
+status: closed
 updated: 2026-11-12
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-12T13:26:14Z"
+assignee: "red-094dec8a"
 blocked-by: null
-closed-reason: null
+closed-reason: "Flake: solid-queue recurring-task.trails.test.ts 'delayFromNow is seconds until the next cron tick' got 0 because Fugit computes nextTime from EoTime.now() and Time.current is read later; under CI load the minute boundary was crossed between the two reads, so max(next-now,0)=0. Test unchanged since #9886, passes locally."
 ---
 
 ## Context

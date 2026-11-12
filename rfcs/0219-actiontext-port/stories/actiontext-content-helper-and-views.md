@@ -1,7 +1,7 @@
 ---
 title: "Port ContentHelper and the ActionText view templates"
-status: ready
-updated: 2026-11-07
+status: in-progress
+updated: 2026-11-12
 rfc: "0219-actiontext-port"
 cluster: at-views
 packages: ["actiontext"]
@@ -9,9 +9,9 @@ deps: ["actiontext-content-and-rendering", "activestorage-variation-and-variants
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10022
+claim: "2026-11-12T13:41:33Z"
+assignee: "actiontext-content-helper-and-views"
 blocked-by: null
 closed-reason: null
 ---

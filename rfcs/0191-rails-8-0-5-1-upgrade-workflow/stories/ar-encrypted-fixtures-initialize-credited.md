@@ -1,6 +1,6 @@
 ---
 title: "EncryptedFixtures#initialize's inlined segment is credited"
-status: in-progress
+status: done
 updated: 2026-11-12
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: entry
