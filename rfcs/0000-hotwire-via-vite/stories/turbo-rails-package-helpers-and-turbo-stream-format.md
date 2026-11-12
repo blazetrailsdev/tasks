@@ -36,9 +36,10 @@ closed-reason: null
   `streams/streams_controller_test.rb`.
 
 `turbo_stream_from` renders `<turbo-cable-stream-source>` with a signed
-stream name. The signing lives in
-`turbo-rails-broadcasts-and-streams-channel`, so take `Turbo::StreamsChannel`'s
-`signed_stream_name` from there or land it here, whichever ships first.
+stream name, so this story also ports
+`app/channels/turbo/streams/stream_name.rb:5-31` (`signed_stream_name`,
+`verified_stream_name`) and the `turbo.signed_stream_verifier_key`
+initializer. `turbo-rails-broadcasts-and-streams-channel` extends it.
 
 ## Acceptance criteria
 

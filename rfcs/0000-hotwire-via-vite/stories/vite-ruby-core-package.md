@@ -1,5 +1,5 @@
 ---
-title: "Create @blazetrails/vite-ruby: ViteRuby, Config, Manifest, Builder, Commands, Runner"
+title: "Create @blazetrails/vite-ruby: ViteRuby, Config, Manifest and errors"
 status: draft
 updated: 2026-11-12
 rfc: "0000-hotwire-via-vite"
@@ -7,7 +7,7 @@ cluster: vite
 packages: [vite-ruby]
 deps: []
 deps-rfc: []
-est-loc: 700
+est-loc: 450
 priority: null
 pr: null
 claim: null
@@ -28,15 +28,17 @@ Core of the vite_ruby gem (`vendor/vite_ruby/v3.11.1/vite_ruby/lib/`):
   `config/vite.json` over `vite_ruby/default.vite.json`.
 - `vite_ruby/manifest.rb:12-241`: `path_for`, `resolve_entries`, `lookup!`,
   `vite_client_src` and `react_refresh_preamble`.
-- `builder.rb`, `build.rb`, `commands.rb`, `runner.rb`, `io.rb`,
-  `compatibility_check.rb`, `error.rb`, `missing_entrypoint_error.rb` and
-  `missing_executable_error.rb`.
+- `error.rb`, `missing_entrypoint_error.rb` and `missing_executable_error.rb`.
+
+`builder.rb`, `build.rb`, `commands.rb`, `runner.rb`, `io.rb` and
+`compatibility_check.rb` are `vite-ruby-builder-commands-runner`.
+`ViteRuby#builder`, `#commands` and `#run` stay as accessors here, and
+return those classes once that story lands.
 
 `extract-ruby-api.rb` counts 118 public and 72 internal methods across the
 gem. The upstream tests are in the monorepo's shared `vendor/vite_ruby/v3.11.1/test/`, among them
-`config_test.rb`, `manifest_test.rb`, `builder_test.rb`, `runner_test.rb`,
-`commands_test.rb`, `compatibility_check_test.rb` and `mode_test.rb`. Land
-what fits in one PR. File the rest as new stories with `tasks new`.
+`config_test.rb`, `manifest_test.rb` and `mode_test.rb`, which this story
+ports.
 
 ## Acceptance criteria
 

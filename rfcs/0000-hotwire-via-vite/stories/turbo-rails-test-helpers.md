@@ -5,7 +5,7 @@ updated: 2026-11-12
 rfc: "0000-hotwire-via-vite"
 cluster: turbo
 packages: [turbo-rails]
-deps: [turbo-rails-broadcastable]
+deps: [turbo-rails-broadcastable-class-methods-and-callbacks]
 deps-rfc: []
 est-loc: 500
 priority: null

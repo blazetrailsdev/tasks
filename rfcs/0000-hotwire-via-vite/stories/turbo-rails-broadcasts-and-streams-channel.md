@@ -19,16 +19,15 @@ closed-reason: null
 ## Context
 
 - `vendor/turbo-rails/v2.0.23/app/channels/turbo/streams_channel.rb:34-45` (`subscribed`).
-- `streams/stream_name.rb:5-31`: `verified_stream_name`,
-  `signed_stream_name` and `ClassMethods`.
+- `Turbo::Streams::StreamName` (`streams/stream_name.rb`) is already ported
+  by `turbo-rails-package-helpers-and-turbo-stream-format`. This story
+  `extend`s it.
 - `streams/broadcasts.rb:5-127`: 23 `broadcast_*_to` / `_later_to` methods,
   plus `refresh_debouncer_for` and `render_broadcast_action`.
 - `app/jobs/turbo/streams/action_broadcast_job.rb`, `broadcast_job.rb` and
   `broadcast_stream_job.rb`.
 - `app/models/turbo/debouncer.rb`, `thread_debouncer.rb` and
   `immediate_debouncer.rb`.
-- `lib/turbo/engine.rb:87-92`: the signed-stream verifier key from
-  `key_generator`.
 - Tests: `vendor/turbo-rails/v2.0.23/test/streams/streams_channel_test.rb` (25).
 
 ## Acceptance criteria

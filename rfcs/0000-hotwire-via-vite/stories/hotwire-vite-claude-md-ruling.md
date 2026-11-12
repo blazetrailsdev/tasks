@@ -32,5 +32,8 @@ The operator decided on 2026-11-12 that Vite, through ports of
 - The operator ratifies the section text, editing it if needed.
 - `trails/CLAUDE.md` gains the section under its own heading, worded as
   ratified, with "Ruled by the operator on <date>".
-- Open questions 1, 3 and 5 of this RFC are answered in the section or
-  explicitly deferred to a named story.
+- Open questions 1, 3 and 5 of this RFC are answered in the section.
+  Questions 2 and 4 are answered or deferred to their owner stories
+  (`retire-trailties-vite-assets-trailtie`, `dry-cli-gem-port`), and the RFC's
+  open questions section is updated to match.
+- The ratification date replaces `<ratification date>` in the RFC's draft text.

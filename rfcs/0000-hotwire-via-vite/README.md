@@ -11,6 +11,7 @@ packages:
   - "vite-ruby"
   - "vite-rails"
   - "rack-proxy"
+  - "dry-cli"
   - "trailties"
   - "actioncable"
   - "activerecord"
@@ -77,7 +78,8 @@ LOC, and 381 upstream tests. The JavaScript the gems ship is excluded:
 `turbo-rails/app/javascript/turbo/` is the npm `@hotwired/turbo-rails`, and
 `stimulus-rails/app/assets/javascripts/` is the npm `@hotwired/stimulus` build.
 
-Every gem the four depend on is already ported except two, both runtime
+Every gem the four depend on is already ported except two, each of which gets
+its own story and package, both runtime
 dependencies of vite_ruby (`vite_ruby/vite_ruby.gemspec:22-26`):
 
 - `rack-proxy`. `ViteRuby::DevServerProxy < Rack::Proxy` at
@@ -90,7 +92,8 @@ dependencies of vite_ruby (`vite_ruby/vite_ruby.gemspec:22-26`):
 
 ### The ruling (for the operator to ratify)
 
-The `hotwire-vite-claude-md-ruling` story lands this text as a new
+The operator chose Vite over importmap-rails/propshaft on 2026-11-12 (see
+Alternatives). The `hotwire-vite-claude-md-ruling` story lands this text as a new
 `trails/CLAUDE.md` section. It is drafted here and is not merged by this RFC:
 
 > ## importmap-rails and propshaft are out of scope; JavaScript is served by Vite (`vite_rails`)
@@ -120,13 +123,14 @@ The `hotwire-vite-claude-md-ruling` story lands this text as a new
 >   is dropped. `vite_hanami`, `vite_padrino` and `vite_plugin_legacy` are not
 >   ported.
 >
-> Ruled by the operator on 2026-11-12.
+> Ruled by the operator on <ratification date>.
 
 ### Package boundaries
 
 | Package                       | Ports                                                                                  | Knows about Vite?     |
 | ----------------------------- | -------------------------------------------------------------------------------------- | --------------------- |
 | `@blazetrails/rack-proxy`     | `rack-proxy` gem's `Rack::Proxy`                                                       | no                    |
+| `@blazetrails/dry-cli`        | `dry-cli` gem's `Dry::CLI`, `Registry`, `Command` (the subset vite_ruby uses)          | no                    |
 | `@blazetrails/vite-ruby`      | `vite_ruby/lib/vite_ruby{,.rb}`, `tasks/vite.rake`, `exe/vite`                         | yes                   |
 | `@blazetrails/vite-rails`     | `vite_rails/lib/vite_rails{,.rb}`, `tasks/vite.rake`                                   | yes                   |
 | `@blazetrails/turbo-rails`    | `lib/turbo*`, `app/{channels,controllers,helpers,jobs,models}/turbo`, the frame layout | install template only |
@@ -201,14 +205,17 @@ See open question 2 for what happens to `trailsPlugin`.
 ## Rollout
 
 1. Ruling: `hotwire-vite-claude-md-ruling`.
-2. Vite core: `rack-proxy-gem-port`, `vite-ruby-core-package`,
+2. Vite core: `rack-proxy-gem-port`, `dry-cli-gem-port`,
+   `vite-ruby-core-package`, `vite-ruby-builder-commands-runner`,
    `vite-ruby-dev-server-proxy`, `vite-ruby-cli-and-tasks`.
 3. Vite Rails: `vite-rails-package-and-tag-helpers`,
    `vite-rails-install-and-precompile-hook`,
    `retire-trailties-vite-assets-trailtie`, `trailties-javascript-default-vite`.
 4. Turbo: `turbo-rails-package-helpers-and-turbo-stream-format`, then
    `turbo-rails-frames-native-and-request-id`, `turbo-rails-streams-tag-builder`,
-   `turbo-rails-broadcasts-and-streams-channel`, `turbo-rails-broadcastable`,
+   `turbo-rails-broadcasts-and-streams-channel`,
+   `turbo-rails-broadcastable-instance-broadcasts`,
+   `turbo-rails-broadcastable-class-methods-and-callbacks`,
    `turbo-rails-test-helpers`, `turbo-rails-install-task`.
 5. Stimulus: `stimulus-rails-package-and-install`,
    `stimulus-rails-controller-generator`.
@@ -243,8 +250,10 @@ See open question 2 for what happens to `trailsPlugin`.
 2. **`trailsPlugin` (Rack-inside-Vite).** Under the vite_rails topology it
    has no role. Options: (a) delete it in `retire-trailties-vite-assets-trailtie`;
    (b) keep it for the system-testing stories that drive an in-process Vite
-   server (`converge-server-onto-in-process-vite-dev-server`). **Recommendation:**
+   server (`converge-server-onto-in-process-vite-dev-server`,
+   0166-actiondispatch-system-testing-parity). **Recommendation:**
    (b) for now, scoped to test-only use, and revisit after those stories land.
+   **Owner:** `retire-trailties-vite-assets-trailtie` records the answer.
 3. **Entrypoint path.** `turbo_with_node.rb:1-3` and
    `stimulus_with_node.rb:10-15` append to `app/javascript/application.js`.
    vite_rails' default is `app/frontend/entrypoints/`
@@ -260,13 +269,20 @@ See open question 2 for what happens to `trailsPlugin`.
    as `@blazetrails/dry-cli`, with its own vendored source and a story;
    (b) express the commands as Thor, which trails already ports.
    **Recommendation:** (a). (b) is a rewrite of the gem's decomposition.
-   `vite-ruby-cli-and-tasks` depends on this answer.
-5. **The npm package for Turbo.** The decision text says `@hotwired/turbo`.
-   The gem's node template adds `@hotwired/turbo-rails` (`turbo_with_node.rb:10`),
-   which wraps `@hotwired/turbo` and adds `<turbo-cable-stream-source>`.
-   Broadcasts need that element. **Recommendation:** `@hotwired/turbo-rails`,
-   as the template says.
+   Story `dry-cli-gem-port` carries option (a), and `vite-ruby-cli-and-tasks`
+   depends on it. If the operator picks (b), that story is closed as
+   `wontfix` and the dep is dropped.
+5. **The npm package for Turbo (resolved).** The operator's original request
+   named `@hotwired/turbo`. The gem's node template adds `@hotwired/turbo-rails`
+   (`turbo_with_node.rb:10`), which wraps `@hotwired/turbo` and adds
+   `<turbo-cable-stream-source>`, which broadcasts need. The ruling text and
+   `turbo-rails-install-task` use `@hotwired/turbo-rails`. The ruling story
+   confirms this.
 
 ## Changelog
 
 - 2026-11-12: initial RFC.
+- 2026-11-12: self-review. Added `dry-cli-gem-port`; split the 700-LOC
+  `vite-ruby-core-package` and `turbo-rails-broadcastable` stories; moved
+  `StreamName` into the first turbo story; resolved OQ5; gave OQ2/OQ4 owners;
+  the ruling's date is left for ratification.

@@ -5,7 +5,7 @@ updated: 2026-11-12
 rfc: "0000-hotwire-via-vite"
 cluster: vite
 packages: [vite-ruby]
-deps: [vite-ruby-core-package]
+deps: [vite-ruby-builder-commands-runner, dry-cli-gem-port]
 deps-rfc: []
 est-loc: 600
 priority: null
@@ -30,8 +30,9 @@ are implemented in `cli/*.rb`, with `cli/install.rb:6-146` the largest.
 
 ## Acceptance criteria
 
-- RFC open question 4 is answered first. If the answer is a `dry-cli` port,
-  file and land that as its own story, and add it to this story's `deps`.
+- The commands are `Dry::CLI::Command` subclasses on `@blazetrails/dry-cli`
+  (`dry-cli-gem-port`, RFC open question 4). If the operator picks Thor
+  instead, that dep is dropped and this story records the receipt.
 - Every command class and rake task is ported under its Rails name. The
   `vite.rake` tasks register through `@blazetrails/rake`.
 - `bin/vite` in a generated app runs `ViteRuby::CLI`.
