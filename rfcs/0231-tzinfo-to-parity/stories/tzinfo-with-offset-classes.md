@@ -7,7 +7,9 @@ cluster: null
 packages:
   - "tzinfo"
 deps:
-  - "tzinfo-timestamp"
+  - tzinfo-timestamp
+  - date-time-localtime-and-datetime-jd
+  - date-time-subclass-preserving-surface
 deps-rfc: []
 est-loc: 600
 priority: 3
