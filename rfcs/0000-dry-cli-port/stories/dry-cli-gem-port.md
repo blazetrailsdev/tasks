@@ -25,7 +25,7 @@ closed-reason: null
 package ports it, and `vendor/sources.ts` does not vendor it. This story is
 option (a) of hotwire-via-vite open question 4, and it depends on the ruling story, where
 the operator picks. If the operator picks option (b) (Thor), close it as
-`wontfix` and drop it from `vite-ruby-cli-and-binstub`'s deps.
+`wontfix` and drop it from `vite-assets-cli-and-binstub`'s deps.
 
 ## Acceptance criteria
 

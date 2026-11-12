@@ -2,10 +2,10 @@
 title: "Port ViteRuby::DevServerProxy onto @blazetrails/rack-proxy"
 status: draft
 updated: 2026-11-12
-rfc: "0000-vite-ruby-port"
-cluster: vite-ruby
-packages: [vite-ruby]
-deps: [rack-proxy-gem-port, vite-ruby-core-package]
+rfc: "0000-vite-assets-port"
+cluster: vite-assets
+packages: [vite-assets]
+deps: [rack-proxy-gem-port, vite-assets-core-package]
 deps-rfc: []
 est-loc: 200
 priority: null
@@ -26,6 +26,6 @@ closed-reason: null
 
 ## Acceptance criteria
 
-- `packages/vite-ruby/lib/dev-server-proxy.ts` subclasses `Rack::Proxy`
+- `packages/vite-assets/lib/dev-server-proxy.ts` subclasses `Rack::Proxy`
   from `@blazetrails/rack-proxy`, with the same branches in the same order.
 - Both upstream test files are ported under their upstream names.

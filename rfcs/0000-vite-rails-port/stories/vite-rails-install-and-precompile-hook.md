@@ -5,7 +5,7 @@ updated: 2026-11-12
 rfc: "0000-vite-rails-port"
 cluster: vite-rails
 packages: [vite-rails]
-deps: [vite-rails-package-and-tag-helpers, vite-ruby-cli-and-binstub, vite-ruby-rake-tasks]
+deps: [vite-rails-package-and-tag-helpers, vite-assets-cli-and-binstub, vite-assets-rake-tasks]
 deps-rfc: []
 est-loc: 300
 priority: null

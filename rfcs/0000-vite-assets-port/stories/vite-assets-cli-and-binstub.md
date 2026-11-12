@@ -2,10 +2,10 @@
 title: "Port ViteRuby::CLI and its commands, and the bin/vite binstub"
 status: draft
 updated: 2026-11-12
-rfc: "0000-vite-ruby-port"
-cluster: vite-ruby
-packages: [vite-ruby]
-deps: [vite-ruby-builder-commands-runner, dry-cli-gem-port]
+rfc: "0000-vite-assets-port"
+cluster: vite-assets
+packages: [vite-assets]
+deps: [vite-assets-builder-commands-runner, dry-cli-gem-port]
 deps-rfc: []
 est-loc: 400
 priority: null
@@ -23,7 +23,7 @@ closed-reason: null
 `upgrade_packages`. They are implemented in `cli/*.rb`, and
 `cli/install.rb:6-146` is the largest. `exe/vite` is the binstub. The CLI is
 built on `dry-cli` (`vite_ruby.gemspec:22`, hotwire-via-vite open question 4). The rake
-tasks belong to `vite-ruby-rake-tasks`. Tests:
+tasks belong to `vite-assets-rake-tasks`. Tests:
 `vendor/vite_ruby/v3.11.1/test/file_utils_test.rb` and `upgrade_test.rb`.
 
 ## Acceptance criteria

@@ -2,10 +2,10 @@
 title: "Port the vite:* rake tasks and the assets:precompile enhancement"
 status: draft
 updated: 2026-11-12
-rfc: "0000-vite-ruby-port"
-cluster: vite-ruby
-packages: [vite-ruby]
-deps: [vite-ruby-cli-and-binstub]
+rfc: "0000-vite-assets-port"
+cluster: vite-assets
+packages: [vite-assets]
+deps: [vite-assets-cli-and-binstub]
 deps-rfc: []
 est-loc: 250
 priority: null

@@ -1,10 +1,10 @@
 ---
-title: "Create @blazetrails/vite-ruby: ViteRuby, Config, Manifest and errors"
+title: "Create @blazetrails/vite-assets: ViteRuby, Config, Manifest and errors"
 status: draft
 updated: 2026-11-12
-rfc: "0000-vite-ruby-port"
-cluster: vite-ruby
-packages: [vite-ruby]
+rfc: "0000-vite-assets-port"
+cluster: vite-assets
+packages: [vite-assets]
 deps: [hotwire-vite-claude-md-ruling]
 deps-rfc: []
 est-loc: 450
@@ -31,7 +31,7 @@ Core of the vite_ruby gem (`vendor/vite_ruby/v3.11.1/vite_ruby/lib/`):
 - `error.rb`, `missing_entrypoint_error.rb` and `missing_executable_error.rb`.
 
 `builder.rb`, `build.rb`, `commands.rb`, `runner.rb`, `io.rb` and
-`compatibility_check.rb` are `vite-ruby-builder-commands-runner`.
+`compatibility_check.rb` are `vite-assets-builder-commands-runner`.
 `ViteRuby#builder`, `#commands` and `#run` stay as accessors here, and
 return those classes once that story lands.
 
@@ -42,12 +42,12 @@ ports.
 
 ## Acceptance criteria
 
-- `packages/vite-ruby/lib/` mirrors `vite_ruby/lib/vite_ruby/`, with
+- `packages/vite-assets/lib/` mirrors `vite_ruby/lib/vite_ruby/`, with
   `libEntryFile` `vite_ruby.rb`. Names come from the ruby-ts conventions table.
 - Config precedence matches `resolve_config`: defaults, then the file, then
   `VITE_RUBY_*` env vars, then explicit attrs. Option keys are camelCase, the
   same as the JSON.
-- `vendor/sources.ts`: `vite-ruby` gets `compareApi: true`. Test-compare
+- `vendor/sources.ts`: `vite-assets` gets `compareApi: true`. Test-compare
   splits the shared `test/` dir by assigning the vite_ruby files to this
   package, and `compareTests: true` is set for it.
 - The ported tests keep their upstream names and use the gem's

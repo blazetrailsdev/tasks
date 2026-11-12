@@ -5,7 +5,7 @@ updated: 2026-11-12
 rfc: "0000-vite-rails-port"
 cluster: vite-rails
 packages: [vite-rails]
-deps: [vite-ruby-core-package]
+deps: [vite-assets-core-package]
 deps-rfc: []
 est-loc: 450
 priority: null
@@ -30,7 +30,7 @@ closed-reason: null
 `vite_rails.logger`, `vite_rails.bootstrap` and `vite_rails.set_source`, which
 this story ports. The `vite_rails.proxy` initializer (`:6-8`) is out of scope
 here. `vite-rails-dev-server-topology` ports it and turns it on, because it
-needs `DevServerProxy` from `vite-ruby-dev-server-proxy`.
+needs `DevServerProxy` from `vite-assets-dev-server-proxy`.
 `config.rb:1-18` is `ViteRails::Config`. Tests: `vendor/vite_ruby/v3.11.1/test/helper_test.rb`
 (17).
 

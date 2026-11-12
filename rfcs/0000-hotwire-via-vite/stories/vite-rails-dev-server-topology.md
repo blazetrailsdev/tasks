@@ -7,7 +7,7 @@ cluster: vite
 packages: [vite-rails, trailties]
 deps:
   [
-    vite-ruby-dev-server-proxy,
+    vite-assets-dev-server-proxy,
     vite-rails-install-and-precompile-hook,
     retire-trailties-vite-assets-trailtie,
   ]

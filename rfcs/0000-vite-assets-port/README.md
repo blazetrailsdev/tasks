@@ -1,26 +1,26 @@
 ---
-rfc: "0000-vite-ruby-port"
-title: "Port the vite_ruby gem"
+rfc: "0000-vite-assets-port"
+title: "Port the vite_ruby gem as @blazetrails/vite-assets"
 status: draft
 created: 2026-11-12
 updated: 2026-11-12
 owner: "@deanmarano"
 packages:
-  - "vite-ruby"
+  - "vite-assets"
 clusters:
-  - vite-ruby
+  - vite-assets
 ---
 
 <!-- Unnumbered until merge: copy this dir to `rfcs/0000-your-slug`, keep `rfc:`
      as 0000-your-slug and the H1 below number-free. `scripts/finalize-rfc.mjs`
      swaps 0000 for the assigned number at merge. -->
 
-# RFC — Port the vite_ruby gem
+# RFC — Port the vite_ruby gem as @blazetrails/vite-assets
 
 ## Summary
 
 Port `vite_ruby` v3.11.1 (`vendor/vite_ruby/v3.11.1/vite_ruby/`) as
-`@blazetrails/vite-ruby`. This is the framework-agnostic core: config,
+`@blazetrails/vite-assets`. This is the framework-agnostic core: config,
 manifest, builder, runner, the dev-server proxy, the `bin/vite` CLI and the
 `vite:*` rake tasks. Part of the `hotwire-via-vite` meta RFC, whose ruling makes Vite the trails
 JavaScript pipeline.
@@ -34,7 +34,20 @@ about 100 upstream tests in the monorepo's shared `test/` directory.
 
 ## Design
 
-`packages/vite-ruby/lib/` mirrors `vite_ruby/lib/vite_ruby/`, with
+### Name
+
+The package is `@blazetrails/vite-assets`, not `vite-ruby`. trails drops a
+gem's "ruby" suffix (`bcrypt-ruby` is `@blazetrails/bcrypt`, `msgpack-ruby` is
+`@blazetrails/msgpack`), and `vendor/sources.ts` keeps the gem mapping, so
+`parity:api` still keys on `vite_ruby`. "assets" names the package by its
+role, which is serving the app's browser JS/CSS. That keeps it distinct from
+trails' other uses of Vite (vitest, trailties' test-only `trailsPlugin`, the
+website build), none of which may import it. The Ruby class names stay
+faithful (`ViteRuby`, `ViteRuby::Config`), as with every port.
+
+### Layout
+
+`packages/vite-assets/lib/` mirrors `vite_ruby/lib/vite_ruby/`, with
 `libEntryFile` `vite_ruby.rb`. `ViteRuby::Config` keeps its precedence
 order: defaults, then `config/vite.json`, then `VITE_RUBY_*` env vars, then
 explicit attrs. `DevServerProxy` subclasses `Rack::Proxy` from
@@ -51,20 +64,26 @@ vite_ruby files to this package in `vendor/sources.ts`.
 
 ## Alternatives considered
 
+- **Name it `@blazetrails/vite-ruby`.** "ruby" is meaningless in a TypeScript
+  package. Rejected by the operator on 2026-11-12.
+- **Name it `@blazetrails/vite`.** This reads as trails' general Vite
+  integration, and is easy to confuse with the npm `vite` in imports.
+  Rejected.
+
 - **Merge vite_ruby into the vite-rails package.** That breaks the gem
   boundary that `parity:api` keys on. Rejected.
 
 ## Rollout
 
-1. `vite-ruby-core-package` (Config, Manifest, errors).
-2. `vite-ruby-builder-commands-runner` and `vite-ruby-dev-server-proxy`.
-3. `vite-ruby-cli-and-binstub`, then `vite-ruby-rake-tasks`.
+1. `vite-assets-core-package` (Config, Manifest, errors).
+2. `vite-assets-builder-commands-runner` and `vite-assets-dev-server-proxy`.
+3. `vite-assets-cli-and-binstub`, then `vite-assets-rake-tasks`.
 
 ## Verification
 
-- `pnpm parity:api vite-ruby` reaches 118 public methods.
+- `pnpm parity:api vite-assets` reaches 118 public methods.
 - `parity:test` total = matched + `PERMANENT-SKIP`, where the total is the
-  exact count `vite-ruby-core-package` records for the split `test/`
+  exact count `vite-assets-core-package` records for the split `test/`
   directory. `PERMANENT-SKIP` is allowed only for the reasons the meta RFC
   lists.
 
