@@ -1,6 +1,6 @@
 ---
 title: "wire-cache-store-version-behavior-into-helpers"
-status: claimed
+status: in-progress
 updated: 2026-11-12
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10024
 claim: "2026-11-12T12:41:31Z"
 assignee: "cache-marshal-serializers-dump-through-ruby-compat-marshal"
 blocked-by: null

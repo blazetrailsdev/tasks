@@ -1,9 +1,9 @@
 ---
 rfc: "0224-aot-boot-files"
 title: "Files a boot loads by path reach an ahead-of-time build"
-status: active
+status: closed
 created: 2026-11-07
-updated: 2026-11-08
+updated: 2026-11-12
 owner: "@deanmarano"
 packages:
   - ruby-compat

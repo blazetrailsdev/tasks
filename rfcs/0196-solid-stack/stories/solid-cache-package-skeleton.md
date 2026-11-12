@@ -1,6 +1,6 @@
 ---
 title: "Create packages/solid-cache as a published workspace package and enroll it in compare"
-status: claimed
+status: in-progress
 updated: 2026-11-12
 rfc: "0196-solid-stack"
 cluster: solid-stack
@@ -8,7 +8,7 @@ packages: ["solid-cache"]
 deps: ["vendor-solid-cache-queue-cable-gems"]
 deps-rfc: []
 est-loc: 250
-pr: null
+pr: trails#10030
 claim: "2026-11-12T14:41:33Z"
 assignee: "solid-queue-recurring-enqueue-event-flake"
 blocked-by: null

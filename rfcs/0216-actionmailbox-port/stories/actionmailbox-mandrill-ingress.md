@@ -1,6 +1,6 @@
 ---
 title: "Port the Mandrill ingress controller (deferred wave)"
-status: ready
+status: in-progress
 updated: 2026-11-12
 rfc: "0216-actionmailbox-port"
 cluster: amb-ingress-deferred
@@ -9,9 +9,9 @@ deps: ["actionmailbox-base-controller-and-relay-ingress"]
 deps-rfc: []
 est-loc: 350
 priority: 9
-pr: null
-claim: null
-assignee: null
+pr: trails#10031
+claim: "2026-11-12T15:35:06Z"
+assignee: "actionmailbox-mandrill-ingress"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "actionmailbox tests boot their own dummy app and roll back per test"
-status: claimed
+status: in-progress
 updated: 2026-11-12
 rfc: "0216-actionmailbox-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#10031
 claim: "2026-11-12T13:11:33Z"
 assignee: "actionmailbox-test-dummy-app-and-transactional-tests"
 blocked-by: null

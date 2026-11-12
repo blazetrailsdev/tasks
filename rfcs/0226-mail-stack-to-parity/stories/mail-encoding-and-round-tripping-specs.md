@@ -1,6 +1,6 @@
 ---
 title: "Port encoding_spec.rb, round_tripping_spec.rb and the encodings / quoted-printable / unstructured-field fold remainders"
-status: in-progress
+status: done
 updated: 2026-11-12
 rfc: "0226-mail-stack-to-parity"
 cluster: null

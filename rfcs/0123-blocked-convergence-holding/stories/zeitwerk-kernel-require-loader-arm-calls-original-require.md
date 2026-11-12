@@ -1,7 +1,7 @@
 ---
 title: "zeitwerk-kernel-require-loader-arm-calls-original-require"
-status: ready
-updated: 2026-11-10
+status: blocked
+updated: 2026-11-12
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "needs zeitwerk-kernel-require-load-path-feature-arm (0154, draft): rbFRequireFile/rbFLoad return only a boolean, so the loader arm can't hand exports to onFileAutoloaded"
 closed-reason: null
 ---
 

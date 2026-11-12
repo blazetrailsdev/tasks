@@ -1,9 +1,9 @@
 ---
 rfc: "0229-tooling-gems-residual-parity"
 title: "Tooling gems residual parity: rake, zeitwerk, thor and rackup"
-status: active
+status: closed
 created: 2026-11-09
-updated: 2026-11-09
+updated: 2026-11-12
 owner: "@deanmarano"
 packages:
   - "rake"
