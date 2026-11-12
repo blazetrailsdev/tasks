@@ -1,18 +1,19 @@
 ---
-title: "ActiveModel: attribute assignment, JSON#from_json and validations stop dropping promises"
+title: "ActiveModel attribute assignment, JSON#from_json and validations stop dropping promises"
 status: draft
 updated: 2026-11-12
 rfc: "0000-no-void-promises"
 cluster: discarded-calls
-packages: []
+packages: [activemodel]
 deps: [no-floating-promises-repo-wide-ignore-void-false, no-swallowed-rejection-lint-rule]
 deps-rfc: []
-est-loc: 450
+est-loc: 400
 priority: null
 pr: null
 claim: null
 assignee: null
 blocked-by: null
+closed-reason: null
 ---
 
 ## Context
@@ -27,6 +28,10 @@ assignment-capture machinery; `serializers/json.ts:66`
 
 ## Acceptance criteria
 
-- [ ] `_assignAttributes` awaits each `_assignAttribute` in order, or the sync path raises via `assertAssignedSynchronously`; no promise is dropped.
-- [ ] The empty rejection handlers are gone and a rejection reaches the caller (test).
-- [ ] The `fromJson` and `validations` sites await or return.
+- [ ] `_assignAttributes` awaits each `_assignAttribute` in order, or the sync path raises through `assertAssignedSynchronously`; no promise is dropped.
+- [ ] The empty handlers are gone and a rejection reaches the caller (test).
+- [ ] activemodel's source marks reach 0.
+
+## Definition of done
+
+An `eslint-disable`, a receipt tag, or a raised mark does not close this story.

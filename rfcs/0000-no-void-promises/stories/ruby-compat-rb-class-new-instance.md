@@ -1,9 +1,9 @@
 ---
-title: "ruby-compat rbClassNewInstance builds an instance through a protected constructor for static async new"
+title: "ruby-compat rbClassNewInstance builds an instance through a protected constructor"
 status: draft
 updated: 2026-11-12
 rfc: "0000-no-void-promises"
-cluster: constructors
+cluster: gate
 packages: [ruby-compat]
 deps: []
 deps-rfc: []
@@ -13,17 +13,19 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
+closed-reason: null
 ---
 
 ## Context
 
-RFC § Design 2(a). Every `static async new` needs to construct `this` past a
+RFC § Design 2(a). A `static async new` must construct `this` past a
 `protected` constructor, which TypeScript allows only through a cast
-(`new (this as unknown as new (...a: never[]) => T)(...args)`). That cast
+(`new (this as unknown as new (...a: never[]) => T)(...args)`). The cast
 belongs in one place. MRI's `rb_class_new_instance`
-(`vendor/ruby/v3.3.11/object.c:2158`) is allocate plus `initialize`, the same job.
+(`vendor/ruby/v3.3.11/object.c:2158`) is allocate plus `initialize`, the same
+job.
 
 ## Acceptance criteria
 
-- [ ] `rbClassNewInstance(klass, ...args)` in ruby-compat, typed so `await Sub.new()` comes back as `Sub`, with an MRI citation.
-- [ ] Tests: subclass typing, a protected constructor stays unreachable from outside, args are forwarded.
+- [ ] `rbClassNewInstance(klass, ...args)` in ruby-compat with the MRI citation, typed so a subclass's `await Sub.new()` is `Sub`.
+- [ ] Tests: subclass typing (a type test), argument forwarding, and a `@ts-expect-error` proving `new Klass()` from outside stays a type error.

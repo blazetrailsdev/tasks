@@ -5,19 +5,25 @@ updated: 2026-11-12
 rfc: "0000-no-void-promises"
 cluster: constructors
 packages: []
-deps: [constructor-creates-no-promise-lint-rule, ruby-compat-rb-class-new-instance]
+deps:
+  [
+    constructor-creates-no-promise-lint-rule,
+    ruby-compat-rb-class-new-instance,
+    inlined-from-placement-accepts-static-new,
+  ]
 deps-rfc: []
-est-loc: 400
+est-loc: 450
 priority: null
 pr: null
 claim: null
 assignee: null
 blocked-by: null
+closed-reason: null
 ---
 
 ## Context
 
-RFC § Design 2(a): async `initialize` is `static async new` with a protected constructor. `rackup/lib/server.ts:300` stores
+RFC § Design 2(a). `rackup/lib/server.ts:300` stores
 `this._ready = this.parseOptions(ARGV).then(...)`;
 `trailties/lib/commands/console.ts:59` stores
 `this._loadConsole = Promise.resolve(app.loadConsole())` and swallows its
@@ -30,8 +36,11 @@ Rails: rackup's `server.rb` `initialize`,
 
 ## Acceptance criteria
 
-- [ ] Each class has a `protected` synchronous constructor and a `static async new` that runs the async remainder of `initialize` at its Rails position; callers write `await Klass.new(...)`.
-- [ ] `new Klass(...)` outside the class hierarchy no longer compiles (a `@ts-expect-error` test).
+- [ ] Each class has a `protected` synchronous constructor and a `static async new` running the async remainder of `initialize` in Rails' order; every caller writes `await Klass.new(...)`.
 - [ ] `_ready`, `_loadConsole` and any equivalent stored promise field are deleted.
-- [ ] A rejection from the awaited step surfaces at the call site (a test per class).
-- [ ] No `create()` factory and no `ready` / `whenReady` member is added.
+- [ ] A rejection from the async half surfaces at `await Klass.new(...)` (a test per class).
+- [ ] The constructor rule's mark drops by 4.
+
+## Definition of done
+
+An `eslint-disable`, a receipt tag, or a raised mark does not close this story.

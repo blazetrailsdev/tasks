@@ -13,11 +13,12 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
+closed-reason: null
 ---
 
 ## Context
 
-RFC § Design 2. Six constructors start a promise today:
+RFC § Design 2. Six constructors start a promise:
 `activerecord/src/connection-adapters/abstract/connection-pool.ts:291`,
 `rackup/lib/server.ts:300`, `trailties/lib/commands/console.ts:59-60`,
 `solid-cable/lib/action-cable/subscription-adapter/solid-cable.ts:86`,
@@ -26,6 +27,10 @@ RFC § Design 2. Six constructors start a promise today:
 ## Acceptance criteria
 
 - [ ] A type-aware rule reports, inside a `constructor` body: a thenable-typed call expression (dropped, voided, stored or chained), `.then` / `.catch` / `.finally`, and an `async` IIFE.
-- [ ] `new Thread(...)` from `@blazetrails/ruby-compat` is not reported; reading its promise is.
-- [ ] A class that declares `static async new` must declare a `protected` or `private` constructor; a public one is reported.
-- [ ] RuleTester covers each arm; the rule runs repo-wide against an only-shrink mark.
+- [ ] `new Thread(...)` from `@blazetrails/ruby-compat` is not reported; reading or storing its promise is.
+- [ ] A class declaring `static async new` must declare a `protected` or `private` constructor; a public one is reported.
+- [ ] RuleTester covers each arm; runs repo-wide against an only-shrink mark seeded at 6.
+
+## Definition of done
+
+An `eslint-disable`, a receipt tag, or a raised mark does not close this story.

@@ -1,34 +1,40 @@
 ---
 rfc: "0000-no-void-promises"
-title: "No void promises; a constructor never starts async work"
+title: "No void promises; async initialize is an awaited static new"
 status: draft
 created: 2026-11-12
 updated: 2026-11-12
 owner: "@deanmarano"
 packages:
-  [
-    activemodel,
-    activerecord,
-    actioncable,
-    actionpack,
-    actiontext,
-    activestorage,
-    activesupport,
-    rack,
-    rackup,
-    rake,
-    ruby-compat,
-    solid-cable,
-    solid-queue,
-    trailties,
-    website,
-    zeitwerk,
-  ]
+  - "actioncable"
+  - "actionmailbox"
+  - "actionpack"
+  - "actiontext"
+  - "actionview"
+  - "activemodel"
+  - "activerecord"
+  - "activestorage"
+  - "activesupport"
+  - "arel"
+  - "mail"
+  - "mini-magick"
+  - "rack"
+  - "rackup"
+  - "rake"
+  - "ruby-compat"
+  - "solid-cable"
+  - "solid-queue"
+  - "thor"
+  - "trails-tsc"
+  - "trailties"
+  - "website"
+  - "zeitwerk"
 clusters:
   - gate
   - constructors
   - discarded-calls
   - background-work
+  - tests
 ---
 
 <!-- Unnumbered until merge: copy this dir to `rfcs/0000-your-slug`, keep `rfc:`
@@ -36,194 +42,243 @@ clusters:
      swaps 0000 for the assigned number at merge. Never use a `draft-` prefix —
      `draft` is a lifecycle status, not a dir prefix (see top-level README). -->
 
-# RFC — No void promises; a constructor never starts async work
+# RFC — No void promises; async initialize is an awaited static new
 
 ## Summary
 
-Every promise in trails is awaited, returned, or owned by a ruby-compat
-`Thread`. `void promise` and `.catch(() => {})` are banned outright, and a
-constructor never creates a promise. Where Rails' `initialize` does work that
-is async in JS, there are exactly two sanctioned shapes: the caller awaits the
-async step **before** `new` and passes the result in, or the work is the
-`Thread` Rails already runs it on, and it is awaited through `Thread#join` /
-`#value`. Both are enforced by lint, against an only-shrink baseline.
+Every promise in trails is awaited, returned, combined into one that is, or
+owned by a ruby-compat `Thread`. `void <promise>` and an unawaited empty
+rejection handler (`p.catch(() => {})`) are banned outright, with no receipt
+tag. A constructor never creates a promise: where Rails' `initialize` does
+work that is async in JS, the class gets a `protected` constructor and a
+`static async new`, and every caller writes `await Klass.new(...)`, the Rails
+call. Work Rails runs on a background thread is a `Thread`, awaited through
+`join` / `value`. Lint enforces all of it against only-shrink marks.
 
 ## Motivation
 
-An unawaited promise loses two things: ordering (the caller runs on before the
-work finishes) and errors (a rejection has no handler, or an empty one). The
-pattern has been propagating, because each new instance copies a neighbour.
-Survey of `main` at 20fdbe9f43, 2026-11-12:
+An unawaited promise loses ordering (the caller runs on before the work
+finishes) and errors (a rejection has no handler, or an empty one). The shape
+spreads because each new instance copies a neighbour, and the one lint rule
+that would catch it is narrow:
 
-- **`no-floating-promises` covers three trees only**
-  (`eslint.config.mjs:1233-1241`: `activemodel/lib`, `activerecord/src`,
-  `scripts`), and with its default `ignoreVoid: true`. Run over every
-  package's `lib/` and `src/` it reports **19** bare floating promises: 15
-  dropped `Mutex#synchronize` results (`actioncable/lib/subscription-adapter/redis.ts`
-  ×5, `zeitwerk/lib/cref/map.ts` ×3, `zeitwerk/lib/loader/config.ts` ×5,
-  `zeitwerk/lib/loader.ts:646`), `debug-view.ts:37`, `benchmarkable.ts:84`,
-  `callbacks.ts:566`, `trailties/lib/commands/version.ts:10`.
-- **~40 `void <call>` statements** in non-test sources, plus **~17**
-  `void this.sourceRoot(...)` in generators (`Base.sourceRoot` is
-  `static async`, `trailties/lib/generators/base.ts:181`).
-- **~8 `.catch(() => {})` swallowers**: `activemodel/lib/attribute-assignment.ts:37,144,174`,
-  `activerecord/src/connection-adapters/schema-cache.ts:195`,
-  `activestorage/lib/attached/one.ts:62`, `trailties/lib/commands/console.ts:60`,
-  `solid-cable/lib/action-cable/subscription-adapter/solid-cable.ts:86`,
-  `website/src/lib/frontiers/sw-client.ts:167`.
-- **6 constructors that start a promise**:
-  `connection-pool.ts:291` (`void this.reaper.run()`),
-  `rackup/lib/server.ts:300` (`this._ready = this.parseOptions(ARGV).then(…)`),
-  `trailties/lib/commands/console.ts:59-60`, `solid-cable.ts:86`,
-  `actiontext/lib/content.ts:73`, `activerecord/src/schema-dumper.ts:80`.
+- `@typescript-eslint/no-floating-promises` runs on `activemodel/lib`,
+  `activerecord/src` and `scripts` only (`eslint.config.mjs:1233-1241`, added
+  by RFC 0063), with the default `ignoreVoid: true`, so `void p` passes.
 
-Concrete losses: PostgreSQL's `dealloc` is async
-(`postgresql-adapter.ts:2035`), so `statement-pool.ts:47,55,67`'s
-`void this.dealloc(…)` drops a failed `DEALLOCATE`; `_assignAttributes`'
-`void this._assignAttribute(k, v)` (`attribute-assignment.ts:64`) lets
-mass assignment return before a nested writer finishes.
+Survey of trails `main` at 20fdbe9f43, 2026-11-12. The lint figure is exact;
+the others are regex counts (`^\s*void <expr>` statements, and
+`.catch(() => {} | undefined | null)` not preceded by `await`) and include a
+few `void` operands that are not promises. The gate story replaces them with
+the rule's own numbers.
 
-The counts are regex- and lint-based; the gate story produces the exact
-baseline.
+| Shape                                       | Source | Tests |
+| ------------------------------------------- | -----: | ----: |
+| bare floating promise (lint, outside scope) |     19 |     — |
+| `void <expr>` and unawaited empty `.catch`  |    147 |   408 |
+| constructor that starts a promise           |      6 |     — |
+
+Source by package: activerecord 44, trailties 24 (17 are generators'
+`void this.sourceRoot(...)`), actionpack 13, activemodel 10, activesupport 9,
+ruby-compat 8, actioncable 6, rake 5, website 4, and 1–3 each in eleven more.
+Tests: activerecord 298, of which ~120 are `void X.resetColumnInformation()`;
+activemodel 41; 1–13 each in sixteen more.
+
+Concrete losses already visible:
+
+- PostgreSQL's `dealloc` is async (`postgresql-adapter.ts:2035`), so
+  `statement-pool.ts:47,55,67`'s `void this.dealloc(…)` drops a failed
+  `DEALLOCATE`.
+- `_assignAttributes`' `void this._assignAttribute(k, v)`
+  (`activemodel/lib/attribute-assignment.ts:64`) returns from mass assignment
+  before a nested writer finishes.
+- `Mutex#synchronize` runs a sync block inline only when uncontended; when
+  contended it queues the block and returns a promise
+  (`ruby-compat/lib/mutex.ts:139-183`). The 15 call sites that drop that
+  result (`actioncable/.../redis.ts`, `zeitwerk/lib/cref/map.ts`,
+  `zeitwerk/lib/loader/config.ts`, `zeitwerk/lib/loader.ts:646`) continue
+  before their critical section has run.
+- Six constructors start a promise: `connection-pool.ts:291`,
+  `rackup/lib/server.ts:300`, `trailties/lib/commands/console.ts:59-60`,
+  `solid-cable.ts:86`, `actiontext/lib/content.ts:73`,
+  `activerecord/src/schema-dumper.ts:80`.
 
 ## Design
 
 ### 1. The rule
 
-A promise-valued expression is one of: `await`ed, `return`ed, passed as an
-argument to a function that takes a promise (`Promise.all`, a `Thread`'s
-block result), or stored where a later `await` reads it **in the same
-function**. Nothing else.
+A promise-valued expression is one of:
 
-- `void <promise>` is an error (`no-floating-promises` with
-  `ignoreVoid: false`).
-- A `.catch` / `.then` rejection handler with an empty body, or one that only
-  returns, is an error (a new `blazetrails/no-swallowed-rejection` rule). A
-  real handler (logs, re-raises, routes to `Thread#report_on_exception`) is
-  fine.
-- Both apply repo-wide, tests included.
+- `await`ed;
+- `return`ed;
+- an element of an array passed to `Promise.all` / `Promise.allSettled`
+  that is itself awaited or returned;
+- handed to a ruby-compat `Thread`, which owns it.
+
+Two lint rules hold this, repo-wide, tests included:
+
+- `no-floating-promises` with `ignoreVoid: false`: `void <promise>` is an
+  error.
+- `blazetrails/no-swallowed-rejection`: a `.catch(fn)` or `.then(_, fn)` whose
+  `fn` is empty or only returns a constant is an error **unless the whole
+  expression is awaited**. `await p.catch(() => null)` is the port of Ruby's
+  `rescue nil` and stays; `p.catch(() => {})` as a statement does not.
+
+"Pre-observe now, await later" (`callbacks.ts:1021-1043`,
+`connection-pool.ts:737,802`, `mirror-service.ts:125`) attaches an empty
+handler to silence an early rejection. It converges to awaiting in order, or
+to `Promise.allSettled` over the whole set, awaited, with each rejection
+re-raised or reported. There is no exemption tag.
 
 ### 2. A constructor never creates a promise; async `initialize` is an awaited `static new`
 
 `blazetrails/constructor-creates-no-promise` reports, inside a `constructor`
-body: an `await`-able call whose result is dropped, voided, stored, or
-chained; a `.then` / `.catch` / `.finally`; an `async` IIFE. Where Rails'
-`initialize` (or its inlined `@inlinedFrom` segments) does work that is async
-in JS, the port takes one of **two shapes and no others**:
+body, a thenable-typed call whose result is dropped, voided, stored or
+chained; any `.then` / `.catch` / `.finally`; and an `async` IIFE. Where Rails'
+`initialize`, or a segment inlined into the constructor under RFC 0188, does
+work that is async in JS, the port takes one of two shapes and no others.
 
 **(a) `static async new` with a protected constructor.** Ruby builds an object
-with `Klass.new`, and here that spelling is what JS needs: a method that can be
-awaited. The class gets
+with `Klass.new`; here that spelling is what JS needs, a call that can be
+awaited:
 
 ```ts
 protected constructor(...)            // the synchronous part of initialize
 static async new<T extends Klass>(this: { prototype: T }, ...args): Promise<T> {
-  const obj = new (this as unknown as new (...a: never[]) => T)(...args);
-  // the async remainder of initialize, line for line, at its Rails position
+  const obj = rbClassNewInstance(this, ...args);
+  // the async remainder of initialize, in Rails' order
   return obj;
 }
 ```
 
-and callers write `await Klass.new(...)`, which is the Rails call. The
-constructor is `protected`, so `new Klass(...)` outside the class hierarchy is
-a type error: there is **one** way to build the object, which is what the
-operator's rejection of a static `new` beside a public constructor
-(trails#8659, `packages/activerecord/CLAUDE.md` § "A record is built with
-`new Klass` only") guarded against. A subclass gets the same `new` through
-`this` and comes back typed as itself (checked with `tsc --strict`,
-2026-11-12). A subclass whose `initialize` adds async work overrides
-`static async new` and calls `super.new`. This applies only to classes whose
-`initialize` has async work; every other class, `ActiveRecord::Base` and its
-models included, keeps `new Klass` and a public constructor, and trails#8659
-stands for them. The cast inside `new` lives in one ruby-compat helper
-(`rbClassNewInstance`, MRI `rb_class_new_instance`) so the shape is identical
-everywhere.
+- Callers write `await Klass.new(...)`. The constructor is `protected`, so
+  `new Klass(...)` outside the hierarchy is a type error and there is one way
+  to build the object. That is what the operator's rejection of a static
+  `new` beside a public constructor guarded against (trails#8659,
+  `packages/activerecord/CLAUDE.md` § "A record is built with `new Klass`
+  only").
+- A subclass inherits `new` through `this` and comes back typed as itself
+  (checked with `tsc --strict`, 2026-11-12). A subclass whose `initialize`
+  adds async work overrides `static async new` and calls `super.new(...)`.
+- `rbClassNewInstance` (ruby-compat, MRI `rb_class_new_instance`,
+  `vendor/ruby/v3.3.11/object.c:2158`) holds the one cast that reaches the
+  protected constructor.
+- `@inlinedFrom` tags for the segments that now sit in `static new` move
+  there with them; `eslint/inlined-from-placement.mjs` accepts the tag on a
+  `static new` member.
+- Scope: only classes whose `initialize` has async work. `ActiveRecord::Base`,
+  its models, and every class with a synchronous `initialize` keep a public
+  constructor and `new Klass`, and trails#8659 stands for them.
 
-**(b) A `Thread`.** When Rails runs the work on a background thread
+**(b) A `Thread`.** Where Rails runs the work on a background thread
 (`Reaper#run`'s `Thread.new`, Action Cable's listener threads, Solid Queue's
 processes), the port is ruby-compat's `Thread`, constructed where Rails
-constructs it. The `Thread` owns the promise, reports an exception as
-`report_on_exception` does, and anyone who waits does so through
-`thread.join()` / `thread.value()`, as Ruby does. A constructor may create a
-`Thread`; it may not hold the `Thread`'s promise itself.
+constructs it. The `Thread` owns the promise and reports an exception as
+`report_on_exception` does; a waiter uses `thread.join()` / `thread.value()`.
+A constructor may create a `Thread`; it may not hold the `Thread`'s promise.
 
-There is no `ready` field, no `whenReady()`, no `create()` factory, and no
-lazy first-call initialisation. "How do I await a constructor promise?" has
-one answer: `await Klass.new(...)`.
+There is no `ready` field, no `whenReady()`, no factory under another name,
+and no lazy first-call initialisation. "How do I await a constructor
+promise?" has one answer: `await Klass.new(...)`.
 
 ### 3. A sync caller of an async method becomes async
 
-`void this.asyncThing()` inside a synchronous method is converged by making the
-method async and awaiting, up the call chain, until a caller already is. Where
-a Rails sync entry point must stay sync (mass assignment's
-`assertAssignedSynchronously` path), it asserts synchronously and raises; it
-never drops the promise.
+`void this.asyncThing()` inside a synchronous method converges by making the
+method async and awaiting, up the call chain to the first caller that already
+is. Where Rails' entry point must stay synchronous (mass assignment's
+`assertAssignedSynchronously` path), it raises when handed a promise; it never
+drops one. Where the async member is async only by accident of the port
+(`Base.sourceRoot`'s writer, `resetColumnInformation`), the story first checks
+whether the Rails method is synchronous and makes the port match before
+adding awaits.
 
 ### 4. `Mutex#synchronize`
 
-`synchronize(block: () => T): T | Promise<T>` (`ruby-compat/lib/mutex.ts:139`)
-makes every sync-block call site look floating. The sync overload returns `T`
-when the block is sync and the lock is uncontended, and the contended arm is
-awaited; the story decides which by reading `mutex.ts`, and either the type
-narrows to `T` or every caller awaits.
+Callers await `synchronize` unless the call is inside a block that already
+holds the lock. Its `T | Promise<T>` return type is accurate (§ Motivation)
+and stays.
 
-### 5. Gate
+### 5. Gate and ratification
 
-The rule changes land with a per-package count mark that is **only-shrink**
-with no reseed, matching every other ratchet in `docs/parity-gates.md`. A
-converged site is removed and the mark tightened. No receipt tag exempts a
-void promise: there is no `@floatingPromise` and none is to be added.
+- Each of the three rules lands with a per-package count mark, only-shrink
+  with no reseed, documented in trails `docs/parity-gates.md`. A converged
+  site is removed and the mark tightened.
+- Trails `CLAUDE.md` gains a section ratifying §1–§2, so the rule is read
+  where agents read rules, and `packages/activerecord/CLAUDE.md` § "A record
+  is built with `new Klass` only" points at it for the scope boundary.
 
 ## Non-goals
 
-- **Unhandled-rejection process handlers.** A global `unhandledRejection`
-  listener hides the symptom; this RFC removes the cause.
-- **Converting Rails' sync APIs to async beyond the call chain a site needs.**
-  Each convergence goes up only as far as the first already-async caller.
+- **A global `unhandledRejection` listener.** It hides the symptom; this RFC
+  removes the cause.
+- **Converting Rails' synchronous APIs to async beyond the chain a site
+  needs.** Each convergence stops at the first already-async caller.
+- **Records built with `static new`.** `Base` keeps `new Klass` (trails#8659).
 
 ## Alternatives considered
 
-- **A `ready: Promise` field awaited by every method.** This is the pattern
-  being retired: each method must remember the await, and the rejection has no
-  owner until a method is called.
-- **Static async factory under an invented name (`await Klass.create(...)`).**
-  Invented surface; `Klass.new` is the Rails name for the same call.
-- **Awaited step at the call site before a synchronous `new`.** Moves part of
-  `initialize` into every caller, so each caller must repeat it and a caller
-  that forgets builds a half-initialised object.
-- **`static async new` beside a public constructor.** Rejected for records in
-  trails#8659: two spellings, and the bare one skips the async half. The
-  protected constructor is what removes the second spelling.
+- **A `ready: Promise` field awaited by every method.** The pattern being
+  retired: every method must remember the await, and a rejection has no owner
+  until one is called.
+- **An awaited step at the call site before a synchronous `new`.** Moves part
+  of `initialize` into every caller; one that forgets builds a half-initialised
+  object.
+- **A factory under an invented name (`await Klass.create(...)`).** Invented
+  surface; `Klass.new` is the Rails name for the same call.
+- **`static async new` beside a public constructor.** Rejected in trails#8659:
+  two spellings, and the bare one skips the async half. The protected
+  constructor removes the second spelling.
 - **Allowing `void` with a receipt tag.** Every current `void` would gain a
-  tag; the ledger would never burn down.
+  tag, and the ledger would not burn down.
 
 ## Rollout
 
-1. Gate and helper: `ruby-compat-rb-class-new-instance`, `no-floating-promises-repo-wide-ignore-void-false`,
-   `no-swallowed-rejection-lint-rule`, `constructor-creates-no-promise-lint-rule`
-   (baselines seeded at today's counts).
-2. Constructors: `constructor-promises-become-awaited-steps`,
+1. Gate, helper and ratification —
+   `no-floating-promises-repo-wide-ignore-void-false`,
+   `no-swallowed-rejection-lint-rule`,
+   `constructor-creates-no-promise-lint-rule`,
+   `ruby-compat-rb-class-new-instance`,
+   `inlined-from-placement-accepts-static-new`,
+   `claude-md-ratifies-no-void-promises`.
+2. Constructors — `async-initialize-becomes-static-new`,
    `constructor-promises-become-threads`.
-3. Discarded calls: `activerecord-void-async-calls-are-awaited`,
+3. Source sites — `mutex-synchronize-callers-await`,
+   `activerecord-adapter-void-calls-are-awaited`,
+   `activerecord-relation-and-association-void-calls-are-awaited`,
    `activemodel-void-async-calls-are-awaited`,
-   `generators-await-source-root`, `mutex-synchronize-sync-block-is-not-a-promise`.
-4. Background work: `fire-and-forget-sites-run-on-a-thread`.
+   `activesupport-callbacks-stop-pre-observing-promises`,
+   `actionpack-void-calls-are-awaited`, `generators-await-source-root`,
+   `fire-and-forget-sites-run-on-a-thread`,
+   `remaining-source-void-promises`.
+4. Tests — `reset-column-information-is-awaited`,
+   `activerecord-tests-drop-no-promises`,
+   `activemodel-and-remaining-tests-drop-no-promises`.
+
+Phase 1 lands first; phases 2–4 are independent of each other once their gate
+story is in.
 
 ## Verification
 
-- `no-floating-promises` (with `ignoreVoid: false`) and both new rules run on
-  every package, tests included, and their marks reach **0**.
-- `grep -rnE "^\s*void [A-Za-z_]" packages --include=*.ts` outside `dist/`
-  returns 0 hits whose operand is a promise.
-- No `constructor` body in `packages/**` creates a promise.
+- `no-floating-promises` (with `ignoreVoid: false`),
+  `no-swallowed-rejection` and `constructor-creates-no-promise` run on every
+  package, tests included, and every package's mark for all three reads **0**.
+- The mark files are deleted once they read 0, leaving the rules as plain
+  `error`s.
+- The 19 / 147 / 408 / 6 baseline in § Motivation is replaced by the gate
+  story's exact count in its PR, and the burndown is tracked against that.
 
 ## Open questions
 
-1. **Tests included from day one?** Recommendation: yes; a test that drops a
-   promise is an assertion that may never run. Seed their count in the same
-   mark.
+None. Tests are in the gate from day one (resolved 2026-11-12): a test that
+drops a promise has an assertion that may never run, and their count is
+seeded into the same marks.
 
 ## Changelog
 
 - 2026-11-12: initial RFC
-- 2026-11-12: async `initialize` is `static async new` with a protected constructor, replacing the awaited step at the call site
+- 2026-11-12: async `initialize` is `static async new` with a protected
+  constructor, replacing the awaited step at the call site
+- 2026-11-12: survey widened to tests and unawaited empty handlers; awaited
+  `.catch(() => null)` carved out as `rescue nil`; Mutex arm stated from
+  `mutex.ts`; stories split to fit the LOC ceiling; ratification and
+  `@inlinedFrom` placement stories added
