@@ -5,10 +5,7 @@ updated: 2026-11-12
 rfc: "0216-actionmailbox-port"
 cluster: null
 packages: []
-deps:
-  - test-help-double-include-testfixtures-recursion
-  - executor-around-test-case-runs-setup-outside-transaction
-  - execution-wrapper-fiber-deadlocks-pinned-fixture-connection
+deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
