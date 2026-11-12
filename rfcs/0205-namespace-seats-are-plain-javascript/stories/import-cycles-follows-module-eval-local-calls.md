@@ -1,6 +1,6 @@
 ---
 title: "import-cycles: count reads in local functions called at module-eval time"
-status: in-progress
+status: done
 updated: 2026-11-12
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null

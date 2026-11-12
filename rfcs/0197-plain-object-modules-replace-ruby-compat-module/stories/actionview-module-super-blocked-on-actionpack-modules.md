@@ -1,6 +1,6 @@
 ---
 title: "actionview-module-super-blocked-on-actionpack-modules"
-status: in-progress
+status: done
 updated: 2026-11-12
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 cluster: null
