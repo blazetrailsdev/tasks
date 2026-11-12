@@ -2,7 +2,7 @@
 title: "zeitwerk-kernel-require-loader-arm-calls-original-require"
 status: ready
 updated: 2026-11-10
-rfc: "0229-tooling-gems-residual-parity"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps:
