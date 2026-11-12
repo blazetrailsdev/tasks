@@ -46,12 +46,18 @@ closed-reason: null
   (`actionview/lib/action_view/lookup_context.rb:21-37`) defines accessors on
   `Accessors` after `include Accessors` (`:228`). `lookup-context.trails.test.ts`
   pins a later `registerDetail`. This is the same case and needs the same ruling.
+- `test/support/active-record-unit.ts:101`, a per-call `new Module()` whose
+  `setup` calls `super` (`actionview/test/active_record_unit.rb:82-92`). A plain
+  object was tried. `RenderPartialWithRecordIdentificationTest` defines its own
+  `setup` (`render_partial_with_record_identification_test.rb:55-58`), which the
+  copy does not overwrite, so `@routes` stays nil. The includer set is open
+  (any test class), so inlining does not apply. This needs the same ruling.
 
 ## Acceptance criteria
 
 - An operator ruling on how `Renderers.add` and `register_detail` define methods
   after the include.
-- `git grep -nE 'new Module\(|\.superMethod\(' -- packages/actionview/lib` is empty,
+- `git grep -nE 'new Module\(|\.superMethod\(' -- packages/actionview ':!*.test.ts'` is empty,
   and `Renderers`, `ActionController::Rendering`, `ApiRendering` and
   `AbstractController::Rendering` convert in the same PR.
 - Each `super` is `rbCallSuper` (open includer set).
