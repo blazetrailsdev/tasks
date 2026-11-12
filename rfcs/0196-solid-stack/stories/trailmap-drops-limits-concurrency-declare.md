@@ -1,7 +1,7 @@
 ---
 title: "trailmap drops its limitsConcurrency declare and hand-written bin/jobs"
 status: ready
-updated: 2026-11-08
+updated: 2026-11-12
 rfc: "0196-solid-stack"
 cluster: null
 packages: [solid-queue]

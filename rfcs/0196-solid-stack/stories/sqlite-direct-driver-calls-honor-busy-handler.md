@@ -1,7 +1,7 @@
 ---
 title: "SQLite adapter's direct driver calls honor the busy handler"
-status: ready
-updated: 2026-11-08
+status: in-progress
+updated: 2026-11-12
 rfc: "0196-solid-stack"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 14
-pr: null
-claim: null
-assignee: null
+pr: trails#10012
+claim: "2026-11-12T00:11:34Z"
+assignee: "solid-queue-recurring-enqueue-event-flake"
 blocked-by: null
 closed-reason: null
 ---

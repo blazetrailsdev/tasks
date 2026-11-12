@@ -1,7 +1,7 @@
 ---
 title: "solid-queue-recurring-enqueue-event-flake"
 status: ready
-updated: 2026-11-10
+updated: 2026-11-12
 rfc: "0196-solid-stack"
 cluster: null
 packages: []

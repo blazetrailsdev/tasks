@@ -1,7 +1,7 @@
 ---
 title: "nokogiri-html5-document-fragment-inherits-xml"
-status: in-progress
-updated: 2026-11-11
+status: done
+updated: 2026-11-12
 rfc: "0219-actiontext-port"
 cluster: null
 packages: []

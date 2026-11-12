@@ -1,7 +1,7 @@
 ---
 title: "cookie-jar-store-types-nil-value"
-status: claimed
-updated: 2026-11-11
+status: in-progress
+updated: 2026-11-12
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10011
 claim: "2026-11-11T23:41:45Z"
 assignee: "authentication-generator-e2e-request-cycle"
 blocked-by: null
