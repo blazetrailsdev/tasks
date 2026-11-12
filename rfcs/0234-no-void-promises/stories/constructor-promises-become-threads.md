@@ -2,7 +2,7 @@
 title: "ConnectionPool's reaper and SolidCable's listener run on ruby-compat Thread"
 status: draft
 updated: 2026-11-12
-rfc: "0000-no-void-promises"
+rfc: "0234-no-void-promises"
 cluster: constructors
 packages: [activerecord, solid-cable]
 deps: [constructor-creates-no-promise-lint-rule]

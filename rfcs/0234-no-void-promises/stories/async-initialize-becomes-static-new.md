@@ -2,7 +2,7 @@
 title: "Rackup::Server, the console command, ActionText::Content and SchemaDumper are built with an awaited static new"
 status: draft
 updated: 2026-11-12
-rfc: "0000-no-void-promises"
+rfc: "0234-no-void-promises"
 cluster: constructors
 packages: [rackup, trailties, actiontext, activerecord]
 deps:

@@ -2,7 +2,7 @@
 title: "blazetrails/constructor-creates-no-promise reports promise creation inside a constructor"
 status: draft
 updated: 2026-11-12
-rfc: "0000-no-void-promises"
+rfc: "0234-no-void-promises"
 cluster: gate
 packages: []
 deps: []

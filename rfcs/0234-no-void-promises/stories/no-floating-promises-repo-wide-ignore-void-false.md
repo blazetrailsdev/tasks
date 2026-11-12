@@ -2,7 +2,7 @@
 title: "no-floating-promises runs repo-wide with ignoreVoid false, against an only-shrink mark"
 status: draft
 updated: 2026-11-12
-rfc: "0000-no-void-promises"
+rfc: "0234-no-void-promises"
 cluster: gate
 packages: []
 deps: []

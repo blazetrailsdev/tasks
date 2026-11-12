@@ -2,7 +2,7 @@
 title: "ActiveRecord tests drop no promises"
 status: draft
 updated: 2026-11-12
-rfc: "0000-no-void-promises"
+rfc: "0234-no-void-promises"
 cluster: tests
 packages: [activerecord]
 deps:

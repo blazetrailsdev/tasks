@@ -2,7 +2,7 @@
 title: "ruby-compat rbClassNewInstance builds an instance through a protected constructor"
 status: draft
 updated: 2026-11-12
-rfc: "0000-no-void-promises"
+rfc: "0234-no-void-promises"
 cluster: gate
 packages: [ruby-compat]
 deps: []

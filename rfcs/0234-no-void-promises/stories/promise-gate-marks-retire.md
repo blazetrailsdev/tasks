@@ -2,7 +2,7 @@
 title: "The three promise-gate marks read 0 and are deleted, leaving plain errors"
 status: draft
 updated: 2026-11-12
-rfc: "0000-no-void-promises"
+rfc: "0234-no-void-promises"
 cluster: gate
 packages: []
 deps:
