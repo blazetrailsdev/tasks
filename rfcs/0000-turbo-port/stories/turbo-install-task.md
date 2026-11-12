@@ -2,14 +2,14 @@
 title: "Port turbo:install (jsbundling branch) targeting the vite_rails entrypoint"
 status: draft
 updated: 2026-11-12
-rfc: "0000-turbo-rails-port"
-cluster: turbo-rails
-packages: [turbo-rails]
+rfc: "0000-turbo-port"
+cluster: turbo
+packages: [turbo]
 deps:
   [
-    turbo-rails-package-helpers-and-turbo-stream-format,
+    turbo-package-helpers-and-turbo-stream-format,
     hotwire-vite-claude-md-ruling,
-    vite-rails-install-and-precompile-hook,
+    vite-trails-install-and-precompile-hook,
   ]
 deps-rfc: []
 est-loc: 150

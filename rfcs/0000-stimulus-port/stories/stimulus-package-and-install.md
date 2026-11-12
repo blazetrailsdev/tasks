@@ -1,11 +1,11 @@
 ---
-title: "Create @blazetrails/stimulus-rails: Engine, Stimulus::Manifest, stimulus:install and stimulus:manifest tasks"
+title: "Create @blazetrails/stimulus: Engine, Stimulus::Manifest, stimulus:install and stimulus:manifest tasks"
 status: draft
 updated: 2026-11-12
-rfc: "0000-stimulus-rails-port"
-cluster: stimulus-rails
-packages: [stimulus-rails]
-deps: [hotwire-vite-claude-md-ruling, vite-rails-install-and-precompile-hook]
+rfc: "0000-stimulus-port"
+cluster: stimulus
+packages: [stimulus]
+deps: [hotwire-vite-claude-md-ruling, vite-trails-install-and-precompile-hook]
 deps-rfc: []
 est-loc: 300
 priority: null
@@ -39,7 +39,7 @@ closed-reason: null
 - An end-to-end test runs `vite:install` and then this install task in a
   generated app, and asserts the entrypoint import and the `package.json`
   dependency.
-- `packages/stimulus-rails` mirrors `lib/stimulus`, with `compareApi` and
+- `packages/stimulus` mirrors `lib/stimulus`, with `compareApi` and
   `compareTests` on.
 - The node and bun install arms are ported, and the importmap arm is dropped,
   citing the ratified section. The generated `controllers/index.js` follows

@@ -4,11 +4,11 @@ status: draft
 updated: 2026-11-12
 rfc: "0000-hotwire-via-vite"
 cluster: vite
-packages: [vite-rails, trailties]
+packages: [vite-trails, trailties]
 deps:
   [
     vite-assets-dev-server-proxy,
-    vite-rails-install-and-precompile-hook,
+    vite-trails-install-and-precompile-hook,
     retire-trailties-vite-assets-trailtie,
   ]
 deps-rfc: []
@@ -34,7 +34,7 @@ This story owns RFC open question 2.
 
 ## Acceptance criteria
 
-- `vite_rails.proxy` inserts `DevServerProxy` at position 0 when
+- `vite_trails.proxy` inserts `DevServerProxy` at position 0 when
   `ViteRuby.run_proxy?` is true, as upstream does.
 - `trails server` boots the Rack app directly and does not start Vite. The
   generated app gets `Procfile.dev` (`web:` plus `vite: bin/vite dev`) and a

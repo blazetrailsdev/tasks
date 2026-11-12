@@ -1,10 +1,10 @@
 ---
-title: "Create @blazetrails/vite-rails: Engine and ViteRails::TagHelpers"
+title: "Create @blazetrails/vite-trails: Engine and ViteTrails::TagHelpers"
 status: draft
 updated: 2026-11-12
-rfc: "0000-vite-rails-port"
-cluster: vite-rails
-packages: [vite-rails]
+rfc: "0000-vite-trails-port"
+cluster: vite-trails
+packages: [vite-trails]
 deps: [vite-assets-core-package]
 deps-rfc: []
 est-loc: 450
@@ -29,19 +29,19 @@ closed-reason: null
 (`on_load(:action_controller)` / `on_load(:action_view)`),
 `vite_rails.logger`, `vite_rails.bootstrap` and `vite_rails.set_source`, which
 this story ports. The `vite_rails.proxy` initializer (`:6-8`) is out of scope
-here. `vite-rails-dev-server-topology` ports it and turns it on, because it
+here. `vite-trails-dev-server-topology` ports it and turns it on, because it
 needs `DevServerProxy` from `vite-assets-dev-server-proxy`.
 `config.rb:1-18` is `ViteRails::Config`. Tests: `vendor/vite_ruby/v3.11.1/test/helper_test.rb`
 (17).
 
 ## Acceptance criteria
 
-- `packages/vite-rails/lib/` mirrors `vite_rails/lib/vite_rails/`. TagHelpers
+- `packages/vite-trails/lib/` mirrors `vite_rails/lib/vite_rails/`. TagHelpers
   is a module included onto `ActionView::Base` through `onLoad("action_view")`,
   as at `engine.rb:15-17`. The helpers call actionview's own
   `javascript_include_tag` / `stylesheet_link_tag` / `image_tag`, and do not
   override them.
-- The Spring arm of `vite_rails.bootstrap` is dropped with a receipt citing
-  the vite-rails-port non-goal.
-- `helper_test.rb` is ported under its upstream names. `vite-rails` gets
+- The Spring arm of `vite_trails.bootstrap` is dropped with a receipt citing
+  the vite-trails-port non-goal.
+- `helper_test.rb` is ported under its upstream names. `vite-trails` gets
   `compareApi: true` and `compareTests: true` in `vendor/sources.ts`.

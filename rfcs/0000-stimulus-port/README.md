@@ -1,26 +1,26 @@
 ---
-rfc: "0000-stimulus-rails-port"
-title: "Port the stimulus-rails gem"
+rfc: "0000-stimulus-port"
+title: "Port the stimulus-rails gem as @blazetrails/stimulus"
 status: draft
 created: 2026-11-12
 updated: 2026-11-12
 owner: "@deanmarano"
 packages:
-  - "stimulus-rails"
+  - "stimulus"
   - "trailties"
 clusters:
-  - stimulus-rails
+  - stimulus
 ---
 
 <!-- Unnumbered until merge: copy this dir to `rfcs/0000-your-slug`, keep `rfc:`
      as 0000-your-slug and the H1 below number-free. `scripts/finalize-rfc.mjs`
      swaps 0000 for the assigned number at merge. -->
 
-# RFC — Port the stimulus-rails gem
+# RFC — Port the stimulus-rails gem as @blazetrails/stimulus
 
 ## Summary
 
-Port `stimulus-rails` v1.3.4 as `@blazetrails/stimulus-rails`. It covers the
+Port `stimulus` v1.3.4 as `@blazetrails/stimulus`. It covers the
 Engine, `Stimulus::Manifest`, the node and bun `stimulus:install` arms, the
 `stimulus:manifest:*` tasks, and `trails generate stimulus`. Part of the `hotwire-via-vite` meta RFC.
 
@@ -34,7 +34,7 @@ not ported.
 
 ## Design
 
-`packages/stimulus-rails` mirrors `lib/stimulus`, `lib/generators/stimulus`,
+`packages/stimulus` mirrors `lib/stimulus`, `lib/generators/stimulus`,
 `lib/tasks` and `lib/install`. The node branch is ported verbatim,
 `Stimulus::Manifest` included, so the generated `controllers/index.js` is a
 static manifest (meta RFC open question 1). The install template writes to
@@ -56,12 +56,12 @@ lookup, which is why `trailties` is in `packages`.
 
 ## Rollout
 
-1. `stimulus-rails-package-and-install`.
-2. `stimulus-rails-controller-generator`.
+1. `stimulus-package-and-install`.
+2. `stimulus-controller-generator`.
 
 ## Verification
 
-- `pnpm parity:api stimulus-rails` reaches 4 public methods.
+- `pnpm parity:api stimulus` reaches 4 public methods.
 - `parity:test`: 14 = matched + `PERMANENT-SKIP`. The only allowed skip reason
   is an importmap-only arm.
 

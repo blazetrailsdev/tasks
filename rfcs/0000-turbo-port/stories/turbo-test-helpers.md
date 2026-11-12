@@ -2,10 +2,10 @@
 title: "Port Turbo::TestAssertions, IntegrationTestAssertions, Broadcastable::TestHelper and SystemTestHelper"
 status: draft
 updated: 2026-11-12
-rfc: "0000-turbo-rails-port"
-cluster: turbo-rails
-packages: [turbo-rails]
-deps: [turbo-rails-broadcastable-class-methods-and-callbacks]
+rfc: "0000-turbo-port"
+cluster: turbo
+packages: [turbo]
+deps: [turbo-broadcastable-class-methods-and-callbacks]
 deps-rfc: []
 est-loc: 500
 priority: null

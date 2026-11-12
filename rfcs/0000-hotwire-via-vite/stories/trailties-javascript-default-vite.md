@@ -5,7 +5,7 @@ updated: 2026-11-12
 rfc: "0000-hotwire-via-vite"
 cluster: generator
 packages: [trailties]
-deps: [hotwire-vite-claude-md-ruling, vite-rails-install-and-precompile-hook]
+deps: [hotwire-vite-claude-md-ruling, vite-trails-install-and-precompile-hook]
 deps-rfc: []
 est-loc: 150
 priority: null

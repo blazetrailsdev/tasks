@@ -2,10 +2,10 @@
 title: "Port StimulusGenerator (trails generate stimulus <name>)"
 status: draft
 updated: 2026-11-12
-rfc: "0000-stimulus-rails-port"
-cluster: stimulus-rails
-packages: [stimulus-rails, trailties]
-deps: [stimulus-rails-package-and-install]
+rfc: "0000-stimulus-port"
+cluster: stimulus
+packages: [stimulus, trailties]
+deps: [stimulus-package-and-install]
 deps-rfc: []
 est-loc: 150
 priority: null

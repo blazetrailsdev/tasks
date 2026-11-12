@@ -2,10 +2,10 @@
 title: "Port Turbo::Broadcastable's instance broadcast_* methods"
 status: draft
 updated: 2026-11-12
-rfc: "0000-turbo-rails-port"
-cluster: turbo-rails
-packages: [turbo-rails, activerecord]
-deps: [turbo-rails-broadcasts-and-streams-channel, turbo-rails-dummy-test-app]
+rfc: "0000-turbo-port"
+cluster: turbo
+packages: [turbo, activerecord]
+deps: [turbo-broadcasts-and-streams-channel, turbo-dummy-test-app]
 deps-rfc: []
 est-loc: 400
 priority: null
@@ -24,8 +24,8 @@ and `broadcast_*_to` method from `:244` to `:502`, and the private helpers
 from `:507` (`broadcast_target_default`, `extract_options_and_add_target`,
 `broadcast_rendering_with_defaults`, and the rest). Each one calls the
 `Turbo::StreamsChannel` broadcast methods from
-`turbo-rails-broadcasts-and-streams-channel`. The class side is
-`turbo-rails-broadcastable-class-methods-and-callbacks`.
+`turbo-broadcasts-and-streams-channel`. The class side is
+`turbo-broadcastable-class-methods-and-callbacks`.
 
 Tests: the instance-method arms of
 `vendor/turbo-rails/v2.0.23/test/streams/broadcastable_test.rb` (the tests

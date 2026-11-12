@@ -39,6 +39,6 @@ The operator decided on 2026-11-12 that Vite, through ports of
 - The section records open question 4's answer: `bin/vite` is built on
   `@blazetrails/thor`, and dry-cli is not ported. Open question 2 is answered by the
   ruling text (`trailsPlugin` stays as test-only infrastructure), and
-  `vite-rails-dev-server-topology` implements that answer.
+  `vite-trails-dev-server-topology` implements that answer.
 - The RFC's open questions section is updated to match what was ratified.
 - The ratification date replaces `<ratification date>` in the RFC's draft text.

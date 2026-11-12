@@ -74,7 +74,7 @@ vite_ruby files to this package in `vendor/sources.ts`.
   integration, and is easy to confuse with the npm `vite` in imports.
   Rejected.
 
-- **Merge vite_ruby into the vite-rails package.** That breaks the gem
+- **Merge vite_ruby into the vite-trails package.** That breaks the gem
   boundary that `parity:api` keys on. Rejected.
 
 ## Rollout

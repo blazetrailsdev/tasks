@@ -1,11 +1,11 @@
 ---
-title: "Port ViteRails::CLI (vite:install for Rails) and the assets:precompile hook"
+title: "Port ViteTrails::CLI (vite:install for Rails) and the assets:precompile hook"
 status: draft
 updated: 2026-11-12
-rfc: "0000-vite-rails-port"
-cluster: vite-rails
-packages: [vite-rails]
-deps: [vite-rails-package-and-tag-helpers, vite-assets-cli-and-binstub, vite-assets-rake-tasks]
+rfc: "0000-vite-trails-port"
+cluster: vite-trails
+packages: [vite-trails]
+deps: [vite-trails-package-and-tag-helpers, vite-assets-cli-and-binstub, vite-assets-rake-tasks]
 deps-rfc: []
 est-loc: 300
 priority: null

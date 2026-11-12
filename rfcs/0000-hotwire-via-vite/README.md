@@ -7,7 +7,7 @@ updated: 2026-11-12
 owner: "@deanmarano"
 packages:
   - "trailties"
-  - "vite-rails"
+  - "vite-trails"
   - "scripts"
 clusters:
   - ruling
@@ -37,13 +37,13 @@ package boundaries, the runtime topology, the trailties convergence stories,
 the end-to-end verification and the open questions. Each gem port is its own
 RFC, scoped to its package:
 
-| RFC (slug)            | Package                       | Stories |
-| --------------------- | ----------------------------- | ------- |
-| `rack-proxy-port`     | `@blazetrails/rack-proxy`     | 1       |
-| `vite-assets-port`    | `@blazetrails/vite-assets`    | 5       |
-| `vite-rails-port`     | `@blazetrails/vite-rails`     | 2       |
-| `turbo-rails-port`    | `@blazetrails/turbo-rails`    | 9       |
-| `stimulus-rails-port` | `@blazetrails/stimulus-rails` | 2       |
+| RFC (slug)         | Package                    | Stories |
+| ------------------ | -------------------------- | ------- |
+| `rack-proxy-port`  | `@blazetrails/rack-proxy`  | 1       |
+| `vite-assets-port` | `@blazetrails/vite-assets` | 5       |
+| `vite-trails-port` | `@blazetrails/vite-trails` | 2       |
+| `turbo-port`       | `@blazetrails/turbo`       | 9       |
+| `stimulus-port`    | `@blazetrails/stimulus`    | 2       |
 
 The RFCs are cross-referenced by slug, and they are linked through story
 `deps` rather than `deps-rfc`. `finalize-rfc.mjs` rewrites a `0000-<slug>` id
@@ -117,7 +117,7 @@ Alternatives). The `hotwire-vite-claude-md-ruling` story lands this text as a ne
 > (`vendor/vite_ruby/v3.11.1/`): `ViteRuby::Config` reads
 > `config/vite.json`, `ViteRuby::Manifest` resolves entries,
 > `ViteRuby::DevServerProxy` proxies to the Vite dev server, and
-> `ViteRails::TagHelpers` renders the tags. The npm `vite`,
+> `ViteTrails::TagHelpers` renders the tags. The npm `vite`,
 > `vite-plugin-ruby`, `@hotwired/turbo-rails` and `@hotwired/stimulus` are
 > dependencies, not ports.
 >
@@ -127,12 +127,13 @@ Alternatives). The `hotwire-vite-claude-md-ruling` story lands this text as a ne
 > - actionview's `AssetUrlHelper` and `AssetTagHelper` stay faithful and do not
 >   know about any pipeline. Nothing in actionview names Vite. All Vite
 >   knowledge lives in `@blazetrails/vite-assets` (the `vite_ruby` port) and
->   `@blazetrails/vite-rails`.
+>   `@blazetrails/vite-trails`.
 > - Both packages handle only the app's browser assets. trails' toolchain
 >   uses of Vite (vitest, trailties' test-only `trailsPlugin`, the website
 >   build) never import them, and they never import those. An ESLint
 >   `no-restricted-imports` boundary enforces this.
-> - turbo-rails and stimulus-rails stay Vite-free. Their `turbo:install` and
+> - `@blazetrails/turbo` and `@blazetrails/stimulus` (the turbo-rails and
+>   stimulus-rails ports) stay Vite-free. Their `turbo:install` and
 >   `stimulus:install` port only the non-importmap (jsbundling) branch, and that
 >   branch targets the vite_rails entrypoint layout: the generated
 >   `config/vite.json` sets `sourceCodeDir: "app/javascript"`, so the
@@ -157,6 +158,13 @@ Alternatives). The `hotwire-vite-claude-md-ruling` story lands this text as a ne
 >   requests, and `bin/vite dev` runs Vite in its own process, as in
 >   vite_rails. `trailsPlugin` (Rack-inside-Vite) remains only as test
 >   infrastructure.
+> - Package and identifier names follow the `rails` → `trails` token rename
+>   in `docs/ruby-ts-conventions.md`, compound names included: `vite_rails`
+>   is `@blazetrails/vite-trails` and `ViteRails::*` is `ViteTrails::*`.
+>   turbo-rails and stimulus-rails drop the suffix and become
+>   `@blazetrails/turbo` and `@blazetrails/stimulus`, as `bcrypt-ruby` is
+>   `@blazetrails/bcrypt`. vite_ruby is `@blazetrails/vite-assets`. The Rails
+>   spelling survives only where text quotes the Ruby side.
 > - dry-cli is not ported. `bin/vite` (`ViteRuby::CLI`) is built on
 >   `@blazetrails/thor`, with the gem's command class names and `call`
 >   bodies unchanged and one receipt on the base class and option DSL.
@@ -169,15 +177,15 @@ Alternatives). The `hotwire-vite-claude-md-ruling` story lands this text as a ne
 
 ### Package boundaries
 
-| Package                       | Ports                                                                                  | Knows about Vite?     |
-| ----------------------------- | -------------------------------------------------------------------------------------- | --------------------- |
-| `@blazetrails/rack-proxy`     | `rack-proxy` gem's `Rack::Proxy`                                                       | no                    |
-| `@blazetrails/vite-assets`    | `vite_ruby/lib/vite_ruby{,.rb}`, `tasks/vite.rake`, `exe/vite`                         | yes                   |
-| `@blazetrails/vite-rails`     | `vite_rails/lib/vite_rails{,.rb}`, `tasks/vite.rake`                                   | yes                   |
-| `@blazetrails/turbo-rails`    | `lib/turbo*`, `app/{channels,controllers,helpers,jobs,models}/turbo`, the frame layout | install template only |
-| `@blazetrails/stimulus-rails` | `lib/stimulus*`, `lib/generators/stimulus`, `lib/tasks`, `lib/install`                 | install template only |
-| `@blazetrails/actionview`     | unchanged; `asset_url_helper.rb` stays pipeline-agnostic                               | no                    |
-| `@blazetrails/trailties`      | generator default; retires `lib/assets/*`; `trails server` stops running inside Vite   | through vite-rails    |
+| Package                    | Ports                                                                                  | Knows about Vite?     |
+| -------------------------- | -------------------------------------------------------------------------------------- | --------------------- |
+| `@blazetrails/rack-proxy`  | `rack-proxy` gem's `Rack::Proxy`                                                       | no                    |
+| `@blazetrails/vite-assets` | `vite_ruby/lib/vite_ruby{,.rb}`, `tasks/vite.rake`, `exe/vite`                         | yes                   |
+| `@blazetrails/vite-trails` | `vite_rails/lib/vite_rails{,.rb}`, `tasks/vite.rake`                                   | yes                   |
+| `@blazetrails/turbo`       | `lib/turbo*`, `app/{channels,controllers,helpers,jobs,models}/turbo`, the frame layout | install template only |
+| `@blazetrails/stimulus`    | `lib/stimulus*`, `lib/generators/stimulus`, `lib/tasks`, `lib/install`                 | install template only |
+| `@blazetrails/actionview`  | unchanged; `asset_url_helper.rb` stays pipeline-agnostic                               | no                    |
+| `@blazetrails/trailties`   | generator default; retires `lib/assets/*`; `trails server` stops running inside Vite   | through vite-trails   |
 
 Each package mirrors its gem's file layout, so `parity:api` keys on it. The
 `vendor/sources.ts` entries from trails#10037 already map the lib paths.
@@ -192,8 +200,8 @@ middleware position 0 (`vite_rails/lib/vite_rails/engine.rb:6-8`) and forwards
 `trailsPlugin` (`trailties/lib/server/vite-plugin.ts`) mounts the Rack app
 inside Vite's `configureServer`. The faithful port is the vite_rails topology.
 `trails server` boots the Rack app, and `bin/vite dev` runs Vite separately.
-Story `vite-rails-dev-server-topology` makes that switch: it wires
-`DevServerProxy` in through the `vite_rails.proxy` initializer, stops
+Story `vite-trails-dev-server-topology` makes that switch: it wires
+`DevServerProxy` in through the `vite_trails.proxy` initializer, stops
 `trails server` from booting inside Vite, and writes the `Procfile.dev` /
 `bin/dev` pair the generated app runs. `trailsPlugin` stays as test-only
 infrastructure (open question 2).
@@ -229,7 +237,7 @@ infrastructure (open question 2).
   importmap-rails.
 - **The Capybara selectors in `turbo-rails/lib/turbo/system_test_helper.rb`.**
   Those tests are ported only as far as the Vitest system-testing ruling in
-  `packages/actionpack/CLAUDE.md` allows. Story `turbo-rails-test-helpers`
+  `packages/actionpack/CLAUDE.md` allows. Story `turbo-test-helpers`
   decides how far, arm by arm.
 - **Spring.** `engine.rb:26-34` watches through Spring, which trails does not
   have. That arm is dropped.
@@ -258,34 +266,34 @@ ratification.
 3. `vite-assets-port`: `vite-assets-core-package`,
    `vite-assets-builder-commands-runner`, `vite-assets-dev-server-proxy`,
    `vite-assets-cli-and-binstub`, `vite-assets-rake-tasks`.
-4. `vite-rails-port`: `vite-rails-package-and-tag-helpers`,
-   `vite-rails-install-and-precompile-hook`. Then this RFC's trailties
+4. `vite-trails-port`: `vite-trails-package-and-tag-helpers`,
+   `vite-trails-install-and-precompile-hook`. Then this RFC's trailties
    stories: `retire-trailties-vite-assets-trailtie`,
-   `vite-rails-dev-server-topology`, `trailties-javascript-default-vite`,
+   `vite-trails-dev-server-topology`, `trailties-javascript-default-vite`,
    `vite-assets-import-boundary`.
 
-5. `turbo-rails-port`: `turbo-rails-dummy-test-app`,
-   `turbo-rails-package-helpers-and-turbo-stream-format`, then
-   `turbo-rails-frames-native-and-request-id`, `turbo-rails-streams-tag-builder`,
-   `turbo-rails-broadcasts-and-streams-channel`,
-   `turbo-rails-broadcastable-instance-broadcasts`,
-   `turbo-rails-broadcastable-class-methods-and-callbacks`,
-   `turbo-rails-test-helpers`, `turbo-rails-install-task`.
-6. `stimulus-rails-port`: `stimulus-rails-package-and-install`,
-   `stimulus-rails-controller-generator`.
+5. `turbo-port`: `turbo-dummy-test-app`,
+   `turbo-package-helpers-and-turbo-stream-format`, then
+   `turbo-frames-native-and-request-id`, `turbo-streams-tag-builder`,
+   `turbo-broadcasts-and-streams-channel`,
+   `turbo-broadcastable-instance-broadcasts`,
+   `turbo-broadcastable-class-methods-and-callbacks`,
+   `turbo-test-helpers`, `turbo-install-task`.
+6. `stimulus-port`: `stimulus-package-and-install`,
+   `stimulus-controller-generator`.
 
 ## Verification
 
 Every package has `compareApi` and `compareTests` on. Each child RFC's
 Verification section owns its row. This table rolls them up:
 
-| Package        | `parity:api` target (public)               | `parity:test` target                                         |
-| -------------- | ------------------------------------------ | ------------------------------------------------------------ |
-| turbo-rails    | 163                                        | 247 = matched + `PERMANENT-SKIP`                             |
-| stimulus-rails | 4                                          | 14 = matched + `PERMANENT-SKIP`                              |
-| vite-assets    | 118                                        | exact count recorded by `vite-assets-core-package`           |
-| vite-rails     | 14                                         | exact count recorded by `vite-rails-package-and-tag-helpers` |
-| rack-proxy     | every public method in `lib/rack/proxy.rb` | every upstream test                                          |
+| Package     | `parity:api` target (public)               | `parity:test` target                                          |
+| ----------- | ------------------------------------------ | ------------------------------------------------------------- |
+| turbo       | 163                                        | 247 = matched + `PERMANENT-SKIP`                              |
+| stimulus    | 4                                          | 14 = matched + `PERMANENT-SKIP`                               |
+| vite-assets | 118                                        | exact count recorded by `vite-assets-core-package`            |
+| vite-trails | 14                                         | exact count recorded by `vite-trails-package-and-tag-helpers` |
+| rack-proxy  | every public method in `lib/rack/proxy.rb` | every upstream test                                           |
 
 A `PERMANENT-SKIP` is allowed for only three reasons, each citing the ratified
 section: an importmap-only arm, a Capybara-selector arm with no Vitest
@@ -322,7 +330,7 @@ updates this table.
    0166-actiondispatch-system-testing-parity). **Recommendation:**
    (b) for now, scoped to test-only use, and revisit after those stories land.
    Answered by the draft ruling text, and implemented by
-   `vite-rails-dev-server-topology`.
+   `vite-trails-dev-server-topology`.
 3. **Entrypoint path (resolved: `app/javascript`).** `turbo_with_node.rb:1-3` and
    `stimulus_with_node.rb:10-15` append to `app/javascript/application.js`.
    vite_rails' default is `app/frontend/entrypoints/`
@@ -349,24 +357,24 @@ updates this table.
    named `@hotwired/turbo`. The gem's node template adds `@hotwired/turbo-rails`
    (`turbo_with_node.rb:10`), which wraps `@hotwired/turbo` and adds
    `<turbo-cable-stream-source>`, which broadcasts need. The ruling text and
-   `turbo-rails-install-task` use `@hotwired/turbo-rails`.
+   `turbo-install-task` use `@hotwired/turbo-rails`.
 
 ## Changelog
 
 - 2026-11-12: initial RFC.
 - 2026-11-12: self-review. Added `dry-cli-gem-port`; split the 700-LOC
-  `vite-assets-core-package` and `turbo-rails-broadcastable` stories; moved
+  `vite-assets-core-package` and `turbo-broadcastable` stories; moved
   `StreamName` into the first turbo story; resolved OQ5; gave OQ2/OQ4 owners;
   the ruling's date is left for ratification.
 - 2026-11-12: review round 1. The ruling text now answers OQ1, OQ3 and OQ5 and
   the package-manager choice. The root stories are gated on the ruling. Added
-  `vite-rails-dev-server-topology` and `turbo-rails-dummy-test-app`. Split
+  `vite-trails-dev-server-topology` and `turbo-dummy-test-app`. Split
   `vite-ruby-cli-and-tasks` into `vite-assets-cli-and-binstub` and
   `vite-assets-rake-tasks`. Verification targets are now per package, and
   rack-proxy and dry-cli are pinned.
 - 2026-11-12: split into a meta RFC (this one) plus one RFC per ported gem:
-  `rack-proxy-port`, `dry-cli-port`, `vite-assets-port`, `vite-rails-port`,
-  `turbo-rails-port` and `stimulus-rails-port`. The stories moved unchanged,
+  `rack-proxy-port`, `dry-cli-port`, `vite-assets-port`, `vite-trails-port`,
+  `turbo-port` and `stimulus-port`. The stories moved unchanged,
   with their `rfc:` and `cluster:` updated.
 - 2026-11-12: the operator chose pnpm. The install templates run `pnpm add`
   instead of `yarn add`, and the generated app is a pnpm project.
@@ -378,3 +386,8 @@ updates this table.
 - 2026-11-12: OQ4 resolved to Thor. Removed the `dry-cli-port` RFC and its
   `dry-cli-gem-port` story. `vite-assets-cli-and-binstub` builds on
   `@blazetrails/thor`.
+- 2026-11-12: applied the `rails` → `trails` token rename to compound names.
+  `vite-rails-port` is now `vite-trails-port` (`@blazetrails/vite-trails`,
+  `ViteTrails::*`). turbo-rails and stimulus-rails drop the suffix: RFCs
+  `turbo-port` and `stimulus-port`, packages `@blazetrails/turbo` and
+  `@blazetrails/stimulus`, stories `turbo-*` and `stimulus-*`.

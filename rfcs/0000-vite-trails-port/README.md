@@ -1,26 +1,26 @@
 ---
-rfc: "0000-vite-rails-port"
-title: "Port the vite_rails gem"
+rfc: "0000-vite-trails-port"
+title: "Port the vite_rails gem as @blazetrails/vite-trails"
 status: draft
 created: 2026-11-12
 updated: 2026-11-12
 owner: "@deanmarano"
 packages:
-  - "vite-rails"
+  - "vite-trails"
 clusters:
-  - vite-rails
+  - "vite-trails"
 ---
 
 <!-- Unnumbered until merge: copy this dir to `rfcs/0000-your-slug`, keep `rfc:`
      as 0000-your-slug and the H1 below number-free. `scripts/finalize-rfc.mjs`
      swaps 0000 for the assigned number at merge. -->
 
-# RFC — Port the vite_rails gem
+# RFC — Port the vite_rails gem as @blazetrails/vite-trails
 
 ## Summary
 
-Port `vite_rails` (same tag as vite_ruby) as `@blazetrails/vite-rails`. It
-provides the Engine, `ViteRails::TagHelpers`, `ViteRails::CLI` (the Rails
+Port `vite_rails` (same tag as vite_ruby) as `@blazetrails/vite-trails`. It
+provides the Engine, `ViteTrails::TagHelpers`, `ViteTrails::CLI` (the Rails
 `vite:install`) and the `assets:precompile` hook. Part of the `hotwire-via-vite` meta RFC.
 
 ## Motivation
@@ -33,12 +33,12 @@ rake, 272 LOC, 14 public and 3 internal methods, and about 20 upstream tests
 
 ## Design
 
-`packages/vite-rails/lib/` mirrors `vite_rails/lib/vite_rails/`. The
+`packages/vite-trails/lib/` mirrors `vite_rails/lib/vite_rails/`. The
 helpers call actionview's own `javascript_include_tag`,
 `stylesheet_link_tag` and `image_tag`, and never override them. actionview
-stays pipeline-agnostic (meta RFC ruling). The `vite_rails.proxy`
+stays pipeline-agnostic (meta RFC ruling). The `vite_trails.proxy`
 initializer is the one exception. The meta RFC's
-`vite-rails-dev-server-topology` story ports it, together with the
+`vite-trails-dev-server-topology` story ports it, together with the
 `trails server` change.
 
 ## Non-goals
@@ -55,14 +55,14 @@ initializer is the one exception. The meta RFC's
 
 ## Rollout
 
-1. `vite-rails-package-and-tag-helpers`.
-2. `vite-rails-install-and-precompile-hook`.
+1. `vite-trails-package-and-tag-helpers`.
+2. `vite-trails-install-and-precompile-hook`.
 
 ## Verification
 
-- `pnpm parity:api vite-rails` reaches 14 public methods.
+- `pnpm parity:api vite-trails` reaches 14 public methods.
 - `parity:test` total = matched + `PERMANENT-SKIP`, where the total is the
-  exact count `vite-rails-package-and-tag-helpers` records. The only allowed
+  exact count `vite-trails-package-and-tag-helpers` records. The only allowed
   skip reason is the Spring arm.
 
 ## Open questions

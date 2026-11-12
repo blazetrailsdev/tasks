@@ -2,10 +2,10 @@
 title: "Port Turbo::Broadcastable::ClassMethods, the commit callbacks and suppression"
 status: draft
 updated: 2026-11-12
-rfc: "0000-turbo-rails-port"
-cluster: turbo-rails
-packages: [turbo-rails, activerecord]
-deps: [turbo-rails-broadcastable-instance-broadcasts]
+rfc: "0000-turbo-port"
+cluster: turbo
+packages: [turbo, activerecord]
+deps: [turbo-broadcastable-instance-broadcasts]
 deps-rfc: []
 est-loc: 350
 priority: null
@@ -24,7 +24,7 @@ is `ClassMethods`: `broadcasts_to` (`:183`), `broadcasts` (`:191`),
 `suppressing_turbo_broadcasts` (`:227`) and `suppressed_turbo_broadcasts?`
 (`:234`). They wire `after_create_commit`, `after_update_commit` and
 `after_destroy_commit` onto the instance methods from
-`turbo-rails-broadcastable-instance-broadcasts`. The concern is included
+`turbo-broadcastable-instance-broadcasts`. The concern is included
 through the `turbo.broadcastable` initializer, `on_load(:active_record)`
 behind `defined?(ActiveJob)` (`lib/turbo/engine.rb:68-74`).
 
@@ -46,5 +46,5 @@ file.
 
 ## Verification
 
-- `pnpm vitest run packages/turbo-rails/test/streams/broadcastable.test.ts`
+- `pnpm vitest run packages/turbo/test/streams/broadcastable.test.ts`
   runs all 94 upstream tests, none skipped.

@@ -2,10 +2,10 @@
 title: "Port turbo-rails Engine, turbo_stream MIME and renderer, view helpers"
 status: draft
 updated: 2026-11-12
-rfc: "0000-turbo-rails-port"
-cluster: turbo-rails
-packages: [turbo-rails]
-deps: [turbo-rails-dummy-test-app]
+rfc: "0000-turbo-port"
+cluster: turbo
+packages: [turbo]
+deps: [turbo-dummy-test-app]
 deps-rfc: []
 est-loc: 450
 priority: null
@@ -39,12 +39,12 @@ closed-reason: null
 stream name, so this story also ports
 `app/channels/turbo/streams/stream_name.rb:5-31` (`signed_stream_name`,
 `verified_stream_name`) and the `turbo.signed_stream_verifier_key`
-initializer. `turbo-rails-broadcasts-and-streams-channel` extends it.
+initializer. `turbo-broadcasts-and-streams-channel` extends it.
 
 ## Acceptance criteria
 
-- `packages/turbo-rails` mirrors `lib/turbo` plus the `app/*/turbo`
+- `packages/turbo` mirrors `lib/turbo` plus the `app/*/turbo`
   dirs mapped in `vendor/sources.ts`. `compareApi` and `compareTests` are on.
 - `Mime[:turbo_stream]` is registered, and `render turbo_stream: html` sets
   the content type, as the Rails renderer does.
-- The listed helper tests are ported under their upstream names, against the dummy app from `turbo-rails-dummy-test-app`.
+- The listed helper tests are ported under their upstream names, against the dummy app from `turbo-dummy-test-app`.

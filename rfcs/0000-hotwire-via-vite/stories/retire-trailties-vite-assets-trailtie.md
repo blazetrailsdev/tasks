@@ -1,11 +1,11 @@
 ---
-title: "Retire trailties' invented Vite Trailtie and manifest onto vite-rails"
+title: "Retire trailties' invented Vite Trailtie and manifest onto vite-trails"
 status: draft
 updated: 2026-11-12
 rfc: "0000-hotwire-via-vite"
 cluster: vite
 packages: [trailties]
-deps: [vite-rails-package-and-tag-helpers]
+deps: [vite-trails-package-and-tag-helpers]
 deps-rfc: []
 est-loc: 250
 priority: null
@@ -30,7 +30,7 @@ which the RFC's boundaries ruling forbids. The bug filed as
 `ViteRails::Engine`'s `vite_rails.helper` initializer
 (`vendor/vite_ruby/v3.11.1/vite_rails/lib/vite_rails/engine.rb:10-18`) is the shape this converges
 onto. `trailties/lib/server/vite-plugin.ts` is out of scope
-here and belongs to `vite-rails-dev-server-topology`.
+here and belongs to `vite-trails-dev-server-topology`.
 
 ## Acceptance criteria
 
@@ -39,6 +39,6 @@ here and belongs to `vite-rails-dev-server-topology`.
 - Generated-app layouts use `vite_client_tag` and `vite_javascript_tag
 "application"`, the same as vite_rails' install template.
 - `asset-helpers-skip-vite-hook-outside-boot` is closed by this PR.
-- `trailsPlugin` is not touched here. `vite-rails-dev-server-topology`
+- `trailsPlugin` is not touched here. `vite-trails-dev-server-topology`
   removes it from the generated app and keeps it as test-only
   infrastructure (RFC open question 2).
