@@ -1,7 +1,7 @@
 ---
 title: "default_timezone: local is ignored by the datetime cast; its test is vacuous under TZ=UTC"
-status: ready
-updated: 2026-10-18
+status: in-progress
+updated: 2026-11-12
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -11,9 +11,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: 25
-pr: null
-claim: null
-assignee: null
+pr: trails#10017
+claim: "2026-11-12T04:41:34Z"
+assignee: "connection-in-local-time-is-vacuous-under-utc-ci"
 blocked-by: null
 closed-reason: null
 ---

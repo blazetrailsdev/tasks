@@ -1,7 +1,7 @@
 ---
 title: "floatRoundOverflow reads FLOAT_DIG instead of a 15 literal"
-status: ready
-updated: 2026-10-23
+status: in-progress
+updated: 2026-11-12
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: ["ruby-compat", "activemodel", "activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 5
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10016
+claim: "2026-11-12T04:11:38Z"
+assignee: "float-dig-is-a-private-constant-in-each-port"
 blocked-by: null
 closed-reason: null
 ---

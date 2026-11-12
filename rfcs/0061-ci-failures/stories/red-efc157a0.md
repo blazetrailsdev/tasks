@@ -1,6 +1,6 @@
 ---
 title: "Active Record PostgreSQL Tests (3) failing on main @efc157a0"
-status: claimed
+status: closed
 updated: 2026-11-12
 rfc: "0061-ci-failures"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: "2026-11-12T03:36:08Z"
 assignee: "red-efc157a0"
 blocked-by: null
-closed-reason: null
+closed-reason: "Flake: solid-queue concurrency-controls.test.ts timed out (supervisor hooks hung) on PG shard 3; rerun of run 43145329597 passed with no code change. None of the landed commits touch solid-queue runtime."
 ---
 
 ## Context
