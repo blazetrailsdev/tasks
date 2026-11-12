@@ -1,6 +1,6 @@
 ---
 title: "Finish solid-queue processes_lifecycle tests and settle the puma plugin"
-status: in-progress
+status: done
 updated: 2026-11-12
 rfc: "0196-solid-stack"
 cluster: solid-stack

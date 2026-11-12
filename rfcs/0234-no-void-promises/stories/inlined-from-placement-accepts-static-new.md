@@ -1,6 +1,6 @@
 ---
 title: "inlined-from-placement accepts @inlinedFrom on a static async new"
-status: claimed
+status: in-progress
 updated: 2026-11-12
 rfc: "0234-no-void-promises"
 cluster: gate
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#10035
 claim: "2026-11-12T15:45:33Z"
 assignee: "constructor-creates-no-promise-lint-rule"
 blocked-by: null

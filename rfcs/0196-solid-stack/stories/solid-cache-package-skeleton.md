@@ -1,6 +1,6 @@
 ---
 title: "Create packages/solid-cache as a published workspace package and enroll it in compare"
-status: in-progress
+status: done
 updated: 2026-11-12
 rfc: "0196-solid-stack"
 cluster: solid-stack

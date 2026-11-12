@@ -1,6 +1,6 @@
 ---
 title: "actionmailbox tests boot their own dummy app and roll back per test"
-status: in-progress
+status: done
 updated: 2026-11-12
 rfc: "0216-actionmailbox-port"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Port the Mandrill ingress controller (deferred wave)"
-status: in-progress
+status: done
 updated: 2026-11-12
 rfc: "0216-actionmailbox-port"
 cluster: amb-ingress-deferred
