@@ -27,6 +27,8 @@ e.g. `activesupport/lib/callbacks.ts:1021-1043`,
 (`ruby-compat/lib/file.ts:995`, `trailties/lib/generators.ts:167`) and is
 allowed.
 
+This story changes repo tooling only (`eslint/`, `eslint.config.mjs`, `scripts/`), so its `packages` is empty; it applies to every package in the RFC.
+
 ## Acceptance criteria
 
 - [ ] A rule in `eslint/` reports `.catch(fn)` / `.then(_, fn)` where `fn` has an empty body or only returns a literal, unless the call is the operand of `await` or `return`.

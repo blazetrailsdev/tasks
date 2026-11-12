@@ -4,7 +4,7 @@ status: draft
 updated: 2026-11-12
 rfc: "0000-no-void-promises"
 cluster: background-work
-packages: []
+packages: [ruby-compat, solid-queue, rackup, trailties, rack, actioncable, activestorage, website]
 deps: [no-floating-promises-repo-wide-ignore-void-false, no-swallowed-rejection-lint-rule]
 deps-rfc: []
 est-loc: 400

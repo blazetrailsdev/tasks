@@ -28,4 +28,4 @@ job.
 ## Acceptance criteria
 
 - [ ] `rbClassNewInstance(klass, ...args)` in ruby-compat with the MRI citation, typed so a subclass's `await Sub.new()` is `Sub`.
-- [ ] Tests: subclass typing (a type test), argument forwarding, and a `@ts-expect-error` proving `new Klass()` from outside stays a type error.
+- [ ] Tests: argument forwarding; a `@ts-expect-error` proving `new Klass()` from outside stays a type error; and two subclass cases, recorded as type tests and runtime tests: a subclass with only a synchronous constructor inherits `static new` without re-declaring it and resolves to its own type and `instanceof`, and a subclass that overrides `static async new` and calls `super.new(...)` runs the parent's async half before its own.

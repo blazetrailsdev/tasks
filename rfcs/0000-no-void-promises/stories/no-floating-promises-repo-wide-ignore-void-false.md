@@ -28,6 +28,8 @@ estimate is ~555 (RFC § Motivation). The prefilter in
 wider scope, and the lint job's heap (`package.json` `lint`, 10240 MB) must
 hold.
 
+This story changes repo tooling only (`eslint/`, `eslint.config.mjs`, `scripts/`), so its `packages` is empty; it applies to every package in the RFC.
+
 ## Acceptance criteria
 
 - [ ] The rule runs on `packages/**` (sources and tests) and `scripts/**` with `ignoreVoid: false`; every package is covered by the type-aware `projectService` block.

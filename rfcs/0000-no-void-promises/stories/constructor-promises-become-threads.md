@@ -4,7 +4,7 @@ status: draft
 updated: 2026-11-12
 rfc: "0000-no-void-promises"
 cluster: constructors
-packages: []
+packages: [activerecord, solid-cable]
 deps: [constructor-creates-no-promise-lint-rule]
 deps-rfc: []
 est-loc: 250
@@ -29,7 +29,7 @@ only the bookkeeping around it is async. `solid-cable.ts:86` stores
 - [ ] `Reaper#run` is synchronous as in Rails (`Thread.new` inside), and the constructor calls it with no promise.
 - [ ] SolidCable's listener is a `Thread`; shutdown waits with `join`.
 - [ ] An exception in either thread is reported, not swallowed (test).
-- [ ] The constructor rule's mark reaches 0.
+- [ ] The `constructor` mark drops by 2; with `async-initialize-becomes-static-new` it reaches 0.
 
 ## Definition of done
 

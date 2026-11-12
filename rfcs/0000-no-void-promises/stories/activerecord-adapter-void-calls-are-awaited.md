@@ -31,7 +31,7 @@ RFC § Design 3. `connection-adapters/statement-pool.ts:47,55,67`
 
 - [ ] Each site awaits, returns, or `Promise.allSettled`s its promise; methods become async up to the first already-async caller.
 - [ ] A failing `dealloc` on PostgreSQL propagates (a regression test that fails on the baseline).
-- [ ] activerecord's marks drop by this story's count.
+- [ ] activerecord's `floating` and `swallowed` source marks drop by exactly the sites listed above, tightened in the PR.
 
 ## Definition of done
 

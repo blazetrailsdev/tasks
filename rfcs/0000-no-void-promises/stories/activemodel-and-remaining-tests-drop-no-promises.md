@@ -4,7 +4,26 @@ status: draft
 updated: 2026-11-12
 rfc: "0000-no-void-promises"
 cluster: tests
-packages: []
+packages:
+  [
+    activemodel,
+    actionpack,
+    ruby-compat,
+    date,
+    trailties,
+    activesupport,
+    rack,
+    rackup,
+    actionview,
+    actionmailer,
+    mail,
+    actioncable,
+    activejob,
+    net-smtp,
+    solid-queue,
+    thor,
+    zeitwerk,
+  ]
 deps: [no-floating-promises-repo-wide-ignore-void-false, no-swallowed-rejection-lint-rule]
 deps-rfc: []
 est-loc: 350
@@ -26,7 +45,7 @@ activejob, net-smtp, solid-queue, thor and zeitwerk.
 
 ## Acceptance criteria
 
-- [ ] Every non-activerecord package's test marks reach 0.
+- [ ] Every non-activerecord package's `floating` and `swallowed` test counts reach 0.
 - [ ] No test changes what it asserts; a promise that now rejects is a real failure, fixed or filed.
 
 ## Definition of done

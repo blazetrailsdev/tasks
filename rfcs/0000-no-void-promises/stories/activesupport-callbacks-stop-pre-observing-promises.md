@@ -29,7 +29,7 @@ whether these are promises). Rails:
 
 - [ ] Each pre-observed promise is awaited in order or combined with an awaited `Promise.allSettled`, with rejections re-raised in Rails' order.
 - [ ] The full callbacks test files pass on all three adapters' AR callback suites (CI).
-- [ ] activesupport's source marks reach 0.
+- [ ] activesupport's `floating` and `swallowed` marks drop by exactly the sites listed above (the four lint findings in `benchmarkable.ts` / `callbacks.ts:566` belong to `remaining-source-void-promises`).
 
 ## Definition of done
 

@@ -4,7 +4,21 @@ status: draft
 updated: 2026-11-12
 rfc: "0000-no-void-promises"
 cluster: discarded-calls
-packages: []
+packages:
+  [
+    rake,
+    ruby-compat,
+    trailties,
+    thor,
+    mail,
+    arel,
+    actionview,
+    activestorage,
+    mini-magick,
+    trails-tsc,
+    actionpack,
+    activesupport,
+  ]
 deps: [no-floating-promises-repo-wide-ignore-void-false, no-swallowed-rejection-lint-rule]
 deps-rfc: []
 est-loc: 350
@@ -35,7 +49,7 @@ findings (`actionpack/lib/action-dispatch/middleware/debug-view.ts:37`,
 ## Acceptance criteria
 
 - [ ] Each site awaits or returns its promise, or drops a non-promise `void`.
-- [ ] Every package's source mark reads 0 once this and the other source stories land.
+- [ ] The `floating` and `swallowed` marks drop by exactly the sites listed above, tightened in the PR.
 
 ## Definition of done
 

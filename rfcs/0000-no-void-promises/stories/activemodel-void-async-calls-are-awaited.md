@@ -30,7 +30,7 @@ assignment-capture machinery; `serializers/json.ts:66`
 
 - [ ] `_assignAttributes` awaits each `_assignAttribute` in order, or the sync path raises through `assertAssignedSynchronously`; no promise is dropped.
 - [ ] The empty handlers are gone and a rejection reaches the caller (test).
-- [ ] activemodel's source marks reach 0.
+- [ ] activemodel's `floating` and `swallowed` source marks reach 0.
 
 ## Definition of done
 

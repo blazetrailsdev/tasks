@@ -24,6 +24,8 @@ RFC § Design 2. Six constructors start a promise:
 `solid-cable/lib/action-cable/subscription-adapter/solid-cable.ts:86`,
 `actiontext/lib/content.ts:73`, `activerecord/src/schema-dumper.ts:80`.
 
+This story changes repo tooling only (`eslint/`, `eslint.config.mjs`, `scripts/`), so its `packages` is empty; it applies to every package in the RFC.
+
 ## Acceptance criteria
 
 - [ ] A type-aware rule reports, inside a `constructor` body: a thenable-typed call expression (dropped, voided, stored or chained), `.then` / `.catch` / `.finally`, and an `async` IIFE.

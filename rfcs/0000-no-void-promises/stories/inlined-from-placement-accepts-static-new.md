@@ -24,6 +24,8 @@ constructor. Once part of `initialize` moves into `static async new`, its
 `@inlinedFrom` tags move with it, and `parity:api:inlined` and both call gates
 must compare that member against the tagged Ruby bodies.
 
+This story changes repo tooling only (`eslint/`, `eslint.config.mjs`, `scripts/`), so its `packages` is empty; it applies to every package in the RFC.
+
 ## Acceptance criteria
 
 - [ ] The rule accepts `#initialize` and `ClassMethods#new` tags on a `static new` member of a class whose constructor is `protected`.

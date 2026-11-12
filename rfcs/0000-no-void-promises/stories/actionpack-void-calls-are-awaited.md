@@ -30,7 +30,7 @@ RFC § Design 3. `action-dispatch/journey/router.ts:34`,
 
 - [ ] Each site awaits or returns its promise, or drops a non-promise `void`.
 - [ ] `driver.ts:68`'s preload is awaited where Rails' driver is used, not pre-observed.
-- [ ] actionpack's source marks reach 0.
+- [ ] actionpack's `floating` and `swallowed` marks drop by exactly the sites listed above.
 
 ## Definition of done
 

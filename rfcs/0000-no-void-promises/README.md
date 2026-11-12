@@ -8,16 +8,20 @@ owner: "@deanmarano"
 packages:
   - "actioncable"
   - "actionmailbox"
+  - "actionmailer"
   - "actionpack"
   - "actiontext"
   - "actionview"
+  - "activejob"
   - "activemodel"
   - "activerecord"
   - "activestorage"
   - "activesupport"
   - "arel"
+  - "date"
   - "mail"
   - "mini-magick"
+  - "net-smtp"
   - "rack"
   - "rackup"
   - "rake"
@@ -168,7 +172,14 @@ static async new<T extends Klass>(this: { prototype: T }, ...args): Promise<T> {
   `static new` member.
 - Scope: only classes whose `initialize` has async work. `ActiveRecord::Base`,
   its models, and every class with a synchronous `initialize` keep a public
-  constructor and `new Klass`, and trails#8659 stands for them.
+  constructor and `new Klass`, and trails#8659 stands for them. No record class
+  with async `initialize` work is known; if one turns up, it is an operator
+  decision filed as a story, not a `static new` on a record.
+- A subclass whose own `initialize` is synchronous does not re-declare
+  `static new`; it inherits it through `this` (`ruby-compat-rb-class-new-instance`
+  records the type and runtime tests). `SchemaDumper` (subclassed by
+  `TestSchemaDumper` in `mysql/schema-dumper.trails.test.ts`) is the
+  case in this RFC.
 
 **(b) A `Thread`.** Where Rails runs the work on a background thread
 (`Reaper#run`'s `Thread.new`, Action Cable's listener threads, Solid Queue's
@@ -194,15 +205,29 @@ adding awaits.
 
 ### 4. `Mutex#synchronize`
 
-Callers await `synchronize` unless the call is inside a block that already
-holds the lock. Its `T | Promise<T>` return type is accurate (§ Motivation)
-and stays.
+Its `T | Promise<T>` return type is accurate (§ Motivation) and stays. A
+caller either:
+
+- awaits it, becoming async up to the first already-async caller, where that
+  chain stops inside the port (Action Cable's Redis adapter); or
+- **at a Rails-synchronous public entry point** (Zeitwerk's `Loader#setup`,
+  its `Config` setters, `Cref::Map`), stays synchronous: the block runs
+  inline, and if `synchronize` hands back a promise because the lock is
+  contended, the caller raises `ThreadError` instead of continuing. This is
+  the sync-entry rule of § 3 applied to a lock. Ruby would block the thread
+  there; JS cannot, and silently continuing is the bug this RFC removes.
 
 ### 5. Gate and ratification
 
-- Each of the three rules lands with a per-package count mark, only-shrink
-  with no reseed, documented in trails `docs/parity-gates.md`. A converged
-  site is removed and the mark tightened.
+- Each rule has its own per-package mark: `floating`
+  (`no-floating-promises`), `swallowed` (`no-swallowed-rejection`) and
+  `constructor` (`constructor-creates-no-promise`). Each is only-shrink with no
+  reseed, documented in trails `docs/parity-gates.md`. Every story names the
+  mark or marks it drives down.
+- Each mark counts its own rule's findings. A site two rules both report
+  (`void p.catch(() => {})` is a `floating` and a `swallowed` finding) counts
+  once in each mark; there is no shared site count. Converging it lowers both.
+- `promise-gate-marks-retire` owns the final tighten and deletes the marks.
 - Trails `CLAUDE.md` gains a section ratifying §1–§2, so the rule is read
   where agents read rules, and `packages/activerecord/CLAUDE.md` § "A record
   is built with `new Klass` only" points at it for the scope boundary.
@@ -233,29 +258,33 @@ and stays.
 
 ## Rollout
 
-1. Gate, helper and ratification —
+1. Gate and helpers, no deps:
    `no-floating-promises-repo-wide-ignore-void-false`,
    `no-swallowed-rejection-lint-rule`,
    `constructor-creates-no-promise-lint-rule`,
    `ruby-compat-rb-class-new-instance`,
-   `inlined-from-placement-accepts-static-new`,
-   `claude-md-ratifies-no-void-promises`.
-2. Constructors — `async-initialize-becomes-static-new`,
-   `constructor-promises-become-threads`.
-3. Source sites — `mutex-synchronize-callers-await`,
+   `inlined-from-placement-accepts-static-new`. Then
+   `claude-md-ratifies-no-void-promises`, after all five.
+2. Constructors, after the constructor rule and both helpers:
+   `async-initialize-becomes-static-new`,
+   `constructor-promises-become-threads` (constructor rule only).
+3. Source sites, after the `floating` and/or `swallowed` rule:
+   `mutex-synchronize-callers-await`,
+   `zeitwerk-mutex-callers-stay-synchronous`,
+   `reset-column-information-is-awaited`,
    `activerecord-adapter-void-calls-are-awaited`,
    `activerecord-relation-and-association-void-calls-are-awaited`,
    `activemodel-void-async-calls-are-awaited`,
    `activesupport-callbacks-stop-pre-observing-promises`,
    `actionpack-void-calls-are-awaited`, `generators-await-source-root`,
    `fire-and-forget-sites-run-on-a-thread`,
-   `remaining-source-void-promises`.
-4. Tests — `reset-column-information-is-awaited`,
-   `activerecord-tests-drop-no-promises`,
+   `remaining-source-void-promises`. These are independent of each other.
+4. Tests: `activerecord-tests-drop-no-promises` (after
+   `reset-column-information-is-awaited`),
    `activemodel-and-remaining-tests-drop-no-promises`.
+5. `promise-gate-marks-retire`, after every story in phases 2–4.
 
-Phase 1 lands first; phases 2–4 are independent of each other once their gate
-story is in.
+Each story's `deps` encodes exactly these edges.
 
 ## Verification
 
@@ -264,8 +293,10 @@ story is in.
   package, tests included, and every package's mark for all three reads **0**.
 - The mark files are deleted once they read 0, leaving the rules as plain
   `error`s.
-- The 19 / 147 / 408 / 6 baseline in § Motivation is replaced by the gate
-  story's exact count in its PR, and the burndown is tracked against that.
+- The baselines are the marks as seeded: `constructor` at 6, and `floating`
+  and `swallowed` at the counts their gate stories record in their PRs. The
+  § Motivation table is an estimate of the union of the last two. Burndown is
+  tracked per mark.
 
 ## Open questions
 
@@ -282,3 +313,6 @@ seeded into the same marks.
   `.catch(() => null)` carved out as `rescue nil`; Mutex arm stated from
   `mutex.ts`; stories split to fit the LOC ceiling; ratification and
   `@inlinedFrom` placement stories added
+- 2026-11-12: review: named marks and double-count rule, Mutex sync-entry
+  rule and zeitwerk split, explicit rollout edges, retirement story, story
+  packages filled, subclass and record scope stated

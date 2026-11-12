@@ -5,7 +5,14 @@ updated: 2026-11-12
 rfc: "0000-no-void-promises"
 cluster: gate
 packages: []
-deps: [ruby-compat-rb-class-new-instance]
+deps:
+  [
+    no-floating-promises-repo-wide-ignore-void-false,
+    no-swallowed-rejection-lint-rule,
+    constructor-creates-no-promise-lint-rule,
+    ruby-compat-rb-class-new-instance,
+    inlined-from-placement-accepts-static-new,
+  ]
 deps-rfc: []
 est-loc: 40
 priority: null
@@ -24,6 +31,8 @@ there, the shapes this RFC retires keep being copied.
 (trails#8659) must point at the new section for the scope boundary, and
 § "A module's `initialize` is inlined into the constructor" must say where an
 async segment goes.
+
+It lands after the three gate stories and the two helper stories, so the section describes rules that are already enforced and tools that exist.
 
 ## Acceptance criteria
 

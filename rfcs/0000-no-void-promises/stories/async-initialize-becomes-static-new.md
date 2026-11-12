@@ -4,7 +4,7 @@ status: draft
 updated: 2026-11-12
 rfc: "0000-no-void-promises"
 cluster: constructors
-packages: []
+packages: [rackup, trailties, actiontext, activerecord]
 deps:
   [
     constructor-creates-no-promise-lint-rule,
@@ -39,7 +39,7 @@ Rails: rackup's `server.rb` `initialize`,
 - [ ] Each class has a `protected` synchronous constructor and a `static async new` running the async remainder of `initialize` in Rails' order; every caller writes `await Klass.new(...)`.
 - [ ] `_ready`, `_loadConsole` and any equivalent stored promise field are deleted.
 - [ ] A rejection from the async half surfaces at `await Klass.new(...)` (a test per class).
-- [ ] The constructor rule's mark drops by 4.
+- [ ] The `constructor` mark drops by 4.
 
 ## Definition of done
 

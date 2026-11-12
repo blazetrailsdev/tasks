@@ -33,7 +33,7 @@ promise and is left to the rule.
 
 ## Acceptance criteria
 
-- [ ] activerecord's test marks reach 0. If the diff exceeds the LOC ceiling, ship by directory and file a follow-up story with the remaining file list.
+- [ ] activerecord's `floating` and `swallowed` test counts reach 0. If the diff exceeds the LOC ceiling, ship by directory and file a follow-up story with the remaining file list.
 - [ ] No test changes what it asserts; each awaited promise that now rejects is a real failure, fixed or filed.
 
 ## Definition of done
