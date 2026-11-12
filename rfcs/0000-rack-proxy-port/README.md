@@ -43,8 +43,9 @@ relies on. If it does not, the story pins the newest 0.x release instead.
 
 ## Non-goals
 
-- **Proxy features vite_ruby does not reach** are still ported, because the
-  gem is ported whole. There are no non-goals beyond the gem's own surface.
+- **Rewriting `Rack::Proxy` around a non-`Net::HTTP` client.** The port
+  follows the gem's HTTP path. Any client substitution is a receipted
+  ruby-compat choice, not a redesign.
 
 ## Alternatives considered
 

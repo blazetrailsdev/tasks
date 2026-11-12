@@ -33,7 +33,9 @@ tasks belong to `vite-ruby-rake-tasks`. Tests:
   Thor instead, the `dry-cli-gem-port` dep is dropped and this story records
   the receipt.
 - `cli/install.rb`'s package-manager detection is ported as written. A
-  generated trails app is a pnpm project, so it resolves to pnpm there.
+  generated trails app is a pnpm project, so it resolves to pnpm there. The
+  turbo and stimulus install templates hard-code `pnpm add` and do not call
+  this detection, per the ruling.
 - `bin/vite` in a generated app runs `ViteRuby::CLI`.
 - `file_utils_test.rb` and `upgrade_test.rb` are ported under their upstream
   names.

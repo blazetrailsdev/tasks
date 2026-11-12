@@ -37,8 +37,9 @@ rake, 272 LOC, 14 public and 3 internal methods, and about 20 upstream tests
 helpers call actionview's own `javascript_include_tag`,
 `stylesheet_link_tag` and `image_tag`, and never override them. actionview
 stays pipeline-agnostic (meta RFC ruling). The `vite_rails.proxy`
-initializer is wired into the middleware stack by the meta RFC's
-`vite-rails-dev-server-topology` story, which also changes `trails server`.
+initializer is the one exception. The meta RFC's
+`vite-rails-dev-server-topology` story ports it, together with the
+`trails server` change.
 
 ## Non-goals
 

@@ -37,7 +37,8 @@ The operator decided on 2026-11-12 that Vite, through ports of
   templates' package-manager rule. The draft text already carries each
   recommendation, and the operator confirms or edits each one.
 - The operator picks option (a) or (b) for open question 4, which
-  `dry-cli-gem-port` waits on. Open question 2 stays with
-  `vite-rails-dev-server-topology`.
+  `dry-cli-gem-port` waits on. Open question 2 is answered by the
+  ruling text (`trailsPlugin` stays as test-only infrastructure), and
+  `vite-rails-dev-server-topology` implements that answer.
 - The RFC's open questions section is updated to match what was ratified.
 - The ratification date replaces `<ratification date>` in the RFC's draft text.

@@ -90,7 +90,7 @@ LOC, and 381 upstream tests. The JavaScript the gems ship is excluded:
 `stimulus-rails/app/assets/javascripts/` is the npm `@hotwired/stimulus` build.
 
 Every gem the four depend on is already ported except two, each of which gets
-its own story and package, both runtime
+its own RFC and package (`rack-proxy-port`, `dry-cli-port`), both runtime
 dependencies of vite_ruby (`vite_ruby/vite_ruby.gemspec:22-26`):
 
 - `rack-proxy`. `ViteRuby::DevServerProxy < Rack::Proxy` at
@@ -134,7 +134,13 @@ Alternatives). The `hotwire-vite-claude-md-ruling` story lands this text as a ne
 >   path segment, receipted).
 > - trails apps use pnpm. The generated app is a pnpm project
 >   (`pnpm-lock.yaml`), and the install templates' hard-coded `yarn add`
->   becomes `pnpm add`, a receipted one-token change. yarn is not used. `turbo:install` and
+>   becomes `pnpm add`, a receipted one-token change. yarn is not used. The
+>   templates hard-code pnpm, rather than reusing vite_ruby's lockfile
+>   detection, so a trails app always gets pnpm and does not depend on which
+>   lockfile is present. vite_ruby's detection is still ported as written for
+>   `vite:install`, and it resolves to pnpm in a generated app. The bun arm
+>   fires only in an app the user has moved to bun (`bun.lockb` present). It
+>   is kept so the port stays faithful, and a generated app never takes it. `turbo:install` and
 >   `stimulus:install` pick bun when `using_bun?` is true and node otherwise,
 >   as upstream does with the importmap arm removed.
 > - The npm package is `@hotwired/turbo-rails`, as `turbo_with_node.rb` adds
@@ -307,7 +313,8 @@ updates this table.
    server (`converge-server-onto-in-process-vite-dev-server`,
    0166-actiondispatch-system-testing-parity). **Recommendation:**
    (b) for now, scoped to test-only use, and revisit after those stories land.
-   **Owner:** `vite-rails-dev-server-topology`.
+   Answered by the draft ruling text, and implemented by
+   `vite-rails-dev-server-topology`.
 3. **Entrypoint path.** `turbo_with_node.rb:1-3` and
    `stimulus_with_node.rb:10-15` append to `app/javascript/application.js`.
    vite_rails' default is `app/frontend/entrypoints/`
