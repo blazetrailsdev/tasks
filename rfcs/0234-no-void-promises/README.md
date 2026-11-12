@@ -1,7 +1,7 @@
 ---
 rfc: "0234-no-void-promises"
 title: "No void promises; async initialize is an awaited static new"
-status: draft
+status: active
 created: 2026-11-12
 updated: 2026-11-12
 owner: "@deanmarano"
