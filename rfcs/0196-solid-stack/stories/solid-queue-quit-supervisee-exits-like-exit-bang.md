@@ -1,13 +1,13 @@
 ---
-title: "solid-queue-quit-supervisee-exits-like-exit-bang"
+title: "A QUIT supervisee stops claiming work and reaps with exit status 1"
 status: draft
 updated: 2026-11-12
 rfc: "0196-solid-stack"
-cluster: null
-packages: []
+cluster: solid-stack
+packages: ["solid-queue"]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 120
 priority: null
 pr: null
 claim: null
