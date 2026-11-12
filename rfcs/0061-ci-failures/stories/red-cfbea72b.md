@@ -1,6 +1,6 @@
 ---
 title: "Active Record PostgreSQL Tests (3) failing on main @cfbea72b"
-status: claimed
+status: closed
 updated: 2026-11-11
 rfc: "0061-ci-failures"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: "2026-11-11T21:57:47Z"
 assignee: "red-cfbea72b"
 blocked-by: null
-closed-reason: null
+closed-reason: "Flake per coordinator: solid-queue concurrency-controls PG deadlock, tracked by solid-queue-concurrency-controls-pg-timeouts"
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "Active Record PostgreSQL Tests (3) failing on main @9a5ed1b7"
-status: ready
+status: closed
 updated: 2026-11-11
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-11T23:06:51Z"
+assignee: "red-9a5ed1b7"
 blocked-by: null
-closed-reason: null
+closed-reason: "Flake: solid-queue concurrency-controls.test.ts PG hook/test timeouts + ActiveRecord::Deadlocked; failing commit 9a5ed1b7 only touched tzinfo; same test failed on cfbea72 and passed on 1d6f563 in between. Tracked by solid-queue-concurrency-controls-pg-timeouts."
 ---
 
 ## Context

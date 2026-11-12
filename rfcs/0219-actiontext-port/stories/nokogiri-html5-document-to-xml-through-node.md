@@ -1,7 +1,7 @@
 ---
 title: "Nokogiri HTML5::Document answers to_xml / write_to through Node; port test_to_xml"
-status: ready
-updated: 2026-11-10
+status: in-progress
+updated: 2026-11-11
 rfc: "0219-actiontext-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10010
+claim: "2026-11-11T23:11:33Z"
+assignee: "nokogiri-html5-create-element-namespace-definitions"
 blocked-by: null
 closed-reason: null
 ---
