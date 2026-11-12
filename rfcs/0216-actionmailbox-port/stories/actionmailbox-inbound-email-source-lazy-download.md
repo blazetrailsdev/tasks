@@ -1,7 +1,7 @@
 ---
 title: "InboundEmail#source reads raw_email.download without explicit attachment/blob loads"
-status: claimed
-updated: 2026-11-11
+status: blocked
+updated: 2026-11-12
 rfc: "0216-actionmailbox-port"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-11-11T22:11:37Z"
 assignee: "actionmailbox-inbound-email-source-lazy-download"
-blocked-by: null
+blocked-by: "operator ruling 2026-10-31 (packages/activestorage/CLAUDE.md, method_missing definers): One/Attachment delegation stays sync and raises on an unloaded association; source() keeps its explicit loads until that ruling changes"
 closed-reason: null
 ---
 

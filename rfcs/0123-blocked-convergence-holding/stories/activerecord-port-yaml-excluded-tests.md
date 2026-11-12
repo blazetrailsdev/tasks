@@ -1,7 +1,7 @@
 ---
 title: "activerecord: port coders/yaml_column_test.rb and the 23 YAML/Psych-excluded cases"
-status: ready
-updated: 2026-09-30
+status: in-progress
+updated: 2026-11-12
 rfc: "0123-blocked-convergence-holding"
 cluster: unported-tests
 packages: ["activerecord"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10015
+claim: "2026-11-12T03:41:34Z"
+assignee: "activerecord-port-yaml-excluded-tests"
 blocked-by: null
 closed-reason: null
 ---

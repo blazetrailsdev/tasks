@@ -1,7 +1,7 @@
 ---
 title: "port-plugin-helpers-with-new-plugin"
 status: ready
-updated: 2026-11-10
+updated: 2026-11-12
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

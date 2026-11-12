@@ -1,7 +1,7 @@
 ---
 title: "activejob: port queue_adapter= as a static setter, not only setQueueAdapter"
-status: in-progress
-updated: 2026-11-11
+status: done
+updated: 2026-11-12
 rfc: "0214-activejob-surfaced-deviations"
 cluster: null
 packages: []

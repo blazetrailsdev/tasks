@@ -1,7 +1,7 @@
 ---
 title: "Finish TimezoneOffset, TimezoneTransition, TimezonePeriod and port OffsetTimezonePeriod / TransitionsTimezonePeriod"
-status: in-progress
-updated: 2026-11-11
+status: done
+updated: 2026-11-12
 rfc: "0231-tzinfo-to-parity"
 cluster: null
 packages:

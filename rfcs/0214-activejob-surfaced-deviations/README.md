@@ -1,9 +1,9 @@
 ---
 rfc: "0214-activejob-surfaced-deviations"
 title: "activejob surfaced deviations — the package's standing convergence bucket"
-status: active
+status: closed
 created: 2026-11-02
-updated: 2026-11-02
+updated: 2026-11-12
 owner: "@deanmarano"
 packages:
   - "activejob"

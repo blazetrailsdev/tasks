@@ -1,7 +1,7 @@
 ---
 title: "examples/twitter-clone and database.test.ts still carry the pre-storage/ sqlite3 path"
-status: ready
-updated: 2026-09-04
+status: in-progress
+updated: 2026-11-12
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 70
 priority: 50
-pr: null
-claim: null
-assignee: null
+pr: trails#10013
+claim: "2026-11-12T03:11:32Z"
+assignee: "port-plugin-helpers-with-new-plugin"
 blocked-by: null
 closed-reason: null
 ---

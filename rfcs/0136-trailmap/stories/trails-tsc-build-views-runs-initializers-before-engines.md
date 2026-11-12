@@ -1,7 +1,7 @@
 ---
 title: "trails-tsc build-views loads config/initializers without running engine initializers"
-status: in-progress
-updated: 2026-11-11
+status: done
+updated: 2026-11-12
 rfc: "0136-trailmap"
 cluster: null
 packages: ["trails-tsc", "activestorage"]
