@@ -1,5 +1,5 @@
 ---
-title: "Port Turbo::StreamsChannel, Streams::Broadcasts, StreamName, the broadcast jobs and debouncers"
+title: "Port Turbo::StreamsChannel, Streams::Broadcasts, the broadcast jobs and debouncers"
 status: draft
 updated: 2026-11-12
 rfc: "0000-hotwire-via-vite"
