@@ -43,6 +43,8 @@ closed-reason: null
   `compareTests` on.
 - The node and bun install arms are ported, and the importmap arm is dropped,
   citing the ratified section. The generated `controllers/index.js` follows
-  the answer to hotwire-via-vite open question 1, and the entrypoint path follows open
-  question 3.
+  the answer to hotwire-via-vite open question 1 (the static
+  `Stimulus::Manifest`), and the entrypoint path follows open question 3
+  (`app/javascript/entrypoints/application.js`), with a receipt on the one
+  changed segment citing the ratified section.
 - `manifest_test.rb` is ported under its upstream name.
