@@ -5,7 +5,8 @@ updated: 2026-11-13
 rfc: "0236-rack-proxy-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - rack-proxy-perform-request
 deps-rfc: []
 est-loc: null
 priority: null
