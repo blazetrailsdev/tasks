@@ -1,7 +1,7 @@
 ---
 title: "rack-builder-use-calls-a-plain-function-middleware-instead-of-new"
-status: ready
-updated: 2026-10-19
+status: in-progress
+updated: 2026-11-13
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10070
+claim: "2026-11-13T20:09:52Z"
+assignee: "authentication-generator-e2e-request-cycle"
 blocked-by: null
 closed-reason: null
 ---

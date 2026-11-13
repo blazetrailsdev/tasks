@@ -1,6 +1,6 @@
 ---
 title: "Port ActionText::Encryption, EncryptedRichText and model_encryption_test"
-status: claimed
+status: in-progress
 updated: 2026-11-13
 rfc: "0219-actiontext-port"
 cluster: at-models
@@ -9,7 +9,7 @@ deps: ["actiontext-record-rich-text-and-attribute"]
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#10069
 claim: "2026-11-13T19:49:48Z"
 assignee: "actiontext-encryption"
 blocked-by: null

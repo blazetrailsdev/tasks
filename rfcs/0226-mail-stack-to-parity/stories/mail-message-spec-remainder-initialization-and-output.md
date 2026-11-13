@@ -1,6 +1,6 @@
 ---
 title: "Port message_spec.rb's remaining initialization, plain-text, header, YAML, == and output examples"
-status: in-progress
+status: done
 updated: 2026-11-13
 rfc: "0226-mail-stack-to-parity"
 cluster: null

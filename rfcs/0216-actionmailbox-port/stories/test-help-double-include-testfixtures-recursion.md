@@ -1,6 +1,6 @@
 ---
 title: "test_help double-includes TestFixtures and rbCallSuper recurses"
-status: claimed
+status: ready
 updated: 2026-11-13
 rfc: "0216-actionmailbox-port"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-13T19:29:48Z"
-assignee: "ruby-compat-net-http-idempotent-request-classes"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

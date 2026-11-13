@@ -1,6 +1,6 @@
 ---
 title: "Port TagHelper, Tags::ActionText and rich_textarea, with form_helper_test"
-status: in-progress
+status: done
 updated: 2026-11-13
 rfc: "0219-actiontext-port"
 cluster: at-views

@@ -1,7 +1,7 @@
 ---
 title: "request-remote-ip-reads-header-or-ip-to-s"
-status: ready
-updated: 2026-10-19
+status: done
+updated: 2026-11-13
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9828
+claim: "2026-11-13T20:09:52Z"
+assignee: "authentication-generator-e2e-request-cycle"
 blocked-by: null
 closed-reason: null
 ---

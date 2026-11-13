@@ -1,6 +1,6 @@
 ---
 title: "Port Net::HTTP's remaining request classes so the idempotent retry is reachable"
-status: claimed
+status: in-progress
 updated: 2026-11-13
 rfc: "0216-actionmailbox-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#10071
 claim: "2026-11-13T19:29:48Z"
 assignee: "ruby-compat-net-http-idempotent-request-classes"
 blocked-by: null
