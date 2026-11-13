@@ -169,7 +169,7 @@ Alternatives). The `hotwire-vite-claude-md-ruling` story lands this text as a ne
 >   is dropped. `vite_hanami`, `vite_padrino` and `vite_plugin_legacy` are not
 >   ported.
 >
-> Ruled by the operator on <ratification date>.
+> Ruled by the operator on 2026-11-13.
 
 ### Package boundaries
 
@@ -306,7 +306,7 @@ updates this table.
 
 ## Open questions
 
-1. **Stimulus controllers index: `Stimulus::Manifest` or `import.meta.glob`.**
+1. **Stimulus controllers index (resolved: `Stimulus::Manifest`).**
    The operator asked for `controllers/index.js` to use `import.meta.glob`, as
    vite_rails-style apps do. stimulus-rails' node branch instead writes a
    static manifest that `stimulus:manifest:update` regenerates
@@ -317,15 +317,15 @@ updates this table.
    `stimulus:manifest:*` ported but unused. **Recommendation:** port the node
    branch verbatim, `Stimulus::Manifest` included, so the generated
    `index.js` is a manifest. Offer the glob only if the operator confirms it
-   as a recorded deviation. **Owner:** `hotwire-vite-claude-md-ruling` (the
-   draft ruling text carries the recommendation).
-2. **`trailsPlugin` (Rack-inside-Vite).** Under the vite_rails topology it
+   as a recorded deviation. **Decision:** the recommendation, ratified by the
+   operator on 2026-11-13 (trails#10053). The glob is not offered.
+2. **`trailsPlugin` (Rack-inside-Vite) (resolved: test-only).** Under the vite_rails topology it
    has no role. Options: (a) delete it in `retire-trailties-vite-assets-trailtie`;
    (b) keep it for the system-testing stories that drive an in-process Vite
    server (`converge-server-onto-in-process-vite-dev-server`,
    0166-actiondispatch-system-testing-parity). **Recommendation:**
    (b) for now, scoped to test-only use, and revisit after those stories land.
-   Answered by the draft ruling text, and implemented by
+   Ratified on 2026-11-13 (trails#10053), and implemented by
    `vite-trails-dev-server-topology`.
 3. **Entrypoint path (resolved: `app/javascript`).** `turbo_with_node.rb:1-3` and
    `stimulus_with_node.rb:10-15` append to `app/javascript/application.js`.
@@ -387,3 +387,5 @@ updates this table.
   `ViteTrails::*`). turbo-rails and stimulus-rails drop the suffix: RFCs
   `turbo-port` and `stimulus-port`, packages `@blazetrails/turbo` and
   `@blazetrails/stimulus`, stories `turbo-*` and `stimulus-*`.
+- 2026-11-13: the operator ratified the ruling as drafted (trails#10053).
+  OQ1 and OQ2 resolved; every open question is now answered.
