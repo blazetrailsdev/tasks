@@ -1,7 +1,7 @@
 ---
 title: "ControllerRuntime#initialize is inlined into the including controller"
-status: in-progress
-updated: 2026-11-12
+status: done
+updated: 2026-11-13
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: entry
 packages: ["activerecord", "actionpack"]

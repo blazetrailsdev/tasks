@@ -1,7 +1,7 @@
 ---
 title: "Lint (activerecord) failing on main @dbbb57f0"
-status: in-progress
-updated: 2026-11-12
+status: done
+updated: 2026-11-13
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

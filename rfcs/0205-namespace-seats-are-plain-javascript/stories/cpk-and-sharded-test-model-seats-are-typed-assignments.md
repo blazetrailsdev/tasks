@@ -1,7 +1,7 @@
 ---
 title: "cpk-and-sharded-test-model-seats-are-typed-assignments"
-status: claimed
-updated: 2026-11-12
+status: ready
+updated: 2026-11-13
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-12T23:30:06Z"
-assignee: "converge-module-eval-import-cycle-edges"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
