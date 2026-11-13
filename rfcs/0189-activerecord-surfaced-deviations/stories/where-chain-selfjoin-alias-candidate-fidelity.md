@@ -1,7 +1,7 @@
 ---
 title: "where.associated/missing self-join renders association-name alias instead of JoinDependency alias_candidate"
-status: ready
-updated: 2026-10-18
+status: closed
+updated: 2026-11-13
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -11,10 +11,10 @@ deps-rfc: []
 est-loc: 120
 priority: 46
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-13T14:49:59Z"
+assignee: "table-name-and-primary-key-are-declared-through-underscore-statics"
 blocked-by: null
-closed-reason: null
+closed-reason: 'FALSIFIED: Rails renders the self-join under the association name too. where.associated calls where!(children => {...}); PredicateBuilder.references (relation/predicate_builder.rb) records Arel.sql("children"), and JoinDependency#make_constraints (join_dependency.rb:202-204) passes @references[:children] as the table name to aliased_table_for, which aliases "comments" as "children". trails already matches.'
 ---
 
 ## Context

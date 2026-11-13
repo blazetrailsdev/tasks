@@ -1,6 +1,6 @@
 ---
 title: "integration-runner-includes-assertions"
-status: claimed
+status: done
 updated: 2026-11-13
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10054
 claim: "2026-11-13T13:49:53Z"
 assignee: "authentication-generator-e2e-request-cycle"
 blocked-by: null

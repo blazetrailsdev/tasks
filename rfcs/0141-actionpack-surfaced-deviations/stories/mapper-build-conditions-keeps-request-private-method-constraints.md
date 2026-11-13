@@ -1,6 +1,6 @@
 ---
 title: 'Mapping#build_conditions keeps a constraint named after a private Request method (public_method_defined? reads "defined")'
-status: claimed
+status: blocked
 updated: 2026-11-13
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-11-13T13:49:53Z"
 assignee: "authentication-generator-e2e-request-cycle"
-blocked-by: null
+blocked-by: "Needs an operator decision on the per-class mechanism. No existing shape fits: #private and a run-time visibility table are ruled out (CLAUDE.md 'Method visibility is compile-time only'); the remaining candidates are (a) port Request's five Rails-private methods (check_method, default_session, read_body_stream, reset_stream, fallback_request_parameters, request.rb:496-540) as module-private this-typed functions in request.ts so rbModMethodDefined answers false, which moves them off the class and costs member parity, or (b) a module-private name list beside build_conditions in mapper.ts, which is an invented table. Pick one and unblock."
 closed-reason: null
 ---
 

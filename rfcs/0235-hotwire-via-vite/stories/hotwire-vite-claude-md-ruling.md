@@ -1,6 +1,6 @@
 ---
 title: "Ratify the importmap/propshaft-out-of-scope, Vite-serves-JavaScript ruling in CLAUDE.md"
-status: in-progress
+status: done
 updated: 2026-11-13
 rfc: "0235-hotwire-via-vite"
 cluster: ruling

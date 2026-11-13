@@ -1,7 +1,7 @@
 ---
 title: "Burn down the declaration-only population parity:api measures"
-status: ready
-updated: 2026-11-12
+status: in-progress
+updated: 2026-11-13
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#10055
+claim: "2026-11-13T14:29:48Z"
+assignee: "burn-down-the-declaration-only-population"
 blocked-by: null
 closed-reason: null
 ---

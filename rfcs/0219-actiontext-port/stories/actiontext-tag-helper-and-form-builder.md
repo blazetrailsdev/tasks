@@ -1,6 +1,6 @@
 ---
 title: "Port TagHelper, Tags::ActionText and rich_textarea, with form_helper_test"
-status: claimed
+status: in-progress
 updated: 2026-11-13
 rfc: "0219-actiontext-port"
 cluster: at-views
@@ -9,7 +9,7 @@ deps: ["actiontext-content-helper-and-views", "activestorage-routes-and-controll
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
+pr: trails#10056
 claim: "2026-11-13T13:37:32Z"
 assignee: "actiontext-tag-helper-and-form-builder"
 blocked-by: null

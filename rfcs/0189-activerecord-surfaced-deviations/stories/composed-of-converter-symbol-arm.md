@@ -1,7 +1,7 @@
 ---
 title: "composed_of's converter drops Rails' Symbol arm (klass.send(converter, part))"
-status: ready
-updated: 2026-10-18
+status: in-progress
+updated: 2026-11-13
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 43
-pr: null
-claim: null
-assignee: null
+pr: trails#10058
+claim: "2026-11-13T14:49:59Z"
+assignee: "table-name-and-primary-key-are-declared-through-underscore-statics"
 blocked-by: null
 closed-reason: null
 ---
