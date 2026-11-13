@@ -1,6 +1,6 @@
 ---
 title: "Port ActionText::FixtureSet and the model, strict-loading and table-name tests"
-status: in-progress
+status: done
 updated: 2026-11-13
 rfc: "0219-actiontext-port"
 cluster: at-models

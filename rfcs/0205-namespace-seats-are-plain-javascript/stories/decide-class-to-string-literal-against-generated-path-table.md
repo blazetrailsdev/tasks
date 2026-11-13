@@ -1,6 +1,6 @@
 ---
 title: "decide-class-to-string-literal-against-generated-path-table"
-status: claimed
+status: in-progress
 updated: 2026-11-13
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10077
 claim: "2026-11-13T21:09:54Z"
 assignee: "decide-class-to-string-literal-against-generated-path-table"
 blocked-by: null

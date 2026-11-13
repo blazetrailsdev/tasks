@@ -1,6 +1,6 @@
 ---
 title: "Port ActionText::Encryption, EncryptedRichText and model_encryption_test"
-status: in-progress
+status: done
 updated: 2026-11-13
 rfc: "0219-actiontext-port"
 cluster: at-models
