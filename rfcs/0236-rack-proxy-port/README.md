@@ -1,9 +1,9 @@
 ---
 rfc: "0236-rack-proxy-port"
 title: "Port the rack-proxy gem"
-status: draft
+status: active
 created: 2026-11-12
-updated: 2026-11-12
+updated: 2026-11-13
 owner: "@deanmarano"
 packages:
   - "rack-proxy"
