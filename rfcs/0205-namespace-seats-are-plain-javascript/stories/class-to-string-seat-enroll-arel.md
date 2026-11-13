@@ -1,7 +1,7 @@
 ---
 title: "Enroll arel in class-to-string-seat"
 status: closed
-updated: 2026-10-29
+updated: 2026-11-13
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: "FALSIFIED: duplicates the class -> Ruby name table ruby-compat already generates (RFC 0205 README, 2026-10-29); a hand-seeded path literal per class is the registration protocol this RFC removes."
+closed-reason: "FALSIFIED: the operator ruled (2026-11-13, decide-class-to-string-literal-against-generated-path-table) that the generated constant table makes the static toString literal unnecessary; the literal is retired by retire-class-to-string-seat-literal."
 ---
 
 ## Context

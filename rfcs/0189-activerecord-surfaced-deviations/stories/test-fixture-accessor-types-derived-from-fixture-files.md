@@ -1,6 +1,6 @@
 ---
 title: "test-fixture-accessor-types-derived-from-fixture-files"
-status: claimed
+status: done
 updated: 2026-11-13
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: 34
-pr: null
+pr: trails#10073
 claim: "2026-11-13T20:50:20Z"
 assignee: "test-fixture-accessor-types-derived-from-fixture-files"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Port Net::HTTP's remaining request classes so the idempotent retry is reachable"
-status: in-progress
+status: done
 updated: 2026-11-13
 rfc: "0216-actionmailbox-port"
 cluster: null

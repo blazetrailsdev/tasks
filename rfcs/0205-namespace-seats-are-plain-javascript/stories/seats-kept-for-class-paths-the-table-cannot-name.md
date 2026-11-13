@@ -1,6 +1,6 @@
 ---
 title: "seats-kept-for-class-paths-the-table-cannot-name"
-status: ready
+status: claimed
 updated: 2026-11-13
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-13T21:09:54Z"
+assignee: "decide-class-to-string-literal-against-generated-path-table"
 blocked-by: null
 closed-reason: null
 ---

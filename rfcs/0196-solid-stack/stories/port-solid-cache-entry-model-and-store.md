@@ -1,6 +1,6 @@
 ---
 title: "Port SolidCache::Entry and SolidCache::Store over ActiveRecord"
-status: claimed
+status: in-progress
 updated: 2026-11-13
 rfc: "0196-solid-stack"
 cluster: solid-stack
@@ -8,7 +8,7 @@ packages: ["solid-cache"]
 deps: ["solid-cache-package-skeleton"]
 deps-rfc: []
 est-loc: 650
-pr: null
+pr: trails#10074
 claim: "2026-11-13T20:29:47Z"
 assignee: "port-solid-cache-entry-model-and-store"
 blocked-by: null
