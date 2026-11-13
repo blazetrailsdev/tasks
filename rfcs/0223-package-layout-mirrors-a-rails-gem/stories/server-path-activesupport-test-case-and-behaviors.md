@@ -1,7 +1,7 @@
 ---
 title: "server-path-activesupport-test-case-and-behaviors"
-status: ready
-updated: 2026-11-09
+status: claimed
+updated: 2026-11-13
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-13T19:09:50Z"
+assignee: "server-path-activesupport-test-case-and-behaviors"
 blocked-by: null
 closed-reason: null
 ---

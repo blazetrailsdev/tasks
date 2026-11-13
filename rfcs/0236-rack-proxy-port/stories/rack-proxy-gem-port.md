@@ -1,6 +1,6 @@
 ---
 title: "Port the rack-proxy gem as @blazetrails/rack-proxy"
-status: claimed
+status: in-progress
 updated: 2026-11-13
 rfc: "0236-rack-proxy-port"
 cluster: rack-proxy
@@ -9,7 +9,7 @@ deps: [hotwire-vite-claude-md-ruling]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#10068
 claim: "2026-11-13T18:10:01Z"
 assignee: "rack-proxy-gem-port"
 blocked-by: null
