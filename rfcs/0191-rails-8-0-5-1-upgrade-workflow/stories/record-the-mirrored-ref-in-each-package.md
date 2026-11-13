@@ -48,8 +48,9 @@ The run-time half already exists as the ported `gem_version.rb` constants.
       built from two sources lists both.
 - [ ] A Preflight check fails when a `mirrors` field differs from the
       lockfile, so a `ref` bump that forgets it is red.
-- [ ] Packages with no upstream (ruby-compat, trails-tsc, tse-compiler) have
-      no field, and the check says so explicitly instead of skipping them
+- [ ] Packages no `vendor/sources.ts` source maps to (activerecord-cli,
+      trails-tsc, vitest-matchers, website; ruby-compat mirrors `ruby` and
+      tse-compiler mirrors `erubi`) have no field, and the check says so explicitly instead of skipping them
       silently.
 - [ ] The field's meaning is documented where it is generated: the ref the
       gates measure the package against. It makes no claim that a burn-down
