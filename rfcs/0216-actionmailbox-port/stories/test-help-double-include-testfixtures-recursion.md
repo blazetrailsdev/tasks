@@ -5,7 +5,8 @@ updated: 2026-11-13
 rfc: "0216-actionmailbox-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - testfixtures-subclass-then-parent-include-super-cycle
 deps-rfc: []
 est-loc: null
 priority: null
