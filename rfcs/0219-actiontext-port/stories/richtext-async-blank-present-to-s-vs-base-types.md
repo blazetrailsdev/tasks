@@ -1,7 +1,7 @@
 ---
 title: "richtext-async-blank-present-to-s-vs-base-types"
-status: draft
-updated: 2026-11-12
+status: done
+updated: 2026-11-13
 rfc: "0219-actiontext-port"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10044
 claim: null
 assignee: null
 blocked-by: null

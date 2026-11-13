@@ -1,7 +1,7 @@
 ---
 title: "Generators stop voiding sourceRoot"
-status: ready
-updated: 2026-11-12
+status: in-progress
+updated: 2026-11-13
 rfc: "0234-no-void-promises"
 cluster: discarded-calls
 packages: [trailties, actionmailbox, solid-cable, solid-queue, website]
@@ -9,9 +9,9 @@ deps: [no-floating-promises-repo-wide-ignore-void-false]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10067
+claim: "2026-11-13T18:49:49Z"
+assignee: "generators-await-source-root"
 blocked-by: null
 closed-reason: null
 ---

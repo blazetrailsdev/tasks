@@ -1,6 +1,6 @@
 ---
 title: "Port the rack-proxy gem as @blazetrails/rack-proxy"
-status: ready
+status: claimed
 updated: 2026-11-13
 rfc: "0236-rack-proxy-port"
 cluster: rack-proxy
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-13T18:10:01Z"
+assignee: "rack-proxy-gem-port"
 blocked-by: null
 closed-reason: null
 ---

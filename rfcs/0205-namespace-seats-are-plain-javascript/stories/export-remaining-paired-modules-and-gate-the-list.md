@@ -1,6 +1,6 @@
 ---
 title: "export-remaining-paired-modules-and-gate-the-list"
-status: draft
+status: closed
 updated: 2026-11-13
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: the remaining modules and the gate shipped in trails#10064 under export-modules-paired-but-unexported-from-their-file"
 ---
 
 ## Context
