@@ -51,6 +51,8 @@ trails allocates about **108 KB per request**, about 38 MB/s at 3,000 users.
 come from allocating less, and from spending less CPU, since each 10% of CPU
 removed takes about a third off the drain time.
 
+All numbers were measured on trails main `094dec8aa8`. trails#10062, which makes `rbCallSuper` cheaper and inlines `init_internals`, merged while the benchmark ran and is not reflected in them.
+
 ## Design
 
 One story per measured hot spot. Each story's shares come from a V8 sampling
