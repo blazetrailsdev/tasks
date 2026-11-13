@@ -1,6 +1,6 @@
 ---
 title: "An AR abstract class cannot be a TypeScript abstract class: statics are typed this: typeof Base"
-status: in-progress
+status: done
 updated: 2026-11-12
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

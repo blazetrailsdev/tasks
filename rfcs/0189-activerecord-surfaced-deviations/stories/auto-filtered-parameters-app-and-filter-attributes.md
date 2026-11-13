@@ -1,6 +1,6 @@
 ---
 title: "AutoFilteredParameters#apply_filter never writes klass.filter_attributes and carries two invented guards"
-status: in-progress
+status: done
 updated: 2026-11-12
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

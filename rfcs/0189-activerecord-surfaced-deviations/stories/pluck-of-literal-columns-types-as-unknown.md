@@ -1,6 +1,6 @@
 ---
 title: "activerecord: pluck of literal column names types as unknown[], not from the schema"
-status: in-progress
+status: done
 updated: 2026-11-12
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

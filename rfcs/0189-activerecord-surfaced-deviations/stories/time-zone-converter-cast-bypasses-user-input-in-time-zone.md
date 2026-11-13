@@ -1,6 +1,6 @@
 ---
 title: "TimeZoneConverter#cast splits the in_time_zone arm and drops the infinite? and rescue arms"
-status: in-progress
+status: done
 updated: 2026-11-12
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

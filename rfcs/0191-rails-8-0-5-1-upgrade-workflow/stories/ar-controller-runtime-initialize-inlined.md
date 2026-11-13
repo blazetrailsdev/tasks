@@ -1,7 +1,7 @@
 ---
 title: "ControllerRuntime#initialize is inlined into the including controller"
-status: ready
-updated: 2026-11-11
+status: in-progress
+updated: 2026-11-12
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: entry
 packages: ["activerecord", "actionpack"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#10046
+claim: "2026-11-12T23:09:53Z"
+assignee: "ar-controller-runtime-initialize-inlined"
 blocked-by: null
 closed-reason: null
 ---

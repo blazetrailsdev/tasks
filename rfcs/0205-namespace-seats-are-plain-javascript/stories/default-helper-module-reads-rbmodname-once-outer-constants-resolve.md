@@ -1,6 +1,6 @@
 ---
 title: "default-helper-module-reads-rbmodname-once-outer-constants-resolve"
-status: ready
+status: in-progress
 updated: 2026-11-12
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10047
+claim: "2026-11-12T23:30:06Z"
+assignee: "converge-module-eval-import-cycle-edges"
 blocked-by: null
 closed-reason: null
 ---

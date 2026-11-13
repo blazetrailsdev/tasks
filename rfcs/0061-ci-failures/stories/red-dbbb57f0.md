@@ -1,6 +1,6 @@
 ---
 title: "Lint (activerecord) failing on main @dbbb57f0"
-status: ready
+status: in-progress
 updated: 2026-11-12
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: trails#10048
+claim: "2026-11-12T23:54:43Z"
+assignee: "red-dbbb57f0"
 blocked-by: null
 closed-reason: null
 ---
