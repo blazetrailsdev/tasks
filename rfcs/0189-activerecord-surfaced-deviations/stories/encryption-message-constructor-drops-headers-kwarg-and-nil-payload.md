@@ -1,6 +1,6 @@
 ---
 title: "Encryption::Message turns a nil payload into an empty string"
-status: in-progress
+status: done
 updated: 2026-11-13
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

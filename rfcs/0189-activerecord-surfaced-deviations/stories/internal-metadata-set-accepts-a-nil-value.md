@@ -1,6 +1,6 @@
 ---
 title: "Migrator#recordEnvironment casts envName as string; InternalMetadata#set already accepts null"
-status: in-progress
+status: done
 updated: 2026-11-13
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

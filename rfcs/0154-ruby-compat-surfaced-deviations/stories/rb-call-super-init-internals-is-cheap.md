@@ -1,7 +1,7 @@
 ---
 title: "rbCallSuper stops being a hot cost in the init_internals chain"
-status: draft
-updated: 2026-10-31
+status: in-progress
+updated: 2026-11-13
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#10062
+claim: "2026-11-13T16:45:52Z"
+assignee: "rb-call-super-init-internals-is-cheap"
 blocked-by: null
 closed-reason: null
 ---
