@@ -5,7 +5,9 @@ updated: 2026-11-13
 rfc: "0236-rack-proxy-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - ruby-compat-net-http-surface-for-rack-proxy
+  - rack-proxy-http-streaming-response
 deps-rfc: []
 est-loc: null
 priority: null
