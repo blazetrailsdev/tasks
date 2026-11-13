@@ -1,7 +1,7 @@
 ---
 title: "Each package.json records the upstream ref it mirrors, generated from the lockfile"
-status: ready
-updated: 2026-11-10
+status: in-progress
+updated: 2026-11-13
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: tooling
 packages:
@@ -25,9 +25,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10063
+claim: "2026-11-13T17:26:25Z"
+assignee: "record-the-mirrored-ref-in-each-package"
 blocked-by: null
 closed-reason: null
 ---

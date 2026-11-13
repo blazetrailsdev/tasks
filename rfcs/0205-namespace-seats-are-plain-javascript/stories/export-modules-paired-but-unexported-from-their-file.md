@@ -1,6 +1,6 @@
 ---
 title: "export-modules-paired-but-unexported-from-their-file"
-status: ready
+status: claimed
 updated: 2026-11-13
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-13T17:29:53Z"
+assignee: "cpk-and-sharded-test-model-seats-are-typed-assignments"
 blocked-by: null
 closed-reason: null
 ---

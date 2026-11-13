@@ -1,7 +1,7 @@
 ---
 title: "Port TZInfo::DataSource and its info classes"
-status: ready
-updated: 2026-11-10
+status: claimed
+updated: 2026-11-13
 rfc: "0231-tzinfo-to-parity"
 cluster: null
 packages:
@@ -12,8 +12,8 @@ deps-rfc: []
 est-loc: 650
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-13T17:49:47Z"
+assignee: "tzinfo-data-source-base"
 blocked-by: null
 closed-reason: null
 ---

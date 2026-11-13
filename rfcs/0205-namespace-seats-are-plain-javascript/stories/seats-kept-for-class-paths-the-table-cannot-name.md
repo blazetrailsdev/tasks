@@ -1,7 +1,7 @@
 ---
 title: "seats-kept-for-class-paths-the-table-cannot-name"
 status: ready
-updated: 2026-11-05
+updated: 2026-11-13
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
