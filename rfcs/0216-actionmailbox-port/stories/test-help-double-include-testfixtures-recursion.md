@@ -1,7 +1,7 @@
 ---
 title: "test_help double-includes TestFixtures and rbCallSuper recurses"
-status: draft
-updated: 2026-11-12
+status: ready
+updated: 2026-11-13
 rfc: "0216-actionmailbox-port"
 cluster: null
 packages: []
