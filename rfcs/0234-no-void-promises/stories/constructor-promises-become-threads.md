@@ -1,6 +1,6 @@
 ---
 title: "ConnectionPool's reaper and SolidCable's listener run on ruby-compat Thread"
-status: claimed
+status: in-progress
 updated: 2026-11-13
 rfc: "0234-no-void-promises"
 cluster: constructors
@@ -9,7 +9,7 @@ deps: [constructor-creates-no-promise-lint-rule]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#10052
 claim: "2026-11-13T00:29:49Z"
 assignee: "constructor-promises-become-threads"
 blocked-by: null

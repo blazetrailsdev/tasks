@@ -1,7 +1,7 @@
 ---
 title: 'Mapping#build_conditions keeps a constraint named after a private Request method (public_method_defined? reads "defined")'
-status: ready
-updated: 2026-10-19
+status: claimed
+updated: 2026-11-13
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-13T13:49:53Z"
+assignee: "authentication-generator-e2e-request-cycle"
 blocked-by: null
 closed-reason: null
 ---

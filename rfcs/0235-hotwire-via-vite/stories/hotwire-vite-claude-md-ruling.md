@@ -1,7 +1,7 @@
 ---
 title: "Ratify the importmap/propshaft-out-of-scope, Vite-serves-JavaScript ruling in CLAUDE.md"
-status: draft
-updated: 2026-11-12
+status: in-progress
+updated: 2026-11-13
 rfc: "0235-hotwire-via-vite"
 cluster: ruling
 packages: [trailties]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10053
+claim: "2026-11-13T13:25:24Z"
+assignee: "hotwire-vite-claude-md-ruling"
 blocked-by: null
 closed-reason: null
 ---
