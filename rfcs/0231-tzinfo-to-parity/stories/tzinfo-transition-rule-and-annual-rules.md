@@ -1,6 +1,6 @@
 ---
 title: "Port TransitionRule's hierarchy and AnnualRules"
-status: ready
+status: blocked
 updated: 2026-11-14
 rfc: "0231-tzinfo-to-parity"
 cluster: null
@@ -14,9 +14,9 @@ deps-rfc: []
 est-loc: 500
 priority: 4
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-14T13:31:10Z"
+assignee: "tzinfo-transition-rule-and-annual-rules"
+blocked-by: "TransitionRule#at (transition_rule.rb) calls Timestamp.for and TimestampWithOffset.set_timezone_offset; both unported (tzinfo-timestamp-create-and-for draft, tzinfo-with-offset-classes blocked)"
 closed-reason: null
 ---
 

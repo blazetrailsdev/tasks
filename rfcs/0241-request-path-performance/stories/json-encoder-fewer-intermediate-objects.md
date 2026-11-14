@@ -1,6 +1,6 @@
 ---
 title: "JSON encoding allocates fewer intermediate objects per render"
-status: in-progress
+status: done
 updated: 2026-11-14
 rfc: "0241-request-path-performance"
 cluster: request-perf

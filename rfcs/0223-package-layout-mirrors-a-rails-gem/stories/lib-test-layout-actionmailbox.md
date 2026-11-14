@@ -1,6 +1,6 @@
 ---
 title: "Move actionmailbox from src/ to lib/ + test/"
-status: in-progress
+status: done
 updated: 2026-11-14
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null

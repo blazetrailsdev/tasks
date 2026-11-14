@@ -1,7 +1,7 @@
 ---
 title: "export-modules-paired-but-unexported-from-their-file"
-status: in-progress
-updated: 2026-11-13
+status: done
+updated: 2026-11-14
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: [scripts]

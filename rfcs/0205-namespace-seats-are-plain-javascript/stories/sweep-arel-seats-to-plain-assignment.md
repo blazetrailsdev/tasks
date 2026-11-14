@@ -1,7 +1,7 @@
 ---
 title: "Convert arel's 278 deferred namespace reads to ES imports"
 status: ready
-updated: 2026-11-05
+updated: 2026-11-14
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: [arel]

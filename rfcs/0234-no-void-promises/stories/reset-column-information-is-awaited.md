@@ -1,6 +1,6 @@
 ---
 title: "resetColumnInformation is awaited, or synchronous as in Rails"
-status: claimed
+status: in-progress
 updated: 2026-11-14
 rfc: "0234-no-void-promises"
 cluster: discarded-calls
@@ -9,7 +9,7 @@ deps: [no-floating-promises-repo-wide-ignore-void-false]
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
+pr: trails#10092
 claim: "2026-11-14T12:37:11Z"
 assignee: "no-swallowed-rejection-lint-rule"
 blocked-by: null

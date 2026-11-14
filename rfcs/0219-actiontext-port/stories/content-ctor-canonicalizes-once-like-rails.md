@@ -1,6 +1,6 @@
 ---
 title: "Converge Content#initialize to Rails' single canonicalized fragment assignment"
-status: claimed
+status: ready
 updated: 2026-11-14
 rfc: "0219-actiontext-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: "2026-11-14T12:37:55Z"
-assignee: "actiontext-content-test-remaining-arms"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

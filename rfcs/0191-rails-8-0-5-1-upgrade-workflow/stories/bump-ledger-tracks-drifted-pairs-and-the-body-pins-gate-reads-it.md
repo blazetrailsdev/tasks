@@ -1,6 +1,6 @@
 ---
 title: "The bump ledger: drifted and removed method pairs are tracked rows, and the body-pins gate reads them"
-status: claimed
+status: in-progress
 updated: 2026-11-14
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: tooling
@@ -9,7 +9,7 @@ deps: [bump-dry-run-runs-the-gates-against-a-candidate-ref]
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
+pr: trails#10088
 claim: "2026-11-14T12:51:42Z"
 assignee: "bump-ledger-tracks-drifted-pairs-and-the-body-pins-gate-reads-it"
 blocked-by: null

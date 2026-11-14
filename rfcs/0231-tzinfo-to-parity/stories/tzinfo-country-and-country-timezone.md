@@ -1,6 +1,6 @@
 ---
 title: "Port Country and CountryTimezone"
-status: ready
+status: in-progress
 updated: 2026-11-14
 rfc: "0231-tzinfo-to-parity"
 cluster: null
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: 9
-pr: null
-claim: null
-assignee: null
+pr: trails#10091
+claim: "2026-11-14T13:31:10Z"
+assignee: "tzinfo-transition-rule-and-annual-rules"
 blocked-by: null
 closed-reason: null
 ---
