@@ -1,7 +1,7 @@
 ---
 title: "Port TransitionRule's hierarchy and AnnualRules"
-status: claimed
-updated: 2026-11-12
+status: ready
+updated: 2026-11-14
 rfc: "0231-tzinfo-to-parity"
 cluster: null
 packages:
@@ -12,8 +12,8 @@ deps-rfc: []
 est-loc: 500
 priority: 4
 pr: null
-claim: "2026-11-12T23:49:50Z"
-assignee: "tzinfo-transition-rule-and-annual-rules"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

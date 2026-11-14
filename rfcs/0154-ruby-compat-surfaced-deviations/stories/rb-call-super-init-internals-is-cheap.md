@@ -1,7 +1,7 @@
 ---
 title: "rbCallSuper stops being a hot cost in the init_internals chain"
-status: in-progress
-updated: 2026-11-13
+status: done
+updated: 2026-11-14
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
