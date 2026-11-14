@@ -1,7 +1,7 @@
 ---
 title: "trailmap: derive a session's stage from the fleet envelope"
-status: draft
-updated: 2026-11-10
+status: done
+updated: 2026-11-14
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-sessions
 packages: [actionview]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#138
+claim: "2026-11-14T14:25:34Z"
+assignee: "fleet-session-stage"
 blocked-by: null
 ---
 

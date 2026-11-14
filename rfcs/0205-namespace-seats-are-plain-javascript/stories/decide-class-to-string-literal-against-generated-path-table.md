@@ -1,7 +1,7 @@
 ---
 title: "decide-class-to-string-literal-against-generated-path-table"
-status: in-progress
-updated: 2026-11-13
+status: done
+updated: 2026-11-14
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []

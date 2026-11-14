@@ -1,6 +1,6 @@
 ---
 title: "Relation#clone copies state without a property descriptor per key"
-status: ready
+status: in-progress
 updated: 2026-11-14
 rfc: "0241-request-path-performance"
 cluster: request-perf
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10094
+claim: "2026-11-14T14:02:02Z"
+assignee: "perry-runtime-property-lookup-cost"
 blocked-by: null
 closed-reason: null
 ---

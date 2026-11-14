@@ -1,7 +1,7 @@
 ---
 title: "trailmap: palette, stage marks and type tokens in application.css"
-status: draft
-updated: 2026-11-10
+status: in-progress
+updated: 2026-11-14
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-shell
 packages: [actionview]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#139
+claim: "2026-11-14T14:31:47Z"
+assignee: "fleet-palette-tokens"
 blocked-by: null
 ---
 

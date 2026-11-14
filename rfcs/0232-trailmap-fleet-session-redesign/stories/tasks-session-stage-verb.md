@@ -1,7 +1,7 @@
 ---
 title: "tasks: a `stage` verb and DB-owned field for a story's session stage"
-status: draft
-updated: 2026-11-10
+status: in-progress
+updated: 2026-11-14
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-stage-signal
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: tasks#344
+claim: "2026-11-14T14:34:26Z"
+assignee: "tasks-session-stage-verb"
 blocked-by: null
 ---
 

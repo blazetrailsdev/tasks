@@ -1,7 +1,7 @@
 ---
 title: "Create @blazetrails/vite-assets: ViteRuby, Config, Manifest and errors"
-status: draft
-updated: 2026-11-12
+status: in-progress
+updated: 2026-11-14
 rfc: "0239-vite-assets-port"
 cluster: vite-assets
 packages: [vite-assets]
@@ -9,9 +9,9 @@ deps: [hotwire-vite-claude-md-ruling]
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10095
+claim: "2026-11-14T14:15:28Z"
+assignee: "vite-assets-core-package"
 blocked-by: null
 closed-reason: null
 ---

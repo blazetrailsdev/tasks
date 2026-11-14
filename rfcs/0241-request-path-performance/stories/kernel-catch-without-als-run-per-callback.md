@@ -1,6 +1,6 @@
 ---
 title: "kernelCatch avoids an AsyncLocalStorage.run per sync callback filter"
-status: ready
+status: claimed
 updated: 2026-11-14
 rfc: "0241-request-path-performance"
 cluster: request-perf
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-14T14:01:13Z"
+assignee: "kernel-catch-without-als-run-per-callback"
 blocked-by: null
 closed-reason: null
 ---

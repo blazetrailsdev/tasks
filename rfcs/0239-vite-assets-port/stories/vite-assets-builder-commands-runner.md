@@ -1,7 +1,7 @@
 ---
 title: "Port ViteRuby::Builder, Build, Commands, Runner and CompatibilityCheck"
-status: draft
-updated: 2026-11-12
+status: ready
+updated: 2026-11-14
 rfc: "0239-vite-assets-port"
 cluster: vite-assets
 packages: [vite-assets]

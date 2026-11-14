@@ -1,7 +1,7 @@
 ---
 title: "server-path-activesupport-test-case-and-behaviors"
-status: in-progress
-updated: 2026-11-13
+status: done
+updated: 2026-11-14
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
 packages: []
