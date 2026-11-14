@@ -1,7 +1,7 @@
 ---
 title: "SolidCache::Store prepends Strategy::LocalCache; run LocalCache and serializer behaviors"
-status: draft
-updated: 2026-11-13
+status: ready
+updated: 2026-11-14
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-cache", "activesupport"]

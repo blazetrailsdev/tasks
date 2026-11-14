@@ -1,6 +1,6 @@
 ---
 title: "testfixtures-subclass-then-parent-include-super-cycle"
-status: ready
+status: in-progress
 updated: 2026-11-14
 rfc: "0216-actionmailbox-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10085
+claim: "2026-11-14T12:36:55Z"
+assignee: "testfixtures-subclass-then-parent-include-super-cycle"
 blocked-by: null
 closed-reason: null
 ---

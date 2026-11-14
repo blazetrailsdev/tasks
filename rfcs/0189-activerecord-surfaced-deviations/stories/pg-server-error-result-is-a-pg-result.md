@@ -1,6 +1,6 @@
 ---
 title: "pg-server-error-result-is-a-pg-result"
-status: in-progress
+status: done
 updated: 2026-11-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

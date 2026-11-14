@@ -1,6 +1,6 @@
 ---
 title: "Park the two normalized-attribute tests that mutate a String in place, instead of poking Attribute internals"
-status: in-progress
+status: done
 updated: 2026-11-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "unscope-create-with-is-not-a-valid-unscoping-value"
-status: in-progress
+status: done
 updated: 2026-11-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

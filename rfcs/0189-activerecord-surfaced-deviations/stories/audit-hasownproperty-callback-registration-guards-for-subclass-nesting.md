@@ -1,6 +1,6 @@
 ---
 title: "Audit hasOwnProperty-keyed callback registration guards for subclass nesting"
-status: in-progress
+status: done
 updated: 2026-11-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

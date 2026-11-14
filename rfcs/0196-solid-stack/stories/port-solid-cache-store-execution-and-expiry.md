@@ -1,7 +1,7 @@
 ---
 title: "Port SolidCache Store Execution, Expiry, Stats and Entry Expiration/Size"
-status: draft
-updated: 2026-11-13
+status: claimed
+updated: 2026-11-14
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-cache"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 600
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-14T12:38:36Z"
+assignee: "port-solid-cache-engine-config-initializer"
 blocked-by: null
 closed-reason: null
 ---

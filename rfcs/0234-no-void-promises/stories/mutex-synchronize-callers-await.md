@@ -1,6 +1,6 @@
 ---
 title: "Action Cable's Redis adapter awaits Mutex#synchronize"
-status: in-progress
+status: done
 updated: 2026-11-14
 rfc: "0234-no-void-promises"
 cluster: discarded-calls

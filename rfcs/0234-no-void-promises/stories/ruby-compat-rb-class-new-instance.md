@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat rbClassNewInstance builds an instance through a protected constructor"
-status: ready
-updated: 2026-11-12
+status: claimed
+updated: 2026-11-14
 rfc: "0234-no-void-promises"
 cluster: gate
 packages: [ruby-compat]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-14T12:37:11Z"
+assignee: "no-swallowed-rejection-lint-rule"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "plain_text_conversion_test: assert through Content and unskip the attachment test"
-status: ready
-updated: 2026-11-10
+status: claimed
+updated: 2026-11-14
 rfc: "0219-actiontext-port"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-14T12:37:55Z"
+assignee: "actiontext-content-test-remaining-arms"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "solid-queue-recurring-schedule-v1-7-2"
-status: draft
-updated: 2026-11-13
+status: ready
+updated: 2026-11-14
 rfc: "0196-solid-stack"
 cluster: null
 packages: []

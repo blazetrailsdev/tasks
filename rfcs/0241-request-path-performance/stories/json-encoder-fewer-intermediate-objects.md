@@ -1,6 +1,6 @@
 ---
 title: "JSON encoding allocates fewer intermediate objects per render"
-status: ready
+status: in-progress
 updated: 2026-11-14
 rfc: "0241-request-path-performance"
 cluster: request-perf
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10087
+claim: "2026-11-14T12:39:46Z"
+assignee: "json-encoder-fewer-intermediate-objects"
 blocked-by: null
 closed-reason: null
 ---

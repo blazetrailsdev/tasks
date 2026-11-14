@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat-net-http-surface-for-rack-proxy"
-status: ready
+status: in-progress
 updated: 2026-11-14
 rfc: "0236-rack-proxy-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10086
+claim: "2026-11-14T12:39:34Z"
+assignee: "ruby-compat-net-http-surface-for-rack-proxy"
 blocked-by: null
 closed-reason: null
 ---

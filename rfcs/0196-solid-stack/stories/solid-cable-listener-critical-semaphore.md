@@ -1,6 +1,6 @@
 ---
 title: "SolidCable Listener stops through a @critical semaphore and Thread#raise(Stop), as Rails does"
-status: draft
+status: ready
 updated: 2026-11-14
 rfc: "0196-solid-stack"
 cluster: null

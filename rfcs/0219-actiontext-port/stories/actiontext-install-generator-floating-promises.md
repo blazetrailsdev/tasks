@@ -1,6 +1,6 @@
 ---
 title: "Clear actiontext's three no-floating-promises findings in the install generators"
-status: ready
+status: done
 updated: 2026-11-14
 rfc: "0219-actiontext-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10067
+claim: "2026-11-14T12:37:55Z"
+assignee: "actiontext-content-test-remaining-arms"
 blocked-by: null
 closed-reason: null
 ---
