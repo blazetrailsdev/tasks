@@ -41,8 +41,11 @@ cannot conflict.
 - **`stage` is DB-only** (RFC 0232): the stage an agent reports for its
   story, `drafting` or `self`, set with `tasks stage <id> <drafting|self>`.
   It covers the one transition trailmap's dashboard cannot derive from the
-  PR, Drafting to Self review. `tasks in-progress` and `tasks done` clear it.
-  It is never exported to markdown, and `tasks show` reads it from the row.
+  PR, Drafting to Self review. It is the claiming agent's report, so every
+  status change except `blocked` and `claimed` clears it: `release` and a
+  move to `draft`/`ready` (the claim goes), `in-progress` and `done` (the
+  PR's facts take over), and `close`. The verb accepts a story in any
+  status. It is never exported to markdown, and `tasks show` reads it from the row.
 - **An RFC README is markdown-owned except `priority`.** Its `status:` and the
   rest of its frontmatter move by PR, but its `priority:` (inherited by every
   story without one of its own) is DB-owned like a story's: set it with

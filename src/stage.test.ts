@@ -6,7 +6,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { migrate } from "./migrator.js";
 import { Event, Rfc, Story } from "./models/index.js";
-import { REPORTED_STAGES, markTracking, setStage, statusSet } from "./verbs.js";
+import { REPORTED_STAGES, close, markTracking, release, setStage, statusSet } from "./verbs.js";
 import { DB_OWNED, ingestChunkForTest, type IngestResult } from "./ingest.js";
 
 const stageOf = async (id: string) => (await Story.findBy({ id }))!.stage;
@@ -52,7 +52,27 @@ describe("tasks stage", () => {
     expect(await stageOf("s")).toBeNull();
   });
 
-  it("survives a status change that is not in-progress or done", async () => {
+  it("is cleared by release, so a reclaiming agent starts with none", async () => {
+    await setStage("s", "self");
+    await release(["s"]);
+    expect(await stageOf("s")).toBeNull();
+  });
+
+  it("is cleared by a status change to draft or ready", async () => {
+    for (const status of ["draft", "ready"] as const) {
+      await setStage("s", "self");
+      await statusSet(["s"], status);
+      expect(await stageOf("s")).toBeNull();
+    }
+  });
+
+  it("is cleared by close", async () => {
+    await setStage("s", "self");
+    await close("s", "superseded");
+    expect(await stageOf("s")).toBeNull();
+  });
+
+  it("survives blocked, which keeps the claim", async () => {
     await setStage("s", "self");
     await statusSet(["s"], "blocked");
     expect(await stageOf("s")).toBe("self");

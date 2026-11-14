@@ -5,7 +5,7 @@ updated: 2026-11-10
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-stage-signal
 packages: [actionview]
-deps: [fleet-session-stage, fleet-session-bundle-stories, tasks-session-stage-verb]
+deps: [fleet-session-stage, fleet-session-bundle-stories, trailmap-stories-stage-migration]
 deps-rfc: []
 est-loc: 150
 priority: null
