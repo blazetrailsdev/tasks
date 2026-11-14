@@ -1,10 +1,10 @@
 ---
-title: "kernelCatch and Monitor#synchronize avoid an AsyncLocalStorage.run per call"
+title: "kernelCatch avoids an AsyncLocalStorage.run per sync callback filter"
 status: ready
 updated: 2026-11-14
 rfc: "0241-request-path-performance"
 cluster: request-perf
-packages: [ruby-compat]
+packages: [ruby-compat, activesupport]
 deps: []
 deps-rfc: []
 est-loc: 150
@@ -29,12 +29,11 @@ allocated bytes in `Map`, and 1.8% of the 4.5% under `next`, from
 
 ## Acceptance criteria
 
-- The callback filter chain and monitor entry run without one
-  `AsyncLocalStorage.run` per call when no `throw` can target the tag, for
-  example by tracking the tag on a cheap stack and entering ALS only across an
-  `await`. Ruby semantics stay the same: a matching `throw` unwinds to the
-  innermost `catch`, including across an async block.
-- The `kernel-catch` and `monitor` tests stay green, and a new test covers a
-  `throw` from inside an awaited callback.
-- `Map` allocations under `kernelCatch` and `monSynchronize` fall below 0.5% of
-  bytes under the twelve-dollar load.
+- The synchronous callback filter chain runs without one
+  `AsyncLocalStorage.run` per filter. Ruby semantics stay the same: a matching
+  `throw` unwinds to the innermost `catch`, including across an async block.
+- The `kernel-catch` tests stay green, and a new test covers a `throw` from
+  inside an awaited callback.
+
+Split: monitor entry is `mon-synchronize-without-als-run-for-sync-blocks`, and
+the load measurement is `measure-kernel-catch-map-bytes-after-sync-catch`.
