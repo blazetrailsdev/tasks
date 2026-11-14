@@ -35,6 +35,7 @@ import {
   recordSpawn,
   release,
   setPriority,
+  setStage,
   setRfcPriority,
   statusSet,
 } from "./verbs.js";
@@ -44,6 +45,7 @@ import { rfcStatusSet } from "./rfc-status.js";
 import { setDeps } from "./set-deps.js";
 import { normalizePrRef, PR_REF_USAGE } from "./pr-ref.js";
 import type { StoryStatus } from "./models/index.js";
+import { Story } from "./models/index.js";
 
 const USAGE = `tasks — RFC/story tracking
 
@@ -71,6 +73,7 @@ Mutate:
   status-set <id...> <status> [--from STATUS]   (the last positional is the status;
                                    --from refuses the batch unless every id is in STATUS)
   priority <id> <n|clear>
+  stage <id> <drafting|self>        the stage the agent reports (in-progress/done clear it)
   rfc-priority <rfc> <n|clear>
   rehome <id...> --to <rfc> [--reason R] [--no-commit]
   rfc-status <rfc> <draft|active|postponed|closed> [--reason R] [--no-commit]
@@ -257,7 +260,8 @@ async function main(): Promise<number> {
         console.error(`error: story "${pos[0]}" not found`);
         return 1;
       }
-      console.log(JSON.stringify(s, null, 2));
+      const row = await Story.findBy({ id: s.id });
+      console.log(JSON.stringify({ ...s, stage: row?.stage ?? null }, null, 2));
       return 0;
     }
 
@@ -446,6 +450,11 @@ async function main(): Promise<number> {
         // presence — not `=== true` — is what asks for no commit.
         { commit: flags["no-commit"] === undefined },
       );
+      break;
+    }
+    case "stage": {
+      if (pos.length < 2) return usage();
+      await setStage(pos[0], pos[1]);
       break;
     }
     case "priority": {
