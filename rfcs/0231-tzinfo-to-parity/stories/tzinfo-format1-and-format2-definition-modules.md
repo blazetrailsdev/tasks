@@ -22,11 +22,9 @@ closed-reason: null
 (`packages/tzinfo/lib/format2/{country,country-index,timezone,timezone-index}-definer.ts`),
 `StringDeduper` and `CountryTimezone`. Still unported:
 
-- `vendor/tzinfo/v2.0.6/lib/tzinfo/format2/country_index_definition.rb`,
-  `timezone_definition.rb`, `timezone_index_definition.rb` — modules whose
-  `append_features` extends `ClassMethods` onto the includer and seeds ivars
-  (`@countries = {}.freeze`, `@timezones`/`@data_timezones`/`@linked_timezones`).
-  Port with `include()` / `extend()` and the `included` hook (CLAUDE.md § "Module mixins").
+- The three Format2 `*_definition.rb` modules were ported by trails#10110
+  (`packages/tzinfo/lib/format2/*-definition.ts`); their tests
+  (`test/format2/tc_*_definition.rb`) are still unported.
 - All of `vendor/tzinfo/v2.0.6/lib/tzinfo/format1/` (country_definer.rb subclasses
   Format2::CountryDefiner with `super(nil, ...)`; timezone_definer.rb subclasses
   Format2::TimezoneDefiner, `undef_method :subsequent_rules`, `offset` calls
@@ -38,5 +36,5 @@ closed-reason: null
 
 ## Acceptance criteria
 
-- [ ] The three Format2 `*_definition.rb` modules and all five `format1/` files are ported file for file.
+- [ ] All five `format1/` files are ported file for file.
 - [ ] `vendor/tzinfo/v2.0.6/test/format1/*.rb` and `test/format2/tc_*_definition.rb` are ported by name.
