@@ -68,6 +68,7 @@ export const DB_OWNED = [
   "assignee",
   "blocked-by",
   "closed-reason",
+  "stage",
   "updated",
   // `priority` moved here from MARKDOWN_OWNED. `tasks priority` has always
   // written it to the DB, but as a markdown-owned field export never carried

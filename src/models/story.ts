@@ -45,6 +45,8 @@ export class Story extends Base {
   declare assignee: string | null;
   declare blocked_by: string | null;
   declare closed_reason: string | null;
+  /** The stage the agent reported: `drafting` or `self` (`tasks stage`). */
+  declare stage: string | null;
   declare claim_at: Temporal.Instant | Temporal.PlainDateTime | null;
   declare updated_at: Temporal.Instant | Temporal.PlainDateTime;
 

@@ -84,6 +84,7 @@ function clearedBy(status: StoryStatus): Record<string, unknown> {
   const fields: Record<string, unknown> = {};
   if (status !== "blocked") fields.blocked_by = null;
   if (status !== "closed") fields.closed_reason = null;
+  if (status === "in-progress" || status === "done") fields.stage = null;
   if (status === "ready" || status === "draft") {
     fields.assignee = null;
     fields.claim_at = null;
@@ -357,6 +358,28 @@ export async function statusSet(
       await record("status", id, { detail: { arg: status } });
       console.log(`status ${status}: ${id}`);
     }
+  });
+}
+
+export const REPORTED_STAGES = ["drafting", "self"] as const;
+export type ReportedStage = (typeof REPORTED_STAGES)[number];
+
+/**
+ * Record the stage an agent reports for its story, the one transition the
+ * dashboard cannot derive from the PR: Drafting to Self review (RFC 0232).
+ * `in-progress` and `done` clear it, since the PR's own facts take over.
+ */
+export async function setStage(id: string, stage: string): Promise<void> {
+  if (!(REPORTED_STAGES as readonly string[]).includes(stage)) {
+    console.error(`error: stage must be one of ${REPORTED_STAGES.join(", ")}`);
+    throw new VerbExit(1);
+  }
+  await Base.transaction(async () => {
+    const [s] = await findAll([id]);
+    requireFound([id], s ? [s] : []);
+    await Story.where({ id }).updateAll({ stage });
+    await record("stage", id, { detail: { arg: stage } });
+    console.log(`stage ${stage}: ${id}`);
   });
 }
 
