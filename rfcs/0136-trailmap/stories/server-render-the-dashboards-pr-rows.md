@@ -24,8 +24,9 @@ describes the shape this story finishes. That story's `deps` named
 the dashboard was built (PR #19), so the page shipped in the **phase A** shape:
 
 - PR rows are rendered in the browser, from the SSE envelope
-  (`Tracker.ServeEvents`, `webhook/dashboard.go:2383`), by `prRow` in
-  `app/assets/javascripts/fleet-format.js`.
+  (`Tracker.ServeEvents`, `webhook/dashboard.go:2383`), by `sessionCard` in
+  `app/assets/javascripts/fleet-format.js` (which replaced `prRow` and
+  `spawnRow` in trailmap#140).
 - The page paints empty and fills in on the first frame, exactly as ringo's
   does (`const es = new EventSource('/events')`, `dashboard.go:2154`).
 
@@ -39,22 +40,24 @@ story is the conversion, once the table exists.
 
 ## Shape expected
 
-The port was structured so this is a move, not a rewrite. `prRow` is already a
-pure function of one PR object with no DOM in it, sitting in `fleet-format.js`
+The port was structured so this is a move, not a rewrite. `sessionCard` is already a
+pure function of one PR or spawn object with no DOM in it, sitting in `fleet-format.js`
 beside its unit tests — the ONLY thing it needs is for the same markup to be
 produced by a `.tse` from a model instead of by JavaScript from a frame.
 
 - The row markup moves into `app/views/dashboard/` (a `_pr-row` partial or
   similar), driven by a `DashboardController#index` that reads `pr_states`.
-- The existing `fleet-format.js` tests are the specification for what that
-  partial must emit — including the branches they pin: pane-status override
-  (`limit` and `waiting` beat the workflow status), merged-beats-draft on the
-  icon, the CI rollup's position between title and labels, the fixer badge,
-  singular/plural comment counts, and the omit-rather-than-guess rules.
+- `sessionCard`'s tests in `test/assets/fleet-format.test.js` (with
+  `stepper` and `stageFigure`) are the specification for what that partial
+  must emit — including the branches they pin: the stage stepper and edge,
+  merge on Ready to merge rows only, merged-beats-draft, the failed-check
+  flag, the `limit` and `waiting` pane pills, the CI rollup after the title,
+  the fixer badge, singular/plural comment counts, and the
+  omit-rather-than-guess rules.
 - SSE keeps delivering the sections that have no table and are not moving:
   spawn-loop internals and live tmux pane state. RFC 0136's non-goals keep
   those on Go, and phase B does not move them.
-- Consider whether the page still needs a client-side `prRow` at all after
+- Consider whether the page still needs a client-side `sessionCard` at all after
   this, or whether an SSE change notification should re-fetch the rendered
   section. Say which in the PR rather than leaving both paths live — two
   renderers for one row is exactly the drift the equivalence gates exist to
