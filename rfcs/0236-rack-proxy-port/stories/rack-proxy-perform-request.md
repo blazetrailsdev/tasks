@@ -40,3 +40,8 @@ trails#<this PR> ported `Rack::Proxy`'s header helpers, constructor,
   `dynamic_backend_refused_by_default`, `disallowed_backend_returns_502`, …)
   are ported under their upstream names.
 - `pnpm parity:api --package rack-proxy` reports no missing method in `proxy.rb`.
+- The `export interface Proxy { performRequest(...) }` merge and both
+  `@typescript-eslint/no-unsafe-declaration-merging` disable directives that
+  trails#10111 added to `packages/rack-proxy/lib/proxy.ts` are deleted; the
+  ported method replaces them. `ViteAssets::DevServerProxy#performRequest`'s
+  `super.performRequest(env)` then forwards for real.
