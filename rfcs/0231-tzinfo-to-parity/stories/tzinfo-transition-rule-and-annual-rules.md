@@ -7,7 +7,9 @@ cluster: null
 packages:
   - "tzinfo"
 deps:
-  - "tzinfo-offset-transition-and-periods"
+  - tzinfo-offset-transition-and-periods
+  - tzinfo-timestamp-create-and-for
+  - tzinfo-with-offset-classes
 deps-rfc: []
 est-loc: 500
 priority: 4
