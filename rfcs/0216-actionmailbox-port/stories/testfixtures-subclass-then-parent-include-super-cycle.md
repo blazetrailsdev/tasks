@@ -1,6 +1,6 @@
 ---
 title: "testfixtures-subclass-then-parent-include-super-cycle"
-status: in-progress
+status: done
 updated: 2026-11-14
 rfc: "0216-actionmailbox-port"
 cluster: null
