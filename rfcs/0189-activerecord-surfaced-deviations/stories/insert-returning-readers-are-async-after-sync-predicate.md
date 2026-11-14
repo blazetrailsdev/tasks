@@ -1,6 +1,6 @@
 ---
 title: "activerecord: return_value_after_insert? / last_inserted_id / returning_column_values are still async"
-status: claimed
+status: in-progress
 updated: 2026-11-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 62
-pr: null
+pr: trails#10084
 claim: "2026-11-14T07:31:23Z"
 assignee: "has-many-associations-bespoke-inline-models-hide-vacuous-tests"
 blocked-by: null
