@@ -1,5 +1,5 @@
 ---
-rfc: "0000-request-path-performance"
+rfc: "0241-request-path-performance"
 title: "Request-path performance, measured against Rails on the $12 Server Challenge"
 status: active
 created: 2026-11-13
@@ -13,7 +13,7 @@ clusters:
   - request-perf
 ---
 
-# RFC — Request-path performance, measured against Rails on the $12 Server Challenge
+# RFC 0241 — Request-path performance, measured against Rails on the $12 Server Challenge
 
 ## Summary
 
