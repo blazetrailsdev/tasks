@@ -1,6 +1,6 @@
 ---
 title: "trailmap: palette, stage marks and type tokens in application.css"
-status: in-progress
+status: done
 updated: 2026-11-14
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-shell
