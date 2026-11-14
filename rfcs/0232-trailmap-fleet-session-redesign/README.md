@@ -370,7 +370,9 @@ palette opens as a full-screen sheet.
 5. In the rows: `fleet-session-question`, `fleet-ci-fixer-row`,
    `fleet-session-stall`, `fleet-session-review-loop`, `fleet-needs-you-filter`.
 6. Mobile: `fleet-mobile-layout`.
-7. Stage signal: `tasks-session-stage-verb`, `fleet-session-reported-stage`.
+7. Stage signal: `tasks-session-stage-verb`,
+   `trailmap-stories-stage-migration`, `btwhooks-stage-prompt-line`,
+   `fleet-session-reported-stage`.
 8. Live transcript: `fleet-session-transcript-live`, `draft` until open
    question 2 is decided.
 

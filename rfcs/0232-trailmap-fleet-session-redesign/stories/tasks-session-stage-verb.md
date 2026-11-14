@@ -27,18 +27,23 @@ the verbs in `src/cli.ts`.
 
 - [ ] `tasks stage <id> <drafting|self>` sets a DB-owned `stage` column, and
       `stage` is in `DB_OWNED`, so ingest never reads it from markdown.
-- [ ] `tasks show` prints it, and `tasks in-progress` and `tasks done`
-      clear it.
-- [ ] The worker prompt in btwhooks gains one line telling the agent to run
-      `tasks stage <id> self` when it starts reviewing its own diff. That PR
-      is opened in btwhooks and linked from this story's PR.
+- [ ] `tasks show` prints it.
+- [ ] Every status change except `blocked` and `claimed` clears it:
+      `release` and a move to `draft`/`ready` (the claim goes),
+      `in-progress` and `done` (the PR's facts take over), and `close`.
 
 ## Verification
 
-- `pnpm test` in the tasks repo, with a test that ingest leaves `stage`
-  untouched.
+- `pnpm test` in the tasks repo. `src/stage.test.ts` covers: ingest leaves
+  `stage` untouched; `in-progress`, `done`, `release`, `draft`/`ready` and
+  `close` each clear it; `blocked` keeps it.
 
 ## Notes
 
-`packages` is empty because this story changes the tasks CLI and the
-btwhooks prompt, not a trails package.
+`packages` is empty because this story changes the tasks CLI, not a trails
+package. The worker-prompt line is `btwhooks-stage-prompt-line`, and
+trailmap's copy of the migration is `trailmap-stories-stage-migration`.
+
+The live database is migrated by hand (`pnpm db:migrate`), not by merging.
+Hold that run until `trailmap-stories-stage-migration` deploys: trailmap's
+`/up` probe is red whenever the database head differs from its own.

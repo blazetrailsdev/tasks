@@ -73,7 +73,7 @@ Mutate:
   status-set <id...> <status> [--from STATUS]   (the last positional is the status;
                                    --from refuses the batch unless every id is in STATUS)
   priority <id> <n|clear>
-  stage <id> <drafting|self>        the stage the agent reports (in-progress/done clear it)
+  stage <id> <drafting|self>        the stage the agent reports (cleared by status changes but blocked/claimed)
   rfc-priority <rfc> <n|clear>
   rehome <id...> --to <rfc> [--reason R] [--no-commit]
   rfc-status <rfc> <draft|active|postponed|closed> [--reason R] [--no-commit]

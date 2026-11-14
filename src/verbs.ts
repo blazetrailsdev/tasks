@@ -84,7 +84,10 @@ function clearedBy(status: StoryStatus): Record<string, unknown> {
   const fields: Record<string, unknown> = {};
   if (status !== "blocked") fields.blocked_by = null;
   if (status !== "closed") fields.closed_reason = null;
-  if (status === "in-progress" || status === "done") fields.stage = null;
+  // A reported stage is the claiming agent's report: it goes with the claim
+  // (ready, draft), when the PR's facts take over (in-progress, done), and on
+  // close. Only blocked and claimed keep the same agent on the story.
+  if (status !== "blocked" && status !== "claimed") fields.stage = null;
   if (status === "ready" || status === "draft") {
     fields.assignee = null;
     fields.claim_at = null;
@@ -367,7 +370,8 @@ export type ReportedStage = (typeof REPORTED_STAGES)[number];
 /**
  * Record the stage an agent reports for its story, the one transition the
  * dashboard cannot derive from the PR: Drafting to Self review (RFC 0232).
- * `in-progress` and `done` clear it, since the PR's own facts take over.
+ * Every status change but `blocked` and `claimed` clears it (see clearedBy).
+ * Any story status is accepted: the verb records what the agent reports.
  */
 export async function setStage(id: string, stage: string): Promise<void> {
   if (!(REPORTED_STAGES as readonly string[]).includes(stage)) {
