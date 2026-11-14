@@ -1,7 +1,7 @@
 ---
 title: "net-http-response-read-body-block"
-status: draft
-updated: 2026-11-13
+status: ready
+updated: 2026-11-14
 rfc: "0216-actionmailbox-port"
 cluster: null
 packages: []

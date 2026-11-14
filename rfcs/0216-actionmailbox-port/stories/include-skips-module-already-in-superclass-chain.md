@@ -1,6 +1,6 @@
 ---
 title: "include-skips-module-already-in-superclass-chain"
-status: draft
+status: ready
 updated: 2026-11-14
 rfc: "0216-actionmailbox-port"
 cluster: null

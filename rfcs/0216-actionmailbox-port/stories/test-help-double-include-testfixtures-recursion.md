@@ -1,7 +1,7 @@
 ---
 title: "test_help double-includes TestFixtures and rbCallSuper recurses"
-status: ready
-updated: 2026-11-13
+status: done
+updated: 2026-11-14
 rfc: "0216-actionmailbox-port"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10085
+claim: "2026-11-14T19:01:08Z"
+assignee: "test-help-double-include-testfixtures-recursion"
 blocked-by: null
 closed-reason: null
 ---
