@@ -1,6 +1,6 @@
 ---
 title: "rack-proxy-http-streaming-response"
-status: ready
+status: in-progress
 updated: 2026-11-14
 rfc: "0236-rack-proxy-port"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10103
+claim: "2026-11-14T20:19:05Z"
+assignee: "rack-proxy-http-streaming-response"
 blocked-by: null
 closed-reason: null
 ---

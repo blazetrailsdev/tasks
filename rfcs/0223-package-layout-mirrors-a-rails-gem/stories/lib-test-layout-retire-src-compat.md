@@ -1,7 +1,7 @@
 ---
 title: "Remove the src/ arms from layout tooling and add a no-src guard"
-status: blocked
-updated: 2026-11-13
+status: claimed
+updated: 2026-11-14
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: layout-tooling
 packages: [scripts]
@@ -58,9 +58,9 @@ deps-rfc: []
 est-loc: 100
 priority: null
 pr: null
-claim: "2026-11-13T00:49:50Z"
-assignee: "lib-test-layout-retire-src-compat"
-blocked-by: "waits on lib-test-layout-actionmailbox: packages/actionmailbox still lives under src/ (94 files), so the src arm is not dead yet"
+claim: "2026-11-14T20:31:22Z"
+assignee: "activestorage-fixture-set-lazy-off-server-path"
+blocked-by: null
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "Action Cable Redis when_connected blocks await the client call"
-status: in-progress
+status: done
 updated: 2026-11-14
 rfc: "0234-no-void-promises"
 cluster: null

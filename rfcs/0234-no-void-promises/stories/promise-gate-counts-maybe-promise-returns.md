@@ -1,6 +1,6 @@
 ---
 title: "The promise gate counts a dropped maybe-promise (PromiseLike<T> | T) return"
-status: in-progress
+status: done
 updated: 2026-11-14
 rfc: "0234-no-void-promises"
 cluster: null

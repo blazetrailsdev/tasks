@@ -1,6 +1,6 @@
 ---
 title: "include-skips-module-already-in-superclass-chain"
-status: ready
+status: claimed
 updated: 2026-11-14
 rfc: "0216-actionmailbox-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-14T20:31:37Z"
+assignee: "include-skips-module-already-in-superclass-chain"
 blocked-by: null
 closed-reason: null
 ---

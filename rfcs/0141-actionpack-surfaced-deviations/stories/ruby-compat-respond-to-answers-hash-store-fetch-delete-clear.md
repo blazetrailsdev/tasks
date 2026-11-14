@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat-respond-to-answers-hash-store-fetch-delete-clear"
-status: ready
-updated: 2026-10-22
+status: claimed
+updated: 2026-11-14
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-14T20:29:53Z"
+assignee: "authentication-generator-e2e-request-cycle"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Net::HTTPResponse#read_body streams through Net::ReadAdapter"
-status: draft
+status: in-progress
 updated: 2026-11-14
 rfc: "0236-rack-proxy-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10103
+claim: "2026-11-14T20:58:41Z"
+assignee: "net-http-read-body-streams-through-read-adapter"
 blocked-by: null
 closed-reason: null
 ---

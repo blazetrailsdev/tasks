@@ -1,7 +1,7 @@
 ---
 title: "integration-test-app-and-parsed-body-are-typed-unknown"
 status: ready
-updated: 2026-11-13
+updated: 2026-11-14
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

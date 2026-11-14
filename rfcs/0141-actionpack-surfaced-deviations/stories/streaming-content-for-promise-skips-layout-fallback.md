@@ -1,7 +1,7 @@
 ---
 title: "streaming-content-for-promise-skips-layout-fallback"
 status: ready
-updated: 2026-10-19
+updated: 2026-11-14
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

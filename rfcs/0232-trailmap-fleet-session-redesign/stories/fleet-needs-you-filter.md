@@ -1,7 +1,7 @@
 ---
 title: "trailmap: All and Needs you filter chips on the session list"
-status: draft
-updated: 2026-11-11
+status: closed
+updated: 2026-11-14
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-sessions
 packages: [actionview]
@@ -13,6 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
+closed-reason: "don't want"
 ---
 
 ## Context

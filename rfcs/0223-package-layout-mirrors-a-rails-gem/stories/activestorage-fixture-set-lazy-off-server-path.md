@@ -1,7 +1,7 @@
 ---
 title: "activestorage-fixture-set-lazy-off-server-path"
-status: draft
-updated: 2026-11-13
+status: claimed
+updated: 2026-11-14
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-14T20:31:22Z"
+assignee: "activestorage-fixture-set-lazy-off-server-path"
 blocked-by: null
 closed-reason: null
 ---

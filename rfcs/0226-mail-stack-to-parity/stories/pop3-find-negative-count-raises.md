@@ -1,7 +1,7 @@
 ---
 title: "POP3#find raises ArgumentError for a negative :count like Array#first"
-status: ready
-updated: 2026-11-11
+status: claimed
+updated: 2026-11-14
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-14T20:49:50Z"
+assignee: "mail-multibyte-chars-method-missing-in-prototype-chain"
 blocked-by: null
 closed-reason: null
 ---

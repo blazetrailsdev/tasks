@@ -1,6 +1,6 @@
 ---
 title: "Un-skip form_helper_test's :value test once Message has has_rich_text"
-status: ready
+status: in-progress
 updated: 2026-11-14
 rfc: "0219-actiontext-port"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10099
+claim: "2026-11-14T20:01:11Z"
+assignee: "actiontext-form-helper-value-test-unskip"
 blocked-by: null
 closed-reason: null
 ---

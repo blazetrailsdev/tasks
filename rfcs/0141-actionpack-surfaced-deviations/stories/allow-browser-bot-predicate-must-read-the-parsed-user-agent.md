@@ -1,7 +1,7 @@
 ---
 title: "AllowBrowser#bot? must read parsed_user_agent, not a bespoke user-agent regex"
-status: ready
-updated: 2026-09-02
+status: claimed
+updated: 2026-11-14
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 100
 priority: 31
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-14T20:29:53Z"
+assignee: "authentication-generator-e2e-request-cycle"
 blocked-by: null
 closed-reason: null
 ---
