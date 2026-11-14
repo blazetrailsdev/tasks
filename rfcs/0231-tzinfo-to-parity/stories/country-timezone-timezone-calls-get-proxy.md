@@ -5,7 +5,8 @@ updated: 2026-11-14
 rfc: "0231-tzinfo-to-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - tzinfo-timezone-subclasses
 deps-rfc: []
 est-loc: 15
 priority: null
