@@ -5,7 +5,7 @@ updated: 2026-11-14
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-stage-signal
 packages: []
-deps: [tasks-session-stage-verb]
+deps: [tasks-session-stage-verb, trailmap-stories-stage-migration]
 deps-rfc: []
 est-loc: 5
 priority: null
@@ -27,8 +27,10 @@ through dokku only), so there is no repository to open that PR against.
 - [ ] The worker prompt in btwhooks (`webhook/spawnloop.go`) gains one line
       telling the agent to run `pnpm tasks stage <id> self` when it starts
       reviewing its own diff.
-- [ ] It is deployed after `tasks-session-stage-verb` is merged and its
-      migration has run on the live database.
+- [ ] It is deployed only after `trailmap-stories-stage-migration` is done,
+      since that story is when the live `pnpm db:migrate` adds the `stage`
+      column. Shipped earlier, agents run `tasks stage` against a database
+      without the column and the verb fails.
 
 ## Verification
 

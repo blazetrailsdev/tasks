@@ -27,13 +27,16 @@ the verbs in `src/cli.ts`.
 
 - [ ] `tasks stage <id> <drafting|self>` sets a DB-owned `stage` column, and
       `stage` is in `DB_OWNED`, so ingest never reads it from markdown.
-- [ ] `tasks show` prints it, and `tasks in-progress` and `tasks done`
-      clear it.
+- [ ] `tasks show` prints it.
+- [ ] Every status change except `blocked` and `claimed` clears it:
+      `release` and a move to `draft`/`ready` (the claim goes),
+      `in-progress` and `done` (the PR's facts take over), and `close`.
 
 ## Verification
 
-- `pnpm test` in the tasks repo, with a test that ingest leaves `stage`
-  untouched.
+- `pnpm test` in the tasks repo. `src/stage.test.ts` covers: ingest leaves
+  `stage` untouched; `in-progress`, `done`, `release`, `draft`/`ready` and
+  `close` each clear it; `blocked` keeps it.
 
 ## Notes
 

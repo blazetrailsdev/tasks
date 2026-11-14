@@ -30,8 +30,17 @@ for `20261030000009_add_body_to_documents` (tasks#304, trailmap#99).
 
 - [ ] trailmap's `db/migrate` carries `20261114000010_add_stage_to_stories.ts`,
       identical to the tasks repo's, and `db/schema.ts` gains the column.
-- [ ] The trailmap deploy and the live `pnpm db:migrate` in the tasks repo
-      happen together, and `/up` is green afterwards.
+- [ ] The PR is opened in trailmap and recorded on this story as
+      `pr: trailmap#N` (`tasks in-progress`/`tasks done --pr trailmap#N`), so
+      it closes the normal way.
+- [ ] Lockstep order: run the live `pnpm db:migrate` in the tasks repo
+      first, then deploy trailmap immediately. The column is additive, so
+      the running trailmap reads `stories` unharmed while the database is
+      ahead; the only red is `/up` reporting "ahead of this release" for the
+      length of the deploy, which is acceptable. The reverse order is not:
+      trailmap's deploy does not migrate `tasks.db` (`databaseTasks: false`),
+      so a new trailmap would serve against a database missing a column its
+      schema lists. `/up` is green once the deploy finishes.
 
 ## Verification
 
