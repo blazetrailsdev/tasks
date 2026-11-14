@@ -1,6 +1,6 @@
 ---
 title: "Net::HTTP#write_timeout= reaches the open socket"
-status: draft
+status: in-progress
 updated: 2026-11-14
 rfc: "0236-rack-proxy-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10107
+claim: "2026-11-14T21:24:01Z"
+assignee: "net-http-content-length-to-i-underscores"
 blocked-by: null
 closed-reason: null
 ---

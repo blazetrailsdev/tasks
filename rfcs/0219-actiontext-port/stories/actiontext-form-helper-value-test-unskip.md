@@ -1,6 +1,6 @@
 ---
 title: "Un-skip form_helper_test's :value test once Message has has_rich_text"
-status: in-progress
+status: done
 updated: 2026-11-14
 rfc: "0219-actiontext-port"
 cluster: null

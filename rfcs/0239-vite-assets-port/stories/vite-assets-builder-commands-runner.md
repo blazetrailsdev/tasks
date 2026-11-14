@@ -1,6 +1,6 @@
 ---
 title: "Port ViteRuby::Builder, Build, Commands, Runner and CompatibilityCheck"
-status: ready
+status: in-progress
 updated: 2026-11-14
 rfc: "0239-vite-assets-port"
 cluster: vite-assets
@@ -9,9 +9,9 @@ deps: [vite-assets-core-package]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10108
+claim: "2026-11-14T21:18:53Z"
+assignee: "vite-assets-builder-commands-runner"
 blocked-by: null
 closed-reason: null
 ---

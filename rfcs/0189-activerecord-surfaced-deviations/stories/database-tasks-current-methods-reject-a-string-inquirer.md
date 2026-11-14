@@ -1,7 +1,7 @@
 ---
 title: "activerecord: DatabaseTasks' *_current methods reject a StringInquirer environment"
-status: ready
-updated: 2026-10-18
+status: done
+updated: 2026-11-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -12,9 +12,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 49
-pr: null
-claim: null
-assignee: null
+pr: trails#10104
+claim: "2026-11-14T21:10:06Z"
+assignee: "database-tasks-current-methods-reject-a-string-inquirer"
 blocked-by: null
 closed-reason: null
 ---

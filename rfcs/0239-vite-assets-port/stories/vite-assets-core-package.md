@@ -1,6 +1,6 @@
 ---
 title: "Create @blazetrails/vite-assets: ViteRuby, Config, Manifest and errors"
-status: in-progress
+status: done
 updated: 2026-11-14
 rfc: "0239-vite-assets-port"
 cluster: vite-assets

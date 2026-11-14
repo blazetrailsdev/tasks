@@ -1,6 +1,6 @@
 ---
 title: "Port network_spec.rb and multipart_report_spec.rb"
-status: claimed
+status: in-progress
 updated: 2026-11-14
 rfc: "0226-mail-stack-to-parity"
 cluster: null
@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 550
 priority: null
-pr: null
+pr: trails#10105
 claim: "2026-11-14T20:49:50Z"
 assignee: "mail-multibyte-chars-method-missing-in-prototype-chain"
 blocked-by: null

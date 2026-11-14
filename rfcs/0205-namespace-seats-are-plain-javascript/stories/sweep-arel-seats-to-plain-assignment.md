@@ -1,6 +1,6 @@
 ---
 title: "Convert arel's 278 deferred namespace reads to ES imports"
-status: ready
+status: claimed
 updated: 2026-11-14
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -12,8 +12,8 @@ deps-rfc: []
 est-loc: 520
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-14T21:29:45Z"
+assignee: "cpk-and-sharded-test-model-seats-are-typed-assignments"
 blocked-by: null
 closed-reason: null
 ---
