@@ -1,7 +1,7 @@
 ---
 title: "trailmap: render each PR or spawn as a session row with a stage stepper"
-status: draft
-updated: 2026-11-10
+status: done
+updated: 2026-11-14
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-sessions
 packages: [actionview]
@@ -9,7 +9,7 @@ deps: [fleet-palette-tokens, fleet-session-stage]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trailmap#140
 claim: null
 assignee: null
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Port ViteRuby::DevServerProxy onto @blazetrails/rack-proxy"
-status: ready
+status: in-progress
 updated: 2026-11-14
 rfc: "0239-vite-assets-port"
 cluster: vite-assets
@@ -9,9 +9,9 @@ deps: [rack-proxy-gem-port, vite-assets-core-package]
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10111
+claim: "2026-11-14T22:29:45Z"
+assignee: "vite-assets-dev-server-proxy"
 blocked-by: null
 closed-reason: null
 ---

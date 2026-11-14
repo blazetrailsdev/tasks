@@ -1,6 +1,6 @@
 ---
 title: "uri-rfc2396-parser-make-regexp-unported"
-status: claimed
+status: done
 updated: 2026-11-14
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10102
 claim: "2026-11-14T20:29:53Z"
 assignee: "authentication-generator-e2e-request-cycle"
 blocked-by: null

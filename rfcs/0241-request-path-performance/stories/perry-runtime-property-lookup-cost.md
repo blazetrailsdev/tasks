@@ -1,6 +1,6 @@
 ---
 title: "Perry build: measure and report the runtime's property-lookup cost on the twelve-dollar server"
-status: ready
+status: claimed
 updated: 2026-11-14
 rfc: "0241-request-path-performance"
 cluster: request-perf
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 50
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-14T22:49:40Z"
+assignee: "perry-runtime-property-lookup-cost"
 blocked-by: null
 closed-reason: null
 ---

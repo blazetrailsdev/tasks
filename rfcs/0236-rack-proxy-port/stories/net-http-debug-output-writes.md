@@ -1,6 +1,6 @@
 ---
 title: "net-http-debug-output-writes"
-status: in-progress
+status: done
 updated: 2026-11-14
 rfc: "0236-rack-proxy-port"
 cluster: null

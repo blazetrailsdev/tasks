@@ -1,7 +1,7 @@
 ---
 title: "Port RubyDataSource over a generated tzinfo-data definition set"
-status: ready
-updated: 2026-11-10
+status: in-progress
+updated: 2026-11-14
 rfc: "0231-tzinfo-to-parity"
 cluster: null
 packages:
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 600
 priority: 7
-pr: null
-claim: null
-assignee: null
+pr: trails#10110
+claim: "2026-11-14T22:09:42Z"
+assignee: "tzinfo-ruby-data-source"
 blocked-by: null
 closed-reason: null
 ---

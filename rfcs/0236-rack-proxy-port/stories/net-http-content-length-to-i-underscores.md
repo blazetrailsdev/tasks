@@ -1,6 +1,6 @@
 ---
 title: "content_length= reads a String like Ruby's to_i"
-status: in-progress
+status: done
 updated: 2026-11-14
 rfc: "0236-rack-proxy-port"
 cluster: null

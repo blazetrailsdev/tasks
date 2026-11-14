@@ -1,6 +1,6 @@
 ---
 title: "solid_queue:install's bin/jobs mirrors the gem's binstub (no app/jobs glob, ARGV via rbArgv)"
-status: ready
+status: in-progress
 updated: 2026-11-14
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10112
+claim: "2026-11-14T22:31:29Z"
+assignee: "port-solid-cache-record-configuration-and-entry"
 blocked-by: null
 closed-reason: null
 ---
