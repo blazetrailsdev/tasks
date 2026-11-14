@@ -19,10 +19,10 @@ Frontmatter fields are partitioned into two sets with **exactly one authority
 each**, and the sets are disjoint — so this is not bidirectional sync and
 cannot conflict.
 
-| Owner        | Fields                                                                                    | Written by               |
-| ------------ | ----------------------------------------------------------------------------------------- | ------------------------ |
-| **Markdown** | `title`, `rfc`, `cluster`, `deps`, `deps-rfc`, `est-loc`, `packages`, body prose          | humans/agents via PR     |
-| **DB**       | `status`, `pr`, `claim`, `assignee`, `blocked-by`, `closed-reason`, `updated`, `priority` | the CLI's mutation verbs |
+| Owner        | Fields                                                                                             | Written by               |
+| ------------ | -------------------------------------------------------------------------------------------------- | ------------------------ |
+| **Markdown** | `title`, `rfc`, `cluster`, `deps`, `deps-rfc`, `est-loc`, `packages`, body prose                   | humans/agents via PR     |
+| **DB**       | `status`, `pr`, `claim`, `assignee`, `blocked-by`, `closed-reason`, `updated`, `priority`, `stage` | the CLI's mutation verbs |
 
 - **`est-loc` is capped** at `MAX_EST_LOC` (700, `scripts/validate-lib.mjs`),
   the per-PR ceiling workers are given. An RFC whose stories are deliberately
@@ -38,6 +38,11 @@ cannot conflict.
   priority an agent set silently temporary — export never carried it out and
   the next ingest reverted it. Editing `priority:` in a story file still does
   nothing durable.
+- **`stage` is DB-only** (RFC 0232): the stage an agent reports for its
+  story, `drafting` or `self`, set with `tasks stage <id> <drafting|self>`.
+  It covers the one transition trailmap's dashboard cannot derive from the
+  PR, Drafting to Self review. `tasks in-progress` and `tasks done` clear it.
+  It is never exported to markdown, and `tasks show` reads it from the row.
 - **An RFC README is markdown-owned except `priority`.** Its `status:` and the
   rest of its frontmatter move by PR, but its `priority:` (inherited by every
   story without one of its own) is DB-owned like a story's: set it with
