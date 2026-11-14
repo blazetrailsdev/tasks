@@ -1,7 +1,7 @@
 ---
 title: "Seat ActionMailer/ActiveJob TestHelper without explicit imports in generated test_helper and abstract_unit"
-status: ready
-updated: 2026-11-13
+status: in-progress
+updated: 2026-11-14
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10097
+claim: "2026-11-14T18:31:09Z"
+assignee: "testing-seats-load-without-explicit-test-helper-imports"
 blocked-by: null
 closed-reason: null
 ---

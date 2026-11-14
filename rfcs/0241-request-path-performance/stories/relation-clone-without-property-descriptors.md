@@ -1,6 +1,6 @@
 ---
 title: "Relation#clone copies state without a property descriptor per key"
-status: in-progress
+status: done
 updated: 2026-11-14
 rfc: "0241-request-path-performance"
 cluster: request-perf

@@ -1,7 +1,7 @@
 ---
 title: "configuration-test-framework-deprecators"
 status: blocked
-updated: 2026-10-26
+updated: 2026-11-14
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-10-26T01:18:25Z"
 assignee: "configuration-test-framework-deprecators"
-blocked-by: "waiting on ActionMailbox, ActionMailer, ActionText and ActiveStorage ports seating their deprecators; none of those packages exist yet"
+blocked-by: "waiting on ActionMailbox, ActionMailer and ActiveStorage ports seating their deprecators (ActionText's landed in trails#10090)"
 closed-reason: null
 ---
 

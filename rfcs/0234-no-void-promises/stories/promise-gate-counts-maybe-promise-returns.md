@@ -1,6 +1,6 @@
 ---
 title: "The promise gate counts a dropped maybe-promise (PromiseLike<T> | T) return"
-status: ready
+status: in-progress
 updated: 2026-11-14
 rfc: "0234-no-void-promises"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10098
+claim: "2026-11-14T18:18:10Z"
+assignee: "promise-gate-counts-maybe-promise-returns"
 blocked-by: null
 closed-reason: null
 ---

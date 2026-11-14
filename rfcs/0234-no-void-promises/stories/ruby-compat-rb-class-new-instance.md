@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat rbClassNewInstance builds an instance through a protected constructor"
-status: in-progress
+status: done
 updated: 2026-11-14
 rfc: "0234-no-void-promises"
 cluster: gate

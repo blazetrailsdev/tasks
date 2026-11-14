@@ -1,6 +1,6 @@
 ---
 title: "ActionText::Engine registers lib/tasks and the install generator's load path"
-status: in-progress
+status: done
 updated: 2026-11-14
 rfc: "0219-actiontext-port"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "blazetrails/no-swallowed-rejection bans unawaited empty rejection handlers"
-status: in-progress
+status: done
 updated: 2026-11-14
 rfc: "0234-no-void-promises"
 cluster: gate
