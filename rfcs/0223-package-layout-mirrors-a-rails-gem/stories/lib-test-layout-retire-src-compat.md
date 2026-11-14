@@ -8,6 +8,7 @@ packages: [scripts]
 deps:
   [
     lib-test-layout-actioncable,
+    lib-test-layout-actionmailbox,
     lib-test-layout-actionmailer,
     lib-test-layout-actionpack,
     lib-test-layout-actionview,
