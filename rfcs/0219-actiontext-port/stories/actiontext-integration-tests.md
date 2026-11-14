@@ -5,7 +5,10 @@ updated: 2026-11-07
 rfc: "0219-actiontext-port"
 cluster: at-engine
 packages: ["actiontext"]
-deps: ["actiontext-engine", "actionmailer-base-mail-and-collector"]
+deps:
+  - actiontext-engine
+  - actionmailer-base-mail-and-collector
+  - actiontext-controller-render-renderer-reaches-action
 deps-rfc: []
 est-loc: 300
 priority: null
