@@ -1,7 +1,7 @@
 ---
 title: "134 tests use bespoke inline models; some cannot exercise their named Rails behaviour"
-status: ready
-updated: 2026-11-13
+status: claimed
+updated: 2026-11-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 200
 priority: 39
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-14T07:31:23Z"
+assignee: "has-many-associations-bespoke-inline-models-hide-vacuous-tests"
 blocked-by: null
 closed-reason: null
 ---

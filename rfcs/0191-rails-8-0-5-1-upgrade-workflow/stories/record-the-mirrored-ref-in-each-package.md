@@ -1,7 +1,7 @@
 ---
 title: "Each package.json records the upstream ref it mirrors, generated from the lockfile"
-status: in-progress
-updated: 2026-11-13
+status: done
+updated: 2026-11-14
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: tooling
 packages:

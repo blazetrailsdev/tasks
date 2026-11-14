@@ -1,7 +1,7 @@
 ---
 title: "Move actionmailbox from src/ to lib/ + test/"
-status: draft
-updated: 2026-11-12
+status: in-progress
+updated: 2026-11-14
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10081
+claim: "2026-11-14T07:11:49Z"
+assignee: "lib-test-layout-actionmailbox"
 blocked-by: null
 closed-reason: null
 ---

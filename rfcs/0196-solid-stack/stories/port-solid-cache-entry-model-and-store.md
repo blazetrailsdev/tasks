@@ -1,7 +1,7 @@
 ---
 title: "Port SolidCache::Entry and SolidCache::Store over ActiveRecord"
-status: in-progress
-updated: 2026-11-13
+status: done
+updated: 2026-11-14
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-cache"]

@@ -1,7 +1,7 @@
 ---
 title: "Generators stop voiding sourceRoot"
-status: in-progress
-updated: 2026-11-13
+status: done
+updated: 2026-11-14
 rfc: "0234-no-void-promises"
 cluster: discarded-calls
 packages: [trailties, actionmailbox, solid-cable, solid-queue, website]

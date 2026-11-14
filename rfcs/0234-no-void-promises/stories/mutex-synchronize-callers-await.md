@@ -1,7 +1,7 @@
 ---
 title: "Action Cable's Redis adapter awaits Mutex#synchronize"
-status: ready
-updated: 2026-11-12
+status: in-progress
+updated: 2026-11-14
 rfc: "0234-no-void-promises"
 cluster: discarded-calls
 packages: [actioncable]
@@ -9,9 +9,9 @@ deps: [no-floating-promises-repo-wide-ignore-void-false]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10083
+claim: "2026-11-14T07:35:27Z"
+assignee: "mutex-synchronize-callers-await"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "rack-proxy-perform-request"
-status: draft
-updated: 2026-11-13
+status: ready
+updated: 2026-11-14
 rfc: "0236-rack-proxy-port"
 cluster: null
 packages: []

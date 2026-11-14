@@ -1,7 +1,7 @@
 ---
 title: "rack-session-commit-session-expiry-reads-time-now"
-status: in-progress
-updated: 2026-11-13
+status: done
+updated: 2026-11-14
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

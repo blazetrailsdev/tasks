@@ -1,7 +1,7 @@
 ---
 title: "An eager-loaded limit/offset relation used as a subquery value raises NotImplementedError instead of materializing ids"
-status: ready
-updated: 2026-10-18
+status: claimed
+updated: 2026-11-14
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 150
 priority: 47
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-14T07:31:23Z"
+assignee: "has-many-associations-bespoke-inline-models-hide-vacuous-tests"
 blocked-by: null
 closed-reason: null
 ---

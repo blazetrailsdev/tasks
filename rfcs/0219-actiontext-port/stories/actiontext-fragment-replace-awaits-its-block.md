@@ -1,7 +1,7 @@
 ---
 title: "Await the block in Fragment#replace for fragment_by_converting_trix_attachments"
-status: draft
-updated: 2026-11-10
+status: ready
+updated: 2026-11-14
 rfc: "0219-actiontext-port"
 cluster: null
 packages: []

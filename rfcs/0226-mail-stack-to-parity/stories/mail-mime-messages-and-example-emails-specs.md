@@ -1,7 +1,7 @@
 ---
 title: "Port mime_messages_spec.rb and example_emails_spec.rb"
-status: ready
-updated: 2026-11-11
+status: in-progress
+updated: 2026-11-14
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10079
+claim: "2026-11-14T07:07:10Z"
+assignee: "mail-mime-messages-and-example-emails-specs"
 blocked-by: null
 closed-reason: null
 ---

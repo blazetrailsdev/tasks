@@ -1,7 +1,7 @@
 ---
 title: "Relation#clone copies state without a property descriptor per key"
 status: ready
-updated: 2026-11-13
+updated: 2026-11-14
 rfc: "0241-request-path-performance"
 cluster: request-perf
 packages: [activerecord]

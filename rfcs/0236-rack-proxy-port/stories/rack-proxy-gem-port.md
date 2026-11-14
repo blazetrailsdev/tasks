@@ -1,7 +1,7 @@
 ---
 title: "Port the rack-proxy gem as @blazetrails/rack-proxy"
-status: in-progress
-updated: 2026-11-13
+status: done
+updated: 2026-11-14
 rfc: "0236-rack-proxy-port"
 cluster: rack-proxy
 packages: [rack-proxy]
