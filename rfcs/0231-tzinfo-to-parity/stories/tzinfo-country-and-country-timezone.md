@@ -1,7 +1,7 @@
 ---
 title: "Port Country and CountryTimezone"
 status: ready
-updated: 2026-11-10
+updated: 2026-11-14
 rfc: "0231-tzinfo-to-parity"
 cluster: null
 packages:

@@ -1,7 +1,7 @@
 ---
 title: "ConnectionPool's reaper and SolidCable's listener run on ruby-compat Thread"
-status: in-progress
-updated: 2026-11-13
+status: done
+updated: 2026-11-14
 rfc: "0234-no-void-promises"
 cluster: constructors
 packages: [activerecord, solid-cable]
