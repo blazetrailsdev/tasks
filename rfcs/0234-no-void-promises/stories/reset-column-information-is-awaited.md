@@ -32,7 +32,7 @@ synchronous.
 - [ ] Decide from the trails body which arm returns a promise. If it can be synchronous as in Rails, make it so; otherwise every call site awaits it.
 - [ ] `model-schema.ts:420` and `:597` drop no promise.
 - [ ] Zero `void <...>.resetColumnInformation()` remain in sources or tests.
-- [ ] activerecord's `floating` mark drops by the converged count, sources and tests.
+- [ ] activerecord's `floating` mark drops by the converged count, sources and tests. The `void X.resetColumnInformation()` sites were typed `PromiseLike<void> | void`, which upstream `no-floating-promises` does not count; `blazetrails/no-floating-maybe-promise` (trails `eslint/no-floating-maybe-promise.mjs`) counts them, so the `maybe-promise` mark drops too.
 
 ## Definition of done
 
