@@ -1,6 +1,6 @@
 ---
 title: "The bump ledger: drifted and removed method pairs are tracked rows, and the body-pins gate reads them"
-status: in-progress
+status: done
 updated: 2026-11-14
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: tooling
