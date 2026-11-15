@@ -2,7 +2,7 @@
 title: "trails-tsc build-views stops loading config/initializers by hand when no application is registered"
 status: draft
 updated: 2026-11-11
-rfc: "0136-trailmap"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trails-tsc", "actionview"]
 deps: []
