@@ -1,7 +1,7 @@
 ---
 title: "trailmap: the CI fixer as a marked session row"
-status: draft
-updated: 2026-11-11
+status: in-progress
+updated: 2026-11-15
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-sessions
 packages: [actionview]
@@ -9,9 +9,9 @@ deps: [fleet-session-card, fleet-session-grouping]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#141
+claim: "2026-11-15T17:11:15Z"
+assignee: "fleet-ci-fixer-row"
 blocked-by: null
 ---
 

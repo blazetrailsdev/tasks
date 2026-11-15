@@ -1,7 +1,7 @@
 ---
 title: "trailmap: expand a session card to its controls, event log and details"
-status: draft
-updated: 2026-11-10
+status: in-progress
+updated: 2026-11-15
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-session-detail
 packages: [actionview, actionpack]
@@ -9,9 +9,9 @@ deps: [fleet-session-card]
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#141
+claim: "2026-11-15T17:11:15Z"
+assignee: "fleet-session-detail"
 blocked-by: null
 ---
 

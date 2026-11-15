@@ -1,7 +1,7 @@
 ---
 title: "trailmap: mirror the `stories.stage` migration"
-status: draft
-updated: 2026-11-14
+status: in-progress
+updated: 2026-11-15
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-stage-signal
 packages: []
@@ -9,9 +9,9 @@ deps: [tasks-session-stage-verb]
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#141
+claim: "2026-11-15T17:11:15Z"
+assignee: "trailmap-stories-stage-migration"
 blocked-by: null
 ---
 

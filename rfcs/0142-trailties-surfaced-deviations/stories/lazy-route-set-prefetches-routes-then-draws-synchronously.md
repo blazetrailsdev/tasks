@@ -1,7 +1,7 @@
 ---
 title: "trailties: LazyRouteSet prefetches the routes file, then draws synchronously"
-status: draft
-updated: 2026-10-08
+status: in-progress
+updated: 2026-11-15
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties", "actionpack"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10141
+claim: "2026-11-15T17:46:17Z"
+assignee: "lazy-route-set-prefetches-routes-then-draws-synchronously"
 blocked-by: null
 closed-reason: null
 ---

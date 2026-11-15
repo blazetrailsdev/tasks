@@ -1,7 +1,7 @@
 ---
 title: "trailmap: link every story in a session's bundle"
-status: draft
-updated: 2026-11-10
+status: in-progress
+updated: 2026-11-15
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-sessions
 packages: [actionpack, activerecord]
@@ -9,9 +9,9 @@ deps: [fleet-session-card]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#141
+claim: "2026-11-15T17:11:15Z"
+assignee: "fleet-session-bundle-stories"
 blocked-by: null
 ---
 

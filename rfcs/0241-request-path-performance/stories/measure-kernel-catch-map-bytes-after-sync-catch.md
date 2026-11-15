@@ -1,6 +1,6 @@
 ---
 title: "measure-kernel-catch-map-bytes-after-sync-catch"
-status: claimed
+status: in-progress
 updated: 2026-11-15
 rfc: "0241-request-path-performance"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10138
 claim: "2026-11-15T16:54:40Z"
 assignee: "measure-kernel-catch-map-bytes-after-sync-catch"
 blocked-by: null

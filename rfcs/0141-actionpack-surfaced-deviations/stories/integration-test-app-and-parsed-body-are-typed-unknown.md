@@ -1,6 +1,6 @@
 ---
 title: "integration-test-app-and-parsed-body-are-typed-unknown"
-status: claimed
+status: ready
 updated: 2026-11-15
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-15T16:45:10Z"
-assignee: "authentication-generator-e2e-request-cycle"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

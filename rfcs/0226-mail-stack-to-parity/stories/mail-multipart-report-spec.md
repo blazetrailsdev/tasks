@@ -1,6 +1,6 @@
 ---
 title: "mail-multipart-report-spec"
-status: ready
+status: in-progress
 updated: 2026-11-15
 rfc: "0226-mail-stack-to-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#10139
+claim: "2026-11-15T17:05:37Z"
+assignee: "mail-multipart-report-spec"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "mailer-view-ivar-collides-with-attr-internal-message"
-status: draft
+status: ready
 updated: 2026-11-15
 rfc: "0219-actiontext-port"
 cluster: null

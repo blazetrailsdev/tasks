@@ -1,7 +1,7 @@
 ---
 title: "trailmap: message, spawn and broadcast actions in the palette"
-status: draft
-updated: 2026-11-10
+status: in-progress
+updated: 2026-11-15
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-search
 packages: [actionview]
@@ -9,9 +9,9 @@ deps: [fleet-palette-search, fleet-session-composer]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#141
+claim: "2026-11-15T17:11:15Z"
+assignee: "fleet-palette-actions"
 blocked-by: null
 ---
 

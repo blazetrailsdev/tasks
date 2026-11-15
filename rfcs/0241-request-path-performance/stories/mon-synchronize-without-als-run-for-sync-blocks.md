@@ -1,6 +1,6 @@
 ---
 title: "mon-synchronize-without-als-run-for-sync-blocks"
-status: claimed
+status: closed
 updated: 2026-11-15
 rfc: "0241-request-path-performance"
 cluster: null
@@ -9,11 +9,11 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10138
 claim: "2026-11-15T16:54:40Z"
 assignee: "measure-kernel-catch-map-bytes-after-sync-catch"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: under the twelve-dollar load (trails#10138 allocation-sampling profile) Map bytes under monSynchronize are 0.31%, already below the 0.5% target, and every request-path caller (withRawConnection, materializeTransactions) awaits inside its block; the pool's sync bodies take no monitor by the ratified activerecord CLAUDE.md rule, and callbacks take none, so no caller has a sync block to route."
 ---
 
 ## Context

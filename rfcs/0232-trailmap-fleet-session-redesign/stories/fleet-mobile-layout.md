@@ -1,7 +1,7 @@
 ---
 title: "trailmap: full-bleed dashboard layout below 700px"
-status: draft
-updated: 2026-11-10
+status: in-progress
+updated: 2026-11-15
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-shell
 packages: [actionview]
@@ -17,9 +17,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#141
+claim: "2026-11-15T17:11:15Z"
+assignee: "fleet-mobile-layout"
 blocked-by: null
 ---
 
