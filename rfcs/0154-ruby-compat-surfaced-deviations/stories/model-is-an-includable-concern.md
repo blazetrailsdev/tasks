@@ -2,7 +2,7 @@
 title: "model-is-an-includable-concern"
 status: draft
 updated: 2026-11-11
-rfc: "0197-plain-object-modules-replace-ruby-compat-module"
+rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
