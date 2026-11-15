@@ -1,6 +1,6 @@
 ---
 title: "Regenerate trailmap's bin/jobs from the converged solid_queue binstub template"
-status: ready
+status: in-progress
 updated: 2026-11-15
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#143
+claim: "2026-11-15T22:21:36Z"
+assignee: "solid-cache-size-tests-need-seeded-srand"
 blocked-by: null
 closed-reason: null
 ---

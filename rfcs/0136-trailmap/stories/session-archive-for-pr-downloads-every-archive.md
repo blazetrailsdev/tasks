@@ -1,6 +1,6 @@
 ---
 title: "fleet/transcript downloads every session archive to find one PR's"
-status: draft
+status: done
 updated: 2026-11-15
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#142
+claim: "2026-11-15T22:06:25Z"
+assignee: "live-session-card-shows-its-event-log"
 blocked-by: null
 closed-reason: null
 ---

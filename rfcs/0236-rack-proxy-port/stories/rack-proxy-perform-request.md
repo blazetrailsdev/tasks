@@ -1,6 +1,6 @@
 ---
 title: "rack-proxy-perform-request"
-status: ready
+status: in-progress
 updated: 2026-11-15
 rfc: "0236-rack-proxy-port"
 cluster: null
@@ -13,9 +13,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#10155
+claim: "2026-11-15T22:05:47Z"
+assignee: "rack-proxy-perform-request"
 blocked-by: null
 closed-reason: null
 ---

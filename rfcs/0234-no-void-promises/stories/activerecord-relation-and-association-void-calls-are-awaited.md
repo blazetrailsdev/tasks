@@ -1,7 +1,7 @@
 ---
 title: "ActiveRecord relations, associations, model schema and test helpers stop dropping promises"
-status: ready
-updated: 2026-11-12
+status: claimed
+updated: 2026-11-15
 rfc: "0234-no-void-promises"
 cluster: discarded-calls
 packages: [activerecord]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-15T22:06:32Z"
+assignee: "activerecord-adapter-void-calls-are-awaited"
 blocked-by: null
 closed-reason: null
 ---
