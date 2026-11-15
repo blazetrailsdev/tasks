@@ -2,7 +2,7 @@
 title: "trailmap: use csrfMetaTags, drop the csrfToken local, and type-check view shims"
 status: blocked
 updated: 2026-10-28
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps:
