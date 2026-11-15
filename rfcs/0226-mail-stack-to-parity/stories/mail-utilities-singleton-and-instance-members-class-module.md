@@ -1,7 +1,7 @@
 ---
 title: "mail-utilities-singleton-and-instance-members-class-module"
-status: ready
-updated: 2026-11-10
+status: in-progress
+updated: 2026-11-15
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10124
+claim: "2026-11-15T12:30:16Z"
+assignee: "mail-utilities-singleton-and-instance-members-class-module"
 blocked-by: null
 closed-reason: null
 ---

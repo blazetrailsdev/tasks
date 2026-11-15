@@ -1,6 +1,6 @@
 ---
 title: "Plain-assign nokogiri's remaining table-named seats (CSS, SAX, Racc)"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null

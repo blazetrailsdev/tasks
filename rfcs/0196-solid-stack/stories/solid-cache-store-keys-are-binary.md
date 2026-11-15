@@ -1,7 +1,7 @@
 ---
 title: "SolidCache Store keys are ASCII-8BIT bytes (normalize_key's .b)"
-status: ready
-updated: 2026-11-14
+status: in-progress
+updated: 2026-11-15
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-cache", "activesupport"]
@@ -9,9 +9,9 @@ deps: ["port-solid-cache-entry-model-and-store"]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10123
+claim: "2026-11-15T12:26:02Z"
+assignee: "solid-cache-store-keys-are-binary"
 blocked-by: null
 closed-reason: null
 ---

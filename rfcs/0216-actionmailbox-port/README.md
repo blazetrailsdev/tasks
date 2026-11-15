@@ -1,9 +1,9 @@
 ---
 rfc: "0216-actionmailbox-port"
 title: "Port ActionMailbox, core and the Relay ingress first"
-status: active
+status: closed
 created: 2026-11-03
-updated: 2026-11-06
+updated: 2026-11-15
 owner: "@deanmarano"
 packages:
   - actionmailbox

@@ -1,7 +1,7 @@
 ---
 title: "streaming-content-for-promise-skips-layout-fallback"
-status: ready
-updated: 2026-11-14
+status: in-progress
+updated: 2026-11-15
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10121
+claim: "2026-11-15T12:09:46Z"
+assignee: "authentication-generator-e2e-request-cycle"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "rails-api-manifest-records-app-jobs-and-concern-class-methods"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "The parameter, block, arm and extra-surface ratchets skip a ledgered pair"
-status: draft
-updated: 2026-10-13
+status: ready
+updated: 2026-11-15
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: tooling
 packages: [scripts]
