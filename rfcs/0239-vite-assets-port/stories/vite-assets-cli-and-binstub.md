@@ -1,7 +1,7 @@
 ---
 title: "Port ViteRuby::CLI and its commands, and the bin/vite binstub"
-status: ready
-updated: 2026-11-14
+status: in-progress
+updated: 2026-11-15
 rfc: "0239-vite-assets-port"
 cluster: vite-assets
 packages: [vite-assets]
@@ -9,9 +9,9 @@ deps: [vite-assets-builder-commands-runner]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10133
+claim: "2026-11-15T15:29:52Z"
+assignee: "vite-assets-cli-and-binstub"
 blocked-by: null
 closed-reason: null
 ---

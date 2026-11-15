@@ -1,6 +1,6 @@
 ---
 title: "activestorage-fixture-set-autoload-in-app-test-process"
-status: draft
+status: closed
 updated: 2026-11-15
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: fixed in trails#10122 by the initializer's awaited load"
 ---
 
 ## Context

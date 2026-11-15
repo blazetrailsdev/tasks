@@ -1,6 +1,6 @@
 ---
 title: "Port LinkedTimezone and TimezoneProxy"
-status: claimed
+status: in-progress
 updated: 2026-11-15
 rfc: "0231-tzinfo-to-parity"
 cluster: null
@@ -12,7 +12,7 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: 9
-pr: null
+pr: trails#10132
 claim: "2026-11-15T14:49:39Z"
 assignee: "tzinfo-data-definitions-generated"
 blocked-by: null

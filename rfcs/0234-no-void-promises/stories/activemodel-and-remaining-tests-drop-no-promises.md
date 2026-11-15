@@ -1,7 +1,7 @@
 ---
 title: "ActiveModel and every other package's tests drop no promises"
-status: ready
-updated: 2026-11-12
+status: claimed
+updated: 2026-11-15
 rfc: "0234-no-void-promises"
 cluster: tests
 packages:
@@ -29,8 +29,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-15T15:46:44Z"
+assignee: "activemodel-and-remaining-tests-drop-no-promises"
 blocked-by: null
 closed-reason: null
 ---

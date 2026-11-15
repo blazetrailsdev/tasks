@@ -1,6 +1,6 @@
 ---
 title: "activestorage-fixture-set-lazy-off-server-path"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null

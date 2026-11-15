@@ -1,6 +1,6 @@
 ---
 title: "Vendor tzinfo-data and generate its definition modules, so RubyDataSource is the default on every platform"
-status: claimed
+status: ready
 updated: 2026-11-15
 rfc: "0231-tzinfo-to-parity"
 cluster: null
@@ -13,8 +13,8 @@ deps-rfc: []
 est-loc: 450
 priority: 8
 pr: null
-claim: "2026-11-15T14:49:39Z"
-assignee: "tzinfo-data-definitions-generated"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "cpk-and-sharded-test-model-seats-are-typed-assignments"
-status: claimed
+status: blocked
 updated: 2026-11-15
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: "2026-11-15T14:29:45Z"
 assignee: "cpk-and-sharded-test-model-seats-are-typed-assignments"
-blocked-by: null
+blocked-by: "No non-constSet path source exists for test models: scripts/api-compare/class-paths.ts excludes test-only files from every table (testProjectFiles), registerConstant is retired (RFC 0213), and hand-written defineConstants is forbidden. Needs a class-paths story that emits a table for packages/activerecord/test/models (208 files seat via constSet today), then this converges."
 closed-reason: null
 ---
 
