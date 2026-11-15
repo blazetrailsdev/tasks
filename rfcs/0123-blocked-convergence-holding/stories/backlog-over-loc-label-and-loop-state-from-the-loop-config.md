@@ -2,7 +2,7 @@
 title: "trailmap: carry the over-LOC label and loop running/paused once the loop's configuration has a cheap home"
 status: blocked
 updated: 2026-10-15
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps:
