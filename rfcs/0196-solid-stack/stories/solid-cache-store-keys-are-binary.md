@@ -1,6 +1,6 @@
 ---
 title: "SolidCache Store keys are ASCII-8BIT bytes (normalize_key's .b)"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0196-solid-stack"
 cluster: solid-stack

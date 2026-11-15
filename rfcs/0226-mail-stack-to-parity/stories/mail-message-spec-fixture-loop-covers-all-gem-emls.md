@@ -1,7 +1,7 @@
 ---
 title: "Copy the remaining 48 gem email fixtures so message_spec's parses-fixture loop covers all 100"
-status: draft
-updated: 2026-11-13
+status: ready
+updated: 2026-11-15
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps:
   - mail-multipart-report-spec
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

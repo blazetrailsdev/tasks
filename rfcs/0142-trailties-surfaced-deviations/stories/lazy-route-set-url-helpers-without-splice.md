@@ -1,6 +1,6 @@
 ---
 title: "trailties: LazyRouteSet url helpers without a prototype splice"
-status: ready
+status: in-progress
 updated: 2026-11-15
 rfc: "0142-trailties-surfaced-deviations"
 cluster: conversion
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: 14
-pr: null
-claim: null
-assignee: null
+pr: trails#10125
+claim: "2026-11-15T13:09:40Z"
+assignee: "lazy-route-set-url-helpers-without-splice"
 blocked-by: null
 closed-reason: null
 ---

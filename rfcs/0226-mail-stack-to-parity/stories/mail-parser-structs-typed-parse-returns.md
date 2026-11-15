@@ -1,14 +1,14 @@
 ---
 title: "Type the remaining mail parser structs and parse returns"
-status: draft
-updated: 2026-11-12
+status: ready
+updated: 2026-11-15
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 4
 pr: null
 claim: null
 assignee: null

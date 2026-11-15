@@ -1,14 +1,14 @@
 ---
 title: "constant-table-walks-const-modules-repo-wide"
-status: draft
-updated: 2026-11-12
+status: ready
+updated: 2026-11-15
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null

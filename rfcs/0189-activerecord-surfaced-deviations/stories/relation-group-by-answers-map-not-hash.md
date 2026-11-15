@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Relation#groupBy answers a Map where Enumerable#group_by answers a Hash"
-status: ready
-updated: 2026-10-18
+status: in-progress
+updated: 2026-11-15
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -11,9 +11,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 53
-pr: null
-claim: null
-assignee: null
+pr: trails#10126
+claim: "2026-11-15T13:29:41Z"
+assignee: "relation-group-by-answers-map-not-hash"
 blocked-by: null
 closed-reason: null
 ---

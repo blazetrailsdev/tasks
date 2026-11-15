@@ -1,14 +1,14 @@
 ---
 title: "mail-utilities-slice-range-and-chars-forward-wrap"
-status: draft
-updated: 2026-11-14
+status: ready
+updated: 2026-11-15
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

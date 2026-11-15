@@ -1,14 +1,14 @@
 ---
 title: "Mail.register_autoload features resolve through Kernel.require"
-status: draft
-updated: 2026-11-14
+status: ready
+updated: 2026-11-15
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

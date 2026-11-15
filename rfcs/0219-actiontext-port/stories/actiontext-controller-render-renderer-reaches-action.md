@@ -1,6 +1,6 @@
 ---
 title: "actiontext-controller-render-renderer-reaches-action"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0219-actiontext-port"
 cluster: null
