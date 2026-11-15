@@ -1,6 +1,6 @@
 ---
 title: "Port ActionText::SystemTestHelper and the system tests"
-status: ready
+status: claimed
 updated: 2026-11-15
 rfc: "0219-actiontext-port"
 cluster: at-engine
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-15T20:36:38Z"
+assignee: "actiontext-system-test-helper"
 blocked-by: null
 closed-reason: null
 ---

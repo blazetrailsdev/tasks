@@ -1,6 +1,6 @@
 ---
 title: "ViteAssets#config is read synchronously once prewarmed; peekConfig retires"
-status: ready
+status: blocked
 updated: 2026-11-15
 rfc: "0239-vite-assets-port"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-15T20:51:35Z"
+assignee: "vite-assets-config-resolves-synchronously"
+blocked-by: "waiting on trails#10144 to merge: peekConfig and the public Config.configDefaults this story retires exist only on that open PR; on origin/main configDefaults is already private and DevServerProxy awaits config() in performRequest"
 closed-reason: null
 ---
 

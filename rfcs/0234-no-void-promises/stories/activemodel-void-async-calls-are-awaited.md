@@ -1,7 +1,7 @@
 ---
 title: "ActiveModel attribute assignment, JSON#from_json and validations stop dropping promises"
-status: ready
-updated: 2026-11-12
+status: in-progress
+updated: 2026-11-15
 rfc: "0234-no-void-promises"
 cluster: discarded-calls
 packages: [activemodel]
@@ -9,9 +9,9 @@ deps: [no-floating-promises-repo-wide-ignore-void-false, no-swallowed-rejection-
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10148
+claim: "2026-11-15T20:07:03Z"
+assignee: "activemodel-void-async-calls-are-awaited"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "A QUIT supervisee stops claiming work and reaps with exit status 1"
 status: ready
-updated: 2026-11-14
+updated: 2026-11-15
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-queue"]

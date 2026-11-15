@@ -1,6 +1,6 @@
 ---
 title: "Profile and cut ruby-compat method-dispatch overhead on the request path"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0241-request-path-performance"
 cluster: request-perf

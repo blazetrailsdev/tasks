@@ -1,16 +1,16 @@
 ---
 title: "lookup_store(:solid_cache_store) resolves SolidCache::Store"
-status: ready
-updated: 2026-11-08
+status: in-progress
+updated: 2026-11-15
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["activesupport", "solid-cache"]
 deps: ["port-solid-cache-entry-model-and-store"]
 deps-rfc: []
 est-loc: 150
-pr: null
-claim: null
-assignee: null
+pr: trails#10150
+claim: "2026-11-15T20:21:41Z"
+assignee: "local-cache-middleware"
 blocked-by: null
 closed-reason: null
 priority: 11

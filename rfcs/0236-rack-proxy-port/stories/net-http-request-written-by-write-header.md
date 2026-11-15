@@ -1,6 +1,6 @@
 ---
 title: "Net::HTTP writes the request through write_header so debug_output shows the wire bytes"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0236-rack-proxy-port"
 cluster: null

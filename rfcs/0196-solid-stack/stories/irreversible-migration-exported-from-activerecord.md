@@ -1,7 +1,7 @@
 ---
 title: "IrreversibleMigration is exported from activerecord"
 status: ready
-updated: 2026-11-08
+updated: 2026-11-15
 rfc: "0196-solid-stack"
 cluster: null
 packages: ["activerecord"]

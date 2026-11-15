@@ -1,6 +1,6 @@
 ---
 title: "net-http-send-request-with-body-stream"
-status: draft
+status: in-progress
 updated: 2026-11-15
 rfc: "0236-rack-proxy-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10149
+claim: "2026-11-15T20:21:08Z"
+assignee: "net-http-edit-path-and-wait-for-continue"
 blocked-by: null
 closed-reason: null
 ---

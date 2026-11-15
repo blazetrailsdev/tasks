@@ -1,6 +1,6 @@
 ---
 title: "response-carries-async-streaming-body"
-status: claimed
+status: in-progress
 updated: 2026-11-15
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10146
 claim: "2026-11-15T19:55:21Z"
 assignee: "authentication-generator-e2e-request-cycle"
 blocked-by: null
