@@ -7,6 +7,7 @@ cluster: conversion
 packages: ["trailties", "actionpack"]
 deps:
   - actionpack-route-set-helper-modules-without-live-include
+  - lazy-route-set-method-missing-resends-in-line
 deps-rfc: []
 est-loc: 200
 priority: 14
