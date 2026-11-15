@@ -2,7 +2,7 @@
 title: "Move tracker-state.json into the database as pr_states"
 status: blocked
 updated: 2026-10-27
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activerecord"]
 deps:
