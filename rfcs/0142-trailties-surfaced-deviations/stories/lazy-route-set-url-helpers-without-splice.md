@@ -2,7 +2,7 @@
 title: "trailties: LazyRouteSet url helpers without a prototype splice"
 status: blocked
 updated: 2026-10-21
-rfc: "0197-plain-object-modules-replace-ruby-compat-module"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: conversion
 packages: ["trailties", "actionpack"]
 deps:

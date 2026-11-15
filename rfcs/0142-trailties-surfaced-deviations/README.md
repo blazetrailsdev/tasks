@@ -27,6 +27,7 @@ clusters:
   # Carried in at the sunset of 0113-branch-and-guard-parity (2026-09-09).
   - "missing-arm"
   - "fidelity"
+  - "conversion"
 related-rfcs:
   - "0113-branch-and-guard-parity"
   - "0104-twitter-app-full-stack-integration"
