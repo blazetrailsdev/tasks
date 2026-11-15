@@ -2,7 +2,7 @@
 title: "actionpack Renderers and the render_to_body chain become plain modules (Renderers.add live include)"
 status: blocked
 updated: 2026-10-27
-rfc: "0197-plain-object-modules-replace-ruby-compat-module"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
