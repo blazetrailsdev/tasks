@@ -2,7 +2,7 @@
 title: "Move tasks.db out of the git common dir into trailmap's storage"
 status: blocked
 updated: 2026-10-12
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activerecord"]
 deps:
