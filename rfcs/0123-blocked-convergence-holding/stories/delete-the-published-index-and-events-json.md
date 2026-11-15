@@ -2,7 +2,7 @@
 title: "Delete index.json, events.json and publishReadModels"
 status: blocked
 updated: 2026-10-12
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["trailties"]
 deps:
