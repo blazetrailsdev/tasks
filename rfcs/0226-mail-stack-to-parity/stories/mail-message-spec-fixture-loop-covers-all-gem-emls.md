@@ -5,7 +5,8 @@ updated: 2026-11-13
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - mail-multipart-report-spec
 deps-rfc: []
 est-loc: 60
 priority: null
