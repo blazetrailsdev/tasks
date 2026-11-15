@@ -7,7 +7,8 @@ cluster: null
 packages:
   - "tzinfo"
 deps:
-  - "tzinfo-ruby-data-source"
+  - tzinfo-ruby-data-source
+  - tzinfo-format1-and-format2-definition-modules
 deps-rfc: []
 est-loc: 450
 priority: 8
