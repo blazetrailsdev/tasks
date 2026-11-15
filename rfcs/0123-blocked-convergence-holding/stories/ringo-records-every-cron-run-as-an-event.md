@@ -2,7 +2,7 @@
 title: "ringo: record every cron run as a row in events"
 status: blocked
 updated: 2026-11-01
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
