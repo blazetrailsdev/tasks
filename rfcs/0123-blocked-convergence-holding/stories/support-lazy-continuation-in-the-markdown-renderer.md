@@ -2,7 +2,7 @@
 title: "Support lazy continuation lines in the markdown renderer, once ringo's is retired"
 status: blocked
 updated: 2026-09-09
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps:
