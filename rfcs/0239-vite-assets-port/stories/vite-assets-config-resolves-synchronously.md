@@ -1,0 +1,26 @@
+---
+title: "vite-assets-config-resolves-synchronously"
+status: draft
+updated: 2026-11-15
+rfc: "0239-vite-assets-port"
+cluster: null
+packages: []
+deps: []
+deps-rfc: []
+est-loc: null
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+`ViteRuby::DevServerProxy#initialize` (`vendor/vite_ruby/v3.11.1/vite_ruby/lib/vite_ruby/dev_server_proxy.rb:10-14`) reads `config.mode`, and `ViteRuby#config` (`vite_ruby.rb:128-134`) resolves lazily and synchronously. In trails, `ViteAssets#config()` (`packages/vite-assets/lib/vite-assets.ts`) is async, because `Config.resolveConfig` reads files. So the constructor reads `ViteAssets#peekConfig()`, which is `undefined` until something has awaited `config()`. An unresolved instance therefore skips the test-mode `streaming` default.
+
+## Acceptance criteria
+
+- `ViteAssets` config resolution is made synchronous once it is prewarmed at boot. For example, the app's boot awaits `ViteAssets.config()` before the middleware stack is built, and `DevServerProxy` reads `config` directly.
+- `peekConfig` is deleted, along with its `CONVERGEABLE vite-assets-config-resolves-synchronously` receipt.
