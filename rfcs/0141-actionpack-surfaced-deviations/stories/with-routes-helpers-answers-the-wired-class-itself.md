@@ -1,6 +1,6 @@
 ---
 title: "withRoutesHelpers' Proxy gives url helpers to the wired class itself, not only its subclasses"
-status: ready
+status: claimed
 updated: 2026-11-15
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-15T16:45:10Z"
+assignee: "authentication-generator-e2e-request-cycle"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Seat ActionMailer/ActiveJob TestHelper without explicit imports in generated test_helper and abstract_unit"
-status: in-progress
-updated: 2026-11-14
+status: done
+updated: 2026-11-15
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: null
 packages: []

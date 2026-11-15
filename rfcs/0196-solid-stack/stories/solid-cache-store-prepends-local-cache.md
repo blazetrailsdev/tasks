@@ -1,7 +1,7 @@
 ---
 title: "SolidCache::Store prepends Strategy::LocalCache; run LocalCache and serializer behaviors"
-status: ready
-updated: 2026-11-14
+status: in-progress
+updated: 2026-11-15
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-cache", "activesupport"]
@@ -9,9 +9,9 @@ deps: ["port-solid-cache-entry-model-and-store"]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10134
+claim: "2026-11-15T16:05:57Z"
+assignee: "solid-cache-store-prepends-local-cache"
 blocked-by: null
 closed-reason: null
 ---

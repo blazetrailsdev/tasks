@@ -1,7 +1,7 @@
 ---
 title: "CountryTimezone#timezone calls Timezone.get_proxy"
-status: draft
-updated: 2026-11-14
+status: done
+updated: 2026-11-15
 rfc: "0231-tzinfo-to-parity"
 cluster: null
 packages: []
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: null
+pr: trails#10132
 claim: null
 assignee: null
 blocked-by: null

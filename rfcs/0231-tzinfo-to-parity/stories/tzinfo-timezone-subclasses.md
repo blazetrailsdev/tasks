@@ -1,6 +1,6 @@
 ---
 title: "Port LinkedTimezone and TimezoneProxy"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0231-tzinfo-to-parity"
 cluster: null

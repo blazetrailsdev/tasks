@@ -1,7 +1,7 @@
 ---
 title: "measure-kernel-catch-map-bytes-after-sync-catch"
-status: draft
-updated: 2026-11-14
+status: claimed
+updated: 2026-11-15
 rfc: "0241-request-path-performance"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-15T16:54:40Z"
+assignee: "measure-kernel-catch-map-bytes-after-sync-catch"
 blocked-by: null
 closed-reason: null
 ---

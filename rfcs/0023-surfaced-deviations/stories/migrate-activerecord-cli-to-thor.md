@@ -1,6 +1,6 @@
 ---
 title: "activerecord-cli's ar dispatches through Thor"
-status: draft
+status: in-progress
 updated: 2026-11-15
 rfc: "0023-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 800
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10137
+claim: "2026-11-15T16:59:24Z"
+assignee: "migrate-activerecord-cli-to-thor"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,9 +1,9 @@
 ---
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 title: "Package layout mirrors a Rails gem: lib/ and test/"
-status: active
+status: closed
 created: 2026-11-05
-updated: 2026-11-07
+updated: 2026-11-15
 owner: "@deanmarano"
 max-est-loc: 3000
 packages:

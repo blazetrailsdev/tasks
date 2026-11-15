@@ -1,7 +1,7 @@
 ---
 title: "Port the controller, job and mailer render integration tests"
-status: ready
-updated: 2026-11-14
+status: in-progress
+updated: 2026-11-15
 rfc: "0219-actiontext-port"
 cluster: at-engine
 packages: ["actiontext"]
@@ -12,9 +12,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10136
+claim: "2026-11-15T16:25:03Z"
+assignee: "actiontext-engine-helper-reads-engine-helpers"
 blocked-by: null
 closed-reason: null
 ---

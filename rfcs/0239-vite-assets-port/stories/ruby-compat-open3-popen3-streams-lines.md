@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat-open3-popen3-streams-lines"
-status: draft
-updated: 2026-11-14
+status: ready
+updated: 2026-11-15
 rfc: "0239-vite-assets-port"
 cluster: null
 packages: []

@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: "2026-11-15T15:45:13Z"
-assignee: "perry-runtime-property-lookup-cost"
+claim: "2026-11-15T16:54:40Z"
+assignee: "measure-kernel-catch-map-bytes-after-sync-catch"
 blocked-by: null
 closed-reason: null
 ---
