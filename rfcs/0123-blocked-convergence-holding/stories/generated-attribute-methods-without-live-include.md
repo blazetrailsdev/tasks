@@ -2,7 +2,7 @@
 title: "activemodel/activesupport: generated_attribute_methods without live include"
 status: blocked
 updated: 2026-10-21
-rfc: "0197-plain-object-modules-replace-ruby-compat-module"
+rfc: "0123-blocked-convergence-holding"
 cluster: conversion
 packages: ["activemodel", "activesupport"]
 deps: []
