@@ -1,7 +1,7 @@
 ---
 title: "retire-class-to-string-seat-literal"
-status: draft
-updated: 2026-11-13
+status: ready
+updated: 2026-11-15
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "relation-include-spawn-methods-calculations-import-cycle"
-status: draft
-updated: 2026-11-13
+status: in-progress
+updated: 2026-11-15
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10117
+claim: "2026-11-15T00:13:48Z"
+assignee: "activerecord-file-local-cycles-blocking-namespace-read-imports"
 blocked-by: null
 closed-reason: null
 ---

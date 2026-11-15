@@ -1,7 +1,7 @@
 ---
 title: "rack-proxy-network-test-suite"
 status: ready
-updated: 2026-11-14
+updated: 2026-11-15
 rfc: "0236-rack-proxy-port"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps:
   - rack-proxy-perform-request
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

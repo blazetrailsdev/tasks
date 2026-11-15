@@ -1,7 +1,7 @@
 ---
 title: "rack-proxy-perform-request"
-status: claimed
-updated: 2026-11-14
+status: ready
+updated: 2026-11-15
 rfc: "0236-rack-proxy-port"
 cluster: null
 packages: []
@@ -12,10 +12,10 @@ deps:
   - net-http-request-written-by-write-header
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 1
 pr: null
-claim: "2026-11-14T23:59:53Z"
-assignee: "net-http-connect-opens-tcp-before-ssl"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

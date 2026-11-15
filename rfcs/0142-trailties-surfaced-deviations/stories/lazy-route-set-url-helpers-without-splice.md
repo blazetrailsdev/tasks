@@ -1,7 +1,7 @@
 ---
 title: "trailties: LazyRouteSet url helpers without a prototype splice"
-status: blocked
-updated: 2026-10-21
+status: ready
+updated: 2026-11-15
 rfc: "0142-trailties-surfaced-deviations"
 cluster: conversion
 packages: ["trailties", "actionpack"]
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 200
 priority: 14
 pr: null
-claim: "2026-10-21T14:24:34Z"
-assignee: "activemodel-activesupport-module-super-inlined-into-includers"
-blocked-by: "route-set-generate-url-helpers-rails-module-shape is done, but the url/path helper modules it prepends method_missing_module to (route-set.ts:543-544,810) are still ruby-compat Module on a live include; waits on actionpack-route-set-helper-modules-without-live-include"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

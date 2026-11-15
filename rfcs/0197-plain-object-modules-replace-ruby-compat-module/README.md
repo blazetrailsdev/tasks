@@ -1,9 +1,9 @@
 ---
 rfc: "0197-plain-object-modules-replace-ruby-compat-module"
 title: "Ruby modules are plain objects or class modules: retire ruby-compat's Module class, inline module super"
-status: active
+status: closed
 created: 2026-10-19
-updated: 2026-10-20
+updated: 2026-11-15
 owner: "@deanmarano"
 packages:
   - "ruby-compat"

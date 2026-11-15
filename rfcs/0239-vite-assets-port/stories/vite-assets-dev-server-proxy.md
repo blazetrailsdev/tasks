@@ -1,7 +1,7 @@
 ---
 title: "Port ViteRuby::DevServerProxy onto @blazetrails/rack-proxy"
-status: in-progress
-updated: 2026-11-14
+status: done
+updated: 2026-11-15
 rfc: "0239-vite-assets-port"
 cluster: vite-assets
 packages: [vite-assets]
