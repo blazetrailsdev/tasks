@@ -2,7 +2,7 @@
 title: "Move the tasks CLI into trailmap and make it an HTTP client"
 status: blocked
 updated: 2026-10-12
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["trailties"]
 deps:
