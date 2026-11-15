@@ -1,7 +1,7 @@
 ---
 title: "Port SolidCache Store Execution, Expiry, Stats and Entry Expiration/Size"
-status: in-progress
-updated: 2026-11-14
+status: done
+updated: 2026-11-15
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-cache"]

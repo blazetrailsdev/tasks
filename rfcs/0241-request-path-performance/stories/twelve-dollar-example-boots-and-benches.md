@@ -1,7 +1,7 @@
 ---
 title: "examples/twelve-dollar-server boots under trails server and runs its build.sh"
-status: in-progress
-updated: 2026-11-14
+status: done
+updated: 2026-11-15
 rfc: "0241-request-path-performance"
 cluster: request-perf
 packages: []
