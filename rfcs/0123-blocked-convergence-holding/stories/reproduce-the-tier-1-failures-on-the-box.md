@@ -2,7 +2,7 @@
 title: "Reproduce the tier 1 failures on the box, not only in the self-test"
 status: blocked
 updated: 2026-10-12
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
