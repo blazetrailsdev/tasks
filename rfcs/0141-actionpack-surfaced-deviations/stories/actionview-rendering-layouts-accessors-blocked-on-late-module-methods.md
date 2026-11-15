@@ -2,7 +2,7 @@
 title: "actionview-rendering-layouts-accessors-blocked-on-late-module-methods"
 status: draft
 updated: 2026-11-12
-rfc: "0197-plain-object-modules-replace-ruby-compat-module"
+rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
