@@ -2,7 +2,7 @@
 title: "Move export (DB to git) and the hourly ingest/export schedule into trailmap"
 status: blocked
 updated: 2026-10-12
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activerecord"]
 deps: ["move-the-tasks-cli-into-trailmap"]
