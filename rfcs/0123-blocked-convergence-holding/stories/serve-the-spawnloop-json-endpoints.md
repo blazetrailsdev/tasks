@@ -2,7 +2,7 @@
 title: "Serve the task-domain /spawnloop/* reads as JSON, gated against ringo"
 status: blocked
 updated: 2026-10-12
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activerecord"]
 deps:
