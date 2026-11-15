@@ -8,6 +8,8 @@ packages: []
 deps:
   - ruby-compat-net-http-surface-for-rack-proxy
   - rack-proxy-http-streaming-response
+  - net-http-send-request-with-body-stream
+  - net-http-request-written-by-write-header
 deps-rfc: []
 est-loc: null
 priority: null
