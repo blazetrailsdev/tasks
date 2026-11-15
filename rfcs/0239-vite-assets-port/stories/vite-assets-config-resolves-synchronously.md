@@ -23,4 +23,5 @@ closed-reason: null
 ## Acceptance criteria
 
 - `ViteAssets` config resolution is made synchronous once it is prewarmed at boot. For example, the app's boot awaits `ViteAssets.config()` before the middleware stack is built, and `DevServerProxy` reads `config` directly.
-- `peekConfig` is deleted, along with its `CONVERGEABLE vite-assets-config-resolves-synchronously` receipt.
+- `Config.configDefaults` is `private` again, as `config_defaults` is under `class << self; private` (`vendor/vite_ruby/v3.11.1/vite_ruby/lib/vite_ruby/config.rb:142,154`); `peekConfig` is its only outside caller.
+- `peekConfig` (called from `DevServerProxy`'s constructor, `packages/vite-assets/lib/dev-server-proxy.ts`) is deleted, along with its `CONVERGEABLE vite-assets-config-resolves-synchronously` receipt.
