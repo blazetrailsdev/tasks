@@ -2,7 +2,7 @@
 title: "trailmap: store audit reports as Active Storage Disk blobs"
 status: blocked
 updated: 2026-11-09
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activestorage", "activerecord"]
 deps:

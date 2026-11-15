@@ -17,6 +17,7 @@ packages:
   - "trailties"
   - "solid-queue"
   - "solid-cable"
+  - "activestorage"
 clusters:
   - "schema"
   - "api-compare"
