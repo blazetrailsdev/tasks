@@ -2,7 +2,7 @@
 title: "ringo: flip TASKS_EVENTS_SOURCE to db so /graphs/velocity reads the events table"
 status: blocked
 updated: 2026-10-15
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps:
