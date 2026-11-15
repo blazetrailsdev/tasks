@@ -2,7 +2,7 @@
 title: "Cut the stats sync over from the crontab to StatsSyncJob"
 status: blocked
 updated: 2026-11-07
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps:
