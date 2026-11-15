@@ -23,11 +23,13 @@ packages:
   - "msgpack"
   - "did-you-mean"
   - "i18n"
+  - "activejob"
 clusters:
   - "mri-relocation"
   - "measurement"
   - "findings"
   - "fidelity"
+  - "retire"
 related-rfcs:
   - "0129-ruby-compat"
   - "0138-ruby-compat-residual-convergence"

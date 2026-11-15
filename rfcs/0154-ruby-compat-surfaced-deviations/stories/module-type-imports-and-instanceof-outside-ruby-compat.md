@@ -2,7 +2,7 @@
 title: "No package outside ruby-compat imports Module or checks instanceof Module"
 status: ready
 updated: 2026-10-21
-rfc: "0197-plain-object-modules-replace-ruby-compat-module"
+rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: retire
 packages:
   [
