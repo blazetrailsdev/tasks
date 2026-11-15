@@ -1,7 +1,7 @@
 ---
 title: "Remove the src/ arms from layout tooling and add a no-src guard"
-status: claimed
-updated: 2026-11-14
+status: done
+updated: 2026-11-15
 rfc: "0223-package-layout-mirrors-a-rails-gem"
 cluster: layout-tooling
 packages: [scripts]
@@ -57,9 +57,9 @@ deps:
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
-claim: "2026-11-14T20:31:22Z"
-assignee: "activestorage-fixture-set-lazy-off-server-path"
+pr: trails#10101
+claim: null
+assignee: null
 blocked-by: null
 ---
 

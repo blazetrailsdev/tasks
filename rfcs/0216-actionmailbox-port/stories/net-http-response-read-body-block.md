@@ -1,7 +1,7 @@
 ---
 title: "net-http-response-read-body-block"
-status: claimed
-updated: 2026-11-14
+status: done
+updated: 2026-11-15
 rfc: "0216-actionmailbox-port"
 cluster: null
 packages: []
@@ -9,8 +9,8 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: "2026-11-14T20:31:37Z"
+pr: trails#10103
+claim: "2026-11-15T11:30:36Z"
 assignee: "include-skips-module-already-in-superclass-chain"
 blocked-by: null
 closed-reason: null

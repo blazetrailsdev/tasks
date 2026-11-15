@@ -1,6 +1,6 @@
 ---
 title: "Nokogiri HTML5::Node and XML::Node share one class chain"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0219-actiontext-port"
 cluster: null

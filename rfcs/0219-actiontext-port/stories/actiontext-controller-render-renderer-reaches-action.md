@@ -1,7 +1,7 @@
 ---
 title: "actiontext-controller-render-renderer-reaches-action"
-status: ready
-updated: 2026-11-14
+status: in-progress
+updated: 2026-11-15
 rfc: "0219-actiontext-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10120
+claim: "2026-11-15T11:49:43Z"
+assignee: "actiontext-controller-render-renderer-reaches-action"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "seats-kept-for-class-paths-the-table-cannot-name"
-status: claimed
-updated: 2026-11-14
+status: ready
+updated: 2026-11-15
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-14T21:29:45Z"
-assignee: "cpk-and-sharded-test-model-seats-are-typed-assignments"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
