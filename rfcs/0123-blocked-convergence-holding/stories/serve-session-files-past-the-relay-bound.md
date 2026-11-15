@@ -2,7 +2,7 @@
 title: "/sessions/file refuses files over 128 MiB and the pane view replays only 2 MiB"
 status: blocked
 updated: 2026-10-30
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps:
