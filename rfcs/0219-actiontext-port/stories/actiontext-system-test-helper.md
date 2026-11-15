@@ -1,6 +1,6 @@
 ---
 title: "Port ActionText::SystemTestHelper and the system tests"
-status: claimed
+status: in-progress
 updated: 2026-11-15
 rfc: "0219-actiontext-port"
 cluster: at-engine
@@ -9,7 +9,7 @@ deps: ["actiontext-engine", "actiontext-install-generator-and-rake"]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#10151
 claim: "2026-11-15T20:36:38Z"
 assignee: "actiontext-system-test-helper"
 blocked-by: null

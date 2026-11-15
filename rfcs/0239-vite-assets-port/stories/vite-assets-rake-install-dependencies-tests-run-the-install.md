@@ -1,6 +1,6 @@
 ---
 title: "rake_tasks_test install_dependencies tests run the real install and glob node_modules"
-status: draft
+status: done
 updated: 2026-11-15
 rfc: "0239-vite-assets-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10152
+claim: "2026-11-15T21:31:32Z"
+assignee: "vite-assets-rake-install-dependencies-tests-run-the-install"
 blocked-by: null
 closed-reason: null
 ---

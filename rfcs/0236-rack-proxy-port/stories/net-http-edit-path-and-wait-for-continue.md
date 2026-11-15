@@ -1,6 +1,6 @@
 ---
 title: "net-http-edit-path-and-wait-for-continue"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0236-rack-proxy-port"
 cluster: null

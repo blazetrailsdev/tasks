@@ -1,7 +1,7 @@
 ---
 title: "extend() copies module functions Ruby's extend never carries"
-status: ready
-updated: 2026-10-18
+status: claimed
+updated: 2026-11-15
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -12,8 +12,8 @@ deps-rfc: []
 est-loc: 180
 priority: 59
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-15T21:36:33Z"
+assignee: "extend-copies-module-functions-ruby-does-not"
 blocked-by: null
 closed-reason: null
 ---

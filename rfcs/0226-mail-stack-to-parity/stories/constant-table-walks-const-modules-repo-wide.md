@@ -1,6 +1,6 @@
 ---
 title: "constant-table-walks-const-modules-repo-wide"
-status: ready
+status: claimed
 updated: 2026-11-15
 rfc: "0226-mail-stack-to-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-15T21:21:31Z"
+assignee: "constant-table-walks-const-modules-repo-wide"
 blocked-by: null
 closed-reason: null
 ---

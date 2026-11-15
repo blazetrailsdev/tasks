@@ -1,6 +1,6 @@
 ---
 title: "The bump ledger covers matched tests whose Rails body changed"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: tooling

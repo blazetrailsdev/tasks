@@ -1,6 +1,6 @@
 ---
 title: "response-carries-async-streaming-body"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

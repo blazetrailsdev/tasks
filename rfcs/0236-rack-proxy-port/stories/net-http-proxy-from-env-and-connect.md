@@ -1,6 +1,6 @@
 ---
 title: "net-http-proxy-from-env-and-connect"
-status: draft
+status: ready
 updated: 2026-11-15
 rfc: "0236-rack-proxy-port"
 cluster: null

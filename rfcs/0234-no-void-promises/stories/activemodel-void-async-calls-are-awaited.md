@@ -1,6 +1,6 @@
 ---
 title: "ActiveModel attribute assignment, JSON#from_json and validations stop dropping promises"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0234-no-void-promises"
 cluster: discarded-calls

@@ -1,6 +1,6 @@
 ---
 title: "net-smtp: SSLContext object and the ssl_socket seam"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0226-mail-stack-to-parity"
 cluster: null

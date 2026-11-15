@@ -1,6 +1,6 @@
 ---
 title: "vite-assets-commands-and-compatibility-check"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0239-vite-assets-port"
 cluster: null

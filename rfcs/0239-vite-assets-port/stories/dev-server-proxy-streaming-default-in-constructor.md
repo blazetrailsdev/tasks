@@ -1,6 +1,6 @@
 ---
 title: "DevServerProxy applies the test-mode streaming default in its constructor"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0239-vite-assets-port"
 cluster: null
