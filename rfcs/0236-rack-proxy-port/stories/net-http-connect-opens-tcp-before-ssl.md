@@ -1,6 +1,6 @@
 ---
 title: "Net::HTTP#connect opens TCP before SSL and logs a connect error"
-status: draft
+status: claimed
 updated: 2026-11-14
 rfc: "0236-rack-proxy-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-14T23:59:53Z"
+assignee: "net-http-connect-opens-tcp-before-ssl"
 blocked-by: null
 closed-reason: null
 ---

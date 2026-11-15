@@ -1,6 +1,6 @@
 ---
 title: "SafeListSanitizer#sanitize honours scrubber: (ContentHelper.scrubber is ignored)"
-status: ready
+status: blocked
 updated: 2026-11-14
 rfc: "0219-actiontext-port"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "needs port-loofah-scrubber-and-html5-scrub (no Loofah::Scrubber / fragment.scrub! exists)"
 closed-reason: null
 ---
 

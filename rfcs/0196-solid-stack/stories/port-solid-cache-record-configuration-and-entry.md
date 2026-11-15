@@ -1,6 +1,6 @@
 ---
 title: "port-solid-cache-record-configuration-and-entry"
-status: in-progress
+status: done
 updated: 2026-11-14
 rfc: "0196-solid-stack"
 cluster: null

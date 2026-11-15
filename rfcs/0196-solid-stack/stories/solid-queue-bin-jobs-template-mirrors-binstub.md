@@ -1,6 +1,6 @@
 ---
 title: "solid_queue:install's bin/jobs mirrors the gem's binstub (no app/jobs glob, ARGV via rbArgv)"
-status: in-progress
+status: done
 updated: 2026-11-14
 rfc: "0196-solid-stack"
 cluster: null

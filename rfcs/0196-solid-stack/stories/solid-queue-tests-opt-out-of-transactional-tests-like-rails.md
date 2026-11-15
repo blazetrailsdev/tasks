@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-tests-opt-out-of-transactional-tests-like-rails"
-status: ready
+status: in-progress
 updated: 2026-11-14
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10113
+claim: "2026-11-14T23:29:43Z"
+assignee: "solid-cable-listener-critical-semaphore"
 blocked-by: null
 closed-reason: null
 ---

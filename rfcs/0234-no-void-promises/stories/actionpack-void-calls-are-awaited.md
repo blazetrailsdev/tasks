@@ -1,7 +1,7 @@
 ---
 title: "ActionPack journey, response, live streaming and system testing stop dropping promises"
-status: ready
-updated: 2026-11-12
+status: claimed
+updated: 2026-11-14
 rfc: "0234-no-void-promises"
 cluster: discarded-calls
 packages: [actionpack]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-14T23:09:41Z"
+assignee: "actionpack-void-calls-are-awaited"
 blocked-by: null
 closed-reason: null
 ---

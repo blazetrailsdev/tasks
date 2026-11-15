@@ -1,6 +1,6 @@
 ---
 title: "Port RubyDataSource over a generated tzinfo-data definition set"
-status: in-progress
+status: done
 updated: 2026-11-14
 rfc: "0231-tzinfo-to-parity"
 cluster: null

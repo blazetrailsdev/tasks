@@ -1,6 +1,6 @@
 ---
 title: "Nokogiri HTML5::DocumentFragment#xpath and NodeSet#to_xml; port test_fragment_body"
-status: ready
+status: in-progress
 updated: 2026-11-14
 rfc: "0219-actiontext-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10114
+claim: "2026-11-14T23:51:41Z"
+assignee: "actiontext-controller-render-renderer-reaches-action"
 blocked-by: null
 closed-reason: null
 ---

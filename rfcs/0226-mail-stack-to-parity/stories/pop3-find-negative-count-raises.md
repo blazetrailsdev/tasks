@@ -1,6 +1,6 @@
 ---
 title: "POP3#find raises ArgumentError for a negative :count like Array#first"
-status: in-progress
+status: done
 updated: 2026-11-14
 rfc: "0226-mail-stack-to-parity"
 cluster: null
