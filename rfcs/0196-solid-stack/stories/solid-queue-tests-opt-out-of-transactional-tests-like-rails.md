@@ -1,7 +1,7 @@
 ---
 title: "solid-queue-tests-opt-out-of-transactional-tests-like-rails"
-status: in-progress
-updated: 2026-11-14
+status: done
+updated: 2026-11-15
 rfc: "0196-solid-stack"
 cluster: null
 packages: []

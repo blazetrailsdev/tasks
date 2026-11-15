@@ -1,7 +1,7 @@
 ---
 title: "Converge Content#initialize to Rails' single canonicalized fragment assignment"
 status: ready
-updated: 2026-11-14
+updated: 2026-11-15
 rfc: "0219-actiontext-port"
 cluster: null
 packages: []

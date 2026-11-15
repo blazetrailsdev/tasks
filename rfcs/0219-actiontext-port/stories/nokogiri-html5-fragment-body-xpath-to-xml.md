@@ -1,7 +1,7 @@
 ---
 title: "Nokogiri HTML5::DocumentFragment#xpath and NodeSet#to_xml; port test_fragment_body"
-status: in-progress
-updated: 2026-11-14
+status: done
+updated: 2026-11-15
 rfc: "0219-actiontext-port"
 cluster: null
 packages: []
