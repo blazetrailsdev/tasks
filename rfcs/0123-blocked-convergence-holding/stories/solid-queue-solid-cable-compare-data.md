@@ -2,7 +2,7 @@
 title: "trails: solid-queue and solid-cable have no api or test compare data"
 status: blocked
 updated: 2026-11-07
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["scripts", "solid-queue", "solid-cable"]
 deps: []

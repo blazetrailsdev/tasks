@@ -15,6 +15,8 @@ packages:
   - "actionview"
   - "actionpack"
   - "trailties"
+  - "solid-queue"
+  - "solid-cable"
 clusters:
   - "schema"
   - "api-compare"
