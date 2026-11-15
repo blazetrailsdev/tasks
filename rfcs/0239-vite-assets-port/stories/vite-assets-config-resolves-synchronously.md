@@ -18,6 +18,8 @@ closed-reason: null
 
 ## Context
 
+Filed from trails#10144.
+
 `ViteRuby::DevServerProxy#initialize` (`vendor/vite_ruby/v3.11.1/vite_ruby/lib/vite_ruby/dev_server_proxy.rb:10-14`) reads `config.mode`, and `ViteRuby#config` (`vite_ruby.rb:128-134`) resolves lazily and synchronously. In trails, `ViteAssets#config()` (`packages/vite-assets/lib/vite-assets.ts`) is async, because `Config.resolveConfig` reads files. So the constructor reads `ViteAssets#peekConfig()`, which is `undefined` until something has awaited `config()`. When the config has not been resolved yet, `peekConfig` answers a stand-in whose `mode` comes from `Config.configDefaults` (env and the instance's options), which is where `resolveConfig` gets `mode` too.
 
 ## Acceptance criteria
