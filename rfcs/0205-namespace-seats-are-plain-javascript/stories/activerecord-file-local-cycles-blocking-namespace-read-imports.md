@@ -35,3 +35,39 @@ Rails spells each one fully qualified (`ActiveRecord::Base`, `ActiveRecord::Rela
 
 - [ ] For each file above, trace the cycle behind the TDZ, break it by moving a module-eval edge, and convert the read to an ES import. If it can't be broken, record the cycle path in the story.
 - [ ] The plain-node entry check over every `packages/activerecord/dist` module (cold build) shows no failure beyond main's.
+
+## Findings (2026-11-14)
+
+With `relation-include-spawn-methods-calculations-import-cycle` converged, the
+`SpawnMethods` TDZ is gone. Each read was then converted on its own and checked
+by a plain-node import of every built `packages/activerecord/dist` module. Every
+conversion still fails, because the new import reaches the module that
+`include`s / `extend`s the converting file's own module at module eval, so the
+includer's body reads the includee while it is in TDZ. None of these edges can
+move: each is Rails' own `include` / `extend` / superclass, read at class-body
+time. The namespace read is the sanctioned break (CLAUDE.md, "Call-time
+constant resolution"), so the reads stay.
+
+- `dynamic-matchers.ts` → `base.ts`, whose `extend(Base, DynamicMatchers)`
+  (`base.ts:2099`) reads `DynamicMatchers`. Entry `dynamic-matchers.js`.
+- `translation.ts` → `base.ts`, `extend(Base, Translation.Translation)`
+  (`base.ts:2132`). Entry `translation.js`.
+- `attribute-methods/primary-key.ts` → `base.ts`, `include(Base, _PrimaryKey)`
+  (`base.ts:2315`). Entries `attribute-methods/primary-key.js`,
+  `composite-primary-key.js`, `constants.generated.js`.
+- `relation/predicate-builder.ts`, `relation/predicate-builder/association-query-value.ts`
+  → `relation.ts`, `include(Relation, QueryMethods)` (`relation.ts:2183`);
+  `query-methods.ts` reaches the predicate builder. Entries
+  `relation/query-methods.js`, `merger.js`, `spawn-methods.js`, `calculations.js`.
+- `associations/builder/has-and-belongs-to-many.ts` → `base.ts`, which reads
+  `_Associations` at module eval (`base.ts:335`, the `extend` of
+  `Associations`). Entries `associations.js`, `autosave-association.js`,
+  `nested-attributes.js`, `constants.generated.js`.
+- `associations/belongs-to-association.ts` → `base.ts` → …
+  → `belongs-to-polymorphic-association.ts`,
+  `class BelongsToPolymorphicAssociation extends BelongsToAssociation`
+  (`:7`). Entry `associations/belongs-to-association.js`.
+- `migration/command-recorder.ts` → `migration.ts` (for
+  `IrreversibleMigration`), whose module body reads `CommandRecorder`. Entries
+  `migration/command-recorder.js` and every adapter `schema-statements.js` /
+  `schema-dumper.js` with its lazy constant table.
