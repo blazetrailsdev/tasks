@@ -2,7 +2,7 @@
 title: "Render the dashboard's reviewer line, from models rather than two browser fetches"
 status: ready
 updated: 2026-10-12
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["actionview"]
 deps:

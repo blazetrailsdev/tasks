@@ -2,7 +2,7 @@
 title: "Server-render the dashboard's PR rows from pr_states, and make SSE a change notification"
 status: ready
 updated: 2026-10-12
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["actionview", "actionpack"]
 deps: ["move-tracker-state-into-the-database"]

@@ -2,7 +2,7 @@
 title: "story-pages and dashboard set instance assigns and derive rows in helpers"
 status: ready
 updated: 2026-10-30
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["actionview"]
 deps: ["rfc-pages-render-through-instance-assigns", "tsc-views-strict-mode-misses-instance-assigns"]

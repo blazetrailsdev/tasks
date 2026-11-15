@@ -2,7 +2,7 @@
 title: "Move reviewer config and usage accounting into the database"
 status: ready
 updated: 2026-10-12
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activerecord"]
 deps:

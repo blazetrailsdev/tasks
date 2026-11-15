@@ -2,7 +2,7 @@
 title: "ringo implements the write protocol's locked/migrating answer: ack after commit, retry on SQLITE_BUSY"
 status: ready
 updated: 2026-10-15
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps:

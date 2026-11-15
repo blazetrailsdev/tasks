@@ -2,7 +2,7 @@
 title: "/search counts body mentions in JS over matching rows; count them in SQL once Arel nodes are reachable"
 status: ready
 updated: 2026-10-30
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: ["activerecord-exposes-arel-to-applications"]

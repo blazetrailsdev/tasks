@@ -2,7 +2,7 @@
 title: "Move the CI-failure and pull-failure records into the database"
 status: ready
 updated: 2026-10-12
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activerecord"]
 deps:

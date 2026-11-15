@@ -2,7 +2,7 @@
 title: "Views call renderMarkdown, pluralize and the partial shorthand"
 status: ready
 updated: 2026-10-30
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["actionview"]
 deps: ["story-pages-and-dashboard-render-through-instance-assigns"]

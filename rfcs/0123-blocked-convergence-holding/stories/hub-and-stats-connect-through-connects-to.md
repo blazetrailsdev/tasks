@@ -2,7 +2,7 @@
 title: "Hub and Stats connect through connectsTo, as the Rails twin does"
 status: ready
 updated: 2026-10-28
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: ["connects-to-is-synchronous-and-callable-from-a-class-body"]
