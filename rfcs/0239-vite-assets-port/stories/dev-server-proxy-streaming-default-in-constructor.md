@@ -1,6 +1,6 @@
 ---
 title: "DevServerProxy applies the test-mode streaming default in its constructor"
-status: ready
+status: in-progress
 updated: 2026-11-15
 rfc: "0239-vite-assets-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10144
+claim: "2026-11-15T19:23:19Z"
+assignee: "dev-server-proxy-streaming-default-in-constructor"
 blocked-by: null
 closed-reason: null
 ---

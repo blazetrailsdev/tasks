@@ -1,7 +1,7 @@
 ---
 title: "docs/deploy.md: record the dokku-mail link and the SMTP_ADDRESS mapping"
-status: draft
-updated: 2026-11-09
+status: closed
+updated: 2026-11-15
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "sunset of 0136-trailmap: trailmap-repo docs; not landed (docs/deploy.md has SMTP_ADDRESS but no dokku-mail link) and no RFC carries trailmap app work after the sunset"
 ---
 
 ## Context

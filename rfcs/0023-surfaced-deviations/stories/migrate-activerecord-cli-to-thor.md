@@ -1,6 +1,6 @@
 ---
 title: "activerecord-cli's ar dispatches through Thor"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0023-surfaced-deviations"
 cluster: null

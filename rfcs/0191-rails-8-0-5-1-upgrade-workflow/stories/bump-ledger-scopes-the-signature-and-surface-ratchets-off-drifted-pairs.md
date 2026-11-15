@@ -1,6 +1,6 @@
 ---
 title: "The parameter, block, arm and extra-surface ratchets skip a ledgered pair"
-status: ready
+status: claimed
 updated: 2026-11-15
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: tooling
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-15T19:21:45Z"
+assignee: "bump-ledger-scopes-the-signature-and-surface-ratchets-off-drifted-pairs"
 blocked-by: null
 closed-reason: null
 ---

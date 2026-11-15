@@ -1,6 +1,6 @@
 ---
 title: "actiontext test helper boots the dummy app's initializers instead of hand-picking them"
-status: draft
+status: ready
 updated: 2026-11-15
 rfc: "0219-actiontext-port"
 cluster: null

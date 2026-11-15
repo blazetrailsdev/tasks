@@ -9,6 +9,7 @@ packages:
   - "vite-assets"
 clusters:
   - vite-assets
+priority: 4
 ---
 
 # RFC 0239 — Port the vite_ruby gem as @blazetrails/vite-assets

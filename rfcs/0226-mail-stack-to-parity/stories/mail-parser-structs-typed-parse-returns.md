@@ -1,6 +1,6 @@
 ---
 title: "Type the remaining mail parser structs and parse returns"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0226-mail-stack-to-parity"
 cluster: null

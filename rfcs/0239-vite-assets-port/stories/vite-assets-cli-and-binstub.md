@@ -1,6 +1,6 @@
 ---
 title: "Port ViteRuby::CLI and its commands, and the bin/vite binstub"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0239-vite-assets-port"
 cluster: vite-assets

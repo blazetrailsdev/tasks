@@ -1,7 +1,7 @@
 ---
 title: "rails/: record the job-failure mail's JS-style backtrace header in DEVIATIONS.md"
-status: draft
-updated: 2026-11-09
+status: closed
+updated: 2026-11-15
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "sunset of 0136-trailmap: trailmap rails/ twin docs; not landed (no backtrace entry in rails/DEVIATIONS.md) and no RFC carries trailmap app work after the sunset"
 ---
 
 ## Context

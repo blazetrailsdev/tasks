@@ -1,6 +1,6 @@
 ---
 title: "local-cache-middleware"
-status: draft
+status: ready
 updated: 2026-11-15
 rfc: "0196-solid-stack"
 cluster: null

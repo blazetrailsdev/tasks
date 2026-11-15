@@ -1,6 +1,6 @@
 ---
 title: "kernel-catch-async-before-filters-skip-als-run-when-sync"
-status: draft
+status: claimed
 updated: 2026-11-15
 rfc: "0241-request-path-performance"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-15T19:51:37Z"
+assignee: "kernel-catch-async-before-filters-skip-als-run-when-sync"
 blocked-by: null
 closed-reason: null
 ---

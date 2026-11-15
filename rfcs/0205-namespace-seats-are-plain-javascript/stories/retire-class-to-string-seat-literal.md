@@ -1,6 +1,6 @@
 ---
 title: "retire-class-to-string-seat-literal"
-status: ready
+status: in-progress
 updated: 2026-11-15
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10143
+claim: "2026-11-15T19:36:33Z"
+assignee: "retire-class-to-string-seat-literal"
 blocked-by: null
 closed-reason: null
 ---

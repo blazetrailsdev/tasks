@@ -1,6 +1,6 @@
 ---
 title: "Type Message#get so a field's readers need no unknown cast"
-status: ready
+status: claimed
 updated: 2026-11-15
 rfc: "0226-mail-stack-to-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-15T19:32:24Z"
+assignee: "mail-message-spec-fixture-loop-covers-all-gem-emls"
 blocked-by: null
 closed-reason: null
 ---

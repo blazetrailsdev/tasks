@@ -9,6 +9,7 @@ packages:
   - "rack-proxy"
 clusters:
   - rack-proxy
+priority: 3
 ---
 
 # RFC 0236 — Port the rack-proxy gem

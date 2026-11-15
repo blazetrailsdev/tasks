@@ -1,7 +1,7 @@
 ---
 title: "solid-cache-estimate-size-reader-shape"
-status: draft
-updated: 2026-11-14
+status: ready
+updated: 2026-11-15
 rfc: "0196-solid-stack"
 cluster: null
 packages: []
