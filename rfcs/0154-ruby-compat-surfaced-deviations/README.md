@@ -30,6 +30,7 @@ clusters:
   - "findings"
   - "fidelity"
   - "retire"
+  - "ledger"
 related-rfcs:
   - "0129-ruby-compat"
   - "0138-ruby-compat-residual-convergence"
