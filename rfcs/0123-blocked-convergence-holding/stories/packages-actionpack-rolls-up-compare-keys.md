@@ -2,7 +2,7 @@
 title: "trailmap: /packages/actionpack shows its api and test compare numbers"
 status: blocked
 updated: 2026-11-07
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["actionpack"]
 deps: []
