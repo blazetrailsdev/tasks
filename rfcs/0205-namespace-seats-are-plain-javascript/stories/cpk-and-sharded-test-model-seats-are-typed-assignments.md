@@ -5,7 +5,8 @@ updated: 2026-11-15
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
-deps: []
+deps:
+  - class-path-table-covers-activerecord-test-models
 deps-rfc: []
 est-loc: null
 priority: null
