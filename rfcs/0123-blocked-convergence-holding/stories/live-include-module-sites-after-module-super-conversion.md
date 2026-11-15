@@ -2,7 +2,7 @@
 title: "live-include-module-sites-after-module-super-conversion"
 status: blocked
 updated: 2026-10-21
-rfc: "0197-plain-object-modules-replace-ruby-compat-module"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: [ruby-compat]
 deps:
