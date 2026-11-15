@@ -5,7 +5,8 @@ updated: 2026-11-15
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - ruby-compat-marshal-load-range-compat
 deps-rfc: []
 est-loc: 60
 priority: 3
