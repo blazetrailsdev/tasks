@@ -2,7 +2,7 @@
 title: "script/tandem compares the repo issues pager links between the two apps"
 status: blocked
 updated: 2026-11-07
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
