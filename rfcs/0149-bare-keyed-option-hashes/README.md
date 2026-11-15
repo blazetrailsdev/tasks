@@ -74,6 +74,16 @@ when Symbol-ness is observable:
 2. control flow turns on `Symbol === key` (CLAUDE.md's `localize` / `:default` case);
 3. the hash is merged with, or compared to, a hash already carrying `":name"` keys.
 
+**A String-keyed `ActionController::Parameters`.** `UrlFor#full_url_for`
+(`vendor/rails/v8.0.2/actionpack/lib/action_dispatch/routing/url_for.rb:185-188`)
+is the one url-generation seat where Rails symbolizes a Parameters:
+`options.to_h.symbolize_keys`. A Parameters keeps Rails' String keys, so the
+crossing happens at that seat and nowhere else: a key whose camelCase spelling
+is one of `RouteSet::RESERVED_OPTIONS` (`only_path` → `onlyPath`,
+`script_name` → `scriptName`) takes that spelling, and every other key, a path
+segment such as `post_id` included, keeps its String name. ActionView does not
+special-case it.
+
 **Gate.** `symbolize_keys` and `symbolize_keys!` join `NO_JS_CALL_FORM`
 (`scripts/api-compare/compare.ts:265`), which already suppresses a Ruby call
 from both `parity:api:calls` and `:calls:args` (`call-args.ts:409`). Their
