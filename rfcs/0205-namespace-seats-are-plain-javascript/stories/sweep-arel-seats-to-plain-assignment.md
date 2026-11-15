@@ -1,6 +1,6 @@
 ---
 title: "Convert arel's 278 deferred namespace reads to ES imports"
-status: ready
+status: blocked
 updated: 2026-11-15
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
@@ -12,9 +12,9 @@ deps-rfc: []
 est-loc: 520
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-15T14:29:45Z"
+assignee: "cpk-and-sharded-test-model-seats-are-typed-assignments"
+blocked-by: "Isolation check failed: converting only nodes/node.ts's Nodes.Not read to 'import { Not } from ./unary.js' makes plain-node 'import(dist/nodes/node.js)' throw 'Cannot access Node before initialization' at node-expression.js (unary.ts → node-expression extends Node evaluates while node.ts is mid-evaluation). Entry at unary.js loads. The story says stop and report; needs an operator decision on the thesis (CLAUDE.md § Call-time constant resolution / arel CLAUDE.md claim this edge is safe)."
 closed-reason: null
 ---
 

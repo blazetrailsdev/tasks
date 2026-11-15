@@ -1,6 +1,6 @@
 ---
 title: "The call, call-argument and ruby-compat-call ratchets skip a ledgered pair"
-status: ready
+status: done
 updated: 2026-11-15
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: tooling
@@ -9,9 +9,9 @@ deps: [bump-ledger-tracks-drifted-pairs-and-the-body-pins-gate-reads-it]
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10127
+claim: "2026-11-15T14:09:41Z"
+assignee: "bump-history-is-recorded-in-the-stats-db"
 blocked-by: null
 closed-reason: null
 ---

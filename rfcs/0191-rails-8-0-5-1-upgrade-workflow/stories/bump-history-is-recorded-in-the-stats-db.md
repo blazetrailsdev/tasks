@@ -1,6 +1,6 @@
 ---
 title: "Bump history is recorded in the stats DB: dry-run reports, flip events and the ledger's burn-down curve"
-status: ready
+status: done
 updated: 2026-11-15
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: tooling
@@ -13,9 +13,9 @@ deps:
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10127
+claim: "2026-11-15T14:09:41Z"
+assignee: "bump-history-is-recorded-in-the-stats-db"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Relation#groupBy answers a Map where Enumerable#group_by answers a Hash"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

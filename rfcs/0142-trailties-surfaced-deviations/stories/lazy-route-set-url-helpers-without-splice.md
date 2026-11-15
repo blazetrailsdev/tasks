@@ -1,6 +1,6 @@
 ---
 title: "trailties: LazyRouteSet url helpers without a prototype splice"
-status: in-progress
+status: blocked
 updated: 2026-11-15
 rfc: "0142-trailties-surfaced-deviations"
 cluster: conversion
@@ -14,7 +14,7 @@ priority: 14
 pr: trails#10125
 claim: "2026-11-15T13:09:40Z"
 assignee: "lazy-route-set-url-helpers-without-splice"
-blocked-by: null
+blocked-by: "waiting on lazy-route-set-method-missing-resends-in-line: route reload must be synchronous (prewarm + peek) before ProxyUrlHelpers / NamedRouteCollection#route_defined? can reload in line without floating promises (promise-count gate, trailties mark 17 vs 23 on trails#10125); operator ruling 2026-11-15"
 closed-reason: null
 ---
 
