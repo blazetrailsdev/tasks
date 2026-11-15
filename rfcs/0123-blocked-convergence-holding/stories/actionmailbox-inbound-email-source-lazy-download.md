@@ -2,7 +2,7 @@
 title: "InboundEmail#source reads raw_email.download without explicit attachment/blob loads"
 status: blocked
 updated: 2026-11-12
-rfc: "0216-actionmailbox-port"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
