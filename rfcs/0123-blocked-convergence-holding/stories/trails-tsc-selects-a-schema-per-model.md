@@ -2,7 +2,7 @@
 title: "trails-tsc: per-model schema selection when two databases hold a same-named table"
 status: blocked
 updated: 2026-10-22
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: [trails-tsc]
 deps: []

@@ -18,6 +18,7 @@ packages:
   - "solid-queue"
   - "solid-cable"
   - "activestorage"
+  - "trails-tsc"
 clusters:
   - "schema"
   - "api-compare"
