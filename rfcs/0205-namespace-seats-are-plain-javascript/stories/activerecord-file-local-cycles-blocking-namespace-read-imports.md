@@ -68,6 +68,8 @@ constant resolution"), so the reads stay.
   `class BelongsToPolymorphicAssociation extends BelongsToAssociation`
   (`:7`). Entry `associations/belongs-to-association.js`.
 - `migration/command-recorder.ts` → `migration.ts` (for
-  `IrreversibleMigration`), whose module body reads `CommandRecorder`. Entries
+  `IrreversibleMigration`), whose seat
+  `Migration.CommandRecorder = CommandRecorder` (`migration.ts:1397`) reads it
+  at module eval. Entries
   `migration/command-recorder.js` and every adapter `schema-statements.js` /
   `schema-dumper.js` with its lazy constant table.
