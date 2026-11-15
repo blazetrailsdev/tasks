@@ -2,7 +2,7 @@
 title: "Serve /crons read-only from trailmap, beside ringo"
 status: blocked
 updated: 2026-10-22
-rfc: "0136-trailmap"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["trailties"]
 deps:
