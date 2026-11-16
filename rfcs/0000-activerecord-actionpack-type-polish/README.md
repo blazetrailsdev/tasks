@@ -174,14 +174,17 @@ and rack's, with its own `tsconfig.json`, run by the CI `DX type tests` step.
 ## Verification
 
 On close, `lib/` only. Each target is the start count less the sum of its
-stories' acceptance criteria, so meeting every story meets the RFC. "Hits"
+stories' acceptance criteria, so meeting every story meets the RFC
+(activerecord 1,046 − 88 − 97 − 90 − 63 = 708; actionpack 117 − 22 − 51 =
+44; activesupport 171 − 26 − 15 = 130). Every count, the RFC's and each
+story's, uses the matches command from Motivation, never `grep -c`. "Hits"
 is `: any` + `as any` + `as unknown as`.
 
 | package       | start (hits)                | target (hits)                   |
 | ------------- | --------------------------- | ------------------------------- |
-| activerecord  | 1,046                       | ≤ 760                           |
-| actionpack    | 117 `as unknown as`         | ≤ 60 `as unknown as`            |
-| activesupport | 171                         | ≤ 135                           |
+| activerecord  | 1,046                       | ≤ 710                           |
+| actionpack    | 117 `as unknown as`         | ≤ 45 `as unknown as`            |
+| activesupport | 171                         | ≤ 130                           |
 | activemodel   | 42 `as unknown as`, 8 `any` | ≤ 15 `as unknown as`, ≤ 2 `any` |
 | actionview    | 51 `as unknown as`          | ≤ 15 `as unknown as`            |
 
@@ -204,3 +207,6 @@ per-package projects in `vitest.dx-tests.config.ts`.
 - 2026-11-16: add the `no-double-cast` rule the count needs, story
   verification commands, the `UrlFor` carrier cross-reference, and targets
   that equal the sum of the stories
+- 2026-11-16: review fixes: story counts use matches, not lines; per-story
+  start counts; actionpack DX story gains Verification and Definition of
+  done; gate criteria merged

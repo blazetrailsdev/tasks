@@ -34,11 +34,17 @@ holds 14; the rest are casts to `Record` (12), `RecordWithRawAttribute`,
 
 ## Verification
 
-Before and after counts, recorded in the PR body, from the trails root:
-`grep -rPc ': any\b|as any\b|as unknown as' packages/activemodel/lib --include=*.ts`
-over the files named above. `pnpm typecheck`, `pnpm parity:lint:counts`,
-`pnpm test:types`, `pnpm parity:api` and `pnpm parity:test` are green, with
-non-negative parity deltas.
+Count hits from `packages/activemodel/lib`, before and after, and record both in
+the PR body:
+
+```sh
+grep -Po ': any|as any|as unknown as' -r --include=*.ts . | wc -l
+```
+
+This is the RFC's Motivation command, which counts matches, not lines.
+`pnpm typecheck`, `pnpm parity:lint:counts`, `pnpm test:types`,
+`pnpm parity:api` and `pnpm parity:test` are green, with non-negative parity
+deltas.
 
 ## Definition of done
 

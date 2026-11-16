@@ -26,7 +26,7 @@ family and `this: any` on bang methods. Rails:
 
 ## Acceptance criteria
 
-- [ ] Hits in `relation/query-methods.ts` fall by at least 70%.
+- [ ] Hits in the files above fall from 126 to ≤ 38 (at least 70%).
 - [ ] Each `args: any` becomes the argument union the Rails method accepts
       (string, hash, Arel node, array) or `unknown[]` plus narrowing.
 - [ ] `this` is `Relation<T>` (or the host interface), so a chain keeps `T`.
@@ -35,11 +35,17 @@ family and `this: any` on bang methods. Rails:
 
 ## Verification
 
-Before and after counts, recorded in the PR body, from the trails root:
-`grep -rPc ': any\b|as any\b|as unknown as' packages/activerecord/lib --include=*.ts`
-over the files named above. `pnpm typecheck`, `pnpm parity:lint:counts`,
-`pnpm test:types`, `pnpm parity:api` and `pnpm parity:test` are green, with
-non-negative parity deltas.
+Count hits from `packages/activerecord/lib`, before and after, and record both in
+the PR body:
+
+```sh
+grep -Po ': any|as any|as unknown as' relation/query-methods.ts | wc -l
+```
+
+This is the RFC's Motivation command, which counts matches, not lines.
+`pnpm typecheck`, `pnpm parity:lint:counts`, `pnpm test:types`,
+`pnpm parity:api` and `pnpm parity:test` are green, with non-negative parity
+deltas.
 
 ## Definition of done
 

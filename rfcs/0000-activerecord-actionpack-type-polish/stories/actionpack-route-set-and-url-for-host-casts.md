@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-`lib/action-dispatch/routing/route-set.ts` holds 22 `as unknown as` / `any`
+`action-dispatch/routing/` has 32 `as unknown as`. `lib/action-dispatch/routing/route-set.ts` holds 22 `as unknown as` / `any`
 hits and `routing/url-for.ts` 5; casts onto `UrlForHost` (5) and
 `PolymorphicHost` (7) recur across routing. Rails:
 `vendor/rails/v8.0.2/actionpack/lib/action_dispatch/routing/route_set.rb`,
@@ -26,7 +26,8 @@ hits and `routing/url-for.ts` 5; casts onto `UrlForHost` (5) and
 
 ## Acceptance criteria
 
-- [ ] `as unknown as` in `routing/` falls by at least 70%.
+- [ ] `as unknown as` in `action-dispatch/routing/` falls from 32 to ≤ 10
+      (at least 70%).
 - [ ] `UrlForHost` / `PolymorphicHost` are reached through a `this`-typed
       function or `Included<>`, not a cast, wherever the module is already a
       plain module.
@@ -39,11 +40,17 @@ hits and `routing/url-for.ts` 5; casts onto `UrlForHost` (5) and
 
 ## Verification
 
-Before and after counts, recorded in the PR body, from the trails root:
-`grep -rPc ': any\b|as any\b|as unknown as' packages/actionpack/lib --include=*.ts`
-over the files named above. `pnpm typecheck`, `pnpm parity:lint:counts`,
-`pnpm test:types`, `pnpm parity:api` and `pnpm parity:test` are green, with
-non-negative parity deltas.
+Count `as unknown as` from `packages/actionpack/lib`, before and after, and record both in
+the PR body:
+
+```sh
+grep -Po 'as unknown as' -r --include=*.ts action-dispatch/routing | wc -l
+```
+
+This is the RFC's Motivation command, which counts matches, not lines.
+`pnpm typecheck`, `pnpm parity:lint:counts`, `pnpm test:types`,
+`pnpm parity:api` and `pnpm parity:test` are green, with non-negative parity
+deltas.
 
 ## Definition of done
 

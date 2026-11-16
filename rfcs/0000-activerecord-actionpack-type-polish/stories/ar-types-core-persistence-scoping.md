@@ -18,13 +18,13 @@ closed-reason: null
 
 ## Context
 
-`core.ts` (37), `persistence.ts` (25), `scoping.ts` (23) and
-`validations/uniqueness.ts` (15) hold 100 hits, mostly `this: any` /
+`core.ts` (38), `persistence.ts` (26), `scoping.ts` (23) and
+`validations/uniqueness.ts` (19) hold 100 hits, mostly `this: any` /
 `klass: any` on class methods mixed onto `Base`.
 
 ## Acceptance criteria
 
-- [ ] Combined hits fall by at least 60%.
+- [ ] Hits in the files above fall from 106 to ≤ 43 (at least 60%).
 - [ ] `this: any` on a mixed-in class method becomes a `this`-typed host
       (`typeof Base` or the module's host interface), per CLAUDE.md
       § "Module mixins".
@@ -33,11 +33,17 @@ closed-reason: null
 
 ## Verification
 
-Before and after counts, recorded in the PR body, from the trails root:
-`grep -rPc ': any\b|as any\b|as unknown as' packages/activerecord/lib --include=*.ts`
-over the files named above. `pnpm typecheck`, `pnpm parity:lint:counts`,
-`pnpm test:types`, `pnpm parity:api` and `pnpm parity:test` are green, with
-non-negative parity deltas.
+Count hits from `packages/activerecord/lib`, before and after, and record both in
+the PR body:
+
+```sh
+grep -Po ': any|as any|as unknown as' core.ts persistence.ts scoping.ts validations/uniqueness.ts | wc -l
+```
+
+This is the RFC's Motivation command, which counts matches, not lines.
+`pnpm typecheck`, `pnpm parity:lint:counts`, `pnpm test:types`,
+`pnpm parity:api` and `pnpm parity:test` are green, with non-negative parity
+deltas.
 
 ## Definition of done
 

@@ -18,14 +18,14 @@ closed-reason: null
 
 ## Context
 
-`relation.ts` (37), `relation/finder-methods.ts` (33), `relation/batches.ts`
-(19), `relation/merger.ts` (18), `relation/calculations.ts` (18) and
-`relation/delegation.ts` (15) hold 140 hits. `find` / `first` / `take`
+`relation.ts` (48), `relation/finder-methods.ts` (35), `relation/batches.ts`
+(19), `relation/merger.ts` (20), `relation/calculations.ts` (21) and
+`relation/delegation.ts` (18) hold 140 hits. `find` / `first` / `take`
 returning `any` lose the model type for every caller.
 
 ## Acceptance criteria
 
-- [ ] Combined hits in those six files fall by at least 60%.
+- [ ] Hits in the files above fall from 162 to ≤ 65 (at least 60%).
 - [ ] `find`, `findBy`, `first`, `last`, `take` and their bang forms return
       `T` / `T | null` / `T[]` per Rails' arity arms.
 - [ ] `findEach` / `findInBatches` / `inBatches` yield typed records /
@@ -34,11 +34,17 @@ returning `any` lose the model type for every caller.
 
 ## Verification
 
-Before and after counts, recorded in the PR body, from the trails root:
-`grep -rPc ': any\b|as any\b|as unknown as' packages/activerecord/lib --include=*.ts`
-over the files named above. `pnpm typecheck`, `pnpm parity:lint:counts`,
-`pnpm test:types`, `pnpm parity:api` and `pnpm parity:test` are green, with
-non-negative parity deltas.
+Count hits from `packages/activerecord/lib`, before and after, and record both in
+the PR body:
+
+```sh
+grep -Po ': any|as any|as unknown as' relation.ts relation/finder-methods.ts relation/batches.ts relation/merger.ts relation/calculations.ts relation/delegation.ts | wc -l
+```
+
+This is the RFC's Motivation command, which counts matches, not lines.
+`pnpm typecheck`, `pnpm parity:lint:counts`, `pnpm test:types`,
+`pnpm parity:api` and `pnpm parity:test` are green, with non-negative parity
+deltas.
 
 ## Definition of done
 

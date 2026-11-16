@@ -27,7 +27,7 @@ and `ActionController::LogSubscriber` inherits them. Rails:
 
 ## Acceptance criteria
 
-- [ ] Combined hits in those files fall by at least 60%.
+- [ ] Hits in the files above fall from 26 to ≤ 11 (at least 60%).
 - [ ] `Notifications::Event#payload` and subscriber callbacks take
       `Record<string, unknown>` (or a generic payload) instead of `any`.
 - [ ] Subclass log subscribers in activerecord and actionpack still
@@ -35,11 +35,17 @@ and `ActionController::LogSubscriber` inherits them. Rails:
 
 ## Verification
 
-Before and after counts, recorded in the PR body, from the trails root:
-`grep -rPc ': any\b|as any\b|as unknown as' packages/activesupport/lib --include=*.ts`
-over the files named above. `pnpm typecheck`, `pnpm parity:lint:counts`,
-`pnpm test:types`, `pnpm parity:api` and `pnpm parity:test` are green, with
-non-negative parity deltas.
+Count hits from `packages/activesupport/lib`, before and after, and record both in
+the PR body:
+
+```sh
+grep -Po ': any|as any|as unknown as' log-subscriber.ts subscriber.ts notifications.ts tagged-logging.ts | wc -l
+```
+
+This is the RFC's Motivation command, which counts matches, not lines.
+`pnpm typecheck`, `pnpm parity:lint:counts`, `pnpm test:types`,
+`pnpm parity:api` and `pnpm parity:test` are green, with non-negative parity
+deltas.
 
 ## Definition of done
 

@@ -35,13 +35,13 @@ double cast needs a rule before it can be counted.
 
 - [ ] A new rule `eslint/no-double-cast.mjs` (`blazetrails/no-double-cast`)
       reports `x as unknown as T`, with a rule test.
-- [ ] It is at `warn` on the `lib/**/*.ts` of activerecord, actionpack,
-      activesupport, activemodel and actionview, and listed in `RULES`.
-
-- [ ] `parity:lint:counts` counts `as unknown as` per file in
-      the `lib/` of activerecord, actionpack, activesupport, activemodel and
-      actionview, only-shrink
-      against `origin/main`, a new file with one is red.
+- [ ] The rule is at `warn` on the `lib/**/*.ts` of activerecord,
+      actionpack, activesupport, activemodel and actionview, and listed in
+      `RULES`, so `parity:lint:counts` counts it per file against
+      `origin/main`. A file's count may not grow. A file absent at the base
+      counts 0 there (`eslint-count.ts`, "a key absent at the base counts 0"),
+      so a newly added `lib/` file with one double cast is red. That is the
+      same rule the `no-explicit-any` count applies today.
 - [ ] The other four packages' `lib/` join the `no-explicit-any` count and
       `no-explicit-any-disable`.
 - [ ] A unit test for the counter covers a file that grows, shrinks and is new.
