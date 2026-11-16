@@ -1,7 +1,7 @@
 ---
 title: "ViteAssets#config is read synchronously once prewarmed; peekConfig retires"
-status: ready
-updated: 2026-11-15
+status: claimed
+updated: 2026-11-16
 rfc: "0239-vite-assets-port"
 cluster: null
 packages: [vite-assets]

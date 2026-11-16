@@ -1,6 +1,6 @@
 ---
 title: "rack-proxy-tls-test-fixtures"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0236-rack-proxy-port"
 cluster: null

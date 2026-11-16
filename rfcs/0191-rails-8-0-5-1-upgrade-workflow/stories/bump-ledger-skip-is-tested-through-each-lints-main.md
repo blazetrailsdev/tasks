@@ -1,14 +1,14 @@
 ---
 title: "The ledger skip is tested through each call lint's main, --write included"
-status: draft
-updated: 2026-11-15
+status: ready
+updated: 2026-11-16
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

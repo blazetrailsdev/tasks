@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-killed-supervisee-still-deregisters"
-status: draft
+status: closed
 updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of solid-queue-quit-supervisee-exits-like-exit-bang (same QUIT-kill-doesn't-stop-async-body cause); also covers term-supervisor-exceeding-timeout flake"
 ---
 
 ## Context

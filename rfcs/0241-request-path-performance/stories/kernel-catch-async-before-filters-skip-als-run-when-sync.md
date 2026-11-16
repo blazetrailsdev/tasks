@@ -1,7 +1,7 @@
 ---
 title: "kernel-catch-async-before-filters-skip-als-run-when-sync"
-status: claimed
-updated: 2026-11-15
+status: closed
+updated: 2026-11-16
 rfc: "0241-request-path-performance"
 cluster: null
 packages: []
@@ -9,11 +9,11 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10180
 claim: "2026-11-15T19:51:37Z"
 assignee: "kernel-catch-async-before-filters-skip-als-run-when-sync"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: a catch cannot know before running its block whether it will return a thenable, and a throw after an await can only find its catch through a per-catch async-context frame entered before the block runs. Dropping the frame for sync blocks (trails#10180) leaked same-tag throws across requests (throwDataP true for a genuinely uncaught throw, so transaction.ts:908 commits) and exposed throws to class-based rescues. Closed on operator ruling."
 ---
 
 ## Context

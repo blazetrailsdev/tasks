@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-recurring-schedule-v1-7-2"
-status: claimed
+status: in-progress
 updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10181
 claim: "2026-11-16T10:51:35Z"
 assignee: "solid-queue-recurring-schedule-v1-7-2"
 blocked-by: null
