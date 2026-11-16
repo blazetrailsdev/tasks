@@ -1,6 +1,6 @@
 ---
 title: "Query assertions take includeSchema as a positional middle parameter instead of a trailing keyword"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

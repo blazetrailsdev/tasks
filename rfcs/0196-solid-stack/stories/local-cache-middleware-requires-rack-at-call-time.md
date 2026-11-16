@@ -1,6 +1,6 @@
 ---
 title: "LocalCache::Middleware loads Rack::BodyProxy instead of assuming rack is already imported"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: six adapters/postgresql .trails test files build bespoke tables with raw SQL"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

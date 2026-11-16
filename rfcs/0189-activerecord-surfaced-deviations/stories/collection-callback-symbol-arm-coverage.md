@@ -1,6 +1,6 @@
 ---
 title: "Cover the Symbol/method-name arm of define_callback for collection add/remove callbacks"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

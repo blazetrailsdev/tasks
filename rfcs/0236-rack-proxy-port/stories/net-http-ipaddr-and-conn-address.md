@@ -1,6 +1,6 @@
 ---
 title: "Net::HTTP ipaddr= and conn_address for connect and CONNECT"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0236-rack-proxy-port"
 cluster: null

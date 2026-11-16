@@ -1,6 +1,6 @@
 ---
 title: "BookDestroyAsyncWithScopedTags drops Rails' has_many scope; BookDestroyAsync drops published!"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

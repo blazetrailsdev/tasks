@@ -1,6 +1,6 @@
 ---
 title: "net-smtp: port Net::Protocol so ssl_socket_connect lives on it"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0226-mail-stack-to-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Mysql2 DatabaseStatements#select_all's unprepared_statement arm has no test in the default lanes"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

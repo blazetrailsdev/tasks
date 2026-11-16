@@ -1,6 +1,6 @@
 ---
 title: "integration-test-app-and-parsed-body-are-typed-unknown"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

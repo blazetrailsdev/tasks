@@ -1,6 +1,6 @@
 ---
 title: "authentication-generator-e2e-request-cycle"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
