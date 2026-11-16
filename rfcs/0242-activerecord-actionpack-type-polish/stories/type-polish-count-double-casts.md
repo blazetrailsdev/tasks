@@ -2,7 +2,7 @@
 title: "parity:lint:counts ratchets as-unknown-as in the five type-polish packages' lib"
 status: draft
 updated: 2026-11-16
-rfc: "0000-activerecord-actionpack-type-polish"
+rfc: "0242-activerecord-actionpack-type-polish"
 cluster: type-polish-gates
 packages: [activerecord, actionpack, activesupport, activemodel, actionview]
 deps: []

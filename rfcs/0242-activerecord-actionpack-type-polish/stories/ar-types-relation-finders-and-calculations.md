@@ -2,7 +2,7 @@
 title: "Relation finder, calculation, batch and merger types without any"
 status: draft
 updated: 2026-11-16
-rfc: "0000-activerecord-actionpack-type-polish"
+rfc: "0242-activerecord-actionpack-type-polish"
 cluster: type-polish-activerecord
 packages: [activerecord]
 deps: [type-polish-count-double-casts]

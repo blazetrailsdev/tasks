@@ -1,5 +1,5 @@
 ---
-rfc: "0000-activerecord-actionpack-type-polish"
+rfc: "0242-activerecord-actionpack-type-polish"
 title: "Type polish for activerecord, actionpack and their neighbours"
 status: draft
 created: 2026-11-16
@@ -18,10 +18,7 @@ clusters:
   - type-polish-neighbours
 ---
 
-<!-- Unnumbered until merge: `scripts/finalize-rfc.mjs` swaps 0000 for the
-     assigned number at merge. -->
-
-# RFC — Type polish for activerecord, actionpack and their neighbours
+# RFC 0242 — Type polish for activerecord, actionpack and their neighbours
 
 ## Summary
 

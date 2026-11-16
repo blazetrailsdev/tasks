@@ -2,7 +2,7 @@
 title: "activesupport notifications and log subscribers typed without any"
 status: draft
 updated: 2026-11-16
-rfc: "0000-activerecord-actionpack-type-polish"
+rfc: "0242-activerecord-actionpack-type-polish"
 cluster: type-polish-neighbours
 packages: [activesupport]
 deps: [type-polish-count-double-casts]

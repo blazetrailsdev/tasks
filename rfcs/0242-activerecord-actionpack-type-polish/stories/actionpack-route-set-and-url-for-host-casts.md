@@ -2,7 +2,7 @@
 title: "Route set and url_for without double casts"
 status: draft
 updated: 2026-11-16
-rfc: "0000-activerecord-actionpack-type-polish"
+rfc: "0242-activerecord-actionpack-type-polish"
 cluster: type-polish-actionpack
 packages: [actionpack]
 deps: [type-polish-count-double-casts]
