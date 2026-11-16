@@ -176,6 +176,14 @@ static async new<T extends Klass>(this: { prototype: T }, ...args): Promise<T> {
   records the type and runtime tests). `SchemaDumper` (subclassed by
   `TestSchemaDumper` in `mysql/schema-dumper.trails.test.ts`) is the
   case in this RFC.
+- The constructor and its `static new` are not extra surface.
+  `countTsInternalNames` (`scripts/api-compare/extra-surface.ts`) does not
+  count a member named `constructor` as an RFC 0120 `internal` name: it ports
+  Ruby's `initialize`, which MRI makes private on definition
+  (`vendor/ruby/v3.3.11/vm_method.c`, `rb_method_entry_make`), and declares no
+  name. `walkTsFileSurface` does not score a `static new` that calls
+  `rbClassNewInstance` beside a non-public constructor, since it is Ruby's
+  `Class#new`. Ruled by the operator on 2026-11-16.
 
 **(b) A `Thread`.** Where Rails runs the work on a background thread
 (`Reaper#run`'s `Thread.new`, Action Cable's listener threads, Solid Queue's
