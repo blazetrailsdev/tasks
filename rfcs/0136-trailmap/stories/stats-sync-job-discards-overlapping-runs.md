@@ -5,7 +5,8 @@ updated: 2026-11-16
 rfc: "0136-trailmap"
 cluster: null
 packages: []
-deps: []
+deps:
+  - solid-queue-limits-concurrency-on-conflict-discard
 deps-rfc: []
 est-loc: 20
 priority: null
