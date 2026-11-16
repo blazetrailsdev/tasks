@@ -1,7 +1,7 @@
 ---
 rfc: "0241-request-path-performance"
 title: "Request-path performance, measured against Rails on the $12 Server Challenge"
-status: closed
+status: active
 created: 2026-11-13
 updated: 2026-11-16
 owner: "@deanmarano"
@@ -9,6 +9,9 @@ packages:
   - "activerecord"
   - "activesupport"
   - "ruby-compat"
+  - "activemodel"
+  - "rackup"
+  - "trailties"
 clusters:
   - request-perf
 ---
@@ -52,6 +55,48 @@ come from allocating less, and from spending less CPU, since each 10% of CPU
 removed takes about a third off the drain time.
 
 All numbers were measured on trails main `094dec8aa8`. trails#10062, which makes `rbCallSuper` cheaper and inlines `init_internals`, merged while the benchmark ran and is not reflected in them.
+
+### Re-bench and second profile (2026-11-16)
+
+A re-bench on trails main `2233298a35` (with trails#10062,
+trails#10087, trails#10093 and trails#10094) ran on a rebuilt rig that turned out faster: Rails scored **9,000**
+there, against 7,250 on the first rig. On that one rig, trails before the
+fixes (`094dec8aa8`) and after them both scored **7,750**. The fixes did not
+move the score, and trails is 1,250 users behind Rails on equal hardware.
+
+The second profile used a slimmer harness, which later stories reuse:
+
+- **Rig:** one c7i.xlarge. The server runs in a cgroup pinned to cpu0 with a
+  2 GB cap, cpu2 (cpu0's hyperthread sibling) is left idle, and k6 runs on
+  cpus 1 and 3.
+- **Load:** a 30 s warm-up at 1,000 users, then 2 minutes at 4,000 users
+  (about 540 req/s) of the challenge's `bench/load.js`.
+- **Passes:** one plain pass for latency and CPU per request, one with
+  `--cpu-prof` and a `PerformanceObserver` GC log, and one with an inspector
+  sampling heap profile that includes objects collected by minor and major GC.
+
+Results on trails main `8dc7d65058`:
+
+- **Plain pass:** 1,324 µs of CPU per request, p95 18 ms, p99 158 ms.
+- **GC:** 8.3% of busy CPU. Scavenges average 12 ms each with
+  `--max-semi-space-size=64`, and major GCs are 42 ms at p50 and 66 ms at most.
+- **Allocation:** about 267 KB per request in this harness. That is not
+  comparable to the 108 KB above, which was taken through a different entry
+  point and load.
+
+Hot spots without a story before this profile, in shares of busy CPU or
+allocated bytes:
+
+| Site                                            | Share                     | Story                                        |
+| ----------------------------------------------- | ------------------------- | -------------------------------------------- |
+| Fresh `prepare` for the unpreparable feed query | 8.4% CPU                  | `unpreparable-select-statement-compile-cost` |
+| `Relation#clone` descriptor path, after #10094  | 6.3% bytes, 4.1% CPU      | `relation-clone-descriptor-fallback`         |
+| First read of a loaded attribute                | about 12% bytes, 2.4% CPU | `attribute-first-read-allocations`           |
+| `respond_to?` resolution                        | 3.5% CPU                  | `respond-to-lookup-cache`                    |
+| `stmt.columns()` three times per query          | 1.7% CPU                  | `sqlite-statement-columns-read-once`         |
+| Rack env build and `envConfig` merge            | 0.8% CPU, 1.6% bytes      | `node-handler-env-allocation`                |
+| `Thread.new` stack capture per request          | 0.6% CPU                  | `thread-creation-frame-lazy`                 |
+| Young-generation size                           | 12 ms scavenges           | `semi-space-flag-evaluate`                   |
 
 ## Design
 
