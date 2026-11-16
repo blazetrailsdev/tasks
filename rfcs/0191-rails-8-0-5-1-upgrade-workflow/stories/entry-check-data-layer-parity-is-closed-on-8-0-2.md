@@ -1,7 +1,7 @@
 ---
 title: "Entry check: the data layer is at 100% on Rails 8.0.2 and every gate is green"
 status: blocked
-updated: 2026-11-11
+updated: 2026-11-16
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: entry
 packages: [arel, activemodel, activerecord]
@@ -18,7 +18,7 @@ priority: null
 pr: null
 claim: "2026-11-11T14:45:38Z"
 assignee: "entry-check-data-layer-parity-is-closed-on-8-0-2"
-blocked-by: "data layer not at 100%: 5 AR/AM methods + 8 AR tests (yaml_column) missing, main CI red at 876804dd8b; findings recorded in story (tasks aaa011434)"
+blocked-by: "data layer not at 100%: the only open prerequisite is am-attributes-initialize-inlined (still blocked on a compare.ts gate change / operator ruling; compare.ts:6856 on origin/main still throws for unpaired @inlinedFrom initialize). The 4 AR methods + yaml_column tests landed (trails#10018, #10046, #10015). Earlier 'main CI red at 876804dd8b' is stale (main green at 711f2f63a5, 2026-11-16)."
 closed-reason: null
 ---
 

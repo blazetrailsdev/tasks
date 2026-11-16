@@ -1,6 +1,6 @@
 ---
 title: "Port SQLite3::Pragmas#table_info with version_compare and tweak_default"
-status: ready
+status: blocked
 updated: 2026-11-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 80
 priority: 92
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-16T17:52:02Z"
+assignee: "boot-loader-add-index-needs-if-not-exists"
+blocked-by: "upstream driver API: none of better-sqlite3 13 / node:sqlite / libsql / expo-sqlite exports sqlite3_libversion(_number); SQLite3.libversion cannot be ported without a trails-only 'SELECT sqlite_version()' query, which the AC forbids"
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-term-exceeding-timeout-in-flight-flake"
-status: draft
+status: in-progress
 updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10191
+claim: "2026-11-16T17:50:34Z"
+assignee: "solid-queue-term-exceeding-timeout-in-flight-flake"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Bump nokogiri from v1.18.3 to v1.19.7, the floor rails-html-sanitizer 1.7.2 forces"
-status: draft
-updated: 2026-11-10
+status: ready
+updated: 2026-11-16
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: post-flip
 packages: ["scripts", "nokogiri"]

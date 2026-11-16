@@ -1,7 +1,7 @@
 ---
 title: "Bump rails-html-sanitizer from v1.6.2 to v1.7.2, the floor actionview 8.0.5.2's gemspec requires"
-status: draft
-updated: 2026-11-10
+status: ready
+updated: 2026-11-16
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: post-flip
 packages: ["scripts", "html-sanitizer", "actionview"]

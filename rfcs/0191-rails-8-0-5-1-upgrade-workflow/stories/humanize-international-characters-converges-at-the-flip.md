@@ -1,7 +1,7 @@
 ---
 title: "humanize matches [[:alpha:]] words and its 8.0.5.2 test is ported"
-status: draft
-updated: 2026-11-15
+status: ready
+updated: 2026-11-16
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
 packages: []

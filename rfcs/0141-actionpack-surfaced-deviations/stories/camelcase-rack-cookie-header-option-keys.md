@@ -1,6 +1,6 @@
 ---
 title: "Drop Response's rackCookieValue bridge now that rack reads camelCase cookie keys"
-status: claimed
+status: done
 updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#10188
 claim: "2026-11-16T16:36:44Z"
 assignee: "mime-type-proxy-lifts-into-the-prototype-chain"
 blocked-by: null

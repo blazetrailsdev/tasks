@@ -1,6 +1,6 @@
 ---
 title: "action-view-collection-caching-initializer"
-status: ready
+status: in-progress
 updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10193
+claim: "2026-11-16T17:36:39Z"
+assignee: "action-cable-engine-defined-in-actioncable-package"
 blocked-by: null
 closed-reason: null
 ---

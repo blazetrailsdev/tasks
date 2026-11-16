@@ -1,7 +1,7 @@
 ---
 title: "Action Cable Redis adapter rescues CONNECTION_ERRORS, not ConnectionError"
-status: draft
-updated: 2026-11-15
+status: ready
+updated: 2026-11-16
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
 packages: []

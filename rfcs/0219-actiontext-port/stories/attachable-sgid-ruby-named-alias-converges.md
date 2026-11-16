@@ -1,6 +1,6 @@
 ---
 title: "Attachable's Ruby-named attachable_sgid alias converges"
-status: ready
+status: claimed
 updated: 2026-11-16
 rfc: "0219-actiontext-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-16T17:48:49Z"
+assignee: "attachable-sgid-ruby-named-alias-converges"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "api-compare: credit a class expression inside a conditional static initializer"
-status: ready
+status: done
 updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9952
+claim: "2026-11-16T17:21:42Z"
+assignee: "activerecord-converge-pinned-protocol-body-divergences"
 blocked-by: null
 closed-reason: null
 ---

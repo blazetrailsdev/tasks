@@ -1,7 +1,7 @@
 ---
 title: "Tag the last commit on main whose source of truth is Rails v8.0.2"
-status: draft
-updated: 2026-10-13
+status: ready
+updated: 2026-11-16
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: flip
 packages: [scripts]

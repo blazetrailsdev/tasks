@@ -1,6 +1,6 @@
 ---
 title: "Preflight failing on main @63f4af42"
-status: ready
+status: closed
 updated: 2026-11-16
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-16T17:44:42Z"
+assignee: "red-63f4af42"
 blocked-by: null
-closed-reason: null
+closed-reason: "Infra: Preflight actions/checkout@v5 hung and was canceled (run 43918590751); rerun of failed jobs came back green"
 ---
 
 ## Context

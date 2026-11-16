@@ -1,6 +1,6 @@
 ---
 title: "activerecord: SQLite3::Backup#step copies pages through the driver's backup API instead of replaying SQL"
-status: ready
+status: blocked
 updated: 2026-11-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 250
 priority: 91
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-16T17:52:02Z"
+assignee: "boot-loader-add-index-needs-if-not-exists"
+blocked-by: "upstream driver API: better-sqlite3 13 db.backup(path) and node:sqlite backup(db, path) take a destination PATH, not a handle; no binding exposes sqlite3_backup_init between two open handles (needed for :memory: -> :memory: and nPage stepping)"
 closed-reason: null
 ---
 

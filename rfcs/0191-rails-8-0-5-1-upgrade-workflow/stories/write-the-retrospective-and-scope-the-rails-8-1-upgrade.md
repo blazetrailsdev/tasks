@@ -1,7 +1,7 @@
 ---
 title: "Write the retrospective and scope the Rails 8.1 upgrade from the v8.0.5.2 base"
-status: draft
-updated: 2026-10-13
+status: ready
+updated: 2026-11-16
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: close
 packages: [scripts]

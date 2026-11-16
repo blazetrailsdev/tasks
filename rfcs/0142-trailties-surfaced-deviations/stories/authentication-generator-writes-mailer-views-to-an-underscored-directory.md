@@ -1,6 +1,6 @@
 ---
 title: "Authentication generator writes mailer views to the kebab-case directory"
-status: ready
+status: done
 updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-16T17:36:39Z"
+assignee: "action-cable-engine-defined-in-actioncable-package"
 blocked-by: null
 closed-reason: null
 ---

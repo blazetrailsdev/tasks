@@ -1,7 +1,7 @@
 ---
 title: "Re-read every recited Rails citation against the v8.0.5.2 tree"
-status: draft
-updated: 2026-10-13
+status: ready
+updated: 2026-11-16
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: post-flip
 packages: [scripts, activesupport, activejob, arel]

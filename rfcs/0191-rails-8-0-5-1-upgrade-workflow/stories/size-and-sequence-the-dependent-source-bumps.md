@@ -1,7 +1,7 @@
 ---
 title: "Dry-run each dependent source the Rails 8.0.5.2 lock moves, beyond the sanitizer chain, and file one bump story per source"
-status: draft
-updated: 2026-10-13
+status: ready
+updated: 2026-11-16
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: post-flip
 packages:

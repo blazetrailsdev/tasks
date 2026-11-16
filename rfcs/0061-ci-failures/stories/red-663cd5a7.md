@@ -1,6 +1,6 @@
 ---
 title: "Unit Tests (1) failing on main @663cd5a7"
-status: claimed
+status: closed
 updated: 2026-11-16
 rfc: "0061-ci-failures"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: "2026-11-16T16:58:03Z"
 assignee: "red-663cd5a7"
 blocked-by: null
-closed-reason: null
+closed-reason: "Infra: Unit Tests (1) was cancelled after apt-get hung 20min in 'Install ImageMagick' before any test ran; rerun of failed jobs on 663cd5a7 is green"
 ---
 
 ## Context

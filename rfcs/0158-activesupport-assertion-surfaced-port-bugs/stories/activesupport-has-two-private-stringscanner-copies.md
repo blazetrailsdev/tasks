@@ -1,6 +1,6 @@
 ---
 title: "Two private StringScanner copies model Ruby's strscan; fold into one Ruby-core module"
-status: claimed
+status: in-progress
 updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#10189
 claim: "2026-11-16T16:51:45Z"
 assignee: "activesupport-has-two-private-stringscanner-copies"
 blocked-by: null

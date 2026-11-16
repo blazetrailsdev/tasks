@@ -1,6 +1,6 @@
 ---
 title: "attribute-names-for-serialization-is-attributes-keys"
-status: ready
+status: in-progress
 updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10192
+claim: "2026-11-16T17:21:42Z"
+assignee: "activerecord-converge-pinned-protocol-body-divergences"
 blocked-by: null
 closed-reason: null
 ---

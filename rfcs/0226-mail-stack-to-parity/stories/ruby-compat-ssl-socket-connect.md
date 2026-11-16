@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat-ssl-socket-connect"
-status: ready
+status: in-progress
 updated: 2026-11-16
 rfc: "0226-mail-stack-to-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10190
+claim: "2026-11-16T17:06:48Z"
+assignee: "net-protocol-single-protocol-class-in-ruby-compat"
 blocked-by: null
 closed-reason: null
 ---
