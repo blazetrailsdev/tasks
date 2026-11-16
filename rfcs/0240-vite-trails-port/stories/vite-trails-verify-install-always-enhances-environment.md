@@ -1,5 +1,5 @@
 ---
-title: "vite-trails-verify-install-always-enhances-environment"
+title: "vite:verify_install always enhances environment (vite-trails depends on trailties in package.json)"
 status: draft
 updated: 2026-11-16
 rfc: "0240-vite-trails-port"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 20
 priority: null
 pr: null
 claim: null
