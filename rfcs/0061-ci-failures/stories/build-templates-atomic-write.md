@@ -1,6 +1,6 @@
 ---
 title: "build-templates-atomic-write"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0061-ci-failures"
 cluster: null

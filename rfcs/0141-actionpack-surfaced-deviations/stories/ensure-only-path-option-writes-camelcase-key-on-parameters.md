@@ -1,6 +1,6 @@
 ---
 title: "RoutingUrlFor#ensureOnlyPathOption writes onlyPath where Rails writes the String only_path on a Parameters"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

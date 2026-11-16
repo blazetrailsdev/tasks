@@ -1,6 +1,6 @@
 ---
 title: "test:compare credits solid_cache behavior modules run through shared ActiveSupport behaviors"
-status: in-progress
+status: blocked
 updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null
@@ -13,7 +13,7 @@ priority: 1
 pr: trails#10202
 claim: "2026-11-16T19:06:40Z"
 assignee: "solid-cache-test-compare-credits-shared-behaviors"
-blocked-by: null
+blocked-by: "waiting on solid-cache-bump-to-v1-0-9: v1.0.7's local_cache_behavior.rb:217 fetch_multi is an older revision than the Rails 8.0.2 body (:228) the shared behavior ports; v1.0.9's behaviors_rails_8_0 copy matches"
 closed-reason: null
 ---
 

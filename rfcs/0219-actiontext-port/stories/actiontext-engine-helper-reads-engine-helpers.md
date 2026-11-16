@@ -1,7 +1,7 @@
 ---
 title: "actiontext-engine-helper-reads-engine-helpers"
-status: blocked
-updated: 2026-11-15
+status: claimed
+updated: 2026-11-16
 rfc: "0219-actiontext-port"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-15T16:25:03Z"
+claim: "2026-11-16T20:38:00Z"
 assignee: "actiontext-engine-helper-reads-engine-helpers"
-blocked-by: "operator decision: helpers sit flat in packages/actiontext/lib, so allHelpersFromPath derives 'content' -> constantize('ContentHelper') (top-level miss); needs a ruling on how an isolated engine's flat lib/ layout maps helper paths to its namespace"
+blocked-by: null
 closed-reason: null
 ---
 

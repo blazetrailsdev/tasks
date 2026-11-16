@@ -1,6 +1,6 @@
 ---
 title: "Journey::Routes#add_route types its mapping against the ported Mapper::Mapping, not a local interface"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

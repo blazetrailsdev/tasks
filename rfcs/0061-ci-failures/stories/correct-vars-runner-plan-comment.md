@@ -1,6 +1,6 @@
 ---
 title: "Stop recommending vars.RUNNER=self-hosted in ci.yml now that routing is idle-checked"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0061-ci-failures"
 cluster: null
