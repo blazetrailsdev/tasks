@@ -1,6 +1,6 @@
 ---
 title: "Background fire-and-forget promises run on ruby-compat Thread or are awaited"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0234-no-void-promises"
 cluster: background-work

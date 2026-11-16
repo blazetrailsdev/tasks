@@ -1,6 +1,6 @@
 ---
 title: "Port ViteTrails::CLI (vite:install for Rails) and the assets:precompile hook"
-status: ready
+status: in-progress
 updated: 2026-11-16
 rfc: "0240-vite-trails-port"
 cluster: vite-trails
@@ -9,9 +9,9 @@ deps: [vite-trails-package-and-tag-helpers, vite-assets-cli-and-binstub, vite-as
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10200
+claim: "2026-11-16T19:13:50Z"
+assignee: "vite-trails-install-and-precompile-hook"
 blocked-by: null
 closed-reason: null
 ---

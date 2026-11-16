@@ -1,6 +1,6 @@
 ---
 title: "The Loop panel's buttons are sentence case, and their labels stop doubling as control values"
-status: draft
+status: ready
 updated: 2026-11-16
 rfc: "0136-trailmap"
 cluster: null

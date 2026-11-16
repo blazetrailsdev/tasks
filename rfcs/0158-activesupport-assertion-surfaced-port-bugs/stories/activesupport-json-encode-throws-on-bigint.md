@@ -1,6 +1,6 @@
 ---
 title: "ActiveSupport::JSON.encode throws on a bigint — jsonify short-circuits past Numeric#as_json"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

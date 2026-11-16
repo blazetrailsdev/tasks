@@ -1,6 +1,6 @@
 ---
 title: "isHtmlSafe takes the receiver as a parameter where Rails' html_safe? is zero-arg"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Base.typeForAttribute returns ValueType, never null (attribute_types default)"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

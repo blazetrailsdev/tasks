@@ -1,6 +1,6 @@
 ---
 title: "Converge HostAuthorization#blocked_hosts onto the Rails reader calls"
-status: ready
+status: in-progress
 updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10204
+claim: "2026-11-16T19:37:15Z"
+assignee: "abstract-controller-action-methods-drops-underscore-filter"
 blocked-by: null
 closed-reason: null
 ---

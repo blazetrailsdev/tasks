@@ -1,6 +1,6 @@
 ---
 title: "Action Cable Redis listener handlers use synchronize, not lock/unlock"
-status: claimed
+status: in-progress
 updated: 2026-11-16
 rfc: "0234-no-void-promises"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
+pr: trails#10199
 claim: "2026-11-16T18:37:11Z"
 assignee: "action-text-content-built-with-awaited-static-new"
 blocked-by: null

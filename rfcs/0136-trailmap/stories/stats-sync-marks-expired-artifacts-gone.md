@@ -1,6 +1,6 @@
 ---
 title: "Stats sync marks expired job-log artifacts gone instead of retrying them every run"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0136-trailmap"
 cluster: null

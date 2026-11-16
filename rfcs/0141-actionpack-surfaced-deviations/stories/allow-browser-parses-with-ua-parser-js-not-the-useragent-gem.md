@@ -1,6 +1,6 @@
 ---
 title: "AllowBrowser parses with ua-parser-js, not the useragent gem Rails uses"
-status: ready
+status: blocked
 updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-16T19:37:15Z"
+assignee: "abstract-controller-action-methods-drops-underscore-filter"
+blocked-by: "operator decision: vendor and port the useragent gem as BrowserBlocker's parser"
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "solid_queue jobs_by_id readers keep Ruby Hash insertion order"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null

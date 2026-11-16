@@ -1,6 +1,6 @@
 ---
 title: "Bump solid_queue and port limits_concurrency on_conflict: :discard"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null

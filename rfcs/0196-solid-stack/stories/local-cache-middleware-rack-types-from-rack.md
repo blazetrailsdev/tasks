@@ -1,6 +1,6 @@
 ---
 title: "LocalCache::Middleware imports Rack env/response types instead of redeclaring them"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null

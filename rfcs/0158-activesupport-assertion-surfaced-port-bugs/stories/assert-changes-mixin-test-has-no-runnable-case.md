@@ -1,6 +1,6 @@
 ---
 title: "assert_changes mix-in test cannot run a test case"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

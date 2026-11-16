@@ -8,7 +8,7 @@ packages: ["solid-queue"]
 deps: []
 deps-rfc: []
 est-loc: 400
-priority: 10
+priority: 11
 pr: null
 claim: null
 assignee: null

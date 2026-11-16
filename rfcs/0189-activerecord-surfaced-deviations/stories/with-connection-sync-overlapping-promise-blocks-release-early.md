@@ -1,6 +1,6 @@
 ---
 title: "withConnectionSync: an overlapping promise block's deferred release checks in a connection still in use"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

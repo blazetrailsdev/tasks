@@ -1,6 +1,6 @@
 ---
 title: "solid-cache parity:api reaches 100% (MaglevHash helpers, wrap_in_rails_executor)"
-status: ready
+status: in-progress
 updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#10202
+claim: "2026-11-16T19:06:40Z"
+assignee: "solid-cache-test-compare-credits-shared-behaviors"
 blocked-by: null
 closed-reason: null
 ---

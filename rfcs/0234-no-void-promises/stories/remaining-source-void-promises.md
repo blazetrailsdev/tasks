@@ -1,6 +1,6 @@
 ---
 title: "The remaining source sites in rake, ruby-compat, trailties, thor, mail, arel, actionview and others stop dropping promises"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0234-no-void-promises"
 cluster: discarded-calls

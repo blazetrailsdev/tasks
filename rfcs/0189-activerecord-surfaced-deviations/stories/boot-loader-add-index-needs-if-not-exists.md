@@ -1,6 +1,6 @@
 ---
 title: "Make the adapter-specific boot path idempotent so add_index can drop ifNotExists"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

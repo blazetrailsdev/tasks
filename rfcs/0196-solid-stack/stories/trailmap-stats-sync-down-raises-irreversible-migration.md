@@ -1,6 +1,6 @@
 ---
 title: "trailmap-stats-sync-down-raises-irreversible-migration"
-status: blocked
+status: ready
 updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null
@@ -8,11 +8,11 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 15
 pr: null
-claim: "2026-11-16T00:51:34Z"
-assignee: "local-cache-middleware-requires-rack-at-call-time"
-blocked-by: "waiting on trails#10156 (IrreversibleMigration export) to merge before trailmap re-vendors the activerecord tarball"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "array-utils.ts aggregates four Rails core_ext/array files"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

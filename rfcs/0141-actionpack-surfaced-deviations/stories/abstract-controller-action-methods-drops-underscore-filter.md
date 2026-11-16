@@ -1,6 +1,6 @@
 ---
 title: "actionpack: AbstractController.actionMethods skips _-prefixed names, an arm Rails' public_instance_methods lacks (abstract_controller/base.rb:77-107)"
-status: ready
+status: blocked
 updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-16T19:37:15Z"
+assignee: "abstract-controller-action-methods-drops-underscore-filter"
+blocked-by: "operator decision: packages/actionpack/CLAUDE.md § 'An action's name is its method's name' ratifies the _-prefix non-action helper rule; dropping the filter needs that ruling reversed"
 closed-reason: null
 ---
 

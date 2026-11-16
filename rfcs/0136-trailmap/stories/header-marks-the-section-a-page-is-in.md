@@ -1,6 +1,6 @@
 ---
 title: "The header marks the section a page is in, not only an exact match"
-status: draft
+status: ready
 updated: 2026-11-16
 rfc: "0136-trailmap"
 cluster: null

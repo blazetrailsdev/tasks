@@ -1,6 +1,6 @@
 ---
 title: "RoutingUrlFor#ensureOnlyPathOption writes onlyPath where Rails writes the String only_path on a Parameters"
-status: ready
+status: in-progress
 updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10204
+claim: "2026-11-16T19:37:15Z"
+assignee: "abstract-controller-action-methods-drops-underscore-filter"
 blocked-by: null
 closed-reason: null
 ---

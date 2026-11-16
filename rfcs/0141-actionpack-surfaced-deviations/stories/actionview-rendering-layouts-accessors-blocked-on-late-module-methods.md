@@ -1,6 +1,6 @@
 ---
 title: "actionview-rendering-layouts-accessors-blocked-on-late-module-methods"
-status: ready
+status: blocked
 updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-16T19:37:15Z"
+assignee: "abstract-controller-action-methods-drops-underscore-filter"
+blocked-by: "operator ruling: how Renderers.add / register_detail define methods after include (acceptance criterion 1)"
 closed-reason: null
 ---
 

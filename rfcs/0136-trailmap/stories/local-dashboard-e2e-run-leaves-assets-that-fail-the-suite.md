@@ -1,6 +1,6 @@
 ---
 title: "A local dashboard e2e run leaves public/assets behind, which fails pnpm test"
-status: draft
+status: ready
 updated: 2026-11-16
 rfc: "0136-trailmap"
 cluster: null
