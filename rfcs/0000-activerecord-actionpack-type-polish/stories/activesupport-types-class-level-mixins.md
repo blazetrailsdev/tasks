@@ -19,7 +19,7 @@ closed-reason: null
 ## Context
 
 `packages/activesupport/lib/class-attribute.ts` (11 hits), `callbacks.ts`
-(8), `current-attributes.ts` (8), `rescuable.ts` (9) and `module-ext.ts` (7)
+(9), `current-attributes.ts` (8), `rescuable.ts` (9) and `module-ext.ts` (7)
 type the class-level machinery activerecord and actionpack build on. Casts
 there (`as unknown as T`, `AnyClass`, 19 casts to `Record` across the
 package) erase the subclass type before it reaches a model or controller.

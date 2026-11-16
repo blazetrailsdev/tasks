@@ -58,7 +58,7 @@ The neighbours, same measure:
 activerecord's model types are built on activemodel's and activesupport's
 (`class_attribute`, callbacks, validations), and actionview renders inside an
 actionpack controller, so a loose type there reaches the same app author.
-Their hot spots: activesupport `class-attribute.ts` (11), `log-subscriber.ts`
+Their hot spots, counted the same way: activesupport `class-attribute.ts` (11), `log-subscriber.ts`
 (9), `callbacks.ts` / `current-attributes.ts` (8 each), with 19 casts to
 `Record`; activemodel `secure-password.ts` (14), 12 casts to `Record`;
 actionview `test-case.ts` (15), `helpers/sanitize-helper.ts` (6), casts onto
@@ -72,9 +72,9 @@ and put `no-explicit-any` at `warn` with a per-file count ratchet
 (`pnpm parity:lint:counts`). What is left is concentrated: the
 `: any` parameters are mostly `args: any` (75), `record: any` (66),
 `reflection: any` (30), `relation: any` (29), `this: any` (25),
-`model: any` (23) and `klass: any` (20), and fifteen files hold over half of
-all hits, led by `relation/query-methods.ts` (109), `reflection.ts` (54),
-`relation.ts` (37), `core.ts` (37) and `relation/finder-methods.ts` (33).
+`model: any` (23) and `klass: any` (20), and fifteen files hold 547 of the
+1,046 hits, led by `relation/query-methods.ts` (126), `reflection.ts` (71),
+`relation.ts` (48), `core.ts` (38) and `relation/finder-methods.ts` (35).
 Each `record: any` / `relation: any` is a hole in the published `.d.ts`: a
 user calling the method gets no completion and no error.
 
@@ -210,3 +210,5 @@ per-package projects in `vitest.dx-tests.config.ts`.
 - 2026-11-16: review fixes: story counts use matches, not lines; per-story
   start counts; actionpack DX story gains Verification and Definition of
   done; gate criteria merged
+- 2026-11-16: every per-file count in the README and stories re-taken by
+  matches

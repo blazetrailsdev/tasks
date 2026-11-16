@@ -18,8 +18,7 @@ closed-reason: null
 
 ## Context
 
-`action-dispatch/routing/` has 32 `as unknown as`. `lib/action-dispatch/routing/route-set.ts` holds 22 `as unknown as` / `any`
-hits and `routing/url-for.ts` 5; casts onto `UrlForHost` (5) and
+`action-dispatch/routing/` has 32 `as unknown as`. `route-set.ts` holds 22 of them and `url-for.ts` 5; casts onto `UrlForHost` (5) and
 `PolymorphicHost` (7) recur across routing. Rails:
 `vendor/rails/v8.0.2/actionpack/lib/action_dispatch/routing/route_set.rb`,
 `url_for.rb`, `polymorphic_routes.rb`.

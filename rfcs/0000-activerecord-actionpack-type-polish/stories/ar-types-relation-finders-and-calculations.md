@@ -20,7 +20,7 @@ closed-reason: null
 
 `relation.ts` (48), `relation/finder-methods.ts` (35), `relation/batches.ts`
 (19), `relation/merger.ts` (20), `relation/calculations.ts` (21) and
-`relation/delegation.ts` (18) hold 140 hits. `find` / `first` / `take`
+`relation/delegation.ts` (18) hold 162 hits. `find` / `first` / `take`
 returning `any` lose the model type for every caller.
 
 ## Acceptance criteria

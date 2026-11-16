@@ -18,7 +18,7 @@ closed-reason: null
 
 ## Context
 
-`packages/activerecord/lib/relation/query-methods.ts` holds 109 of
+`packages/activerecord/lib/relation/query-methods.ts` holds 126 of
 activerecord `lib/`'s `any` / `as any` / `as unknown as` hits, the most of any
 file. Most are `args: any` on the `where` / `order` / `select` / `joins`
 family and `this: any` on bang methods. Rails:

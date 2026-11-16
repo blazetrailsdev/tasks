@@ -19,7 +19,7 @@ closed-reason: null
 ## Context
 
 `core.ts` (38), `persistence.ts` (26), `scoping.ts` (23) and
-`validations/uniqueness.ts` (19) hold 100 hits, mostly `this: any` /
+`validations/uniqueness.ts` (19) hold 106 hits, mostly `this: any` /
 `klass: any` on class methods mixed onto `Base`.
 
 ## Acceptance criteria
