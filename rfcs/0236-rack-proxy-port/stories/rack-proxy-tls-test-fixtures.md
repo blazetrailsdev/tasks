@@ -1,6 +1,6 @@
 ---
 title: "rack-proxy-tls-test-fixtures"
-status: claimed
+status: in-progress
 updated: 2026-11-16
 rfc: "0236-rack-proxy-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10177
 claim: "2026-11-16T11:51:33Z"
 assignee: "rack-proxy-tls-test-fixtures"
 blocked-by: null

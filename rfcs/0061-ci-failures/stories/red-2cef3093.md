@@ -1,6 +1,6 @@
 ---
 title: "System Tests (chromium) failing on main @2cef3093"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0061-ci-failures"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Background fire-and-forget promises run on ruby-compat Thread or are awaited"
-status: claimed
+status: in-progress
 updated: 2026-11-16
 rfc: "0234-no-void-promises"
 cluster: background-work
@@ -9,7 +9,7 @@ deps: [no-floating-promises-repo-wide-ignore-void-false, no-swallowed-rejection-
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#10178
 claim: "2026-11-16T11:36:36Z"
 assignee: "claude-md-ratifies-no-void-promises"
 blocked-by: null

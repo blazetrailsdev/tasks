@@ -1,6 +1,6 @@
 ---
 title: "trails CLAUDE.md ratifies no void promises and async initialize as static new"
-status: claimed
+status: in-progress
 updated: 2026-11-16
 rfc: "0234-no-void-promises"
 cluster: gate
@@ -16,7 +16,7 @@ deps:
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#10178
 claim: "2026-11-16T11:36:36Z"
 assignee: "claude-md-ratifies-no-void-promises"
 blocked-by: null

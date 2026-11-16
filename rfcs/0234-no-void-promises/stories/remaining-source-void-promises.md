@@ -1,6 +1,6 @@
 ---
 title: "The remaining source sites in rake, ruby-compat, trailties, thor, mail, arel, actionview and others stop dropping promises"
-status: claimed
+status: in-progress
 updated: 2026-11-16
 rfc: "0234-no-void-promises"
 cluster: discarded-calls
@@ -23,7 +23,7 @@ deps: [no-floating-promises-repo-wide-ignore-void-false, no-swallowed-rejection-
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: trails#10178
 claim: "2026-11-16T11:36:36Z"
 assignee: "claude-md-ratifies-no-void-promises"
 blocked-by: null
