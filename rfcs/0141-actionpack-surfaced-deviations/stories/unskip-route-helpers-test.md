@@ -1,7 +1,7 @@
 ---
 title: "Unskip route_helpers_test.rb once url helpers are included into controllers"
-status: ready
-updated: 2026-10-19
+status: blocked
+updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -12,9 +12,9 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-16T11:06:33Z"
+assignee: "unskip-route-helpers-test"
+blocked-by: "waiting on routes-helpers-with-records-subclass-include-in-ancestry: trails#10167 gates the helpers to subclasses but records no ancestry, so rbClassInheritedP(FooController, urlHelpersModule) is null"
 closed-reason: null
 ---
 

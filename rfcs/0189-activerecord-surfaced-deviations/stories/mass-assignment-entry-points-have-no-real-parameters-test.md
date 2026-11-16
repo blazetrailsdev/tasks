@@ -1,7 +1,7 @@
 ---
 title: "activerecord: no test runs a real ActionController::Parameters through the mass-assignment entry points"
-status: ready
-updated: 2026-10-18
+status: in-progress
+updated: 2026-11-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -11,9 +11,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 80
-pr: null
-claim: null
-assignee: null
+pr: trails#10176
+claim: "2026-11-16T11:21:34Z"
+assignee: "mass-assignment-entry-points-have-no-real-parameters-test"
 blocked-by: null
 closed-reason: null
 ---

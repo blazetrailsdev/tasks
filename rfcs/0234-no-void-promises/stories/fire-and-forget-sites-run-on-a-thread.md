@@ -1,7 +1,7 @@
 ---
 title: "Background fire-and-forget promises run on ruby-compat Thread or are awaited"
-status: ready
-updated: 2026-11-12
+status: claimed
+updated: 2026-11-16
 rfc: "0234-no-void-promises"
 cluster: background-work
 packages: [ruby-compat, solid-queue, rackup, trailties, rack, actioncable, activestorage, website]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-16T11:36:36Z"
+assignee: "claude-md-ratifies-no-void-promises"
 blocked-by: null
 closed-reason: null
 ---

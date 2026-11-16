@@ -1,6 +1,6 @@
 ---
 title: "rack-proxy-unknown-host-addrinfo-stub"
-status: ready
+status: claimed
 updated: 2026-11-16
 rfc: "0236-rack-proxy-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-16T11:51:33Z"
+assignee: "rack-proxy-tls-test-fixtures"
 blocked-by: null
 closed-reason: null
 ---
