@@ -36,9 +36,14 @@ twelve-dollar load this is **1.7% of busy CPU**. Rails reads
 
 ## Acceptance criteria
 
-- The wrapper computes the column names and the "has a bigint column" flag once
-  per prepared statement, and `performQuery` and both bigint checks reuse them.
-- Results are unchanged, including the narrowing of spilled bigints, and the
-  SQLite adapter tests stay green.
-- `columns` falls below 0.3% of busy CPU in the profile.
-- Re-measure with the slim profile harness described in the RFC README (4,000 users, 2 minutes, CPU per request from the cgroup) and record the before and after numbers in the PR.
+- [ ] The wrapper computes the column names and the "has a bigint column" flag once
+      per prepared statement, and `performQuery` and both bigint checks reuse them.
+- [ ] Results are unchanged, including the narrowing of spilled bigints, and the
+      SQLite adapter tests stay green.
+- [ ] `columns` falls below 0.3% of busy CPU in the profile.
+
+## Verification
+
+Run the slim profile harness from the RFC README's Verification section on
+trails main before and after the change. Record CPU per request, p95, p99 and
+this story's measured share in the PR body.

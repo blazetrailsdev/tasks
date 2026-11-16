@@ -33,15 +33,21 @@ Under the twelve-dollar load:
 - `fetch` is **3.0%**, and `fetch` is also **2.4% of busy CPU**.
 
 Almost all of it sits under `asJson` → `jsonify` while rendering the feed.
-Rails' `LazyAttributeSet#fetch_value` does the same lazy build, but a Ruby
+Rails' `LazyAttributeSet#fetch_value`
+(`activemodel/lib/active_model/attribute_set/builder.rb:41`) does the same lazy build, but a Ruby
 block costs nothing to pass.
 
 ## Acceptance criteria
 
-- The first read of a database-loaded attribute allocates no closure: the
-  builder looks the value up directly and builds the attribute without going
-  through a block-taking `fetch`.
-- `default_attributes` fallback and missing-attribute errors behave as before,
-  and the activemodel attribute-set tests stay green.
-- The three sites together fall below 4% of allocated bytes.
-- Re-measure with the slim profile harness described in the RFC README (4,000 users, 2 minutes, CPU per request from the cgroup) and record the before and after numbers in the PR.
+- [ ] The first read of a database-loaded attribute allocates no closure: the
+      builder looks the value up directly and builds the attribute without going
+      through a block-taking `fetch`.
+- [ ] `default_attributes` fallback and missing-attribute errors behave as before,
+      and the activemodel attribute-set tests stay green.
+- [ ] The three sites together fall below 4% of allocated bytes.
+
+## Verification
+
+Run the slim profile harness from the RFC README's Verification section on
+trails main before and after the change. Record CPU per request, p95, p99 and
+this story's measured share in the PR body.

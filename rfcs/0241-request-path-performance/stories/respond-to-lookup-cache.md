@@ -32,11 +32,16 @@ Under the twelve-dollar load this is **3.5% of busy CPU** (1.2%
 
 ## Acceptance criteria
 
-- Cache the method-resolution part of `respond_to?` per prototype and name,
-  and invalidate it on the same events that already invalidate method caches
-  (`include`, `prepend`, `define_method`, `remove_method`, `undef_method`).
-- `respond_to_missing?` is still consulted on every call, as Ruby does.
-- The ruby-compat respond_to tests stay green, and a new test covers a method
-  defined after the first query.
-- The respond_to family falls below 1.5% of busy CPU.
-- Re-measure with the slim profile harness described in the RFC README (4,000 users, 2 minutes, CPU per request from the cgroup) and record the before and after numbers in the PR.
+- [ ] Cache the method-resolution part of `respond_to?` per prototype and name,
+      and invalidate it on the same events that already invalidate method caches
+      (`include`, `prepend`, `define_method`, `remove_method`, `undef_method`).
+- [ ] `respond_to_missing?` is still consulted on every call, as Ruby does.
+- [ ] The ruby-compat respond_to tests stay green, and a new test covers a method
+      defined after the first query.
+- [ ] The respond_to family falls below 1.5% of busy CPU.
+
+## Verification
+
+Run the slim profile harness from the RFC README's Verification section on
+trails main before and after the change. Record CPU per request, p95, p99 and
+this story's measured share in the PR body.

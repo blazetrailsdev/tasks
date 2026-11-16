@@ -4,7 +4,7 @@ status: ready
 updated: 2026-11-16
 rfc: "0241-request-path-performance"
 cluster: request-perf
-packages: [trailties]
+packages: [examples]
 deps: []
 deps-rfc: []
 est-loc: 10
@@ -30,8 +30,8 @@ source of queueing.
 
 ## Acceptance criteria
 
-- On one rig, run the fixed-load profile harness and one 5-minute hold at the
-  current score, with the flag at 16 (V8's default), 32 and 64. Record p95,
-  p99, peak memory and the GC log for each.
-- Keep the setting that gives the best p99 within the 2 GB cap, and record the
-  numbers in the PR.
+- [ ] On one rig, run the fixed-load profile harness and one 5-minute hold at the
+      current score, with the flag at 16 (V8's default), 32 and 64. Record p95,
+      p99, peak memory and the GC log for each.
+- [ ] Keep the setting that gives the best p99 within the 2 GB cap, and record the
+      numbers in the PR.

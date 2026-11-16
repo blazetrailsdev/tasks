@@ -26,10 +26,15 @@ load this is **0.6% of busy CPU**, and every request allocates the stack.
 
 ## Acceptance criteria
 
-- `Thread#to_s` still prints the creation file and line, matching
-  `thread.c:3473`, but the per-thread cost is lower: for example, capture only
-  when a debug or inspect path asks for it, or keep the raw callsite without
-  formatting the stack.
-- The `Thread#to_s` / `inspect` tests stay green.
-- `_creationFrame` falls below 0.1% of busy CPU.
-- Re-measure with the slim profile harness described in the RFC README (4,000 users, 2 minutes, CPU per request from the cgroup) and record the before and after numbers in the PR.
+- [ ] `Thread#to_s` still prints the creation file and line, matching
+      `thread.c:3473`, but the per-thread cost is lower: for example, capture only
+      when a debug or inspect path asks for it, or keep the raw callsite without
+      formatting the stack.
+- [ ] The `Thread#to_s` / `inspect` tests stay green.
+- [ ] `_creationFrame` falls below 0.1% of busy CPU.
+
+## Verification
+
+Run the slim profile harness from the RFC README's Verification section on
+trails main before and after the change. Record CPU per request, p95, p99 and
+this story's measured share in the PR body.

@@ -32,13 +32,23 @@ is identical on every request, because the binds stay as `?` placeholders.
 
 ## Acceptance criteria
 
-- Measure what one `prepare` of the feed query costs in better-sqlite3 against
-  the `sqlite3` gem, in a micro-benchmark outside the server, and record it.
-- If trails is materially slower, find out where the time goes, whether in
-  better-sqlite3's statement setup or in SQLite's compile, and fix it in the
-  wrapper where possible.
-- If the cost is SQLite's own compile, propose (do not land) reusing compiled
-  statements for unpreparable queries whose SQL carries bind placeholders. It
-  would be a recorded deviation from Rails, so it needs a decision, and the
-  proposal belongs in this RFC's Design section.
-- Re-measure with the slim profile harness described in the RFC README (4,000 users, 2 minutes, CPU per request from the cgroup) and record the before and after numbers in the PR.
+- [ ] Measure what one `prepare` of the feed query costs in better-sqlite3 against
+      the `sqlite3` gem, in a micro-benchmark outside the server, and record it.
+- [ ] If trails is materially slower, find out where the time goes, whether in
+      better-sqlite3's statement setup or in SQLite's compile, and fix it in the
+      wrapper where possible.
+- [ ] If the cost is SQLite's own compile, propose (do not land) reusing compiled
+      statements for unpreparable queries whose SQL carries bind placeholders. It
+      would be a recorded deviation from Rails, so it needs a decision, and the
+      proposal belongs in this RFC's Design section.
+
+## Definition of done
+
+A statement cache for unpreparable queries does not close this story unless the
+RFC records the decision to deviate from Rails first.
+
+## Verification
+
+Run the slim profile harness from the RFC README's Verification section on
+trails main before and after the change. Record CPU per request, p95, p99 and
+this story's measured share in the PR body.

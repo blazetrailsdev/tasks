@@ -12,6 +12,7 @@ packages:
   - "activemodel"
   - "rackup"
   - "trailties"
+  - "examples"
 clusters:
   - request-perf
 ---
@@ -20,11 +21,13 @@ clusters:
 
 ## Summary
 
-`examples/twelve-dollar-server` scores the same as the gambitboy Rails
-submission on the $12 Server Challenge (7,250 users), but its tail latency is
-about eight times worse. The cause is allocation, not CPU. This RFC collects the
-stories that reduce allocation and CPU on the request path, and the one that
-tracks the Perry-compiled build's cost.
+On the first rig, `examples/twelve-dollar-server` scored the same as the
+gambitboy Rails submission on the $12 Server Challenge (7,250 users), with tail
+latency about eight times worse. A re-bench on one rebuilt rig gives Rails
+9,000 users and trails 7,750, both before and after the first four fixes. The
+tail comes from GC pauses that queue requests when CPU utilisation is high.
+This RFC collects the stories that reduce allocation and CPU on the request
+path, and the one that tracks the Perry-compiled build's cost.
 
 ## Motivation
 
@@ -102,9 +105,10 @@ allocated bytes:
 
 One story per measured hot spot. Each story's shares come from a V8 sampling
 heap profile, with objects collected by minor and major GC included, or from a
-`--cpu-prof` profile of the production server under k6 load. Each story's
-acceptance criteria include re-measuring with the same harness: CPU per request
-from the cgroup's `cpu.stat` over a 90 s run at 5,000 users, plus p95/p99.
+`--cpu-prof` profile of the production server under k6 load. Each story is
+re-measured with a harness: the first stories used CPU per request from the
+cgroup's `cpu.stat` over a 90 s run at 5,000 users, plus p95/p99, and stories
+filed from the second profile use the slim harness under Verification.
 
 Rails parity still holds. Where Rails allocates in the same shape (for example
 `JSONGemEncoder#jsonify` then `generate`), the change keeps the observable
@@ -114,3 +118,107 @@ behaviour and the Rails source reference, and changes only the representation.
 
 - Changing the twelve-dollar-server application to win the benchmark.
 - Request caching. The challenge forbids it.
+
+## Alternatives considered
+
+- **Tune the GC instead of allocating less.** `--max-semi-space-size=64`
+  shortened the tail in a fixed-load test, but it did not change the score
+  and cost about 135 MB. `semi-space-flag-evaluate` settles the flag, and the
+  rest of the RFC goes after allocation and CPU.
+- **Change the application's queries**, for example dropping the raw `select`
+  that makes the feed query unpreparable. That is ruled out by Non-goals: the
+  gambitboy Rails app uses the same scope, and the framework should be fast on
+  idiomatic code.
+
+## Rollout
+
+Each story lands as its own trails PR with its before and after numbers. A full
+challenge re-bench, scoring trails main against Rails on the same rig, runs
+after a batch of stories lands, not after each one.
+
+## Verification
+
+The slim harness runs on one c7i.xlarge, Ubuntu 24.04, from a checkout of
+`arjaythedev/twelve-dollar-server-challenge` at `~/tdsc` with
+`seed/make-seed.sh` run. trails is installed at `~/trails` with
+`examples/twelve-dollar-server/install.sh`. It runs three passes, each starting
+from a fresh copy of the seed database:
+
+1. **Plain pass.** Start the server in a cgroup pinned to cpu0, then warm up
+   with k6 on cpus 1 and 3:
+
+   ```sh
+   sudo systemd-run --unit sut --uid ubuntu -p AllowedCPUs=0 -p MemoryMax=2G \
+     -E JWT_SECRET=twelve-dollar-challenge -E HOST=127.0.0.1 -E PORT=3000 \
+     -E SQLITE_PATH=$HOME/run/feed.db -E "NODE_OPTIONS=$NO" \
+     bash -c "$HOME/trails/examples/twelve-dollar-server/start.sh"
+   taskset -c 1,3 k6 run -e BASE_URL=http://127.0.0.1:3000 -e VUS=1000 -e DURATION=30s bench/load.js
+   ```
+
+   Then read `usage_usec` from `/sys/fs/cgroup/system.slice/sut.service/cpu.stat`,
+   run k6 again with `VUS=4000 DURATION=2m RAMP_UP=20s`, and read `usage_usec`
+   again. CPU per request is the difference divided by k6's `http_reqs`.
+
+2. **CPU pass.** The same steps with
+   `NO="--import $HOME/prof-hooks.mjs --cpu-prof --cpu-prof-dir=$HOME/prof --cpu-prof-interval=250"`,
+   stopped with `systemctl kill -s SIGINT sut`. The server process is the
+   profile that is not 99% `node:internal`, because `trails server` also
+   profiles its launcher.
+3. **Allocation pass.** The same steps with
+   `NO="--import $HOME/alloc-hook.mjs"`. It samples a 60 s window starting 75 s
+   after boot.
+
+`prof-hooks.mjs` writes the GC log on SIGINT:
+
+```js
+import { PerformanceObserver } from "node:perf_hooks";
+import { writeFileSync } from "node:fs";
+const gc = [];
+new PerformanceObserver((l) => {
+  for (const e of l.getEntries())
+    gc.push([Math.round(e.startTime), +e.duration.toFixed(2), e.detail?.kind ?? e.kind]);
+}).observe({ entryTypes: ["gc"] });
+const out = process.env.PROF_DIR ?? "/tmp";
+process.on("SIGINT", () => {
+  writeFileSync(`${out}/gc-${process.pid}.json`, JSON.stringify(gc));
+  process.exit(0);
+});
+```
+
+`alloc-hook.mjs`:
+
+```js
+import { Session } from "node:inspector/promises";
+import { writeFileSync } from "node:fs";
+const s = new Session();
+s.connect();
+await s.post("HeapProfiler.enable");
+setTimeout(async () => {
+  await s.post("HeapProfiler.startSampling", {
+    samplingInterval: 32768,
+    includeObjectsCollectedByMinorGC: true,
+    includeObjectsCollectedByMajorGC: true,
+  });
+  setTimeout(async () => {
+    const { profile } = await s.post("HeapProfiler.stopSampling");
+    writeFileSync(`/home/ubuntu/prof/alloc-${process.pid}.heapprofile`, JSON.stringify(profile));
+  }, 60000).unref();
+}, 75000).unref();
+```
+
+`--heap-prof` is not a substitute for the allocation pass: it reports only
+objects still live at exit.
+
+## Open questions
+
+- Should trails reuse compiled statements for unpreparable queries whose SQL
+  carries bind placeholders, deviating from Rails? It depends on the
+  measurement in `unpreparable-select-statement-compile-cost`.
+- Is the 108 KB versus 267 KB per-request difference between the two
+  allocation profiles all down to the entry point, `perry/main.ts` against
+  `trails server`? If not, the gap is itself a finding.
+
+## Changelog
+
+- 2026-11-13: RFC filed with six stories from the first profile.
+- 2026-11-16: Re-bench on one rig, second profile, and eight more stories.
