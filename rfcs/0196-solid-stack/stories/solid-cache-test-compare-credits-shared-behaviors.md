@@ -5,7 +5,8 @@ updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null
 packages: ["solid-cache"]
-deps: []
+deps:
+  - solid-cache-bump-to-v1-0-9
 deps-rfc: []
 est-loc: 120
 priority: 1
