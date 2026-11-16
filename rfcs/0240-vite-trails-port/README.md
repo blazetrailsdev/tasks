@@ -7,6 +7,7 @@ updated: 2026-11-16
 owner: "@deanmarano"
 packages:
   - "vite-trails"
+  - "vite-assets"
 clusters:
   - "vite-trails"
 ---

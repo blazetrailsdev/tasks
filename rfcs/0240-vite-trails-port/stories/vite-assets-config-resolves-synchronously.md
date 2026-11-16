@@ -2,7 +2,7 @@
 title: "ViteAssets#config is read synchronously once prewarmed; peekConfig retires"
 status: blocked
 updated: 2026-11-16
-rfc: "0239-vite-assets-port"
+rfc: "0240-vite-trails-port"
 cluster: null
 packages: [vite-assets]
 deps: []
