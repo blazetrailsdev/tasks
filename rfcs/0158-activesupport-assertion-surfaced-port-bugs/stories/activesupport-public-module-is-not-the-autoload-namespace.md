@@ -1,7 +1,7 @@
 ---
 title: "Exported ActiveSupport object is not the Autoload namespace module"
-status: draft
-updated: 2026-09-27
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

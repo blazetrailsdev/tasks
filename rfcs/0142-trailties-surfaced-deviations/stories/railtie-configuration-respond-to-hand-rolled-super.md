@@ -1,7 +1,7 @@
 ---
 title: "Railtie::Configuration#respond_to? hand-rolls super and drops include_private"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

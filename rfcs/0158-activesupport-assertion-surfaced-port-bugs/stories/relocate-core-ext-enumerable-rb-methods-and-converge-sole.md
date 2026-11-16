@@ -1,7 +1,7 @@
 ---
 title: "Relocate core_ext/enumerable.rb methods into core-ext/enumerable.ts and converge sole"
-status: draft
-updated: 2026-09-30
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

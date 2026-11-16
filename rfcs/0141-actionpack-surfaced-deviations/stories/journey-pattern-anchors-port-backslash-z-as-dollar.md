@@ -1,7 +1,7 @@
 ---
 title: "Journey::Path::Pattern ports Ruby \\Z as JS $"
-status: draft
-updated: 2026-11-06
+status: ready
+updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

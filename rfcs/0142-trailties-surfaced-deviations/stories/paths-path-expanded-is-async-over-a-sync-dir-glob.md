@@ -1,7 +1,7 @@
 ---
 title: "trailties: Paths::Path#expanded is async where Rails' is a sync Dir.glob, forcing Path#firstSync"
-status: draft
-updated: 2026-10-10
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties", "activerecord"]

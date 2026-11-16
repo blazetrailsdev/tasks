@@ -1,6 +1,6 @@
 ---
 title: "Association#initialize_attributes reading a Hash's keys has no regression test"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

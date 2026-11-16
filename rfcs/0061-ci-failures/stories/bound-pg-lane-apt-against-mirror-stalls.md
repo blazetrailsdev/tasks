@@ -1,7 +1,7 @@
 ---
 title: "bound-pg-lane-apt-against-mirror-stalls"
-status: draft
-updated: 2026-10-22
+status: ready
+updated: 2026-11-16
 rfc: "0061-ci-failures"
 cluster: null
 packages: [scripts]

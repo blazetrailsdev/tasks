@@ -1,6 +1,6 @@
 ---
 title: "The ledger skip is tested through each call lint's main, --write included"
-status: ready
+status: done
 updated: 2026-11-16
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#10183
+claim: "2026-11-16T15:06:34Z"
+assignee: "bump-ledger-skip-is-tested-through-each-lints-main"
 blocked-by: null
 closed-reason: null
 ---

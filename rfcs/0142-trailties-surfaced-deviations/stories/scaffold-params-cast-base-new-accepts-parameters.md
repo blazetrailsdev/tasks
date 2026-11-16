@@ -1,7 +1,7 @@
 ---
 title: "scaffold-params-cast-base-new-accepts-parameters"
-status: draft
-updated: 2026-09-29
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "active_record.initialize_database reads Rails.application.config.database_configuration, not a cwd-relative lookup"
-status: draft
-updated: 2026-11-12
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

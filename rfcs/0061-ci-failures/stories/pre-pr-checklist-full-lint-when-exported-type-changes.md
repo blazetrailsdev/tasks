@@ -1,7 +1,7 @@
 ---
 title: "Pre-PR checklist: run full-tree lint when a PR changes an exported type"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-11-16
 rfc: "0061-ci-failures"
 cluster: null
 packages: [scripts]

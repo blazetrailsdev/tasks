@@ -1,7 +1,7 @@
 ---
 title: "ActionCable::Engine lives in trailties and roots via an invented ENGINE_CALLED_FROM export"
-status: draft
-updated: 2026-11-09
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

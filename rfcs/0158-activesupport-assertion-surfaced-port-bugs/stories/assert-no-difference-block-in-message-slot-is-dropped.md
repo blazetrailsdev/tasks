@@ -1,7 +1,7 @@
 ---
 title: "assertNoDifference drops a block passed in the message slot"
-status: draft
-updated: 2026-11-11
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

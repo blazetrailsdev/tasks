@@ -1,7 +1,7 @@
 ---
 title: "mattr-accessor-default-function-is-a-value-not-a-block"
-status: draft
-updated: 2026-10-11
+status: ready
+updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "Port attachable_test.rb's two as_json-is-a-hash tests"
-status: draft
+status: ready
 updated: 2026-11-16
 rfc: "0219-actiontext-port"
 cluster: null

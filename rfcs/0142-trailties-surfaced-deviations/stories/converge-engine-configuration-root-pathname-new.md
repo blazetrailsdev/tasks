@@ -1,7 +1,7 @@
 ---
 title: "Engine::Configuration#root= drops Pathname.new behind a @missingRailsCall receipt"
-status: draft
-updated: 2026-08-13
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages:

@@ -1,7 +1,7 @@
 ---
 title: "attribute-names-for-serialization-is-attributes-keys"
-status: draft
-updated: 2026-10-13
+status: ready
+updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

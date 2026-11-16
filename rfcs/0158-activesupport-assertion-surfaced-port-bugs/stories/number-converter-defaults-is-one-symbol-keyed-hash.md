@@ -1,7 +1,7 @@
 ---
 title: "activesupport: NumberConverter::DEFAULTS is one Symbol-keyed Hash, as number_converter.rb:14-118"
-status: draft
-updated: 2026-10-16
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

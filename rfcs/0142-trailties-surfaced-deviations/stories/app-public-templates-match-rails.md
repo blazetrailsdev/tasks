@@ -1,7 +1,7 @@
 ---
 title: "App generator public/ templates match Rails' (400, icons, unsimplified 404/422/500)"
-status: draft
-updated: 2026-11-05
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: [trailties]

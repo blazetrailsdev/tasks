@@ -1,7 +1,7 @@
 ---
 title: "Rack::QueryParser#unescape is a module-private function, not an instance method"
-status: draft
-updated: 2026-11-07
+status: ready
+updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

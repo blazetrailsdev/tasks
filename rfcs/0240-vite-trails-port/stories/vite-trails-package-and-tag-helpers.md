@@ -1,7 +1,7 @@
 ---
 title: "Create @blazetrails/vite-trails: Engine and ViteTrails::TagHelpers"
-status: draft
-updated: 2026-11-12
+status: in-progress
+updated: 2026-11-16
 rfc: "0240-vite-trails-port"
 cluster: vite-trails
 packages: [vite-trails]
@@ -9,9 +9,9 @@ deps: [vite-assets-core-package]
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10184
+claim: "2026-11-16T15:31:27Z"
+assignee: "vite-trails-package-and-tag-helpers"
 blocked-by: null
 closed-reason: null
 ---

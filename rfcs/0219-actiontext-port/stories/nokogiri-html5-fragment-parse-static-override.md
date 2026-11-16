@@ -1,6 +1,6 @@
 ---
 title: "HTML5::DocumentFragment.parse overrides XML's static parse without the alias"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0219-actiontext-port"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Shard the sqlite-mem AR suite 2-way, the last unsharded copy of the AR file set"
-status: draft
-updated: 2026-09-17
+status: ready
+updated: 2026-11-16
 rfc: "0061-ci-failures"
 cluster: null
 packages: [activerecord]

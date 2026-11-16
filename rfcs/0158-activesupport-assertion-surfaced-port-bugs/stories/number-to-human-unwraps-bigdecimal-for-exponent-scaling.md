@@ -1,7 +1,7 @@
 ---
 title: "number_to_human unwraps the rounded BigDecimal because BigDecimal#/ is unported"
-status: draft
-updated: 2026-08-14
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:

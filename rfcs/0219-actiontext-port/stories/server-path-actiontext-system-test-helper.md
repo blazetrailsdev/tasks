@@ -1,6 +1,6 @@
 ---
 title: "actiontext engine reaches SystemTestHelper the way engine.rb's require does"
-status: draft
+status: ready
 updated: 2026-11-16
 rfc: "0219-actiontext-port"
 cluster: null

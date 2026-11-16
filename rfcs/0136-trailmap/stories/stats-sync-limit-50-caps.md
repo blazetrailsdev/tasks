@@ -1,6 +1,6 @@
 ---
 title: "Review the LIMIT 50 caps in stats sync and log when a run hits one"
-status: draft
+status: ready
 updated: 2026-11-16
 rfc: "0136-trailmap"
 cluster: null

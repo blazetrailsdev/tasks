@@ -1,7 +1,7 @@
 ---
 title: "OrderedOptions does not compare equal to a Hash of the same contents (Hash#==)"
-status: draft
-updated: 2026-09-28
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

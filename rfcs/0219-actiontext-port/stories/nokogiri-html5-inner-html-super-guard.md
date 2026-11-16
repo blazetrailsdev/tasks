@@ -1,6 +1,6 @@
 ---
 title: "HTML5::Node#inner_html keeps its return-super-unless-HTML5-document guard"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0219-actiontext-port"
 cluster: null

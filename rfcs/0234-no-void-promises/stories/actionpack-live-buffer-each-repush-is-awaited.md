@@ -1,7 +1,7 @@
 ---
 title: "Live::Buffer#each's ThreadError re-push stops dropping its promise"
-status: draft
-updated: 2026-11-15
+status: ready
+updated: 2026-11-16
 rfc: "0234-no-void-promises"
 cluster: null
 packages: []

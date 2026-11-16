@@ -1,7 +1,7 @@
 ---
 title: "assert-predicate-doc-row-disagrees-with-assertion-kind-gate"
-status: draft
-updated: 2026-11-08
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

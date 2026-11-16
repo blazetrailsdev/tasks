@@ -1,6 +1,6 @@
 ---
 title: "routes-helpers-with-records-subclass-include-in-ancestry"
-status: draft
+status: ready
 updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

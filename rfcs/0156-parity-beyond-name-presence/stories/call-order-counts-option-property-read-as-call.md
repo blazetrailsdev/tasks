@@ -1,7 +1,7 @@
 ---
 title: "Call-order check counts an option property read (opts.all) as a call"
-status: draft
-updated: 2026-10-25
+status: ready
+updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

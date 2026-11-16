@@ -1,7 +1,7 @@
 ---
 title: "api-compare: String#foo in core_ext/string/inflections.rb is compared against the Inflector.foo body"
-status: draft
-updated: 2026-10-09
+status: ready
+updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "actionview-rendering-layouts-accessors-blocked-on-late-module-methods"
-status: draft
-updated: 2026-11-12
+status: ready
+updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "UnusedRoutes template_missing? / action_missing? are Rails' && expressions, not guarded returns"
-status: draft
-updated: 2026-10-07
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

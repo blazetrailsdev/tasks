@@ -1,7 +1,7 @@
 ---
 title: "serializable_attributes filters out names an included module's method shares, where Rails' generated reader shadows the method"
-status: draft
-updated: 2026-10-13
+status: ready
+updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

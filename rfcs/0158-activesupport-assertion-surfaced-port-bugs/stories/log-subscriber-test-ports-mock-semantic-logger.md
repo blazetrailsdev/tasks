@@ -1,7 +1,7 @@
 ---
 title: "log-subscriber-test-ports-mock-semantic-logger"
-status: draft
-updated: 2026-10-20
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

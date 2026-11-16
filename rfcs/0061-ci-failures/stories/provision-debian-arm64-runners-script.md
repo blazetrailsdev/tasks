@@ -1,7 +1,7 @@
 ---
 title: "Codify the debian-arm64 self-hosted runner provisioning in infra/runner"
-status: draft
-updated: 2026-09-29
+status: ready
+updated: 2026-11-16
 rfc: "0061-ci-failures"
 cluster: null
 packages: [scripts]

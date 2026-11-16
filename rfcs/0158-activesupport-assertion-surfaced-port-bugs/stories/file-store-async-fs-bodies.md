@@ -1,7 +1,7 @@
 ---
 title: "FileStore bodies still call ruby-compat's sync fs"
-status: draft
-updated: 2026-10-16
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: ["activesupport", "ruby-compat"]

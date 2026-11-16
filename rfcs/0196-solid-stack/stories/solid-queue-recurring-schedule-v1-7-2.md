@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-recurring-schedule-v1-7-2"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null

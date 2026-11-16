@@ -1,7 +1,7 @@
 ---
 title: "website frontiers generate model bypasses the orm/test_framework hook chain; runtime tests stale"
-status: draft
-updated: 2026-09-30
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

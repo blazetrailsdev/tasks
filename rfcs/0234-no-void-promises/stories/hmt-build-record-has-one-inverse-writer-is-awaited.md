@@ -1,6 +1,6 @@
 ---
 title: "has_many :through buildRecord awaits its has_one inverse writer"
-status: draft
+status: ready
 updated: 2026-11-16
 rfc: "0234-no-void-promises"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "enroll-file-update-checker-shared-tests"
-status: draft
-updated: 2026-08-28
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

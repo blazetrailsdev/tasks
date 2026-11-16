@@ -1,7 +1,7 @@
 ---
 title: "stubConst: test the exists:false async arm and a rejecting block"
-status: draft
-updated: 2026-10-18
+status: ready
+updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

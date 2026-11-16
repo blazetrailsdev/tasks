@@ -1,7 +1,7 @@
 ---
 title: "ci-sqlite-shard-3-and-parity-output-cache"
-status: draft
-updated: 2026-11-10
+status: ready
+updated: 2026-11-16
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

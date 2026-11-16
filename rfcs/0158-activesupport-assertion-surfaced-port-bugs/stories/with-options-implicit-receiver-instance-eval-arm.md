@@ -1,7 +1,7 @@
 ---
 title: "with_options drops the zero-arity instance_eval block arm"
-status: draft
-updated: 2026-08-07
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:

@@ -1,7 +1,7 @@
 ---
 title: "Run the SQLite :memory: lane on PRs that touch an inMemoryDb() arm"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-11-16
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "Duration::SECONDS_PER_MONTH is a Julian twelfth (2629800), not Rails' Gregorian 2629746"
-status: draft
-updated: 2026-08-09
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:

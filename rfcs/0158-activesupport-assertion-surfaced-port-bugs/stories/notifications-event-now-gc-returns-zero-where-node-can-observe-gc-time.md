@@ -1,7 +1,7 @@
 ---
 title: "activesupport: Notifications::Event#now_gc returns 0 where Node can observe GC time"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: ["activesupport"]

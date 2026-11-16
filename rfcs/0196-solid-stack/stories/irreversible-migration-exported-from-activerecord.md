@@ -1,7 +1,7 @@
 ---
 title: "IrreversibleMigration is exported from activerecord"
-status: in-progress
-updated: 2026-11-15
+status: done
+updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null
 packages: ["activerecord"]
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 15
-pr: trails#10156
+pr: trails#10150
 claim: "2026-11-15T22:21:36Z"
 assignee: "solid-cache-size-tests-need-seeded-srand"
 blocked-by: null

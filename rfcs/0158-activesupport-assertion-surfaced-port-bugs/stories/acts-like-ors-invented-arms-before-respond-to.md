@@ -1,7 +1,7 @@
 ---
 title: "actsLike ORs actsLikeTime/Date/String arms in front of Rails' bare respond_to?"
-status: draft
-updated: 2026-09-25
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

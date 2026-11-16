@@ -1,7 +1,7 @@
 ---
 title: "json-coder-previous-scheme-candidate-serialized-lazily-past-where"
-status: draft
-updated: 2026-09-29
+status: ready
+updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "Extractor: honor @internal on a mattrAccessor/cattrAccessor .call statement"
-status: draft
-updated: 2026-10-27
+status: ready
+updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: [scripts]

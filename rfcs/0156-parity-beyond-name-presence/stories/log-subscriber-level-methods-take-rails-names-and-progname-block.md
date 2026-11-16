@@ -1,7 +1,7 @@
 ---
 title: "ActiveSupport::LogSubscriber level methods take Rails' names and (progname, &block)"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

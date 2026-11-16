@@ -1,6 +1,6 @@
 ---
 title: "activerecord: SQLite3::Backup#step copies pages through the driver's backup API instead of replaying SQL"
-status: claimed
+status: ready
 updated: 2026-11-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 250
 priority: 91
 pr: null
-claim: "2026-11-16T14:51:39Z"
-assignee: "canonical-registry-add-foreign-key-statement-form"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "generated-app-tsconfig-type-checks-test-dir"
-status: draft
-updated: 2026-10-27
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

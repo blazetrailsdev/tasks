@@ -1,7 +1,7 @@
 ---
 title: "rack: Handler.Node leaves the request open and logs nothing when the app raises"
-status: draft
-updated: 2026-10-03
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["rack"]

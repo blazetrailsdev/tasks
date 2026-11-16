@@ -1,7 +1,7 @@
 ---
 title: "Order stream drops a zero-arg new Hash()/new Map() (Ruby hash literal); retire write_multi order row"
-status: draft
-updated: 2026-11-15
+status: ready
+updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

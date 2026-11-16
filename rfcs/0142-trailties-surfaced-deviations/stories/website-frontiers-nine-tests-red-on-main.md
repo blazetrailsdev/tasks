@@ -1,7 +1,7 @@
 ---
 title: "Nine website frontiers tests are red on main (generator construction, app-server, sql-js driver) and no CI job runs them"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

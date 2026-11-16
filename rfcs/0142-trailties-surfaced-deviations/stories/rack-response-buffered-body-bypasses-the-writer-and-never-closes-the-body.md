@@ -1,7 +1,7 @@
 ---
 title: "rack: Response#buffered_body! bypasses @writer, never closes the body, and has an arm Rack lacks"
-status: draft
-updated: 2026-10-07
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

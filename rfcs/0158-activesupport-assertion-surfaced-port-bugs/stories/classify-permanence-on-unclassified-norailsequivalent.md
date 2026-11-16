@@ -1,7 +1,7 @@
 ---
 title: "Classify the last @noRailsEquivalent tag carrying no permanence claim (core-ext/securerandom.ts)"
-status: draft
-updated: 2026-08-27
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: [scripts]

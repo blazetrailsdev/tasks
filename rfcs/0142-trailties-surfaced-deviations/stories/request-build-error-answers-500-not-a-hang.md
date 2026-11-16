@@ -1,7 +1,7 @@
 ---
 title: "An error raised building the request answers 500, not a hang"
-status: draft
-updated: 2026-11-01
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "Engine::Updater injects a generator factory Rails builds inline (engine/updater.rb:10-13)"
-status: draft
-updated: 2026-08-25
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

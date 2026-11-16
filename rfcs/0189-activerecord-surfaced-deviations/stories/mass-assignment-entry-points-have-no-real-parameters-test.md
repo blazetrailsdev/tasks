@@ -1,6 +1,6 @@
 ---
 title: "activerecord: no test runs a real ActionController::Parameters through the mass-assignment entry points"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

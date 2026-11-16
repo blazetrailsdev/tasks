@@ -1,7 +1,7 @@
 ---
 title: "Delete the duplicate bespoke json-encoding.test.ts"
-status: draft
-updated: 2026-08-03
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:

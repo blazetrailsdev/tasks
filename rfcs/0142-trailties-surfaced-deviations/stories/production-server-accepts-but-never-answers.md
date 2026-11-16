@@ -1,7 +1,7 @@
 ---
 title: "a production-mode trails server accepted connections and never answered (reproduce first)"
-status: draft
-updated: 2026-10-27
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties"]

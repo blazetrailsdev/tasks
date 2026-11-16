@@ -1,7 +1,7 @@
 ---
 title: "stub_any_instance covers only Klass.new(), not new Klass()"
-status: draft
-updated: 2026-08-13
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:

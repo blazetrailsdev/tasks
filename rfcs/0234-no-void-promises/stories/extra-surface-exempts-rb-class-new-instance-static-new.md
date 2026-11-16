@@ -1,6 +1,6 @@
 ---
 title: "extra-surface does not score a static new built by rbClassNewInstance"
-status: draft
+status: ready
 updated: 2026-11-16
 rfc: "0234-no-void-promises"
 cluster: null

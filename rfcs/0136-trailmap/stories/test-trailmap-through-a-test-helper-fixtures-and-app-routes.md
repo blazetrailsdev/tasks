@@ -1,7 +1,7 @@
 ---
 title: "Test trailmap through one test helper, fixtures and the application's own routes"
-status: claimed
-updated: 2026-11-04
+status: ready
+updated: 2026-11-16
 rfc: "0136-trailmap"
 cluster: null
 packages: ["trailties", "activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: "2026-11-04T17:02:48Z"
-assignee: "finish-solid-queue-worker-enablement"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

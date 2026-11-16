@@ -1,7 +1,7 @@
 ---
 title: "stub-any-instance-does-not-intercept-js-new"
-status: draft
-updated: 2026-11-05
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

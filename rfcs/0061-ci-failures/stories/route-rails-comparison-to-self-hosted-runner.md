@@ -1,7 +1,7 @@
 ---
 title: "Route rails-comparison to an idle self-hosted runner once vendored sources persist outside the checkout"
-status: draft
-updated: 2026-09-29
+status: ready
+updated: 2026-11-16
 rfc: "0061-ci-failures"
 cluster: null
 packages: [scripts]

@@ -1,7 +1,7 @@
 ---
 title: "Root-cause the PG QueryCanceled flake from the pg-cancel-trace output"
-status: draft
-updated: 2026-09-15
+status: ready
+updated: 2026-11-16
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

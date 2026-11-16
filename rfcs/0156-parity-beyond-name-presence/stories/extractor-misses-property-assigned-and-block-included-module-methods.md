@@ -1,7 +1,7 @@
 ---
 title: "extractor: a Module assigned as a property, or including inside its block, has no visible methods"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

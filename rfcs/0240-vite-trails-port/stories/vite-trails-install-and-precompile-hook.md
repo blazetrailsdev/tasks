@@ -1,7 +1,7 @@
 ---
 title: "Port ViteTrails::CLI (vite:install for Rails) and the assets:precompile hook"
-status: draft
-updated: 2026-11-12
+status: ready
+updated: 2026-11-16
 rfc: "0240-vite-trails-port"
 cluster: vite-trails
 packages: [vite-trails]

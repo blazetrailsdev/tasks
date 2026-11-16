@@ -1,6 +1,6 @@
 ---
 title: "StatsSyncJob: run deadline under the lock, and STATS_SYNC_LOG rotation"
-status: draft
+status: ready
 updated: 2026-11-16
 rfc: "0136-trailmap"
 cluster: null

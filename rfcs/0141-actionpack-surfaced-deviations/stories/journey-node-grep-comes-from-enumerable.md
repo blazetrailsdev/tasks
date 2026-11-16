@@ -1,7 +1,7 @@
 ---
 title: "Journey Node#grep is hand-written; take it from ruby-compat Enumerable#grep"
-status: draft
-updated: 2026-11-06
+status: ready
+updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

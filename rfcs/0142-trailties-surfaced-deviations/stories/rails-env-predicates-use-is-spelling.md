@@ -1,7 +1,7 @@
 ---
 title: 'Rails.env predicates use the is… spelling, not ["local?"]()'
-status: draft
-updated: 2026-10-23
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

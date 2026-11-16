@@ -1,7 +1,7 @@
 ---
 title: "bcrypt: __bc_crypt answers nil when crypt_ra fails, not a backend Error"
-status: draft
-updated: 2026-11-06
+status: ready
+updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

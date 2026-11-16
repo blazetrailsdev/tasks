@@ -1,7 +1,7 @@
 ---
 title: "Cancel and re-run CI runs stuck queued on offline self-hosted runners"
-status: draft
-updated: 2026-09-29
+status: ready
+updated: 2026-11-16
 rfc: "0061-ci-failures"
 cluster: null
 packages: [scripts]

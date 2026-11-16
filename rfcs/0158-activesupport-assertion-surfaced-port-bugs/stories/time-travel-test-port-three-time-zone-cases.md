@@ -1,7 +1,7 @@
 ---
 title: "Port the three skipped TimeTravelTest time-zone cases (time_travel_test.rb:100-164)"
-status: draft
-updated: 2026-09-30
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

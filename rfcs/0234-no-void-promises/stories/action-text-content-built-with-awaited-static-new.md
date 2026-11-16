@@ -1,6 +1,6 @@
 ---
 title: "action-text-content-built-with-awaited-static-new"
-status: draft
+status: ready
 updated: 2026-11-16
 rfc: "0234-no-void-promises"
 cluster: null

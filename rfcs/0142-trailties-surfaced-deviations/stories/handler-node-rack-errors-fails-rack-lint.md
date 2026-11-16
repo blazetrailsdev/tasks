@@ -1,7 +1,7 @@
 ---
 title: "rack: Handler::Node's rack.errors has no puts or flush, so Rack::Lint rejects every env"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["rack", "ruby-compat"]

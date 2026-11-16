@@ -1,7 +1,7 @@
 ---
 title: "Minitest::Test#run returns the test, not Result.from; sanitize_exception unported"
-status: draft
-updated: 2026-10-11
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

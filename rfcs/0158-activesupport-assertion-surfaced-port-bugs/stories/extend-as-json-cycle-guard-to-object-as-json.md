@@ -1,7 +1,7 @@
 ---
 title: "as_json's cycle guard misses Object#as_json — instanceValues returns a fresh hash each frame"
-status: draft
-updated: 2026-08-20
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:

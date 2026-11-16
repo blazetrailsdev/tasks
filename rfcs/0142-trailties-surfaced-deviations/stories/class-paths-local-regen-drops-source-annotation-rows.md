@@ -1,7 +1,7 @@
 ---
 title: "class-paths regenerate drops SourceAnnotationExtractor rows locally but not in CI"
-status: draft
-updated: 2026-11-01
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

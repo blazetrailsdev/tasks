@@ -1,7 +1,7 @@
 ---
 title: "ActionController::TestCase post keeps a path other than the routed action's, so per-form CSRF tokens fail"
-status: draft
-updated: 2026-10-30
+status: ready
+updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: ["actionpack"]

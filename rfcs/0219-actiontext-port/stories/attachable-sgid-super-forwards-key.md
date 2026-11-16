@@ -1,6 +1,6 @@
 ---
 title: "Attachable#read_attribute_for_serialization's attachable_sgid arm forwards key unchanged to super"
-status: draft
+status: ready
 updated: 2026-11-16
 rfc: "0219-actiontext-port"
 cluster: null

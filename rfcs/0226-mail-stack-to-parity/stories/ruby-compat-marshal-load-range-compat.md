@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat-marshal-load-range-compat"
-status: draft
-updated: 2026-11-15
+status: ready
+updated: 2026-11-16
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages: []

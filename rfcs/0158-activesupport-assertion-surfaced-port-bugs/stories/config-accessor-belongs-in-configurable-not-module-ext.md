@@ -1,7 +1,7 @@
 ---
 title: "configAccessor is ported into module-ext.ts, but Rails declares it private on Configurable::ClassMethods"
-status: draft
-updated: 2026-08-26
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

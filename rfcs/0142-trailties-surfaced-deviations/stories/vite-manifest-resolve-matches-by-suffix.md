@@ -1,7 +1,7 @@
 ---
 title: "trailties: ViteManifest.resolve falls back to a key suffix match, so two same-named assets collide silently"
-status: draft
-updated: 2026-10-22
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

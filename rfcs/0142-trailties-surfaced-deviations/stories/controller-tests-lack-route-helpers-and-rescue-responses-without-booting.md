@@ -1,7 +1,7 @@
 ---
 title: "ActionController::TestCase renders with no named-route helpers in views and no trailtie rescue_responses, because a test cannot boot the application"
-status: draft
-updated: 2026-10-12
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties", "actionpack"]

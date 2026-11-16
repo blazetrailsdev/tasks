@@ -1,7 +1,7 @@
 ---
 title: "parity: the void-return report credits a read of any method with the same name"
-status: draft
-updated: 2026-10-02
+status: ready
+updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: [scripts]

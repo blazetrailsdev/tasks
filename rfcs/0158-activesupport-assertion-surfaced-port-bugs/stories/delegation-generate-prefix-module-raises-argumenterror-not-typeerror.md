@@ -1,7 +1,7 @@
 ---
 title: "Delegation.generate raises ArgumentError where Ruby raises TypeError for prefix: true with a Module target"
-status: draft
-updated: 2026-08-24
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:

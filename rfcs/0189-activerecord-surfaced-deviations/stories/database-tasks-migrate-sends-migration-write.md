@@ -1,6 +1,6 @@
 ---
 title: "activerecord: DatabaseTasks.migrate sends Migration.write instead of calling it"
-status: claimed
+status: done
 updated: 2026-11-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#10182
 claim: "2026-11-16T14:51:39Z"
 assignee: "canonical-registry-add-foreign-key-statement-form"
 blocked-by: null

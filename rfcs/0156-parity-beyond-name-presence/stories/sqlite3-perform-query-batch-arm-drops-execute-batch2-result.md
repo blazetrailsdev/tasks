@@ -1,7 +1,7 @@
 ---
 title: "sqlite3 perform_query's batch arm drops execute_batch2's result"
-status: draft
-updated: 2026-09-30
+status: ready
+updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

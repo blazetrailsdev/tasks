@@ -1,7 +1,7 @@
 ---
 title: "ci: retry the imagemagick apt-get installs on transient network errors"
-status: draft
-updated: 2026-11-08
+status: ready
+updated: 2026-11-16
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

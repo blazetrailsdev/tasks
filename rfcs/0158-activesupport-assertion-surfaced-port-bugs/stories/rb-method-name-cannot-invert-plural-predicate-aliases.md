@@ -1,7 +1,7 @@
 ---
 title: "rbMethodName renders PLURAL_PREDICATE_ALIASES as has_x? instead of x?"
-status: draft
-updated: 2026-09-25
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "Net::HTTP#unescape restored as the private helper proxy_user/pass call"
-status: ready
+status: in-progress
 updated: 2026-11-16
 rfc: "0236-rack-proxy-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10185
+claim: "2026-11-16T15:36:32Z"
+assignee: "net-http-unescape-helper"
 blocked-by: null
 closed-reason: null
 ---

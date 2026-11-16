@@ -1,7 +1,7 @@
 ---
 title: "MimeType's Proxy moves into the prototype chain"
-status: draft
-updated: 2026-10-31
+status: ready
+updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "port-railtie-load-index-actiontext-engine-hooks-mime-to-a"
-status: draft
-updated: 2026-11-11
+status: ready
+updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

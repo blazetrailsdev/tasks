@@ -1,7 +1,7 @@
 ---
 title: "ActionDispatch::Request includes Rack::Request::Env instead of re-implementing header accessors"
-status: draft
-updated: 2026-11-07
+status: ready
+updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

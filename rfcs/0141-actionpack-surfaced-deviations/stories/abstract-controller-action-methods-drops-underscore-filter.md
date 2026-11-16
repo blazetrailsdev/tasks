@@ -1,7 +1,7 @@
 ---
 title: "actionpack: AbstractController.actionMethods skips _-prefixed names, an arm Rails' public_instance_methods lacks (abstract_controller/base.rb:77-107)"
-status: draft
-updated: 2026-10-24
+status: ready
+updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

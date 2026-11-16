@@ -1,7 +1,7 @@
 ---
 title: "Date#- against a Date answers a JS number where ruby/date answers a Rational"
-status: draft
-updated: 2026-08-09
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:

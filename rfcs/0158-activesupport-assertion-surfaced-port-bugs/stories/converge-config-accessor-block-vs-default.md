@@ -1,7 +1,7 @@
 ---
 title: "config_accessor conflates Rails' default: kwarg with its block (a function default is invoked, not stored)"
-status: draft
-updated: 2026-08-17
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:

@@ -1,7 +1,7 @@
 ---
 title: "ci.yml edits force db_adapter_affected, so draft deferral never applies to CI-infra PRs"
-status: draft
-updated: 2026-09-17
+status: ready
+updated: 2026-11-16
 rfc: "0061-ci-failures"
 cluster: null
 packages: [scripts]

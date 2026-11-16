@@ -1,7 +1,7 @@
 ---
 title: "trailties: asset helpers render /stylesheets/x.css in a controller test, because the vite.helpers initializer only runs at boot"
-status: draft
-updated: 2026-10-22
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

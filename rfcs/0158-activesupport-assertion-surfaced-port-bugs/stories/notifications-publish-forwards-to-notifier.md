@@ -1,7 +1,7 @@
 ---
 title: "Notifications.publish should forward to notifier.publish"
-status: draft
-updated: 2026-08-15
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:

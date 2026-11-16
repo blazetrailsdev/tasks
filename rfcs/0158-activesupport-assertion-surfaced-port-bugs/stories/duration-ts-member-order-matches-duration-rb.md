@@ -1,7 +1,7 @@
 ---
 title: "duration.ts member order drifts from duration.rb (asJson, coerce)"
-status: draft
-updated: 2026-08-18
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:

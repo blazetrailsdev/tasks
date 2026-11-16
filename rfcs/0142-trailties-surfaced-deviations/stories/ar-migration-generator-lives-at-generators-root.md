@@ -1,7 +1,7 @@
 ---
 title: "ar-migration-generator-lives-at-generators-root"
-status: draft
-updated: 2026-09-30
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

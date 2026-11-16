@@ -1,7 +1,7 @@
 ---
 title: "MessagePack DateTime/Time offset slots are written as zero and dropped on read"
-status: draft
-updated: 2026-07-30
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:

@@ -1,7 +1,7 @@
 ---
 title: "Enroll activesupport cache behaviors/ modules in the test extractor's REQUIRED_TEST_MODULES"
-status: draft
-updated: 2026-10-22
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: [scripts]

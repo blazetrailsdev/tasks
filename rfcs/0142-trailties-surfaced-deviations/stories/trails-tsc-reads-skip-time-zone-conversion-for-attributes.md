@@ -1,7 +1,7 @@
 ---
 title: "trails-tsc types columns in skip_time_zone_conversion_for_attributes as naive Time"
-status: draft
-updated: 2026-10-27
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

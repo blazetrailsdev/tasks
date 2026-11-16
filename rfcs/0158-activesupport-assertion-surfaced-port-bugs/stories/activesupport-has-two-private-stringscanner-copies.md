@@ -1,7 +1,7 @@
 ---
 title: "Two private StringScanner copies model Ruby's strscan; fold into one Ruby-core module"
-status: draft
-updated: 2026-08-23
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:

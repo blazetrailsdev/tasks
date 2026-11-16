@@ -1,7 +1,7 @@
 ---
 title: "TimeHelpers simple_stubs / in_block are per-instance (time_helpers.rb:262-266), not module state; unskip travel to with separate class"
-status: draft
-updated: 2026-09-30
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "GeneratorBase carries @inlinedFrom Thor::Actions#initialize; inlined gate pairs it"
-status: draft
-updated: 2026-11-05
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

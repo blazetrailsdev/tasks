@@ -1,7 +1,7 @@
 ---
 title: "Zeitwerk Cref::Map value-returning synchronize sites raise ThreadError on contention"
-status: draft
-updated: 2026-11-14
+status: ready
+updated: 2026-11-16
 rfc: "0234-no-void-promises"
 cluster: null
 packages: []

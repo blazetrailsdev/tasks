@@ -1,7 +1,7 @@
 ---
 title: "parity: when-list short-circuit fold credits per clause by class names, not by arity multiset"
-status: draft
-updated: 2026-10-03
+status: ready
+updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: [scripts]

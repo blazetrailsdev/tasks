@@ -1,7 +1,7 @@
 ---
 title: "Psych ToRuby revives !ruby/hash-with-ivars (to_ruby.rb:274-286)"
-status: draft
-updated: 2026-09-30
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

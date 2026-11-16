@@ -1,7 +1,7 @@
 ---
 title: "Logger#initialize drops ::Logger's kwargs; BroadcastLogger inherits Logger"
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: ["activesupport"]

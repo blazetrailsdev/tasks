@@ -1,7 +1,7 @@
 ---
 title: "An optional call (?.()) where Rails calls unconditionally is unmeasured and cannot carry a receipt"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

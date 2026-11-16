@@ -1,6 +1,6 @@
 ---
 title: "net-protocol-single-protocol-class-in-ruby-compat"
-status: draft
+status: ready
 updated: 2026-11-16
 rfc: "0226-mail-stack-to-parity"
 cluster: null

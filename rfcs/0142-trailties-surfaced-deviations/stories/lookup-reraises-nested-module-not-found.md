@@ -1,7 +1,7 @@
 ---
 title: "lookup re-raises a nested module-not-found as Rails' LoadError arm does"
-status: draft
-updated: 2026-10-18
+status: ready
+updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

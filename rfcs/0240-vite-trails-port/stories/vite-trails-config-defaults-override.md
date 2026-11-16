@@ -1,6 +1,6 @@
 ---
 title: "vite-trails-config-defaults-override"
-status: draft
+status: in-progress
 updated: 2026-11-16
 rfc: "0240-vite-trails-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10184
+claim: "2026-11-16T15:57:33Z"
+assignee: "vite-trails-config-defaults-override"
 blocked-by: null
 closed-reason: null
 ---

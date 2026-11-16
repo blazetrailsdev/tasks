@@ -1,7 +1,7 @@
 ---
 title: "callerLocations Location#path is a file:// URL, not a filesystem path"
-status: draft
-updated: 2026-10-14
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

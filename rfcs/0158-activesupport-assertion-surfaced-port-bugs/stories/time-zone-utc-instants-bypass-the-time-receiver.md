@@ -1,7 +1,7 @@
 ---
 title: "TimeZone#now builds its instant without Rails' time_now.utc.in_time_zone(self)"
-status: draft
-updated: 2026-08-23
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:

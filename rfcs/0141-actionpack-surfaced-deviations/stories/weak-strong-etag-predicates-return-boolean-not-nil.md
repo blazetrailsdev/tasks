@@ -1,7 +1,7 @@
 ---
 title: "weak_etag?/strong_etag? return boolean where Rails returns nil"
-status: draft
-updated: 2026-07-30
+status: ready
+updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages:

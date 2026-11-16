@@ -1,7 +1,7 @@
 ---
 title: "GlobalID.create params is options.except, no null-filter or String coercion"
-status: draft
-updated: 2026-10-17
+status: ready
+updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "mattr_accessor drops the caller_locations location Rails threads into mattr_reader/mattr_writer"
-status: draft
-updated: 2026-08-13
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:

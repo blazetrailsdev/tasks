@@ -1,7 +1,7 @@
 ---
 title: "ringo's /api/sessions honours ?owner=&repo=&pr= so fleet/transcript fetches one PR's archives"
-status: draft
-updated: 2026-11-15
+status: ready
+updated: 2026-11-16
 rfc: "0136-trailmap"
 cluster: null
 packages: []

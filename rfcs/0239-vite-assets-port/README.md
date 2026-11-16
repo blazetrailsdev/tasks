@@ -1,9 +1,9 @@
 ---
 rfc: "0239-vite-assets-port"
 title: "Port the vite_ruby gem as @blazetrails/vite-assets"
-status: active
+status: closed
 created: 2026-11-12
-updated: 2026-11-14
+updated: 2026-11-16
 owner: "@deanmarano"
 packages:
   - "vite-assets"

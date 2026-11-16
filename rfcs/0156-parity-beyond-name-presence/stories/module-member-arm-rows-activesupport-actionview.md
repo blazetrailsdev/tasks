@@ -1,7 +1,7 @@
 ---
 title: "activesupport, actionview: newly measured module-member arm rows"
-status: draft
-updated: 2026-10-03
+status: ready
+updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: ["activesupport", "actionview"]

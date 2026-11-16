@@ -1,7 +1,7 @@
 ---
 title: "better-sqlite3 source build aborts vitest on arm64; bump or fail loudly"
-status: draft
-updated: 2026-09-29
+status: ready
+updated: 2026-11-16
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

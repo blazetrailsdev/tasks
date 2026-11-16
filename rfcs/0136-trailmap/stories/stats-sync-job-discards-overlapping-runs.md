@@ -1,6 +1,6 @@
 ---
 title: "StatsSyncJob discards an overlapping hourly run"
-status: draft
+status: ready
 updated: 2026-11-16
 rfc: "0136-trailmap"
 cluster: null

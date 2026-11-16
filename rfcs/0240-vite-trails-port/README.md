@@ -10,6 +10,7 @@ packages:
   - "vite-assets"
 clusters:
   - "vite-trails"
+priority: 3
 ---
 
 # RFC 0240 — Port the vite_rails gem as @blazetrails/vite-trails

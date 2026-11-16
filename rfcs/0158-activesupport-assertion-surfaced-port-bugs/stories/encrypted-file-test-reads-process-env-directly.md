@@ -1,7 +1,7 @@
 ---
 title: "encrypted-file.test.ts reads process.env directly instead of the adapter env"
-status: draft
-updated: 2026-08-17
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:

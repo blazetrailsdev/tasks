@@ -1,6 +1,6 @@
 ---
 title: "Port SQLite3::Pragmas#table_info with version_compare and tweak_default"
-status: claimed
+status: ready
 updated: 2026-11-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 80
 priority: 92
 pr: null
-claim: "2026-11-16T14:51:39Z"
-assignee: "canonical-registry-add-foreign-key-statement-form"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

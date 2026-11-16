@@ -1,7 +1,7 @@
 ---
 title: "TZInfo Timezone.get rejects a non-exact (lowercase) identifier"
-status: draft
-updated: 2026-11-06
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

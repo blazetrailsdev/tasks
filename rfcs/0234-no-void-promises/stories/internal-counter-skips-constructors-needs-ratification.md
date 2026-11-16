@@ -1,6 +1,6 @@
 ---
 title: "internal-counter-skips-constructors-needs-ratification"
-status: draft
+status: ready
 updated: 2026-11-16
 rfc: "0234-no-void-promises"
 cluster: null

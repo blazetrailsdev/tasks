@@ -1,7 +1,7 @@
 ---
 title: "ActionController::Railties export takes the Trailties token rename"
-status: draft
-updated: 2026-11-15
+status: ready
+updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

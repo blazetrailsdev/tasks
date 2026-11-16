@@ -1,7 +1,7 @@
 ---
 title: "Module#delegate: a delegated method's error has no backtrace frame at the delegate call site (2 tests assert file only)"
-status: draft
-updated: 2026-10-13
+status: ready
+updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
