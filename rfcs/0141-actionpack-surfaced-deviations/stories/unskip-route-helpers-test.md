@@ -7,6 +7,7 @@ cluster: null
 packages: []
 deps:
   - with-routes-helpers-answers-the-wired-class-itself
+  - routes-helpers-with-records-subclass-include-in-ancestry
 deps-rfc: []
 est-loc: 20
 priority: null
