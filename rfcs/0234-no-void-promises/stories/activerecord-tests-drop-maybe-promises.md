@@ -30,3 +30,13 @@ closed-reason: null
 - [ ] No `blazetrails/no-floating-maybe-promise` finding is left in `packages/activerecord/test/**`. Each one is awaited or returned, or the test checks the synchronous arm on purpose with an assertion on the value it returns.
 - [ ] No test changes what it asserts. Each awaited value that now rejects is a real failure, and it is fixed or filed.
 - [ ] `pnpm parity:promises:tighten` lowers activerecord's `no-floating-maybe-promise` mark.
+
+## Findings from trails#10199
+
+All 39 remaining sites (or.test.ts:225-231, finder.test.ts:1236-1238,
+load-async.test.ts, relations.test.ts:526,596, and `reset()` / `mergeBang` calls)
+drop a `Relation`, which is thenable by design (`packages/activerecord/CLAUDE.md`,
+"`Relation` is evaluated by an async query"). Awaiting one runs a query the Rails
+test never runs. Asserting on the value adds an assertion beyond Rails', which reds
+the assertion ratchet in name-matched tests. The operator first decides whether
+`blazetrails/no-floating-maybe-promise` exempts a `Relation`-typed expression.

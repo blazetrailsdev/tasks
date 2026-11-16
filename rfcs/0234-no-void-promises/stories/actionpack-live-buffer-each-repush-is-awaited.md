@@ -35,3 +35,15 @@ blocks the thread on a sized queue. `Queue#push` never rejects
 - [ ] The re-push is awaited or the promise returned (sync `each` may need its
       rescue arm to hand the pushes back), not voided.
 - [ ] actionpack's `no-floating-promises` mark drops by 1 via `pnpm parity:promises:tighten`.
+
+## Findings from trails#10199
+
+- `vendor/rails/v8.0.2/actionpack/lib/action_controller/metal/live.rb` has no
+  `Buffer#each` and no `popped` re-push: the trails `each` is
+  `@noRailsEquivalent`. The citation above is wrong.
+- The re-push cannot be made synchronous. On a `SizedQueue`, `each` can pop more
+  chunks than `max` (held writers refill it as it pops), so the re-push has to
+  block. `live.test.ts` "a sync read of a live buffer raises rather than blocking
+  before close" pins the synchronous `ThreadError`. The fix decides whether a
+  sync `each` stops popping destructively, or whether the arm goes away along
+  with the invented `each`.

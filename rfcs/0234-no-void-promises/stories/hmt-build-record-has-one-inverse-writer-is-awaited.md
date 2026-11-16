@@ -36,3 +36,13 @@ sync-entry raise shape, and it reds `build then save with has one inverse` and
       `replace` is.
 - [ ] activerecord's `no-floating-promises` mark drops by one and is tightened in the PR.
 - [ ] The two tests above stay green.
+
+## Findings from trails#10199
+
+For a new owner, Rails' `HasOneAssociation#replace`
+(`vendor/rails/v8.0.2/activerecord/lib/active_record/associations/has_one_association.rb`)
+runs synchronously: `load_target` returns nil with no query, `save &&= owner.persisted?`
+is false, and `transaction_if(false)` yields. trails' `loadTarget` already answers
+synchronously in that case, but `replace`'s save branch and `transactionIf` are
+always async. The converged shape makes the save branch answer synchronously
+whenever `loadTarget` does, so `buildRecord` can use `writer` without `void`.
