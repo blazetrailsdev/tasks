@@ -1,9 +1,9 @@
 ---
 rfc: "0240-vite-trails-port"
 title: "Port the vite_rails gem as @blazetrails/vite-trails"
-status: draft
+status: active
 created: 2026-11-12
-updated: 2026-11-12
+updated: 2026-11-16
 owner: "@deanmarano"
 packages:
   - "vite-trails"
