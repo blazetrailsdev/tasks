@@ -1,6 +1,6 @@
 ---
 title: "rack-proxy-test-empty-body-not-array"
-status: draft
+status: closed
 updated: 2026-11-16
 rfc: "0236-rack-proxy-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'Delivered by trails#10175 (ffb34893f2): origin/main packages/rack-proxy/test/rack-proxy.test.ts:583 has it("empty body is not array with empty string") with both Rails assertions (status 200, body "") inline.'
 ---
 
 ## Context

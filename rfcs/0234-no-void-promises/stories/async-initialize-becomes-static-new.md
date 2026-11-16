@@ -1,6 +1,6 @@
 ---
 title: "Rackup::Server, the console command, ActionText::Content and SchemaDumper are built with an awaited static new"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0234-no-void-promises"
 cluster: constructors

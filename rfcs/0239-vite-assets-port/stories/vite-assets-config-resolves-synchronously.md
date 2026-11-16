@@ -1,6 +1,6 @@
 ---
 title: "ViteAssets#config is read synchronously once prewarmed; peekConfig retires"
-status: claimed
+status: blocked
 updated: 2026-11-16
 rfc: "0239-vite-assets-port"
 cluster: null
@@ -12,7 +12,7 @@ priority: 1
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "waiting on the vite-trails port: its app boot owns the awaited ViteAssets config prewarm that lets config() and DevServerProxy's constructor read synchronously (trails#10144 has merged; peekConfig now on main at packages/vite-assets/lib/vite-assets.ts:220)"
 closed-reason: null
 ---
 

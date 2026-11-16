@@ -1,7 +1,7 @@
 ---
 title: "Make the adapter-specific boot path idempotent so add_index can drop ifNotExists"
-status: ready
-updated: 2026-10-18
+status: claimed
+updated: 2026-11-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 80
 priority: 90
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-16T14:51:39Z"
+assignee: "canonical-registry-add-foreign-key-statement-form"
 blocked-by: null
 closed-reason: null
 ---
