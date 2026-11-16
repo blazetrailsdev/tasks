@@ -1,6 +1,6 @@
 ---
 rfc: "0000-activerecord-actionpack-type-polish"
-title: "Type polish for activerecord and actionpack"
+title: "Type polish for activerecord, actionpack and their neighbours"
 status: draft
 created: 2026-11-16
 updated: 2026-11-16
@@ -8,24 +8,29 @@ owner: "@deanmarano"
 packages:
   - "activerecord"
   - "actionpack"
+  - "activesupport"
+  - "activemodel"
+  - "actionview"
 clusters:
   - type-polish-gates
   - type-polish-activerecord
   - type-polish-actionpack
+  - type-polish-neighbours
 ---
 
 <!-- Unnumbered until merge: `scripts/finalize-rfc.mjs` swaps 0000 for the
      assigned number at merge. -->
 
-# RFC — Type polish for activerecord and actionpack
+# RFC — Type polish for activerecord, actionpack and their neighbours
 
 ## Summary
 
 activerecord and actionpack are the two packages a trails app touches most,
 and their types still carry escape hatches: `any` in signatures, `as any`
 casts, and `as unknown as` double casts onto mixin host interfaces. This RFC
-burns those down in `lib/`, adds a ratchet for the double cast that no gate
-counts today, and gives actionpack the type-level DX tests activerecord
+burns those down in `lib/`, and in the three packages whose types flow into
+theirs (activesupport, activemodel, actionview), adds a ratchet for the double
+cast that no gate counts today, and gives actionpack the type-level DX tests activerecord
 already has. The work changes types only, never runtime behaviour or Rails
 names.
 
@@ -42,8 +47,25 @@ Counts on trails main `ebd0506762` (2026-11-16), `lib/` only, by
 | `@ts-expect-error` | 4                            | 0                          |
 | `Function` type    | 67                           | 6                          |
 
-The tests carry far more (`as any` 5,885 in activerecord tests), but test
-casts are out of scope here (see Non-goals).
+The neighbours, same measure:
+
+| package       | `: any` + `as any` | `as unknown as` |
+| ------------- | ------------------ | --------------- |
+| activesupport | 88                 | 83              |
+| activemodel   | 8                  | 42              |
+| actionview    | 0                  | 51              |
+
+activerecord's model types are built on activemodel's and activesupport's
+(`class_attribute`, callbacks, validations), and actionview renders inside an
+actionpack controller, so a loose type there reaches the same app author.
+Their hot spots: activesupport `class-attribute.ts` (11), `log-subscriber.ts`
+(9), `callbacks.ts` / `current-attributes.ts` (8 each), with 19 casts to
+`Record`; activemodel `secure-password.ts` (14), 12 casts to `Record`;
+actionview `test-case.ts` (15), `helpers/sanitize-helper.ts` (6), casts onto
+`SanitizeHelperClass` and `BehaviorClass` (6 each).
+
+Source files are the scope. Test files carry far more (`as any` 5,885 in
+activerecord tests) and are out of scope (see Non-goals).
 
 **activerecord.** RFC 0009 and RFC 0037 cut `this: any` from 131 to about 5
 and put `no-explicit-any` at `warn` with a per-file count ratchet
@@ -75,9 +97,8 @@ actionpack also has no type-level tests. activerecord's
 ### 1. Ratchet first
 
 Extend `pnpm parity:lint:counts` (`scripts/parity/eslint-count.ts`) to count
-`as unknown as` per file in `packages/activerecord/lib` and
-`packages/actionpack/lib`, only-shrink against `origin/main` like the
-`no-explicit-any` count. Put actionpack `lib/` under the same
+`as unknown as` per file in the `lib/` of all five packages, only-shrink against `origin/main` like the
+`no-explicit-any` count. Put the four other packages' `lib/` under the same
 `no-explicit-any` count and the `no-explicit-any-disable` error rule that
 activerecord and arel already use. Every later story then lands as a
 measured decrease.
@@ -112,8 +133,8 @@ First coverage: `ActionController::Parameters` (`require` / `permit` /
 
 - **Test-file casts.** activerecord tests hold 5,885 `as any`; they are
   RFC 0037's `burndown-tests-allowlist` territory and do not reach users.
-- **Other packages.** activesupport, activemodel and actionview are
-  separate RFCs if wanted.
+- **Other packages.** rack (176), trailties (153), mail, nokogiri and
+  ruby-compat are a later RFC; none is on an app author's daily type path.
 - **The reflection discriminated union.** RFC 0009's W4 refactor stays its
   own decision; this RFC types reflection parameters with the existing
   classes only.
@@ -137,6 +158,9 @@ First coverage: `ActionController::Parameters` (`require` / `permit` /
 3. actionpack, in parallel — `actionpack-dx-type-tests`,
    `actionpack-route-set-and-url-for-host-casts`,
    `actionpack-controller-mixin-host-casts`.
+4. Neighbours, in parallel — `activesupport-types-class-level-mixins`,
+   `activesupport-types-notifications-and-logging`,
+   `activemodel-types-without-casts`, `actionview-types-without-casts`.
 
 ## Verification
 
@@ -144,18 +168,20 @@ On close, `lib/` only:
 
 - activerecord `: any` ≤ 375 (half) and `as any` ≤ 30.
 - activerecord `as unknown as` ≤ 140; actionpack `as unknown as` ≤ 40.
+- activesupport `: any` + `as any` ≤ 30 and `as unknown as` ≤ 30;
+  activemodel `as unknown as` ≤ 15; actionview `as unknown as` ≤ 15.
 - `packages/actionpack/dx-tests/` exists with at least 5 `*.test-d.ts`
   files, green in `DX Type Tests`.
 - `pnpm parity:api` / `parity:test` deltas non-negative in every PR.
 
 ## Open questions
 
-1. **Should the double-cast count also cover test files?** Recommendation:
-   no, `lib/` only, matching the scope above.
-2. **Should actionpack DX tests share activerecord's dx-tests tsconfig or
+1. **Should actionpack DX tests share activerecord's dx-tests tsconfig or
    own one?** Recommendation: own one, so each package's job can be
    filtered.
 
 ## Changelog
 
 - 2026-11-16: initial RFC
+- 2026-11-16: scope is source files only; add activesupport, activemodel and
+  actionview

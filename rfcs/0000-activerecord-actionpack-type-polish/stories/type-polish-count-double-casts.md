@@ -1,10 +1,10 @@
 ---
-title: "parity:lint:counts ratchets as-unknown-as in activerecord and actionpack lib"
+title: "parity:lint:counts ratchets as-unknown-as in the five type-polish packages' lib"
 status: draft
 updated: 2026-11-16
 rfc: "0000-activerecord-actionpack-type-polish"
 cluster: type-polish-gates
-packages: [activerecord, actionpack]
+packages: [activerecord, actionpack, activesupport, activemodel, actionview]
 deps: []
 deps-rfc: []
 est-loc: 150
@@ -22,16 +22,18 @@ closed-reason: null
 `no-explicit-any` warnings per file against `origin/main` for
 `packages/activerecord/{lib,test}` (`eslint.config.mjs`, RFC 0037 block).
 Nothing counts `as unknown as`: activerecord `lib/` has 202 and actionpack
-`lib/` has 117, and either can grow without a red. actionpack `lib/` is also
-outside the `no-explicit-any` count and the `blazetrails/no-explicit-any-disable`
-rule.
+`lib/` has 117 (activesupport 83, activemodel 42, actionview 51), and any of
+them can grow without a red. The four packages other than activerecord are
+also outside the `no-explicit-any` count and the
+`blazetrails/no-explicit-any-disable` rule.
 
 ## Acceptance criteria
 
 - [ ] `parity:lint:counts` counts `as unknown as` per file in
-      `packages/activerecord/lib` and `packages/actionpack/lib`, only-shrink
+      the `lib/` of activerecord, actionpack, activesupport, activemodel and
+      actionview, only-shrink
       against `origin/main`, a new file with one is red.
-- [ ] actionpack `lib/` joins the `no-explicit-any` count and
+- [ ] The other four packages' `lib/` join the `no-explicit-any` count and
       `no-explicit-any-disable`.
 - [ ] A unit test for the counter covers a file that grows, shrinks and is new.
 
