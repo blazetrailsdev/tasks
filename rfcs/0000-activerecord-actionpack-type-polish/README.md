@@ -88,17 +88,20 @@ No gate counts `as unknown as` in either package, so this debt can grow
 silently.
 
 actionpack also has no type-level tests. activerecord's
-`packages/activerecord/dx-tests/*.test-d.ts` (11 files, CI job
-`DX Type Tests`) check what a user sees; nothing checks a controller's
+`packages/activerecord/dx-tests/*.test-d.ts` (9 files, CI step
+`DX type tests`) check what a user sees; nothing checks a controller's
 `params`, `render`, or a route set's url helpers.
 
 ## Design
 
 ### 1. Ratchet first
 
-Extend `pnpm parity:lint:counts` (`scripts/parity/eslint-count.ts`) to count
-`as unknown as` per file in the `lib/` of all five packages, only-shrink against `origin/main` like the
-`no-explicit-any` count. Put the four other packages' `lib/` under the same
+`pnpm parity:lint:counts` (`scripts/parity/eslint-count.ts`) counts ESLint
+violations per file and per rule in its `RULES` list, against `origin/main`.
+It cannot count a text pattern, so the gate story adds an ESLint rule,
+`blazetrails/no-double-cast`, that reports `x as unknown as T`. The rule is
+held at `warn` on the `lib/` of all five packages and added to `RULES`, so it
+is only-shrink like the `no-explicit-any` count. Put the four other packages' `lib/` under the same
 `no-explicit-any` count and the `no-explicit-any-disable` error rule that
 activerecord and arel already use. Every later story then lands as a
 measured decrease.
@@ -124,10 +127,11 @@ or local, reorders control flow, or adds a wrapper to dodge a cast.
 ### 3. actionpack DX tests
 
 Add `packages/actionpack/dx-tests/` on activerecord's model: `*.test-d.ts`
-files run by `pnpm test:types` and the existing `DX Type Tests` CI job.
-First coverage: `ActionController::Parameters` (`require` / `permit` /
+files. First coverage: `ActionController::Parameters` (`require` / `permit` /
 `fetch`), `render` options, `redirect_to`, `before_action` callbacks, and
-`url_for` / named route helpers on a drawn route set.
+`url_for` / named route helpers on a drawn route set. It is a new project in
+`vitest.dx-tests.config.ts` beside activerecord's, trailties', actionview's
+and rack's, with its own `tsconfig.json`, run by the CI `DX type tests` step.
 
 ## Non-goals
 
@@ -138,6 +142,11 @@ First coverage: `ActionController::Parameters` (`require` / `permit` /
 - **The reflection discriminated union.** RFC 0009's W4 refactor stays its
   own decision; this RFC types reflection parameters with the existing
   classes only.
+- **Module carrier conversions.** Converting a ruby-compat `Module`
+  carrier to a plain module is RFC 0197's work. Where a cast sits on a
+  carrier that is still blocked (`ActionDispatch::Routing::UrlFor`, see
+  `routing-url-for-and-collector-plain-modules`), the story types around the
+  carrier and leaves its shape alone.
 - **Runtime changes.** A story that needs a behaviour change to type a
   value files that change as its own story.
 
@@ -171,14 +180,15 @@ On close, `lib/` only:
 - activesupport `: any` + `as any` ≤ 30 and `as unknown as` ≤ 30;
   activemodel `as unknown as` ≤ 15; actionview `as unknown as` ≤ 15.
 - `packages/actionpack/dx-tests/` exists with at least 5 `*.test-d.ts`
-  files, green in `DX Type Tests`.
+  files, green in `DX type tests`.
 - `pnpm parity:api` / `parity:test` deltas non-negative in every PR.
+- The closing story's PR body records every count, re-taken with the
+  command in the Motivation section.
 
 ## Open questions
 
-1. **Should actionpack DX tests share activerecord's dx-tests tsconfig or
-   own one?** Recommendation: own one, so each package's job can be
-   filtered.
+None. The dx-tests layout question is answered by the existing
+per-package projects in `vitest.dx-tests.config.ts`.
 
 ## Changelog
 

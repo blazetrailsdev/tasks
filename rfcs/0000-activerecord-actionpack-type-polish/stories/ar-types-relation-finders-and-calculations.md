@@ -31,3 +31,16 @@ returning `any` lose the model type for every caller.
 - [ ] `findEach` / `findInBatches` / `inBatches` yield typed records /
       relations.
 - [ ] dx-tests cover `first()`, `find(id)` and `findEach` return types.
+
+## Verification
+
+Before and after counts, recorded in the PR body, from the trails root:
+`grep -rPc ': any\b|as any\b|as unknown as' packages/activerecord/lib --include=*.ts`
+over the files named above. `pnpm typecheck`, `pnpm parity:lint:counts`,
+`pnpm test:types`, `pnpm parity:api` and `pnpm parity:test` are green, with
+non-negative parity deltas.
+
+## Definition of done
+
+Renaming a Rails method, parameter or local, reordering control flow, or
+adding a wrapper to avoid a cast does not close this story.

@@ -27,7 +27,16 @@ them can grow without a red. The four packages other than activerecord are
 also outside the `no-explicit-any` count and the
 `blazetrails/no-explicit-any-disable` rule.
 
+`eslint-count.ts` counts only ESLint rules (its `RULES` list:
+`no-explicit-any`, `rails-error-parity`, `no-standalone-associations`), so a
+double cast needs a rule before it can be counted.
+
 ## Acceptance criteria
+
+- [ ] A new rule `eslint/no-double-cast.mjs` (`blazetrails/no-double-cast`)
+      reports `x as unknown as T`, with a rule test.
+- [ ] It is at `warn` on the `lib/**/*.ts` of activerecord, actionpack,
+      activesupport, activemodel and actionview, and listed in `RULES`.
 
 - [ ] `parity:lint:counts` counts `as unknown as` per file in
       the `lib/` of activerecord, actionpack, activesupport, activemodel and
@@ -36,6 +45,11 @@ also outside the `no-explicit-any` count and the
 - [ ] The other four packages' `lib/` join the `no-explicit-any` count and
       `no-explicit-any-disable`.
 - [ ] A unit test for the counter covers a file that grows, shrinks and is new.
+
+## Verification
+
+`pnpm parity:lint:counts` is green on the PR and red on a scratch commit
+that adds one `as unknown as` to `packages/actionview/lib/layouts.ts`.
 
 ## Definition of done
 

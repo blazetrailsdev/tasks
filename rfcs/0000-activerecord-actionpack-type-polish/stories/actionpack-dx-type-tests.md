@@ -18,14 +18,16 @@ closed-reason: null
 
 ## Context
 
-activerecord has `packages/activerecord/dx-tests/` (11 `*.test-d.ts`, CI job
-`DX Type Tests`, `pnpm test:types`). actionpack has none, so nothing checks
+activerecord has `packages/activerecord/dx-tests/` (9 `*.test-d.ts`, CI step
+`DX type tests`, `pnpm test:types`). actionpack has none, so nothing checks
 the types a controller author sees.
 
 ## Acceptance criteria
 
-- [ ] `packages/actionpack/dx-tests/` with its own `tsconfig.json`, run by
-      `pnpm test:types` and the `DX Type Tests` job.
+- [ ] `packages/actionpack/dx-tests/` with its own `tsconfig.json`, added as
+      a project in `vitest.dx-tests.config.ts` (as activerecord, trailties,
+      actionview and rack are), run by `pnpm test:types` and the CI
+      `DX type tests` step.
 - [ ] At least five files: strong parameters (`require` / `permit` /
       `fetch`), `render` options, `redirectTo`, `beforeAction` callbacks,
       named route / `urlFor` helpers on a drawn route set.

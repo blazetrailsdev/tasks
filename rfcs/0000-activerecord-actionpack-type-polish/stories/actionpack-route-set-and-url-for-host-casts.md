@@ -28,6 +28,24 @@ hits and `routing/url-for.ts` 5; casts onto `UrlForHost` (5) and
 
 - [ ] `as unknown as` in `routing/` falls by at least 70%.
 - [ ] `UrlForHost` / `PolymorphicHost` are reached through a `this`-typed
-      function or `Included<>`, not a cast.
+      function or `Included<>`, not a cast, wherever the module is already a
+      plain module.
+- [ ] `ActionDispatch::Routing::UrlFor` stays a `Module` carrier until
+      `routing-url-for-and-collector-plain-modules` (RFC 0123, blocked on the
+      live-include decision) lands. Casts on it are typed through its
+      existing host interface, and its shape is not changed here.
 - [ ] Named-route helper modules keep the late-definition shape ratified
       in CLAUDE.md § "Module mixins" (`RoutesHelpers.with`).
+
+## Verification
+
+Before and after counts, recorded in the PR body, from the trails root:
+`grep -rPc ': any\b|as any\b|as unknown as' packages/actionpack/lib --include=*.ts`
+over the files named above. `pnpm typecheck`, `pnpm parity:lint:counts`,
+`pnpm test:types`, `pnpm parity:api` and `pnpm parity:test` are green, with
+non-negative parity deltas.
+
+## Definition of done
+
+Renaming a Rails method, parameter or local, reordering control flow, or
+adding a wrapper to avoid a cast does not close this story.

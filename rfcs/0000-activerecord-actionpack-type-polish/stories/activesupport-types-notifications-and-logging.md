@@ -32,3 +32,16 @@ and `ActionController::LogSubscriber` inherits them. Rails:
       `Record<string, unknown>` (or a generic payload) instead of `any`.
 - [ ] Subclass log subscribers in activerecord and actionpack still
       typecheck with no new cast.
+
+## Verification
+
+Before and after counts, recorded in the PR body, from the trails root:
+`grep -rPc ': any\b|as any\b|as unknown as' packages/activesupport/lib --include=*.ts`
+over the files named above. `pnpm typecheck`, `pnpm parity:lint:counts`,
+`pnpm test:types`, `pnpm parity:api` and `pnpm parity:test` are green, with
+non-negative parity deltas.
+
+## Definition of done
+
+Renaming a Rails method, parameter or local, reordering control flow, or
+adding a wrapper to avoid a cast does not close this story.
