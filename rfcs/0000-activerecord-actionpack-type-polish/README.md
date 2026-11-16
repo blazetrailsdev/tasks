@@ -101,8 +101,8 @@ violations per file and per rule in its `RULES` list, against `origin/main`.
 It cannot count a text pattern, so the gate story adds an ESLint rule,
 `blazetrails/no-double-cast`, that reports `x as unknown as T`. The rule is
 held at `warn` on the `lib/` of all five packages and added to `RULES`, so it
-is only-shrink like the `no-explicit-any` count. Put the four other packages' `lib/` under the same
-`no-explicit-any` count and the `no-explicit-any-disable` error rule that
+is only-shrink like the `no-explicit-any` count. The gate story also puts
+the four other packages' `lib/` under the same `no-explicit-any` count and the `no-explicit-any-disable` error rule that
 activerecord and arel already use. Every later story then lands as a
 measured decrease.
 
@@ -173,12 +173,18 @@ and rack's, with its own `tsconfig.json`, run by the CI `DX type tests` step.
 
 ## Verification
 
-On close, `lib/` only:
+On close, `lib/` only. Each target is the start count less the sum of its
+stories' acceptance criteria, so meeting every story meets the RFC. "Hits"
+is `: any` + `as any` + `as unknown as`.
 
-- activerecord `: any` ≤ 375 (half) and `as any` ≤ 30.
-- activerecord `as unknown as` ≤ 140; actionpack `as unknown as` ≤ 40.
-- activesupport `: any` + `as any` ≤ 30 and `as unknown as` ≤ 30;
-  activemodel `as unknown as` ≤ 15; actionview `as unknown as` ≤ 15.
+| package       | start (hits)                | target (hits)                   |
+| ------------- | --------------------------- | ------------------------------- |
+| activerecord  | 1,046                       | ≤ 760                           |
+| actionpack    | 117 `as unknown as`         | ≤ 60 `as unknown as`            |
+| activesupport | 171                         | ≤ 135                           |
+| activemodel   | 42 `as unknown as`, 8 `any` | ≤ 15 `as unknown as`, ≤ 2 `any` |
+| actionview    | 51 `as unknown as`          | ≤ 15 `as unknown as`            |
+
 - `packages/actionpack/dx-tests/` exists with at least 5 `*.test-d.ts`
   files, green in `DX type tests`.
 - `pnpm parity:api` / `parity:test` deltas non-negative in every PR.
@@ -195,3 +201,6 @@ per-package projects in `vitest.dx-tests.config.ts`.
 - 2026-11-16: initial RFC
 - 2026-11-16: scope is source files only; add activesupport, activemodel and
   actionview
+- 2026-11-16: add the `no-double-cast` rule the count needs, story
+  verification commands, the `UrlFor` carrier cross-reference, and targets
+  that equal the sum of the stories
