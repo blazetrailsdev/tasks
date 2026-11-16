@@ -34,7 +34,7 @@ is identical on every request, because the binds stay as `?` placeholders.
 
 - [ ] Measure what one `prepare` of the feed query costs in better-sqlite3 against
       the `sqlite3` gem, in a micro-benchmark outside the server, and record it.
-- [ ] If trails is materially slower, find out where the time goes, whether in
+- [ ] If trails is more than 1.5× slower than the `sqlite3` gem, find out where the time goes, whether in
       better-sqlite3's statement setup or in SQLite's compile, and fix it in the
       wrapper where possible.
 - [ ] If the cost is SQLite's own compile, propose (do not land) reusing compiled
@@ -49,6 +49,6 @@ RFC records the decision to deviate from Rails first.
 
 ## Verification
 
-Run the slim profile harness from the RFC README's Verification section on
+Run the slim profile harness from the RFC README's "Slim profile harness" section on
 trails main before and after the change. Record CPU per request, p95, p99 and
 this story's measured share in the PR body.

@@ -18,6 +18,10 @@ closed-reason: null
 
 ## Context
 
+The evidence for the flag disagrees with itself, and that is why this story
+exists. In a fixed-load test at 5,000 users it moved p95 from 121 to about
+100 ms.
+
 `examples/twelve-dollar-server/start.sh` now sets
 `--max-semi-space-size=64`. On a single rig, trails before and after the flag
 landed both scored 7,750 users. The run with the flag peaked at 725 MB against
@@ -35,3 +39,10 @@ source of queueing.
       p99, peak memory and the GC log for each.
 - [ ] Keep the setting that gives the best p99 within the 2 GB cap, and record the
       numbers in the PR.
+
+## Verification
+
+Run the slim profile harness from the RFC README's "Slim profile harness" section once
+per setting, and one challenge hold per setting with `bench/load.js` at
+`VUS=7750 DURATION=5m`. Record CPU per request, p95, p99, peak memory and the
+GC log's scavenge and major-GC durations in the PR body.

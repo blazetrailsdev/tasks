@@ -108,35 +108,13 @@ heap profile, with objects collected by minor and major GC included, or from a
 `--cpu-prof` profile of the production server under k6 load. Each story is
 re-measured with a harness: the first stories used CPU per request from the
 cgroup's `cpu.stat` over a 90 s run at 5,000 users, plus p95/p99, and stories
-filed from the second profile use the slim harness under Verification.
+filed from the second profile use the slim harness described below.
 
 Rails parity still holds. Where Rails allocates in the same shape (for example
 `JSONGemEncoder#jsonify` then `generate`), the change keeps the observable
 behaviour and the Rails source reference, and changes only the representation.
 
-## Non-goals
-
-- Changing the twelve-dollar-server application to win the benchmark.
-- Request caching. The challenge forbids it.
-
-## Alternatives considered
-
-- **Tune the GC instead of allocating less.** `--max-semi-space-size=64`
-  shortened the tail in a fixed-load test, but it did not change the score
-  and cost about 135 MB. `semi-space-flag-evaluate` settles the flag, and the
-  rest of the RFC goes after allocation and CPU.
-- **Change the application's queries**, for example dropping the raw `select`
-  that makes the feed query unpreparable. That is ruled out by Non-goals: the
-  gambitboy Rails app uses the same scope, and the framework should be fast on
-  idiomatic code.
-
-## Rollout
-
-Each story lands as its own trails PR with its before and after numbers. A full
-challenge re-bench, scoring trails main against Rails on the same rig, runs
-after a batch of stories lands, not after each one.
-
-## Verification
+### Slim profile harness
 
 The slim harness runs on one c7i.xlarge, Ubuntu 24.04, from a checkout of
 `arjaythedev/twelve-dollar-server-challenge` at `~/tdsc` with
@@ -209,16 +187,71 @@ setTimeout(async () => {
 `--heap-prof` is not a substitute for the allocation pass: it reports only
 objects still live at exit.
 
+## Non-goals
+
+- Changing the twelve-dollar-server application to win the benchmark.
+- Request caching. The challenge forbids it.
+
+## Alternatives considered
+
+- **Tune the GC instead of allocating less.** `--max-semi-space-size=64`
+  is evidence that disagrees with itself. In a fixed-load test at 5,000 users,
+  it moved p95 from 121 to about 100 ms. At the 5-minute hold, p99 was 686 ms
+  with it against 562 ms without, the score did not change, and it cost about
+  135 MB. `semi-space-flag-evaluate` settles the flag, and the
+  rest of the RFC goes after allocation and CPU.
+- **Change the application's queries**, for example dropping the raw `select`
+  that makes the feed query unpreparable. That is ruled out by Non-goals: the
+  gambitboy Rails app uses the same scope, and the framework should be fast on
+  idiomatic code.
+
+## Rollout
+
+Each story lands as its own trails PR with its before and after numbers.
+
+1. **Phase 1: first profile.** `twelve-dollar-example-boots-and-benches`,
+   `relation-clone-without-property-descriptors`,
+   `json-encoder-fewer-intermediate-objects`,
+   `kernel-catch-without-als-run-per-callback`,
+   `ruby-compat-dispatch-overhead`, and the follow-ups
+   `measure-kernel-catch-map-bytes-after-sync-catch`,
+   `kernel-catch-async-before-filters-skip-als-run-when-sync`,
+   `mon-synchronize-without-als-run-for-sync-blocks` and
+   `perry-runtime-property-lookup-cost`. All are done or closed.
+2. **Phase 2: second profile, in any order.**
+   `sqlite-statement-columns-read-once`, `attribute-first-read-allocations`,
+   `respond-to-lookup-cache`, `thread-creation-frame-lazy`,
+   `node-handler-env-allocation` and `semi-space-flag-evaluate`.
+   `relation-clone-descriptor-fallback` depends on
+   `relation-clone-without-property-descriptors`, which is done.
+   `measure-allocation-gap-between-entry-points` comes first, because it
+   decides which allocation numbers the others compare against.
+3. **Phase 3: decision.** `unpreparable-select-statement-compile-cost`
+   measures first. A statement cache lands only if this RFC records the
+   decision.
+4. **Checkpoint.** After phase 2, a full challenge re-bench on one rig scores
+   trails main against Rails and is checked against Verification.
+
+## Verification
+
+The RFC is met when, on one rig and against the same Rails submission:
+
+- trails main scores at least **8,500 users**, half of today's 1,250-user gap
+  to Rails' 9,000. Reaching 9,000 is the stretch goal.
+- CPU per request in the slim harness falls from **1,324 µs to 1,100 µs or
+  less**.
+
 ## Open questions
 
 - Should trails reuse compiled statements for unpreparable queries whose SQL
-  carries bind placeholders, deviating from Rails? It depends on the
-  measurement in `unpreparable-select-statement-compile-cost`.
+  carries bind placeholders, deviating from Rails? **Deferred to**
+  `unpreparable-select-statement-compile-cost`, which records the decision here.
 - Is the 108 KB versus 267 KB per-request difference between the two
-  allocation profiles all down to the entry point, `perry/main.ts` against
-  `trails server`? If not, the gap is itself a finding.
+  allocation profiles all down to the entry point? **Deferred to**
+  `measure-allocation-gap-between-entry-points`.
 
 ## Changelog
 
 - 2026-11-13: RFC filed with six stories from the first profile.
-- 2026-11-16: Re-bench on one rig, second profile, and eight more stories.
+- 2026-11-16: Re-bench on one rig, second profile, and nine more stories;
+  Rollout phases and an RFC-level target.

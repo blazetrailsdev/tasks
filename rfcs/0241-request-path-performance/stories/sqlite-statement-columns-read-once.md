@@ -44,6 +44,6 @@ twelve-dollar load this is **1.7% of busy CPU**. Rails reads
 
 ## Verification
 
-Run the slim profile harness from the RFC README's Verification section on
+Run the slim profile harness from the RFC README's "Slim profile harness" section on
 trails main before and after the change. Record CPU per request, p95, p99 and
 this story's measured share in the PR body.
