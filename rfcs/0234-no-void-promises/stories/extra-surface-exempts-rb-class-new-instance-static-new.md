@@ -1,6 +1,6 @@
 ---
 title: "extra-surface does not score a static new built by rbClassNewInstance"
-status: ready
+status: done
 updated: 2026-11-16
 rfc: "0234-no-void-promises"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10174
+claim: "2026-11-16T18:37:11Z"
+assignee: "action-text-content-built-with-awaited-static-new"
 blocked-by: null
 closed-reason: null
 ---

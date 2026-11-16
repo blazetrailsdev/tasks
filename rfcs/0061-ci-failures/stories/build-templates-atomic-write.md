@@ -1,6 +1,6 @@
 ---
 title: "build-templates-atomic-write"
-status: ready
+status: in-progress
 updated: 2026-11-16
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10196
+claim: "2026-11-16T18:07:19Z"
+assignee: "red-ebd05067"
 blocked-by: null
 closed-reason: null
 ---

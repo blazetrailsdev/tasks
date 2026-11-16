@@ -1,6 +1,6 @@
 ---
 title: "Base.typeForAttribute returns ValueType, never null (attribute_types default)"
-status: claimed
+status: in-progress
 updated: 2026-11-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#10194
 claim: "2026-11-16T17:52:02Z"
 assignee: "boot-loader-add-index-needs-if-not-exists"
 blocked-by: null

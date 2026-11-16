@@ -1,6 +1,6 @@
 ---
 title: "Shard the sqlite-mem AR suite 2-way, the last unsharded copy of the AR file set"
-status: ready
+status: done
 updated: 2026-11-16
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8015
+claim: "2026-11-16T18:07:19Z"
+assignee: "red-ebd05067"
 blocked-by: null
 closed-reason: null
 ---

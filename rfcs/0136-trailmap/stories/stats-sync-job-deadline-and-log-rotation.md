@@ -1,6 +1,6 @@
 ---
 title: "StatsSyncJob: run deadline under the lock, and STATS_SYNC_LOG rotation"
-status: ready
+status: in-progress
 updated: 2026-11-16
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#146
+claim: "2026-11-16T18:51:46Z"
+assignee: "ringo-api-sessions-honours-the-pr-filter"
 blocked-by: null
 closed-reason: null
 ---

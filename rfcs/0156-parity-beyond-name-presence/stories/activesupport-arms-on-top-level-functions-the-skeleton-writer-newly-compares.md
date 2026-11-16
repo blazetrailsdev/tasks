@@ -1,6 +1,6 @@
 ---
 title: "activesupport: converge or receipt the arm mismatches on top-level functions the skeleton writer newly compares"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
