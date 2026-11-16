@@ -1,6 +1,6 @@
 ---
 title: "solid-queue: RecurringTask#delayFromNow returns 0 on a minute boundary (flaky test)"
-status: done
+status: in-progress
 updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: trails#10181
+pr: trails#10186
 claim: "2026-11-16T15:52:02Z"
 assignee: "solid-queue-delay-from-now-zero-on-minute-boundary"
 blocked-by: null

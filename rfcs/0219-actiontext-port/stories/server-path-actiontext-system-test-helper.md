@@ -1,6 +1,6 @@
 ---
 title: "actiontext engine reaches SystemTestHelper the way engine.rb's require does"
-status: ready
+status: in-progress
 updated: 2026-11-16
 rfc: "0219-actiontext-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10187
+claim: "2026-11-16T16:06:41Z"
+assignee: "attachable-sgid-super-forwards-key"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Attachable's Ruby-named attachable_sgid alias converges"
-status: draft
+status: ready
 updated: 2026-11-16
 rfc: "0219-actiontext-port"
 cluster: null

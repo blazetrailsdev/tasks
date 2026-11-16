@@ -1,6 +1,6 @@
 ---
 title: "AppGenerator runs the Solid install generators unless --skip-solid"
-status: claimed
+status: done
 updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: solid-stack
@@ -14,7 +14,7 @@ deps:
   ]
 deps-rfc: []
 est-loc: 200
-pr: null
+pr: trails#10186
 claim: "2026-11-16T15:52:02Z"
 assignee: "solid-queue-delay-from-now-zero-on-minute-boundary"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Duration::SECONDS_PER_MONTH is a Julian twelfth (2629800), not Rails' Gregorian 2629746"
-status: ready
+status: claimed
 updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-16T16:51:45Z"
+assignee: "activesupport-has-two-private-stringscanner-copies"
 blocked-by: null
 closed-reason: null
 ---

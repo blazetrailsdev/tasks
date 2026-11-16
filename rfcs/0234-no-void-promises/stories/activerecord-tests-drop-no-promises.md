@@ -1,6 +1,6 @@
 ---
 title: "ActiveRecord tests drop no promises"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0234-no-void-promises"
 cluster: tests

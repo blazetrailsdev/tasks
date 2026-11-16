@@ -1,6 +1,6 @@
 ---
 title: "MimeType's Proxy moves into the prototype chain"
-status: ready
+status: done
 updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#9791
+claim: "2026-11-16T16:36:44Z"
+assignee: "mime-type-proxy-lifts-into-the-prototype-chain"
 blocked-by: null
 closed-reason: null
 ---

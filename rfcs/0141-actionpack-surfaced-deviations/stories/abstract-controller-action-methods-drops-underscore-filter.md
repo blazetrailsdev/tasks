@@ -1,6 +1,6 @@
 ---
 title: "actionpack: AbstractController.actionMethods skips _-prefixed names, an arm Rails' public_instance_methods lacks (abstract_controller/base.rb:77-107)"
-status: ready
+status: claimed
 updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-16T16:36:44Z"
+assignee: "mime-type-proxy-lifts-into-the-prototype-chain"
 blocked-by: null
 closed-reason: null
 ---
