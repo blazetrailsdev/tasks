@@ -1,6 +1,6 @@
 ---
 title: "rack-proxy-test-local-backend-routes"
-status: blocked
+status: ready
 updated: 2026-11-16
 rfc: "0236-rack-proxy-port"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-16T00:37:07Z"
-assignee: "net-http-ipaddr-and-conn-address"
-blocked-by: "waiting on trails#10155 (perform_request and rack-proxy.test.ts local-backend tests) to merge"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

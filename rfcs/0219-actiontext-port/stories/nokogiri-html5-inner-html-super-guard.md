@@ -1,6 +1,6 @@
 ---
 title: "HTML5::Node#inner_html keeps its return-super-unless-HTML5-document guard"
-status: ready
+status: in-progress
 updated: 2026-11-16
 rfc: "0219-actiontext-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10171
+claim: "2026-11-16T01:07:27Z"
+assignee: "nokogiri-html5-fragment-parse-static-override"
 blocked-by: null
 closed-reason: null
 ---

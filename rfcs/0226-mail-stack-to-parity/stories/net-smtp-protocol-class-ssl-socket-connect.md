@@ -1,6 +1,6 @@
 ---
 title: "net-smtp: port Net::Protocol so ssl_socket_connect lives on it"
-status: ready
+status: in-progress
 updated: 2026-11-16
 rfc: "0226-mail-stack-to-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10170
+claim: "2026-11-16T01:21:47Z"
+assignee: "net-smtp-protocol-class-ssl-socket-connect"
 blocked-by: null
 closed-reason: null
 ---

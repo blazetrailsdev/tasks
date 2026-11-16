@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-waitpid2-quit-exit-status-one"
-status: claimed
+status: in-progress
 updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10169
 claim: "2026-11-16T00:51:34Z"
 assignee: "local-cache-middleware-requires-rack-at-call-time"
 blocked-by: null
