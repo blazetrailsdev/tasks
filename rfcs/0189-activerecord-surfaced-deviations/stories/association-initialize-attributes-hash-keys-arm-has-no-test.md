@@ -1,7 +1,7 @@
 ---
 title: "Association#initialize_attributes reading a Hash's keys has no regression test"
-status: ready
-updated: 2026-10-18
+status: in-progress
+updated: 2026-11-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -11,9 +11,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 79
-pr: null
-claim: null
-assignee: null
+pr: trails#10173
+claim: "2026-11-16T10:06:35Z"
+assignee: "association-initialize-attributes-hash-keys-arm-has-no-test"
 blocked-by: null
 closed-reason: null
 ---

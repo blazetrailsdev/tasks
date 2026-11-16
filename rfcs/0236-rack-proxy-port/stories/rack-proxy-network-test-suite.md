@@ -1,7 +1,7 @@
 ---
 title: "rack-proxy-network-test-suite"
-status: ready
-updated: 2026-11-15
+status: in-progress
+updated: 2026-11-16
 rfc: "0236-rack-proxy-port"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#10175
+claim: "2026-11-16T10:36:40Z"
+assignee: "rack-proxy-network-test-suite"
 blocked-by: null
 closed-reason: null
 ---

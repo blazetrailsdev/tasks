@@ -1,6 +1,6 @@
 ---
 title: "rack-proxy-unknown-host-addrinfo-stub"
-status: draft
+status: ready
 updated: 2026-11-16
 rfc: "0236-rack-proxy-port"
 cluster: null

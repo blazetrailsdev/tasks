@@ -1,7 +1,7 @@
 ---
 title: "Rackup::Server, the console command, ActionText::Content and SchemaDumper are built with an awaited static new"
-status: ready
-updated: 2026-11-12
+status: in-progress
+updated: 2026-11-16
 rfc: "0234-no-void-promises"
 cluster: constructors
 packages: [rackup, trailties, actiontext, activerecord]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10174
+claim: "2026-11-16T10:21:33Z"
+assignee: "async-initialize-becomes-static-new"
 blocked-by: null
 closed-reason: null
 ---

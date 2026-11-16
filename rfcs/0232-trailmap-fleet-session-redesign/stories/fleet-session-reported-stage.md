@@ -1,7 +1,7 @@
 ---
 title: "trailmap: show a spawn's reported Self review stage"
-status: in-progress
-updated: 2026-11-15
+status: done
+updated: 2026-11-16
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-stage-signal
 packages: [actionview]

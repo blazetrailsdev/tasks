@@ -1,7 +1,7 @@
 ---
 title: "trailmap: ⌘K palette searching sessions, stories and PRs"
-status: in-progress
-updated: 2026-11-15
+status: done
+updated: 2026-11-16
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-search
 packages: [actionview, activerecord]

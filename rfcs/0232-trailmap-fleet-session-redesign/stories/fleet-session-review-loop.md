@@ -1,7 +1,7 @@
 ---
 title: "trailmap: the stepper branches into an agent and reviewer loop at Reviewer convergence"
-status: in-progress
-updated: 2026-11-15
+status: done
+updated: 2026-11-16
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-sessions
 packages: [actionview]
