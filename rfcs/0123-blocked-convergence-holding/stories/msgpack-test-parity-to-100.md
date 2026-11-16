@@ -5,7 +5,9 @@ updated: 2026-11-16
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
-deps: []
+deps:
+  - msgpack-symbol-ext-packer-arm-and-extended-object-lookup
+  - msgpack-unpacker-read-loop-the-engine-hides
 deps-rfc: []
 est-loc: 300
 priority: null
