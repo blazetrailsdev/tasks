@@ -1,6 +1,6 @@
 ---
 title: "The header marks the section a page is in, not only an exact match"
-status: ready
+status: in-progress
 updated: 2026-11-16
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#148
+claim: "2026-11-16T22:21:26Z"
+assignee: "command-palette-footer-hints-follow-the-mode"
 blocked-by: null
 closed-reason: null
 ---

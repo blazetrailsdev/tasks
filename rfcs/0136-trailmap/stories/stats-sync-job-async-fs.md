@@ -1,6 +1,6 @@
 ---
 title: "StatsSyncJob and logGhFailure move to async fs once FsAdapter has appendFile"
-status: ready
+status: blocked
 updated: 2026-11-16
 rfc: "0136-trailmap"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-16T22:21:26Z"
+assignee: "command-palette-footer-hints-follow-the-mode"
+blocked-by: "needs trails fs-adapter-async-append-file (not on trails main yet) + re-vendor"
 closed-reason: null
 ---
 

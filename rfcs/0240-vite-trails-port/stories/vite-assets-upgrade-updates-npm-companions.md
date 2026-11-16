@@ -1,6 +1,6 @@
 ---
 title: "vite-assets-upgrade-updates-npm-companions"
-status: draft
+status: ready
 updated: 2026-11-16
 rfc: "0240-vite-trails-port"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

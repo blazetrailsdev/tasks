@@ -1,6 +1,6 @@
 ---
 title: "vite ports read package.json versions, not Gem.loadedSpecs"
-status: draft
+status: closed
 updated: 2026-11-16
 rfc: "0240-vite-trails-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#10209 (236cca0f5a): on origin/main git grep loadedSpecs over packages/vite-assets and packages/vite-trails is empty; frameworkLibraries reads app + node_modules/<name>/package.json, printInfo reads the framework package.json version, tasks/vite.ts checks node_modules trailties package.json."
 ---
 
 ## Context

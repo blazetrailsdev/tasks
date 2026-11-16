@@ -1,6 +1,6 @@
 ---
 title: "vite-assets-require-framework-libraries-loads-vite-trails"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0240-vite-trails-port"
 cluster: null

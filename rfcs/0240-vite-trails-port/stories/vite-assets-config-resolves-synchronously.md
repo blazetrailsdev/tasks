@@ -12,7 +12,7 @@ priority: 1
 pr: null
 claim: null
 assignee: null
-blocked-by: "waiting on the vite-trails port: its app boot owns the awaited ViteAssets config prewarm that lets config() and DevServerProxy's constructor read synchronously (trails#10144 has merged; peekConfig now on main at packages/vite-assets/lib/vite-assets.ts:220)"
+blocked-by: "still live on origin/main 236cca0f5a: nothing outside vite-assets constructs DevServerProxy or awaits a boot-time ViteAssets.config() prewarm; that boot/proxy wiring is 0235-hotwire-via-vite/vite-trails-dev-server-topology (draft). peekConfig at packages/vite-assets/lib/vite-assets.ts:240; Config.configDefaults is already private (config.ts:200), so only the peekConfig bracket access remains."
 closed-reason: null
 ---
 

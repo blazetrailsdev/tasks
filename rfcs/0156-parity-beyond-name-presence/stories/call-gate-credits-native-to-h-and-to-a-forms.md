@@ -1,6 +1,6 @@
 ---
 title: "Call gate credits Object.fromEntries / [...x] as Ruby to_h / to_a"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

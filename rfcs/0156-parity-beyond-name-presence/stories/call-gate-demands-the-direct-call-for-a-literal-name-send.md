@@ -1,6 +1,6 @@
 ---
 title: "parity: the call gate demands the direct call for a literal-name rbFSend"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

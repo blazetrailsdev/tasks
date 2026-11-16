@@ -1,6 +1,6 @@
 ---
 title: "parity:api arity: the global name pool credits a port through an unrelated same-named signature"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

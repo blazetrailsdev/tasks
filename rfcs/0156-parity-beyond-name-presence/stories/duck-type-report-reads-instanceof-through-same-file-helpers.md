@@ -1,6 +1,6 @@
 ---
 title: "duck-type report: an instanceof list behind a same-file helper hides the pair"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

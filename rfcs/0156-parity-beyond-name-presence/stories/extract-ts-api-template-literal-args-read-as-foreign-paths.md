@@ -1,6 +1,6 @@
 ---
 title: "extract-ts-api records an interpolation-headed template-literal argument as a foreign absolute path"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

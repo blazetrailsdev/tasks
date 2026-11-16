@@ -12,7 +12,7 @@ priority: null
 pr: trails#10202
 claim: "2026-11-16T19:06:40Z"
 assignee: "solid-cache-test-compare-credits-shared-behaviors"
-blocked-by: "waiting on solid-cache-bump-to-v1-0-9: v1.0.7's local_cache_behavior.rb:217 fetch_multi is an older revision than the Rails 8.0.2 body (:228) the shared behavior ports; v1.0.9's behaviors_rails_8_0 copy matches"
+blocked-by: "operator decision: solid_cache v1.0.9 behaviors_rails_8_0/local_cache_behavior.rb:217 test_local_cache_of_fetch_multi (2 asserts) is older than Rails 8.0.2 activesupport local_cache_behavior.rb:228 (3), which the shared behavior ports; the v1.0.9 bump did not clear it"
 closed-reason: null
 ---
 

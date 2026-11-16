@@ -1,6 +1,6 @@
 ---
 title: "Replace the RUNNER_STATUS_TOKEN PAT with a GitHub App installation token"
-status: claimed
+status: ready
 updated: 2026-11-16
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 25
 priority: null
 pr: null
-claim: "2026-11-16T21:51:48Z"
-assignee: "better-sqlite3-arm64-source-build-aborts"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

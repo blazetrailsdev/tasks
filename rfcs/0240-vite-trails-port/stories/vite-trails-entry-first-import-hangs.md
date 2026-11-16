@@ -1,6 +1,6 @@
 ---
 title: "vite-trails-entry-first-import-hangs"
-status: draft
+status: ready
 updated: 2026-11-16
 rfc: "0240-vite-trails-port"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

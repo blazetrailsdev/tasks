@@ -1,6 +1,6 @@
 ---
 title: "Run the SQLite :memory: lane on PRs that touch an inMemoryDb() arm"
-status: claimed
+status: in-progress
 updated: 2026-11-16
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: trails#10213
 claim: "2026-11-16T21:51:48Z"
 assignee: "better-sqlite3-arm64-source-build-aborts"
 blocked-by: null
