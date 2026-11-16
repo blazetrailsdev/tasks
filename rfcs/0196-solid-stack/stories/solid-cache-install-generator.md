@@ -1,7 +1,7 @@
 ---
 title: "Port solid_cache:install"
-status: ready
-updated: 2026-11-08
+status: claimed
+updated: 2026-11-15
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-cache"]
@@ -11,8 +11,8 @@ deps:
 deps-rfc: []
 est-loc: 150
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-15T23:51:34Z"
+assignee: "solid-queue-delay-from-now-zero-on-minute-boundary"
 blocked-by: null
 closed-reason: null
 priority: 12

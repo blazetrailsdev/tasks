@@ -1,6 +1,6 @@
 ---
 title: "extend() copies module functions Ruby's extend never carries"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

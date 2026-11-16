@@ -1,6 +1,6 @@
 ---
 title: "parity:api records ViteRuby::CLI's Thor parent as a sanctioned divergence"
-status: claimed
+status: in-progress
 updated: 2026-11-15
 rfc: "0239-vite-assets-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 5
-pr: null
+pr: trails#10158
 claim: "2026-11-15T22:51:38Z"
 assignee: "vite-assets-names-follow-vite-assets-convention"
 blocked-by: null

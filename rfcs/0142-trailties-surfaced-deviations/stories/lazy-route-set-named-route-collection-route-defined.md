@@ -1,7 +1,7 @@
 ---
 title: "lazy-route-set-named-route-collection-route-defined"
-status: draft
-updated: 2026-09-30
+status: done
+updated: 2026-11-15
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#10125
 claim: null
 assignee: null
 blocked-by: null

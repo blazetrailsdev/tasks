@@ -1,6 +1,6 @@
 ---
 title: "constant-table-walks-const-modules-repo-wide"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0226-mail-stack-to-parity"
 cluster: null

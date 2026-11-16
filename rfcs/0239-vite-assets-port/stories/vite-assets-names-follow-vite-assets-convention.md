@@ -1,6 +1,6 @@
 ---
 title: "vite-assets identifiers follow the vite_ruby→vite_assets / yarn→pnpm conventions"
-status: claimed
+status: in-progress
 updated: 2026-11-15
 rfc: "0239-vite-assets-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 2
-pr: null
+pr: trails#10158
 claim: "2026-11-15T22:51:38Z"
 assignee: "vite-assets-names-follow-vite-assets-convention"
 blocked-by: null

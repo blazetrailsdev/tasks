@@ -1,6 +1,6 @@
 ---
 title: "mailer-view-ivar-collides-with-attr-internal-message"
-status: claimed
+status: in-progress
 updated: 2026-11-15
 rfc: "0219-actiontext-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10159
 claim: "2026-11-15T22:36:38Z"
 assignee: "actiontext-test-helper-boots-dummy-app"
 blocked-by: null

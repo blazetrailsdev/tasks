@@ -1,6 +1,6 @@
 ---
 title: "lookup_store(:solid_cache_store) resolves SolidCache::Store"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0196-solid-stack"
 cluster: solid-stack

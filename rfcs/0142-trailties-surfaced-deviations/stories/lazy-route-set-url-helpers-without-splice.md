@@ -1,6 +1,6 @@
 ---
 title: "trailties: LazyRouteSet url helpers without a prototype splice"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0142-trailties-surfaced-deviations"
 cluster: conversion

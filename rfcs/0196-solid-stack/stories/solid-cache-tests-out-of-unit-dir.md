@@ -1,6 +1,6 @@
 ---
 title: "Move solid-cache tests out of test/unit/ so test:compare credits them"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0196-solid-stack"
 cluster: null

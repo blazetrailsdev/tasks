@@ -1,6 +1,6 @@
 ---
 title: "rack-proxy-test-local-backend-routes"
-status: draft
+status: ready
 updated: 2026-11-15
 rfc: "0236-rack-proxy-port"
 cluster: null

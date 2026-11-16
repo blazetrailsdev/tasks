@@ -1,7 +1,7 @@
 ---
 title: "Count transaction control statements in the query-assertion helpers"
-status: ready
-updated: 2026-10-18
+status: in-progress
+updated: 2026-11-15
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 75
-pr: null
-claim: null
-assignee: null
+pr: trails#10160
+claim: "2026-11-15T23:21:41Z"
+assignee: "install-executor-hooks-async-queries-tracker-stopgap"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "solid-cache-estimate-size-reader-shape"
-status: in-progress
+status: done
 updated: 2026-11-15
 rfc: "0196-solid-stack"
 cluster: null

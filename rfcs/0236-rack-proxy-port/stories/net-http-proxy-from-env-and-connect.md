@@ -1,6 +1,6 @@
 ---
 title: "net-http-proxy-from-env-and-connect"
-status: ready
+status: in-progress
 updated: 2026-11-15
 rfc: "0236-rack-proxy-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10161
+claim: "2026-11-15T23:31:22Z"
+assignee: "net-http-proxy-from-env-and-connect"
 blocked-by: null
 closed-reason: null
 ---
