@@ -1,7 +1,7 @@
 ---
 title: "Audit and restore assert_queries_count assertions dropped from ported AR tests"
-status: in-progress
-updated: 2026-11-15
+status: done
+updated: 2026-11-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

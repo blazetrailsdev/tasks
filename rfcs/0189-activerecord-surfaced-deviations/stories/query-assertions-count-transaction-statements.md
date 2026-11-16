@@ -1,7 +1,7 @@
 ---
 title: "Count transaction control statements in the query-assertion helpers"
-status: in-progress
-updated: 2026-11-15
+status: done
+updated: 2026-11-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

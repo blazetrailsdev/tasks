@@ -1,7 +1,7 @@
 ---
 title: "Net::HTTP request body_data arm (set_form, send_request_with_body_data)"
-status: in-progress
-updated: 2026-11-15
+status: done
+updated: 2026-11-16
 rfc: "0236-rack-proxy-port"
 cluster: null
 packages: []

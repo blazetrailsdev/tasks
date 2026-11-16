@@ -1,7 +1,7 @@
 ---
 title: "Customer's composed_of declarations spell out mappings Rails infers (gpsLocation)"
-status: ready
-updated: 2026-10-18
+status: blocked
+updated: 2026-11-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -13,9 +13,9 @@ deps-rfc: []
 est-loc: 60
 priority: 88
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-16T00:06:39Z"
+assignee: "query-assertions-keyword-arg-and-materialize-transactions"
+blocked-by: "Rails' inferred composed_of mapping [name, name] reads the gps_location column only because the part name and column share one snake_case spelling; trails parts are camelCase (gpsLocation) while columns stay snake_case, so dropping the mapping reds 4 aggregations tests (inferred mapping, allow nil gps set to nil, ...). Waits on an attribute-naming decision for composed_of part/column names."
 closed-reason: null
 ---
 

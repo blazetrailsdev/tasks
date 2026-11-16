@@ -1,7 +1,7 @@
 ---
 title: "A QUIT supervisee stops claiming work and reaps with exit status 1"
-status: claimed
-updated: 2026-11-15
+status: in-progress
+updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-queue"]
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#10163
 claim: "2026-11-15T23:51:34Z"
 assignee: "solid-queue-delay-from-now-zero-on-minute-boundary"
 blocked-by: null

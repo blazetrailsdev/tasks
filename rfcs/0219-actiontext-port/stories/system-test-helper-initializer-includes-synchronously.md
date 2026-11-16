@@ -1,7 +1,7 @@
 ---
 title: "system-test-helper-initializer-includes-synchronously"
-status: draft
-updated: 2026-11-15
+status: done
+updated: 2026-11-16
 rfc: "0219-actiontext-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10151
+claim: "2026-11-16T00:23:10Z"
+assignee: "system-test-helper-initializer-includes-synchronously"
 blocked-by: null
 closed-reason: null
 ---

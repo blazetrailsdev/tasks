@@ -1,7 +1,7 @@
 ---
 title: "HasManyAssociation#update_counter_in_memory takes no reflection and writes the counter instead of calling increment"
-status: in-progress
-updated: 2026-11-15
+status: done
+updated: 2026-11-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:

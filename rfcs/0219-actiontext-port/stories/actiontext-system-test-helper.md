@@ -1,7 +1,7 @@
 ---
 title: "Port ActionText::SystemTestHelper and the system tests"
-status: in-progress
-updated: 2026-11-15
+status: done
+updated: 2026-11-16
 rfc: "0219-actiontext-port"
 cluster: at-engine
 packages: ["actiontext"]

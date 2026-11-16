@@ -1,7 +1,7 @@
 ---
 title: "vite-assets identifiers follow the vite_ruby→vite_assets / yarn→pnpm conventions"
-status: in-progress
-updated: 2026-11-15
+status: done
+updated: 2026-11-16
 rfc: "0239-vite-assets-port"
 cluster: null
 packages: ["vite-assets"]

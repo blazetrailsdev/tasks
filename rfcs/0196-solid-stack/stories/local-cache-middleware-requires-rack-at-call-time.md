@@ -1,7 +1,7 @@
 ---
 title: "LocalCache::Middleware loads Rack::BodyProxy instead of assuming rack is already imported"
-status: draft
-updated: 2026-11-15
+status: claimed
+updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-16T00:51:34Z"
+assignee: "local-cache-middleware-requires-rack-at-call-time"
 blocked-by: null
 closed-reason: null
 ---

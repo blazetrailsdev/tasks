@@ -1,7 +1,7 @@
 ---
 title: "ActiveSupport callbacks and cache store await their promises instead of pre-observing them"
-status: ready
-updated: 2026-11-12
+status: in-progress
+updated: 2026-11-16
 rfc: "0234-no-void-promises"
 cluster: discarded-calls
 packages: [activesupport]
@@ -9,9 +9,9 @@ deps: [no-floating-promises-repo-wide-ignore-void-false, no-swallowed-rejection-
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10164
+claim: "2026-11-16T00:21:40Z"
+assignee: "activesupport-callbacks-stop-pre-observing-promises"
 blocked-by: null
 closed-reason: null
 ---

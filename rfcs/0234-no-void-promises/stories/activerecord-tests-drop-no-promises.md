@@ -1,7 +1,7 @@
 ---
 title: "ActiveRecord tests drop no promises"
-status: claimed
-updated: 2026-11-15
+status: in-progress
+updated: 2026-11-16
 rfc: "0234-no-void-promises"
 cluster: tests
 packages: [activerecord]
@@ -14,7 +14,7 @@ deps:
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
+pr: trails#10162
 claim: "2026-11-15T23:36:49Z"
 assignee: "activerecord-tests-drop-no-promises"
 blocked-by: null

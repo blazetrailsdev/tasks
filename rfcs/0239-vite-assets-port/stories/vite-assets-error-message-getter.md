@@ -1,7 +1,7 @@
 ---
 title: "ViteRuby::Error#message applies :troubleshooting: lazily"
-status: in-progress
-updated: 2026-11-15
+status: done
+updated: 2026-11-16
 rfc: "0239-vite-assets-port"
 cluster: null
 packages: ["vite-assets"]

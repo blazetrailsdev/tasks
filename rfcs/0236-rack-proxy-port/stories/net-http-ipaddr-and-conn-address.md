@@ -1,6 +1,6 @@
 ---
 title: "Net::HTTP ipaddr= and conn_address for connect and CONNECT"
-status: draft
+status: in-progress
 updated: 2026-11-16
 rfc: "0236-rack-proxy-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10168
+claim: "2026-11-16T00:37:07Z"
+assignee: "net-http-ipaddr-and-conn-address"
 blocked-by: null
 closed-reason: null
 ---

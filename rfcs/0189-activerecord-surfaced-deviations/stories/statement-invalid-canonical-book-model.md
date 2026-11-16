@@ -1,7 +1,7 @@
 ---
 title: "statement_invalid port declares an ad-hoc Book instead of the canonical model"
-status: ready
-updated: 2026-10-18
+status: in-progress
+updated: 2026-11-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: 84
-pr: null
-claim: null
-assignee: null
+pr: trails#10166
+claim: "2026-11-16T00:06:39Z"
+assignee: "query-assertions-keyword-arg-and-materialize-transactions"
 blocked-by: null
 closed-reason: null
 ---

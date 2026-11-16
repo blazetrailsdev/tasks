@@ -1,7 +1,7 @@
 ---
 title: "ActiveRecord connection adapters stop dropping promises"
-status: in-progress
-updated: 2026-11-15
+status: done
+updated: 2026-11-16
 rfc: "0234-no-void-promises"
 cluster: discarded-calls
 packages: [activerecord]

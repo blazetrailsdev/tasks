@@ -1,7 +1,7 @@
 ---
 title: "authentication-generator-e2e-request-cycle"
-status: claimed
-updated: 2026-11-15
+status: in-progress
+updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10167
 claim: "2026-11-15T23:07:34Z"
 assignee: "authentication-generator-e2e-request-cycle"
 blocked-by: null

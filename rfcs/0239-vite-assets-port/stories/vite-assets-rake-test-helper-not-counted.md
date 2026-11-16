@@ -1,7 +1,7 @@
 ---
 title: "rake_tasks_test.rb helper test_app_dev_dependencies stops counting as a missing test"
-status: in-progress
-updated: 2026-11-15
+status: done
+updated: 2026-11-16
 rfc: "0239-vite-assets-port"
 cluster: null
 packages: ["vite-assets"]
