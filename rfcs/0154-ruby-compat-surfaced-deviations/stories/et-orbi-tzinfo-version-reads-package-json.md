@@ -1,6 +1,6 @@
 ---
 title: "et-orbi-tzinfo-version-reads-package-json"
-status: draft
+status: in-progress
 updated: 2026-11-16
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10207
+claim: "2026-11-16T21:31:39Z"
+assignee: "et-orbi-tzinfo-version-reads-package-json"
 blocked-by: null
 closed-reason: null
 ---

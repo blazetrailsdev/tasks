@@ -1,6 +1,6 @@
 ---
 title: "solid-cache-bump-to-v1-0-9"
-status: draft
+status: claimed
 updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-16T21:30:06Z"
+assignee: "solid-cache-bump-to-v1-0-9"
 blocked-by: null
 closed-reason: null
 ---

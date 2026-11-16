@@ -1,6 +1,6 @@
 ---
 title: "index-by-keeps-hash-insertion-order"
-status: draft
+status: ready
 updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null

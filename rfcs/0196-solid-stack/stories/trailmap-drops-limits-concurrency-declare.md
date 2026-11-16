@@ -1,14 +1,14 @@
 ---
 title: "trailmap drops its limitsConcurrency declare and hand-written bin/jobs"
 status: done
-updated: 2026-11-12
+updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null
 packages: [solid-queue]
 deps: []
 deps-rfc: []
 est-loc: 20
-priority: 16
+priority: null
 pr: trailmap#137
 claim: "2026-11-12T14:41:33Z"
 assignee: "solid-queue-recurring-enqueue-event-flake"

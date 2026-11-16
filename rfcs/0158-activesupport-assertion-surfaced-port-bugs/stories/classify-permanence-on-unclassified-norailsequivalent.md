@@ -1,6 +1,6 @@
 ---
 title: "Classify the last @noRailsEquivalent tag carrying no permanence claim (core-ext/securerandom.ts)"
-status: ready
+status: done
 updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 10
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-16T21:03:13Z"
+assignee: "activesupport-public-module-is-not-the-autoload-namespace"
 blocked-by: null
 closed-reason: null
 ---

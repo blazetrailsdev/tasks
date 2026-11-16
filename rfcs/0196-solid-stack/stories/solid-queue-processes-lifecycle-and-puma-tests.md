@@ -1,14 +1,14 @@
 ---
 title: "Finish solid-queue processes_lifecycle tests and settle the puma plugin"
 status: done
-updated: 2026-11-12
+updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-queue"]
 deps: []
 deps-rfc: []
 est-loc: 400
-priority: 6
+priority: null
 pr: trails#10030
 claim: "2026-11-12T14:41:33Z"
 assignee: "solid-queue-recurring-enqueue-event-flake"

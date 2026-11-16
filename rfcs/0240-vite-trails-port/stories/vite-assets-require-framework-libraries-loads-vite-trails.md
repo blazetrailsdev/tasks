@@ -1,6 +1,6 @@
 ---
 title: "vite-assets-require-framework-libraries-loads-vite-trails"
-status: ready
+status: in-progress
 updated: 2026-11-16
 rfc: "0240-vite-trails-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10209
+claim: "2026-11-16T21:28:22Z"
+assignee: "vite-assets-require-framework-libraries-loads-vite-trails"
 blocked-by: null
 closed-reason: null
 ---

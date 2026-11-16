@@ -1,6 +1,6 @@
 ---
 title: "vite:verify_install enhances :environment (Gem.loadedSpecs is never seated)"
-status: draft
+status: closed
 updated: 2026-11-16
 rfc: "0240-vite-trails-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: seating Gem.loadedSpecs ports RubyGems, which is not ported; the guard is constantly true since vite-trails' package.json depends on @blazetrails/trailties. Replaced by vite-trails-verify-install-always-enhances-environment."
 ---
 
 ## Context

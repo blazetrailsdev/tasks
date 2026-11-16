@@ -1,14 +1,14 @@
 ---
 title: "generators-lookup-reaches-package-generators"
 status: done
-updated: 2026-11-12
+updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 8
+priority: null
 pr: trails#10012
 claim: "2026-11-12T00:11:34Z"
 assignee: "solid-queue-recurring-enqueue-event-flake"

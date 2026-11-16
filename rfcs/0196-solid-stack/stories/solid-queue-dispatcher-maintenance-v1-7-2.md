@@ -8,7 +8,7 @@ packages: ["solid-queue"]
 deps: ["solid-queue-batch-callbacks-and-lifecycle-v1-7-2"]
 deps-rfc: []
 est-loc: 500
-priority: 10
+priority: null
 pr: null
 claim: null
 assignee: null

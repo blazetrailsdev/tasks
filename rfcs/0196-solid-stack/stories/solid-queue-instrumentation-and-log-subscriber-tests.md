@@ -1,14 +1,14 @@
 ---
 title: "Port solid-queue instrumentation_test and log_subscriber_test"
 status: done
-updated: 2026-11-08
+updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-queue"]
 deps: []
 deps-rfc: []
 est-loc: 450
-priority: 4
+priority: null
 pr: trails#9885
 claim: "2026-11-08T21:34:33Z"
 assignee: "solid-queue-instrumentation-and-log-subscriber-tests"

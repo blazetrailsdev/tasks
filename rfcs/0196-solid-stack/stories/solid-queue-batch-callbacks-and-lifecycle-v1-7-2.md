@@ -8,7 +8,7 @@ packages: ["solid-queue"]
 deps: ["solid-queue-batch-models-v1-7-2"]
 deps-rfc: []
 est-loc: 350
-priority: 9
+priority: null
 pr: null
 claim: null
 assignee: null

@@ -1,14 +1,14 @@
 ---
 title: "solid-cable parity:test reaches 100% (solid_cable_test, update generator)"
 status: done
-updated: 2026-11-08
+updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-cable"]
 deps: []
 deps-rfc: []
 est-loc: 200
-priority: 1
+priority: null
 pr: trails#9866
 claim: "2026-11-08T13:15:37Z"
 assignee: "solid-cable-test-parity-100"

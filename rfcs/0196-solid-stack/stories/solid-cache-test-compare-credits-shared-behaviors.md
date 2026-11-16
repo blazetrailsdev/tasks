@@ -9,7 +9,7 @@ deps:
   - solid-cache-bump-to-v1-0-9
 deps-rfc: []
 est-loc: 120
-priority: 1
+priority: null
 pr: trails#10202
 claim: "2026-11-16T19:06:40Z"
 assignee: "solid-cache-test-compare-credits-shared-behaviors"

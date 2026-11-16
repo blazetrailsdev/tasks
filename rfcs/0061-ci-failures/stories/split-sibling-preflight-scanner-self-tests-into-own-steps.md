@@ -1,6 +1,6 @@
 ---
 title: "Preflight's control-bytes and sync-association-writer scanners run their self-test in the scan's step, so a scanner bug reports as a PR finding"
-status: ready
+status: claimed
 updated: 2026-11-16
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-16T21:51:48Z"
+assignee: "better-sqlite3-arm64-source-build-aborts"
 blocked-by: null
 closed-reason: null
 ---

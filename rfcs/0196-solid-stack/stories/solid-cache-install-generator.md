@@ -15,7 +15,7 @@ claim: "2026-11-15T23:51:34Z"
 assignee: "solid-queue-delay-from-now-zero-on-minute-boundary"
 blocked-by: null
 closed-reason: null
-priority: 12
+priority: null
 ---
 
 ## Context

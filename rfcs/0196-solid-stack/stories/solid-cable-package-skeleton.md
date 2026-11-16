@@ -1,7 +1,7 @@
 ---
 title: "Create packages/solid-cable as a published workspace package and enroll it in compare"
 status: done
-updated: 2026-10-29
+updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-cable"]
@@ -15,7 +15,7 @@ claim: "2026-10-29T15:26:22Z"
 assignee: "solid-cable-package-skeleton"
 blocked-by: null
 closed-reason: null
-priority: 5
+priority: null
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: 'Plugin test helper template calls fixtures("all") instead of fixtures(":all")'
-status: ready
+status: in-progress
 updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 5
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10210
+claim: "2026-11-16T21:21:37Z"
+assignee: "action-controller-railtie-missing-initializers-and-set-helpers-path-after"
 blocked-by: null
 closed-reason: null
 ---

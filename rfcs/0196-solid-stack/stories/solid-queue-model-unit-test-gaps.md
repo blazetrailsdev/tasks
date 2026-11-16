@@ -1,14 +1,14 @@
 ---
 title: "Port solid-queue's missing model and unit tests (claimed/failed execution, process, supervisor, hooks)"
 status: done
-updated: 2026-11-08
+updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-queue"]
 deps: []
 deps-rfc: []
 est-loc: 500
-priority: 3
+priority: null
 pr: trails#9869
 claim: "2026-11-08T13:45:22Z"
 assignee: "solid-queue-parity-api-100"

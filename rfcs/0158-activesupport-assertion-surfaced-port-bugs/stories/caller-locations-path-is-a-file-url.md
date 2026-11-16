@@ -1,6 +1,6 @@
 ---
 title: "callerLocations Location#path is a file:// URL, not a filesystem path"
-status: ready
+status: done
 updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10206
+claim: "2026-11-16T21:03:13Z"
+assignee: "activesupport-public-module-is-not-the-autoload-namespace"
 blocked-by: null
 closed-reason: null
 ---

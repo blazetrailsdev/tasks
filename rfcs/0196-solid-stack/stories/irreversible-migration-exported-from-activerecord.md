@@ -8,7 +8,7 @@ packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 15
+priority: null
 pr: trails#10150
 claim: "2026-11-15T22:21:36Z"
 assignee: "solid-cache-size-tests-need-seeded-srand"

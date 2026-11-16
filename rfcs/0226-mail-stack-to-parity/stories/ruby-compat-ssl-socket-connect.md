@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat-ssl-socket-connect"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0226-mail-stack-to-parity"
 cluster: null

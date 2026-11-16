@@ -1,6 +1,6 @@
 ---
 title: "Codify the debian-arm64 self-hosted runner provisioning in infra/runner"
-status: ready
+status: claimed
 updated: 2026-11-16
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-16T21:51:48Z"
+assignee: "better-sqlite3-arm64-source-build-aborts"
 blocked-by: null
 closed-reason: null
 ---

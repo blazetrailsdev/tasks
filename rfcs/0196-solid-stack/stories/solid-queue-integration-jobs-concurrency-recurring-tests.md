@@ -1,14 +1,14 @@
 ---
 title: "Port solid-queue jobs_lifecycle, concurrency_controls, recurring_tasks and lifecycle_hooks integration tests"
 status: done
-updated: 2026-11-09
+updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-queue"]
 deps: []
 deps-rfc: []
 est-loc: 600
-priority: 5
+priority: null
 pr: trails#9866
 claim: "2026-11-08T13:15:37Z"
 assignee: "solid-cable-test-parity-100"

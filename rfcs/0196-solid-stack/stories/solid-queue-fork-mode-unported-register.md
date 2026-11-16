@@ -8,7 +8,7 @@ packages: ["solid-queue"]
 deps: ["solid-queue-async-supervisor-v1-7-2"]
 deps-rfc: []
 est-loc: 80
-priority: 7
+priority: null
 pr: null
 claim: null
 assignee: null

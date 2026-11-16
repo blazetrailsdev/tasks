@@ -1,6 +1,6 @@
 ---
 title: "Call gates credit a getter-returned Proc invocation (Ruby's reader.call collapses in JS)"
-status: ready
+status: in-progress
 updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: comparer
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10208
+claim: "2026-11-16T21:06:52Z"
+assignee: "arity-check-global-name-pool-credits-unrelated-signatures"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: AbstractAdapter#warning_ignored? sends String#match? on both arms"
-status: ready
-updated: 2026-10-22
+status: in-progress
+updated: 2026-11-16
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -11,9 +11,9 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10211
+claim: "2026-11-16T21:37:31Z"
+assignee: "abstract-adapter-warning-ignored-sends-is-match"
 blocked-by: null
 closed-reason: null
 ---

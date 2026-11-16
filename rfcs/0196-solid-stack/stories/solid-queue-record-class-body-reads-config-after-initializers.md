@@ -1,14 +1,14 @@
 ---
 title: "solid-queue-record-class-body-reads-config-after-initializers"
 status: done
-updated: 2026-10-26
+updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: 1
+priority: null
 pr: trails#9349
 claim: "2026-10-26T20:00:54Z"
 assignee: "solid-queue-record-class-body-reads-config-after-initializers"

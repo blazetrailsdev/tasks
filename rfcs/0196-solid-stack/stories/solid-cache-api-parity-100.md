@@ -8,7 +8,7 @@ packages: ["solid-cache"]
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: 2
+priority: null
 pr: trails#10202
 claim: "2026-11-16T19:06:40Z"
 assignee: "solid-cache-test-compare-credits-shared-behaviors"

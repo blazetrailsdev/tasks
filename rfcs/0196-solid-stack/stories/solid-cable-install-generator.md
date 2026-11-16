@@ -1,7 +1,7 @@
 ---
 title: "Port solid_cable:install"
 status: done
-updated: 2026-10-29
+updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: solid-stack
 packages: ["solid-cable"]
@@ -13,7 +13,7 @@ claim: "2026-10-29T19:31:14Z"
 assignee: "ar-types-for-solid-stack-casts"
 blocked-by: null
 closed-reason: null
-priority: 8
+priority: null
 ---
 
 ## Context
