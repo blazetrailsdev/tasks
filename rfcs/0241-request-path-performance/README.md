@@ -70,7 +70,7 @@ The second profile used a slimmer harness, which later stories reuse:
   2 GB cap, cpu2 (cpu0's hyperthread sibling) is left idle, and k6 runs on
   cpus 1 and 3.
 - **Load:** a 30 s warm-up at 1,000 users, then 2 minutes at 4,000 users
-  (about 540 req/s) of the challenge's `bench/load.js`.
+  (about 460 req/s) of the challenge's `bench/load.js`.
 - **Passes:** one plain pass for latency and CPU per request, one with
   `--cpu-prof` and a `PerformanceObserver` GC log, and one with an inspector
   sampling heap profile that includes objects collected by minor and major GC.
