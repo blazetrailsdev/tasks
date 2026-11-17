@@ -1,6 +1,6 @@
 ---
 title: "solid-cache-wire-failure-and-encoded-key-behaviors"
-status: in-progress
+status: done
 updated: 2026-11-17
 rfc: "0196-solid-stack"
 cluster: null

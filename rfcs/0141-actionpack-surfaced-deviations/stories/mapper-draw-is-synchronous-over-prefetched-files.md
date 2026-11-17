@@ -1,6 +1,6 @@
 ---
 title: "actionpack: Mapper#draw(name) is synchronous over prefetched route files"
-status: claimed
+status: in-progress
 updated: 2026-11-17
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#10238
 claim: "2026-11-17T12:51:39Z"
 assignee: "delegation-generate-string-target-accessor-arm"
 blocked-by: null

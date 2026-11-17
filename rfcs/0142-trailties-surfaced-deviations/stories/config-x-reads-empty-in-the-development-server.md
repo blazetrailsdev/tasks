@@ -1,7 +1,7 @@
 ---
 title: "config.x set at boot reads empty in request code under trails server (development)"
 status: ready
-updated: 2026-11-16
+updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: [trailties]

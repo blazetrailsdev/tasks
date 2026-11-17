@@ -1,6 +1,6 @@
 ---
 title: "class-paths regenerate drops SourceAnnotationExtractor rows locally but not in CI"
-status: ready
+status: in-progress
 updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10239
+claim: "2026-11-17T13:37:03Z"
+assignee: "ar-migration-generator-lives-at-generators-root"
 blocked-by: null
 closed-reason: null
 ---

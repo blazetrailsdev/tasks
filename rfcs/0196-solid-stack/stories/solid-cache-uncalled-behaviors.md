@@ -1,6 +1,6 @@
 ---
 title: "Run solid_cache's failure-safety, failure-raising, connection-pool, encoded-key and delete-matched behaviors"
-status: in-progress
+status: done
 updated: 2026-11-17
 rfc: "0196-solid-stack"
 cluster: null

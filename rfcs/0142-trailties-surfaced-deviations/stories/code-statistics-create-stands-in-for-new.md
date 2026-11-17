@@ -1,7 +1,7 @@
 ---
 title: "code-statistics-create-stands-in-for-new"
-status: ready
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10239
+claim: "2026-11-17T13:37:03Z"
+assignee: "ar-migration-generator-lives-at-generators-root"
 blocked-by: null
 closed-reason: null
 ---

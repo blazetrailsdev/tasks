@@ -1,6 +1,6 @@
 ---
 title: "ar-migration-generator-lives-at-generators-root"
-status: ready
+status: done
 updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9399
+claim: "2026-11-17T13:37:03Z"
+assignee: "ar-migration-generator-lives-at-generators-root"
 blocked-by: null
 closed-reason: null
 ---

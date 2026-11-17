@@ -1,7 +1,7 @@
 ---
 title: "ActionController::TestCase never installs protectFromForgery from defaultProtectFromForgery, because a test cannot boot the application"
 status: ready
-updated: 2026-11-16
+updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

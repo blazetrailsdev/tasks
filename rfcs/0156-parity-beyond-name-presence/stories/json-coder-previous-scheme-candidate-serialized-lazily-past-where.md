@@ -1,7 +1,7 @@
 ---
 title: "json-coder-previous-scheme-candidate-serialized-lazily-past-where"
-status: ready
-updated: 2026-11-16
+status: closed
+updated: 2026-11-17
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-17T13:21:36Z"
+assignee: "burn-down-the-declaration-only-population-remaining"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: Rails raises lazily too. With a previous scheme, where(name:) carries two candidates, so ArrayHandler builds Arel::Nodes::HomogeneousIn (vendor/rails/v8.0.2/activerecord/lib/active_record/relation/predicate_builder/array_handler.rb:20-23), whose casted_values calls type.serialize only when the visitor compiles the SQL (vendor/rails/v8.0.2/activerecord/lib/arel/nodes/homogeneous_in.rb:39-47). trails raises from the same frame (homogeneous-in.ts castedValues, reached from to_sql at query time). The YAML twin raises at where because AdditionalValue#process serializes eagerly with the previous type, which is also Rails' order."
 ---
 
 ## Context
