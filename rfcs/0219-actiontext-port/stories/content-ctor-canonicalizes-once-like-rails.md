@@ -5,7 +5,8 @@ updated: 2026-11-15
 rfc: "0219-actiontext-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - action-text-content-built-with-awaited-static-new
 deps-rfc: []
 est-loc: 150
 priority: null
