@@ -25,4 +25,5 @@ In Ruby, a part pushed into a full queue blocks the caller until a reader pops i
 ## Acceptance criteria
 
 - No `Live::Buffer#write` promise is dropped on the `response.body =` → `build_buffer` path. Either `build_buffer` returns the writes to a caller that awaits them, or the setter path is made awaitable, following the settled `setX()` idiom for async setters.
-- A test sets a body with more parts than `queue_size`, disconnects the client, and asserts that the `ClientDisconnected` reaches the caller and no unhandled rejection occurs.
+- A test sets a body with more parts than `queue_size`, disconnects the client, and asserts that the `ClientDisconnected` is raised by the writes' owner and no unhandled rejection occurs.
+- Delivering the `ClientDisconnected` to the caller of `response.body =`, as `live.rb:271` does, needs an awaitable `response_body=` chain. That work is `response-body-setter-awaits-live-build-buffer-writes` (operator ruling, trails#10268).
