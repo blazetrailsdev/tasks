@@ -1,6 +1,6 @@
 ---
 title: "a production-mode trails server accepted connections and never answered (reproduce first)"
-status: claimed
+status: closed
 updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: "2026-11-17T17:36:58Z"
 assignee: "config-x-reads-empty-in-the-development-server"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: does not reproduce on 7c34e78dfb. A generated app under NODE_ENV=production bin/trails server with no built assets answers /up and its routes 200 and the stylesheet 404; trailmap without its hub database exits at boot naming HUB_DATABASE_URL. No accepted-but-unanswered connection in either."
 ---
 
 ## Context

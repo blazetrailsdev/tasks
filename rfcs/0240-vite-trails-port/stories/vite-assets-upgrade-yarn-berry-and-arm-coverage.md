@@ -1,6 +1,6 @@
 ---
 title: "vite-assets upgrade: yarn berry verb and untested arms"
-status: draft
+status: closed
 updated: 2026-11-17
 rfc: "0240-vite-trails-port"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "unwanted: operator does not want Yarn Berry support"
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "Port turbo-rails' test/dummy app as the @blazetrails/turbo test app"
-status: draft
-updated: 2026-11-12
+status: in-progress
+updated: 2026-11-17
 rfc: "0238-turbo-port"
 cluster: turbo
 packages: [turbo, activerecord]
@@ -9,9 +9,9 @@ deps: [hotwire-vite-claude-md-ruling]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10262
+claim: "2026-11-17T18:03:06Z"
+assignee: "turbo-dummy-test-app"
 blocked-by: null
 closed-reason: null
 ---

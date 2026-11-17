@@ -11,6 +11,7 @@ packages:
   - "actioncable"
 clusters:
   - turbo
+priority: 3
 ---
 
 # RFC 0238 — Port the turbo-rails gem as @blazetrails/turbo

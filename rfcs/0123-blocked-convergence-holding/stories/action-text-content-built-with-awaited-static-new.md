@@ -1,6 +1,6 @@
 ---
 title: "action-text-content-built-with-awaited-static-new"
-status: claimed
+status: ready
 updated: 2026-11-17
 rfc: "0123-blocked-convergence-holding"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-17T17:51:31Z"
-assignee: "action-text-content-built-with-awaited-static-new"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "trailties: production serves nothing from app/assets, there is no assets precompile"
-status: claimed
+status: blocked
 updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: "2026-11-17T17:36:58Z"
 assignee: "config-x-reads-empty-in-the-development-server"
-blocked-by: null
+blocked-by: "needs app-generator-javascript-gemfile-entry-loads-vite-trails: generated apps neither depend on nor load @blazetrails/vite-trails, so assets:precompile does not exist"
 closed-reason: null
 ---
 

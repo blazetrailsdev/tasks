@@ -1,6 +1,6 @@
 ---
 title: "The phone full-bleed .box rule never applies: a later .box declaration overrides it"
-status: ready
+status: in-progress
 updated: 2026-11-17
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#153
+claim: "2026-11-17T18:21:25Z"
+assignee: "box-mobile-full-bleed-rule-is-dead"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "config.x set in the application class reads empty from requests under the development server"
-status: claimed
+status: in-progress
 updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#10261
 claim: "2026-11-17T17:36:58Z"
 assignee: "config-x-reads-empty-in-the-development-server"
 blocked-by: null

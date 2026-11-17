@@ -1,7 +1,7 @@
 ---
 title: "First read of a loaded attribute allocates a closure, a lazy attribute and a hash entry"
-status: ready
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-17
 rfc: "0241-request-path-performance"
 cluster: request-perf
 packages: [activemodel, ruby-compat]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10263
+claim: "2026-11-17T18:06:33Z"
+assignee: "attribute-first-read-allocations"
 blocked-by: null
 closed-reason: null
 ---

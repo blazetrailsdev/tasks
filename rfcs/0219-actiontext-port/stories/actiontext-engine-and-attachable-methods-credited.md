@@ -1,6 +1,6 @@
 ---
 title: "Credit or converge actiontext engine.rb Blob methods and Attachable class methods"
-status: ready
+status: claimed
 updated: 2026-11-17
 rfc: "0219-actiontext-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-17T18:51:48Z"
+assignee: "actiontext-engine-and-attachable-methods-credited"
 blocked-by: null
 closed-reason: null
 ---
