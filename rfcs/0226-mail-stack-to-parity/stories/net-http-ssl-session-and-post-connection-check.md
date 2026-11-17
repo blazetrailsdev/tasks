@@ -1,6 +1,6 @@
 ---
 title: "net-http-ssl-session-and-post-connection-check"
-status: ready
+status: in-progress
 updated: 2026-11-17
 rfc: "0226-mail-stack-to-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10231
+claim: "2026-11-17T11:21:48Z"
+assignee: "net-http-ssl-session-and-post-connection-check"
 blocked-by: null
 closed-reason: null
 ---

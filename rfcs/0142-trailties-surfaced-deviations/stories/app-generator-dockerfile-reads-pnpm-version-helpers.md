@@ -1,6 +1,6 @@
 ---
 title: "AppGenerator Dockerfile reads dockerfilePnpmVersion / isPnpmThroughCorepack as Dockerfile.tt does"
-status: in-progress
+status: done
 updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

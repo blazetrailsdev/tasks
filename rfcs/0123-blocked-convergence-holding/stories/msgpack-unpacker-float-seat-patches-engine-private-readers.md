@@ -1,7 +1,7 @@
 ---
 title: "msgpack: Unpacker seats a Float by replacing the engine's private readF32/readF64 through a cast"
-status: blocked
-updated: 2026-10-15
+status: done
+updated: 2026-11-17
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#10226
 claim: "2026-10-14T23:49:36Z"
 assignee: "activesupport-message-pack-constants-seated-on-their-namespace"
-blocked-by: "story msgpack-unpacker-read-loop-the-engine-hides (owner decision, RFC 0184 non-goal): seating the Float in unpacker.ts's own read_primitive and unpacking maps as Hash both need the read-loop port that story owns; @msgpack/msgpack exposes no public float hook"
+blocked-by: null
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Call-order check counts an option property read (opts.all) as a call"
-status: ready
+status: claimed
 updated: 2026-11-17
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-17T11:36:39Z"
+assignee: "burn-down-the-declaration-only-population-remaining"
 blocked-by: null
 closed-reason: null
 ---

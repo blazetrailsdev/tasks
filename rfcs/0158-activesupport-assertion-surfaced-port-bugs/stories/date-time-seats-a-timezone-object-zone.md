@@ -1,7 +1,7 @@
 ---
 title: "@blazetrails/date Time seats a timezone object (local_to_utc / utc_to_local) as its zone"
-status: ready
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-17
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: ["date"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10230
+claim: "2026-11-17T11:06:35Z"
+assignee: "date-and-time-calculations-drops-eager-date-time-imports"
 blocked-by: null
 closed-reason: null
 ---

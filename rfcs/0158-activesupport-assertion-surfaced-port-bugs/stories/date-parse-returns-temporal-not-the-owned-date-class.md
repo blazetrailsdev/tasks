@@ -1,7 +1,7 @@
 ---
 title: "Date.parse / DateTime.parse answer Temporal values instead of the package's own Date / DateTime"
 status: ready
-updated: 2026-11-16
+updated: 2026-11-17
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:

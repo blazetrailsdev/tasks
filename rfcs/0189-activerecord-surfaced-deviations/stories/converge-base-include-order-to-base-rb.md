@@ -1,6 +1,6 @@
 ---
 title: "activerecord: Base include order follows base.rb"
-status: in-progress
+status: done
 updated: 2026-11-17
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

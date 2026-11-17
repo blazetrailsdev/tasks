@@ -1,6 +1,6 @@
 ---
 title: "ActiveRecord::Generators::Migration is an included module with ClassMethods"
-status: in-progress
+status: done
 updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

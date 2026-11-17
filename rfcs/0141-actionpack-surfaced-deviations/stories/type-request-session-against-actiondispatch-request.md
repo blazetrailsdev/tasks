@@ -1,6 +1,6 @@
 ---
 title: "Drop Request::Session's structural Req stand-in for the real Request"
-status: claimed
+status: in-progress
 updated: 2026-11-17
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,7 +10,7 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
+pr: trails#10229
 claim: "2026-11-17T10:51:38Z"
 assignee: "controller-cannot-respond-with-a-readable-stream-body"
 blocked-by: null

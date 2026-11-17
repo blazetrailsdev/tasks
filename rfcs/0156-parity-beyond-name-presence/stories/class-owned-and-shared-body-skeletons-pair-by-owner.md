@@ -1,7 +1,7 @@
 ---
 title: "api-compare: class owners and shared bodies pair skeletons by owner"
 status: claimed
-updated: 2026-11-16
+updated: 2026-11-17
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: [scripts]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: "2026-11-16T23:51:44Z"
-assignee: "bcrypt-bc-crypt-answers-nil-on-crypt-ra-failure"
+claim: "2026-11-17T11:36:39Z"
+assignee: "burn-down-the-declaration-only-population-remaining"
 blocked-by: null
 closed-reason: null
 ---

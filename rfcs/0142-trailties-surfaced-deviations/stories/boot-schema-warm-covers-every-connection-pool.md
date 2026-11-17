@@ -1,7 +1,7 @@
 ---
 title: "Boot schema warm covers every connection pool (connectsTo, reading role, shards)"
-status: ready
-updated: 2026-11-16
+status: claimed
+updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-17T11:52:40Z"
+assignee: "application-configuration-paths-missing-database-log-tmp"
 blocked-by: null
 closed-reason: null
 ---
