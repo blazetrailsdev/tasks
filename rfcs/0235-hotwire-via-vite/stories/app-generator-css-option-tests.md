@@ -1,6 +1,6 @@
 ---
 title: "app-generator-css-option-tests"
-status: draft
+status: ready
 updated: 2026-11-17
 rfc: "0235-hotwire-via-vite"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "i18n: test/api/*_test.rb mount I18n::Tests::* lib modules that parity:test does not measure"
-status: ready
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-17
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: [i18n]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10259
+claim: "2026-11-17T17:21:30Z"
+assignee: "i18n-api-tests-mount-lib-test-modules-unmeasured"
 blocked-by: null
 closed-reason: null
 ---

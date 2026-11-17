@@ -1,7 +1,7 @@
 ---
 title: "Run the README quickstart end to end in CI"
-status: ready
-updated: 2026-11-16
+status: claimed
+updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-17T17:36:58Z"
+assignee: "config-x-reads-empty-in-the-development-server"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Credit or converge actiontext engine.rb Blob methods and Attachable class methods"
-status: draft
+status: ready
 updated: 2026-11-17
 rfc: "0219-actiontext-port"
 cluster: null

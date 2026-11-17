@@ -1,6 +1,6 @@
 ---
 title: "Port plain_text_conversion.rb's alias_method h1/p/ul/ol node names"
-status: draft
+status: ready
 updated: 2026-11-17
 rfc: "0219-actiontext-port"
 cluster: null

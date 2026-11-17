@@ -1,7 +1,7 @@
 ---
 title: "html-sanitizer-port-scrubbers"
-status: blocked
-updated: 2026-10-27
+status: claimed
+updated: 2026-11-17
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages:
@@ -14,9 +14,9 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: "needs port-loofah-scrubber-and-html5-scrub"
+claim: "2026-11-17T17:51:31Z"
+assignee: "action-text-content-built-with-awaited-static-new"
+blocked-by: null
 closed-reason: null
 ---
 
