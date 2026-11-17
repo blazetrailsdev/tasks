@@ -1,9 +1,9 @@
 ---
-title: "daily-perf-benchmark-workflow"
+title: "Daily GitHub Actions perf benchmark of the twelve-dollar-server, recorded for charting"
 status: draft
 updated: 2026-11-17
 rfc: "0241-request-path-performance"
-cluster: null
+cluster: "request-perf"
 packages: []
 deps: []
 deps-rfc: []
