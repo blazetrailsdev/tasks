@@ -1,20 +1,21 @@
 ---
 title: "html-sanitizer-safe-list-sanitize-css"
-status: blocked
-updated: 2026-10-27
+status: ready
+updated: 2026-11-17
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps:
   - port-loofah-scrubber-and-html5-scrub
   - port-crass-css-parser
+  - vendor-rails-html-sanitizer-loofah-and-crass
 deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "needs port-crass-css-parser and port-loofah-scrubber-and-html5-scrub"
+blocked-by: null
 closed-reason: null
 ---
 
