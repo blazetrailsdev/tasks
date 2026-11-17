@@ -57,11 +57,12 @@ controller and integration tests at `Rails.application.routes`
 
 - A `test/test-helper.ts` in the shape of the generated one, loaded by vitest
   as a setup file, boots the app in `test` against a test database from
-  `config/database.ts` and loads fixtures. `migrateScratchDatabase`,
-  per-file `prependViewPath` and per-file `loadModelSchemas` calls are gone.
-- The shared rows the controller and model tests seed by hand become
-  `test/fixtures/<table>` files. A test that needs a one-off row may still
-  create it inline.
+  `config/database.ts`, and declares `fixtures :all` over `test/fixtures`.
+  `migrateScratchDatabase`, per-file `prependViewPath` and per-file
+  `loadModelSchemas` calls are gone.
+- Moving the shared rows the controller and model tests seed by hand into
+  `test/fixtures/<table>` files is split out, as measured below, into
+  `seed-trailmap-tests-from-fixtures`; this story leaves those rows in place.
 - `test/routes.test.ts` asserts recognition against the application's route
   set, using the route assertions trails ports.
 - `test/models/barrel-registration.test.ts` is deleted if

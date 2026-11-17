@@ -43,7 +43,10 @@ test's setup.
 
 - The task-domain rows two or more test files seed by hand (`rfcs`, `stories`,
   `story_deps`, `story_paths`, `events`) become `test/fixtures/<table>` files,
-  and `test/test-helper.ts` declares `TestCase.fixtures(":all")`.
+  which `test/test-helper.ts`'s `TestCase.fixtures(":all")` already loads.
+- `test/test-helper.ts` rebuilds `storage/test.sqlite3-<n>` once per worker,
+  as Rails' `parallelize_setup` does, instead of once per file: that per-file
+  rebuild exists only because rows were seeded outside the test transaction.
 - The files that used them read them through the fixture accessors instead of
   re-creating them. A test that needs a one-off row still creates it inline.
 - The files that opt out of transactional tests
