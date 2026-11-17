@@ -37,3 +37,5 @@ closed-reason: null
       as `rbCallSuper`.
 - [ ] `packages/i18n/test/backend/memoize.test.ts` ports all 5 tests under the Rails names.
 - [ ] The `backend/memoize.rb` row is deleted.
+- [ ] `api/memoize_test.rb` and its row are retired by
+      `i18n-api-tests-port-missing-api-test-files`, not here.

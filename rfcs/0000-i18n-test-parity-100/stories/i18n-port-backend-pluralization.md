@@ -38,3 +38,5 @@ closed-reason: null
       including its private helpers under their Rails names.
 - [ ] All 17 tests are ported in `packages/i18n/test/backend/pluralization{,-fallback,-scope}.test.ts`.
 - [ ] The three backend rows are deleted.
+- [ ] `api/pluralization_test.rb` and its row are retired by
+      `i18n-api-tests-port-missing-api-test-files`, not here.

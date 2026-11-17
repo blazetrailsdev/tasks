@@ -32,8 +32,8 @@ mixin", which reads as deferred, not permanent:
   (`vendor/i18n/v1.14.8/test/api/all_features_test.rb:11-18`). It falls under packages/i18n/CLAUDE.md
   § "A translation lookup is synchronous; the load is an awaited step" and the
   Strings section.
-- The `backend/transliterator_test.rb` row `default transliterator raises
-errors for invalid UTF-8` (`baseline.json`) should cite § "A String has no
+- The `backend/transliterator_test.rb` row for the test
+  "default transliterator raises errors for invalid UTF-8" (`baseline.json`) should cite § "A String has no
   encoding tag either".
 - `backend/interpolation_compiler.rb` waits on RFC Open question 2. Leave its
   row unchanged until the operator rules.

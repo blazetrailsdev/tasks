@@ -37,9 +37,7 @@ all four suites). DateTime and Time are
 
 ## Acceptance criteria
 
-- [ ] Port Procs and the four Localization modules under the Rails test names (split further if over the PR ceiling).
+- [ ] Port `Tests::Procs` and `Tests::Localization::Date` under the Rails test names, as `testsProcs()` and `testsLocalizationDate()`.
 - [ ] Each registrar is added to `REQUIRED_TEST_MODULES` in `scripts/test-compare/extract-ts-core.ts` and mounted in every
       `packages/i18n/test/api/*.test.ts` whose Rails twin `include`s the module.
 - [ ] `pnpm parity:test:assertions` stays green.
-- [ ] Scope is Procs and Localization::Date only, with registrars `testsProcs()`
-      and `testsLocalizationDate()`.

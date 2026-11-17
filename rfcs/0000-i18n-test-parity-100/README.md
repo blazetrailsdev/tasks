@@ -147,9 +147,14 @@ Port it as a plain-object module included with `include()`, and route each
 `super` through `rbCallSuper` (root CLAUDE.md § "A module included by an open
 set of classes binds `super` at include time"). Application code includes
 these modules, so the includers are an open set. Each story ports the lib
-file, its `test/backend/*_test.rb`, and its `test/api/*_test.rb` mount, and
-retires the unported-files rows in `scripts/parity/unported-files/i18n.ts`
+file and its `test/backend/*_test.rb`, and retires the lib and backend-test
+unported-files rows in `scripts/parity/unported-files/i18n.ts`
 and `baseline.json` in the same PR.
+The `test/api/*_test.rb` mounts for cascade, memoize and pluralization are
+ported, and their rows retired, by `i18n-api-tests-port-missing-api-test-files`
+(RFC 0156). `api/lazy_loadable_test.rb` belongs to
+`i18n-port-backend-lazy-loadable`, so that the three other suites do not wait
+on Open question 4.
 
 The gettext PoParser is racc-generated (`gettext/po_parser.rb:13-17,113`).
 trails has a `Racc::Parser` runtime at `packages/nokogiri/lib/racc/parser.ts`.
@@ -185,8 +190,8 @@ Where it should live so that i18n can import it is Open question 3.
 3. **Phase 3, backend mixins:** `i18n-port-backend-cascade`,
    `i18n-port-backend-memoize`, `i18n-port-backend-pluralization`,
    `i18n-port-backend-lazy-loadable`, `i18n-port-backend-cache-file`.
-   Then `i18n-api-tests-port-missing-api-test-files` (RFC 0156) mounts the api
-   files.
+   Then `i18n-api-tests-port-missing-api-test-files` (RFC 0156) mounts the
+   cascade, memoize and pluralization api files. The lazy-loadable story mounts its own.
 4. **Phase 4, gettext:** `i18n-port-gettext-helpers`, then
    `i18n-port-gettext-po-parser-and-backend`.
 
@@ -200,6 +205,8 @@ Where it should live so that i18n can import it is Open question 3.
   `PERMANENT:`. The `tests/` pair is test-support scaffolding, measured
   through `LIB_TEST_MODULES`.
 - Expected denominator after Phase 3: about 857 + 5 × ~143 mounted + ~70 own tests.
+  The 5 is four new api files, with `api/memoize_test.rb` counted twice because it
+  defines two classes that each mount all 11 mixins.
   The exact number comes from `parity:test` once the api files exist.
 
 ## Open questions
@@ -230,12 +237,18 @@ Where it should live so that i18n can import it is Open question 3.
    the operator rules the lookup-time-load arms permanent under that section.
    Port the rest (eager mode, `available_locales`, the filename and
    locale-mismatch errors) through the awaited `reloadBang` /
-   `eagerLoadBang`, and park the lookup-time tests (`lazy mode: only loads
-translations for current locale`, `#lookup lazy loads translations for
-supplied locale`, `#initialized? responds based on whether current locale
-is initialized`) as `it.skip` under `PERMANENT-SKIP:`. Do not invent a sync
-   file read or a load in `locale=`.
+   `eagerLoadBang`, and park the lookup-time tests as `it.skip` under `PERMANENT-SKIP:`. Do not invent a sync
+   file read or a load in `locale=`. The lookup-time tests are:
+   - "lazy mode: only loads translations for current locale"
+   - "lazy mode: #lookup lazy loads translations for supplied locale"
+   - "lazy mode: #initialized? responds based on whether current locale is
+     initialized"
+
+   This affects `backend/lazy_loadable_test.rb` only. `api/lazy_loadable_test.rb`
+   runs in eager mode (`LazyLoadable.new`, default `lazy_load: false`), so its
+   mounted suites port in full whatever the ruling.
 
 ## Changelog
 
 - 2026-11-17: initial RFC
+- 2026-11-17: review fixes. The 0156 ACs are rewritten in place, api-mount ownership is made explicit, and `api/lazy_loadable_test.rb` moves to the lazy-loadable story because it runs in eager mode.
