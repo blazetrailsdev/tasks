@@ -23,6 +23,7 @@ packages:
   - "zeitwerk"
   - "vite-assets"
   - "vite-trails"
+  - "activejob"
 clusters:
   - "boot"
   - "generators"
