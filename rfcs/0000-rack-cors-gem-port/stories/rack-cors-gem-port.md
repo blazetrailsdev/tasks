@@ -7,7 +7,7 @@ cluster: rack-cors
 packages: [rack-cors]
 deps: []
 deps-rfc: []
-est-loc: 600
+est-loc: 550
 priority: null
 pr: null
 claim: null
@@ -33,10 +33,13 @@ The gem at v3.0.0 is `lib/rack/cors.rb` (219 lines) plus `lib/rack/cors/`
 - `packages/rack-cors` ports every file under `lib/rack/cors*`, with Rails
   names and control flow. `Rack::Cors::Resources::CorsMisconfigurationError`
   is the same error class with the same message.
-- The `allow` / `origins` / `resource` DSL uses the instance-eval block idiom.
+- `Rack::Cors#initialize` and `#allow` (`lib/rack/cors.rb:29-64`) port both
+  `block.arity == 1` arms, read through `Function.length`: a one-parameter
+  block receives the receiver, a zero-parameter block runs with it as
+  `this`.
 - `select_logger`'s `Rails.logger` arm reads `TopLevel.Trails` behind a guard
   that mirrors `defined?(Rails)`.
-- The gem's test suite ports onto `@blazetrails/rack-test`, and
-  `pnpm parity:api rack-cors` / `pnpm parity:test rack-cors` report nothing
-  missing.
+- `test/unit/dsl_test.rb` (4 examples) ports onto `@blazetrails/rack-test`,
+  and `pnpm parity:api rack-cors` reports no missing methods.
+  `cors_test.rb` is `rack-cors-unit-test-suite`.
 - The package is registered in `ci.yml` and the parity guard fixtures.

@@ -30,10 +30,10 @@ commented out.
 
 - The template's commented block includes the `@blazetrails/rack-cors` import,
   so uncommenting the whole block is enough.
-- The generated app's `package.json` lists `@blazetrails/rack-cors` the way the
-  generated app handles `Gemfile.tt`'s other commented gems (bcrypt,
-  image_processing). If there is no such mechanism yet, the story uses the
-  same shape as bcrypt's and says so.
+- The block's comment says to run `pnpm add @blazetrails/rack-cors`, where
+  Rails' `Gemfile.tt:50` comments out the gem. The generated `package.json`
+  does not list it, as it does not list bcrypt (`Gemfile.tt:9`): JSON has no
+  comment to hold it.
 - An `api-app-generator.test.ts` case asserts the import line. A
   trails-only test boots a generated `--api` app with the block uncommented
   and checks a preflight `OPTIONS` response for
