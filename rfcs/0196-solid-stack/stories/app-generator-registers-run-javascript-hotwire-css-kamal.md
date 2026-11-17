@@ -1,6 +1,6 @@
 ---
 title: "app-generator-registers-run-javascript-hotwire-css-kamal"
-status: claimed
+status: in-progress
 updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10215
 claim: "2026-11-16T22:51:35Z"
 assignee: "app-database-yml-templates-add-solid-databases"
 blocked-by: null

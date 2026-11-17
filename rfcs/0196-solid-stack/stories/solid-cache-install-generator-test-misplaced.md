@@ -1,6 +1,6 @@
 ---
 title: "solid-cache install generator test is misplaced for test-compare"
-status: draft
+status: done
 updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: trails#10202
 claim: null
 assignee: null
 blocked-by: null

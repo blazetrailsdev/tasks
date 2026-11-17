@@ -1,6 +1,6 @@
 ---
 title: 'Plugin test helper template calls fixtures("all") instead of fixtures(":all")'
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

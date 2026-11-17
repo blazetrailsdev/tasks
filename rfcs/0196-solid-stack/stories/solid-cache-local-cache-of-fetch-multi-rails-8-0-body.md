@@ -1,6 +1,6 @@
 ---
 title: "solid-cache-local-cache-of-fetch-multi-rails-8-0-body"
-status: draft
+status: ready
 updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null

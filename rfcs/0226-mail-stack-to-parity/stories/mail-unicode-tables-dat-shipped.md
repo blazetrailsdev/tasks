@@ -1,7 +1,7 @@
 ---
 title: "Mail UnicodeDatabase reads a shipped unicode_tables.dat"
-status: ready
-updated: 2026-11-15
+status: in-progress
+updated: 2026-11-16
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 60
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#10217
+claim: "2026-11-16T23:36:32Z"
+assignee: "mail-unicode-tables-dat-shipped"
 blocked-by: null
 closed-reason: null
 ---

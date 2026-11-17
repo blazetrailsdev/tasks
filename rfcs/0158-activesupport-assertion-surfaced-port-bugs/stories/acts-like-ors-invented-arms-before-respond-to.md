@@ -1,6 +1,6 @@
 ---
 title: "actsLike ORs actsLikeTime/Date/String arms in front of Rails' bare respond_to?"
-status: ready
+status: in-progress
 updated: 2026-11-16
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10219
+claim: "2026-11-16T23:21:43Z"
+assignee: "acts-like-ors-invented-arms-before-respond-to"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Journey::Path::Pattern ports Ruby \\Z as JS $"
-status: ready
+status: in-progress
 updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10216
+claim: "2026-11-16T23:07:02Z"
+assignee: "ascii-8bit-param-encoding-answers-a-js-string-not-bytes"
 blocked-by: null
 closed-reason: null
 ---

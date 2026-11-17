@@ -1,6 +1,6 @@
 ---
 title: "GlobalID.validateApp is invented; validate_app lives on URI::GID"
-status: ready
+status: done
 updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-16T23:51:44Z"
+assignee: "bcrypt-bc-crypt-answers-nil-on-crypt-ra-failure"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "vite-assets-upgrade-updates-npm-companions"
-status: ready
+status: in-progress
 updated: 2026-11-16
 rfc: "0240-vite-trails-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#10218
+claim: "2026-11-16T23:42:05Z"
+assignee: "vite-trails-entry-first-import-hangs"
 blocked-by: null
 closed-reason: null
 ---

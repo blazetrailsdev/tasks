@@ -1,6 +1,6 @@
 ---
 title: "The command palette's footer hints follow its mode"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0136-trailmap"
 cluster: null

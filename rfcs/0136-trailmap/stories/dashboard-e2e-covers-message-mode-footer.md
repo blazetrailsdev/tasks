@@ -1,6 +1,6 @@
 ---
 title: "dashboard e2e asserts the palette footer in message mode too"
-status: draft
+status: ready
 updated: 2026-11-16
 rfc: "0136-trailmap"
 cluster: null

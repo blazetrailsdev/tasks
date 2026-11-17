@@ -1,6 +1,6 @@
 ---
 title: "ActiveSupport::Railtie's reset_all_current_attributes_instances initializer is unported, so the executor never resets CurrentAttributes"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Live::Buffer#each's ThreadError re-push stops dropping its promise"
-status: claimed
+status: done
 updated: 2026-11-16
 rfc: "0234-no-void-promises"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: trails#10214
 claim: "2026-11-16T22:06:41Z"
 assignee: "action-text-content-built-with-awaited-static-new"
 blocked-by: null

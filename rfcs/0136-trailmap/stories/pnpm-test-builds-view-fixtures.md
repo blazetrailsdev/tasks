@@ -1,6 +1,6 @@
 ---
 title: "pnpm test fails on uncompiled view fixtures unless pnpm views ran first"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0136-trailmap"
 cluster: null

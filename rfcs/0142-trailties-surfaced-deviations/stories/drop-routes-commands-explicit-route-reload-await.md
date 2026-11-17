@@ -1,6 +1,6 @@
 ---
 title: "Drop the routes commands' explicit reloadRoutesUnlessLoaded await once LazyRouteSet#routes reloads in-line"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

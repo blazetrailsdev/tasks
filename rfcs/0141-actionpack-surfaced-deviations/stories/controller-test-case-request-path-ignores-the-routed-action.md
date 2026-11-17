@@ -1,6 +1,6 @@
 ---
 title: "ActionController::TestCase post keeps a path other than the routed action's, so per-form CSRF tokens fail"
-status: ready
+status: closed
 updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -10,9 +10,10 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-16T23:07:02Z"
+assignee: "ascii-8bit-param-encoding-answers-a-js-string-not-bytes"
 blocked-by: null
+closed-reason: "FALSIFIED: Rails' TestCase#process does not reset PATH_INFO between requests either (assign_parameters uses fetch_header, test_case.rb:139; request_forgery_protection_test.rb:934 says 'PATH_INFO isn't reset between requests' and sets it by hand). trails matches Rails; the trailmap test should set request.env PATH_INFO as Rails' tests do."
 ---
 
 ## Context

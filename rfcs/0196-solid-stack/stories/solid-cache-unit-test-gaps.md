@@ -1,6 +1,6 @@
 ---
 title: "Port solid_cache's remaining unit tests (encryption, query_cache, rails_cache, delete_matched, expiry, stats)"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null

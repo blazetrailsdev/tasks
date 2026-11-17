@@ -1,7 +1,7 @@
 ---
 title: "Trailties assertion receipt cites the wrong base_test line"
-status: in-progress
-updated: 2026-11-16
+status: done
+updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: [scripts]

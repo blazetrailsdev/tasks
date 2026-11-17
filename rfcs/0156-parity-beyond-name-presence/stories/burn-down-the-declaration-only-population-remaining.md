@@ -1,6 +1,6 @@
 ---
 title: "burn-down-the-declaration-only-population-remaining"
-status: ready
+status: claimed
 updated: 2026-11-16
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-16T23:51:44Z"
+assignee: "bcrypt-bc-crypt-answers-nil-on-crypt-ra-failure"
 blocked-by: null
 closed-reason: null
 ---

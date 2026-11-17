@@ -1,6 +1,6 @@
 ---
 title: "active-record-model-generator-database-option"
-status: in-progress
+status: done
 updated: 2026-11-16
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
