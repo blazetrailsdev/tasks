@@ -1,7 +1,7 @@
 ---
 title: "Engine::Configuration#root= drops Pathname.new behind a @missingRailsCall receipt"
-status: ready
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10248
+claim: "2026-11-17T15:21:44Z"
+assignee: "boot-schema-warm-covers-every-connection-pool"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Boot schema warm covers every connection pool (connectsTo, reading role, shards)"
-status: ready
+status: in-progress
 updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10248
+claim: "2026-11-17T15:21:44Z"
+assignee: "boot-schema-warm-covers-every-connection-pool"
 blocked-by: null
 closed-reason: null
 ---

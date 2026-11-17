@@ -1,7 +1,7 @@
 ---
 title: "Converge Content#initialize to Rails' single canonicalized fragment assignment"
-status: blocked
-updated: 2026-11-15
+status: ready
+updated: 2026-11-17
 rfc: "0219-actiontext-port"
 cluster: null
 packages: []
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: "2026-11-15T16:25:03Z"
-assignee: "actiontext-engine-helper-reads-engine-helpers"
-blocked-by: "operator decision: sync canonicalization needs a ruling on Fragment#update/#replace's sync shape (lib/fragment.ts:39-52); lazy attachable alone is insufficient"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

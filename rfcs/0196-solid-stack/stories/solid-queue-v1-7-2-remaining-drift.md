@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-v1-7-2-remaining-drift"
-status: ready
+status: claimed
 updated: 2026-11-17
 rfc: "0196-solid-stack"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-17T15:34:27Z"
+assignee: "solid-queue-v1-7-2-remaining-drift"
 blocked-by: null
 closed-reason: null
 ---

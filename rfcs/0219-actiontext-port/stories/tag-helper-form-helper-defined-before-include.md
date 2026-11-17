@@ -1,7 +1,7 @@
 ---
 title: "TagHelper's FormHelper/FormBuilder reopen must exist before ActionView::Base includes Helpers"
-status: blocked
-updated: 2026-11-15
+status: in-progress
+updated: 2026-11-17
 rfc: "0219-actiontext-port"
 cluster: null
 packages: []
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: "2026-11-15T16:25:03Z"
-assignee: "actiontext-engine-helper-reads-engine-helpers"
-blocked-by: "operator decision: ActionView::Base copies Helpers at module eval (actionview/lib/base.ts:411), so no actiontext-side install reaches it carrier-free; RFC 0219 open question 3 needs a ruling (move richTextarea into actionview vs other)"
+pr: trails#10251
+claim: "2026-11-17T15:51:33Z"
+assignee: "tag-helper-form-helper-defined-before-include"
+blocked-by: null
 closed-reason: null
 ---
 

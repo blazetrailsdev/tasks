@@ -1,6 +1,6 @@
 ---
 title: "action-text-content-built-with-awaited-static-new"
-status: blocked
+status: ready
 updated: 2026-11-17
 rfc: "0123-blocked-convergence-holding"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-17T00:51:35Z"
-assignee: "action-text-content-built-with-awaited-static-new"
-blocked-by: "operator decision: how the sync serialize coder (Serialization.load/dump) reaches an awaited Content.new — async coder path in the serialized type vs canonicalizing at another awaited step"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
