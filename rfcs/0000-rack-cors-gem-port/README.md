@@ -7,6 +7,7 @@ updated: 2026-11-17
 owner: "@deanmarano"
 packages:
   - "rack-cors"
+  - "trailties"
 clusters:
   - rack-cors
 ---
