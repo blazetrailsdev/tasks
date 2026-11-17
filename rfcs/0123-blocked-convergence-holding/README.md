@@ -19,6 +19,7 @@ packages:
   - "solid-cable"
   - "activestorage"
   - "trails-tsc"
+  - "html-sanitizer"
 clusters:
   - "schema"
   - "api-compare"
