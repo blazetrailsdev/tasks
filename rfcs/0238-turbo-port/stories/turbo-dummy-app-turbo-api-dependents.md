@@ -50,3 +50,7 @@ not yet ported was left out, since it cannot be written without that API:
 - Each item above is added to `packages/turbo/test/dummy/` (or the test
   helper) by the story that ports the API it calls, verbatim to the gem.
 - `packages/turbo/test/dummy/boot.trails.test.ts` still passes.
+- With `trays_controller.rb` in place, the `Turbo::DriveHelperTest` integration tests
+  (`vendor/turbo-rails/v2.0.23/test/drive/drive_helper_test.rb:3-19`) are ported into
+  `packages/turbo/test/drive/drive-helper.test.ts`. With `inspect_helpers.rb` in place,
+  `test/initializers/helpers_test.rb` is ported too. trails#10274 ported the unit half.
