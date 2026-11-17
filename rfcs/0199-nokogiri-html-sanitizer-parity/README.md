@@ -133,6 +133,9 @@ the vendoring story (an ingest still pending shows `0000-`):
    now holds. `html-sanitizer-parser-concerns` stays blocked on the HTML4
    ruling.
 
+   _2026-11-17 (tasks#349): steps 2 and 4 are done in 0123, where the story still
+   lives. Step 1 still moves it here._
+
 5. `scripts/finalize-rfc.mjs` rewrites `0000-` only inside this directory,
    so the bare `nokogiri-html-sanitizer-parity` mentions in
    `0176-actionview-helpers/README.md` (Non-goals, Open question 2,
