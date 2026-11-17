@@ -1,6 +1,6 @@
 ---
 title: "api-compare: class owners and shared bodies pair skeletons by owner"
-status: in-progress
+status: done
 updated: 2026-11-17
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

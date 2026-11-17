@@ -1,6 +1,6 @@
 ---
 title: "Port solid_queue v1.7.2 batch models (Batch, Status, BatchExecution, Batchable) and batch_test"
-status: claimed
+status: in-progress
 updated: 2026-11-17
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 750
 priority: null
-pr: null
+pr: trails#10255
 claim: "2026-11-17T15:37:34Z"
 assignee: "solid-queue-batch-models-v1-7-2"
 blocked-by: null

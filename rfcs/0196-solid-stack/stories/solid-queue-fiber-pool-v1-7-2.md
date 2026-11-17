@@ -1,6 +1,6 @@
 ---
 title: "Port SolidQueue::FiberPool and the fiber worker execution mode (v1.7.2)"
-status: draft
+status: ready
 updated: 2026-11-17
 rfc: "0196-solid-stack"
 cluster: null

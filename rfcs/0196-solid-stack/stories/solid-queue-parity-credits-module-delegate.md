@@ -1,6 +1,6 @@
 ---
 title: "parity:api credits solid_queue.rb's delegated on_start / on_stop / on_exit"
-status: draft
+status: ready
 updated: 2026-11-17
 rfc: "0196-solid-stack"
 cluster: null

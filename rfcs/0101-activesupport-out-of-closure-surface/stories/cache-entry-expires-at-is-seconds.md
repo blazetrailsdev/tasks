@@ -1,6 +1,6 @@
 ---
 title: "cache-entry-expires-at-is-seconds"
-status: draft
+status: in-progress
 updated: 2026-11-17
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10252
+claim: "2026-11-17T16:39:37Z"
+assignee: "cache-entry-expires-at-is-seconds"
 blocked-by: null
 closed-reason: null
 ---

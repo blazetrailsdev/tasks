@@ -1,6 +1,6 @@
 ---
 title: "solid-cache-store-behavior-missing-tests"
-status: draft
+status: in-progress
 updated: 2026-11-17
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10252
+claim: "2026-11-17T16:04:21Z"
+assignee: "solid-cache-store-behavior-missing-tests"
 blocked-by: null
 closed-reason: null
 ---
