@@ -1,6 +1,6 @@
 ---
 title: "config.x set in the application class reads empty from requests under the development server"
-status: in-progress
+status: done
 updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

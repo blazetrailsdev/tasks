@@ -1,6 +1,6 @@
 ---
 title: "actionview: stop the inheritance check asking for a RubyTracker class in tse-tracker.ts"
-status: ready
+status: in-progress
 updated: 2026-11-17
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10271
+claim: "2026-11-17T20:06:46Z"
+assignee: "actionview-ruby-tracker-inheritance-row"
 blocked-by: null
 closed-reason: null
 ---

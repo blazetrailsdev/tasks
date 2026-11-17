@@ -1,7 +1,7 @@
 ---
 title: "Explain the 108 KB versus 267 KB per-request allocation gap between profiles"
-status: ready
-updated: 2026-11-16
+status: claimed
+updated: 2026-11-17
 rfc: "0241-request-path-performance"
 cluster: request-perf
 packages: [examples]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-17T20:51:44Z"
+assignee: "measure-allocation-gap-between-entry-points"
 blocked-by: null
 closed-reason: null
 ---

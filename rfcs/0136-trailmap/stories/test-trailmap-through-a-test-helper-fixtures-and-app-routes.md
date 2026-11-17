@@ -1,6 +1,6 @@
 ---
 title: "Test trailmap through one test helper, fixtures and the application's own routes"
-status: blocked
+status: claimed
 updated: 2026-11-17
 rfc: "0136-trailmap"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-11-17T13:51:23Z"
 assignee: "test-trailmap-through-a-test-helper-fixtures-and-app-routes"
-blocked-by: "needs a trails re-vendor past #10238 (synchronous route draw; the vendored pin races the lazy first draw). Then: adopt trails' generated test/global-setup.ts (schema maintained once per run) + test/test-helper.ts setup file; pnpm test needs HUB_DATABASE_URL, as CI already sets"
+blocked-by: null
 closed-reason: null
 ---
 

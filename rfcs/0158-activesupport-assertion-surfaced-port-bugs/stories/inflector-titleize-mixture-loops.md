@@ -1,6 +1,6 @@
 ---
 title: "inflector-titleize-mixture-loops"
-status: claimed
+status: in-progress
 updated: 2026-11-17
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#10270
 claim: "2026-11-17T19:36:35Z"
 assignee: "date-and-time-calculations-drops-eager-date-time-imports"
 blocked-by: null

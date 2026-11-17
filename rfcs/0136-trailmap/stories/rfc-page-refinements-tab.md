@@ -1,6 +1,6 @@
 ---
 title: "RFC page shows its refinements, like ringo's Refinements tab"
-status: in-progress
+status: done
 updated: 2026-11-17
 rfc: "0136-trailmap"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "html-sanitizer-port-scrubbers"
-status: in-progress
+status: done
 updated: 2026-11-17
 rfc: "0123-blocked-convergence-holding"
 cluster: null
