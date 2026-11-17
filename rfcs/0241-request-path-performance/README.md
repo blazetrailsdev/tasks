@@ -85,8 +85,11 @@ Results on trails main `8dc7d65058`:
 - **GC:** 8.3% of busy CPU. Scavenges average 12 ms each with
   `--max-semi-space-size=64`, and major GCs are 42 ms at p50 and 66 ms at most.
 - **Allocation:** about 267 KB per request in this harness. That is not
-  comparable to the 108 KB above, which was taken through a different entry
-  point and load.
+  comparable to the 108 KB above. The entry point is not the reason: on one
+  rig and on trails `2c79a8828b`, `trails server` allocated 237 KB per request
+  and a direct `Node.run` entry 242 KB. Stories compare against the slim
+  harness through `trails server`. The rest of the gap is left to
+  `measure-allocation-gap-commit-and-method`.
 
 Hot spots without a story before this profile, in shares of busy CPU or
 allocated bytes:
@@ -199,8 +202,11 @@ objects still live at exit.
   is evidence that disagrees with itself. In a fixed-load test at 5,000 users,
   it moved p95 from 121 to about 100 ms. At the 5-minute hold, p99 was 686 ms
   with it against 562 ms without, the score did not change, and it cost about
-  135 MB. `semi-space-flag-evaluate` settles the flag, and the
-  rest of the RFC goes after allocation and CPU.
+  135 MB. `semi-space-flag-evaluate` kept the flag at 64. On one rig, at the
+  5-minute hold at 7,750 users, p99 was 995 ms at 16, 1,057 ms at 32 and
+  980 ms at 64. Peak memory was 472, 531 and 600 MB, and scavenges averaged
+  2.0, 4.1 and 8.0 ms. The p99 differences are within single-run noise, so
+  the rest of the RFC goes after allocation and CPU.
 - **Change the application's queries**, for example dropping the raw `select`
   that makes the feed query unpreparable. That is ruled out by Non-goals: the
   gambitboy Rails app uses the same scope, and the framework should be fast on
@@ -248,11 +254,15 @@ The RFC is met when, on one rig and against the same Rails submission:
   carries bind placeholders, deviating from Rails? **Deferred to**
   `unpreparable-select-statement-compile-cost`, which records the decision here.
 - Is the 108 KB versus 267 KB per-request difference between the two
-  allocation profiles all down to the entry point? **Deferred to**
-  `measure-allocation-gap-between-entry-points`.
+  allocation profiles all down to the entry point? **No.** The entry point
+  accounts for about 2% (237 against 242 KB on one commit). The commit or the
+  first profile's request count is **deferred to**
+  `measure-allocation-gap-commit-and-method`.
 
 ## Changelog
 
 - 2026-11-13: RFC filed with six stories from the first profile.
 - 2026-11-16: Re-bench on one rig, second profile, and nine more stories;
   Rollout phases and an RFC-level target.
+- 2026-11-17: The entry point does not explain the allocation gap; the
+  semi-space flag stays at 64.
