@@ -2,7 +2,7 @@
 title: "tasks CLI: migrations for the Active Storage, audits and refinements tables"
 status: draft
 updated: 2026-11-17
-rfc: "0000-trailmap-audits-refinements-activestorage"
+rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: storage
 packages: ["activestorage", "activerecord"]
 deps: []

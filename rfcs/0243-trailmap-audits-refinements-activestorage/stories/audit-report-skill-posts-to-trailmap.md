@@ -2,7 +2,7 @@
 title: "audit-report skill: POST the report to trailmap instead of writing a file"
 status: draft
 updated: 2026-11-17
-rfc: "0000-trailmap-audits-refinements-activestorage"
+rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: writers
 packages: []
 deps: [audits-create-endpoint-on-the-loopback-api]

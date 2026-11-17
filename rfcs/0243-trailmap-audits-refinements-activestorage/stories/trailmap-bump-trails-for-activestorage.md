@@ -2,7 +2,7 @@
 title: "trailmap: bump trails past the attach-upload fix and depend on @blazetrails/activestorage"
 status: draft
 updated: 2026-11-17
-rfc: "0000-trailmap-audits-refinements-activestorage"
+rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: storage
 packages: ["activestorage"]
 deps: [attach-touch-runs-commit-callbacks-on-a-second-instance]

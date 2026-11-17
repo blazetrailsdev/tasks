@@ -2,7 +2,7 @@
 title: "btwhooks: stop persisting refine reports, read refinements and audits from trailmap"
 status: draft
 updated: 2026-11-17
-rfc: "0000-trailmap-audits-refinements-activestorage"
+rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: writers
 packages: []
 deps: [rfc-refine-done-posts-the-report-to-trailmap, audit-report-skill-posts-to-trailmap]

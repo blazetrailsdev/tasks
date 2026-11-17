@@ -2,7 +2,7 @@
 title: "trailmap: POST /audits on the loopback API attaches the report body"
 status: draft
 updated: 2026-11-17
-rfc: "0000-trailmap-audits-refinements-activestorage"
+rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: audits
 packages: ["activestorage"]
 deps: [trailmap-audits-to-activestorage]

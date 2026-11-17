@@ -2,7 +2,7 @@
 title: "trailmap: Audit is a Base record with an attached body"
 status: blocked
 updated: 2026-11-09
-rfc: "0000-trailmap-audits-refinements-activestorage"
+rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: audits
 packages: ["activestorage", "activerecord"]
 deps:
