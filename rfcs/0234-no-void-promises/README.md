@@ -1,9 +1,9 @@
 ---
 rfc: "0234-no-void-promises"
 title: "No void promises; async initialize is an awaited static new"
-status: active
+status: closed
 created: 2026-11-12
-updated: 2026-11-12
+updated: 2026-11-17
 owner: "@deanmarano"
 packages:
   - "actioncable"

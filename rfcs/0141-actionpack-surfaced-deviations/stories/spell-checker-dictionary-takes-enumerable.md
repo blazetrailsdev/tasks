@@ -1,6 +1,6 @@
 ---
 title: "SpellChecker dictionary takes an Enumerable; ActionNotFound passes the action_methods Set"
-status: in-progress
+status: done
 updated: 2026-11-17
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

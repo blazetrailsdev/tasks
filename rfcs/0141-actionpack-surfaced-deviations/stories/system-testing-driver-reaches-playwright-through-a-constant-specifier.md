@@ -1,6 +1,6 @@
 ---
 title: "system-testing driver reaches playwright through a constant import specifier"
-status: in-progress
+status: done
 updated: 2026-11-17
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

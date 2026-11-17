@@ -1,6 +1,6 @@
 ---
 title: "SessionObject#commitSession hardcodes Persisted.prototype as super"
-status: in-progress
+status: done
 updated: 2026-11-17
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

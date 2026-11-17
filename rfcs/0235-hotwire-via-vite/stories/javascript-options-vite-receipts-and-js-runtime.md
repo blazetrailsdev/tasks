@@ -1,6 +1,6 @@
 ---
 title: "trailties: receipt the vite JAVASCRIPT_OPTIONS/default deviation and decide usingJsRuntime for vite"
-status: draft
+status: ready
 updated: 2026-11-17
 rfc: "0235-hotwire-via-vite"
 cluster: null
