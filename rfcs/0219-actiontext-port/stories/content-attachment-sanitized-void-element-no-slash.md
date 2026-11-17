@@ -1,6 +1,6 @@
 ---
 title: "content-attachment-sanitized-void-element-no-slash"
-status: ready
+status: claimed
 updated: 2026-11-17
 rfc: "0219-actiontext-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-17T22:06:43Z"
+assignee: "content-attachment-partial-path-resolves"
 blocked-by: null
 closed-reason: null
 ---

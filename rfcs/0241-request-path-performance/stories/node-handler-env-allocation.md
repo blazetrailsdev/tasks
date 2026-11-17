@@ -1,7 +1,7 @@
 ---
 title: "Rack Node handler and Engine#build_request allocate a fresh env per request"
-status: ready
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-17
 rfc: "0241-request-path-performance"
 cluster: request-perf
 packages: [rackup, trailties]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10275
+claim: "2026-11-17T22:21:39Z"
+assignee: "daily-perf-benchmark-workflow"
 blocked-by: null
 closed-reason: null
 ---

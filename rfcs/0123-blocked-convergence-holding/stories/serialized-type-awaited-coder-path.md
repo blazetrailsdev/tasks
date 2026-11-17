@@ -1,6 +1,6 @@
 ---
 title: "Type::Serialized awaits an async coder when a record is built"
-status: draft
+status: in-progress
 updated: 2026-11-17
 rfc: "0123-blocked-convergence-holding"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10276
+claim: "2026-11-17T22:49:26Z"
+assignee: "serialized-type-awaited-coder-path"
 blocked-by: null
 closed-reason: null
 ---

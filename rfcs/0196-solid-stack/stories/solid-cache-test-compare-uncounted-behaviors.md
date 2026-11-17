@@ -1,6 +1,6 @@
 ---
 title: "solid-cache-test-compare-uncounted-behaviors"
-status: claimed
+status: done
 updated: 2026-11-17
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10273
 claim: "2026-11-17T21:52:33Z"
 assignee: "solid-cache-test-compare-uncounted-behaviors"
 blocked-by: null
