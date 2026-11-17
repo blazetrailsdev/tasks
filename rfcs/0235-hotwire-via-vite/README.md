@@ -9,6 +9,7 @@ packages:
   - "trailties"
   - "vite-trails"
   - "scripts"
+  - "vite-assets"
 clusters:
   - ruling
   - vite
