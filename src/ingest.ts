@@ -43,7 +43,7 @@ import {
   StoryRfcDep,
 } from "./models/index.js";
 import { currentBranch, headSha, mainWorktree } from "./db-path.js";
-import { closeRfcIfComplete } from "./rfc-close.js";
+import { closeRfcIfComplete, withDeferredAutoClose } from "./rfc-close.js";
 // @ts-expect-error — ported JS module, no type declarations
 import { extractStoryPaths, RFC_DIR_RE } from "../scripts/lib.mjs";
 
@@ -278,10 +278,14 @@ export async function ingest(opts: { tasksDir?: string; to?: string } = {}): Pro
   // leaves partial progress — which is fine, because the watermark is only
   // advanced at the end, so the next run redoes it.
   const CHUNK = 200;
-  for (let i = 0; i < paths.length; i += CHUNK) {
-    await ingestChunk(paths.slice(i, i + CHUNK), tasksDir, result);
-  }
-  await sweepVanishedRfcs(tasksDir, result);
+  // Postpone the RFC close check until every path in the push is read; see
+  // withDeferredAutoClose for the 0241 incident this prevents.
+  await withDeferredAutoClose(async () => {
+    for (let i = 0; i < paths.length; i += CHUNK) {
+      await ingestChunk(paths.slice(i, i + CHUNK), tasksDir, result);
+    }
+    await sweepVanishedRfcs(tasksDir, result);
+  });
   await Meta.set("last_ingested_sha", to);
 
   return result;
