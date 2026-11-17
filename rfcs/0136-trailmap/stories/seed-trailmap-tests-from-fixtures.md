@@ -1,0 +1,54 @@
+---
+title: "Seed trailmap's controller and model tests from test/fixtures instead of per-file creates"
+status: ready
+updated: 2026-11-17
+rfc: "0136-trailmap"
+cluster: null
+packages: ["activerecord"]
+deps: ["test-trailmap-through-a-test-helper-fixtures-and-app-routes"]
+deps-rfc: []
+est-loc: 400
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+Split from `test-trailmap-through-a-test-helper-fixtures-and-app-routes`, which
+measured 43 harness files and 284 `.create(` calls and predicted a split. Its PR
+landed the harness: `test/test-helper.ts` boots the app in `test` through
+`trails/test-help`, `test/global-setup.ts` maintains the schema once per run,
+each vitest file gets its own `storage/test.sqlite3-<n>` from
+`TestDatabases.createAndLoadSchema`, and every test runs inside test-help's
+transactional fixtures. `test/routes.test.ts` asserts with `assertRecognizes`.
+
+What it did not do is the data. The controller and model tests still seed the
+rows they share in each file's `beforeAll`/`beforeEach` with `Model.create(...)`
+(`test/controllers/rfc-pages-controller.test.ts`, `backlog-page.test.ts`,
+`story-pages-controller.test.ts`, `searches-controller.test.ts`,
+`stories-controller.test.ts`, and others), and `test/fixtures/` holds no
+`<table>` files. Rails' shape is `fixtures :all` over `test/fixtures/*.yml`,
+which `trails new`'s generated `test/test-helper.ts` declares with
+`TestCase.fixtures(":all")`.
+
+The harness is already in place for it: test-help adds `test/fixtures/` to
+`ActiveSupport::TestCase.fixturePaths`, and fixture loading runs in every
+test's setup.
+
+## Acceptance criteria
+
+- The task-domain rows two or more test files seed by hand (`rfcs`, `stories`,
+  `story_deps`, `story_paths`, `events`) become `test/fixtures/<table>` files,
+  and `test/test-helper.ts` declares `TestCase.fixtures(":all")`.
+- The files that used them read them through the fixture accessors instead of
+  re-creating them. A test that needs a one-off row still creates it inline.
+- The files that opt out of transactional tests
+  (`TestCase.useTransactionalTests = false`: the stats-sync files,
+  `hub-database`, `parity-refresh`) keep working, and none of them loads the
+  task-domain fixtures into a database it does not own.
+- `pnpm test` passes with no assertion changes beyond the data plumbing, both
+  without Postgres and with CI's `HUB_DATABASE_URL`/`HUB_TEST_DATABASE_URL`.
