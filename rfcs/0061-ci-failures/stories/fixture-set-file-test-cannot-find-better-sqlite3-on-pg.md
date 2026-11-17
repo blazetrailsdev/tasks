@@ -1,6 +1,6 @@
 ---
 title: "fixture-set/file.trails.test.ts intermittently cannot resolve better-sqlite3 on the PG lane"
-status: ready
+status: blocked
 updated: 2026-11-17
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-17T12:06:37Z"
+assignee: "ci-sqlite-shard-3-and-parity-output-cache"
+blocked-by: "no reproduction: single occurrence (run 43213144715); needs a recurrence with diagnostics"
 closed-reason: null
 ---
 

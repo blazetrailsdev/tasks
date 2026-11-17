@@ -1,6 +1,6 @@
 ---
 title: "class-paths regenerate drops SourceAnnotationExtractor rows locally but not in CI"
-status: claimed
+status: ready
 updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 50
 priority: null
 pr: null
-claim: "2026-11-17T11:52:40Z"
-assignee: "application-configuration-paths-missing-database-log-tmp"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

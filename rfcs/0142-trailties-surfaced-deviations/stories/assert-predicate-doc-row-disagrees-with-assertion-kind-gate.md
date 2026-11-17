@@ -1,6 +1,6 @@
 ---
 title: "assert-predicate-doc-row-disagrees-with-assertion-kind-gate"
-status: claimed
+status: in-progress
 updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10232
 claim: "2026-11-17T11:52:40Z"
 assignee: "application-configuration-paths-missing-database-log-tmp"
 blocked-by: null

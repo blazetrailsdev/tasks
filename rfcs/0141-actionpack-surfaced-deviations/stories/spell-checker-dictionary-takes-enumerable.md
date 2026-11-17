@@ -1,7 +1,7 @@
 ---
 title: "SpellChecker dictionary takes an Enumerable; ActionNotFound passes the action_methods Set"
-status: ready
-updated: 2026-11-16
+status: claimed
+updated: 2026-11-17
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-17T12:51:39Z"
+assignee: "delegation-generate-string-target-accessor-arm"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "trailties: enable_bcrypt adds the bcrypt gem port and a generated app loads it"
-status: claimed
+status: in-progress
 updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: trails#10232
 claim: "2026-11-17T11:52:40Z"
 assignee: "application-configuration-paths-missing-database-log-tmp"
 blocked-by: null

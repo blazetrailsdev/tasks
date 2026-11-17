@@ -1,6 +1,6 @@
 ---
 title: "burn-down-the-declaration-only-population-remaining"
-status: claimed
+status: ready
 updated: 2026-11-17
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-17T11:36:39Z"
-assignee: "burn-down-the-declaration-only-population-remaining"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

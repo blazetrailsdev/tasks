@@ -1,7 +1,7 @@
 ---
 title: 'rack middleware spells @app.call(env) directly, not rbFSend(app, "call")'
-status: ready
-updated: 2026-11-16
+status: done
+updated: 2026-11-17
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9455
+claim: "2026-11-17T12:51:39Z"
+assignee: "delegation-generate-string-target-accessor-arm"
 blocked-by: null
 closed-reason: null
 ---

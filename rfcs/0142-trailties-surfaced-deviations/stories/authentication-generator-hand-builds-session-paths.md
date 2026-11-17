@@ -1,6 +1,6 @@
 ---
 title: "Authentication generator hand-builds /session/new instead of new_session_path"
-status: claimed
+status: in-progress
 updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#10232
 claim: "2026-11-17T11:52:40Z"
 assignee: "application-configuration-paths-missing-database-log-tmp"
 blocked-by: null

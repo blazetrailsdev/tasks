@@ -1,6 +1,6 @@
 ---
 title: "index-by-keeps-hash-insertion-order"
-status: ready
+status: in-progress
 updated: 2026-11-17
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10236
+claim: "2026-11-17T12:36:41Z"
+assignee: "index-by-keeps-hash-insertion-order"
 blocked-by: null
 closed-reason: null
 ---

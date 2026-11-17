@@ -1,6 +1,6 @@
 ---
 title: "Replace the RUNNER_STATUS_TOKEN PAT with a GitHub App installation token"
-status: ready
+status: blocked
 updated: 2026-11-17
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 25
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-17T12:06:37Z"
+assignee: "ci-sqlite-shard-3-and-parity-output-cache"
+blocked-by: "operator: create the org GitHub App (Administration: read-only), install on trails, store app id + private key as repo secrets"
 closed-reason: null
 ---
 

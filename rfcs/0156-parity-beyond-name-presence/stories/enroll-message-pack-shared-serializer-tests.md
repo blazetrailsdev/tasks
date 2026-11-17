@@ -1,6 +1,6 @@
 ---
 title: "parity:test does not expand MessagePackSharedSerializerTests into the two serializer test classes"
-status: claimed
+status: in-progress
 updated: 2026-11-17
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#10233
 claim: "2026-11-17T11:36:39Z"
 assignee: "burn-down-the-declaration-only-population-remaining"
 blocked-by: null

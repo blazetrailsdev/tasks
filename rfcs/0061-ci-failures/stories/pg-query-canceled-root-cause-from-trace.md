@@ -1,6 +1,6 @@
 ---
 title: "Root-cause the PG QueryCanceled flake from the pg-cancel-trace output"
-status: ready
+status: blocked
 updated: 2026-11-17
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-17T12:06:37Z"
+assignee: "ci-sqlite-shard-3-and-parity-output-cache"
+blocked-by: "waiting on the next [pg-cancel-trace] recurrence in a CI log; no new occurrence to root-cause from"
 closed-reason: null
 ---
 

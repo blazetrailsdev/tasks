@@ -1,6 +1,6 @@
 ---
 title: "Route rails-comparison to an idle self-hosted runner once vendored sources persist outside the checkout"
-status: ready
+status: blocked
 updated: 2026-11-17
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-17T12:06:37Z"
+assignee: "ci-sqlite-shard-3-and-parity-output-cache"
+blocked-by: "needs a measured rails-comparison run on debian-arm64 (with VM network bytes) before any routing change; requires runner access"
 closed-reason: null
 ---
 

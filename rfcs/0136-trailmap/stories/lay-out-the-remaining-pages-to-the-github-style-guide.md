@@ -1,6 +1,6 @@
 ---
 title: "Lay out the remaining pages to the GitHub style guide"
-status: ready
+status: in-progress
 updated: 2026-11-17
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#151
+claim: "2026-11-17T12:21:22Z"
+assignee: "lay-out-the-remaining-pages-to-the-github-style-guide"
 blocked-by: null
 closed-reason: null
 ---

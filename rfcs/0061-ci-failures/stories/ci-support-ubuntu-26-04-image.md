@@ -1,6 +1,6 @@
 ---
 title: "CI: pass on ubuntu-26.04 runners and drop the 24.04 pin"
-status: ready
+status: blocked
 updated: 2026-11-17
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-17T12:06:37Z"
+assignee: "ci-sqlite-shard-3-and-parity-output-cache"
+blocked-by: "needs an ubuntu-26.04 environment to diagnose ImageMagick/ffprobe delta; not reproducible on the agent host"
 closed-reason: null
 ---
 
