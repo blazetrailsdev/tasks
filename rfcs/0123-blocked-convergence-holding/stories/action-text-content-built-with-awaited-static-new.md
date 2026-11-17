@@ -36,6 +36,15 @@ Canonicalization awaits `Attachable.fromNode` (GlobalID locate, a query), so
 reaches an awaited `Content.new` (an async coder path in the serialized type,
 or canonicalizing at a different awaited step) is an operator decision.
 
+## Ruling (operator, 2026-11-17)
+
+Async `static new` (RFC 0234). `Content` gets a `protected` constructor and
+`static async new` that canonicalizes in line, as `content.rb:40-48` does. The
+serialized-attribute type grows an awaited coder path, so
+`serialize :body, coder: ActionText::Content` reaches `await Content.new(...)`
+on load. Not "canonicalize at another awaited step", and not sync
+canonicalization.
+
 ## Acceptance criteria
 
 - [ ] `Content` has a `protected` constructor and `static async new` running the canonicalization; `canonicalized` is deleted.

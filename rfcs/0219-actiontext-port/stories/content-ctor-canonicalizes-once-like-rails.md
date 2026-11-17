@@ -22,6 +22,14 @@ closed-reason: null
 
 A related consequence: `RichText`'s plain-text memo is keyed by `body.toHtml()`. If the eager fragment is replaced after `toPlainText()` starts, a later `blank?` raises `RuntimeError` spuriously.
 
+## Ruling (operator, 2026-11-17)
+
+Converge through the async `static new` ruled on
+`action-text-content-built-with-awaited-static-new`: the coder's `load` returns an
+awaited, canonicalized `Content`. Sync canonicalization (a sync `Fragment#update` /
+`#replace`) is rejected. This story lands after that one, and owns whatever of the
+criteria below it leaves (the baseline row, the `RichText` predicates).
+
 ## Acceptance criteria
 
 - Converge the constructor to Rails' single assignment. One option is a sync canonicalization path: the sgid lookup is deferred to `attachments()`, and canonicalizing nodes needs no lookup. Another option is a coder `load` that returns an awaited, canonicalized `Content`.

@@ -31,11 +31,20 @@ by putting `lib/tag-helper.ts` ahead of the ActionView setup in the `activerecor
 CLAUDE.md § "A Ruby module is a JS object or a JS class": a method defined on a module after it
 is included must be ported so that the definition exists before the include.
 
+## Ruling (operator, 2026-11-17)
+
+Widen the `RoutesHelpers.with` includer-list exception (trails CLAUDE.md § "A Ruby
+module is a JS object or a JS class") to this reopen. `FormHelper` and `FormBuilder`
+keep a weak list of the prototypes that copied their members (the
+`_appendIncluder` / `isIncludedMember` shape `NamedRouteCollection` uses), and
+ActionText's `tag-helper.ts` writes `richTextarea` / `richTextArea` through to
+each recorded includer. No carrier is spliced into a prototype chain. Not
+"move richTextarea into actionview".
+
 ## Acceptance criteria
 
 - `richTextarea` / `richTextArea` reach an `ActionView::Base` view in any load order, with no
-  carrier and no includer list (for example, ActionView's FormHelper sources the definitions
-  before `Base` includes `Helpers`, or the engine boot orders it).
+  carrier, through the includer list the ruling above licenses.
 - Remove `lib/tag-helper.ts` from the `vitest.config.ts` setupFiles.
 - `controller-render.test.ts` "renders Trix with content attachment as HTML when the request
   format is not HTML" still passes.
