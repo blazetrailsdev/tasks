@@ -1,7 +1,7 @@
 ---
 title: "Query and schema parity jobs run on a PR that touches their inputs, without the run-parity-sqlite label"
-status: in-progress
-updated: 2026-11-16
+status: done
+updated: 2026-11-17
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

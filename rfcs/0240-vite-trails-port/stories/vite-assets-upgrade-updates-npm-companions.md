@@ -1,7 +1,7 @@
 ---
 title: "vite-assets-upgrade-updates-npm-companions"
-status: in-progress
-updated: 2026-11-16
+status: done
+updated: 2026-11-17
 rfc: "0240-vite-trails-port"
 cluster: null
 packages: []

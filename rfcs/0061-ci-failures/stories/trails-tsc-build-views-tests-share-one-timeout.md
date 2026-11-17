@@ -1,7 +1,7 @@
 ---
 title: "trails-tsc: single-build buildViews tests still run on the 5 s default timeout"
-status: in-progress
-updated: 2026-11-16
+status: done
+updated: 2026-11-17
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

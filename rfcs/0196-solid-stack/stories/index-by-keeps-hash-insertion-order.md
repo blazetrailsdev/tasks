@@ -1,7 +1,7 @@
 ---
 title: "index-by-keeps-hash-insertion-order"
 status: ready
-updated: 2026-11-16
+updated: 2026-11-17
 rfc: "0196-solid-stack"
 cluster: null
 packages: []

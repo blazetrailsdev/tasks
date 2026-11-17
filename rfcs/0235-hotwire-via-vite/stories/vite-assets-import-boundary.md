@@ -1,6 +1,6 @@
 ---
 title: "Lint boundary: vite-assets and vite-trails stay app-asset-only"
-status: ready
+status: in-progress
 updated: 2026-11-17
 rfc: "0235-hotwire-via-vite"
 cluster: vite
@@ -9,9 +9,9 @@ deps: [vite-trails-package-and-tag-helpers]
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10227
+claim: "2026-11-17T10:21:32Z"
+assignee: "vite-assets-import-boundary"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "solid-queue: RecurringTask#delayFromNow returns 0 on a minute boundary (flaky test)"
-status: in-progress
-updated: 2026-11-16
+status: done
+updated: 2026-11-17
 rfc: "0196-solid-stack"
 cluster: null
 packages: []

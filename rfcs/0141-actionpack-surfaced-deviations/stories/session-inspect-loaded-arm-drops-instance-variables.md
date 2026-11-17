@@ -1,7 +1,7 @@
 ---
 title: "Session#inspect's loaded arm renders no instance variables"
-status: ready
-updated: 2026-11-16
+status: claimed
+updated: 2026-11-17
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages:
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 90
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-17T10:51:38Z"
+assignee: "controller-cannot-respond-with-a-readable-stream-body"
 blocked-by: null
 closed-reason: null
 ---

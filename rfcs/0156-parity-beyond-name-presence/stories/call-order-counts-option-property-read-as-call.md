@@ -1,7 +1,7 @@
 ---
 title: "Call-order check counts an option property read (opts.all) as a call"
-status: claimed
-updated: 2026-11-16
+status: ready
+updated: 2026-11-17
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: "2026-11-16T23:51:44Z"
-assignee: "bcrypt-bc-crypt-answers-nil-on-crypt-ra-failure"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

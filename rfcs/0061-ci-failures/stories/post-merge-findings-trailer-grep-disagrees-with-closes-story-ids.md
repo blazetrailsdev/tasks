@@ -1,7 +1,7 @@
 ---
 title: "post-merge-findings' Closes-story grep is unanchored and case-preserving, unlike closesStoryIds"
-status: in-progress
-updated: 2026-11-16
+status: done
+updated: 2026-11-17
 rfc: "0061-ci-failures"
 cluster: null
 packages: [scripts]

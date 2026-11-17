@@ -1,7 +1,7 @@
 ---
 title: "Run solid_cache's failure-safety, failure-raising, connection-pool, encoded-key and delete-matched behaviors"
-status: ready
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-17
 rfc: "0196-solid-stack"
 cluster: null
 packages: ["solid-cache", "activesupport"]
@@ -9,9 +9,9 @@ deps: ["solid-cache-test-compare-credits-shared-behaviors"]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10228
+claim: "2026-11-17T10:06:41Z"
+assignee: "app-templates-read-generator-node-version"
 blocked-by: null
 closed-reason: null
 ---

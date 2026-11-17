@@ -1,6 +1,6 @@
 ---
 title: "SchemaCache sync peek stops issuing an unusable async columns query"
-status: in-progress
+status: done
 updated: 2026-11-17
 rfc: "0234-no-void-promises"
 cluster: null

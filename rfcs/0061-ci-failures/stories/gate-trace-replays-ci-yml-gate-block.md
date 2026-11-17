@@ -1,7 +1,7 @@
 ---
 title: "gate-trace.sh is out of sync with ci.yml and replays a stale hand copy of the gate block"
-status: in-progress
-updated: 2026-11-16
+status: done
+updated: 2026-11-17
 rfc: "0061-ci-failures"
 cluster: null
 packages: [scripts]
