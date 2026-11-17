@@ -5,7 +5,8 @@ updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties"]
-deps: []
+deps:
+  - app-generator-javascript-gemfile-entry-loads-vite-trails
 deps-rfc: []
 est-loc: 300
 priority: null
