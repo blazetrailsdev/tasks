@@ -5,7 +5,8 @@ updated: 2026-11-17
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
-deps: []
+deps:
+  - serialized-type-awaited-coder-path
 deps-rfc: []
 est-loc: null
 priority: null
