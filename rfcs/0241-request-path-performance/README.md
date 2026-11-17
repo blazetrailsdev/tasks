@@ -15,6 +15,7 @@ packages:
   - "examples"
 clusters:
   - request-perf
+priority: 4
 ---
 
 # RFC 0241 — Request-path performance, measured against Rails on the $12 Server Challenge

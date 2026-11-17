@@ -1,6 +1,6 @@
 ---
 title: "i18n: port I18n::Backend::Cascade and its backend test"
-status: draft
+status: ready
 updated: 2026-11-17
 rfc: "0245-i18n-test-parity-100"
 cluster: backend-mixins

@@ -1,6 +1,6 @@
 ---
 title: "i18n: test/api/*_test.rb mount I18n::Tests::* lib modules that parity:test does not measure"
-status: in-progress
+status: done
 updated: 2026-11-17
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

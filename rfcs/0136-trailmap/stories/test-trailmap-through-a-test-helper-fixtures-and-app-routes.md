@@ -1,6 +1,6 @@
 ---
 title: "Test trailmap through one test helper, fixtures and the application's own routes"
-status: claimed
+status: done
 updated: 2026-11-17
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["port-rails-test-help-for-applications"]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trailmap#155
 claim: "2026-11-17T13:51:23Z"
 assignee: "test-trailmap-through-a-test-helper-fixtures-and-app-routes"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Port turbo-rails Engine, turbo_stream MIME and renderer, view helpers"
-status: ready
+status: claimed
 updated: 2026-11-17
 rfc: "0238-turbo-port"
 cluster: turbo
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 450
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-17T21:31:24Z"
+assignee: "turbo-dummy-app-turbo-api-dependents"
 blocked-by: null
 closed-reason: null
 ---

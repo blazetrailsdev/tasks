@@ -1,6 +1,6 @@
 ---
 title: "Balance AR adapter vitest shards by measured duration"
-status: ready
+status: in-progress
 updated: 2026-11-17
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10272
+claim: "2026-11-17T21:06:58Z"
+assignee: "ci-ar-adapter-shards-balance-by-duration"
 blocked-by: null
 closed-reason: null
 ---

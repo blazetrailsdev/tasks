@@ -16,6 +16,7 @@ related-rfcs:
   - "0074-i18n-parity"
   - "0156-parity-beyond-name-presence"
   - "0193-small-gem-ports-parity-100"
+priority: 4
 ---
 
 # RFC 0245 — i18n: 100% test parity with the vendored i18n gem

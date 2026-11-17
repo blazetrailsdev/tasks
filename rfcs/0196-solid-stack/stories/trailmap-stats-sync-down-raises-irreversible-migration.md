@@ -1,6 +1,6 @@
 ---
 title: "trailmap-stats-sync-down-raises-irreversible-migration"
-status: ready
+status: claimed
 updated: 2026-11-17
 rfc: "0196-solid-stack"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-17T21:52:33Z"
+assignee: "solid-cache-test-compare-uncounted-behaviors"
 blocked-by: null
 closed-reason: null
 ---
