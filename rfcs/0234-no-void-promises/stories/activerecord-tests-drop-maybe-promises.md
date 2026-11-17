@@ -1,6 +1,6 @@
 ---
 title: "activerecord-tests-drop-maybe-promises"
-status: claimed
+status: blocked
 updated: 2026-11-17
 rfc: "0234-no-void-promises"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-11-17T00:51:35Z"
 assignee: "action-text-content-built-with-awaited-static-new"
-blocked-by: null
+blocked-by: "operator decision: whether blazetrails/no-floating-maybe-promise exempts Relation-typed expressions (all 39 remaining sites drop a thenable Relation)"
 closed-reason: null
 ---
 

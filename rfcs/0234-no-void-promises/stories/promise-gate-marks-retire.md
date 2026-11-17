@@ -1,6 +1,6 @@
 ---
 title: "The three promise-gate marks read 0 and are deleted, leaving plain errors"
-status: claimed
+status: blocked
 updated: 2026-11-17
 rfc: "0234-no-void-promises"
 cluster: gate
@@ -29,7 +29,7 @@ priority: null
 pr: null
 claim: "2026-11-17T00:51:35Z"
 assignee: "action-text-content-built-with-awaited-static-new"
-blocked-by: null
+blocked-by: "waits on every RFC 0234 convergence story: marks still nonzero (scripts floating 46, website 8, activerecord maybe-promise 67, actiontext constructor 2, ...)"
 closed-reason: null
 ---
 

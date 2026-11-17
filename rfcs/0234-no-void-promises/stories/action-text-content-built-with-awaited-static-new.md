@@ -1,6 +1,6 @@
 ---
 title: "action-text-content-built-with-awaited-static-new"
-status: claimed
+status: blocked
 updated: 2026-11-17
 rfc: "0234-no-void-promises"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-11-17T00:51:35Z"
 assignee: "action-text-content-built-with-awaited-static-new"
-blocked-by: null
+blocked-by: "operator decision: how the sync serialize coder (Serialization.load/dump) reaches an awaited Content.new — async coder path in the serialized type vs canonicalizing at another awaited step"
 closed-reason: null
 ---
 

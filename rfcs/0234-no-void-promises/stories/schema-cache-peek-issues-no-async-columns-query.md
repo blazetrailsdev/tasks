@@ -1,6 +1,6 @@
 ---
 title: "SchemaCache sync peek stops issuing an unusable async columns query"
-status: claimed
+status: in-progress
 updated: 2026-11-17
 rfc: "0234-no-void-promises"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#10224
 claim: "2026-11-17T00:51:35Z"
 assignee: "action-text-content-built-with-awaited-static-new"
 blocked-by: null
