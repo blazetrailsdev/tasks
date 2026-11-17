@@ -21,6 +21,8 @@ packages:
   - "actionview"
   - "trails-tsc"
   - "zeitwerk"
+  - "vite-assets"
+  - "vite-trails"
 clusters:
   - "boot"
   - "generators"
