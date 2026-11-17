@@ -2,7 +2,7 @@
 title: "Port the rack-cors gem as @blazetrails/rack-cors"
 status: draft
 updated: 2026-11-17
-rfc: "0000-rack-cors-gem-port"
+rfc: "0244-rack-cors-gem-port"
 cluster: rack-cors
 packages: [rack-cors]
 deps: []

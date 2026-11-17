@@ -1,5 +1,5 @@
 ---
-rfc: "0000-rack-cors-gem-port"
+rfc: "0244-rack-cors-gem-port"
 title: "Port the rack-cors gem"
 status: draft
 created: 2026-11-17
@@ -12,9 +12,7 @@ clusters:
   - rack-cors
 ---
 
-<!-- Unnumbered until merge -->
-
-# RFC — Port the rack-cors gem
+# RFC 0244 — Port the rack-cors gem
 
 ## Summary
 
