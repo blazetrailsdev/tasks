@@ -29,6 +29,8 @@ The PR for solid-queue-recurring-schedule-v1-7-2 bumped `vendor/solid_queue` to 
 - `app/models/solid_queue/job/concurrency_controls.rb:29-110`: concurrency-lock recording (`CONCURRENCY_LOCK_KEY`, `record_concurrency_lock`, `holds_concurrency_slot?`).
 - `lib/solid_queue/lifecycle_hooks.rb` exit hooks (`after_shutdown :run_exit_hooks` in scheduler.rb and worker.rb).
 - `lib/solid_queue/configuration.rb:156-167` `default_options`' `mode` / `standalone` keys.
+- `app/models/solid_queue/job/retryable.rb:18-29` `failed_with`'s nested-transaction `create!` / `RecordNotUnique` update, and `failed_execution.rb`'s `before_save :expand_error_details_from_exception, if: :exception` and `retry_all`'s counter reset.
+- `app/models/solid_queue/process.rb:22-32` `heartbeat` restoring attributes on failure; `job.rb:25-28` `enqueue_all` defaulting `scheduled_at`; `lib/solid_queue/engine.rb:19-23` the `solid_queue.time_zone` initializer.
 - `test/unit/worker_test.rb` execution modes and the renamed tests (thread mode; fiber mode is in `solid-queue-fiber-pool-v1-7-2`).
 
 ## Acceptance criteria
