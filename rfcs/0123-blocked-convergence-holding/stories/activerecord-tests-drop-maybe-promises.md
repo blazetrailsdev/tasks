@@ -2,7 +2,7 @@
 title: "activerecord-tests-drop-maybe-promises"
 status: blocked
 updated: 2026-11-17
-rfc: "0234-no-void-promises"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
