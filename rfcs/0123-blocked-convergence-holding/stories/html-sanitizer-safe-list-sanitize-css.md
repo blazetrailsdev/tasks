@@ -1,7 +1,7 @@
 ---
 title: "html-sanitizer-safe-list-sanitize-css"
-status: ready
-updated: 2026-11-17
+status: blocked
+updated: 2026-10-27
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages:
@@ -17,7 +17,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "needs port-crass-css-parser and port-loofah-scrubber-and-html5-scrub"
 closed-reason: null
 ---
 
