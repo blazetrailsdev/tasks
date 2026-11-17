@@ -4,7 +4,7 @@ status: draft
 updated: 2026-11-17
 rfc: "0123-blocked-convergence-holding"
 cluster: null
-packages: [activerecord, actiontext]
+packages: [activerecord]
 deps: []
 deps-rfc: []
 est-loc: null
