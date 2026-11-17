@@ -5,7 +5,13 @@ updated: 2026-11-17
 rfc: "0238-turbo-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - turbo-broadcastable-class-methods-and-callbacks
+  - turbo-broadcastable-instance-broadcasts
+  - turbo-package-helpers-and-turbo-stream-format
+  - turbo-frames-native-and-request-id
+  - turbo-broadcasts-and-streams-channel
+  - turbo-test-helpers
 deps-rfc: []
 est-loc: null
 priority: null
