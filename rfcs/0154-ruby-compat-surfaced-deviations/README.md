@@ -24,6 +24,8 @@ packages:
   - "did-you-mean"
   - "i18n"
   - "activejob"
+  - "image-processing"
+  - "nokogiri"
 clusters:
   - "mri-relocation"
   - "measurement"
