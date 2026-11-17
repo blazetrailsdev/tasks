@@ -1,7 +1,7 @@
 ---
 rfc: "0235-hotwire-via-vite"
 title: "Hotwire via Vite (meta): ruling, trailties convergence, and the five gem-port RFCs"
-status: active
+status: draft
 created: 2026-11-12
 updated: 2026-11-17
 owner: "@deanmarano"
