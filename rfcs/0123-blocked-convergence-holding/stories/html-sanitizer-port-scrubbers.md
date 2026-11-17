@@ -9,6 +9,7 @@ packages:
   - "actionview"
 deps:
   - port-loofah-scrubber-and-html5-scrub
+  - vendor-rails-html-sanitizer-loofah-and-crass
 deps-rfc: []
 est-loc: 350
 priority: null
@@ -22,12 +23,12 @@ closed-reason: null
 ## Context
 
 `packages/html-sanitizer` has no port of rails-html-sanitizer 1.6.2's
-scrubbers (`lib/rails/html/scrubbers.rb`: `Rails::HTML::PermitScrubber`,
+scrubbers (`vendor/rails-html-sanitizer/v1.6.2/lib/rails/html/scrubbers.rb`: `Rails::HTML::PermitScrubber`,
 `TargetScrubber`, `TextOnlyScrubber`). Its `SafeListSanitizer` / `LinkSanitizer`
 / `FullSanitizer` go through sanitize-html configurations in `lib/engine.ts`
 instead, which is why `sanitize(html, scrubber:)` is unsupported and
-`test_html_scrubber_class_names` (`test/rails_api_test.rb:13-18`) and the
-gem's `test/scrubbers_test.rb` are unported. Surfaced on trails#8263, which
+`test_html_scrubber_class_names` (`vendor/rails-html-sanitizer/v1.6.2/test/rails_api_test.rb:13-18`) and the
+gem's `vendor/rails-html-sanitizer/v1.6.2/test/scrubbers_test.rb` are unported. Surfaced on trails#8263, which
 ported the rest of `RailsApiTest` into
 `packages/html-sanitizer/test/rails-api.test.ts`.
 
@@ -37,7 +38,7 @@ ported the rest of `RailsApiTest` into
   and mirror `scrubbers.rb` (names, `scrub` / `scrub_node` / `keep_node?` /
   `allowed_node?` control flow).
 - `SafeListSanitizer#sanitize` honors a `scrubber:` option as
-  `Concern::Scrubber::SafeList#scrub` (`sanitizer.rb:156-167`) does.
+  `Concern::Scrubber::SafeList#scrub` (`vendor/rails-html-sanitizer/v1.6.2/lib/rails/html/sanitizer.rb:156-167`) does.
 - `html_scrubber_class_names` is ported into `rails-api.test.ts`, and the
   `scrubbers_test.rb` cases into a `scrubbers.test.ts`.
 - The actionview tests parked under `// BLOCKED: html-sanitizer-port-scrubbers`
