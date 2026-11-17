@@ -1,7 +1,7 @@
 ---
 title: "CI: pass on ubuntu-26.04 runners and drop the 24.04 pin"
 status: ready
-updated: 2026-11-16
+updated: 2026-11-17
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

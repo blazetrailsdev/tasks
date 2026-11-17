@@ -1,7 +1,7 @@
 ---
 title: "app-generator-registers-run-javascript-hotwire-css-kamal"
-status: in-progress
-updated: 2026-11-16
+status: done
+updated: 2026-11-17
 rfc: "0196-solid-stack"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "trailties: database.yml templates add Solid cache/queue/cable production databases"
-status: in-progress
-updated: 2026-11-16
+status: done
+updated: 2026-11-17
 rfc: "0196-solid-stack"
 cluster: null
 packages: []

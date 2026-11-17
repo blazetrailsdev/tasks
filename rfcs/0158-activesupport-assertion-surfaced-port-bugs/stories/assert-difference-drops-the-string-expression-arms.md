@@ -1,7 +1,7 @@
 ---
 title: "activesupport: assert_difference drops the respond_to?(:call) arms for String expressions"
-status: in-progress
-updated: 2026-11-16
+status: done
+updated: 2026-11-17
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

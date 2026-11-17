@@ -1,7 +1,7 @@
 ---
 title: "AppGenerator Dockerfile reads dockerfilePnpmVersion / isPnpmThroughCorepack as Dockerfile.tt does"
-status: ready
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10221
+claim: "2026-11-17T00:06:47Z"
+assignee: "activerecord-generators-migration-is-an-included-module"
 blocked-by: null
 closed-reason: null
 ---

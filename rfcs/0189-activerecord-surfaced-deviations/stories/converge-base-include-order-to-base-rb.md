@@ -1,7 +1,7 @@
 ---
 title: "activerecord: Base include order follows base.rb"
-status: ready
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-17
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10220
+claim: "2026-11-17T00:21:33Z"
+assignee: "converge-base-include-order-to-base-rb"
 blocked-by: null
 closed-reason: null
 ---

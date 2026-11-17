@@ -1,7 +1,7 @@
 ---
 title: "The three promise-gate marks read 0 and are deleted, leaving plain errors"
-status: ready
-updated: 2026-11-16
+status: claimed
+updated: 2026-11-17
 rfc: "0234-no-void-promises"
 cluster: gate
 packages: []
@@ -27,8 +27,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-17T00:51:35Z"
+assignee: "action-text-content-built-with-awaited-static-new"
 blocked-by: null
 closed-reason: null
 ---

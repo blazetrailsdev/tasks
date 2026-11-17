@@ -1,7 +1,7 @@
 ---
 title: "Website build fails on main; fix it, exercise the Psych stub, re-enable the CI job"
 status: ready
-updated: 2026-11-16
+updated: 2026-11-17
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

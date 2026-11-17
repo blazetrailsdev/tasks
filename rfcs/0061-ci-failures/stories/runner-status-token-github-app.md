@@ -1,7 +1,7 @@
 ---
 title: "Replace the RUNNER_STATUS_TOKEN PAT with a GitHub App installation token"
 status: ready
-updated: 2026-11-16
+updated: 2026-11-17
 rfc: "0061-ci-failures"
 cluster: null
 packages: [scripts]

@@ -1,7 +1,7 @@
 ---
 title: "fixture-set/file.trails.test.ts intermittently cannot resolve better-sqlite3 on the PG lane"
 status: ready
-updated: 2026-11-16
+updated: 2026-11-17
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

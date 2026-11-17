@@ -1,7 +1,7 @@
 ---
 title: "MiddlewareStack#use takes a middleware class with no cast"
-status: in-progress
-updated: 2026-11-16
+status: done
+updated: 2026-11-17
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: [actionpack]

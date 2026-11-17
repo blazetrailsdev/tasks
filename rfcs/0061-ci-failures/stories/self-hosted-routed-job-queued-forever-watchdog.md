@@ -1,7 +1,7 @@
 ---
 title: "Cancel and re-run CI runs stuck queued on offline self-hosted runners"
-status: ready
-updated: 2026-11-16
+status: closed
+updated: 2026-11-17
 rfc: "0061-ci-failures"
 cluster: null
 packages: [scripts]
@@ -9,11 +9,11 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10222
+claim: "2026-11-17T00:36:42Z"
+assignee: "ci-ar-adapter-shards-balance-by-duration"
 blocked-by: null
-closed-reason: null
+closed-reason: "Operator decision 2026-11-16: not wanted; trails#10222 closed unmerged."
 ---
 
 ## Context

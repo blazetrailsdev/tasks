@@ -1,7 +1,7 @@
 ---
 title: "action-text-content-built-with-awaited-static-new"
-status: ready
-updated: 2026-11-16
+status: claimed
+updated: 2026-11-17
 rfc: "0234-no-void-promises"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-17T00:51:35Z"
+assignee: "action-text-content-built-with-awaited-static-new"
 blocked-by: null
 closed-reason: null
 ---
