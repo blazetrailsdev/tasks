@@ -1,6 +1,6 @@
 ---
 title: "Set a repository's checkout path from its settings page, and say why the spawn picker is empty"
-status: in-progress
+status: done
 updated: 2026-11-17
 rfc: "0136-trailmap"
 cluster: null

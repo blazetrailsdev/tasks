@@ -1,6 +1,6 @@
 ---
 title: "DOM tests for the dashboard palette's page code (open, close, carry-over)"
-status: in-progress
+status: done
 updated: 2026-11-17
 rfc: "0136-trailmap"
 cluster: null

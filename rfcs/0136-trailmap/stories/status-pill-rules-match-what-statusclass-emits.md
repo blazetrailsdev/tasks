@@ -1,6 +1,6 @@
 ---
 title: "Status pill rules match what statusClass emits: refining and sunsetting are styled, dead ones go"
-status: in-progress
+status: done
 updated: 2026-11-17
 rfc: "0136-trailmap"
 cluster: null
