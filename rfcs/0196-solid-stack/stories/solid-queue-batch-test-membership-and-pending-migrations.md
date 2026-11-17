@@ -5,7 +5,10 @@ updated: 2026-11-17
 rfc: "0196-solid-stack"
 cluster: null
 packages: []
-deps: []
+deps:
+  - solid-queue-active-job-batch-id-v1-7-2
+  - solid-queue-update-generator-v1-7-2
+  - solid-queue-batch-models-v1-7-2
 deps-rfc: []
 est-loc: null
 priority: null
