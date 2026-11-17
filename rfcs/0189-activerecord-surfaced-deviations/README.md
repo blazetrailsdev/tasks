@@ -19,6 +19,7 @@ packages:
   - "arel"
   - "rack"
   - "activejob"
+  - "trails-tsc"
 clusters:
   - "connection-adapters"
   - "associations"
