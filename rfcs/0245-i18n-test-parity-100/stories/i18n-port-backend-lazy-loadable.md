@@ -2,7 +2,7 @@
 title: "i18n: port I18n::Backend::LazyLoadable within the awaited-load ruling"
 status: draft
 updated: 2026-11-17
-rfc: "0000-i18n-test-parity-100"
+rfc: "0245-i18n-test-parity-100"
 cluster: backend-mixins
 packages: [i18n]
 deps: []

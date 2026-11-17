@@ -2,7 +2,7 @@
 title: "i18n: port I18n::Gettext and Gettext::Helpers with api_test.rb and gettext_plural_keys_test.rb"
 status: draft
 updated: 2026-11-17
-rfc: "0000-i18n-test-parity-100"
+rfc: "0245-i18n-test-parity-100"
 cluster: gettext
 packages: [i18n]
 deps: []

@@ -2,7 +2,7 @@
 title: "i18n: port I18n::Backend::Pluralization and its three backend tests"
 status: draft
 updated: 2026-11-17
-rfc: "0000-i18n-test-parity-100"
+rfc: "0245-i18n-test-parity-100"
 cluster: backend-mixins
 packages: [i18n]
 deps: []

@@ -2,7 +2,7 @@
 title: "i18n: port I18n::Tests::Localization::DateTime and ::Time into the api suites"
 status: draft
 updated: 2026-11-17
-rfc: "0000-i18n-test-parity-100"
+rfc: "0245-i18n-test-parity-100"
 cluster: api-mixins
 packages: [i18n]
 deps: [i18n-api-tests-port-procs-and-localization]

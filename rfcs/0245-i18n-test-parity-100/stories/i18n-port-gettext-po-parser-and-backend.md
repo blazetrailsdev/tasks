@@ -2,7 +2,7 @@
 title: "i18n: port Gettext::PoParser on the racc runtime and I18n::Backend::Gettext"
 status: draft
 updated: 2026-11-17
-rfc: "0000-i18n-test-parity-100"
+rfc: "0245-i18n-test-parity-100"
 cluster: gettext
 packages: [i18n]
 deps: [i18n-port-gettext-helpers]

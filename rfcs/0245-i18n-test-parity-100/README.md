@@ -1,5 +1,5 @@
 ---
-rfc: "0000-i18n-test-parity-100"
+rfc: "0245-i18n-test-parity-100"
 title: "i18n: 100% test parity with the vendored i18n gem"
 status: draft
 created: 2026-11-17
@@ -18,10 +18,7 @@ related-rfcs:
   - "0193-small-gem-ports-parity-100"
 ---
 
-<!-- Unnumbered until merge: `scripts/finalize-rfc.mjs` swaps 0000 for the
-     assigned number at merge. -->
-
-# RFC — i18n: 100% test parity with the vendored i18n gem
+# RFC 0245 — i18n: 100% test parity with the vendored i18n gem
 
 ## Summary
 
