@@ -95,7 +95,8 @@ Stories 2 and 3 both depend only on story 1.
 
 - `pnpm parity:api rack-cors` reports no missing methods, and
   `pnpm parity:test rack-cors` matches all 57 Rails examples.
-- A generated `--api` app with `cors.ts` uncommented boots, and a preflight
+- `boot-app-cors.trails.test.ts` (story 3) boots the trailties `boot-app`
+  fixture with the template's `cors.ts` block uncommented, and a preflight
   `OPTIONS` request gets `access-control-allow-origin`.
 
 ## Open questions

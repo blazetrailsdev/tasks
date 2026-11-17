@@ -7,7 +7,7 @@ cluster: rack-cors
 packages: [trailties]
 deps: [rack-cors-gem-port]
 deps-rfc: []
-est-loc: 80
+est-loc: 100
 priority: null
 pr: null
 claim: null
@@ -34,7 +34,16 @@ commented out.
   Rails' `Gemfile.tt:50` comments out the gem. The generated `package.json`
   does not list it, as it does not list bcrypt (`Gemfile.tt:9`): JSON has no
   comment to hold it.
-- An `api-app-generator.test.ts` case asserts the import line. A
-  trails-only test boots a generated `--api` app with the block uncommented
-  and checks a preflight `OPTIONS` response for
-  `access-control-allow-origin`.
+- An `api-app-generator.test.ts` case asserts the import line in the
+  generated template.
+- A new `packages/trailties/test/boot-app-cors.trails.test.ts` boots the
+  existing `test/fixtures/boot-app` fixture the way
+  `boot-app-api-controller.trails.test.ts` does (import
+  `config/application.js`, `setRoot`, `Trails.initialize()`, then
+  `Trails.application.call(env)`). The fixture gains a
+  `config/initializers/cors.ts` holding the template's block uncommented.
+  The test sends an `OPTIONS` preflight with `HTTP_ORIGIN` and
+  `HTTP_ACCESS_CONTROL_REQUEST_METHOD` and asserts
+  `access-control-allow-origin`. It does not boot a freshly generated app:
+  no harness does that per test, and the generator case already pins the
+  template text.
