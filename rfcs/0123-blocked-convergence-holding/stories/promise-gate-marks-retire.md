@@ -2,7 +2,7 @@
 title: "The three promise-gate marks read 0 and are deleted, leaving plain errors"
 status: blocked
 updated: 2026-11-17
-rfc: "0234-no-void-promises"
+rfc: "0123-blocked-convergence-holding"
 cluster: gate
 packages: []
 deps:
