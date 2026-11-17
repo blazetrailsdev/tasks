@@ -14,6 +14,7 @@ packages:
   - "rack"
   - "activerecord-cli"
   - "activerecord"
+  - "activesupport"
 clusters:
   - "action-controller"
   - "test-harness"
