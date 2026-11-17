@@ -5,7 +5,8 @@ updated: 2026-11-17
 rfc: "0196-solid-stack"
 cluster: null
 packages: ["solid-queue"]
-deps: []
+deps:
+  - solid-queue-v1-7-2-remaining-drift
 deps-rfc: []
 est-loc: 500
 priority: null
