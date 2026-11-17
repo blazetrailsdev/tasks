@@ -1,7 +1,7 @@
 ---
 title: "Lint boundary: vite-assets and vite-trails stay app-asset-only"
-status: draft
-updated: 2026-11-12
+status: ready
+updated: 2026-11-17
 rfc: "0235-hotwire-via-vite"
 cluster: vite
 packages: [scripts, trailties, vite-trails]

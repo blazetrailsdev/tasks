@@ -1,7 +1,7 @@
 ---
 title: "msgpack: test parity to 100% (blocked specs, String subclass arm)"
-status: draft
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-17
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10226
+claim: "2026-11-17T06:28:55Z"
+assignee: "msgpack-test-parity-to-100"
 blocked-by: null
 closed-reason: null
 ---

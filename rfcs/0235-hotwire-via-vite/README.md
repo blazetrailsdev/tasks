@@ -13,6 +13,7 @@ clusters:
   - ruling
   - vite
   - generator
+priority: 4
 ---
 
 # RFC 0235 — Hotwire via Vite (meta): ruling, trailties convergence, and the five gem-port RFCs

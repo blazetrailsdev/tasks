@@ -1,7 +1,7 @@
 ---
 title: "trailties: asset helpers render /stylesheets/x.css in a controller test, because the vite.helpers initializer only runs at boot"
-status: ready
-updated: 2026-11-16
+status: closed
+updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,11 +9,11 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10225
+claim: "2026-11-17T06:18:39Z"
+assignee: "asset-helpers-skip-vite-hook-outside-boot"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: its premise was trailties' vite.helpers initializer, deleted by trails#10225; Vite tags now come from vite-trails' TagHelpers via the engine's onLoad(action_view) include (vite_rails/lib/vite_rails/engine.rb:10-18), and actionview's compute_asset_path stays faithful."
 ---
 
 ## Context

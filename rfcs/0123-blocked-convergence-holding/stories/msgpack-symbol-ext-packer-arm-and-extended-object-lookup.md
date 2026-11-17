@@ -1,7 +1,7 @@
 ---
 title: "msgpack: Factory has_symbol_ext_type, the packer's T_SYMBOL arm, and the extended-object spec"
-status: blocked
-updated: 2026-10-11
+status: in-progress
+updated: 2026-11-17
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#10226
 claim: "2026-10-11T20:39:37Z"
 assignee: "arms-gate-compares-a-tagged-constructor-against-the-inlined-skeletons"
-blocked-by: "Owner decision needed (trails#8798 ships the Factory/Packer/Unpacker plumbing): Packer#write's T_SYMBOL arm reads every String starting with ':' as a Symbol, so IPAddr('::1') (extensions.rb:225-231, packer.write(ipaddr.to_s)) dumps as a Symbol ext instead of Rails' str bytes and serializer.trails.test.ts reds. The gem-named Symbol spec ports all need that arm. packer_spec.rb:473-490 also waits on ruby-compat extend(obj, mod) creating a singleton class and on the Ruby test extractor recording 'it { is_expected }' cases."
+blocked-by: null
 closed-reason: null
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "Generator: --javascript defaults to vite and runJavascript calls vite:install"
-status: draft
-updated: 2026-11-12
+status: done
+updated: 2026-11-17
 rfc: "0235-hotwire-via-vite"
 cluster: generator
 packages: [trailties]
@@ -9,9 +9,9 @@ deps: [hotwire-vite-claude-md-ruling, vite-trails-install-and-precompile-hook]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10215
+claim: "2026-11-17T06:06:42Z"
+assignee: "retire-trailties-vite-assets-trailtie"
 blocked-by: null
 closed-reason: null
 ---

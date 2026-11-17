@@ -1,7 +1,7 @@
 ---
 title: "Retire trailties' invented Vite Trailtie and manifest onto vite-trails"
-status: draft
-updated: 2026-11-12
+status: in-progress
+updated: 2026-11-17
 rfc: "0235-hotwire-via-vite"
 cluster: vite
 packages: [trailties]
@@ -9,9 +9,9 @@ deps: [vite-trails-package-and-tag-helpers]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10225
+claim: "2026-11-17T06:06:42Z"
+assignee: "retire-trailties-vite-assets-trailtie"
 blocked-by: null
 closed-reason: null
 ---

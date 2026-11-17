@@ -1,7 +1,7 @@
 ---
 title: "btwhooks: tell the worker to run `tasks stage <id> self`"
-status: draft
-updated: 2026-11-14
+status: ready
+updated: 2026-11-17
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: fleet-stage-signal
 packages: []

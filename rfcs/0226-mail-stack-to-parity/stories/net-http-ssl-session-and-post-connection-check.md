@@ -1,7 +1,7 @@
 ---
 title: "net-http-ssl-session-and-post-connection-check"
-status: draft
-updated: 2026-11-16
+status: ready
+updated: 2026-11-17
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages: []
