@@ -1,6 +1,6 @@
 ---
 title: "solid-cache-test-compare-uncounted-behaviors"
-status: draft
+status: ready
 updated: 2026-11-17
 rfc: "0196-solid-stack"
 cluster: null

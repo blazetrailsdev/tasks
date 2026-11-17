@@ -1,6 +1,6 @@
 ---
 title: "Live::Response#build_buffer drops Live::Buffer#write promises"
-status: ready
+status: in-progress
 updated: 2026-11-17
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10268
+claim: "2026-11-17T19:06:41Z"
+assignee: "live-response-build-buffer-drops-write-promises"
 blocked-by: null
 closed-reason: null
 ---

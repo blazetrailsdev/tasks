@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-11-17T13:51:23Z"
 assignee: "test-trailmap-through-a-test-helper-fixtures-and-app-routes"
-blocked-by: "trails first: test-help's maintain-test-schema crashes on an unset hub url (nil into String in PostgreSQLDatabaseTasks.purge) and runs per vitest file, so parallel workers race the purge/load; needs a once-only (globalSetup) schema step in trails, then a re-vendor"
+blocked-by: "needs a trails re-vendor past #10238 (synchronous route draw; the vendored pin races the lazy first draw). Then: adopt trails' generated test/global-setup.ts (schema maintained once per run) + test/test-helper.ts setup file; pnpm test needs HUB_DATABASE_URL, as CI already sets"
 closed-reason: null
 ---
 

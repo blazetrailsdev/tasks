@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-batch-test-membership-and-pending-migrations"
-status: draft
+status: ready
 updated: 2026-11-17
 rfc: "0196-solid-stack"
 cluster: null

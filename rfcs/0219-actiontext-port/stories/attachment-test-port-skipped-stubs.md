@@ -1,6 +1,6 @@
 ---
 title: "Port the nine empty attachment_test.rb stubs"
-status: claimed
+status: done
 updated: 2026-11-17
 rfc: "0219-actiontext-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#10266
 claim: "2026-11-17T18:51:48Z"
 assignee: "actiontext-engine-and-attachable-methods-credited"
 blocked-by: null

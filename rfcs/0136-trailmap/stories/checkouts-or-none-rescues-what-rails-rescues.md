@@ -1,6 +1,6 @@
 ---
 title: "Repository.checkoutsOrNone catches ConnectionNotEstablished, as Rails does"
-status: in-progress
+status: done
 updated: 2026-11-17
 rfc: "0136-trailmap"
 cluster: null

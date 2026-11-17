@@ -1,6 +1,6 @@
 ---
 title: "Mail::Multibyte::Unicode compose/decompose_codepoints read the gem's database, not ActiveSupport"
-status: draft
+status: in-progress
 updated: 2026-11-17
 rfc: "0226-mail-stack-to-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10269
+claim: "2026-11-17T19:51:33Z"
+assignee: "mail-retrievers-read-net-imap-pop3-from-net-module"
 blocked-by: null
 closed-reason: null
 ---

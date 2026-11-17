@@ -1,6 +1,6 @@
 ---
 title: "The phone full-bleed .box rule never applies: a later .box declaration overrides it"
-status: in-progress
+status: done
 updated: 2026-11-17
 rfc: "0136-trailmap"
 cluster: null

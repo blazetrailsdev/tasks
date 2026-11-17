@@ -1,6 +1,6 @@
 ---
 title: "Precompiled views bake annotateRenderedViewWithFilenames at build time, so a test env renders development's BEGIN/END comments"
-status: draft
+status: closed
 updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of precompiled-views-bake-the-build-environments-annotation (same build-time bake of annotateRenderedViewWithFilenames); trailmap#153 context: test/views/status-badge.test.ts withoutAnnotations is the workaround to delete."
 ---
 
 ## Context

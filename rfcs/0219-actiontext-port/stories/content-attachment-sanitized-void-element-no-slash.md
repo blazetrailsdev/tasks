@@ -1,6 +1,6 @@
 ---
 title: "content-attachment-sanitized-void-element-no-slash"
-status: draft
+status: ready
 updated: 2026-11-17
 rfc: "0219-actiontext-port"
 cluster: null

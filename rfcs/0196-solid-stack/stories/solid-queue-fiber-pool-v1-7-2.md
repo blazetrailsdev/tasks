@@ -1,6 +1,6 @@
 ---
 title: "Port SolidQueue::FiberPool and the fiber worker execution mode (v1.7.2)"
-status: claimed
+status: in-progress
 updated: 2026-11-17
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
+pr: trails#10267
 claim: "2026-11-17T18:36:34Z"
 assignee: "solid-queue-fiber-pool-v1-7-2"
 blocked-by: null

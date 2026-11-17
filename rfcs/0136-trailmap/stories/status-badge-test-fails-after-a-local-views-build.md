@@ -1,6 +1,6 @@
 ---
 title: "status-badge.test.ts fails after a local pnpm views: rendered partials carry BEGIN annotations"
-status: in-progress
+status: done
 updated: 2026-11-17
 rfc: "0136-trailmap"
 cluster: null

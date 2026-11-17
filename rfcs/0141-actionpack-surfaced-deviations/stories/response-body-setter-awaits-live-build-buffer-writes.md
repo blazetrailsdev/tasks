@@ -1,6 +1,6 @@
 ---
 title: "ActionDispatch::Response#body= awaits Live::Response#build_buffer's writes (setBody)"
-status: draft
+status: ready
 updated: 2026-11-17
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
