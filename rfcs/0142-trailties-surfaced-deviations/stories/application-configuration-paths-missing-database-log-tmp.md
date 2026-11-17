@@ -1,6 +1,6 @@
 ---
 title: "Application::Configuration#paths: seat config/database, log, tmp and memoize like @paths ||="
-status: in-progress
+status: done
 updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

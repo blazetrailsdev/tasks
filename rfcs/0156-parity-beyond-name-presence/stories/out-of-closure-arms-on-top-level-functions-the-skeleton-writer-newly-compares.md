@@ -1,7 +1,7 @@
 ---
 title: "thor, i18n, rack, actionview, actionpack, trailties: converge or receipt the arm mismatches on top-level functions the skeleton writer newly compares"
-status: ready
-updated: 2026-11-16
+status: claimed
+updated: 2026-11-17
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: [scripts]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-17T14:51:36Z"
+assignee: "class-owned-and-shared-body-skeletons-pair-by-owner"
 blocked-by: null
 closed-reason: null
 ---

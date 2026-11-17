@@ -1,7 +1,7 @@
 ---
 title: "system-testing driver reaches playwright through a constant import specifier"
-status: ready
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-17
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10243
+claim: "2026-11-17T14:21:38Z"
+assignee: "html5-document-descends-from-xml-document"
 blocked-by: null
 closed-reason: null
 ---

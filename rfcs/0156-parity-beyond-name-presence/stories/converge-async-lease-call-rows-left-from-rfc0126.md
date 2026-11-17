@@ -1,6 +1,6 @@
 ---
 title: "converge-async-lease-call-rows-left-from-rfc0126"
-status: claimed
+status: blocked
 updated: 2026-11-17
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-11-17T13:21:36Z"
 assignee: "burn-down-the-declaration-only-population-remaining"
-blocked-by: null
+blocked-by: "Operator decision needed (the AC's ratify arm). Every row is the async lease / sync-caller limit: sanitize_sql_array & sanitize_sql_hash_for_assignment are synchronous but with_connection is async (sanitization.rb:107-115,164-181); connected_to_all_shards' map would start every connected_to at once and interleave the connected-to stack (connection_handling.rb:186-190); reset_column_information's schema_cache.clear_data_source_cache! is async in trails (BoundSchemaReflection#cache may load), so awaiting it at model_schema.rb:526 lets table_name='s reset land after the reload (tried: reds BasicsTest 'clear cache when setting table name'); the one-to-one reader must be awaited before association(name) (nested_attributes.rb:434,448); Migrator#initialize's create_table calls cannot be awaited in a constructor (migration.rb:1421-1433). Needs a ruling: ratify as PERMANENT, or name the shape to converge to."
 closed-reason: null
 ---
 

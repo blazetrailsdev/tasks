@@ -1,6 +1,6 @@
 ---
 title: "trailties: boot does not await toPrepare callbacks, so an async establishConnection there is fire-and-forget"
-status: in-progress
+status: done
 updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

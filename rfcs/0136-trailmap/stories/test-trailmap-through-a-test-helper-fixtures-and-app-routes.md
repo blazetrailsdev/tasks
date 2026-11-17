@@ -1,6 +1,6 @@
 ---
 title: "Test trailmap through one test helper, fixtures and the application's own routes"
-status: claimed
+status: blocked
 updated: 2026-11-17
 rfc: "0136-trailmap"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-11-17T13:51:23Z"
 assignee: "test-trailmap-through-a-test-helper-fixtures-and-app-routes"
-blocked-by: null
+blocked-by: "trails first: test-help's maintain-test-schema crashes on an unset hub url (nil into String in PostgreSQLDatabaseTasks.purge) and runs per vitest file, so parallel workers race the purge/load; needs a once-only (globalSetup) schema step in trails, then a re-vendor"
 closed-reason: null
 ---
 

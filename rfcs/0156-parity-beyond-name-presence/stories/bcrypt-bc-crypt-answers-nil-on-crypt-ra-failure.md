@@ -1,7 +1,7 @@
 ---
 title: "bcrypt: __bc_crypt answers nil when crypt_ra fails, not a backend Error"
-status: claimed
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-17
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#10241
 claim: "2026-11-16T23:51:44Z"
 assignee: "bcrypt-bc-crypt-answers-nil-on-crypt-ra-failure"
 blocked-by: null

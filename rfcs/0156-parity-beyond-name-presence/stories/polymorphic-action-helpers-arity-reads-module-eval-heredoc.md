@@ -1,7 +1,7 @@
 ---
 title: "Ruby extractor reads module_eval heredoc params so edit_/new_polymorphic_* arity rows clear"
-status: ready
-updated: 2026-11-16
+status: done
+updated: 2026-11-17
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: [scripts]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-17T14:51:36Z"
+assignee: "class-owned-and-shared-body-skeletons-pair-by-owner"
 blocked-by: null
 closed-reason: null
 ---

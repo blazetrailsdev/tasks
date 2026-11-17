@@ -1,7 +1,7 @@
 ---
 title: "Port Configuration warnings/checks, CLI#check, FailedExecution error truncation and boot guards"
 status: ready
-updated: 2026-11-16
+updated: 2026-11-17
 rfc: "0196-solid-stack"
 cluster: null
 packages: ["solid-queue"]

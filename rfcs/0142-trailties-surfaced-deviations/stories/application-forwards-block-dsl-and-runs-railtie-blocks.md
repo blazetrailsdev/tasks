@@ -1,6 +1,6 @@
 ---
 title: "Application forwards the block DSL and runs railties' console, runner and generators blocks"
-status: in-progress
+status: done
 updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

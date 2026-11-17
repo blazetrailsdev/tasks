@@ -1,6 +1,6 @@
 ---
 title: "extractor: a Module assigned as a property, or including inside its block, has no visible methods"
-status: claimed
+status: in-progress
 updated: 2026-11-17
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#10240
 claim: "2026-11-17T13:21:36Z"
 assignee: "burn-down-the-declaration-only-population-remaining"
 blocked-by: null

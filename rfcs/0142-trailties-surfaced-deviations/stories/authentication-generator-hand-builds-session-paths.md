@@ -1,6 +1,6 @@
 ---
 title: "Authentication generator hand-builds /session/new instead of new_session_path"
-status: in-progress
+status: done
 updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "ar init: mergeTsconfig ensures compilerOptions.types includes node"
-status: in-progress
+status: done
 updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

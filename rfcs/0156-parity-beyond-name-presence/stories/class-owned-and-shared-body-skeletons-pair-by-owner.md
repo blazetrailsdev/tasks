@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: "2026-11-17T13:21:36Z"
-assignee: "burn-down-the-declaration-only-population-remaining"
+claim: "2026-11-17T14:51:36Z"
+assignee: "class-owned-and-shared-body-skeletons-pair-by-owner"
 blocked-by: null
 closed-reason: null
 ---

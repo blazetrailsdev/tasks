@@ -1,6 +1,6 @@
 ---
 title: "solid-cache-local-cache-of-fetch-multi-rails-8-0-body"
-status: ready
+status: in-progress
 updated: 2026-11-17
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10242
+claim: "2026-11-17T14:06:35Z"
+assignee: "solid-cache-local-cache-of-fetch-multi-rails-8-0-body"
 blocked-by: null
 closed-reason: null
 ---
