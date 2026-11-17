@@ -5,7 +5,8 @@ updated: 2026-11-17
 rfc: "0245-i18n-test-parity-100"
 cluster: backend-mixins
 packages: [i18n]
-deps: []
+deps:
+  - i18n-load-file-mtime-at-preload-step
 deps-rfc: []
 est-loc: 200
 priority: null
