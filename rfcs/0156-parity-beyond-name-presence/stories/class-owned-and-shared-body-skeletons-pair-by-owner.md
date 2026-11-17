@@ -1,6 +1,6 @@
 ---
 title: "api-compare: class owners and shared bodies pair skeletons by owner"
-status: claimed
+status: done
 updated: 2026-11-17
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#10246
 claim: "2026-11-17T14:51:36Z"
 assignee: "class-owned-and-shared-body-skeletons-pair-by-owner"
 blocked-by: null

@@ -5,7 +5,8 @@ updated: 2026-11-16
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps:
+  - delegation-generate-string-target-accessor-arm
 deps-rfc: []
 est-loc: null
 priority: null

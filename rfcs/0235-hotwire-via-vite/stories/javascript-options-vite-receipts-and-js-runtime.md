@@ -1,6 +1,6 @@
 ---
 title: "trailties: receipt the vite JAVASCRIPT_OPTIONS/default deviation and decide usingJsRuntime for vite"
-status: ready
+status: in-progress
 updated: 2026-11-17
 rfc: "0235-hotwire-via-vite"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10254
+claim: "2026-11-17T16:06:34Z"
+assignee: "javascript-options-vite-receipts-and-js-runtime"
 blocked-by: null
 closed-reason: null
 ---

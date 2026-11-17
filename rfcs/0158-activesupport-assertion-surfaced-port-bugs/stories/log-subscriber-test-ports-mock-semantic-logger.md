@@ -1,7 +1,7 @@
 ---
 title: "log-subscriber-test-ports-mock-semantic-logger"
-status: ready
-updated: 2026-11-16
+status: claimed
+updated: 2026-11-17
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-17T16:51:34Z"
+assignee: "date-and-time-calculations-drops-eager-date-time-imports"
 blocked-by: null
 closed-reason: null
 ---

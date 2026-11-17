@@ -1,6 +1,6 @@
 ---
 title: "action-text-content-built-with-awaited-static-new"
-status: blocked
+status: ready
 updated: 2026-11-17
 rfc: "0123-blocked-convergence-holding"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-17T00:51:35Z"
-assignee: "action-text-content-built-with-awaited-static-new"
-blocked-by: "operator decision: how the sync serialize coder (Serialization.load/dump) reaches an awaited Content.new — async coder path in the serialized type vs canonicalizing at another awaited step"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
@@ -35,6 +35,15 @@ Canonicalization awaits `Attachable.fromNode` (GlobalID locate, a query), so
 `load` cannot become sync and the coder cannot await. Deciding how the coder
 reaches an awaited `Content.new` (an async coder path in the serialized type,
 or canonicalizing at a different awaited step) is an operator decision.
+
+## Ruling (operator, 2026-11-17)
+
+Async `static new` (RFC 0234). `Content` gets a `protected` constructor and
+`static async new` that canonicalizes in line, as `content.rb:40-48` does. The
+serialized-attribute type grows an awaited coder path, so
+`serialize :body, coder: ActionText::Content` reaches `await Content.new(...)`
+on load. Not "canonicalize at another awaited step", and not sync
+canonicalization.
 
 ## Acceptance criteria
 

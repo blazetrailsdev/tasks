@@ -16,6 +16,7 @@ deps:
     "solid-queue-batch-callbacks-and-lifecycle-v1-7-2",
     "solid-queue-dispatcher-maintenance-v1-7-2",
     "solid-queue-configuration-checks-and-cli-v1-7-2",
+    "solid-queue-fiber-pool-v1-7-2",
   ]
 deps-rfc: []
 est-loc: 700
@@ -42,5 +43,5 @@ The tests that `solid-queue-v1-7-2-remaining-drift` (worker execution modes, the
 ## Acceptance criteria
 
 - After the sibling stories land, every remaining listed test is ported at its v1.7.2 name and body, and the TS-only "extra" tests are removed or renamed onto Rails names.
-- The fiber tests run on `FiberPool` once `remaining-drift` ports it. Any test Node cannot run gets an unported-register entry with a reason.
+- The fiber tests run on `FiberPool` once `solid-queue-fiber-pool-v1-7-2` ports it. Any test Node cannot run gets an unported-register entry with a reason.
 - Assertion mismatches go to 0. `parity:test --package solid-queue` shows no missing or skipped rows apart from registered ones.
