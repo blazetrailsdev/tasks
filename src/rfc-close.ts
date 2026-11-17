@@ -48,6 +48,39 @@ function nowIso(): string {
 }
 
 /**
+ * RFC ids whose close check is postponed while an ingest is running, or null
+ * when nothing is deferring.
+ *
+ * Ingest reads one push's files in path order, and an RFC's README sorts ahead
+ * of its `stories/`. Checking inside that loop judges the RFC on a half-read
+ * backlog. On 2026-11-16 that closed 0241-request-path-performance: #347
+ * reopened it and added nine `ready` stories. The README was ingested first,
+ * when only the nine finished stories were in the DB, so the check closed the
+ * RFC. The new stories were inserted milliseconds later, and the state sync
+ * wrote `closed` back over the PR, which turned `validate` red on main.
+ */
+let deferred: Set<string> | null = null;
+
+/**
+ * Run `fn` with every close check postponed, then run each postponed check
+ * once, against the complete result. Calls do not nest: an inner call runs
+ * inside the outer deferral.
+ */
+export async function withDeferredAutoClose<T>(fn: () => Promise<T>): Promise<T> {
+  if (deferred) return fn();
+  const pending = new Set<string>();
+  deferred = pending;
+  let out: T;
+  try {
+    out = await fn();
+  } finally {
+    deferred = null;
+  }
+  for (const id of pending) await closeRfcIfComplete(id);
+  return out;
+}
+
+/**
  * Close `rfcId` if it is active and every one of its stories is terminal.
  *
  * An RFC with NO stories is left alone: that is a freshly written RFC whose
@@ -58,6 +91,10 @@ function nowIso(): string {
  */
 export async function closeRfcIfComplete(rfcId: string | null | undefined): Promise<boolean> {
   if (!rfcId || NEVER_AUTO_CLOSE.has(rfcId)) return false;
+  if (deferred) {
+    deferred.add(rfcId);
+    return false;
+  }
   const rfc = await Rfc.findBy({ id: rfcId });
   if (!rfc || rfc.status !== "active") return false;
 
