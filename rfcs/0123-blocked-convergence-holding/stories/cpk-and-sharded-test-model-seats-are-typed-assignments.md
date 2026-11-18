@@ -2,7 +2,7 @@
 title: "cpk-and-sharded-test-model-seats-are-typed-assignments"
 status: blocked
 updated: 2026-11-15
-rfc: "0205-namespace-seats-are-plain-javascript"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps:
