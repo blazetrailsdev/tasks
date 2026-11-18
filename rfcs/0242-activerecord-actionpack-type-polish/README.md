@@ -1,9 +1,9 @@
 ---
 rfc: "0242-activerecord-actionpack-type-polish"
 title: "Type polish for activerecord, actionpack and their neighbours"
-status: draft
+status: active
 created: 2026-11-16
-updated: 2026-11-16
+updated: 2026-11-18
 owner: "@deanmarano"
 packages:
   - "activerecord"
