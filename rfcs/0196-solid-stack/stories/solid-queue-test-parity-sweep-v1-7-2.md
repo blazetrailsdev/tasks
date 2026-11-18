@@ -17,6 +17,7 @@ deps:
     "solid-queue-dispatcher-maintenance-v1-7-2",
     "solid-queue-configuration-checks-and-cli-v1-7-2",
     "solid-queue-fiber-pool-v1-7-2",
+    "solid-queue-fork-supervisor-tests-v1-7-2",
   ]
 deps-rfc: []
 est-loc: 700
