@@ -1,6 +1,6 @@
 ---
 title: "Generated cors.ts initializer loads @blazetrails/rack-cors"
-status: ready
+status: in-progress
 updated: 2026-11-18
 rfc: "0244-rack-cors-gem-port"
 cluster: rack-cors
@@ -9,9 +9,9 @@ deps: [rack-cors-gem-port]
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10300
+claim: "2026-11-18T16:32:20Z"
+assignee: "rack-cors-app-generator-initializer"
 blocked-by: null
 closed-reason: null
 ---

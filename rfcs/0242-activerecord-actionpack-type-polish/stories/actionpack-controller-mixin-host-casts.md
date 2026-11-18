@@ -1,6 +1,6 @@
 ---
 title: "Controller and middleware mixins without double casts"
-status: ready
+status: in-progress
 updated: 2026-11-18
 rfc: "0242-activerecord-actionpack-type-polish"
 cluster: type-polish-actionpack
@@ -9,9 +9,9 @@ deps: [type-polish-count-double-casts]
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10301
+claim: "2026-11-18T16:02:07Z"
+assignee: "actionpack-controller-mixin-host-casts"
 blocked-by: null
 closed-reason: null
 ---

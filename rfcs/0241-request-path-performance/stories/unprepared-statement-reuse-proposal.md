@@ -1,6 +1,6 @@
 ---
 title: "unprepared-statement-reuse-proposal"
-status: claimed
+status: blocked
 updated: 2026-11-18
 rfc: "0241-request-path-performance"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-11-18T14:36:34Z"
 assignee: "measure-allocation-gap-commit-and-method"
-blocked-by: null
+blocked-by: "operator ruling on the Design-section proposal (tasks 17351b890); then implement and re-measure on the c7i.xlarge rig"
 closed-reason: null
 ---
 

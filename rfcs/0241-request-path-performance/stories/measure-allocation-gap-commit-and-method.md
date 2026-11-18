@@ -1,6 +1,6 @@
 ---
 title: "measure-allocation-gap-commit-and-method"
-status: claimed
+status: blocked
 updated: 2026-11-18
 rfc: "0241-request-path-performance"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-11-18T14:36:34Z"
 assignee: "measure-allocation-gap-commit-and-method"
-blocked-by: null
+blocked-by: "needs c7i.xlarge slim-harness rig time; operator chose not to launch a rig on 2026-11-18"
 closed-reason: null
 ---
 
