@@ -1,7 +1,7 @@
 ---
 title: "html4-sanitizer-uri-escapes-attributes-like-libxml2"
-status: draft
-updated: 2026-11-14
+status: in-progress
+updated: 2026-11-18
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10302
+claim: "2026-11-18T17:18:10Z"
+assignee: "html4-sanitizer-uri-escapes-attributes-like-libxml2"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "mail drops its unused @blazetrails/activesupport dependency"
-status: ready
+status: in-progress
 updated: 2026-11-18
 rfc: "0226-mail-stack-to-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 5
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10303
+claim: "2026-11-18T17:21:20Z"
+assignee: "mail-drop-unused-activesupport-dependency"
 blocked-by: null
 closed-reason: null
 ---

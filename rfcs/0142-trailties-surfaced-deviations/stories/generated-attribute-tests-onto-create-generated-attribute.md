@@ -1,7 +1,7 @@
 ---
 title: "generated-attribute-tests-onto-create-generated-attribute"
-status: ready
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-18
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10304
+claim: "2026-11-18T17:21:37Z"
+assignee: "converge-integration-test-helper-loads-to-one-site"
 blocked-by: null
 closed-reason: null
 ---

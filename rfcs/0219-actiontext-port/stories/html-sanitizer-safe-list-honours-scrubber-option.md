@@ -1,7 +1,7 @@
 ---
 title: "SafeListSanitizer#sanitize honours scrubber: (ContentHelper.scrubber is ignored)"
-status: blocked
-updated: 2026-11-16
+status: closed
+updated: 2026-11-18
 rfc: "0219-actiontext-port"
 cluster: null
 packages: []
@@ -12,8 +12,8 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "needs a Loofah::Scrubber base class + fragment.scrub! port: port-loofah-scrubber-and-html5-scrub (trails#9420, merged) delivered only HTML5::SafeList/Scrub; git grep 'Scrubber' origin/main -- packages/html-sanitizer/lib packages/nokogiri/lib is empty and Rails::HTML scrubbers are still CONVERGEABLE html-sanitizer-port-scrubbers (sanitizer.ts:63,118,152)"
-closed-reason: null
+blocked-by: null
+closed-reason: "landed: html-sanitizer-port-scrubbers (done) ported Loofah::Scrubber + Rails scrubbers; SafeListSanitizer#sanitize scrubs with options.scrubber (packages/html-sanitizer/lib/sanitizer.ts:127-129) and ContentHelper passes scrubber: this.scrubber (actiontext content-helper.ts:48,57)"
 ---
 
 ## Context

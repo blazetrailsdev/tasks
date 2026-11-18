@@ -1,7 +1,7 @@
 ---
 title: "content-attachment-sanitized-void-element-no-slash"
-status: in-progress
-updated: 2026-11-17
+status: done
+updated: 2026-11-18
 rfc: "0219-actiontext-port"
 cluster: null
 packages: []

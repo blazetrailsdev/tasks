@@ -1,6 +1,6 @@
 ---
 title: "trailmap: a bearer token guards the ingest create endpoints"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: audits

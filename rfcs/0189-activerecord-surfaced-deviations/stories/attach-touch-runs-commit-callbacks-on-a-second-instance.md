@@ -1,6 +1,6 @@
 ---
 title: "Active Storage attach never uploads: the attachment's touch saves a second record instance, and commit callbacks run on it"
-status: ready
+status: done
 updated: 2026-11-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-18T17:36:54Z"
+assignee: "attach-touch-runs-commit-callbacks-on-a-second-instance"
 blocked-by: null
 closed-reason: null
 ---

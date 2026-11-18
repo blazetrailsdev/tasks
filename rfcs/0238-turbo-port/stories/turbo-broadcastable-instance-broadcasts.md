@@ -1,7 +1,7 @@
 ---
 title: "Port Turbo::Broadcastable's instance broadcast_* methods"
-status: ready
-updated: 2026-11-17
+status: in-progress
+updated: 2026-11-18
 rfc: "0238-turbo-port"
 cluster: turbo
 packages: [turbo, activerecord]
@@ -9,9 +9,9 @@ deps: [turbo-broadcasts-and-streams-channel, turbo-dummy-test-app]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10305
+claim: "2026-11-18T17:22:58Z"
+assignee: "turbo-broadcastable-instance-broadcasts"
 blocked-by: null
 closed-reason: null
 ---

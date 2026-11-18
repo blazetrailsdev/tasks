@@ -19,6 +19,7 @@ clusters:
 related-rfcs:
   - "0136-trailmap"
   - "0209-activestorage-port"
+priority: 4
 ---
 
 # RFC 0243 — trailmap: audits and RFC refinements are records with an Active Storage body
