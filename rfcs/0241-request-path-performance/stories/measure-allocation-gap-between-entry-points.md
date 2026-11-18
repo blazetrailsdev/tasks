@@ -1,6 +1,6 @@
 ---
 title: "Explain the 108 KB versus 267 KB per-request allocation gap between profiles"
-status: claimed
+status: done
 updated: 2026-11-17
 rfc: "0241-request-path-performance"
 cluster: request-perf

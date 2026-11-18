@@ -1,6 +1,6 @@
 ---
 title: "serialized-await-covers-join-eager-load-and-sync-load"
-status: draft
+status: in-progress
 updated: 2026-11-17
 rfc: "0123-blocked-convergence-holding"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10276
+claim: "2026-11-17T23:31:31Z"
+assignee: "serialized-await-covers-join-eager-load-and-sync-load"
 blocked-by: null
 closed-reason: null
 ---

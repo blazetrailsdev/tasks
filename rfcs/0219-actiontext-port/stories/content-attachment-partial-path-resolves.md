@@ -1,6 +1,6 @@
 ---
 title: "content-attachment-partial-path-resolves"
-status: claimed
+status: in-progress
 updated: 2026-11-17
 rfc: "0219-actiontext-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10279
 claim: "2026-11-17T22:06:43Z"
 assignee: "content-attachment-partial-path-resolves"
 blocked-by: null

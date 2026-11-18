@@ -1,6 +1,6 @@
 ---
 title: "Decide whether twelve-dollar-server keeps --max-semi-space-size=64"
-status: claimed
+status: done
 updated: 2026-11-17
 rfc: "0241-request-path-performance"
 cluster: request-perf

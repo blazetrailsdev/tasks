@@ -1,6 +1,6 @@
 ---
 title: "i18n: port I18n::Backend::Memoize and its backend test"
-status: claimed
+status: in-progress
 updated: 2026-11-17
 rfc: "0245-i18n-test-parity-100"
 cluster: backend-mixins
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#10278
 claim: "2026-11-17T22:36:39Z"
 assignee: "i18n-permanent-unportable-receipts"
 blocked-by: null

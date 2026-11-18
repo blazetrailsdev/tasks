@@ -1,6 +1,6 @@
 ---
 title: "i18n: port I18n::Backend::CacheFile (its PERMANENT closure was mis-scoped)"
-status: claimed
+status: blocked
 updated: 2026-11-17
 rfc: "0245-i18n-test-parity-100"
 cluster: backend-mixins
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: "2026-11-17T22:36:39Z"
-assignee: "i18n-permanent-unportable-receipts"
-blocked-by: null
+claim: null
+assignee: null
+blocked-by: "needs i18n-load-file-mtime-at-preload-step: File.mtime has no sync source under async-only fs in Base#loadFile"
 closed-reason: null
 ---
 

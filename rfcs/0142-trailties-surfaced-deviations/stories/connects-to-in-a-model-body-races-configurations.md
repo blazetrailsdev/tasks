@@ -1,6 +1,6 @@
 ---
 title: "connectsTo in a model's class body raises: trailties assigns Base.configurations after an await in its on_load hook"
-status: ready
+status: closed
 updated: 2026-11-17
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-17T23:21:33Z"
+assignee: "connects-to-in-a-model-body-races-configurations"
 blocked-by: null
-closed-reason: null
+closed-reason: 'FALSIFIED: no race. active_record.initialize_database runs (awaited) before load_config_initializers, and its onLoad fires synchronously because Base is already loaded, so configurations are assigned before any initializer-loaded model body. The error comes from writing: "hub" — a String, which DatabaseConfigurations#resolve (activerecord/lib/active_record/database_configurations.rb:177-181) treats as a raw URL config and raises InvalidConfigurationError in Rails too. A Ruby Symbol is ":hub" in trails (CLAUDE.md, Symbols); trailmap should write connectsTo({ database: { writing: ":hub" } }).'
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "Move String#inquiry / Array#inquiry into their core_ext files, retiring the arrayInquiry alias"
-status: ready
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-17
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: ["array-utils-splits-into-rails-core-ext-array-files"]
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10277
+claim: "2026-11-17T23:06:41Z"
+assignee: "date-and-time-calculations-drops-eager-date-time-imports"
 blocked-by: null
 closed-reason: null
 ---
