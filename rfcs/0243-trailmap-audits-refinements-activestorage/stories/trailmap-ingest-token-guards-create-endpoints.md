@@ -41,6 +41,6 @@ API calls stay token-free.
 - [ ] `LoopbackOnly` still runs first: a proxied request with a valid token
       is still refused.
 - [ ] `docs/deploy.md` says how to provision it: `dokku config:set trailmap
-    TRAILMAP_INGEST_TOKEN=…` and the same value in
+TRAILMAP_INGEST_TOKEN=…` and the same value in
       `~/.config/trailmap/ingest-token` (mode 0600) for the writers.
 - [ ] Controller tests cover valid, missing, wrong and unset-env tokens.
