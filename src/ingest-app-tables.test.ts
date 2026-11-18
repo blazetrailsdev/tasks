@@ -3,6 +3,7 @@ import { beforeEach, describe, expect, it } from "vitest";
 import { Base } from "@blazetrails/activerecord";
 import { migrate } from "./migrator.js";
 import { ingestChunkForTest, type IngestResult } from "./ingest.js";
+import { exportState } from "./export.js";
 import { mkdirSync, mkdtempSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
@@ -27,21 +28,29 @@ beforeEach(async () => {
   await migrate();
 });
 
+async function seed() {
+  const now = "2026-11-18 00:00:00";
+  await Base.connection.execute(
+    `INSERT INTO audits (slug, repo, format, written_at, created_at, updated_at) VALUES ('a', 'o/r', 'md', '${now}', '${now}', '${now}')`,
+  );
+  await Base.connection.execute(
+    `INSERT INTO refinements (rfc_id, outcome, stories, created_at, updated_at) VALUES ('0001-a', 'changed', 3, '${now}', '${now}')`,
+  );
+}
+
+function checkout(): string {
+  const dir = mkdtempSync(join(tmpdir(), "ingest-app-tables-"));
+  mkdirSync(join(dir, "rfcs/0001-a/stories"), { recursive: true });
+  writeFileSync(join(dir, "rfcs/0001-a/README.md"), "---\ntitle: A\n---\nThe RFC.\n");
+  writeFileSync(join(dir, "rfcs/0001-a/stories/s.md"), "---\ntitle: S\n---\nThe story.\n");
+  return dir;
+}
+
 describe("trailmap's tables", () => {
   it("are untouched by ingest", async () => {
-    const now = "2026-11-18 00:00:00";
-    await Base.connection.execute(
-      `INSERT INTO audits (slug, repo, format, written_at, created_at, updated_at) VALUES ('a', 'o/r', 'md', '${now}', '${now}', '${now}')`,
-    );
-    await Base.connection.execute(
-      `INSERT INTO refinements (rfc_id, outcome, stories, created_at, updated_at) VALUES ('0001-a', 'changed', 3, '${now}', '${now}')`,
-    );
+    await seed();
     const before = await rows();
 
-    const dir = mkdtempSync(join(tmpdir(), "ingest-app-tables-"));
-    mkdirSync(join(dir, "rfcs/0001-a/stories"), { recursive: true });
-    writeFileSync(join(dir, "rfcs/0001-a/README.md"), "---\ntitle: A\n---\nThe RFC.\n");
-    writeFileSync(join(dir, "rfcs/0001-a/stories/s.md"), "---\ntitle: S\n---\nThe story.\n");
     const result: IngestResult = {
       from: null,
       to: "x",
@@ -51,9 +60,22 @@ describe("trailmap's tables", () => {
       rfcsTouched: 0,
       scanned: 0,
     };
-    await ingestChunkForTest(["rfcs/0001-a/README.md", "rfcs/0001-a/stories/s.md"], dir, result);
+    await ingestChunkForTest(
+      ["rfcs/0001-a/README.md", "rfcs/0001-a/stories/s.md"],
+      checkout(),
+      result,
+    );
 
     expect(result.created).toBeGreaterThan(0);
+    expect(await rows()).toEqual(before);
+  });
+
+  it("are untouched by export", async () => {
+    await seed();
+    const before = await rows();
+
+    await exportState({ tasksDir: checkout(), commit: false });
+
     expect(await rows()).toEqual(before);
   });
 });
