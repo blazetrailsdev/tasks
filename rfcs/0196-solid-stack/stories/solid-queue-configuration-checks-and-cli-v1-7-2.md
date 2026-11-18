@@ -1,5 +1,5 @@
 ---
-title: "Port Configuration warnings/checks, CLI#check, FailedExecution error truncation and boot guards"
+title: "Port Configuration warnings/checks, CLI#check and FailedExecution error truncation"
 status: claimed
 updated: 2026-11-18
 rfc: "0196-solid-stack"
@@ -27,9 +27,9 @@ closed-reason: null
 - `solid_queue.rb`: `time_zone` / `time_zone=`, `deprecator`, `on_exit`.
 - `lifecycle_hooks.rb#on_exit`, `version.rb#next_major_version`.
 
-Tests: `unit/configuration_test.rb` has 20 missing, and `unit/boot_guards_test.rb` (4) and `unit/cli_test.rb` (9) have no TS file.
+Tests: `unit/configuration_test.rb` has 20 missing, and `unit/cli_test.rb` (9) has no TS file. `unit/boot_guards_test.rb` needs `Runnable#run_in_mode` and `ForkSupervisor`, and moved to `solid-queue-boot-guards-v1-7-2`.
 
 ## Acceptance criteria
 
 - The listed members are ported at Rails names and shapes, from `vendor/solid_queue/v1.7.2`. Where `remaining-drift` already ported a member, it is not ported again.
-- `configuration_test.rb`, `boot_guards_test.rb` and `cli_test.rb` are fully ported (`cli_test` through trails' Thor port) and pass on the three canonical adapters.
+- `configuration_test.rb` and `cli_test.rb` are fully ported (`cli_test` through trails' Thor port) and pass on the three canonical adapters.
