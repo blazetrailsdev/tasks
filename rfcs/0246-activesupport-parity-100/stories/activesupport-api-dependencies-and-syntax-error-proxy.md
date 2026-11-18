@@ -1,6 +1,6 @@
 ---
 title: "activesupport: port or receipt Dependencies and SyntaxErrorProxy"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0246-activesupport-parity-100"
 cluster: receipts

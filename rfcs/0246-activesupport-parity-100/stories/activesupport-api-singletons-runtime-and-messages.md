@@ -1,6 +1,6 @@
 ---
 title: "activesupport: close the 19 API misses in the runtime and messages files"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0246-activesupport-parity-100"
 cluster: api-residuals

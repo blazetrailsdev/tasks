@@ -1,6 +1,6 @@
 ---
 title: "i18n: port I18n::Gettext and Gettext::Helpers with api_test.rb and gettext_plural_keys_test.rb"
-status: in-progress
+status: done
 updated: 2026-11-18
 rfc: "0245-i18n-test-parity-100"
 cluster: gettext

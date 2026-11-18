@@ -1,6 +1,6 @@
 ---
 title: "activesupport: port safe_buffer_test.rb's unsafe-method loop"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0246-activesupport-parity-100"
 cluster: test-residuals

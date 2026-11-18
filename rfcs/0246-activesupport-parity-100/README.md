@@ -17,7 +17,7 @@ related-rfcs:
   - "0101-activesupport-out-of-closure-surface"
   - "0158-activesupport-assertion-surfaced-port-bugs"
   - "0245-i18n-test-parity-100"
-priority: null
+priority: 2
 ---
 
 # RFC 0246 — activesupport: 100% API and test parity

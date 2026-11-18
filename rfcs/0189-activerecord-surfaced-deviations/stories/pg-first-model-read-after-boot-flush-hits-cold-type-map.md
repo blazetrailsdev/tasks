@@ -1,6 +1,6 @@
 ---
 title: "PG: the first model read after the boot connection flush reaches lookupCastTypeFromColumn on an unconnected adapter"
-status: ready
+status: in-progress
 updated: 2026-11-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#10318
+claim: "2026-11-18T21:06:36Z"
+assignee: "pg-first-model-read-after-boot-flush-hits-cold-type-map"
 blocked-by: null
 closed-reason: null
 ---

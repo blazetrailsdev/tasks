@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-boot-guards-v1-7-2"
-status: ready
+status: claimed
 updated: 2026-11-18
 rfc: "0196-solid-stack"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-18T21:37:12Z"
+assignee: "around-callback-conditions-await-thenables"
 blocked-by: null
 closed-reason: null
 ---

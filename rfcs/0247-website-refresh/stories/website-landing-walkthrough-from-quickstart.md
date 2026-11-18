@@ -1,6 +1,6 @@
 ---
 title: "Landing walkthrough and code showcase read from the CI-run Quickstart"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0247-website-refresh"
 cluster: website-landing

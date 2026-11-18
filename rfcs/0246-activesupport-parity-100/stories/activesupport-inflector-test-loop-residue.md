@@ -1,6 +1,6 @@
 ---
 title: "activesupport: close the 52 inflector_test.rb loop misses"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0246-activesupport-parity-100"
 cluster: test-residuals

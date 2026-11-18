@@ -1,6 +1,6 @@
 ---
 title: "activesupport: fix misplaced files, inheritance and arity mismatches"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0246-activesupport-parity-100"
 cluster: api-residuals

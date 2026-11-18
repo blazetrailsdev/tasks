@@ -1,7 +1,7 @@
 ---
 title: "port-cache-connection-pool-and-encoded-key-behaviors"
-status: draft
-updated: 2026-08-31
+status: ready
+updated: 2026-11-18
 rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: [activesupport]

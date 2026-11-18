@@ -11,6 +11,7 @@ clusters:
   - website-deploy
   - website-docs
   - website-landing
+priority: 4
 ---
 
 # RFC 0247 — Website refresh: remove Frontiers, deploy to GitHub Pages, landing page and docs for 54 packages

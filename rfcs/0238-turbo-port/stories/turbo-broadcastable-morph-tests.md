@@ -1,6 +1,6 @@
 ---
 title: "turbo-broadcastable-morph-tests"
-status: ready
+status: claimed
 updated: 2026-11-18
 rfc: "0238-turbo-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-18T21:53:07Z"
+assignee: "activejob-actioncable-before-setup-signatures-intersect"
 blocked-by: null
 closed-reason: null
 ---

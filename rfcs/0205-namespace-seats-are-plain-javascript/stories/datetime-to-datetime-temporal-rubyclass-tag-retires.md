@@ -1,7 +1,7 @@
 ---
 title: "datetime-to-datetime-temporal-rubyclass-tag-retires"
 status: claimed
-updated: 2026-10-28
+updated: 2026-11-18
 rfc: "0205-namespace-seats-are-plain-javascript"
 cluster: null
 packages: []
@@ -10,7 +10,7 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-10-28T22:19:20Z"
+claim: "2026-11-18T21:33:37Z"
 assignee: "datetime-to-datetime-temporal-rubyclass-tag-retires"
 blocked-by: null
 closed-reason: null

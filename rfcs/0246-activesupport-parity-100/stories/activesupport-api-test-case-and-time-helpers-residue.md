@@ -1,6 +1,6 @@
 ---
 title: "activesupport: close test_case.rb and testing/time_helpers.rb API gaps"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0246-activesupport-parity-100"
 cluster: api-residuals

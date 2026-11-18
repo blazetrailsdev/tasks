@@ -1,6 +1,6 @@
 ---
 title: "SolidQueue delegates on_exit to Supervisor"
-status: ready
+status: done
 updated: 2026-11-18
 rfc: "0196-solid-stack"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10256
+claim: "2026-11-18T21:37:12Z"
+assignee: "around-callback-conditions-await-thenables"
 blocked-by: null
 closed-reason: null
 ---

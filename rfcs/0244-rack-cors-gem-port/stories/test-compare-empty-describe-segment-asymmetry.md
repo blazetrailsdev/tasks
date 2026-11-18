@@ -1,6 +1,6 @@
 ---
 title: "test-compare drops an empty describe segment on the TS side only"
-status: ready
+status: in-progress
 updated: 2026-11-18
 rfc: "0244-rack-cors-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10319
+claim: "2026-11-18T21:21:53Z"
+assignee: "test-compare-empty-describe-segment-asymmetry"
 blocked-by: null
 closed-reason: null
 ---

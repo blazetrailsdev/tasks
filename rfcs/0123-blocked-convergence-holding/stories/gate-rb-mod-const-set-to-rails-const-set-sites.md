@@ -1,7 +1,7 @@
 ---
 title: "Gate both rbModConstSet and module-eval namespace reads so the mechanism cannot spread again"
-status: ready
-updated: 2026-10-23
+status: blocked
+updated: 2026-11-18
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: [scripts]
@@ -22,7 +22,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "dep sweep-arel-seats-to-plain-assignment is blocked on the arel node.ts/unary.ts TDZ cycle"
 closed-reason: null
 ---
 

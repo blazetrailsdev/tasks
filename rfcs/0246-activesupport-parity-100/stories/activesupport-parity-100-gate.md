@@ -1,6 +1,6 @@
 ---
 title: "activesupport: CI gate holding parity:api and parity:test at 100%"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0246-activesupport-parity-100"
 cluster: receipts
