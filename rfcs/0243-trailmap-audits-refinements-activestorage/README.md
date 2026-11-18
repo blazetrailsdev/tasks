@@ -193,7 +193,12 @@ reachable only at `http://127.0.0.1:8080` through nginx's loopback server
 block (trailmap `docs/deploy.md:9`). Nothing off the box can reach it. The CLI
 and ringo already use it, and #151's `POST /rfc-refines` is one of its
 endpoints. That is the auth this RFC uses: both new writers run on the same
-host. A shared-secret header on top is Open question 2.
+host. On top of it, every create endpoint requires a bearer token (operator
+ruling, 2026-11-18): `Authorization: Bearer $TRAILMAP_INGEST_TOKEN`, compared
+in constant time against the app's `TRAILMAP_INGEST_TOKEN` (`dokku
+config:set`). A missing or wrong token is a 401. Writers read the token from
+`~/.config/trailmap/ingest-token` on the box. Story
+`trailmap-ingest-token-guards-create-endpoints`.
 
 - `POST /audits` (new): JSON `{slug, repo, format?, title?, body,
 writtenAt?}`. It creates the record and attaches `body` as
@@ -223,8 +228,9 @@ writtenAt?}`. It creates the record and attaches `body` as
   writer. It POSTs the report to trailmap `/rfc-refines`, then POSTs
   `/cleanup-pane` to btwhooks without `summary`, only to reap the pane. One
   caller is not an RFC: btwebooks `webhook/grades.go:210` calls it with the
-  slug `grades`, which #151's controller answers with a 404. The story
-  decides that arm.
+  slug `grades`, which #151's controller answers with a 404. The script skips
+  the trailmap POST when the slug is not an RFC (operator ruling, 2026-11-18);
+  grades reports keep ringo's handling.
 - **btwhooks (btwebooks repo).** `RecordRefine` stops persisting
   `refines.json` and `refine-history.json`. Its RFC page reads refinements
   from trailmap's API for `mergeRefineHistory`, and `listRefines` and
@@ -318,39 +324,26 @@ gets fixed in trails").
   trailmap returns nothing, and `dokku storage:report trailmap` lists no
   `/audits` mount.
 
-## Open questions
+## Decisions
 
-1. **trailmap#151's `RfcRefine` on Hub.** The PR is open and would land a
-   Hub table that `refinement-is-a-base-record-with-an-attached-summary` then
-   moves. Recommendation: retarget #151 onto `Base` before it merges (that
-   needs the schema story first), or merge it as is and let the story move
-   it. Also: keep the name `RfcRefine` / `rfc_refines`, or rename it to
-   `Refinement` / `refinements` as this RFC's prompt proposed? The stories
-   say `Refinement` and accept either.
-2. **Auth beyond loopback.** `LoopbackOnly` is the existing mechanism, and
-   both writers are on the box. Is a bearer token (`TRAILMAP_INGEST_TOKEN`)
-   wanted as defence in depth? Recommendation: no, since it would be the only
-   API endpoint with one.
-3. **A soak with a file fallback.** Should `run.sh` keep writing the file when
-   the POST fails, for a week of overlap? Recommendation: no. Fail loudly
-   instead, so a broken ingest is noticed.
-4. **The `grades` caller of `rfc-refine-done.sh`.** Store non-RFC refine
-   reports (a nullable `rfc_id` plus a `subject`), or skip the trailmap POST
-   for them? Recommendation: skip it, keeping ringo's handling until grades
-   gets its own home.
-5. **The 0123 story's claim.** `trailmap-audits-to-activestorage` still
-   carries the 2026-11-09 claim and its now-resolved `blocked-by`. After
-   merge: `pnpm tasks status-set trailmap-audits-to-activestorage draft` and
-   release the claim.
+Ruled by the operator on 2026-11-18, replacing the draft's open questions.
 
-## After merge
+1. **trailmap#151 is retargeted onto `Base` before it merges**, with the model
+   named `Refinement` (table `refinements`). No Hub table lands, so
+   `refinement-is-a-base-record-with-an-attached-summary` adds the attachment
+   and the marks to #151's model rather than moving a table.
+2. **A bearer token guards the create endpoints**, on top of `LoopbackOnly`
+   (see "Ingest: the loopback API").
+3. **No file fallback.** A writer that cannot reach trailmap fails loudly and
+   writes no file.
+4. **`grades` skips the trailmap POST.** `rfc-refine-done.sh` posts only for a
+   slug that is an RFC.
 
-- `pnpm tasks rfc-status <this rfc> active` once the open questions are
-  settled.
-- Promote `attach-touch-runs-commit-callbacks-on-a-second-instance` from
-  draft.
-- Reset the moved story's state (Open question 5).
+The moved story's state was reset after merge: `trailmap-audits-to-activestorage`
+is `draft` and unclaimed, RFC 0243 is `active`, and
+`attach-touch-runs-commit-callbacks-on-a-second-instance` is `ready`.
 
 ## Changelog
 
 - 2026-11-17: initial RFC. Moves `trailmap-audits-to-activestorage` in from 0123.
+- 2026-11-18: open questions ruled (Decisions); adds `trailmap-ingest-token-guards-create-endpoints`.

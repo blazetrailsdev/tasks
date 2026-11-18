@@ -27,14 +27,17 @@ closed-reason: null
 `refine-history.json`. trailmap's `POST /rfc-refines` takes the same body
 (trailmap#151, `app/controllers/rfc-refines-controller.ts`). One caller is
 not an RFC: btwebooks `webhook/grades.go:210` runs the script with the slug
-`grades`, which trailmap answers with a 404 (RFC Open question 4).
+`grades`, which trailmap answers with a 404. The operator ruled that the
+script skips the trailmap POST for it (RFC Decision 4).
 
 ## Acceptance criteria
 
 - [ ] The script POSTs `{kind, id, outcome, summary}` to
       `${TRAILMAP_API:-http://127.0.0.1:8080}/rfc-refines` and prints the
-      status. A non-2xx is reported on stderr and does not stop the reap.
+      status, with `Authorization: Bearer` read from
+      `~/.config/trailmap/ingest-token`. A non-2xx is reported on stderr,
+      the reap still runs, and the script then exits non-zero (Decision 3).
 - [ ] The `/cleanup-pane` POST stays, without `summary`, so btwhooks still
       reaps the pane.
-- [ ] The `grades` arm follows Open question 4's resolution, and a comment
-      cites `grades.go:210`.
+- [ ] A slug that is not an RFC (`grades`) skips the trailmap POST and
+      still reaps the pane. A comment cites `grades.go:210`.

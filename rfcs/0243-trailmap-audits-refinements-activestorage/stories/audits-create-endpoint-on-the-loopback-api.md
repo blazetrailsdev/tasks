@@ -5,7 +5,7 @@ updated: 2026-11-17
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: audits
 packages: ["activestorage"]
-deps: [trailmap-audits-to-activestorage]
+deps: [trailmap-audits-to-activestorage, trailmap-ingest-token-guards-create-endpoints]
 deps-rfc: []
 est-loc: 200
 priority: null
@@ -39,7 +39,7 @@ The largest existing body is 285 KB. `nginx.conf.sigil:82,144,205` set
       `text/html`). It answers 201 `{id, url}`, where `id` is the legacy
       filename `toParam` answers.
 - [ ] A bad slug, unknown format or empty body is a 422 with the error
-      message. A proxied request is refused, as for every `ApiController`
+      message. A missing or wrong ingest token is a 401. A proxied request is refused, as for every `ApiController`
       action. An existing `(repo, slug, writtenAt)` answers 200 with the
       existing id (the import relies on this).
 - [ ] The loopback block admits a 1 MB body, and a test posts a 300 KB one.

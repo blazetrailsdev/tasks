@@ -30,10 +30,12 @@ the store.
 
 - [ ] `run.sh` keeps its input parsing and slug check (`:11-38`). It builds the
       JSON with `jq` (`slug`, `repo` = `owner/repo`, `body`), POSTs to
-      `${TRAILMAP_API:-http://127.0.0.1:8080}/audits`, and prints the
+      `${TRAILMAP_API:-http://127.0.0.1:8080}/audits` with
+      `Authorization: Bearer` read from `~/.config/trailmap/ingest-token`,
+      and prints the
       returned URL.
 - [ ] Any status but 200/201 exits non-zero with the response body, and no
-      file is written (RFC Open question 3).
+      file is written (RFC Decision 3).
 - [ ] `SKILL.md` says to read a report with
       `curl -s http://127.0.0.1:8080/audits/<id>/raw`. The `~/.btwhooks` path
       is gone from both files.

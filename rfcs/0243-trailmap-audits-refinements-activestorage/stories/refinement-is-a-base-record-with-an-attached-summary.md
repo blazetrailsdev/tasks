@@ -5,7 +5,12 @@ updated: 2026-11-17
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: refinements
 packages: ["activestorage", "activerecord"]
-deps: [rfc-page-refinements-tab, trailmap-configures-active-storage-on-base]
+deps:
+  [
+    rfc-page-refinements-tab,
+    trailmap-configures-active-storage-on-base,
+    trailmap-ingest-token-guards-create-endpoints,
+  ]
 deps-rfc: []
 est-loc: 250
 priority: null
@@ -25,9 +30,9 @@ closed-reason: null
 (`db/hub-migrate/20261117000007_create_rfc_refines.ts`). It also adds
 `POST /rfc-refines` (`app/controllers/rfc-refines-controller.ts`) and the
 `/rfc/:id/refinements` tab. The operator ruled that refinements live on
-`Base` with the summary in Active Storage. If #151 is retargeted before it
-merges (RFC Open question 1), this story shrinks to the attachment and the
-marks.
+`Base` with the summary in Active Storage. #151 is retargeted onto `Base`
+as `Refinement` before it merges (RFC Decision 1), so this story adds the
+attachment and the marks to that model; no Hub table is moved.
 
 ringo's report also carries `Stories`, the RFC's story count when the report
 landed (btwebooks `webhook/spawnloop.go:209-219`, measured by `rfcStoryCount`
@@ -37,13 +42,12 @@ at `:2495`). ringo folds the history into the RFC marks with
 
 ## Acceptance criteria
 
-- [ ] The model (`Refinement`, or `RfcRefine` per Open question 1) extends
-      `ApplicationRecord` on `Base`, with `rfc_id`, `outcome` (validated as
-      `RFC_REFINE_OUTCOMES`), `stories` and `hasOneAttached("summary")`. The
-      Hub table and migration are removed, the `db/migrate` mirror and
-      `db/schema.ts` are added, and `tableOwners` gains the table →
-      `trailmap`.
-- [ ] `POST /rfc-refines` attaches `summary` (`text/markdown`), records
+- [ ] `Refinement` extends `ApplicationRecord` on `Base`, with `rfc_id`,
+      `outcome` (validated as `RFC_REFINE_OUTCOMES`), `stories` and
+      `hasOneAttached("summary")`; the text column is dropped. The
+      `db/migrate` mirror and `db/schema.ts` match the tasks CLI's
+      migration, and `tableOwners` has `refinements` → `trailmap`.
+- [ ] `POST /rfc-refines` requires the ingest token and attaches `summary` (`text/markdown`), records
       `stories` from the RFC's story count, and accepts an optional `when`
       that becomes `created_at` (for the import).
 - [ ] The Refinements tab renders the attachment's text as markdown, as #151's
