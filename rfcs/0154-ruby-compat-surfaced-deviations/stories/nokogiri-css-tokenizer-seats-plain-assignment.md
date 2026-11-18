@@ -2,7 +2,7 @@
 title: "Seat Nokogiri::CSS::Tokenizer and Tokenizer::ScanError by plain assignment"
 status: draft
 updated: 2026-11-15
-rfc: "0205-namespace-seats-are-plain-javascript"
+rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
