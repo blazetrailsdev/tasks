@@ -5,7 +5,7 @@ updated: 2026-11-18
 rfc: "0246-activesupport-parity-100"
 cluster: test-residuals
 packages: [activesupport]
-deps: [activesupport-parity-baseline-remeasure]
+deps: []
 deps-rfc: []
 est-loc: 200
 priority: null

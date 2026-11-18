@@ -5,7 +5,7 @@ updated: 2026-11-18
 rfc: "0246-activesupport-parity-100"
 cluster: api-residuals
 packages: [activesupport]
-deps: [activesupport-parity-baseline-remeasure]
+deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
@@ -18,10 +18,21 @@ closed-reason: null
 
 ## Context
 
-`subscriber.rb` is at 11/18 and `core_ext/string/output_safety.rb` is at
-18/25 in `parity:api`.
+`parity:api --missing`:
+
+- `subscriber.rb` (11/18): `initialize`, `subscriber`, `notifier`,
+  `namespace` (the `attr_reader`s), `find_attached_subscriber`,
+  `prepare_pattern`, `pattern_subscribed?`.
+- `core_ext/string/output_safety.rb` (18/25): `original_concat`,
+  `encode_with`, `gsub`, `gsub!`, `sub`, `sub!`,
+  `set_block_back_references`.
+
+`_addEventSubscriber` / `_removeEventSubscriber` also take an extra `state`
+parameter that Rails does not have. That arity row belongs to
+`activesupport-api-structure-misplaced-inheritance-arity`, but fix it here if
+the `Subscriber` rewrite reaches it.
 
 ## Acceptance criteria
 
-- [ ] Port the 14 missing members, or receipt them.
+- [ ] Port the 14 members onto their Rails owners.
 - [ ] Both files reach 100%.

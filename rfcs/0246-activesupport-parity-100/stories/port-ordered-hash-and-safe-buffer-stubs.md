@@ -2,7 +2,7 @@
 title: "port-ordered-hash-and-safe-buffer-stubs"
 status: draft
 updated: 2026-08-31
-rfc: "0101-activesupport-out-of-closure-surface"
+rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: [activesupport]
 deps: []

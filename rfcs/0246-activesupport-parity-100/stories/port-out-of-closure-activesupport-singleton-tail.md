@@ -2,7 +2,7 @@
 title: "port-out-of-closure-activesupport-singleton-tail"
 status: draft
 updated: 2026-08-31
-rfc: "0101-activesupport-out-of-closure-surface"
+rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: [scripts]
 deps: []
@@ -46,3 +46,13 @@ All paths are under `vendor/rails/activesupport/test/`.
 - `pnpm parity:test` deltas non-negative.
 - If the 700 LOC ceiling bites, ship what fits and file the residue as a
   sibling story against RFC 0101.
+
+## RFC 0246 note (2026-11-18)
+
+Moved from RFC 0101. On main at `4d6bf61e04`, 9 skips are left:
+`message_encryptor` 2, `core_ext/object/json_gem_encoding` 2,
+`core_ext/pathname/{blank,existence}` 1 each, `message_verifier` 1,
+`reloader` 1, `core_ext/kernel/concern` 1. The `option_merger` miss belongs to
+`with-options-implicit-receiver-instance-eval-arm`. The JSON-gem and Pathname
+skips wait on RFC 0246 Open question 4. Until it is answered, port the other 5
+and leave those 4 unchanged.

@@ -2,9 +2,9 @@
 title: "logger-log-at-forks-isolated-execution-state"
 status: draft
 updated: 2026-11-13
-rfc: "0101-activesupport-out-of-closure-surface"
+rfc: "0246-activesupport-parity-100"
 cluster: null
-packages: []
+packages: [activesupport]
 deps: []
 deps-rfc: []
 est-loc: null

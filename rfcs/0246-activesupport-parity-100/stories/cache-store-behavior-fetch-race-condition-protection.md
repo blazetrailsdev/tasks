@@ -2,9 +2,9 @@
 title: "Port CacheStoreBehavior's fetch race condition protection"
 status: draft
 updated: 2026-11-17
-rfc: "0101-activesupport-out-of-closure-surface"
+rfc: "0246-activesupport-parity-100"
 cluster: null
-packages: []
+packages: [activesupport]
 deps: []
 deps-rfc: []
 est-loc: 30

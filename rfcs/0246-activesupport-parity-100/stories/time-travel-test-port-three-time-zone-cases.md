@@ -2,9 +2,9 @@
 title: "Port the three skipped TimeTravelTest time-zone cases (time_travel_test.rb:100-164)"
 status: ready
 updated: 2026-11-16
-rfc: "0158-activesupport-assertion-surfaced-port-bugs"
+rfc: "0246-activesupport-parity-100"
 cluster: null
-packages: []
+packages: [activesupport]
 deps: []
 deps-rfc: []
 est-loc: 120
