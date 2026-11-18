@@ -1,7 +1,7 @@
 ---
 rfc: "0247-website-refresh"
 title: "Website refresh: remove Frontiers, deploy to GitHub Pages, landing page and docs for 54 packages"
-status: draft
+status: active
 created: 2026-11-18
 updated: 2026-11-18
 owner: "@deanmarano"
