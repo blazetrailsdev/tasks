@@ -1,7 +1,7 @@
 ---
 title: "trailmap: Audit is a Base record with an attached body"
-status: blocked
-updated: 2026-11-09
+status: draft
+updated: 2026-11-18
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: audits
 packages: ["activestorage", "activerecord"]
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: "2026-11-09T00:50:20Z"
-assignee: "schedule-continuous-trails-tracking"
-blocked-by: "pnpm build fails: trails-tsc build-views loads config/initializers before engine initializers, so Audit's hasOneAttached is undefined (trails-tsc-build-views-runs-initializers-before-engines). WIP on branch wip/trailmap-audits-to-activestorage (an earlier attempt also hit an attach-upload bug)."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

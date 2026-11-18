@@ -1,6 +1,6 @@
 ---
 title: "tag-builder-trailing-undefined-block"
-status: in-progress
+status: done
 updated: 2026-11-18
 rfc: "0238-turbo-port"
 cluster: null

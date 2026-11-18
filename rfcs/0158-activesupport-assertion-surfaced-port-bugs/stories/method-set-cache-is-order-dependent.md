@@ -1,7 +1,7 @@
 ---
 title: "MethodSet's global cache makes attribute-method generation order-dependent"
-status: ready
-updated: 2026-11-16
+status: done
+updated: 2026-11-18
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10296
+claim: "2026-11-18T15:06:38Z"
+assignee: "date-and-time-calculations-drops-eager-date-time-imports"
 blocked-by: null
 closed-reason: null
 ---

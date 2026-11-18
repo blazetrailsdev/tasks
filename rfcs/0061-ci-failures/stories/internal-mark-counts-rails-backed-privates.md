@@ -1,6 +1,6 @@
 ---
 title: "internal mark counts Rails-backed private ports as debt"
-status: draft
+status: in-progress
 updated: 2026-11-18
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10297
+claim: "2026-11-18T15:22:06Z"
+assignee: "internal-mark-counts-rails-backed-privates"
 blocked-by: null
 closed-reason: null
 ---

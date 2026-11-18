@@ -1,6 +1,6 @@
 ---
 title: "MessagePack DateTime/Time offset slots are written as zero and dropped on read"
-status: ready
+status: done
 updated: 2026-11-18
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10296
+claim: "2026-11-18T15:06:38Z"
+assignee: "date-and-time-calculations-drops-eager-date-time-imports"
 blocked-by: null
 closed-reason: null
 ---
