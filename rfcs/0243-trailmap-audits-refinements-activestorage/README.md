@@ -8,6 +8,7 @@ owner: "@deanmarano"
 packages:
   - activestorage
   - activerecord
+  - actionpack
 clusters:
   - storage
   - audits

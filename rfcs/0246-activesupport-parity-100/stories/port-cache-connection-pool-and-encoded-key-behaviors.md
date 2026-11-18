@@ -2,12 +2,12 @@
 title: "port-cache-connection-pool-and-encoded-key-behaviors"
 status: draft
 updated: 2026-08-31
-rfc: "0101-activesupport-out-of-closure-surface"
+rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: [activesupport]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 150
 priority: null
 pr: null
 claim: null

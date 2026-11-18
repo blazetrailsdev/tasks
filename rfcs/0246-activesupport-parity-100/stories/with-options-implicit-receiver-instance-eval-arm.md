@@ -2,13 +2,13 @@
 title: "with_options drops the zero-arity instance_eval block arm"
 status: ready
 updated: 2026-11-16
-rfc: "0158-activesupport-assertion-surfaced-port-bugs"
+rfc: "0246-activesupport-parity-100"
 cluster: null
 packages:
   - "activesupport"
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 60
 priority: null
 pr: null
 claim: null

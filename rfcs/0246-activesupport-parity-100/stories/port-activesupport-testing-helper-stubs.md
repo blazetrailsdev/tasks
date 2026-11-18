@@ -2,12 +2,12 @@
 title: "port-activesupport-testing-helper-stubs"
 status: draft
 updated: 2026-08-31
-rfc: "0101-activesupport-out-of-closure-surface"
+rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: [scripts]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 200
 priority: null
 pr: null
 claim: null

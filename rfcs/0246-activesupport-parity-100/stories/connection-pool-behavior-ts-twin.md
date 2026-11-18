@@ -2,9 +2,9 @@
 title: "Port ConnectionPoolBehavior as a shared TS behavior and enroll it in REQUIRED_TEST_MODULES"
 status: draft
 updated: 2026-11-17
-rfc: "0158-activesupport-assertion-surfaced-port-bugs"
+rfc: "0246-activesupport-parity-100"
 cluster: null
-packages: []
+packages: [activesupport]
 deps: []
 deps-rfc: []
 est-loc: 150

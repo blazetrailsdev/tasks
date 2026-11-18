@@ -2,9 +2,9 @@
 title: "activesupport: delete hwia-extended.test.ts; its JsonGemEncodingTest bodies are invented duplicates"
 status: draft
 updated: 2026-10-03
-rfc: "0101-activesupport-out-of-closure-surface"
+rfc: "0246-activesupport-parity-100"
 cluster: null
-packages: []
+packages: [activesupport]
 deps: []
 deps-rfc: []
 est-loc: 40
