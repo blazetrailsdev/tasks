@@ -50,6 +50,19 @@ A new `.github/workflows/perf.yml`, `on: schedule` (daily cron) plus
    to a durable series (a `perf-data` branch holding `perf/history.jsonl`,
    committed by the workflow with `contents: write`), so it can be charted.
 
+6. Profile passes, each from a fresh seed copy, after the plain pass so they
+   do not skew its numbers: the RFC's **CPU pass** (`--cpu-prof
+--cpu-prof-interval=250`, stopped with SIGINT, keeping the server's
+   profile and not the launcher's) and **allocation pass** (`alloc-hook.mjs`,
+   a sampling heap profile that includes objects collected by minor and major
+   GC). Upload the `.cpuprofile` and `.heapprofile` as artifacts, kept 90 days.
+7. Reduce both profiles to a top-N table of self time and allocated bytes per
+   function (`name file:line`, share of busy CPU / of allocated bytes), and
+   append it to `perf/profiles/<date>-<sha>.json` on `perf-data`. Diff it
+   against the previous run and write the movers (functions whose share grew
+   by more than a set threshold, and new entries in the top N) to the job
+   summary, so a regression names its target the day it lands.
+
 GitHub-hosted runners are noisy and their CPU model varies; the record carries
 the CPU model so a chart can split by it, and the VU count is chosen so the
 runner is below saturation (CPU per request and GC share stay meaningful even
@@ -64,6 +77,12 @@ in later without changing the record shape.
 - Each run appends one JSON line with the fields above to
   `perf/history.jsonl` on the `perf-data` branch and uploads raw k6 / GC
   output as an artifact.
+- Each run also produces a CPU profile and a sampling heap profile of the
+  server process, uploaded as artifacts, plus a top-N self-time and
+  allocated-bytes table committed under `perf/profiles/` on `perf-data`.
+- The job summary lists the functions whose CPU or allocation share moved
+  most since the previous run, with `file:line`, so a regression can be
+  filed as a story against a named site.
 - The harness script lives in the repo (e.g. `examples/twelve-dollar-server/bench/`),
   not inline in the YAML, so it can be run locally the same way.
 - The PR records the first run's numbers and their run-to-run spread over at
