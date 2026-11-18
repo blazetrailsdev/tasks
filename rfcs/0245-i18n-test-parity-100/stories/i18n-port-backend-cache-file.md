@@ -34,6 +34,18 @@ sanctions, so nothing async reaches `translate`.
   `Flatten.escapeDefaultSeparator` is in `packages/i18n/lib/backend/flatten.ts`.
 - Exclusion row: `backend/cache_file.rb` in `scripts/parity/unported-files/i18n.ts`.
 
+### The mtime source (operator ruling, 2026-11-18, `i18n-load-file-mtime-at-preload-step`)
+
+`preloadTranslationFiles` (`packages/i18n/lib/backend/base.ts`) also awaits
+ruby-compat `File.mtimeAsync(filename)` (`packages/ruby-compat/lib/file.ts`)
+and records it beside the preloaded contents; `CacheFile#loadFile` reads that
+recorded value where `cache_file.rb:20` calls `File.mtime(filename).to_i`.
+The SHA256 digest is taken synchronously over the preloaded contents. The
+`File.mtime` call site carries the receipt. Existing trails tests that
+register a `FileReader` over a path that does not exist (`mutable.yml` in
+`base.file-loading.trails.test.ts`) must move to a real file or an fs
+backend that answers `stat`.
+
 ## Acceptance criteria
 
 - [ ] **Operator confirms RFC Open question 1** before work starts. If the
