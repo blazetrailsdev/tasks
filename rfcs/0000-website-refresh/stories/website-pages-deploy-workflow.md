@@ -30,7 +30,7 @@ re-enables. This story depends on it, so `main` builds before it deploys.
 
 ## Acceptance criteria
 
-- [ ] `.github/workflows/pages.yml` runs on `push` to `main` (path-filtered to `packages/website/**`, `packages/*/lib/**` and `packages/*/package.json`), on `workflow_dispatch`, and on a daily `schedule`. A `build` job uploads `packages/website/build` with `actions/upload-pages-artifact`. A `deploy` job runs `actions/deploy-pages` with `environment: github-pages`, `pages: write`, `id-token: write`, and a non-cancelling `pages` concurrency group.
+- [ ] `.github/workflows/pages.yml` runs on `push` to `main` (path-filtered to exactly `packages/website/**`, `packages/*/lib/**`, `packages/*/package.json`, `README.md`, `scripts/quickstart/**` and `.github/workflows/pages.yml`; this is the one place the list is defined), on `workflow_dispatch`, and on a daily `schedule`. A `build` job uploads `packages/website/build` with `actions/upload-pages-artifact`. A `deploy` job runs `actions/deploy-pages` with `environment: github-pages`, `pages: write`, `id-token: write`, and a non-cancelling `pages` concurrency group.
 - [ ] One env var, `SITE_BASE`, drives both `kit.paths.base` and the VitePress ``base: `${SITE_BASE}/docs/` ``. Every internal link in `src/` uses `$app/paths`, and `git grep 'href="/' packages/website/src` is empty.
 - [ ] `fallback` is `404.html`. The root layout prerenders, and a refresh on a deep docs URL and on an unknown path both render under the base path.
 - [ ] The website build writes `build/.nojekyll`, and `_app/` is served on Pages.

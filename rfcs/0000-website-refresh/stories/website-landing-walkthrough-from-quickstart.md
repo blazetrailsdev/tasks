@@ -21,10 +21,10 @@ closed-reason: null
 RFC § Design 4, "The walkthrough actually runs". `scripts/quickstart/run.sh`
 runs the README Quickstart in CI and diffs its output blocks (`:1-36`,
 `ci.yml:1304-1316`). `website-getting-started-guide` extends that Quickstart
-to the controller step and adds the build-time block extraction. The landing
-placeholders from `website-landing-page-rebuild` (the editor frame, the four
-"everything you need" blocks and the three getting-started cards) replace
-them with real content.
+to the controller step and adds the build-time block extraction. This story replaces the landing placeholders that
+`website-landing-page-rebuild` leaves (the editor frame, the four
+"everything you need" blocks and the three getting-started cards) with
+Quickstart-derived content.
 
 ## Acceptance criteria
 

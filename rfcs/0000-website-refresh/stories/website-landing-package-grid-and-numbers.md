@@ -24,10 +24,11 @@ Models (activerecord, activemodel, arel); Controllers & views (actionpack,
 actionview, rack and the rack-\* ports); Other components (actionmailer,
 actionmailbox, actiontext, activejob, activestorage, actioncable,
 activesupport); Rails 8 defaults (solid-queue, solid-cache, solid-cable,
-turbo, stimulus, vite-assets, vite-trails); and Gems (the rest).
+turbo, stimulus, vite-assets, vite-trails); Gems (the other gem ports); and
+Tooling (activerecord-cli, trails-tsc, tse-compiler, vitest-matchers).
 
 ## Acceptance criteria
 
-- [ ] The grid is generated from the same package list as `website-typedoc-from-package-list` (or the package summary). The grouping is one map in `packages/website/`, and a published package missing from it falls into "Gems".
+- [ ] The grid is generated from the same package list as `website-typedoc-from-package-list` (or the package summary). The grouping is one map in `packages/website/`, and a test fails if a published package is missing from it, so a new package is placed deliberately rather than defaulting to a group.
 - [ ] Each tile shows the package, its Rails counterpart, its parity figures from `website-parity-numbers-at-build`, and links to its `docs/packages/<pkg>` page.
 - [ ] The announcement bar / hero pill shows one headline figure from the same data, with its commit.

@@ -36,7 +36,7 @@ guard instead.
 
 - [ ] `entryPoints` is computed from `packages/*/package.json`, keeping every non-`private` package. Each package's entry is the source file behind its `exports["."]`.
 - [ ] The tag list is read from the receipt-tag names the repo's eslint rules already enumerate, or from one shared constant they and TypeDoc both import, so `typedoc` logs 0 `unknown block tag` warnings.
-- [ ] The VitePress `/api/` sidebar is generated from the same list, grouped as in the RFC's landing grid (Models, Controllers & views, Other components, Rails 8 defaults, Gems, Tooling).
+- [ ] The VitePress `/api/` sidebar is generated from the same list, grouped by one shared grouping map in `packages/website/`, also read by `website-landing-package-grid-and-numbers` and created by whichever of the two lands first (Models, Controllers & views, Other components, Rails 8 defaults, Gems, Tooling).
 - [ ] `api/**` stays excluded from local search.
 - [ ] `docs:build` exits 0, and the sidebar lists 54 packages.
 - [ ] A test in `packages/website/scripts/` fails if a published package is missing from the computed list.

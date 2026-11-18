@@ -33,7 +33,7 @@ not exist.
 
 ## Acceptance criteria
 
-- [ ] `docs/guides/index.md` lists every guide in the Start Here through Extending Rails sections, in Rails' order. Each row is a written trails guide, "not yet written" linking its story, or "not applicable" with a one-line reason (Asset Pipeline → the Vite ruling in root `CLAUDE.md`; Install Ruby on Rails → Getting Started). Contributing points at `CONTRIBUTING.md`. Policies and Release Notes are omitted.
+- [ ] `docs/guides/index.md` lists every guide in the Start Here through Extending Rails sections, in Rails' order. Each row is a written trails guide, "not yet written" linking its story, or "not applicable" with a one-line reason (Asset Pipeline → the Vite ruling in root `CLAUDE.md`; Install Ruby on Rails → Getting Started). Outside those sections, Contributing is one link to `CONTRIBUTING.md`, and Policies and Release Notes are omitted. This matches the RFC's § Design 3 and § Verification.
 - [ ] The VitePress `/guides/` sidebar follows the same sections.
 - [ ] For each "not yet written" row, a story is filed with `pnpm tasks new <this-rfc> website-guide-<slug> --body-file …`. Each body cites the Rails guide's `vendor/` path and the trails packages it covers, and states that prose is written from scratch.
 - [ ] `LICENSES.md`'s pointer to the missing plan doc is resolved as the operator rules on RFC open question 3.
