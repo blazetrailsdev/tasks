@@ -26,6 +26,7 @@ packages:
   - "activejob"
   - "image-processing"
   - "nokogiri"
+  - "rack-session"
 clusters:
   - "mri-relocation"
   - "measurement"
