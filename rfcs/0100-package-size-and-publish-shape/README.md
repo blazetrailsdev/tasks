@@ -1,9 +1,9 @@
 ---
 rfc: "0100-package-size-and-publish-shape"
-title: "Package size and publish shape"
+title: "Package size, publish shape and release process"
 status: draft
 created: 2026-08-11
-updated: 2026-08-11
+updated: 2026-11-18
 owner: "@deanmarano"
 packages:
   - "activerecord"
@@ -15,6 +15,7 @@ packages:
   - "globalid"
   - "did-you-mean"
   - "trailties"
+  - "ruby-compat"
 clusters: []
 related-rfcs:
   - "0192-package-entry-point-boot-cost"
@@ -31,7 +32,12 @@ of the five optional native drivers, **gets a hard build failure instead**,
 because the adapter registry statically reaches `pg`, `mysql2` and
 `better-sqlite3` from the root entrypoint.
 
-This RFC burns that down. The measured floor with no behavior change at all is
+The repo also has no way to release: 56 `packages/*`, 55 of them public,
+all at `0.1.0`, with no changesets, no root release script and no publish
+job. This RFC also defines how trails versions and publishes its packages,
+on the model Rails uses for its gems.
+
+This RFC burns the size down. The measured floor with no behavior change at all is
 **7.36 MB unpacked / 842 files / ~1.87 MB tarball** — a 74% reduction from
 shipping only what a consumer can actually use.
 
@@ -132,9 +138,37 @@ entrypoint.** A metafile scan of the 653 bundled inputs for
 That weight is install-time only, which is what makes the packaging stories
 purely additive-free wins.
 
+## Versioning and release
+
+Rails publishes each framework gem separately but versions them in
+lockstep: every gemspec reads one `RAILS_VERSION`
+(`vendor/rails/v8.0.2/RAILS_VERSION`), pins its framework dependencies to
+that exact version (`vendor/rails/v8.0.2/activerecord/activerecord.gemspec:38-39`),
+and the `rails` gem is a code-free meta-gem over the set
+(`vendor/rails/v8.0.2/rails.gemspec`). trails follows the same model:
+
+- **Separate packages, one version.** Every public package is bumped and
+  published together, changed or not. No compatibility matrix between
+  `@blazetrails/*` packages.
+- **Exact internal pins.** `workspace:*` publishes as an exact version. This
+  matters more in JS than in Ruby: two installed copies of `activesupport` or
+  `ruby-compat` silently break `instanceof`, `Symbol.for` brands, `TopLevel`
+  seats and `classAttribute` chains.
+- **A `trails` meta-package** over the framework set, as `rails` is.
+- **Third-party gem ports** (`thor`, `mail`, `tzinfo`, `nokogiri`, `rack`,
+  …) carry the trails version; the upstream version they port is metadata.
+- **One monolith package was considered and rejected**: it forces every
+  consumer to install `image-processing`, `nokogiri`, `solid-queue` and the
+  rest, hides standalone ports, and breaks the gem-to-package mapping; a
+  later split would break every import.
+- **Pre-1.0**, a minor bump may break and a patch does not.
+
+The size stories below land before the first real publish.
+
 ## Scope
 
-In scope: what the packages publish (`files`, emitted tests, sourcemaps), the
+In scope: versioning, internal pins, the meta-package, the
+published/private split, the release workflow, and what the packages publish (`files`, emitted tests, sourcemaps), the
 eager module-scope edges that drag adapters and rake tasks into an app bundle,
 `sideEffects` declarations, and a CI budget so none of it regresses.
 
@@ -165,6 +199,14 @@ arrangement for native drivers (already correct).
 7. `files-field-for-leaf-packages` — −1.33 MB closure
 8. `temporal-polyfill-runtime-native-preference` — 154 KB bundle
 9. `package-size-budget-ci-gate` — ratchet the above
+
+Release process:
+
+1. `lockstep-version-across-public-packages`
+2. `exact-internal-pins-on-publish`
+3. `trails-meta-package`
+4. `classify-published-and-private-packages`
+5. `release-publish-workflow`
 
 RFC 0192 measures a different unit on the same subject: modules Node resolves
 and executes at boot, unbundled, rather than published or bundled bytes. Its
