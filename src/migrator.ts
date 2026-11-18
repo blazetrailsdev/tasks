@@ -1,6 +1,7 @@
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { MigrationContext } from "@blazetrails/activerecord";
+import { getCryptoAsync } from "@blazetrails/activesupport";
 
 /**
  * Migrations, through Rails' own entry point.
@@ -21,6 +22,9 @@ function context(): MigrationContext {
 }
 
 export async function migrate(): Promise<void> {
+  // A foreign key's default name is a digest, and the synchronous lookup cannot
+  // load node:crypto under ESM; the async one seats it for the rest of the run.
+  await getCryptoAsync();
   await context().migrate();
 }
 
