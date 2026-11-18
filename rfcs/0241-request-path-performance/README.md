@@ -13,6 +13,9 @@ packages:
   - "rackup"
   - "trailties"
   - "examples"
+  - "actionview"
+  - "html-sanitizer"
+  - "nokogiri"
 clusters:
   - request-perf
 priority: 4
