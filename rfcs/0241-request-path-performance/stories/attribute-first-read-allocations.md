@@ -1,7 +1,7 @@
 ---
 title: "First read of a loaded attribute allocates a closure, a lazy attribute and a hash entry"
-status: in-progress
-updated: 2026-11-17
+status: done
+updated: 2026-11-18
 rfc: "0241-request-path-performance"
 cluster: request-perf
 packages: [activemodel, ruby-compat]

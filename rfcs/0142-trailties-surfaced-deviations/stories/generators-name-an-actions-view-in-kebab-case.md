@@ -1,7 +1,7 @@
 ---
 title: "trailties: check the generators write an action's view and locale key in kebab-case"
-status: in-progress
-updated: 2026-11-17
+status: done
+updated: 2026-11-18
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties"]

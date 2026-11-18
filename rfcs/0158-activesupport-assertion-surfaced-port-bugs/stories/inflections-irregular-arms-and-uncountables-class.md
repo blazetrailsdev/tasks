@@ -1,7 +1,7 @@
 ---
 title: "Inflections#irregular emits only some of Rails' singular rules"
-status: in-progress
-updated: 2026-11-17
+status: done
+updated: 2026-11-18
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:

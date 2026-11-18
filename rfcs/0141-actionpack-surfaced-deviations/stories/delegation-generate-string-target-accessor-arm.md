@@ -1,7 +1,7 @@
 ---
 title: "Delegation.generate reads a String target's accessor as a property, swept repo-wide"
-status: in-progress
-updated: 2026-11-17
+status: done
+updated: 2026-11-18
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

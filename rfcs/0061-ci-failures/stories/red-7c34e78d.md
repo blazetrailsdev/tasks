@@ -1,7 +1,7 @@
 ---
 title: "Unit Tests (1) failing on main @7c34e78d"
-status: in-progress
-updated: 2026-11-17
+status: done
+updated: 2026-11-18
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

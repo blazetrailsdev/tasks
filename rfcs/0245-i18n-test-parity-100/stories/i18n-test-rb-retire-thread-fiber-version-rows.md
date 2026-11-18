@@ -1,6 +1,6 @@
 ---
 title: "i18n: port i18n_test.rb's VERSION, Thread.current and Fiber tests and retire their baseline rows"
-status: claimed
+status: ready
 updated: 2026-11-18
 rfc: "0245-i18n-test-parity-100"
 cluster: residuals
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 100
 priority: null
 pr: null
-claim: "2026-11-18T01:21:32Z"
-assignee: "i18n-port-backend-lazy-loadable"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

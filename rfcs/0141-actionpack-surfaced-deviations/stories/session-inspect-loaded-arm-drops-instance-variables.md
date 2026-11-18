@@ -1,7 +1,7 @@
 ---
 title: "Session#inspect's loaded arm renders no instance variables"
-status: in-progress
-updated: 2026-11-17
+status: done
+updated: 2026-11-18
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages:

@@ -1,7 +1,7 @@
 ---
 title: "solid-cache-local-cache-of-fetch-multi-rails-8-0-body"
-status: in-progress
-updated: 2026-11-17
+status: done
+updated: 2026-11-18
 rfc: "0196-solid-stack"
 cluster: null
 packages: []

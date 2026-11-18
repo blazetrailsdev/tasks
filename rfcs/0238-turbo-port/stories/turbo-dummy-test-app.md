@@ -1,7 +1,7 @@
 ---
 title: "Port turbo-rails' test/dummy app as the @blazetrails/turbo test app"
-status: in-progress
-updated: 2026-11-17
+status: done
+updated: 2026-11-18
 rfc: "0238-turbo-port"
 cluster: turbo
 packages: [turbo, activerecord]

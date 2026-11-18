@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-fiber-processes-lifecycle-test"
-status: in-progress
+status: done
 updated: 2026-11-18
 rfc: "0196-solid-stack"
 cluster: null

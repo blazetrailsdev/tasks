@@ -1,7 +1,7 @@
 ---
 title: "cache-entry-expires-at-is-seconds"
-status: in-progress
-updated: 2026-11-17
+status: done
+updated: 2026-11-18
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []

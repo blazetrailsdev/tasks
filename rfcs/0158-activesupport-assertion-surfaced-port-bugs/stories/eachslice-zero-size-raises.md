@@ -1,7 +1,7 @@
 ---
 title: "eachSlice spins on a zero slice size where Ruby's each_slice raises"
-status: in-progress
-updated: 2026-11-17
+status: done
+updated: 2026-11-18
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:

@@ -1,7 +1,7 @@
 ---
 title: "solid-cache-store-behavior-missing-tests"
-status: in-progress
-updated: 2026-11-17
+status: done
+updated: 2026-11-18
 rfc: "0196-solid-stack"
 cluster: null
 packages: []

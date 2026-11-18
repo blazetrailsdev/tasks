@@ -1,7 +1,7 @@
 ---
 title: "net-smtp seats SMTP on ruby-compat's one Net module"
-status: in-progress
-updated: 2026-11-17
+status: done
+updated: 2026-11-18
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages: []

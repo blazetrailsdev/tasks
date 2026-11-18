@@ -1,7 +1,7 @@
 ---
 title: "msgpack: Factory has_symbol_ext_type, the packer's T_SYMBOL arm, and the extended-object spec"
-status: in-progress
-updated: 2026-11-17
+status: done
+updated: 2026-11-18
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []

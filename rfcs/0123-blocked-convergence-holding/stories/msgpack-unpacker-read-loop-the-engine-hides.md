@@ -1,7 +1,7 @@
 ---
 title: "msgpack: StackError, skip, Hash maps and Decoder#pos need a read loop the engine hides"
-status: in-progress
-updated: 2026-11-17
+status: done
+updated: 2026-11-18
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []

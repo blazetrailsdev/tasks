@@ -1,7 +1,7 @@
 ---
 title: "A controller cannot hand a ReadableStream to the response, so a relay must buffer it"
-status: in-progress
-updated: 2026-11-17
+status: done
+updated: 2026-11-18
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: [actionpack]

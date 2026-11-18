@@ -1,7 +1,7 @@
 ---
 title: "TagHelper's FormHelper/FormBuilder reopen must exist before ActionView::Base includes Helpers"
-status: in-progress
-updated: 2026-11-17
+status: done
+updated: 2026-11-18
 rfc: "0219-actiontext-port"
 cluster: null
 packages: []
