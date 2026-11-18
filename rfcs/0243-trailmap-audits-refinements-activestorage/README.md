@@ -329,10 +329,13 @@ gets fixed in trails").
 
 Ruled by the operator on 2026-11-18, replacing the draft's open questions.
 
-1. **trailmap#151 is retargeted onto `Base` before it merges**, with the model
-   named `Refinement` (table `refinements`). No Hub table lands, so
-   `refinement-is-a-base-record-with-an-attached-summary` adds the attachment
-   and the marks to #151's model rather than moving a table.
+1. **`RfcRefine` moves from Hub to `Base` and is renamed `Refinement`**
+   (table `refinements`). trailmap#151 merged on 2026-11-17, before it could
+   be retargeted, so `RfcRefine` and `rfc_refines` are on Hub on main.
+   `refinement-is-a-base-record-with-an-attached-summary` moves the table,
+   drops the text column, attaches the summary, and carries over the Hub rows.
+   The operator welcomed this: it tests the migration machinery on changes
+   (a drop, a rename, a data move), not only additions.
 2. **A bearer token guards the create endpoints**, on top of `LoopbackOnly`
    (see "Ingest: the loopback API").
 3. **No file fallback.** A writer that cannot reach trailmap fails loudly and
@@ -347,4 +350,5 @@ is `draft` and unclaimed, RFC 0243 is `active`, and
 ## Changelog
 
 - 2026-11-17: initial RFC. Moves `trailmap-audits-to-activestorage` in from 0123.
+- 2026-11-18: Decision 1 revised: #151 merged first, so the Hub table moves.
 - 2026-11-18: open questions ruled (Decisions); adds `trailmap-ingest-token-guards-create-endpoints`.
