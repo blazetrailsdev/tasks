@@ -1,5 +1,5 @@
 ---
-rfc: "0000-website-refresh"
+rfc: "0247-website-refresh"
 title: "Website refresh: remove Frontiers, deploy to GitHub Pages, landing page and docs for 54 packages"
 status: draft
 created: 2026-11-18
@@ -13,10 +13,7 @@ clusters:
   - website-landing
 ---
 
-<!-- Unnumbered until merge: `scripts/finalize-rfc.mjs` swaps 0000 for the
-     assigned number at merge. -->
-
-# RFC — Website refresh: remove Frontiers, deploy to GitHub Pages, landing page and docs for 54 packages
+# RFC 0247 — Website refresh: remove Frontiers, deploy to GitHub Pages, landing page and docs for 54 packages
 
 ## Summary
 

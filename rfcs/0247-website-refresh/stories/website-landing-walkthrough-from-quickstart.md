@@ -2,7 +2,7 @@
 title: "Landing walkthrough and code showcase read from the CI-run Quickstart"
 status: draft
 updated: 2026-11-18
-rfc: "0000-website-refresh"
+rfc: "0247-website-refresh"
 cluster: website-landing
 packages: [website]
 deps: [website-landing-page-rebuild, website-getting-started-guide]

@@ -2,7 +2,7 @@
 title: "Delete the Frontiers tutorial and sandbox, its service worker and its dependencies"
 status: draft
 updated: 2026-11-18
-rfc: "0000-website-refresh"
+rfc: "0247-website-refresh"
 cluster: website-deploy
 packages: [website]
 deps: []

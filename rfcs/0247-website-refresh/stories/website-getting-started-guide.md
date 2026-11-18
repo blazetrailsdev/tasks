@@ -2,7 +2,7 @@
 title: "Write the Getting Started guide from the CI-run README Quickstart"
 status: draft
 updated: 2026-11-18
-rfc: "0000-website-refresh"
+rfc: "0247-website-refresh"
 cluster: website-docs
 packages: [website]
 deps: [website-guides-index-follows-rails-guides]

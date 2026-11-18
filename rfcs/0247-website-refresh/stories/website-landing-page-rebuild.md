@@ -2,7 +2,7 @@
 title: "Rebuild the landing page on rubyonrails.org's structure with trails' own art and copy"
 status: draft
 updated: 2026-11-18
-rfc: "0000-website-refresh"
+rfc: "0247-website-refresh"
 cluster: website-landing
 packages: [website]
 deps: [website-pages-deploy-workflow]

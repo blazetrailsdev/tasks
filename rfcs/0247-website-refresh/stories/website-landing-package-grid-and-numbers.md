@@ -2,7 +2,7 @@
 title: "Landing package grid grouped like Rails' frameworks, with live parity figures"
 status: draft
 updated: 2026-11-18
-rfc: "0000-website-refresh"
+rfc: "0247-website-refresh"
 cluster: website-landing
 packages: [website]
 deps: [website-landing-page-rebuild, website-parity-numbers-at-build]

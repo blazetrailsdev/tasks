@@ -2,7 +2,7 @@
 title: "Deploy the website to GitHub Pages from main"
 status: draft
 updated: 2026-11-18
-rfc: "0000-website-refresh"
+rfc: "0247-website-refresh"
 cluster: website-deploy
 packages: [website]
 deps: [website-remove-frontiers, website-docs-typedoc-fails-under-ts5]

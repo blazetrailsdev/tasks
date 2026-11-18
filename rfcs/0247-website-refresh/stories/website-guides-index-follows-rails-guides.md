@@ -2,7 +2,7 @@
 title: "Rebuild the guides index on the Rails Guides table of contents and file a story per unwritten guide"
 status: draft
 updated: 2026-11-18
-rfc: "0000-website-refresh"
+rfc: "0247-website-refresh"
 cluster: website-docs
 packages: [website]
 deps: [website-pages-deploy-workflow]
