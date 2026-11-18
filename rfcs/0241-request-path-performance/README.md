@@ -191,6 +191,35 @@ setTimeout(async () => {
 `--heap-prof` is not a substitute for the allocation pass: it reports only
 objects still live at exit.
 
+### Proposal: reuse compiled unprepared statements (awaiting ruling)
+
+`unpreparable-select-statement-compile-cost` measured one `prepare` of the
+feed query at 54.9 µs with better-sqlite3 13 against 22.0 µs with the `sqlite3`
+gem, and `select 1` at 13.3 against 2.6 µs. About 10 µs per statement is
+better-sqlite3's native `Statement` construction, so a faster wrapper cannot
+recover it; only not constructing the statement can.
+
+Rails prepares and closes a fresh statement for every unprepared query:
+`# Don't cache statements if they are not prepared.`
+(`vendor/rails/v8.0.2/activerecord/lib/active_record/connection_adapters/sqlite3/database_statements.rb:92-107`).
+trails mirrors that in `internal_exec_query`'s unprepared arm through
+`_freshStatement` (`packages/activerecord/lib/connection-adapters/sqlite3/database-statements.ts:219`).
+
+The proposal is to reuse the compiled statement in that arm when the SQL
+carries bind placeholders (`?`), keyed by SQL text in a per-connection LRU
+bounded like `@statements` (`statement_limit`), and cleared by
+`clear_cache!` and on reconnect. SQL with no placeholders, whose text varies
+with every literal, keeps Rails' prepare-and-close path so the cache cannot
+fill with one-shot strings. Observable results are unchanged: the statement is
+reset and rebound on each use, as `stmt.reset!` does for the prepared arm
+(`database_statements.rb:82-84`).
+
+It is a recorded deviation from `database_statements.rb:92-107`, not a
+language shortcoming, so it needs an operator ruling before it lands. If
+ruled in, the one arm carries `@perf <measurement> — PERMANENT` and the
+re-measure reports `_freshStatement`'s share of busy CPU in the slim harness
+before and after. If ruled out, the Open question closes with Rails' shape.
+
 ## Non-goals
 
 - Changing the twelve-dollar-server application to win the benchmark.
@@ -251,8 +280,9 @@ The RFC is met when, on one rig and against the same Rails submission:
 ## Open questions
 
 - Should trails reuse compiled statements for unpreparable queries whose SQL
-  carries bind placeholders, deviating from Rails? **Deferred to**
-  `unpreparable-select-statement-compile-cost`, which records the decision here.
+  carries bind placeholders, deviating from Rails? Proposed under Design,
+  "Proposal: reuse compiled unprepared statements"; **awaiting the operator's
+  ruling** (`unprepared-statement-reuse-proposal`).
 - Is the 108 KB versus 267 KB per-request difference between the two
   allocation profiles all down to the entry point? **No.** The entry point
   accounts for about 2% (237 against 242 KB on one commit). The commit or the
@@ -266,3 +296,4 @@ The RFC is met when, on one rig and against the same Rails submission:
   Rollout phases and an RFC-level target.
 - 2026-11-17: The entry point does not explain the allocation gap; the
   semi-space flag stays at 64.
+- 2026-11-18: Statement-reuse proposal written into Design, awaiting ruling.
