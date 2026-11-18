@@ -2,7 +2,7 @@
 title: "Gate both rbModConstSet and module-eval namespace reads so the mechanism cannot spread again"
 status: ready
 updated: 2026-10-23
-rfc: "0205-namespace-seats-are-plain-javascript"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: [scripts]
 deps:
