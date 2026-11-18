@@ -41,14 +41,20 @@ test's setup.
 
 ## Acceptance criteria
 
-- The task-domain rows two or more test files seed by hand (`rfcs`, `stories`,
-  `story_deps`, `story_paths`, `events`) become `test/fixtures/<table>` files,
+- The RFCs two or more test files seed by hand become `test/fixtures/rfcs.yml`,
   which `test/test-helper.ts`'s `TestCase.fixtures(":all")` already loads.
+  `stories`, `story_deps`, `story_paths` and `events` move to
+  `seed-story-tables-from-fixtures`: `fixtures :all` puts every row in every
+  file, so their shared rows change counts other files assert on, which the
+  last criterion here rules out.
 - `test/test-helper.ts` rebuilds `storage/test.sqlite3-<n>` once per worker,
   as Rails' `parallelize_setup` does, instead of once per file: that per-file
   rebuild exists only because rows were seeded outside the test transaction.
-- The files that used them read them through the fixture accessors instead of
-  re-creating them. A test that needs a one-off row still creates it inline.
+- The files that used them read the fixture rows instead of re-creating them.
+  A test that needs a one-off row still creates it inline. Reading them through
+  the fixture accessors (`testCase.rfcs("trailmap")`) waits on
+  `autorun-test-context-augments-vitest-runner`: the accessor works at runtime,
+  but `({ testCase })` does not typecheck in an application.
 - The files that opt out of transactional tests
   (`TestCase.useTransactionalTests = false`: the stats-sync files,
   `hub-database`, `parity-refresh`) keep working, and none of them loads the
