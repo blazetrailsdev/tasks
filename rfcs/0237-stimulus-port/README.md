@@ -1,9 +1,9 @@
 ---
 rfc: "0237-stimulus-port"
 title: "Port the stimulus-rails gem as @blazetrails/stimulus"
-status: draft
+status: active
 created: 2026-11-12
-updated: 2026-11-12
+updated: 2026-11-18
 owner: "@deanmarano"
 packages:
   - "stimulus"
