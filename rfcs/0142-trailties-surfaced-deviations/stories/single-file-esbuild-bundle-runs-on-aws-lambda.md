@@ -41,7 +41,11 @@ found a minimal trails app could not run from a single esbuild bundle:
   `.trails/views/**/*.js`.
 - `writeEntry` hands each loader its `manifest.json` beside its imports.
 - `templateCompiler` loads a registered compiled view through `loadIseqEval`.
-- rack-bridge stringifies non-`Uint8Array` chunks and appends each value of an array header.
+- rack-bridge stringifies non-`Uint8Array` chunks and non-string header values, appends each value of an
+  array header, and awaits an async body `close`.
 - Each fix has a test, verified to fail on main.
 - `examples/serverless-lambda` bundles the app with esbuild and runs it on AWS Lambda (`nodejs26.x`), on
   SQLite or on RDS PostgreSQL. It runs locally under the Lambda emulator image.
+- The example ships the generated app's `config.ts`, so `Application.findRoot` roots it from any directory.
+- `examples/serverless-lambda/infra/` is Terraform for the function, its Function URL, an optional
+  execution role and an optional RDS PostgreSQL arm, seeded on apply.
