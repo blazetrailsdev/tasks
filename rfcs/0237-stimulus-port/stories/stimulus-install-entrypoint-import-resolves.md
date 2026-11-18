@@ -1,6 +1,6 @@
 ---
 title: "stimulus-install-entrypoint-import-resolves"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0237-stimulus-port"
 cluster: null

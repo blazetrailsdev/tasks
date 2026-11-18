@@ -1,6 +1,6 @@
 ---
 title: "Route set and url_for without double casts"
-status: ready
+status: done
 updated: 2026-11-18
 rfc: "0242-activerecord-actionpack-type-polish"
 cluster: type-polish-actionpack
@@ -9,9 +9,9 @@ deps: [type-polish-count-double-casts]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10309
+claim: "2026-11-18T18:21:33Z"
+assignee: "actionpack-route-set-and-url-for-host-casts"
 blocked-by: null
 closed-reason: null
 ---

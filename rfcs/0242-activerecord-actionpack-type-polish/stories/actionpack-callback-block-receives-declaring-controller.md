@@ -1,6 +1,6 @@
 ---
 title: "Action callback blocks receive the declaring controller's type"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0242-activerecord-actionpack-type-polish"
 cluster: null

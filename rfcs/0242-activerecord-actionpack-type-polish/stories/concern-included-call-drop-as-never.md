@@ -1,6 +1,6 @@
 ---
 title: "Drop as never from Concern.included.call sites"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0242-activerecord-actionpack-type-polish"
 cluster: null

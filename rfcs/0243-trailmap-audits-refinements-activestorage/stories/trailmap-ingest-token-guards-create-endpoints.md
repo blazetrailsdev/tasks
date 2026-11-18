@@ -1,6 +1,6 @@
 ---
 title: "trailmap: a bearer token guards the ingest create endpoints"
-status: ready
+status: done
 updated: 2026-11-18
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: audits
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#163
+claim: "2026-11-18T18:21:33Z"
+assignee: "actionpack-route-set-and-url-for-host-casts"
 blocked-by: null
 closed-reason: null
 ---

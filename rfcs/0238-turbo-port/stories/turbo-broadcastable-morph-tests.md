@@ -1,6 +1,6 @@
 ---
 title: "turbo-broadcastable-morph-tests"
-status: ready
+status: blocked
 updated: 2026-11-18
 rfc: "0238-turbo-port"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "needs trails#10305 (Turbo::Broadcastable instance methods + broadcastable.test.ts) merged; cannot stack"
 closed-reason: null
 ---
 

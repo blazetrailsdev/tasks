@@ -1,6 +1,6 @@
 ---
 title: "Type actionpack class-modules against their including host"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0242-activerecord-actionpack-type-polish"
 cluster: null

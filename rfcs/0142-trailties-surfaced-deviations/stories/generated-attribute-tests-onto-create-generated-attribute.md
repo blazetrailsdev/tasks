@@ -1,6 +1,6 @@
 ---
 title: "generated-attribute-tests-onto-create-generated-attribute"
-status: in-progress
+status: done
 updated: 2026-11-18
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

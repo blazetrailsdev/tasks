@@ -1,7 +1,7 @@
 ---
 title: "Port SolidQueue::UpdateGenerator and add_batches migration template"
-status: ready
-updated: 2026-11-16
+status: claimed
+updated: 2026-11-18
 rfc: "0196-solid-stack"
 cluster: null
 packages: ["solid-queue"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-18T18:51:35Z"
+assignee: "solid-queue-configuration-checks-and-cli-v1-7-2"
 blocked-by: null
 closed-reason: null
 ---

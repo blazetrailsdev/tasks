@@ -1,6 +1,6 @@
 ---
 title: "Port rack-cors test/unit/cors_test.rb and its .ru configs"
-status: claimed
+status: in-progress
 updated: 2026-11-18
 rfc: "0244-rack-cors-gem-port"
 cluster: rack-cors
@@ -9,7 +9,7 @@ deps: [rack-cors-gem-port]
 deps-rfc: []
 est-loc: 650
 priority: null
-pr: null
+pr: trails#10306
 claim: "2026-11-18T17:51:53Z"
 assignee: "rack-cors-unit-test-suite"
 blocked-by: null
