@@ -2,7 +2,7 @@
 title: "Class-path table covers activerecord test models"
 status: draft
 updated: 2026-11-15
-rfc: "0205-namespace-seats-are-plain-javascript"
+rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
