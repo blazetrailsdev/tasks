@@ -32,5 +32,6 @@ the guards have nowhere to attach. Split out of `solid-queue-configuration-check
 - `Runnable` gains `run_in_mode`, `boot_timed_out?`, `mark_as_reaped` and the boot guard
   completion at Rails names and shapes.
 - `BootGuards::NullGuard` / `ForkGuard` are ported; `SolidQueue.forkBootTimeout` defaults to 5 minutes.
-- `test/unit/boot_guards_test.rb` (4 tests) is ported at its test names; the fork-based
-  arms follow root CLAUDE.md "Runtime facts Node does not expose" (`fork`) where they cannot run.
+- `test/unit/boot_guards_test.rb` (4 tests) is ported at its test names. `ForkGuard`'s pipe is the
+  pipe or IPC channel `solid-queue-fork-mode-unported-register` gives a `child_process.fork` child
+  (RFC README, "Decisions"). A fork test needing that child waits for that story, not a permanent skip.

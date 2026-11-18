@@ -115,21 +115,21 @@ RFC 0169 (activejob) and RFC 0177 (actioncable) both list their Solid gem as
 
 ## Decisions
 
-- **Solid Queue's supervisor runs its processes as threads, not forks.**
-  `Supervisor#start_process` (`vendor/solid_queue/v1.1.3/lib/solid_queue/supervisor.rb:76-88`)
-  forks a copy of the booted parent and calls `start` in the child. Node has
-  no `fork`: `child_process.fork` starts a fresh interpreter that shares
-  nothing with the parent (CLAUDE.md, "Runtime facts Node does not expose"),
-  and ruby-compat has no `fork`, `Process.kill` or `waitpid2`. Spawning one
-  `bin/jobs` child per configured process was rejected, because each child
-  would re-boot the app and re-read the configuration to find its slot, which
-  no Solid Queue code does. So `start_process` sets `mode = :async`, which
-  `Processes::Runnable` already supports (`processes/runnable.rb:5-17`), and
-  the supervisee runs in a ruby-compat `Thread`. Upstream made the same move
-  in solid_queue 1.2, which added an async supervisor mode. The Supervisor's
-  other methods keep their names and order: `forks` is keyed by process name
-  where Rails keys it by pid; `waitpid2` reaps a supervisee whose thread has
-  ended; `signal_process` runs what the child's own trap would
-  (`processes/supervised.rb:27-37`), which is `stop` for `TERM`/`INT` and a
-  thread kill for `QUIT`. Ruled by the repo owner on 2026-10-26
-  (`port-solid-queue-supervisor`).
+- **Solid Queue's fork mode runs each supervisee in a `child_process.fork` child.**
+  This reverses the 2026-10-26 ruling (`port-solid-queue-supervisor`), which
+  ran every supervisee as a ruby-compat `Thread` in async mode. In Node,
+  async mode is one event loop, so a CPU-bound job stalls heartbeats, polling
+  and dispatch for every supervisee, and a crash or leak in one takes down all
+  of them. v1.7.2 keeps both modes (`fork_supervisor.rb`, `async_supervisor.rb`),
+  and trails ports both, with `fork` the default as in
+  `Configuration#default_options`. `create_fork`'s `fork do ... end`
+  (`vendor/solid_queue/v1.7.2/lib/solid_queue/processes/supervised.rb:28-40`)
+  is `child_process.fork` of an entry module that boots the app and builds the
+  supervisee named over IPC. The child does not inherit the parent's heap
+  (CLAUDE.md, "Runtime facts Node does not expose"), so it re-boots. That
+  re-boot is the one receipted deviation. `waitpid2` reads the children's
+  `exit` events, `Process.kill` signals the child's pid, and `ForkGuard`'s
+  pipe is a pipe or IPC channel to the child. A Rails test that asserts on
+  heap state copied into a fork stays a permanent skip under the CLAUDE.md
+  rule. Every other fork test is ported against real child processes. Ruled
+  by the repo owner on 2026-11-18.

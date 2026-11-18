@@ -1,5 +1,5 @@
 ---
-title: "Register solid_queue v1.7.2's fork-only surface as unported (Node has no fork)"
+title: "Port ForkSupervisor and the fork arms of Runnable on child_process.fork"
 status: ready
 updated: 2026-11-16
 rfc: "0196-solid-stack"
@@ -7,7 +7,7 @@ cluster: null
 packages: ["solid-queue"]
 deps: ["solid-queue-async-supervisor-v1-7-2"]
 deps-rfc: []
-est-loc: 80
+est-loc: 500
 priority: null
 pr: null
 claim: null
@@ -18,15 +18,25 @@ closed-reason: null
 
 ## Context
 
-Node has no `fork`, as RFC 0196's Decisions section records: the supervisor runs its processes as threads. `pnpm parity:api` / `parity:test --package solid-queue` (2026-11-16) still count v1.7.2's fork-only surface as missing:
+The RFC's fork decision was reversed on 2026-11-18 (README, "Decisions"): fork mode is ported on `child_process.fork` rather than registered as unported. A single-event-loop async mode lets one CPU-bound job stall heartbeats, polling and dispatch for every supervisee, so trails needs a multiprocess mode, and `fork` stays the default `mode` as in `Configuration#default_options`.
 
-- `fork_supervisor.rb`: 10 methods.
-- The fork arms in `processes/runnable.rb`, `processes/poller.rb`, `processes/supervised.rb` and `scheduler.rb`: `create_fork`, `run_in_mode`'s fork arm, `alive?`, `boot_timed_out?`, `mark_as_reaped`.
-- `SolidQueue.fork_boot_timeout` / `fork_boot_timeout=` and `LogSubscriber#fork_boot_timeout`.
-- The tests `unit/fork_supervisor_test.rb` (8 skipped, 7 missing), `integration/forked_processes_lifecycle_test.rb` (3 skipped, 8 missing) and `integration/puma/plugin_fork_test.rb` (1).
+`pnpm parity:api --package solid-queue` (2026-11-18) counts as missing:
+
+- `fork_supervisor.rb` (`vendor/solid_queue/v1.7.2/lib/solid_queue/fork_supervisor.rb:1-87`): `perform_graceful_termination`, `perform_immediate_termination`, `term_forks`, `quit_forks`, `check_and_replace_terminated_processes`, `check_boot_timeouts`, `terminate_unready_process`, `reap_terminated_forks`, `replace_fork`, `all_processes_terminated?`.
+- `create_fork` in `processes/supervised.rb:28-40`, and the fork arm of `run_in_mode` in `processes/runnable.rb:49-62`, as inherited by `poller.rb` and `scheduler.rb`.
+- `processes/runnable.rb`'s `alive?`, `boot_timed_out?`, `mark_as_reaped` (`:30-42`) where `solid-queue-boot-guards-v1-7-2` has not already landed them.
+
+## Shape
+
+- `create_fork(&block)`'s `fork do ... end` is `child_process.fork(entry, ...)`. The entry module boots the app and runs the supervisee's `register_signal_handlers` / `block.call` / exit sequence. The child has a fresh heap, not a copy of the parent's, so it is told which supervisee to build over the IPC channel (the serialized `Configuration::Process`). That re-boot is the one deviation, and it is receipted at the `create_fork` call site citing the README decision.
+- `::Process.waitpid2(-1, ::Process::WNOHANG)` reads a queue that the children's `exit` events fill (pid plus a `Process::Status`-shaped status), so `reap_terminated_forks` and `check_and_replace_terminated_processes` keep their loop bodies.
+- `::Process.kill(signal, pid)` in `term_forks` / `quit_forks` is `process.kill(pid, signal)`.
+- `ForkGuard`'s pipe (`runnable.rb:132-180`) is a pipe passed through `stdio`, or the IPC channel, with `complete` running in the child and `start` in the parent as in Ruby.
+- ruby-compat gains `Process.kill` / `waitpid2` / `Process::Status` only to the extent these call sites need, each at its MRI name with an MRI citation.
 
 ## Acceptance criteria
 
-- Each fork-only file, method and test is listed in the parity unported register (`scripts/parity/unported-files/` and the api-compare equivalent) with one reason that cites RFC 0196's fork-versus-threads decision.
-- A member that also serves async mode (for example `alive?` if v1.7.2 uses it for threads) is not registered. It goes to `solid-queue-async-supervisor-v1-7-2` instead.
-- After this story, `parity:api` and `parity:test` for solid-queue no longer count fork-only items as gaps.
+- `fork_supervisor.rb`, `create_fork` and the fork arm of `run_in_mode` are ported at their Rails names and in their Rails order, and `parity:api --package solid-queue` reports `fork_supervisor.rb` at 100%.
+- A supervisor started with `mode: :fork` runs each configured worker, dispatcher and scheduler in its own OS process with its own `Process.pid`, registered in `solid_queue_processes`.
+- TERM, then QUIT after `shutdown_timeout`, stops every child; a child killed with KILL is reaped, its claimed jobs are released with `ProcessExitError`, and it is replaced.
+- No new `@noRailsEquivalent` other than the receipted `create_fork` re-boot.
