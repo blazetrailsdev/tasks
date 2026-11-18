@@ -1,7 +1,7 @@
 ---
 title: "DateAndTime::Calculations eagerly imports date/time calculation modules, blocking include() in time/date files"
 status: ready
-updated: 2026-11-17
+updated: 2026-11-18
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

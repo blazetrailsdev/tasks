@@ -1,6 +1,6 @@
 ---
 title: "Seed trailmap's controller and model tests from test/fixtures instead of per-file creates"
-status: claimed
+status: in-progress
 updated: 2026-11-18
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["test-trailmap-through-a-test-helper-fixtures-and-app-routes"]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trailmap#159
 claim: "2026-11-18T00:36:22Z"
 assignee: "seed-trailmap-tests-from-fixtures"
 blocked-by: null

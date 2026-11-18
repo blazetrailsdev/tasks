@@ -1,6 +1,6 @@
 ---
 title: "Port Turbo::Streams::TagBuilder and TurboStreamsTagBuilder"
-status: claimed
+status: in-progress
 updated: 2026-11-18
 rfc: "0238-turbo-port"
 cluster: turbo
@@ -9,7 +9,7 @@ deps: [turbo-package-helpers-and-turbo-stream-format]
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
+pr: trails#10281
 claim: "2026-11-18T00:21:36Z"
 assignee: "turbo-frames-native-and-request-id"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "rbObjRespondTo walks the method chain on every call"
-status: ready
-updated: 2026-11-17
+status: in-progress
+updated: 2026-11-18
 rfc: "0241-request-path-performance"
 cluster: request-perf
 packages: [ruby-compat]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10283
+claim: "2026-11-18T01:07:13Z"
+assignee: "respond-to-lookup-cache"
 blocked-by: null
 closed-reason: null
 ---

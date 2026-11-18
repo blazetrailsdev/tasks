@@ -1,7 +1,7 @@
 ---
 title: "fixture-template-bcrypt-password-create-unresolvable"
-status: ready
-updated: 2026-11-16
+status: done
+updated: 2026-11-18
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#8402
+claim: "2026-11-18T01:51:38Z"
+assignee: "controller-tests-lack-default-protect-from-forgery-without-booting"
 blocked-by: null
 closed-reason: null
 ---
