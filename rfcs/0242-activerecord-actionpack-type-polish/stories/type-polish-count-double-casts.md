@@ -1,6 +1,6 @@
 ---
 title: "parity:lint:counts ratchets as-unknown-as in the five type-polish packages' lib"
-status: ready
+status: done
 updated: 2026-11-18
 rfc: "0242-activerecord-actionpack-type-polish"
 cluster: type-polish-gates
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10290
+claim: "2026-11-18T13:06:58Z"
+assignee: "type-polish-count-double-casts"
 blocked-by: null
 closed-reason: null
 ---

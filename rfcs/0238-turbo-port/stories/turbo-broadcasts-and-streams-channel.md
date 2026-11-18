@@ -1,6 +1,6 @@
 ---
 title: "Port Turbo::StreamsChannel, Streams::Broadcasts, the broadcast jobs and debouncers"
-status: claimed
+status: in-progress
 updated: 2026-11-18
 rfc: "0238-turbo-port"
 cluster: turbo
@@ -9,7 +9,7 @@ deps: [turbo-streams-tag-builder, turbo-dummy-test-app]
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
+pr: trails#10292
 claim: "2026-11-18T12:51:37Z"
 assignee: "tag-builder-trailing-undefined-block"
 blocked-by: null

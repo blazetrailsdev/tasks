@@ -1,7 +1,7 @@
 ---
 title: "Port v1.7.2's AsyncSupervisor split and process-layer members"
-status: ready
-updated: 2026-11-17
+status: claimed
+updated: 2026-11-18
 rfc: "0196-solid-stack"
 cluster: null
 packages: ["solid-queue"]
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 500
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-18T13:51:34Z"
+assignee: "solid-queue-active-job-batch-id-v1-7-2"
 blocked-by: null
 closed-reason: null
 ---

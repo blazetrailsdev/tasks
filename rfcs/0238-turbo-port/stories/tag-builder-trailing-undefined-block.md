@@ -1,6 +1,6 @@
 ---
 title: "tag-builder-trailing-undefined-block"
-status: claimed
+status: in-progress
 updated: 2026-11-18
 rfc: "0238-turbo-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10292
 claim: "2026-11-18T12:51:37Z"
 assignee: "tag-builder-trailing-undefined-block"
 blocked-by: null
