@@ -1,6 +1,6 @@
 ---
 title: "ActionController::TestCase renders with no named-route helpers in views and no trailtie rescue_responses, because a test cannot boot the application"
-status: claimed
+status: in-progress
 updated: 2026-11-18
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#10285
 claim: "2026-11-18T01:51:38Z"
 assignee: "controller-tests-lack-default-protect-from-forgery-without-booting"
 blocked-by: null

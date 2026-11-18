@@ -1,6 +1,6 @@
 ---
 title: "default-middleware-stack-ssl-and-debug-exceptions-args"
-status: claimed
+status: in-progress
 updated: 2026-11-18
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#10285
 claim: "2026-11-18T01:51:38Z"
 assignee: "controller-tests-lack-default-protect-from-forgery-without-booting"
 blocked-by: null

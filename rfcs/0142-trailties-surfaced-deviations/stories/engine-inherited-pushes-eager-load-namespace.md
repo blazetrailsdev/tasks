@@ -1,6 +1,6 @@
 ---
 title: "trailties: Engine.inherited's eager_load_namespaces << base is not in Engine.register"
-status: claimed
+status: in-progress
 updated: 2026-11-18
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: trails#10285
 claim: "2026-11-18T01:51:38Z"
 assignee: "controller-tests-lack-default-protect-from-forgery-without-booting"
 blocked-by: null
