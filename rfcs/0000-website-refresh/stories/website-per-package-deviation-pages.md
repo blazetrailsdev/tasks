@@ -31,7 +31,7 @@ page. `scripts/parity/package-summary.ts` already parses root and per-package
 
 ## Acceptance criteria
 
-- [ ] `docs/packages/<pkg>.md` is generated at build time for every published package. Each page has the Rails counterpart (gem and version from `vendor/`), the parity figures from `website-parity-numbers-at-build` when it has landed (otherwise "—"), and every root `CLAUDE.md` section that cites the package plus every section of `packages/<pkg>/CLAUDE.md`.
+- [ ] `docs/packages/<pkg>.md` is generated at build time for every published package. Each page has the Rails counterpart (gem and version from `vendor/`), the parity figures from `website-parity-numbers-at-build` when it has landed (otherwise "—"), every section of `packages/<pkg>/CLAUDE.md`, and each root `CLAUDE.md` section the package's receipts cite. That set is read from the package's `tagSites` / `permanentSkips` anchors in `package-summary.json`, not chosen by hand.
 - [ ] Each section renders as its heading, its first paragraph or one-line rule, and a link to the section on GitHub at the build's commit. Section prose is not copied wholesale.
 - [ ] The three `*-rails-deviations.md` pages are deleted. Their still-true prose moves to `idioms.md` or the generated page's intro. Each stale claim listed in Context is deleted, not carried.
 - [ ] `idioms.md` and `guides/index.md` are re-read against the root `CLAUDE.md`, and any example that contradicts a ratified rule is fixed (for example, `static {}` models where the schema is reflected).

@@ -80,19 +80,76 @@ The site's unit is the package, so the audit is too. "Landing" is the grid in
 `+page.svelte:3-8`, "API" is `typedoc.config.mjs:12-19`, and "Deviations" is
 `docs/guides/*-rails-deviations.md`.
 
-| Package                                                                                                                                                                                                                                                                                                                                                                                         | Landing                                                                                                                                                                                   | API                                                                                                                                                                                                                                                                                                                          | Deviations                                                                                                                                                                                                                                                                                                                                                | Notes                                            |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| activerecord                                                                                                                                                                                                                                                                                                                                                                                    | Stale: hard-coded "71%", and the code sample uses `static { this.attribute(…) }` where models now reflect their columns from the schema (`README.md:91`, `declare` pattern at `:246-262`) | Present, fails to build                                                                                                                                                                                                                                                                                                      | Stale: section 5 documents `wrapWithScopeProxy` (`activerecord-rails-deviations.md:204-215,494`), which no longer exists in `packages/activerecord/lib`. "Pluggable adapters for browser support" (`:499`) and the `static {}` model (`:423-426`) predate the current rules. It cites none of the ratified sections in `packages/activerecord/CLAUDE.md`. | 509 lines, the largest page                      |
-| activemodel                                                                                                                                                                                                                                                                                                                                                                                     | Stale: "95%"                                                                                                                                                                              | Present                                                                                                                                                                                                                                                                                                                      | Partly stale: `static {}` example (`:77`); does not cite § "Generated attribute readers are properties" or the activemodel serialization section                                                                                                                                                                                                          |                                                  |
-| arel                                                                                                                                                                                                                                                                                                                                                                                            | Stale: "100%"                                                                                                                                                                             | Present                                                                                                                                                                                                                                                                                                                      | Present; does not cite § "Call-time constant resolution" (`packages/arel/CLAUDE.md`)                                                                                                                                                                                                                                                                      |                                                  |
-| activesupport                                                                                                                                                                                                                                                                                                                                                                                   | Stale: "38%"                                                                                                                                                                              | Present                                                                                                                                                                                                                                                                                                                      | **Missing**                                                                                                                                                                                                                                                                                                                                               |                                                  |
-| rack                                                                                                                                                                                                                                                                                                                                                                                            | Stale: "100%"                                                                                                                                                                             | Present                                                                                                                                                                                                                                                                                                                      | **Missing**                                                                                                                                                                                                                                                                                                                                               |                                                  |
-| actionpack                                                                                                                                                                                                                                                                                                                                                                                      | Stale: "27%"; description "Controllers (74% API)"                                                                                                                                         | Present, fails to build                                                                                                                                                                                                                                                                                                      | **Missing** (`packages/actionpack/CLAUDE.md` has eight ratified sections)                                                                                                                                                                                                                                                                                 |                                                  |
-| actionview, actioncable, actionmailer, actionmailbox, actiontext, activejob, activestorage, trailties                                                                                                                                                                                                                                                                                           | **Missing**                                                                                                                                                                               | **Missing**                                                                                                                                                                                                                                                                                                                  | **Missing**; each has a `packages/<pkg>/CLAUDE.md` that `scripts/parity/package-summary.ts` already reads (`claudeSections`)                                                                                                                                                                                                                              | The Rails frameworks a Rails dev looks for first |
-| ruby-compat                                                                                                                                                                                                                                                                                                                                                                                     | **Missing**                                                                                                                                                                               | **Missing**                                                                                                                                                                                                                                                                                                                  | **Missing**; it is the package every deviation page leans on (`rbFSend`, `include()`, `Hash`)                                                                                                                                                                                                                                                             |                                                  |
-| solid-queue, solid-cache, solid-cable                                                                                                                                                                                                                                                                                                                                                           | **Missing**                                                                                                                                                                               | **Missing**                                                                                                                                                                                                                                                                                                                  | **Missing**                                                                                                                                                                                                                                                                                                                                               | Rails 8 defaults                                 |
-| turbo, stimulus, vite-assets, vite-trails                                                                                                                                                                                                                                                                                                                                                       | **Missing**                                                                                                                                                                               | **Missing**                                                                                                                                                                                                                                                                                                                  | **Missing**; the Vite ruling (root `CLAUDE.md`, § "importmap-rails and propshaft are out of scope") is the deviation a new user meets first                                                                                                                                                                                                               |                                                  |
-| The other 28 gem ports (bcrypt, builder, chronic, date, did-you-mean, et-orbi, fugit, globalid, html-sanitizer, i18n, image-processing, mail, marcel, mini-magick, mini-mime, msgpack, net-smtp, nokogiri, raabro, rack-cors, rack-proxy, rack-session, rack-test, rackup, rake, thor, tzinfo, zeitwerk) and the tooling packages (activerecord-cli, trails-tsc, tse-compiler, vitest-matchers) | **Missing**                                                                                                                                                                               | **Missing**. 14 of them have no `lib/index.ts` (builder, chronic, et-orbi, fugit, image-processing, marcel, mini-magick, mini-mime, net-smtp, raabro, rake, thor, turbo, zeitwerk), so TypeDoc's `packageOptions.entryPoints: ["lib/index.ts"]` (`typedoc.config.mjs:33`) cannot reach them; their entry is the `"."` export | n/a for most                                                                                                                                                                                                                                                                                                                                              |                                                  |
+**activerecord.**
+
+- Landing: stale. Coverage is hard-coded at "71%", and the code sample uses
+  `static { this.attribute(…) }`, where models now reflect their columns from
+  the schema (`packages/activerecord/README.md:91`, `declare` pattern at
+  `:246-262`).
+- API: present, but it fails to build (TS 5.9 errors in `relation.ts`,
+  `querying.ts`, `abstract-adapter.ts`).
+- Deviations: stale.
+  - § 5 documents `wrapWithScopeProxy` (`activerecord-rails-deviations.md:204-215,494`),
+    which no longer exists in `packages/activerecord/lib`.
+  - "Pluggable adapters for browser support" (`:499`) and the `static {}`
+    model (`:423-426`) predate the current rules.
+  - It cites none of the ratified sections in `packages/activerecord/CLAUDE.md`.
+
+**activemodel.**
+
+- Landing: stale ("95%").
+- API: present.
+- Deviations: partly stale. The `static {}` example (`:77`) needs updating,
+  and the page does not cite § "Generated attribute readers are properties"
+  or the serialization section in `packages/activemodel/CLAUDE.md`.
+
+**arel.**
+
+- Landing: stale ("100%").
+- API: present.
+- Deviations: present, but it does not cite
+  `packages/arel/CLAUDE.md` § "Call-time constant resolution (arel)".
+
+**activesupport, rack.**
+
+- Landing: stale ("38%", "100%").
+- API: present.
+- Deviations: missing.
+
+**actionpack.**
+
+- Landing: stale ("27%", with the description "Controllers (74% API)").
+- API: present, but it fails to build (`strong-parameters.ts:183,636`).
+- Deviations: missing, though `packages/actionpack/CLAUDE.md` has eight
+  ratified sections.
+
+**actionview, actioncable, actionmailer, actionmailbox, actiontext, activejob,
+activestorage, trailties.** These are the Rails frameworks a Rails dev looks
+for first. They are missing from the landing grid, the API and the
+deviations. Each has a `packages/<pkg>/CLAUDE.md`, which
+`scripts/parity/package-summary.ts` already parses (`claudeSections`).
+
+**ruby-compat.** Missing everywhere, although it is the package every
+deviation page leans on (`rbFSend`, `include()`, `Hash`).
+
+**solid-queue, solid-cache, solid-cable, turbo, stimulus, vite-assets,
+vite-trails.** These are the Rails 8 defaults, and they are missing
+everywhere. The Vite ruling (root `CLAUDE.md`, § "importmap-rails and
+propshaft are out of scope") is the deviation a new user meets first.
+
+**The other 28 gem ports and 4 tooling packages.** The gem ports are bcrypt,
+builder, chronic, date, did-you-mean, et-orbi, fugit, globalid,
+html-sanitizer, i18n, image-processing, mail, marcel, mini-magick, mini-mime,
+msgpack, net-smtp, nokogiri, raabro, rack-cors, rack-proxy, rack-session,
+rack-test, rackup, rake, thor, tzinfo and zeitwerk. The tooling packages are
+activerecord-cli, trails-tsc, tse-compiler and vitest-matchers. All are
+missing from the landing grid and the API.
+
+Fourteen of these have no `lib/index.ts`: builder, chronic, et-orbi, fugit,
+image-processing, marcel, mini-magick, mini-mime, net-smtp, raabro, rake,
+thor, turbo and zeitwerk. TypeDoc's `packageOptions.entryPoints:
+["lib/index.ts"]` (`typedoc.config.mjs:33`) cannot reach them; their entry is
+the `"."` export.
 
 Site-wide staleness:
 
@@ -188,7 +245,8 @@ then met by having no worker. If a worker returns, it registers at
 ### 2. GitHub Pages deployment (`website-pages-deploy-workflow`)
 
 The workflow is `.github/workflows/pages.yml`, `on: push: branches: [main]`
-plus `workflow_dispatch`, and is path-filtered to `packages/website/**`, the
+plus `workflow_dispatch` and a daily `schedule` (so parity figures refresh
+without a site change), and the push trigger is path-filtered to `packages/website/**`, the
 packages TypeDoc reads, and the parity outputs. It has two jobs:
 
 - `build` runs `pnpm install --frozen-lockfile`, then `pnpm build` (TypeDoc
@@ -240,19 +298,24 @@ story lists them, but cannot make them.
   (`config.ts:40-52`) is generated the same way, grouped as in § 4. `api/**`
   stays out of local search (`config.ts:58-71`) for the build-size reason
   recorded there.
-- **Live parity numbers** (`website-parity-numbers-at-build`). The build reads
-  `scripts/parity/output/package-summary.json`, written by `pnpm
-parity:packages` (`scripts/parity/package-summary.ts:3,43`), which already
-  joins api-compare and test-compare per package. It is exposed as a VitePress
-  data loader and a SvelteKit `+page.server.ts` load (prerendered). The Pages
-  workflow runs `pnpm parity:packages` before the site build. A missing output
-  renders "—", never a stale hand-typed number. Each figure shows the commit
-  it was measured at.
+- **Live parity numbers** (`website-parity-numbers-at-build`). The site reads
+  `scripts/parity/output/package-summary.json` (`scripts/parity/package-summary.ts:3,43`),
+  which joins api-compare and test-compare per package. It does not recompute
+  that file. CI's `rails-comparison` job already runs `pnpm parity:packages`
+  and, on every push to `main`, uploads it in the `parity-outputs-<sha>`
+  artifact with 90-day retention (`.github/workflows/ci.yml:2584-2601`). The
+  Pages build downloads the newest such artifact from a successful `main` run
+  (`gh run download`, `actions: read`). That costs seconds rather than a
+  second parity run. The data is exposed through a VitePress data loader and
+  a prerendered SvelteKit load. A missing artifact renders "—", never a stale
+  hand-typed number, and each figure shows the commit it was measured at.
 - **Per-package deviation pages** (`website-per-package-deviation-pages`).
   Each published package gets `docs/packages/<pkg>.md`: its Rails
-  counterpart, its parity numbers, and its ratified rules. The rules are the
-  `## …` sections of the root `CLAUDE.md` that cite the package, plus every
-  section of `packages/<pkg>/CLAUDE.md`. Each appears as its heading, its
+  counterpart, its parity numbers, and its ratified rules. The rules are every
+  `##` / `###` section of `packages/<pkg>/CLAUDE.md`, plus each root
+  `CLAUDE.md` section that the package's own receipts cite (the per-package
+  `tagSites` / `permanentSkips` in `package-summary.json` already resolve each
+  citation to a `claudeSections` anchor). Each appears as its heading, its
   one-line rule and a link to the section on GitHub, at the pinned commit.
   `package-summary.ts` already parses these (`claudeSections`). The page is
   generated, so it cannot drift from the rule. The three hand-written
@@ -363,7 +426,11 @@ so `run.sh` covers it. The site never shows an unrun command.
 1. **Phase 1, live early:** `website-remove-frontiers`, then
    `website-pages-deploy-workflow` (also gated on
    `website-docs-typedoc-fails-under-ts5`). The trimmed site, with its stale
-   content, is live at the Pages URL.
+   content, is live at the Pages URL. `website-docs-typedoc-fails-under-ts5`
+   and `website-typedoc-backslash-angle-double-escaped` sit in other RFCs
+   (0061 and 0127) as `draft`. Activating this RFC does not make them ready,
+   so the operator promotes them with `pnpm tasks status-set <id> ready`
+   alongside `rfc-status … active`.
 2. **Phase 2, docs:** `website-typedoc-from-package-list`,
    `website-parity-numbers-at-build`, `website-per-package-deviation-pages`,
    `website-guides-index-follows-rails-guides`, then
@@ -385,6 +452,8 @@ so `run.sh` covers it. The site never shows an unrun command.
 - The API sidebar lists 54 packages, and `typedoc` reports 0 errors and 0
   `unknown block tag` warnings (11 errors and 162 warnings today).
 - 54 per-package pages exist, and none of them has a hand-typed parity figure.
+- The landing page has no hand-written code block. The walkthrough story's test
+  asserts that each block came from the README Quickstart.
 - Every row of `vendor/rails/v8.0.2/guides/source/documents.yaml`'s
   non-release-notes sections appears in the guides index.
 
@@ -416,3 +485,8 @@ so `run.sh` covers it. The site never shows an unrun command.
 ## Changelog
 
 - 2026-11-18: initial RFC
+- 2026-11-18: parity figures come from CI's `parity-outputs-<sha>` artifact
+  rather than a second parity run; the per-package audit is rewritten as a
+  list; deviation-page sections are selected by receipt citations; the
+  cross-RFC draft deps are flagged in Rollout; a daily Pages rebuild refreshes
+  the figures.

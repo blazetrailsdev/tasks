@@ -22,7 +22,7 @@ RFC § Design 3. Every number on the site today is hand-typed: the landing
 grid's `coverage` strings (`packages/website/src/routes/+page.svelte:3-8`,
 "71%", "95%", …). `pnpm parity:packages` writes
 `scripts/parity/output/package-summary.json`
-(`scripts/parity/package-summary.ts:3,43`), one entry per
+(`scripts/parity/package-summary.ts:3,43`) with one entry per
 `packages/<pkg>/package.json`. It joins api-compare output
 (`scripts/api-compare/output/`, `:24`) and test-compare output per package.
 
@@ -30,6 +30,6 @@ grid's `coverage` strings (`packages/website/src/routes/+page.svelte:3-8`,
 
 - [ ] A VitePress data loader and a prerendered SvelteKit load both read `package-summary.json`, from one shared module in `packages/website/`.
 - [ ] Each figure is rendered with the commit SHA it was measured at. A missing or unreadable output renders "—" and the build still passes.
-- [ ] `.github/workflows/pages.yml` runs `pnpm parity:packages` (and whatever it needs from `parity:api` / `parity:test`) before the site build.
+- [ ] `.github/workflows/pages.yml` does not run parity. It downloads `package-summary.json` from the newest `parity-outputs-<sha>` artifact of a successful `main` CI run (`.github/workflows/ci.yml:2584-2601`, uploaded on push with `retention-days: 90`), with `actions: read`. The rendered SHA is that artifact's.
 - [ ] `git grep -E 'coverage: "[0-9]+%"' packages/website` is empty.
-- [ ] The PR body states the extra wall time the parity step adds to the Pages job. PR CI is unchanged.
+- [ ] The download adds under a minute to the Pages job, and PR CI is unchanged. Local `pnpm --filter @blazetrails/website build` reads a local `scripts/parity/output/package-summary.json` if one is present.
