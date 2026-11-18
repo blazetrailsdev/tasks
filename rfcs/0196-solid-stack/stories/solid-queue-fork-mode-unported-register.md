@@ -5,7 +5,9 @@ updated: 2026-11-16
 rfc: "0196-solid-stack"
 cluster: null
 packages: ["solid-queue"]
-deps: ["solid-queue-async-supervisor-v1-7-2"]
+deps:
+  - solid-queue-async-supervisor-v1-7-2
+  - solid-queue-boot-guards-v1-7-2
 deps-rfc: []
 est-loc: 500
 priority: null
