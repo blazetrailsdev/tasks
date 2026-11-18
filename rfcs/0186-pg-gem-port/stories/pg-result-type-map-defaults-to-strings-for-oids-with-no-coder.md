@@ -1,14 +1,14 @@
 ---
 title: "activerecord: PG result type map answers a String for an OID with no coder"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-11-18
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 300
-priority: null
+priority: 8
 pr: null
 claim: null
 assignee: null

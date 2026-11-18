@@ -1,6 +1,6 @@
 ---
 title: "The template resolver answers from the trails build view map, not app/views or .tse sources"
-status: ready
+status: in-progress
 updated: 2026-11-18
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#10315
+claim: "2026-11-18T20:36:32Z"
+assignee: "template-resolver-answers-from-the-aot-view-map"
 blocked-by: null
 closed-reason: null
 ---

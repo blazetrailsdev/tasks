@@ -29,7 +29,7 @@ related-rfcs:
   - "0156-parity-beyond-name-presence"
   - "0154-ruby-compat-surfaced-deviations"
   - "0101-activesupport-out-of-closure-surface"
-priority: 5
+priority: 6
 ---
 
 # RFC 0158 — ActiveSupport port bugs surfaced by assertion convergence

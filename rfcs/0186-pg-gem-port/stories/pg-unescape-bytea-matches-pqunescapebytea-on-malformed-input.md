@@ -1,14 +1,14 @@
 ---
 title: "activerecord: unescape_bytea matches PQunescapeBytea on malformed input"
-status: draft
-updated: 2026-10-07
+status: ready
+updated: 2026-11-18
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 9
 pr: null
 claim: null
 assignee: null

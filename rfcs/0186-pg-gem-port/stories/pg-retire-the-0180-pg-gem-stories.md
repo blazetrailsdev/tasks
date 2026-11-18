@@ -1,7 +1,7 @@
 ---
 title: "Close the two RFC 0180 pg-gem stories as superseded and retag their receipts"
-status: draft
-updated: 2026-10-08
+status: closed
+updated: 2026-11-18
 rfc: "0186-pg-gem-port"
 cluster: migration
 packages: ["activerecord"]
@@ -16,7 +16,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Both RFC 0180 stories already reached done on their own (pg-gem-result-and-array-coders-score-against-the-pg-gem via trails#8690, pg-gem-connection-surface-scores-against-the-pg-gem via trails#8687); git grep of both ids over origin/main packages/ (ed7746008) returns nothing. Story's own AC leaves done stories alone, so nothing remains."
 ---
 
 ## Context

@@ -1,14 +1,14 @@
 ---
 title: "pg: PG.connect and PG::Connection's exec, prepare and close surface; new_client is PG.connect"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-11-18
 rfc: "0186-pg-gem-port"
 cluster: connection
 packages: ["pg", "activerecord"]
 deps: ["pg-result-moves-to-the-package"]
 deps-rfc: []
 est-loc: 600
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

@@ -1,7 +1,7 @@
 ---
 title: "PostgreSQLAdapter's raw-connection constructor arm takes a PG::Connection, not a pg.Client"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-11-18
 rfc: "0186-pg-gem-port"
 cluster: migration
 packages: ["activerecord"]
@@ -10,7 +10,7 @@ deps:
   - "pg-connection-status-cancel-block-move-to-the-package"
 deps-rfc: []
 est-loc: 300
-priority: null
+priority: 6
 pr: null
 claim: null
 assignee: null

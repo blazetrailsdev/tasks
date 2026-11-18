@@ -1,7 +1,7 @@
 ---
 title: "Notifications.publish should forward to notifier.publish"
-status: ready
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-18
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10313
+claim: "2026-11-18T20:06:38Z"
+assignee: "date-and-time-calculations-drops-eager-date-time-imports"
 blocked-by: null
 closed-reason: null
 ---

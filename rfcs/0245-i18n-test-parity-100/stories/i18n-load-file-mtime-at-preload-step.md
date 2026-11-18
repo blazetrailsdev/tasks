@@ -1,6 +1,6 @@
 ---
 title: "i18n-load-file-mtime-at-preload-step"
-status: claimed
+status: done
 updated: 2026-11-18
 rfc: "0245-i18n-test-parity-100"
 cluster: null

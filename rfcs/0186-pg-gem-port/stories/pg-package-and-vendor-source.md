@@ -1,17 +1,17 @@
 ---
 title: "Create @blazetrails/pg over node-pg: the namespace, constants and error classes"
-status: draft
-updated: 2026-10-08
+status: claimed
+updated: 2026-11-18
 rfc: "0186-pg-gem-port"
 cluster: package
 packages: ["pg", "scripts"]
 deps: []
 deps-rfc: []
 est-loc: 500
-priority: null
+priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-18T20:21:55Z"
+assignee: "pg-package-and-vendor-source"
 blocked-by: null
 closed-reason: null
 ---

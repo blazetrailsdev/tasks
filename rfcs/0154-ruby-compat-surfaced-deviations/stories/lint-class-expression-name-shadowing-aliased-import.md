@@ -1,6 +1,6 @@
 ---
 title: "Lint: a class expression named like an aliased import's original name (esbuild TDZ)"
-status: ready
+status: in-progress
 updated: 2026-11-18
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#10316
+claim: "2026-11-18T20:51:31Z"
+assignee: "lint-class-expression-name-shadowing-aliased-import"
 blocked-by: null
 closed-reason: null
 ---

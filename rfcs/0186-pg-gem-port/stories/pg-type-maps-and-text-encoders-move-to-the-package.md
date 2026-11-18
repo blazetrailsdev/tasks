@@ -1,7 +1,7 @@
 ---
 title: "pg: TypeMapByOid, TypeMapByClass, the text encoders and the connection type-map accessors"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-11-18
 rfc: "0186-pg-gem-port"
 cluster: result-and-coders
 packages: ["pg", "activerecord"]
@@ -13,7 +13,7 @@ deps:
   ]
 deps-rfc: []
 est-loc: 350
-priority: null
+priority: 4
 pr: null
 claim: null
 assignee: null

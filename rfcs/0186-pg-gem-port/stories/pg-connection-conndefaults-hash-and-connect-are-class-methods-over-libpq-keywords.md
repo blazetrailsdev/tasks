@@ -1,14 +1,14 @@
 ---
 title: "PG::Connection.conndefaults_hash and PG.connect are class methods over libpq conninfo keywords; retire the connectionString config key"
-status: draft
-updated: 2026-10-10
+status: ready
+updated: 2026-11-18
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 450
-priority: null
+priority: 8
 pr: null
 claim: null
 assignee: null

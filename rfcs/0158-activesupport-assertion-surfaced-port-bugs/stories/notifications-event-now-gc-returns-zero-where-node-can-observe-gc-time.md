@@ -1,7 +1,7 @@
 ---
 title: "activesupport: Notifications::Event#now_gc returns 0 where Node can observe GC time"
-status: ready
-updated: 2026-11-16
+status: blocked
+updated: 2026-11-18
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: ["activesupport"]
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-18T20:06:38Z"
+assignee: "date-and-time-calculations-drops-eager-date-time-imports"
+blocked-by: "operator decision: no synchronous cumulative GC-time source on Node. Tried perf_hooks' global PerformanceObserver({entryTypes:['gc']}) with takeRecords() at each read: after 3e6 allocations in one sync turn takeRecords() returns 0 entries; the 253 gc entries (28.9ms) are delivered only after the event loop turns. So a nowGc read at start!/finish! of a synchronous block always differs by 0, and an async block sees a lagged total. Proposed: add nowGc beside nowAllocations in CLAUDE.md 'Runtime facts Node does not expose' (answers 0, the arm Rails takes without GC.total_time, instrumenter.rb:219-227)."
 closed-reason: null
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: PG::Result is not an Array; execute returns the driver's raw result"
 status: ready
-updated: 2026-10-08
+updated: 2026-11-18
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps:
   - pg-gem-result-and-array-coders-score-against-the-pg-gem
 deps-rfc: []
 est-loc: 500
-priority: null
+priority: 8
 pr: null
 claim: null
 assignee: null

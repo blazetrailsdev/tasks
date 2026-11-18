@@ -1,14 +1,14 @@
 ---
 title: "pg: PG::Result moves to the package, without the Array superclass"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-11-18
 rfc: "0186-pg-gem-port"
 cluster: result-and-coders
 packages: ["pg", "activerecord"]
 deps: ["pg-package-and-vendor-source"]
 deps-rfc: []
 est-loc: 400
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

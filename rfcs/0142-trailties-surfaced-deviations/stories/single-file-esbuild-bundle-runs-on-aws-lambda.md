@@ -1,6 +1,6 @@
 ---
 title: "A trails app bundles into one esbuild file and runs on AWS Lambda"
-status: ready
+status: in-progress
 updated: 2026-11-18
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#10314
+claim: "2026-11-18T20:50:53Z"
+assignee: "single-file-esbuild-bundle-runs-on-aws-lambda"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,14 +1,14 @@
 ---
 title: "pg: port the gem's specs for the wrapped methods and enroll the package in parity:test"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-11-18
 rfc: "0186-pg-gem-port"
 cluster: package
 packages: ["pg", "scripts"]
 deps: ["pg-connection-session-setters-move-to-the-package", "pg-text-decoders-move-to-the-package"]
 deps-rfc: []
 est-loc: 500
-priority: null
+priority: 7
 pr: null
 claim: null
 assignee: null

@@ -1,14 +1,14 @@
 ---
 title: "pg: set_client_encoding, set_notice_receiver, server_version and conndefaults_hash"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-11-18
 rfc: "0186-pg-gem-port"
 cluster: connection
 packages: ["pg", "activerecord"]
 deps: ["pg-connection-exec-surface-moves-to-the-package", "pg-errors-carry-result-and-connection"]
 deps-rfc: []
 est-loc: 400
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null

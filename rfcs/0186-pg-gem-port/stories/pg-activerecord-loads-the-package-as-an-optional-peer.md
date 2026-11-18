@@ -1,7 +1,7 @@
 ---
 title: "activerecord depends on @blazetrails/pg as an optional peer, loaded where Rails requires the gem"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-11-18
 rfc: "0186-pg-gem-port"
 cluster: migration
 packages: ["activerecord", "pg"]
@@ -13,7 +13,7 @@ deps:
   ]
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 7
 pr: null
 claim: null
 assignee: null

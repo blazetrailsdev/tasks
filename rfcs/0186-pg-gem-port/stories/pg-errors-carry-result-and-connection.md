@@ -1,14 +1,14 @@
 ---
 title: "pg: the wrapper raises PG::Error subclasses carrying a PG::Result; translate_exception reads error_field"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-11-18
 rfc: "0186-pg-gem-port"
 cluster: connection
 packages: ["pg", "activerecord"]
 deps: ["pg-connection-exec-surface-moves-to-the-package"]
 deps-rfc: []
 est-loc: 500
-priority: null
+priority: 4
 pr: null
 claim: null
 assignee: null

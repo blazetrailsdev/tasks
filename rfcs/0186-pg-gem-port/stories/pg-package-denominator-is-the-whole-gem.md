@@ -1,14 +1,14 @@
 ---
 title: "parity: the pg package's denominator is the whole gem, not the surface Rails calls"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-11-18
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 8
 pr: null
 claim: null
 assignee: null

@@ -1,7 +1,7 @@
 ---
 title: "i18n: port I18n::Middleware and test/i18n/middleware_test.rb"
-status: in-progress
-updated: 2026-11-17
+status: done
+updated: 2026-11-18
 rfc: "0245-i18n-test-parity-100"
 cluster: residuals
 packages: [i18n]
