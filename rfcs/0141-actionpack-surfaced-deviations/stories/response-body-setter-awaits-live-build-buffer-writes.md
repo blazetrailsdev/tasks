@@ -1,7 +1,7 @@
 ---
 title: "ActionDispatch::Response#body= awaits Live::Response#build_buffer's writes (setBody)"
-status: claimed
-updated: 2026-11-17
+status: in-progress
+updated: 2026-11-18
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#10288
 claim: "2026-11-17T22:51:56Z"
 assignee: "response-body-setter-awaits-live-build-buffer-writes"
 blocked-by: null

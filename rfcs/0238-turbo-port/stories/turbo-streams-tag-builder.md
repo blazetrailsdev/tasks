@@ -1,6 +1,6 @@
 ---
 title: "Port Turbo::Streams::TagBuilder and TurboStreamsTagBuilder"
-status: in-progress
+status: done
 updated: 2026-11-18
 rfc: "0238-turbo-port"
 cluster: turbo
