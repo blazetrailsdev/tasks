@@ -1,6 +1,6 @@
 ---
 title: "Measure the respond_to family's busy-CPU share after trails#10283"
-status: ready
+status: claimed
 updated: 2026-11-18
 rfc: "0241-request-path-performance"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 0
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-18T14:36:34Z"
+assignee: "measure-allocation-gap-commit-and-method"
 blocked-by: null
 closed-reason: null
 ---

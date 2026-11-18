@@ -1,6 +1,6 @@
 ---
 title: "ContentAttachment template renders attachable via implicit to_s, not await toString()"
-status: ready
+status: claimed
 updated: 2026-11-18
 rfc: "0219-actiontext-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-18T14:06:32Z"
+assignee: "content-attachment-template-implicit-to-s"
 blocked-by: null
 closed-reason: null
 ---

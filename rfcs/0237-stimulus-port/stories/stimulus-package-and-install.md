@@ -1,6 +1,6 @@
 ---
 title: "Create @blazetrails/stimulus: Engine, Stimulus::Manifest, stimulus:install and stimulus:manifest tasks"
-status: ready
+status: in-progress
 updated: 2026-11-18
 rfc: "0237-stimulus-port"
 cluster: stimulus
@@ -9,9 +9,9 @@ deps: [hotwire-vite-claude-md-ruling, vite-trails-install-and-precompile-hook]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10294
+claim: "2026-11-18T14:21:34Z"
+assignee: "stimulus-package-and-install"
 blocked-by: null
 closed-reason: null
 ---

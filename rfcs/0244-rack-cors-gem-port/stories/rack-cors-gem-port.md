@@ -1,6 +1,6 @@
 ---
 title: "Port the rack-cors gem as @blazetrails/rack-cors"
-status: in-progress
+status: done
 updated: 2026-11-18
 rfc: "0244-rack-cors-gem-port"
 cluster: rack-cors
