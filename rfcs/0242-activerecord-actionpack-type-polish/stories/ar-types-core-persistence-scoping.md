@@ -1,7 +1,7 @@
 ---
 title: "Core, persistence, scoping and uniqueness types without any"
-status: draft
-updated: 2026-11-16
+status: ready
+updated: 2026-11-18
 rfc: "0242-activerecord-actionpack-type-polish"
 cluster: type-polish-activerecord
 packages: [activerecord]

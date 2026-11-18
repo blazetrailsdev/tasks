@@ -1,7 +1,7 @@
 ---
 title: "Port Turbo::StreamsChannel, Streams::Broadcasts, the broadcast jobs and debouncers"
-status: ready
-updated: 2026-11-17
+status: claimed
+updated: 2026-11-18
 rfc: "0238-turbo-port"
 cluster: turbo
 packages: [turbo, actioncable]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 500
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-18T12:51:37Z"
+assignee: "tag-builder-trailing-undefined-block"
 blocked-by: null
 closed-reason: null
 ---

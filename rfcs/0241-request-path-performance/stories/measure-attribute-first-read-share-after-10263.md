@@ -1,7 +1,7 @@
 ---
 title: "Measure the attribute first-read allocation share after trails#10263 on the slim harness"
-status: draft
-updated: 2026-11-17
+status: ready
+updated: 2026-11-18
 rfc: "0241-request-path-performance"
 cluster: null
 packages: []

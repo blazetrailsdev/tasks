@@ -1,7 +1,7 @@
 ---
 title: "Port the rack-cors gem as @blazetrails/rack-cors"
-status: draft
-updated: 2026-11-17
+status: claimed
+updated: 2026-11-18
 rfc: "0244-rack-cors-gem-port"
 cluster: rack-cors
 packages: [rack-cors]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 550
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-18T12:36:41Z"
+assignee: "rack-cors-gem-port"
 blocked-by: null
 closed-reason: null
 ---

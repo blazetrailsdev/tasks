@@ -10,6 +10,7 @@ packages:
   - "trailties"
 clusters:
   - stimulus
+priority: 4
 ---
 
 # RFC 0237 — Port the stimulus-rails gem as @blazetrails/stimulus

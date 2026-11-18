@@ -10,6 +10,7 @@ packages:
   - "trailties"
 clusters:
   - rack-cors
+priority: 2
 ---
 
 # RFC 0244 — Port the rack-cors gem

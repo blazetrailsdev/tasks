@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc Tests failing on main @00cb851a"
-status: in-progress
+status: done
 updated: 2026-11-18
 rfc: "0061-ci-failures"
 cluster: null

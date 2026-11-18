@@ -1,7 +1,7 @@
 ---
 title: "Create @blazetrails/stimulus: Engine, Stimulus::Manifest, stimulus:install and stimulus:manifest tasks"
-status: draft
-updated: 2026-11-12
+status: ready
+updated: 2026-11-18
 rfc: "0237-stimulus-port"
 cluster: stimulus
 packages: [stimulus]

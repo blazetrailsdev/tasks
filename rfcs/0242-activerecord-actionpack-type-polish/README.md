@@ -16,6 +16,7 @@ clusters:
   - type-polish-activerecord
   - type-polish-actionpack
   - type-polish-neighbours
+priority: 3
 ---
 
 # RFC 0242 — Type polish for activerecord, actionpack and their neighbours

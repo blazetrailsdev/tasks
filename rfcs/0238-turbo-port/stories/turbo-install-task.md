@@ -1,6 +1,6 @@
 ---
 title: "Port turbo:install (jsbundling branch) targeting the vite_rails entrypoint"
-status: ready
+status: claimed
 updated: 2026-11-18
 rfc: "0238-turbo-port"
 cluster: turbo
@@ -15,8 +15,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-18T12:51:37Z"
+assignee: "tag-builder-trailing-undefined-block"
 blocked-by: null
 closed-reason: null
 ---

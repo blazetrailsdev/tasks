@@ -1,7 +1,7 @@
 ---
 title: "actionview lib without double casts"
-status: draft
-updated: 2026-11-16
+status: ready
+updated: 2026-11-18
 rfc: "0242-activerecord-actionpack-type-polish"
 cluster: type-polish-neighbours
 packages: [actionview]

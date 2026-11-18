@@ -1,7 +1,7 @@
 ---
 title: "Generated cors.ts initializer loads @blazetrails/rack-cors"
-status: draft
-updated: 2026-11-17
+status: ready
+updated: 2026-11-18
 rfc: "0244-rack-cors-gem-port"
 cluster: rack-cors
 packages: [trailties]
