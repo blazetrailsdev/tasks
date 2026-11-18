@@ -1,6 +1,6 @@
 ---
 title: "View and DOM tests build .trails/views themselves in a fresh worktree"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0136-trailmap"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 30
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

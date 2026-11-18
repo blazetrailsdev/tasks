@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-boot-guards-v1-7-2"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0196-solid-stack"
 cluster: null

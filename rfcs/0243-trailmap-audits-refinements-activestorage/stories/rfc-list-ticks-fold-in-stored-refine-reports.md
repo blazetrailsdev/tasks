@@ -1,6 +1,6 @@
 ---
 title: "/rfcs history ticks fold in the stored refine reports, as ringo's collectRFCMarks does"
-status: ready
+status: in-progress
 updated: 2026-11-18
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#165
+claim: "2026-11-18T19:21:34Z"
+assignee: "rfc-list-ticks-fold-in-stored-refine-reports"
 blocked-by: null
 closed-reason: null
 ---

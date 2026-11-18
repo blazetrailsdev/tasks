@@ -1,6 +1,6 @@
 ---
 title: "Port turbo:install (jsbundling branch) targeting the vite_rails entrypoint"
-status: in-progress
+status: done
 updated: 2026-11-18
 rfc: "0238-turbo-port"
 cluster: turbo

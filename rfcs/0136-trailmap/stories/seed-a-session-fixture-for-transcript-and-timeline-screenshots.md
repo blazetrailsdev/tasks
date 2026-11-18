@@ -1,6 +1,6 @@
 ---
 title: "Seed a session fixture so the transcript and PR-timeline pages can be shot without a ringo origin"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0136-trailmap"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 14
 pr: null
 claim: null
 assignee: null

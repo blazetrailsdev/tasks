@@ -1,14 +1,14 @@
 ---
 title: "The dev hub database is a migration behind (no rfc_refines), so booting against it fails"
-status: draft
-updated: 2026-11-17
+status: ready
+updated: 2026-11-18
 rfc: "0136-trailmap"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 20
-priority: null
+priority: 4
 pr: null
 claim: null
 assignee: null

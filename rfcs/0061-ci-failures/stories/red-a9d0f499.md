@@ -1,6 +1,6 @@
 ---
 title: "Action Cable PostgreSQL Tests failing on main @a9d0f499"
-status: ready
+status: closed
 updated: 2026-11-18
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-18T19:20:22Z"
+assignee: "red-a9d0f499"
 blocked-by: null
-closed-reason: null
+closed-reason: "Infra: setup-node pnpm cache restore failed with 'Egress is over the account limit' and the run was cancelled before tests ran; Action Cable PostgreSQL Tests passes on the next main run 44376145982 (2473174)."
 ---
 
 ## Context

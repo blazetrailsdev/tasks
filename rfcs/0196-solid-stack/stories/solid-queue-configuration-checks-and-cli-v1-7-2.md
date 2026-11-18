@@ -1,6 +1,6 @@
 ---
 title: "Port Configuration warnings/checks, CLI#check and FailedExecution error truncation"
-status: claimed
+status: in-progress
 updated: 2026-11-18
 rfc: "0196-solid-stack"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#10310
 claim: "2026-11-18T18:51:35Z"
 assignee: "solid-queue-configuration-checks-and-cli-v1-7-2"
 blocked-by: null

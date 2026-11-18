@@ -1,14 +1,14 @@
 ---
 title: "/rfcs no-JS sort submit puts sort=priority on the URL"
-status: draft
-updated: 2026-11-17
+status: ready
+updated: 2026-11-18
 rfc: "0136-trailmap"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 20
-priority: null
+priority: 10
 pr: null
 claim: null
 assignee: null

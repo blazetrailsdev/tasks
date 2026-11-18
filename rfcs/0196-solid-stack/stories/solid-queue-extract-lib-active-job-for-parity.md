@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-extract-lib-active-job-for-parity"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0196-solid-stack"
 cluster: null

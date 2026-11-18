@@ -1,14 +1,14 @@
 ---
 title: "RFC page priority is ringo's select (- and 1-9), not a number field"
-status: draft
-updated: 2026-11-17
+status: ready
+updated: 2026-11-18
 rfc: "0136-trailmap"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 9
 pr: null
 claim: null
 assignee: null

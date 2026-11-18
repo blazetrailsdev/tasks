@@ -1,6 +1,6 @@
 ---
 title: "objectWith awaits an async block before restoring; with_production_debouncer uses it"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0238-turbo-port"
 cluster: null

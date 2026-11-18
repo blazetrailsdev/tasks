@@ -1,7 +1,7 @@
 ---
 title: "i18n: port I18n::Gettext and Gettext::Helpers with api_test.rb and gettext_plural_keys_test.rb"
-status: ready
-updated: 2026-11-17
+status: claimed
+updated: 2026-11-18
 rfc: "0245-i18n-test-parity-100"
 cluster: gettext
 packages: [i18n]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 650
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-18T19:51:36Z"
+assignee: "i18n-load-file-mtime-at-preload-step"
 blocked-by: null
 closed-reason: null
 ---

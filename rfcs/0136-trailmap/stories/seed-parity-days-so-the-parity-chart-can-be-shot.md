@@ -1,6 +1,6 @@
 ---
 title: "Seed parity_days so the parity chart can be shot and checked under a forced theme"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0136-trailmap"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 13
 pr: null
 claim: null
 assignee: null

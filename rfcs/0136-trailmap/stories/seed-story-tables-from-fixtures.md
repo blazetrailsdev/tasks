@@ -1,6 +1,6 @@
 ---
 title: "Seed stories, story_deps, story_paths and events from test/fixtures"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0136-trailmap"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 400
-priority: null
+priority: 15
 pr: null
 claim: null
 assignee: null

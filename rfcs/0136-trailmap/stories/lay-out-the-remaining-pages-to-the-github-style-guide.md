@@ -1,6 +1,6 @@
 ---
 title: "Lay out the remaining pages to the GitHub style guide"
-status: in-progress
+status: done
 updated: 2026-11-18
 rfc: "0136-trailmap"
 cluster: null

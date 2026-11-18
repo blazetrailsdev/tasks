@@ -1,7 +1,7 @@
 ---
 title: "trailmap: Refinement is a Base record with an attached summary, and the RFC marks fold it in"
-status: draft
-updated: 2026-11-17
+status: ready
+updated: 2026-11-18
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: refinements
 packages: ["activestorage", "activerecord"]

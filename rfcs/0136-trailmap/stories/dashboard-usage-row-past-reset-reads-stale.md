@@ -1,6 +1,6 @@
 ---
 title: "Dashboard usage: a reset in the past reads as stale, not 100% elapsed"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0136-trailmap"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 8
 pr: null
 claim: null
 assignee: null

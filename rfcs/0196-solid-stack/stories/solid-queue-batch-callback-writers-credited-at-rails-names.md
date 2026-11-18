@@ -1,6 +1,6 @@
 ---
 title: "Credit Batch::Callbacks on_finish=/on_success=/on_failure= at their Rails names"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0196-solid-stack"
 cluster: null

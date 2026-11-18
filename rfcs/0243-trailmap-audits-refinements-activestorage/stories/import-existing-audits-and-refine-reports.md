@@ -1,7 +1,7 @@
 ---
 title: "trailmap: one-time import of the audits directory and ringo's refine reports"
-status: draft
-updated: 2026-11-17
+status: ready
+updated: 2026-11-18
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: import
 packages: []

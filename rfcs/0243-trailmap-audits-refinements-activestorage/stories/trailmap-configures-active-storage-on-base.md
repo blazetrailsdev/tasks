@@ -1,7 +1,7 @@
 ---
 title: "trailmap: configure Active Storage's Disk service on Base"
-status: draft
-updated: 2026-11-17
+status: ready
+updated: 2026-11-18
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: storage
 packages: ["activestorage"]

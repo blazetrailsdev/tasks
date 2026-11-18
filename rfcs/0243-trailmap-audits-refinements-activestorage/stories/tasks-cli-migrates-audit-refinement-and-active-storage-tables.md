@@ -1,6 +1,6 @@
 ---
 title: "tasks CLI: migrations for the Active Storage, audits and refinements tables"
-status: ready
+status: done
 updated: 2026-11-18
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: storage
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 140
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: tasks#358
+claim: "2026-11-18T19:21:34Z"
+assignee: "rfc-list-ticks-fold-in-stored-refine-reports"
 blocked-by: null
 closed-reason: null
 ---

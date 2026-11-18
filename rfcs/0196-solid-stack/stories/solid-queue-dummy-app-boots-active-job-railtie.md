@@ -1,6 +1,6 @@
 ---
 title: "Boot ActiveJob's railtie initializers in the solid-queue dummy app"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0196-solid-stack"
 cluster: null

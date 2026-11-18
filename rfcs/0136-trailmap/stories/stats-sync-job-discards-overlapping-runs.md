@@ -1,7 +1,7 @@
 ---
 title: "StatsSyncJob discards an overlapping hourly run"
-status: blocked
-updated: 2026-11-16
+status: ready
+updated: 2026-11-18
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,11 +9,11 @@ deps:
   - solid-queue-limits-concurrency-on-conflict-discard
 deps-rfc: []
 est-loc: 20
-priority: null
+priority: 7
 pr: null
-claim: "2026-11-16T22:21:26Z"
-assignee: "command-palette-footer-hints-follow-the-mode"
-blocked-by: "onConflict landed in trails#10198 but vendor pin a7270c9 predates it; needs a separate re-vendor PR"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "The README's dev hub DSN names a docker-only host, so a host boot cannot reach it"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0136-trailmap"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 20
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null

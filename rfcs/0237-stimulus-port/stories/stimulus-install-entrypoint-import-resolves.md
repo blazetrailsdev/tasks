@@ -1,6 +1,6 @@
 ---
 title: "stimulus-install-entrypoint-import-resolves"
-status: ready
+status: in-progress
 updated: 2026-11-18
 rfc: "0237-stimulus-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10311
+claim: "2026-11-18T19:06:39Z"
+assignee: "stimulus-install-entrypoint-import-resolves"
 blocked-by: null
 closed-reason: null
 ---

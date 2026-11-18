@@ -1,6 +1,6 @@
 ---
 title: "Port rack-cors test/unit/cors_test.rb and its .ru configs"
-status: in-progress
+status: done
 updated: 2026-11-18
 rfc: "0244-rack-cors-gem-port"
 cluster: rack-cors

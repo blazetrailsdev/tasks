@@ -1,6 +1,6 @@
 ---
 title: "test-compare drops an empty describe segment on the TS side only"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0244-rack-cors-gem-port"
 cluster: null

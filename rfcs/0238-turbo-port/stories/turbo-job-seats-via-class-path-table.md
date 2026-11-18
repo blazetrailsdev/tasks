@@ -1,6 +1,6 @@
 ---
 title: "Seat Turbo::Streams jobs with plain assignments via the class-path table, not constSet"
-status: draft
+status: ready
 updated: 2026-11-18
 rfc: "0238-turbo-port"
 cluster: null

@@ -1,14 +1,14 @@
 ---
 title: "hub-models-query-sqlite-in-a-local-boot"
-status: draft
-updated: 2026-11-17
+status: ready
+updated: 2026-11-18
 rfc: "0136-trailmap"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 6
 pr: null
 claim: null
 assignee: null
