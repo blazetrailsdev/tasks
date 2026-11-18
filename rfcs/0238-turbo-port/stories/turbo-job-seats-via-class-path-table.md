@@ -1,6 +1,6 @@
 ---
 title: "Seat Turbo::Streams jobs with plain assignments via the class-path table, not constSet"
-status: claimed
+status: in-progress
 updated: 2026-11-18
 rfc: "0238-turbo-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#10320
 claim: "2026-11-18T21:53:07Z"
 assignee: "activejob-actioncable-before-setup-signatures-intersect"
 blocked-by: null

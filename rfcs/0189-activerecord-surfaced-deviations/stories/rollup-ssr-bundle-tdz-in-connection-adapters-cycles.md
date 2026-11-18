@@ -1,6 +1,6 @@
 ---
 title: "Rollup/Vite SSR bundles throw TDZ in activerecord connection-adapters cycles"
-status: ready
+status: claimed
 updated: 2026-11-18
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-18T22:37:37Z"
+assignee: "adapter-load-path-pulls-only-the-configured-driver"
 blocked-by: null
 closed-reason: null
 ---

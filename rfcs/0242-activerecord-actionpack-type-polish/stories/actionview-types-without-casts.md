@@ -1,6 +1,6 @@
 ---
 title: "actionview lib without double casts"
-status: ready
+status: claimed
 updated: 2026-11-18
 rfc: "0242-activerecord-actionpack-type-polish"
 cluster: type-polish-neighbours
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-18T22:06:38Z"
+assignee: "actionpack-callback-block-receives-declaring-controller"
 blocked-by: null
 closed-reason: null
 ---

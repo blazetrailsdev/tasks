@@ -1,6 +1,6 @@
 ---
 title: "View and DOM tests build .trails/views themselves in a fresh worktree"
-status: ready
+status: claimed
 updated: 2026-11-18
 rfc: "0136-trailmap"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 30
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-18T22:21:35Z"
+assignee: "view-tests-build-views-in-a-fresh-worktree"
 blocked-by: null
 closed-reason: null
 ---

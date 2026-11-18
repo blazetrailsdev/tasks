@@ -1,6 +1,6 @@
 ---
 title: "logger-silence-takes-block-without-severity"
-status: draft
+status: closed
 updated: 2026-11-18
 rfc: "0196-solid-stack"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: the call-args row came from a scoped local manifest; the full parity:api:calls:args run does not flag withPollingVolume's silence call."
 ---
 
 ## Context

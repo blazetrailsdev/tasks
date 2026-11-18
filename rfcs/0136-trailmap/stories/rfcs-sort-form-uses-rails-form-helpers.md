@@ -1,6 +1,6 @@
 ---
 title: "/rfcs sort form uses form_with/select_tag helpers, not hand-written HTML"
-status: ready
+status: claimed
 updated: 2026-11-18
 rfc: "0136-trailmap"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: 11
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-18T22:21:35Z"
+assignee: "view-tests-build-views-in-a-fresh-worktree"
 blocked-by: null
 closed-reason: null
 ---

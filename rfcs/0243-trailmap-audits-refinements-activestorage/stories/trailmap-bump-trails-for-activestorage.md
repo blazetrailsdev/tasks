@@ -1,6 +1,6 @@
 ---
 title: "trailmap: bump trails past the attach-upload fix and depend on @blazetrails/activestorage"
-status: ready
+status: claimed
 updated: 2026-11-18
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: storage
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-18T22:52:45Z"
+assignee: "trailmap-bump-trails-for-activestorage"
 blocked-by: null
 closed-reason: null
 ---

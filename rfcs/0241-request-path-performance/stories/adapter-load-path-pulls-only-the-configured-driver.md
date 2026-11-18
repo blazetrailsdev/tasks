@@ -1,6 +1,6 @@
 ---
 title: "A bundled app pulls only its configured adapter's driver, not every loadPath target"
-status: ready
+status: claimed
 updated: 2026-11-18
 rfc: "0241-request-path-performance"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-18T22:37:37Z"
+assignee: "adapter-load-path-pulls-only-the-configured-driver"
 blocked-by: null
 closed-reason: null
 ---
