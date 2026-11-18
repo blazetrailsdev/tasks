@@ -1,7 +1,7 @@
 ---
 title: "solid-queue-fiber-processes-lifecycle-test"
-status: ready
-updated: 2026-11-17
+status: in-progress
+updated: 2026-11-18
 rfc: "0196-solid-stack"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10280
+claim: "2026-11-18T00:51:41Z"
+assignee: "solid-queue-fiber-processes-lifecycle-test"
 blocked-by: null
 closed-reason: null
 ---
