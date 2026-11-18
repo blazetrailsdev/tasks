@@ -24,6 +24,8 @@ packages:
   - "vite-assets"
   - "vite-trails"
   - "activejob"
+  - "rack-session"
+  - "website"
 clusters:
   - "boot"
   - "generators"
