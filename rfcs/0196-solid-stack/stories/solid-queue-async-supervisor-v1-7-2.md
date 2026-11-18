@@ -7,6 +7,7 @@ cluster: null
 packages: ["solid-queue"]
 deps:
   - solid-queue-v1-7-2-remaining-drift
+  - solid-queue-retire-fork-emulating-supervisor-tests
 deps-rfc: []
 est-loc: 500
 priority: null
