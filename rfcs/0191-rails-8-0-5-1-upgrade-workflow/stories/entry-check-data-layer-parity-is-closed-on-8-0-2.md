@@ -1,7 +1,7 @@
 ---
 title: "Entry check: the data layer is at 100% on Rails 8.0.2 and every gate is green"
 status: blocked
-updated: 2026-11-16
+updated: 2026-11-19
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: entry
 packages: [arel, activemodel, activerecord]
@@ -23,9 +23,9 @@ deps-rfc: ["0175-activerecord-test-parity-100"]
 est-loc: 20
 priority: null
 pr: null
-claim: "2026-11-11T14:45:38Z"
+claim: "2026-11-19T17:07:15Z"
 assignee: "entry-check-data-layer-parity-is-closed-on-8-0-2"
-blocked-by: "data layer not at 100%: the only open prerequisite is am-attributes-initialize-inlined (still blocked on a compare.ts gate change / operator ruling; compare.ts:6856 on origin/main still throws for unpaired @inlinedFrom initialize). The 4 AR methods + yaml_column tests landed (trails#10018, #10046, #10015). Earlier 'main CI red at 876804dd8b' is stale (main green at 711f2f63a5, 2026-11-16)."
+blocked-by: "re-measured 2026-11-19 at aecc5821aa (main CI green): arel/activemodel 100%; activerecord 6951/6966 methods — all 15 are ActiveRecord::Callbacks macros dropped by #10064's ClassMethods interface/const shape (ar-callbacks-class-methods-interface-members-credited); activerecord tests 8977/8997 with 20 skipped, several unreceipted (marshal_serialization x4, migration 'changing columns' x2, yaml relation serialization, first_or_initialize with block, async load has many BLOCKED) — needs operator ruling on whether PERMANENT-SKIPs count toward 100%"
 closed-reason: null
 ---
 

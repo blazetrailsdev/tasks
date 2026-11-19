@@ -1,6 +1,6 @@
 ---
 title: "ActiveRecord::Callbacks' 15 model-callback macros are credited again after the ClassMethods interface/const merge"
-status: ready
+status: done
 updated: 2026-11-19
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: entry
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10364
+claim: "2026-11-19T17:27:07Z"
+assignee: "ar-callbacks-class-methods-interface-members-credited"
 blocked-by: null
 closed-reason: null
 ---

@@ -33,7 +33,7 @@ packages:
   - "solid-queue"
   - "solid-cable"
 clusters: []
-priority: 4
+priority: 5
 ---
 
 # RFC 0136 — trailmap: one application owns the task domain

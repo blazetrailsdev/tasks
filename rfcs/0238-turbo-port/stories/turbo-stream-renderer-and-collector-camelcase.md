@@ -1,6 +1,6 @@
 ---
 title: "turbo_stream renderer key and collector mime methods are camelCase"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0238-turbo-port"
 cluster: null

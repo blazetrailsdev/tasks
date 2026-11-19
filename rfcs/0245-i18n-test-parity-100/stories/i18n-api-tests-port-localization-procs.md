@@ -1,7 +1,7 @@
 ---
 title: "i18n: port I18n::Tests::Localization::Procs into the api suites"
-status: ready
-updated: 2026-11-17
+status: done
+updated: 2026-11-19
 rfc: "0245-i18n-test-parity-100"
 cluster: api-mixins
 packages: [i18n]
@@ -9,9 +9,9 @@ deps: [i18n-api-tests-port-localization-datetime-and-time]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10365
+claim: "2026-11-19T17:32:07Z"
+assignee: "i18n-api-tests-port-localization-procs"
 blocked-by: null
 closed-reason: null
 ---

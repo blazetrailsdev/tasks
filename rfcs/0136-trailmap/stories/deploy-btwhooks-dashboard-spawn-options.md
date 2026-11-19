@@ -1,6 +1,6 @@
 ---
 title: "trailmap: deploy btwhooks spawn-options so the spawn dialog's Model and Worktree take effect"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0136-trailmap"
 cluster: null

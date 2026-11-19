@@ -1,6 +1,6 @@
 ---
 title: "The pane page sends Enter and arrow keypresses, not only a line of text"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0136-trailmap"
 cluster: null

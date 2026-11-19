@@ -1,6 +1,6 @@
 ---
 title: "has-secure-password-typed-members"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0242-activerecord-actionpack-type-polish"
 cluster: null
