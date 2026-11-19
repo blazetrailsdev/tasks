@@ -1,6 +1,6 @@
 ---
 title: "Generator namespaces are snake_case like Rails (test_unit:model), not dasherized"
-status: in-progress
+status: closed
 updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: trails#10329
 claim: "2026-11-19T00:21:39Z"
 assignee: "converge-integration-test-helper-loads-to-one-site"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: operator ruling 2026-11-18 — trails uses Node casing; a snake_case vs kebab-case difference is translation, not a deviation"
 ---
 
 ## Context

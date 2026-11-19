@@ -1,7 +1,7 @@
 ---
 title: "Port StimulusGenerator (trails generate stimulus <name>)"
-status: ready
-updated: 2026-11-18
+status: claimed
+updated: 2026-11-19
 rfc: "0237-stimulus-port"
 cluster: stimulus
 packages: [stimulus, trailties]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T02:51:40Z"
+assignee: "stimulus-controller-generator"
 blocked-by: null
 closed-reason: null
 ---

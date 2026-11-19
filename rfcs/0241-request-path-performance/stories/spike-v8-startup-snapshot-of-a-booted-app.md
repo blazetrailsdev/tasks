@@ -1,7 +1,7 @@
 ---
 title: "Spike: a V8 startup snapshot of a booted trails app"
-status: ready
-updated: 2026-11-18
+status: claimed
+updated: 2026-11-19
 rfc: "0241-request-path-performance"
 cluster: null
 packages: ["trailties"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 1
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T02:51:40Z"
+assignee: "stimulus-controller-generator"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "trailties-enable-no-floating-promises"
-status: ready
-updated: 2026-11-16
+status: claimed
+updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: [trailties]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T02:51:40Z"
+assignee: "stimulus-controller-generator"
 blocked-by: null
 closed-reason: null
 ---

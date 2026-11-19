@@ -1,7 +1,7 @@
 ---
 title: "Seed stories, story_deps, story_paths and events from test/fixtures"
-status: ready
-updated: 2026-11-18
+status: done
+updated: 2026-11-19
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: 15
-pr: null
-claim: null
-assignee: null
+pr: trailmap#172
+claim: "2026-11-19T02:06:22Z"
+assignee: "seed-story-tables-from-fixtures"
 blocked-by: null
 closed-reason: null
 ---

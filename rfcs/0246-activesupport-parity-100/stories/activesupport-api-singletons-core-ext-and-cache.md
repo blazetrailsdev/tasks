@@ -1,6 +1,6 @@
 ---
 title: "activesupport: close the 21 API misses in core_ext, cache, backtrace_cleaner and environment_inquirer"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0246-activesupport-parity-100"
 cluster: api-residuals

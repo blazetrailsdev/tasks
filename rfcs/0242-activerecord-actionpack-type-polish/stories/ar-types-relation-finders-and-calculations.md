@@ -1,6 +1,6 @@
 ---
 title: "Relation finder, calculation, batch and merger types without any"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0242-activerecord-actionpack-type-polish"
 cluster: type-polish-activerecord

@@ -1,7 +1,7 @@
 ---
 title: "test-help's TestCase types omit the TestFixtures class attributes, so use_transactional_tests = false does not typecheck"
-status: ready
-updated: 2026-11-17
+status: claimed
+updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T02:51:40Z"
+assignee: "stimulus-controller-generator"
 blocked-by: null
 closed-reason: null
 ---

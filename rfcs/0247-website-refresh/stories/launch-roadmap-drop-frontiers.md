@@ -1,7 +1,7 @@
 ---
 title: "launch-roadmap-drop-frontiers"
-status: draft
-updated: 2026-11-18
+status: ready
+updated: 2026-11-19
 rfc: "0247-website-refresh"
 cluster: null
 packages: []

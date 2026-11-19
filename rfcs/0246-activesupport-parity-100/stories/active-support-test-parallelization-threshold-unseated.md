@@ -1,6 +1,6 @@
 ---
 title: "active-support-test-parallelization-threshold-unseated"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0246-activesupport-parity-100"
 cluster: null

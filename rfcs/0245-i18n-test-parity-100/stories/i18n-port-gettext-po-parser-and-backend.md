@@ -1,6 +1,6 @@
 ---
 title: "i18n: port Gettext::PoParser on the racc runtime and I18n::Backend::Gettext"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0245-i18n-test-parity-100"
 cluster: gettext

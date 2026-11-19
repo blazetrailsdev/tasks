@@ -1,6 +1,6 @@
 ---
 title: "Reflection and association builder parameters typed"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0242-activerecord-actionpack-type-polish"
 cluster: type-polish-activerecord

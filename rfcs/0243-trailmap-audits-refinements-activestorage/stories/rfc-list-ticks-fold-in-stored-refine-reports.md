@@ -1,7 +1,7 @@
 ---
 title: "/rfcs history ticks fold in the stored refine reports, as ringo's collectRFCMarks does"
-status: in-progress
-updated: 2026-11-18
+status: done
+updated: 2026-11-19
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: null
 packages: []
