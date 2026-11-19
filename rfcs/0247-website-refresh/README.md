@@ -9,6 +9,7 @@ packages:
   - "website"
   - "activesupport"
   - "trailties"
+  - "activerecord"
 clusters:
   - website-deploy
   - website-docs
