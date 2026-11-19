@@ -28,8 +28,10 @@ trailmap `app/controllers/rfc-refines-controller.ts`).
 ## Acceptance criteria
 
 - `GET /api/rfc-spawns?slug=<rfc>` answers the RFC's live and recently
-  finished refine/sunset spawns: `{mode: refine|sunset, pane, startedAt,
+  finished (pane exited within the last 30 minutes, configurable)
+  refine/sunset spawns: `{mode: refine|sunset, pane, startedAt,
 state: running|done}`.
 - Spawn start and pane exit emit `/events` messages carrying the slug and
   mode.
-- Go tests cover a refine and a sunset on the same RFC listed separately.
+- Go tests cover a refine and a sunset on the same RFC listed separately, and a
+  `done` spawn dropping off after the 30-minute window.

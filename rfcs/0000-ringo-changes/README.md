@@ -57,12 +57,18 @@ transient. Claude Code accepts `--session-id <uuid>` at start and
 - **Send**: `POST /rfc-session/send {slug, sessionId, text}` types into the
   pane; when no pane is live it first respawns with `--resume <sessionId>` in
   the same worktree, waits for the prompt, then sends.
-- **Idle reaper**: a pane with no dialog (no operator send and no agent
-  output) for 5 minutes is closed: `/exit`, then `kill-pane`. The worktree and
-  transcript stay.
-- **Status**: `GET /rfc-session/status?slug=` answers `live` / `parked` with
-  the pane id and last dialog time, and the same transitions go out on
-  `/events` so trailmap updates without polling.
+- **Idle reaper**: a pane with no dialog for 5 minutes is closed: `/exit`,
+  then `kill-pane`. The worktree and transcript stay. "Dialog" is an operator
+  send or a new entry appended to the session's transcript JSONL
+  (`~/.claude/projects/<worktree>/<sessionId>.jsonl`), not a change in the
+  captured screen, so spinner and clock redraws never hold a pane open.
+- **Status**: `GET /rfc-session/status?slug=` answers `live` (pane open),
+  `parked` (reaped, resumable) or `none` (never started), with the pane id
+  and last dialog time; start/park/resume go out on `/events` so trailmap
+  updates without polling.
+- **Transcript**: `GET /rfc-session/transcript?slug=&sessionId=` serves the
+  session's JSONL messages, so a parked session stays readable without a
+  pane.
 
 ### In-flight refines and sunsets per RFC
 
@@ -70,13 +76,23 @@ transient. Claude Code accepts `--session-id <uuid>` at start and
 registers the spawn (`registerRFCSpawn`). Expose that as
 `GET /api/rfc-spawns?slug=` (mode, pane, started, state) and emit
 start/finish on `/events`, so the RFC page can show a live refine or sunset
-where it runs, through the existing `/pane/<n>/screen` relay.
+where it runs, through the existing `/pane/<n>/screen` relay. "Recently
+finished" is a spawn whose pane exited within the last 30 minutes; older ones
+drop off the list (the report is on the Refinements tab by then).
 
 ## Non-goals
 
 - **Persisting the session id in ringo:** trailmap's database owns it; ringo
   takes it as an argument.
 - **Multiple concurrent sessions per RFC:** one discussion session per RFC.
+- **Moving existing ringo stories out of `0136-trailmap`:** the ringo stories
+  already there (`deploy-ringo-pane-send-and-sessions-status`,
+  `ringo-sends-a-line-of-text-to-a-pane`, `ringo-screen-reports-pane-command`,
+  …) stay where they are; their history and PR links are in that RFC. New
+  ringo work goes here from this RFC on.
+- **The vendored-pin bump and deploy:** that is trailmap work (the pin lives
+  in trailmap's `vendor/ringo/PIN`) and stays in `0136-trailmap` as
+  `bump-the-ringo-pin-for-rfc-session-endpoints`.
 
 ## Alternatives considered
 
@@ -88,5 +104,28 @@ where it runs, through the existing `/pane/<n>/screen` relay.
 ## Rollout
 
 1. `ringo-rfc-discussion-sessions` and `ringo-reports-in-flight-rfc-refines`
-   (independent).
-2. trailmap's `rfc-page-discussion-session-tab` depends on both.
+   (independent). trailmap's `rfc-page-discussion-session-tab` can be built in
+   parallel against the ringo stub.
+2. `bump-the-ringo-pin-for-rfc-session-endpoints` (`0136-trailmap`): deploy
+   ringo with both and bump trailmap's vendored pin; depends on both.
+3. `rfc-page-discussion-session-tab` closes once it runs against the real
+   endpoints; depends on the bump.
+
+## Verification
+
+- Both ringo stories merged, ringo deployed, and trailmap's pin bumped
+  (`bump-the-ringo-pin-for-rfc-session-endpoints` done): 3 of 3 prerequisite
+  stories done.
+- `rfc-page-discussion-session-tab` closes against the deployed endpoints,
+  not the stub: on one RFC, a session is started, reaped after 5 idle
+  minutes (status `parked`), and resumed by the next message with the earlier
+  turns still in the transcript (1 manual run recorded in the story's PR).
+- 0 trailmap PRs in this cluster carry Go changes.
+
+## Open questions
+
+None open.
+
+## Changelog
+
+- 2026-11-19: initial RFC

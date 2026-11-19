@@ -6,8 +6,7 @@ rfc: "0136-trailmap"
 cluster: null
 packages: []
 deps:
-  - ringo-rfc-discussion-sessions
-  - ringo-reports-in-flight-rfc-refines
+  - bump-the-ringo-pin-for-rfc-session-endpoints
 deps-rfc: []
 est-loc: 450
 priority: null
@@ -43,10 +42,14 @@ that RFC live.
   `--resume`, and the tab shows a "resuming" state until the prompt is back.
 - After 5 minutes with no dialog ringo closes the tmux pane; the tab keeps
   showing the session as active (state `parked`, transcript still readable
-  from the session archive) and the next message reopens it transparently.
+  from ringo's `/rfc-session/transcript`) and the next message reopens it transparently.
 - The tab (and the Refinements tab) shows in-flight refine and sunset runs
   for this RFC from ringo's `/api/rfc-spawns?slug=`, each with its live pane
   screen via the existing `fleet/pane/:id/screen` relay, updated from
   `/events` rather than polling; a finished run links its report.
-- Controller and model tests; a ringo stub serves the new endpoints as the
-  dashboard stub does (trailmap#176).
+- Controller and model tests run against a ringo stub that serves the new
+  endpoints, as the dashboard stub does (trailmap#176). The tab can be built
+  and tested against the stub before the ringo stories land; the story
+  closes only after one manual run against the deployed endpoints (start,
+  park after 5 idle minutes, resume with earlier turns intact), recorded in
+  the PR.

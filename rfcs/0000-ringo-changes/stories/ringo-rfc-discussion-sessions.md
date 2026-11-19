@@ -38,11 +38,17 @@ session after its pane is gone, and nothing closes an idle pane.
   `--resume <sessionId>` in the same worktree, waits for the input prompt,
   then sends. Answers `{pane, resumed: bool}`.
 - An idle reaper closes a session pane after 5 minutes (configurable) with
-  no dialog — no operator send and no change in the captured screen — by
-  sending `/exit` and then `kill-pane` after a grace period. The worktree and
+  no dialog — no operator send and no new entry in the session's transcript
+  JSONL (`~/.claude/projects/<worktree>/<sessionId>.jsonl`); screen changes
+  (spinners, clocks) do not count — by sending `/exit` and then `kill-pane`
+  after a grace period. The worktree and
   the `~/.claude/projects/...` transcript are kept.
 - `GET /rfc-session/status?slug=` answers `{state: live|parked|none, pane,
 sessionId, lastDialogAt}`, and every start/park/resume emits an `/events`
   message carrying the slug.
+- `GET /rfc-session/transcript?slug=&sessionId=` serves the session's JSONL
+  messages (user and assistant turns) whether the pane is live or parked.
 - Go tests cover start, send-to-live, send-after-park (resume path), and the
-  reaper firing and not firing under activity.
+  reaper firing and not firing under activity (a transcript append resets it;
+  a screen-only change does not), and the transcript endpoint on a parked
+  session.
