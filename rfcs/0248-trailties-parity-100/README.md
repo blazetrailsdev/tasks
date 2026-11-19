@@ -139,7 +139,7 @@ renamed or skipped to pass.
 | ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | `sprockets_assets`, `assets`, `asset_debugging` tests | "importmap-rails and propshaft are out of scope; JavaScript is served by Vite", amended to name Sprockets (operator ruling 2026-11-19) |
 | `TestUnitReporter` superclass                         | trailties CLAUDE.md "`TestUnitReporter` has no `Minitest::StatisticsReporter` superclass"                                              |
-| `api/generator.rb`, `api/task.rb`                     | none yet: Open question 1                                                                                                              |
+| `api/generator.rb`, `api/task.rb`                     | "Rails API-doc tooling is not ported", new root section (operator ruling 2026-11-19)                                                   |
 
 ## Non-goals
 
@@ -177,12 +177,6 @@ renamed or skipped to pass.
   `pnpm parity:api -- --package trailties --missing --arity --inheritance` on a
   clean build meet the definition above.
 - The gate's CI check passes on main.
-
-## Open questions
-
-1. **Do `api/generator.rb` and `api/task.rb` count?** They build Rails' own
-   API docs. Recommendation: receipt them `PERMANENT:` under a new section for
-   "Rails-repo maintenance tooling".
 
 ## Stories
 
@@ -261,3 +255,7 @@ renamed or skipped to pass.
   and Propshaft; Vite is the chosen asset path. Former Open question 1 is
   resolved and removed, and `trailties-test-asset-pipeline-permanence` amends
   the root CLAUDE.md section to name Sprockets.
+- 2026-11-19: operator ruling. `api/generator.rb` and `api/task.rb` are not
+  ported: they build Rails' own API docs with RDoc/SDoc, and trails' docs are
+  built by its own TypeDoc pipeline, which does not mirror them. The last open
+  question is resolved, so the section is removed.

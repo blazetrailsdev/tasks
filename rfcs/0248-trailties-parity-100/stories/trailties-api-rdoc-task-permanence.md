@@ -1,5 +1,5 @@
 ---
-title: "trailties: rule on api/generator.rb and api/task.rb"
+title: "trailties: api/generator.rb and api/task.rb are not ported"
 status: ready
 updated: 2026-11-18
 rfc: "0248-trailties-parity-100"
@@ -20,9 +20,16 @@ closed-reason: null
 
 `api/generator.rb` (4 members) and `api/task.rb` (11) build Rails' own API docs
 with SDoc/RDoc. They are ✗ in `parity:api`. Rails ships them inside railties but
-they document the Rails repo, not an app. RFC Open question 2.
+they document the Rails repo, not an app.
+
+Operator ruling (2026-11-19): they are not ported. trails' API docs are built
+by its own TypeDoc pipeline (`packages/website`), which is not a mirror of
+`Rails::API::Task` / `RDoc::Generator::API`.
 
 ## Acceptance criteria
 
-- [ ] Either both files are ported against a TypeDoc equivalent, or each row is receipted `PERMANENT:` with a ratified section.
+- [ ] Root CLAUDE.md gains a section "Rails API-doc tooling is not ported
+      (`Rails::API::Task`, `RDoc::Generator::API`)" recording the ruling.
+- [ ] Both files' rows are receipted `PERMANENT` citing that section (unported-files
+      rows permanent, as Trilogy's are).
 - [ ] `parity:api` shows neither file as Miss.
