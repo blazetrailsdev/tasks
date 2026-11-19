@@ -2,7 +2,7 @@
 title: "Vendor rails/web-console v4.3.0"
 status: draft
 updated: 2026-11-19
-rfc: "0000-web-console-gem-port"
+rfc: "0250-web-console-gem-port"
 cluster: vendor
 packages: []
 deps: []

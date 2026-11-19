@@ -2,7 +2,7 @@
 title: "Spike: capture frame scopes on a raise through node:inspector"
 status: draft
 updated: 2026-11-19
-rfc: "0000-web-console-gem-port"
+rfc: "0250-web-console-gem-port"
 cluster: bindings
 packages: [ruby-compat]
 deps: [vendor-web-console-gem]

@@ -2,7 +2,7 @@
 title: "Link the error page's frames to Chrome DevTools"
 status: draft
 updated: 2026-11-19
-rfc: "0000-web-console-gem-port"
+rfc: "0250-web-console-gem-port"
 cluster: beyond-rails
 packages: [web-console]
 deps: [web-console-railtie-and-app-generator-entry]

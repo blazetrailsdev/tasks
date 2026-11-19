@@ -2,7 +2,7 @@
 title: "Port WebConsole::Middleware, Interceptor and the console helper"
 status: draft
 updated: 2026-11-19
-rfc: "0000-web-console-gem-port"
+rfc: "0250-web-console-gem-port"
 cluster: port
 packages: [web-console]
 deps:
