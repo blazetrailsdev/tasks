@@ -36,5 +36,7 @@ closed-reason: null
 
 - `packages/turbo/test/system/broadcasts.system.test.ts` ports every test in broadcasts_test.rb
   under its Rails name.
-- `testConnectAfterActions`' default names a `SystemTestCase` method, and the engine's wrap
-  does not recurse.
+- `testConnectAfterActions` defaults to `[]` (operator ruling 2026-11-19, trails#10377): no
+  `SystemTestCase` member is safe to wrap without new extra surface, and `[]` is the setting
+  `system_test_helper.rb:26` documents. The assignment carries
+  `@missingRailsArgs test_connect_after_actions= — PERMANENT`.
