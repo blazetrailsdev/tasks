@@ -5,7 +5,10 @@ updated: 2026-11-19
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["actionview"]
-deps: ["rfc-pages-render-through-instance-assigns", "tsc-views-strict-mode-misses-instance-assigns"]
+deps:
+  - rfc-pages-render-through-instance-assigns
+  - tsc-views-strict-mode-misses-instance-assigns
+  - trails-tsc-views-strict-mode-types-helpers-and-locals-fed-views
 deps-rfc: []
 est-loc: 300
 priority: null
