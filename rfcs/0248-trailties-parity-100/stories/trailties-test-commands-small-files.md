@@ -41,6 +41,6 @@ to make it pass. A gap that belongs to a ratified CLAUDE.md section gets a
 
 ## Acceptance criteria
 
-- [ ] Every listed file shows Miss 0 in `pnpm parity:test -- --package trailties`.
+- [ ] Every listed file (or, for a `file:a-b` row, every Rails test whose `test` line is in that range) is matched, with no Miss left in `pnpm parity:test -- --package trailties`.
 - [ ] No new `it.skip` without a `PERMANENT-SKIP:` receipt naming a CLAUDE.md section.
 - [ ] Lib fixes the ported tests need land in the same PR (or are filed with `pnpm tasks new` if over the LOC ceiling).

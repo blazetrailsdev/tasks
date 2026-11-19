@@ -1,5 +1,5 @@
 ---
-title: "trailties: port generators/app_generator_test.rb lines 561-1120"
+title: "trailties: port generators/app_generator_test.rb lines 589-989"
 status: ready
 updated: 2026-11-18
 rfc: "0248-trailties-parity-100"
@@ -21,9 +21,9 @@ closed-reason: null
 `pnpm parity:test -- --package trailties` (2026-11-18, clean build) lists
 37 Miss rows for the Rails test files below:
 
-| Rails test file                                                               | Miss |
-| ----------------------------------------------------------------------------- | ---: |
-| `vendor/rails/v8.0.2/railties/test/generators/app_generator_test.rb:561-1120` |   37 |
+| Rails test file                                                              | Miss |
+| ---------------------------------------------------------------------------- | ---: |
+| `vendor/rails/v8.0.2/railties/test/generators/app_generator_test.rb:589-989` |   37 |
 
 The file has 111 Miss in total, split in three line ranges. Its 7 wrong-describe rows belong to `trailties-test-wrong-describe-and-skip-receipts`.
 
@@ -37,6 +37,6 @@ to make it pass. A gap that belongs to a ratified CLAUDE.md section gets a
 
 ## Acceptance criteria
 
-- [ ] Every listed file shows Miss 0 in `pnpm parity:test -- --package trailties`.
+- [ ] Every listed file (or, for a `file:a-b` row, every Rails test whose `test` line is in that range) is matched, with no Miss left in `pnpm parity:test -- --package trailties`.
 - [ ] No new `it.skip` without a `PERMANENT-SKIP:` receipt naming a CLAUDE.md section.
 - [ ] Lib fixes the ported tests need land in the same PR (or are filed with `pnpm tasks new` if over the LOC ceiling).

@@ -19,8 +19,8 @@ closed-reason: null
 ## Context
 
 `parity:test` reports 16 wrong-describe rows (7 in `generators/app-generator.test.ts`,
-3 in `trailties/engine.test.ts`, 4 in `engine/lazy-route-set.test.ts`, and
-`action-controller-test-case-integration.test.ts`) and 42 skips:
+3 in `trailties/engine.test.ts`, 4 in `engine/lazy-route-set.test.ts`, and 2 in
+`application/action-controller-test-case-integration.test.ts`) and 42 skips:
 
 | File                                          | Skips |
 | --------------------------------------------- | ----: |

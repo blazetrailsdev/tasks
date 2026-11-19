@@ -6,6 +6,7 @@ rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []
 deps:
+  - trailties-test-move-misplaced-tests
   - trailties-plugin-generator-part-2-and-plugin-command
   - port-trailties-plugin-command
   - port-plugin-helpers-with-new-plugin
@@ -21,7 +22,7 @@ closed-reason: null
 
 ## Context
 
-`vendor/rails/v8.0.2/railties/test/generators/scaffold_generator_test.rb:571-688` holds seven tests that shell out through `with_new_plugin` and `bin/rails`. They are `it.skip` in `packages/trailties/src/generators/rails/scaffold/scaffold-generator.test.ts`.
+`vendor/rails/v8.0.2/railties/test/generators/scaffold_generator_test.rb:571-688` holds seven tests that shell out through `with_new_plugin` and `bin/rails`. They are `it.skip` in `packages/trailties/test/generators/trails/scaffold/scaffold-generator.test.ts` (moving to `test/generators/scaffold-generator.test.ts` in `trailties-test-move-misplaced-tests`).
 
 Sizing comes from the pilot `trailties-port-generator-tests-onto-generators-test-case`: about 9 LOC per Rails test on `controller_generator_test.rb`, about 33 on `scaffold_generator_test.rb`.
 

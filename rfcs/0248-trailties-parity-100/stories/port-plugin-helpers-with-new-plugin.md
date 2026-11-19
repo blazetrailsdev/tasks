@@ -6,6 +6,7 @@ rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []
 deps:
+  - trailties-test-move-misplaced-tests
   - trailties-plugin-generator-part-2-and-plugin-command
   - port-trailties-plugin-command
   - generated-plugin-bin-trails-cannot-boot
@@ -21,7 +22,7 @@ closed-reason: null
 
 ## Context
 
-`test_controller_tests_pass_by_default_inside_mountable_engine` and `..._inside_full_engine` (`vendor/rails/v8.0.2/railties/test/generators/scaffold_controller_generator_test.rb`) call `with_new_plugin` from `vendor/rails/v8.0.2/railties/test/generators/plugin_helpers.rb`, which has no trails counterpart. Both are empty `it.skip`s in `packages/trailties/src/generators/rails/scaffold-controller/scaffold-controller-generator.test.ts`.
+`test_controller_tests_pass_by_default_inside_mountable_engine` and `..._inside_full_engine` (`vendor/rails/v8.0.2/railties/test/generators/scaffold_controller_generator_test.rb`) call `with_new_plugin` from `vendor/rails/v8.0.2/railties/test/generators/plugin_helpers.rb`, which has no trails counterpart. Both are empty `it.skip`s in `packages/trailties/test/generators/trails/scaffold-controller/scaffold-controller-generator.test.ts` (moving to `test/generators/scaffold-controller-generator.test.ts` in `trailties-test-move-misplaced-tests`).
 
 ## Acceptance criteria
 

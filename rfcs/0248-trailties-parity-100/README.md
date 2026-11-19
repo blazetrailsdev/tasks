@@ -72,8 +72,13 @@ largest files:
 | `commands/middleware_test.rb`                                         |   38 | `trailties-test-commands-middleware`                   |
 | `application/sprockets_assets_test.rb` + `assets` + `asset_debugging` |   58 | `trailties-test-asset-pipeline-permanence`             |
 
-Every other Miss file is listed in exactly one story's Context table. The
-story tables sum to the 1,564.
+Every other Miss file is listed in exactly one story's Context table, and
+those tables sum to the 1,564. The split stories name a Rails line range
+(`file.rb:a-b`), and the boundaries were picked from `parity:test --missing` so
+each range holds about 44 (configuration) or 37 (app generator) Miss. The one
+overlap is `generators_test.rb`'s `source paths for not namespaced generators`,
+which is counted in `trailties-test-generators-lookup` but owned by the moved
+story `port-source-paths-for-not-namespaced-generators-test`.
 
 ### API gap: 108 missing members
 
@@ -137,6 +142,19 @@ renamed or skipped to pass.
 - The 187 extra TS-only tests.
 - Thor itself (RFC 0171).
 
+## Alternatives considered
+
+- **Add more stories to RFC 0142 instead of a new RFC.** Rejected. 0142 is a
+  bucket for deviations. It has no definition of done, and its ~110 open
+  stories do not move a parity number.
+- **Reopen RFC 0212.** Rejected. Closed RFCs cannot be reopened
+  (`rfc-status`), and 0212's job was the harnesses and lib surface, which are
+  done.
+- **One story per Rails test file.** Rejected for the four files with more
+  than 60 Miss. Each would be well over the 500 LOC ceiling, so they are split
+  by line range, with the boundaries chosen so each range has about the same
+  Miss count.
+
 ## Rollout
 
 1. `trailties-test-move-misplaced-tests` first (several test stories depend on it).
@@ -161,7 +179,8 @@ renamed or skipped to pass.
    "Rails-repo maintenance tooling".
 3. **Do the `configuration_test.rb` line splits hold?** Ranges are even by
    line, not by test; an agent that finds its range unbalanced says so in its PR
-   rather than taking tests from a neighbor's range.
+   rather than taking tests from a neighbor's range. (Measured counts per range are
+   recorded in each story, so this should be rare.)
 
 ## Stories
 
@@ -228,3 +247,7 @@ renamed or skipped to pass.
 ## Changelog
 
 - 2026-11-18: initial RFC
+- 2026-11-18: self-review. The split ranges are re-cut from measured Miss
+  counts, the split-story AC is per range, the wrong-describe breakdown is
+  corrected (16), Alternatives is added, and the moved stories now depend on
+  the misplaced-test move.
