@@ -1,7 +1,7 @@
 ---
 title: "retire-pnpmfile-ts5-peer-hook-remaining"
 status: blocked
-updated: 2026-09-24
+updated: 2026-11-19
 rfc: "0125-typescript-7-ground-floor"
 cluster: null
 packages: [scripts]
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "no hooked consumer works against TS 7's compiler entry yet (typescript-eslint 8.70.1 <6.1.0, typedoc 0.28.20 ≤6.0.x, @sveltejs/kit 2.70.3 ≤^6; others range-only), checked 2026-09-24"
+blocked-by: "no hooked consumer works against TS 7's compiler entry yet (typescript-eslint 8.73.0 / canary 8.73.1-alpha.5 <6.1.0, typedoc 0.28.20 ≤6.0.x, @sveltejs/kit 3.4.0 ^6; ts-api-utils, @vitest/eslint-plugin, @expo/require-utils range-only), checked 2026-11-18"
 closed-reason: null
 ---
 

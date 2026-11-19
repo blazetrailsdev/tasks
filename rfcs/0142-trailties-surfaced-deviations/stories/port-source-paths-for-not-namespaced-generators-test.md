@@ -1,6 +1,6 @@
 ---
 title: "port-source-paths-for-not-namespaced-generators-test"
-status: draft
+status: ready
 updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

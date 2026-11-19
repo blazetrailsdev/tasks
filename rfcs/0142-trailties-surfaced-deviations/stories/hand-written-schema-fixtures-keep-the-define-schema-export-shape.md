@@ -1,7 +1,7 @@
 ---
 title: "trailties: hand-written db/schema.ts fixtures keep the defineSchema export shape the dumper no longer emits"
-status: ready
-updated: 2026-11-16
+status: claimed
+updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T04:17:15Z"
+assignee: "generated-app-tsconfig-type-checks-test-dir"
 blocked-by: null
 closed-reason: null
 ---

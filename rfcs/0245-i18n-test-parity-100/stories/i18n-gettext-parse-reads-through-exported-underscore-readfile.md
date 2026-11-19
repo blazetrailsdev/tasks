@@ -1,6 +1,6 @@
 ---
 title: "i18n: Gettext#parse reads its .po through an exported _readFile instead of File.read"
-status: draft
+status: ready
 updated: 2026-11-19
 rfc: "0245-i18n-test-parity-100"
 cluster: null

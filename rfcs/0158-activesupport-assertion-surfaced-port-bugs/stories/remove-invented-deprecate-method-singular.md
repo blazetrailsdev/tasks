@@ -1,7 +1,7 @@
 ---
 title: "Deprecation#deprecateMethod (singular) is invented; Rails has only deprecate_methods"
-status: ready
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-19
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10343
+claim: "2026-11-19T04:01:39Z"
+assignee: "date-and-time-calculations-drops-eager-date-time-imports"
 blocked-by: null
 closed-reason: null
 ---

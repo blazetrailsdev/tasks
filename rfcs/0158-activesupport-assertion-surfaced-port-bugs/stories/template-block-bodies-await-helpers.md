@@ -1,7 +1,7 @@
 ---
 title: "template-block-bodies-await-helpers"
-status: ready
-updated: 2026-11-16
+status: claimed
+updated: 2026-11-19
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: [actionview]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T04:31:34Z"
+assignee: "story-pages-and-dashboard-render-through-instance-assigns"
 blocked-by: null
 closed-reason: null
 ---

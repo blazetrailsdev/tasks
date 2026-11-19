@@ -1,7 +1,7 @@
 ---
 title: "i18n: port I18n::Tests::Procs and ::Localization::Date into the api suites"
-status: draft
-updated: 2026-11-17
+status: in-progress
+updated: 2026-11-19
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: [i18n]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10344
+claim: "2026-11-19T04:07:47Z"
+assignee: "i18n-api-tests-port-procs-and-localization"
 blocked-by: null
 closed-reason: null
 ---

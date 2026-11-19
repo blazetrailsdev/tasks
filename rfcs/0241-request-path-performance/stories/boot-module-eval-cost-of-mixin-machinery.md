@@ -1,6 +1,6 @@
 ---
 title: "Cut boot module-eval cost of ruby-compat mixin machinery and date/temporal deps"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0241-request-path-performance"
 cluster: null

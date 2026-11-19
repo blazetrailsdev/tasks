@@ -1,6 +1,6 @@
 ---
 title: "activesupport class-level mixins: last 12 any/double-cast hits"
-status: draft
+status: ready
 updated: 2026-11-19
 rfc: "0242-activerecord-actionpack-type-polish"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Spike: a V8 startup snapshot of a booted trails app"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0241-request-path-performance"
 cluster: null

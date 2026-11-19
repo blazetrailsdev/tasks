@@ -1,6 +1,6 @@
 ---
 title: "Port StimulusGenerator (trails generate stimulus <name>)"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0237-stimulus-port"
 cluster: stimulus

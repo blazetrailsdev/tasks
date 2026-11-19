@@ -1,6 +1,6 @@
 ---
 title: "test-help's TestCase types omit the TestFixtures class attributes, so use_transactional_tests = false does not typecheck"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
