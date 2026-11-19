@@ -47,9 +47,11 @@ Operator ruling (2026-11-19), the mapping:
 | `tailwind_gemfile_entry` / tailwindcss-rails (`--css tailwind`)                                                                                                                                                                                                                                                                                                                                                                          | `@tailwindcss/vite` in `vite.config.ts` plus `@import "tailwindcss"`; `app-base.ts`'s `tailwindcss:install` call converges onto it |
 | `bundle lock --add-platform`, bundler binstub, bootsnap, thruster (`--skip-thruster`, `bin/thrust`; trailties' unused `skipThruster` option is deleted), brakeman (`--skip-brakeman`, binstub, `scan_ruby` CI job), benchmark-ips (`add_ips_to_gemfile`), `Bundler.with_original_env`, jbuilder (`--skip-jbuilder`), dartsass-rails, cssbundling-rails, jsbundling-rails, rdoc (`doc:app`), Gemfile-only gems with no trails npm package | permanent: not ported                                                                                                              |
 
-Not yet ruled, and out of this section: the web server (puma,
-`web_server_gemfile_entry`, `config/puma.rb`). Only tests that assert on puma
-itself wait for that ruling; every other test in the same file proceeds.
+Puma (operator ruling 2026-11-19, for launch): `trails server` always serves
+through rackup's `Handler::Node` (`node:http`). `web_server_gemfile_entry`,
+`config/puma.rb`, `--using puma` and `Server::Command`'s Puma recommendation are
+not ported, and a test asserting on Puma is parked `PERMANENT-SKIP:` citing this
+section. Clustered serving on `node:cluster` is a separate post-launch RFC.
 
 `vendor/rails/v8.0.2/railties/test/generators/app_generator_test.rb`'s
 `test_web_console` (`:789`) and `test_skip_dev_gems` (`:1032`), and
