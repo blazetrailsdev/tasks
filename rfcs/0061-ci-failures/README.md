@@ -10,6 +10,7 @@ packages:
   - scripts
   - "actionpack"
   - "trailties"
+  - "mail"
 clusters: []
 priority: 0
 ---
