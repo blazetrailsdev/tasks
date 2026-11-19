@@ -26,6 +26,7 @@ packages:
   - "activejob"
   - "rack-session"
   - "website"
+  - "nokogiri"
 clusters:
   - "boot"
   - "generators"
