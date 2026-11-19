@@ -1,6 +1,6 @@
 ---
 title: "Turbo test-assertion hooks decide at on_load time, not initializer time"
-status: ready
+status: claimed
 updated: 2026-11-19
 rfc: "0238-turbo-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T15:31:41Z"
+assignee: "turbo-stream-renderer-and-collector-camelcase"
 blocked-by: null
 closed-reason: null
 ---

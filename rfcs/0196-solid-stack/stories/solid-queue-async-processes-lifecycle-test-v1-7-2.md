@@ -1,7 +1,7 @@
 ---
 title: "Converge processes-lifecycle.test.ts onto v1.7.2 async_processes_lifecycle_test.rb"
 status: ready
-updated: 2026-11-16
+updated: 2026-11-19
 rfc: "0196-solid-stack"
 cluster: null
 packages: []

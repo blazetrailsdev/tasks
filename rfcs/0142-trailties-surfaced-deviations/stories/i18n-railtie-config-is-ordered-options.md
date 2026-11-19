@@ -1,6 +1,6 @@
 ---
 title: "I18n::Railtie config.i18n is OrderedOptions with typed setter keys"
-status: claimed
+status: in-progress
 updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#10359
 claim: "2026-11-19T14:46:37Z"
 assignee: "health-controller-is-not-importable-from-trailties"
 blocked-by: null

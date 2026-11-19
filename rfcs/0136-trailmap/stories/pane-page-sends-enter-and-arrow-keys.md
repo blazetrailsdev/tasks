@@ -1,6 +1,6 @@
 ---
 title: "The pane page sends Enter and arrow keypresses, not only a line of text"
-status: ready
+status: claimed
 updated: 2026-11-19
 rfc: "0136-trailmap"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T15:46:21Z"
+assignee: "deploy-btwhooks-dashboard-spawn-options"
 blocked-by: null
 closed-reason: null
 ---

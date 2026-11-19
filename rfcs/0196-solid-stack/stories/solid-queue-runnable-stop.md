@@ -1,6 +1,6 @@
 ---
 title: "Port Runnable#stop"
-status: ready
+status: in-progress
 updated: 2026-11-19
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10361
+claim: "2026-11-19T15:16:34Z"
+assignee: "solid-queue-adapter-extends-abstract-adapter"
 blocked-by: null
 closed-reason: null
 ---

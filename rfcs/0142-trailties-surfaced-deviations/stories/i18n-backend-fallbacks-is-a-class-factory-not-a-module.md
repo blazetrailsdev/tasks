@@ -1,6 +1,6 @@
 ---
 title: "i18n-backend-fallbacks-is-a-class-factory-not-a-module"
-status: claimed
+status: in-progress
 updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#10359
 claim: "2026-11-19T14:46:37Z"
 assignee: "health-controller-is-not-importable-from-trailties"
 blocked-by: null

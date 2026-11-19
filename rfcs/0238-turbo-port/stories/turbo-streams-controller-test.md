@@ -1,7 +1,7 @@
 ---
 title: "turbo-streams-controller-test"
-status: ready
-updated: 2026-11-18
+status: claimed
+updated: 2026-11-19
 rfc: "0238-turbo-port"
 cluster: null
 packages: []
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T15:31:41Z"
+assignee: "turbo-stream-renderer-and-collector-camelcase"
 blocked-by: null
 closed-reason: null
 ---

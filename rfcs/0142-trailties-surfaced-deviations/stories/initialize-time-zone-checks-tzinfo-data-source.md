@@ -1,6 +1,6 @@
 ---
 title: "initialize-time-zone-checks-tzinfo-data-source"
-status: claimed
+status: blocked
 updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: "2026-11-19T14:46:37Z"
 assignee: "health-controller-is-not-importable-from-trailties"
-blocked-by: null
+blocked-by: "TZInfo::DataSource.get is ported (#10065) but createDefaultDataSource needs TZInfo::DataSources::ZoneinfoDataSource (or tzinfo-data's TZInfo::Data), neither ported, so calling it in the initializer makes every boot raise. Waits on tzinfo-zoneinfo-data-source."
 closed-reason: null
 ---
 

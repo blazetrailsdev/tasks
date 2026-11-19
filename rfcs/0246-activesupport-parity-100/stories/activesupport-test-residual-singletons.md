@@ -1,7 +1,7 @@
 ---
 title: "activesupport: port notifications, enumerable and HWIA test singletons"
-status: ready
-updated: 2026-11-18
+status: in-progress
+updated: 2026-11-19
 rfc: "0246-activesupport-parity-100"
 cluster: test-residuals
 packages: [activesupport]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10360
+claim: "2026-11-19T15:01:33Z"
+assignee: "activesupport-inflector-test-loop-residue"
 blocked-by: null
 closed-reason: null
 ---
