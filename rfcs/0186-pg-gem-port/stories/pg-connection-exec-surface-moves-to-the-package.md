@@ -1,6 +1,6 @@
 ---
 title: "pg: PG.connect and PG::Connection's exec, prepare and close surface; new_client is PG.connect"
-status: claimed
+status: in-progress
 updated: 2026-11-19
 rfc: "0186-pg-gem-port"
 cluster: connection
@@ -9,7 +9,7 @@ deps: ["pg-result-moves-to-the-package"]
 deps-rfc: []
 est-loc: 600
 priority: 3
-pr: null
+pr: trails#10357
 claim: "2026-11-19T13:17:05Z"
 assignee: "pg-connection-exec-surface-moves-to-the-package"
 blocked-by: null

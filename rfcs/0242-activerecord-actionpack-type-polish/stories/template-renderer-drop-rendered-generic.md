@@ -1,6 +1,6 @@
 ---
 title: "TemplateRenderer#renderTemplate returns RenderedTemplate; drop the Rendered generic"
-status: in-progress
+status: closed
 updated: 2026-11-19
 rfc: "0242-activerecord-actionpack-type-polish"
 cluster: null
@@ -13,7 +13,7 @@ pr: trails#10350
 claim: "2026-11-19T11:01:32Z"
 assignee: "activesupport-types-class-level-mixins-remainder"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: Rails' TemplateRenderer#render_template (template_renderer.rb:58-70) and StreamingTemplateRenderer#render_template (streaming_template_renderer.rb:44-60) return different types, and TypeScript rejects the override (TS2416) unless the base return is generic. The operator ruled on trails#10350 to keep TemplateRenderer<Rendered>."
 ---
 
 ## Context

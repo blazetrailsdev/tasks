@@ -1,6 +1,6 @@
 ---
 title: "activesupport: rule testing/parallelization permanent or port it"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0246-activesupport-parity-100"
 cluster: receipts

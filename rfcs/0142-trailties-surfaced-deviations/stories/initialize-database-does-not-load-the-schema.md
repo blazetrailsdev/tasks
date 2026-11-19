@@ -1,7 +1,7 @@
 ---
 title: "active_record.initialize_database only establishes the connection, as Rails' does"
-status: ready
-updated: 2026-11-16
+status: done
+updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10261
+claim: "2026-11-19T14:46:37Z"
+assignee: "health-controller-is-not-importable-from-trailties"
 blocked-by: null
 closed-reason: null
 ---

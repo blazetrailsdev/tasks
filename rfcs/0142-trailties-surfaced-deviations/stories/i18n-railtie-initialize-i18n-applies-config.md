@@ -1,7 +1,7 @@
 ---
 title: "i18n-railtie-initialize-i18n-applies-config"
-status: ready
-updated: 2026-11-16
+status: blocked
+updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-19T14:46:37Z"
+assignee: "health-controller-is-not-importable-from-trailties"
+blocked-by: "initialize_i18n runs from after_initialize/before_eager_load load hooks, which runLoadHooks executes synchronously, while I18n.load_path= (config.ts setLoadPath -> backend.reloadBang) is async; porting it needs the hook to await. Same work as i18n-railtie-initializers-unported (RFC 0142), which owns porting the railtie's initializers."
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "activesupport: close subscriber.rb and output_safety.rb API gaps"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0246-activesupport-parity-100"
 cluster: api-residuals

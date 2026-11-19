@@ -1,7 +1,7 @@
 ---
 title: "TestsWithoutAssertions warning prints line 0, and the fixtures harness still names its test case by the bare title"
-status: ready
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-19
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: ["activesupport", "activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10358
+claim: "2026-11-19T14:31:38Z"
+assignee: "date-and-time-calculations-drops-eager-date-time-imports"
 blocked-by: null
 closed-reason: null
 ---

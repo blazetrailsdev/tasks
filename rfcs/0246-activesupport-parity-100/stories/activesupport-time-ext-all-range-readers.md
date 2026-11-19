@@ -1,6 +1,6 @@
 ---
 title: "activesupport: port time_ext_test.rb all_day/week/month/quarter/year"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0246-activesupport-parity-100"
 cluster: test-residuals

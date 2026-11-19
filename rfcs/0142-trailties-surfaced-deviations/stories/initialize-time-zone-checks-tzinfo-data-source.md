@@ -1,7 +1,7 @@
 ---
 title: "initialize-time-zone-checks-tzinfo-data-source"
-status: ready
-updated: 2026-11-16
+status: claimed
+updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T14:46:37Z"
+assignee: "health-controller-is-not-importable-from-trailties"
 blocked-by: null
 closed-reason: null
 ---

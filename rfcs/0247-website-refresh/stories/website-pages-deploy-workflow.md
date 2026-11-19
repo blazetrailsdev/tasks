@@ -1,6 +1,6 @@
 ---
 title: "Deploy the website to GitHub Pages from main"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0247-website-refresh"
 cluster: website-deploy

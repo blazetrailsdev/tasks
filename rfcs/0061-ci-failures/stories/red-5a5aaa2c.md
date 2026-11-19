@@ -1,6 +1,6 @@
 ---
 title: "Deploy to GitHub Pages failing on main @5a5aaa2c"
-status: ready
+status: closed
 updated: 2026-11-19
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T14:22:23Z"
+assignee: "red-5a5aaa2c"
 blocked-by: null
-closed-reason: null
+closed-reason: "GitHub Pages was not enabled for the repo (deploy-pages 404). Enabled Pages with build_type=workflow; rerun of run 44542213733 passed. No code change."
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "html5-sanitizer-vendor-over-nokogiri-html5"
-status: ready
-updated: 2026-11-16
+status: done
+updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9815
+claim: "2026-11-19T14:46:37Z"
+assignee: "health-controller-is-not-importable-from-trailties"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "pg: TypeMapByOid, TypeMapByClass, the text encoders and the connection type-map accessors"
-status: claimed
+status: in-progress
 updated: 2026-11-19
 rfc: "0186-pg-gem-port"
 cluster: result-and-coders
@@ -14,7 +14,7 @@ deps:
 deps-rfc: []
 est-loc: 350
 priority: 4
-pr: null
+pr: trails#10357
 claim: "2026-11-19T13:17:05Z"
 assignee: "pg-connection-exec-surface-moves-to-the-package"
 blocked-by: null

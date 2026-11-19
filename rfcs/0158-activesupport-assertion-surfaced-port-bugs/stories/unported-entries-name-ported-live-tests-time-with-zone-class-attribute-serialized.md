@@ -1,7 +1,7 @@
 ---
 title: "unported-files entries still name live tests (time_with_zone yaml, class attribute, serialized_attribute)"
-status: ready
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-19
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10358
+claim: "2026-11-19T14:31:38Z"
+assignee: "date-and-time-calculations-drops-eager-date-time-imports"
 blocked-by: null
 closed-reason: null
 ---
