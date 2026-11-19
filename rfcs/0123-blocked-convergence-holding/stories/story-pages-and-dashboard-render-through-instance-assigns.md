@@ -1,6 +1,6 @@
 ---
 title: "story-pages and dashboard set instance assigns and derive rows in helpers"
-status: claimed
+status: blocked
 updated: 2026-11-19
 rfc: "0123-blocked-convergence-holding"
 cluster: null
@@ -15,7 +15,7 @@ priority: null
 pr: null
 claim: "2026-11-19T04:31:34Z"
 assignee: "story-pages-and-dashboard-render-through-instance-assigns"
-blocked-by: null
+blocked-by: "trails-tsc-views strict mode types helpers and locals-fed trailmap views as never (trails-tsc-views-strict-mode-types-helpers-and-locals-fed-views); work is on trailmap branch trailmap-story-pages-instance-assigns"
 closed-reason: null
 ---
 

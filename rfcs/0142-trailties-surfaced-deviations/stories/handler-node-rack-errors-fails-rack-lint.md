@@ -1,6 +1,6 @@
 ---
 title: "rack: Handler::Node's rack.errors has no puts or flush, so Rack::Lint rejects every env"
-status: claimed
+status: in-progress
 updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#10347
 claim: "2026-11-19T04:17:15Z"
 assignee: "generated-app-tsconfig-type-checks-test-dir"
 blocked-by: null

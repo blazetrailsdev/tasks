@@ -1,6 +1,6 @@
 ---
 title: "template-block-bodies-await-helpers"
-status: claimed
+status: in-progress
 updated: 2026-11-19
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#10346
 claim: "2026-11-19T04:31:34Z"
 assignee: "story-pages-and-dashboard-render-through-instance-assigns"
 blocked-by: null

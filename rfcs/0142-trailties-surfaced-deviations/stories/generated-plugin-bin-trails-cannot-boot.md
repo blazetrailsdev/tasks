@@ -1,6 +1,6 @@
 ---
 title: "generated-plugin-bin-trails-cannot-boot"
-status: claimed
+status: ready
 updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-19T04:17:15Z"
-assignee: "generated-app-tsconfig-type-checks-test-dir"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

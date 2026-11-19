@@ -1,6 +1,6 @@
 ---
 title: "ActiveModel::Attributes#initialize is inlined and tagged"
-status: claimed
+status: in-progress
 updated: 2026-11-19
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: entry
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 1
-pr: null
+pr: trails#10345
 claim: "2026-11-19T04:46:38Z"
 assignee: "am-attributes-initialize-inlined"
 blocked-by: null
