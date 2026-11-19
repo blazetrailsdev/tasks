@@ -12,6 +12,7 @@ deps:
   - ar-controller-runtime-initialize-inlined
   - am-attributes-initialize-inlined
   - ar-yaml-column-safe-load-inherited-tests
+  - ar-callbacks-class-methods-interface-members-credited
 deps-rfc: ["0175-activerecord-test-parity-100"]
 est-loc: 20
 priority: null
