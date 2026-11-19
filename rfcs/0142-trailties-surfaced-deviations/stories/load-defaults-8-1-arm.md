@@ -1,7 +1,7 @@
 ---
 title: "load-defaults-8-1-arm"
 status: ready
-updated: 2026-11-16
+updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "pg: the wrapper raises PG::Error subclasses carrying a PG::Result; translate_exception reads error_field"
-status: ready
-updated: 2026-11-18
+status: claimed
+updated: 2026-11-19
 rfc: "0186-pg-gem-port"
 cluster: connection
 packages: ["pg", "activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 500
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T22:52:37Z"
+assignee: "call-args-gate-resolves-inherited-constructor-padding"
 blocked-by: null
 closed-reason: null
 ---

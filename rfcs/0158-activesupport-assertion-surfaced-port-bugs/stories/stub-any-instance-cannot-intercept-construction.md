@@ -1,7 +1,7 @@
 ---
 title: "stub_any_instance covers only Klass.new(), not new Klass()"
-status: ready
-updated: 2026-11-16
+status: blocked
+updated: 2026-11-19
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-19T22:13:34Z"
+assignee: "date-and-time-calculations-drops-eager-date-time-imports"
+blocked-by: "operator decision: whether stubAnyInstance's new-Klass gap is PERMANENT. Evidence: Rails stubs Klass.new (method_call_assertions.rb:63-65); trails builds records with new Klass only (activerecord CLAUDE.md), and an ES import binding is immutable to other modules, so no stub can redirect a 'new Klass()' already bound in an importer; a Proxy-wrapped class only intercepts call sites that import the wrapper, and vi.mock is module-registry substitution outside activesupport's testing API."
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "DateAndTime::Calculations eagerly imports date/time calculation modules, blocking include() in time/date files"
-status: ready
+status: in-progress
 updated: 2026-11-19
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10383
+claim: "2026-11-19T22:13:34Z"
+assignee: "date-and-time-calculations-drops-eager-date-time-imports"
 blocked-by: null
 closed-reason: null
 ---

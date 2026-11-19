@@ -1,7 +1,7 @@
 ---
 title: "notes ParserExtractor skips any file with a syntax error"
-status: ready
-updated: 2026-11-16
+status: claimed
+updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T22:26:42Z"
+assignee: "load-defaults-8-1-arm"
 blocked-by: null
 closed-reason: null
 ---

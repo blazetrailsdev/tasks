@@ -1,7 +1,7 @@
 ---
 title: "PostgreSQLAdapter's raw-connection constructor arm takes a PG::Connection, not a pg.Client"
-status: ready
-updated: 2026-11-18
+status: claimed
+updated: 2026-11-19
 rfc: "0186-pg-gem-port"
 cluster: migration
 packages: ["activerecord"]
@@ -12,8 +12,8 @@ deps-rfc: []
 est-loc: 300
 priority: 6
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T22:52:37Z"
+assignee: "call-args-gate-resolves-inherited-constructor-padding"
 blocked-by: null
 closed-reason: null
 ---

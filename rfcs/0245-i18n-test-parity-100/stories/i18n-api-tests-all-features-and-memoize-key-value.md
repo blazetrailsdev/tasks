@@ -1,6 +1,6 @@
 ---
 title: "i18n-api-tests-all-features-and-memoize-key-value"
-status: draft
+status: closed
 updated: 2026-11-19
 rfc: "0245-i18n-test-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Memoize half landed: I18nMemoizeBackendWithKeyValueApiTest is in packages/i18n/test/api/memoize.test.ts:44 on origin/main (trails#10379). all_features half is dead: api/all_features_test.rb is a PERMANENT unported-files row (scripts/parity/unported-files/i18n.ts:43) because it includes Backend::Cache and Metadata, both PERMANENT rows (i18n.ts:11,35) and an RFC non-goal."
 ---
 
 ## Context

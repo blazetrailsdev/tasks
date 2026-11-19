@@ -1,6 +1,6 @@
 ---
 title: "trailties: port AppBase's GemfileEntry and gemfile_entries members"
-status: claimed
+status: in-progress
 updated: 2026-11-19
 rfc: "0248-trailties-parity-100"
 cluster: api-residuals
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#10382
 claim: "2026-11-19T21:34:32Z"
 assignee: "trailties-api-app-base-gemfile-entries"
 blocked-by: null

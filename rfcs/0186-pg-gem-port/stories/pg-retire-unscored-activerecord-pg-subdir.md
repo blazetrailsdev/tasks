@@ -1,6 +1,6 @@
 ---
 title: "Retire UNSCORED_SUBDIRS once activerecord/lib/pg is empty"
-status: ready
+status: claimed
 updated: 2026-11-19
 rfc: "0186-pg-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T22:52:37Z"
+assignee: "call-args-gate-resolves-inherited-constructor-padding"
 blocked-by: null
 closed-reason: null
 ---

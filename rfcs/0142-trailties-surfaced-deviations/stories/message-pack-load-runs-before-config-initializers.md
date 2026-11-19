@@ -1,7 +1,7 @@
 ---
 title: "require_message_pack runs before config/initializers; converge to after_initialize position"
-status: ready
-updated: 2026-11-16
+status: claimed
+updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T22:26:42Z"
+assignee: "load-defaults-8-1-arm"
 blocked-by: null
 closed-reason: null
 ---

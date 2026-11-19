@@ -1,7 +1,7 @@
 ---
 title: "redis-cache-store-async-over-npm-client"
 status: ready
-updated: 2026-11-16
+updated: 2026-11-19
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: ["activesupport"]
