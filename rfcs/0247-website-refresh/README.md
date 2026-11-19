@@ -7,6 +7,8 @@ updated: 2026-11-18
 owner: "@deanmarano"
 packages:
   - "website"
+  - "activesupport"
+  - "trailties"
 clusters:
   - website-deploy
   - website-docs
