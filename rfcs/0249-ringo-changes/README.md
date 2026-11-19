@@ -1,5 +1,5 @@
 ---
-rfc: "0000-ringo-changes"
+rfc: "0249-ringo-changes"
 title: "ringo: changes trailmap features need from the fleet process"
 status: draft
 created: 2026-11-19
@@ -12,12 +12,7 @@ related-rfcs:
   - "0136-trailmap"
 ---
 
-<!-- Unnumbered until merge: copy this dir to `rfcs/0000-your-slug`, keep `rfc:`
-     as 0000-your-slug and the H1 below number-free. `scripts/finalize-rfc.mjs`
-     swaps 0000 for the assigned number at merge. Never use a `draft-` prefix —
-     `draft` is a lifecycle status, not a dir prefix (see top-level README). -->
-
-# RFC — ringo: changes trailmap features need from the fleet process
+# RFC 0249 — ringo: changes trailmap features need from the fleet process
 
 ## Summary
 

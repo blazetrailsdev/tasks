@@ -2,7 +2,7 @@
 title: "ringo: resumable per-RFC discussion sessions with a 5-minute idle reaper"
 status: draft
 updated: 2026-11-19
-rfc: "0000-ringo-changes"
+rfc: "0249-ringo-changes"
 cluster: rfc-sessions
 packages: []
 deps: []
