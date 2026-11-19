@@ -135,11 +135,11 @@ renamed or skipped to pass.
 
 ### Permanence candidates
 
-| Gap                                                   | Section                                                                                                     |
-| ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
-| `sprockets_assets`, `assets`, `asset_debugging` tests | "importmap-rails and propshaft are out of scope; JavaScript is served by Vite" (Sprockets: Open question 1) |
-| `TestUnitReporter` superclass                         | trailties CLAUDE.md "`TestUnitReporter` has no `Minitest::StatisticsReporter` superclass"                   |
-| `api/generator.rb`, `api/task.rb`                     | none yet: Open question 2                                                                                   |
+| Gap                                                   | Section                                                                                                                                |
+| ----------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `sprockets_assets`, `assets`, `asset_debugging` tests | "importmap-rails and propshaft are out of scope; JavaScript is served by Vite", amended to name Sprockets (operator ruling 2026-11-19) |
+| `TestUnitReporter` superclass                         | trailties CLAUDE.md "`TestUnitReporter` has no `Minitest::StatisticsReporter` superclass"                                              |
+| `api/generator.rb`, `api/task.rb`                     | none yet: Open question 1                                                                                                              |
 
 ## Non-goals
 
@@ -180,10 +180,7 @@ renamed or skipped to pass.
 
 ## Open questions
 
-1. **Is Sprockets out of scope like Propshaft?** Recommendation: yes; extend the
-   root section to name Sprockets, so the 58 asset tests are receipted except
-   those that test Vite-reachable behavior.
-2. **Do `api/generator.rb` and `api/task.rb` count?** They build Rails' own
+1. **Do `api/generator.rb` and `api/task.rb` count?** They build Rails' own
    API docs. Recommendation: receipt them `PERMANENT:` under a new section for
    "Rails-repo maintenance tooling".
 
@@ -260,3 +257,7 @@ renamed or skipped to pass.
   settle it. The move is a hard dep of every story that touches the same
   files. The 0142 blocker `generated-plugin-bin-trails-cannot-boot` is named,
   and the moved stories get a cluster and packages.
+- 2026-11-19: operator ruling. Sprockets is out of scope, like importmap-rails
+  and Propshaft; Vite is the chosen asset path. Former Open question 1 is
+  resolved and removed, and `trailties-test-asset-pipeline-permanence` amends
+  the root CLAUDE.md section to name Sprockets.
