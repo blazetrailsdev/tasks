@@ -2,7 +2,7 @@
 title: "port-source-paths-for-not-namespaced-generators-test"
 status: ready
 updated: 2026-11-19
-rfc: "0142-trailties-surfaced-deviations"
+rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []
 deps: []
