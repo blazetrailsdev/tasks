@@ -13,6 +13,12 @@ deps:
   - am-attributes-initialize-inlined
   - ar-yaml-column-safe-load-inherited-tests
   - ar-callbacks-class-methods-interface-members-credited
+  - activerecord-permanent-skips-receipted-in-unported-files
+  - association-async-load-target-uses-async-executor
+  - postgresql-bulk-change-query-count-one-short
+  - bird-total-count-async-after-initialize
+  - ctor-mass-assign-collection-ids-unsupported
+  - load-async-mixed-pool-scheduled-test-needs-a-synchronous-null-executor-load
 deps-rfc: ["0175-activerecord-test-parity-100"]
 est-loc: 20
 priority: null
