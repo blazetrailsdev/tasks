@@ -1,6 +1,6 @@
 ---
 title: "Core, persistence, scoping and uniqueness types without any"
-status: claimed
+status: in-progress
 updated: 2026-11-18
 rfc: "0242-activerecord-actionpack-type-polish"
 cluster: type-polish-activerecord
@@ -9,7 +9,7 @@ deps: [type-polish-count-double-casts]
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
+pr: trails#10324
 claim: "2026-11-18T22:37:37Z"
 assignee: "adapter-load-path-pulls-only-the-configured-driver"
 blocked-by: null

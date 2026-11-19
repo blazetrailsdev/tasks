@@ -1,6 +1,6 @@
 ---
 title: "RFC page priority is ringo's select (- and 1-9), not a number field"
-status: claimed
+status: in-progress
 updated: 2026-11-18
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 9
-pr: null
+pr: trailmap#171
 claim: "2026-11-18T22:21:35Z"
 assignee: "view-tests-build-views-in-a-fresh-worktree"
 blocked-by: null

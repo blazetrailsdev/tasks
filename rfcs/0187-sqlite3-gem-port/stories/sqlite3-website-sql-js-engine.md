@@ -1,7 +1,7 @@
 ---
 title: "website: the sql.js driver becomes an engine under SQLite3::Database"
-status: draft
-updated: 2026-10-08
+status: closed
+updated: 2026-11-18
 rfc: "0187-sqlite3-gem-port"
 cluster: drivers
 packages: ["website", "sqlite3"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: Frontiers and its sql.js/VFS sandbox are deleted by trails#10325"
 ---
 
 ## Context

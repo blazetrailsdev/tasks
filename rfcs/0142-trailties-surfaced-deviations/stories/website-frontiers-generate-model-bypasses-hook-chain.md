@@ -1,7 +1,7 @@
 ---
 title: "website frontiers generate model bypasses the orm/test_framework hook chain; runtime tests stale"
-status: ready
-updated: 2026-11-16
+status: closed
+updated: 2026-11-18
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: Frontiers and its sql.js/VFS sandbox are deleted by trails#10325"
 ---
 
 ## Context

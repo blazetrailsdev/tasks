@@ -1,6 +1,6 @@
 ---
 title: "/rfcs no-JS sort submit puts sort=priority on the URL"
-status: claimed
+status: in-progress
 updated: 2026-11-18
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 10
-pr: null
+pr: trailmap#171
 claim: "2026-11-18T22:21:35Z"
 assignee: "view-tests-build-views-in-a-fresh-worktree"
 blocked-by: null

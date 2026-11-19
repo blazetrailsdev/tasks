@@ -1,7 +1,7 @@
 ---
 title: "Nine website frontiers tests are red on main (generator construction, app-server, sql-js driver) and no CI job runs them"
-status: ready
-updated: 2026-11-16
+status: closed
+updated: 2026-11-18
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: Frontiers and its sql.js/VFS sandbox are deleted by trails#10325"
 ---
 
 ## Context

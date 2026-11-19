@@ -1,6 +1,6 @@
 ---
 title: "Drop as never from Concern.included.call sites"
-status: claimed
+status: in-progress
 updated: 2026-11-18
 rfc: "0242-activerecord-actionpack-type-polish"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#10322
 claim: "2026-11-18T22:06:38Z"
 assignee: "actionpack-callback-block-receives-declaring-controller"
 blocked-by: null

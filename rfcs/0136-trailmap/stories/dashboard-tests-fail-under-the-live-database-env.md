@@ -1,6 +1,6 @@
 ---
 title: "Dashboard tests fail when the live TASKS_DATABASE and HUB_DATABASE_URL are exported"
-status: claimed
+status: in-progress
 updated: 2026-11-18
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 2
-pr: null
+pr: trailmap#171
 claim: "2026-11-18T22:21:35Z"
 assignee: "view-tests-build-views-in-a-fresh-worktree"
 blocked-by: null

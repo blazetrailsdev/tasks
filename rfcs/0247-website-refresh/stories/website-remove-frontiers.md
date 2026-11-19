@@ -1,6 +1,6 @@
 ---
 title: "Delete the Frontiers tutorial and sandbox, its service worker and its dependencies"
-status: ready
+status: done
 updated: 2026-11-18
 rfc: "0247-website-refresh"
 cluster: website-deploy
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10325
+claim: "2026-11-18T23:22:10Z"
+assignee: "website-remove-frontiers"
 blocked-by: null
 closed-reason: null
 ---

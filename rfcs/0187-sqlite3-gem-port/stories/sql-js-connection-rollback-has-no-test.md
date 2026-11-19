@@ -1,7 +1,7 @@
 ---
 title: "website: SqlJsConnection#rollback has no test"
-status: draft
-updated: 2026-10-10
+status: closed
+updated: 2026-11-18
 rfc: "0187-sqlite3-gem-port"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: Frontiers and its sql.js/VFS sandbox are deleted by trails#10325"
 ---
 
 ## Context

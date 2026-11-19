@@ -1,6 +1,6 @@
 ---
 title: "PG::Connection owns its client: retire the pgConnection Proxy wrapper"
-status: ready
+status: claimed
 updated: 2026-11-18
 rfc: "0186-pg-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: 8
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-18T23:51:36Z"
+assignee: "pg-connection-conndefaults-hash-and-connect-are-class-methods-over-libpq-keywords"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Website VFS FsAdapter: unlink reports ENOENT for a bundled template that exists"
-status: draft
-updated: 2026-10-12
+status: closed
+updated: 2026-11-18
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: Frontiers and its sql.js/VFS sandbox are deleted by trails#10325"
 ---
 
 ## Context

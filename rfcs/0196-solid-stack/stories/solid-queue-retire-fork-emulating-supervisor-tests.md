@@ -1,6 +1,6 @@
 ---
 title: "Move the fork-emulating supervisor tests to their Rails files ahead of the async split"
-status: claimed
+status: in-progress
 updated: 2026-11-18
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#10323
 claim: "2026-11-18T21:37:12Z"
 assignee: "around-callback-conditions-await-thenables"
 blocked-by: null

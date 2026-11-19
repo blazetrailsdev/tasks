@@ -1,6 +1,6 @@
 ---
 title: "Type actionpack class-modules against their including host"
-status: claimed
+status: blocked
 updated: 2026-11-18
 rfc: "0242-activerecord-actionpack-type-polish"
 cluster: null
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
+pr: trails#10322
 claim: "2026-11-18T22:06:38Z"
 assignee: "actionpack-callback-block-receives-declaring-controller"
-blocked-by: null
+blocked-by: "operator decision: typing a getter on Http::Cache::Response / Flash::RequestMethods / Http::Parameters against its host without a cast makes the host's getHeader/setHeader/hasHeader/deleteHeader/controllerClassFor public (actiondispatch extra total 6 to 14, measured in trails#10322) or adds @internal members (gated internal count). StrongParameters and caching converged in trails#10322; 34 to 30."
 closed-reason: null
 ---
 

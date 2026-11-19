@@ -1,6 +1,6 @@
 ---
 title: "actionview-types-without-casts-remainder"
-status: draft
+status: closed
 updated: 2026-11-18
 rfc: "0242-activerecord-actionpack-type-polish"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: actionview-types-without-casts reached 15 in trails#10322; nothing remains for this story."
 ---
 
 ## Context
