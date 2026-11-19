@@ -22,6 +22,6 @@ trails#10324 added `examples/serverless-lambda/bundle-vite.mjs` (`pnpm check:vit
 
 ## Acceptance criteria
 
-- A CI job runs the spike's `pnpm build` and then `pnpm check:vite`, on changes to activerecord, trails-tsc, trailties or the example.
+- A CI job runs the spike's `pnpm build` and then `pnpm check:vite` on the nightly schedule (and `workflow_dispatch`). Amended 2026-11-19 by operator decision on trails#10363: nightly only, not per PR.
 - It does not depend on `packages/website/.svelte-kit` existing. The script already passes `esbuild.tsconfigRaw: "{}"`.
 - ~~It fails if `import "../../connection-adapters.js"` is re-added to `connection-handler.ts`.~~ FALSIFIED: re-adding it to a rebuilt `dist` (2026-11-19, trails#10363) still serves `GET /posts` 200; the cycle it closed in trails#10324 no longer exists, so no check can fail on it.
