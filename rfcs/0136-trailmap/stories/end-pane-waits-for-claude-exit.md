@@ -1,6 +1,6 @@
 ---
 title: "End pane waits for Claude to exit before typing the shell exit"
-status: ready
+status: in-progress
 updated: 2026-11-19
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#176
+claim: "2026-11-19T12:16:24Z"
+assignee: "db-seed-never-exits"
 blocked-by: null
 closed-reason: null
 ---

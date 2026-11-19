@@ -1,7 +1,7 @@
 ---
 title: "Load libxml2-wasm by an awaited step, out of the boot graph's top-level await"
-status: ready
-updated: 2026-11-18
+status: in-progress
+updated: 2026-11-19
 rfc: "0241-request-path-performance"
 cluster: null
 packages: ["actionview", "html-sanitizer", "nokogiri"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#10352
+claim: "2026-11-19T12:31:43Z"
+assignee: "sanitizer-libxml2-loads-by-an-awaited-step-not-boot-tla"
 blocked-by: null
 closed-reason: null
 ---

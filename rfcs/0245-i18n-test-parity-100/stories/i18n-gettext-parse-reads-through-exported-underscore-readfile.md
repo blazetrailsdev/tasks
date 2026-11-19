@@ -1,6 +1,6 @@
 ---
 title: "i18n: Gettext#parse reads its .po through an exported _readFile instead of File.read"
-status: ready
+status: blocked
 updated: 2026-11-19
 rfc: "0245-i18n-test-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-19T12:46:31Z"
+assignee: "i18n-api-tests-port-localization-datetime-and-time"
+blocked-by: "operator decision: every Ruby-named seam for File.read over the preloaded table adds surface. A File subclass of ruby-compat File in backend/base.ts (static read peeking fileContents) raises i18n extra-surface allowed mark 11->13 and invents an I18n::Backend::File constant (class-paths constant-residue stale); ruby-compat File.read itself is a sync fs read (async-fs rule) and can only be redirected by a global fs adapter swap. Needs a ruling on which shape (or a mark raise) is acceptable."
 closed-reason: null
 ---
 

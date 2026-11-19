@@ -1,6 +1,6 @@
 ---
 title: "Remove the toJSON fallback arm from core-ext/object/json.ts's asJson dispatcher"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

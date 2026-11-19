@@ -1,6 +1,6 @@
 ---
 title: "activesupport: close test_case.rb and testing/time_helpers.rb API gaps"
-status: claimed
+status: in-progress
 updated: 2026-11-19
 rfc: "0246-activesupport-parity-100"
 cluster: api-residuals
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#10353
 claim: "2026-11-19T10:16:36Z"
 assignee: "activesupport-api-parallelization-permanence"
 blocked-by: null

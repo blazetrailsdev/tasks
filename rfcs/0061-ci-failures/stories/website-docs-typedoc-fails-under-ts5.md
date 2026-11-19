@@ -1,6 +1,6 @@
 ---
 title: "website-docs-typedoc-fails-under-ts5"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0061-ci-failures"
 cluster: null

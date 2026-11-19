@@ -1,6 +1,6 @@
 ---
 title: "activesupport: rule testing/parallelization permanent or port it"
-status: claimed
+status: in-progress
 updated: 2026-11-19
 rfc: "0246-activesupport-parity-100"
 cluster: receipts
@@ -9,7 +9,7 @@ deps: [active-support-test-parallelization-threshold-unseated]
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#10353
 claim: "2026-11-19T10:16:36Z"
 assignee: "activesupport-api-parallelization-permanence"
 blocked-by: null

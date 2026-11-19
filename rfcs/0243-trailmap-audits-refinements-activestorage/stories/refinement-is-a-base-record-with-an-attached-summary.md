@@ -1,7 +1,7 @@
 ---
 title: "trailmap: Refinement is a Base record with an attached summary, and the RFC marks fold it in"
-status: ready
-updated: 2026-11-18
+status: claimed
+updated: 2026-11-19
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: refinements
 packages: ["activestorage", "activerecord"]
@@ -15,8 +15,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T12:37:47Z"
+assignee: "refinement-is-a-base-record-with-an-attached-summary"
 blocked-by: null
 closed-reason: null
 ---

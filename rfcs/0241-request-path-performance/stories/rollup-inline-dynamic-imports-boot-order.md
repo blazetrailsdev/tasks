@@ -1,7 +1,7 @@
 ---
 title: "trails build output loads in a Rollup bundle with inlineDynamicImports"
-status: draft
-updated: 2026-11-18
+status: ready
+updated: 2026-11-19
 rfc: "0241-request-path-performance"
 cluster: null
 packages: []

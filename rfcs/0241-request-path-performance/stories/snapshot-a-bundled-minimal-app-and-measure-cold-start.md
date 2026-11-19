@@ -1,6 +1,6 @@
 ---
 title: "Snapshot a bundled minimal trails app and measure its cold start"
-status: draft
+status: ready
 updated: 2026-11-19
 rfc: "0241-request-path-performance"
 cluster: null

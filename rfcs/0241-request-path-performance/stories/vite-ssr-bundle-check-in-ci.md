@@ -1,7 +1,7 @@
 ---
 title: "Run the serverless spike's Vite SSR bundle check in CI"
-status: draft
-updated: 2026-11-18
+status: ready
+updated: 2026-11-19
 rfc: "0241-request-path-performance"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "ActiveModel::Attributes#initialize is inlined and tagged"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: entry

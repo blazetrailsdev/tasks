@@ -1,6 +1,6 @@
 ---
 title: "i18n: port I18n::Tests::Procs and ::Localization::Date into the api suites"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0156-parity-beyond-name-presence"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Port a minimal Enumerator so ported no-block to_enum arms stop being deleted"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

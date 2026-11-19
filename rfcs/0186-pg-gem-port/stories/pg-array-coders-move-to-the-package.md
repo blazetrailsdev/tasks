@@ -1,6 +1,6 @@
 ---
 title: "pg: PG::TextEncoder::Array and PG::TextDecoder::Array move to the package under the gem's names"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0186-pg-gem-port"
 cluster: result-and-coders

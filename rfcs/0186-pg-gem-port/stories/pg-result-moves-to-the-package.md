@@ -1,6 +1,6 @@
 ---
 title: "pg: PG::Result moves to the package, without the Array superclass"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0186-pg-gem-port"
 cluster: result-and-coders

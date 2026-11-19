@@ -1,6 +1,6 @@
 ---
 title: "Unit Tests (2) failing on main @e0d692b4"
-status: ready
+status: closed
 updated: 2026-11-19
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T12:20:15Z"
+assignee: "red-e0d692b4"
 blocked-by: null
-closed-reason: null
+closed-reason: "Infrastructure: Unit Tests (2) on e0d692b4 failed in apt-get (azure.archive.ubuntu.com unreachable, exit 100) before tests ran; Unit Tests (2) on the next main run 44521514679 (a460548) passed."
 ---
 
 ## Context
