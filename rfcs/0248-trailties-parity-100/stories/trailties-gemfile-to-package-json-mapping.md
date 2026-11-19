@@ -33,14 +33,16 @@ bundler binstub, bootsnap, `.ruby-version`, rubocop, brakeman),
 
 Operator ruling (2026-11-19), the mapping:
 
-| Ruby                                                                                                                                        | Node                                                            |
-| ------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
-| Gemfile / `GemfileEntry` / `gemfile_entries`                                                                                                | `package.json` dependencies; one entry is one `name: specifier` |
-| `bundle install` / `exec_bundle_command` / `after_bundle`                                                                                   | `pnpm install`, callbacks in the same order                     |
-| gemspec                                                                                                                                     | the plugin's `package.json`                                     |
-| `.ruby-version` / `ruby_version`                                                                                                            | `.node-version`                                                 |
-| rubocop, brakeman (`--skip-rubocop`, `--skip-brakeman`, binstubs)                                                                           | eslint                                                          |
-| `bundle lock --add-platform`, bundler binstub, bootsnap, benchmark-ips (`add_ips_to_gemfile`), Gemfile-only gems with no trails npm package | permanent: not ported                                           |
+| Ruby                                                                                                                                        | Node                                                                                                        |
+| ------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| Gemfile / `GemfileEntry` / `gemfile_entries`                                                                                                | `package.json` dependencies; one entry is one `name: specifier`                                             |
+| `bundle install` / `exec_bundle_command` / `after_bundle`                                                                                   | `pnpm install`, callbacks in the same order                                                                 |
+| gemspec                                                                                                                                     | the plugin's `package.json`                                                                                 |
+| `.ruby-version` / `ruby_version`                                                                                                            | `.node-version`                                                                                             |
+| devcontainer Ruby base image, `ruby_version` build arg, Ruby devcontainer features                                                          | `mcr.microsoft.com/devcontainers/javascript-node` image, `NODE_VERSION` from `.node-version`, Node features |
+| solid_queue / solid_cache / solid_cable gems                                                                                                | `@blazetrails/solid-queue` / `solid-cache` / `solid-cable`                                                  |
+| rubocop, brakeman (`--skip-rubocop`, `--skip-brakeman`, binstubs)                                                                           | eslint                                                                                                      |
+| `bundle lock --add-platform`, bundler binstub, bootsnap, benchmark-ips (`add_ips_to_gemfile`), Gemfile-only gems with no trails npm package | permanent: not ported                                                                                       |
 
 ## Acceptance criteria
 
