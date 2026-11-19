@@ -2,7 +2,7 @@
 title: "Type actionpack class-modules against their including host"
 status: blocked
 updated: 2026-11-18
-rfc: "0242-activerecord-actionpack-type-polish"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
