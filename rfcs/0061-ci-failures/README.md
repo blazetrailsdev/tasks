@@ -11,6 +11,7 @@ packages:
   - "actionpack"
   - "trailties"
   - "mail"
+  - "solid-queue"
 clusters: []
 priority: 0
 ---
