@@ -7,6 +7,7 @@ cluster: null
 packages: []
 deps:
   - pg-array-coders-move-to-the-package
+  - pg-c-extension-classes-get-class-paths
 deps-rfc: []
 est-loc: 10
 priority: null
