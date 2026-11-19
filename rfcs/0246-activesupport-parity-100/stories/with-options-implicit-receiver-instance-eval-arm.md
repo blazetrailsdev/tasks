@@ -1,7 +1,7 @@
 ---
 title: "with_options drops the zero-arity instance_eval block arm"
-status: ready
-updated: 2026-11-16
+status: done
+updated: 2026-11-19
 rfc: "0246-activesupport-parity-100"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10374
+claim: "2026-11-19T20:01:40Z"
+assignee: "activesupport-time-with-zone-methods-for-time-tests"
 blocked-by: null
 closed-reason: null
 ---

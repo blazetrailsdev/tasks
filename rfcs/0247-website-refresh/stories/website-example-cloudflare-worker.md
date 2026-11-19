@@ -1,6 +1,6 @@
 ---
 title: "Example: trails on Cloudflare Workers with Postgres (Hyperdrive) or libSQL, with Terraform"
-status: draft
+status: ready
 updated: 2026-11-19
 rfc: "0247-website-refresh"
 cluster: website-docs

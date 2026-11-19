@@ -1,7 +1,7 @@
 ---
 title: "Retire UNSCORED_SUBDIRS once activerecord/lib/pg is empty"
-status: draft
-updated: 2026-11-18
+status: ready
+updated: 2026-11-19
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []

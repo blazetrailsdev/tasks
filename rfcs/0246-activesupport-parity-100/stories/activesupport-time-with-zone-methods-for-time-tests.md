@@ -1,7 +1,7 @@
 ---
 title: "activesupport: port TimeWithZoneMethodsForTimeAndDateTimeTest residue"
-status: ready
-updated: 2026-11-18
+status: done
+updated: 2026-11-19
 rfc: "0246-activesupport-parity-100"
 cluster: test-residuals
 packages: [activesupport]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10374
+claim: "2026-11-19T20:01:40Z"
+assignee: "activesupport-time-with-zone-methods-for-time-tests"
 blocked-by: null
 closed-reason: null
 ---

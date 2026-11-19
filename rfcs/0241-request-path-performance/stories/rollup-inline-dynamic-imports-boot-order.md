@@ -1,6 +1,6 @@
 ---
 title: "trails build output loads in a Rollup bundle with inlineDynamicImports"
-status: ready
+status: claimed
 updated: 2026-11-19
 rfc: "0241-request-path-performance"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T20:42:33Z"
+assignee: "rollup-inline-dynamic-imports-boot-order"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "sqlite3: better-sqlite3 becomes an engine under SQLite3::Database"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-11-19
 rfc: "0187-sqlite3-gem-port"
 cluster: drivers
 packages: ["sqlite3", "activerecord"]

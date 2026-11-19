@@ -1,6 +1,6 @@
 ---
 title: "pg: a frozen coder's FrozenError names PG::TextEncoder::Array"
-status: draft
+status: ready
 updated: 2026-11-19
 rfc: "0186-pg-gem-port"
 cluster: null

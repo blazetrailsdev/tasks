@@ -1,6 +1,6 @@
 ---
 title: "isolate_namespace's module readers are not exercised through module_parents"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

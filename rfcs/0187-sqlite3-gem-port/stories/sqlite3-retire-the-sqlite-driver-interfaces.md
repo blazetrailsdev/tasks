@@ -1,7 +1,7 @@
 ---
 title: "Delete SqliteDriver, SqliteConnection, SqliteStatement and their Sync twins"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-11-19
 rfc: "0187-sqlite3-gem-port"
 cluster: migration
 packages: ["activerecord", "sqlite3", "website"]

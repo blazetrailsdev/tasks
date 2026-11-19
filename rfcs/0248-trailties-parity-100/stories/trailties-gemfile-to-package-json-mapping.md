@@ -1,6 +1,6 @@
 ---
 title: "trailties: ratify the Gemfile/Bundler/gemspec → package.json/pnpm mapping"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0248-trailties-parity-100"
 cluster: receipts

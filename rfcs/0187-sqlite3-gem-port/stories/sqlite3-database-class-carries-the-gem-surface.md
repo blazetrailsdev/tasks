@@ -1,7 +1,7 @@
 ---
 title: "sqlite3: SQLite3::Database is a class over an engine interface, with the gem's methods the adapter calls"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-11-19
 rfc: "0187-sqlite3-gem-port"
 cluster: database-and-statement
 packages: ["sqlite3"]

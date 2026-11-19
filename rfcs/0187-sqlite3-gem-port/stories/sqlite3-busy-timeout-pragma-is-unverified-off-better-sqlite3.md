@@ -1,7 +1,7 @@
 ---
 title: "sqlite3: the busy timeout set in configure_connection is verified on better-sqlite3 only"
-status: draft
-updated: 2026-10-09
+status: ready
+updated: 2026-11-19
 rfc: "0187-sqlite3-gem-port"
 cluster: null
 packages: []

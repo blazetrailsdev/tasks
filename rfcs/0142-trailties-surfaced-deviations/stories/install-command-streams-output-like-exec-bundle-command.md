@@ -1,6 +1,6 @@
 ---
 title: "installCommand streams install output like exec_bundle_command"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

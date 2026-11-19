@@ -1,6 +1,6 @@
 ---
 title: "pg: escape_bytea, unescape_bytea, quote_ident and escape are PG::Connection methods"
-status: claimed
+status: in-progress
 updated: 2026-11-19
 rfc: "0186-pg-gem-port"
 cluster: connection
@@ -9,7 +9,7 @@ deps: ["pg-connection-exec-surface-moves-to-the-package"]
 deps-rfc: []
 est-loc: 300
 priority: 4
-pr: null
+pr: trails#10378
 claim: "2026-11-19T19:46:36Z"
 assignee: "pg-connection-escaping-moves-to-the-package"
 blocked-by: null

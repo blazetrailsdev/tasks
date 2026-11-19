@@ -1,7 +1,7 @@
 ---
 title: "Move packages/activerecord/src/sqlite/ to packages/sqlite3 as @blazetrails/sqlite3"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-11-19
 rfc: "0187-sqlite3-gem-port"
 cluster: package
 packages: ["sqlite3", "activerecord", "scripts"]

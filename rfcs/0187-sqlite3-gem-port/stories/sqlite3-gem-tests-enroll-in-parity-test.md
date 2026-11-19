@@ -1,7 +1,7 @@
 ---
 title: "sqlite3: enroll the gem's tests for the wrapped methods in parity:test"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-11-19
 rfc: "0187-sqlite3-gem-port"
 cluster: package
 packages: ["sqlite3", "scripts"]

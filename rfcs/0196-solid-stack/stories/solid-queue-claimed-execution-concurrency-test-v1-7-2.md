@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-claimed-execution-concurrency-test-v1-7-2"
-status: ready
+status: done
 updated: 2026-11-19
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10375
+claim: "2026-11-19T20:16:34Z"
+assignee: "solid-queue-async-processes-lifecycle-test-v1-7-2"
 blocked-by: null
 closed-reason: null
 ---

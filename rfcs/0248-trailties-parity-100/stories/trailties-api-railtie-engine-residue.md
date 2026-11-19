@@ -1,6 +1,6 @@
 ---
 title: "trailties: close the railtie, engine and application API misses"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0248-trailties-parity-100"
 cluster: api-residuals

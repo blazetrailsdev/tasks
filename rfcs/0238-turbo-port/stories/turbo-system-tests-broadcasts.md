@@ -1,6 +1,6 @@
 ---
 title: "turbo-system-tests-broadcasts"
-status: ready
+status: in-progress
 updated: 2026-11-19
 rfc: "0238-turbo-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10377
+claim: "2026-11-19T20:29:37Z"
+assignee: "turbo-system-tests-broadcasts"
 blocked-by: null
 closed-reason: null
 ---

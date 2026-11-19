@@ -1,7 +1,7 @@
 ---
 title: "SQLite3Adapter.new_client is ::SQLite3::Database.new(config[:database].to_s, config)"
-status: draft
-updated: 2026-10-08
+status: ready
+updated: 2026-11-19
 rfc: "0187-sqlite3-gem-port"
 cluster: migration
 packages: ["activerecord", "sqlite3"]
