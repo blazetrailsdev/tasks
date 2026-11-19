@@ -1,6 +1,6 @@
 ---
 title: "Channel::Base#params is typed as the HashWithIndifferentAccess Subscriptions#add passes"
-status: draft
+status: ready
 updated: 2026-11-19
 rfc: "0238-turbo-port"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

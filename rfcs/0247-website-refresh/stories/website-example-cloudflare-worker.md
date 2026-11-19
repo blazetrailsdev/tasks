@@ -1,6 +1,6 @@
 ---
 title: "Example: trails on Cloudflare Workers with Postgres (Hyperdrive) or libSQL, with Terraform"
-status: ready
+status: in-progress
 updated: 2026-11-19
 rfc: "0247-website-refresh"
 cluster: website-docs
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10380
+claim: "2026-11-19T21:21:35Z"
+assignee: "website-example-cloudflare-worker"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "turbo-dummy-app-turbo-api-dependents"
-status: blocked
-updated: 2026-11-17
+status: ready
+updated: 2026-11-19
 rfc: "0238-turbo-port"
 cluster: null
 packages: []
@@ -14,11 +14,11 @@ deps:
   - turbo-test-helpers
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 2
 pr: null
-claim: "2026-11-17T21:21:49Z"
-assignee: "turbo-dummy-app-turbo-api-dependents"
-blocked-by: "waits on the deps: none of Broadcastable, turbo_stream format, Native::Navigation/current_request_id, StreamsChannel or test helpers is ported (packages/turbo/lib/turbo-trails.ts is empty)"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

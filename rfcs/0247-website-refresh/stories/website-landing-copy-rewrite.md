@@ -1,6 +1,6 @@
 ---
 title: "Rewrite the landing page copy in trails' own words"
-status: ready
+status: blocked
 updated: 2026-11-19
 rfc: "0247-website-refresh"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-19T21:21:35Z"
+assignee: "website-example-cloudflare-worker"
+blocked-by: "waiting on trails#10367 (landing page rebuild on rubyonrails.org layout) to merge; the copy to rewrite is not on main yet, and the rewrite is iterated with the operator"
 closed-reason: null
 ---
 

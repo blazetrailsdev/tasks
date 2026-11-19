@@ -1,7 +1,7 @@
 ---
 title: "Write the Getting Started guide from the CI-run README Quickstart"
-status: ready
-updated: 2026-11-18
+status: in-progress
+updated: 2026-11-19
 rfc: "0247-website-refresh"
 cluster: website-docs
 packages: [website]
@@ -9,9 +9,9 @@ deps: [website-guides-index-follows-rails-guides]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10380
+claim: "2026-11-19T21:21:35Z"
+assignee: "website-example-cloudflare-worker"
 blocked-by: null
 closed-reason: null
 ---

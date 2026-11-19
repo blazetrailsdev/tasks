@@ -1,6 +1,6 @@
 ---
 title: "trailties: port the small commands/* and version tests"
-status: ready
+status: claimed
 updated: 2026-11-19
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T21:34:32Z"
+assignee: "trailties-api-app-base-gemfile-entries"
 blocked-by: null
 closed-reason: null
 ---

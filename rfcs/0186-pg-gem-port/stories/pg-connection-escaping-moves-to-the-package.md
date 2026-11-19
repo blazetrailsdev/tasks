@@ -1,6 +1,6 @@
 ---
 title: "pg: escape_bytea, unescape_bytea, quote_ident and escape are PG::Connection methods"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0186-pg-gem-port"
 cluster: connection

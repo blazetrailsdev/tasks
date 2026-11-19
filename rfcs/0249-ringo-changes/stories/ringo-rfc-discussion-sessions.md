@@ -1,6 +1,6 @@
 ---
 title: "ringo: resumable per-RFC discussion sessions with a 5-minute idle reaper"
-status: draft
+status: claimed
 updated: 2026-11-19
 rfc: "0249-ringo-changes"
 cluster: rfc-sessions
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T21:45:30Z"
+assignee: "ringo-reports-in-flight-rfc-refines"
 blocked-by: null
 closed-reason: null
 ---

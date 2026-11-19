@@ -10,6 +10,7 @@ clusters:
   - rfc-sessions
 related-rfcs:
   - "0136-trailmap"
+priority: 1
 ---
 
 # RFC 0249 — ringo: changes trailmap features need from the fleet process

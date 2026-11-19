@@ -1,6 +1,6 @@
 ---
 title: "i18n-api-tests-mount-localization-in-remaining-api-suites"
-status: ready
+status: done
 updated: 2026-11-19
 rfc: "0245-i18n-test-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10379
+claim: "2026-11-19T21:08:38Z"
+assignee: "i18n-api-tests-mount-localization-in-remaining-api-suites"
 blocked-by: null
 closed-reason: null
 ---
