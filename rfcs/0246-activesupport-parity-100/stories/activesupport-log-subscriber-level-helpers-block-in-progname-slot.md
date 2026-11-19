@@ -1,6 +1,6 @@
 ---
 title: "activesupport-log-subscriber-level-helpers-block-in-progname-slot"
-status: draft
+status: closed
 updated: 2026-11-19
 rfc: "0246-activesupport-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: the five actionview log-subscriber call-args rows appeared only in a package-scoped parity:changed run; the unscoped parity:api:calls:args run does not flag them, so trails#10353 deleted the baseline."
 ---
 
 ## Context

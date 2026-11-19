@@ -1,7 +1,7 @@
 ---
 title: "pg: PG.connect and PG::Connection's exec, prepare and close surface; new_client is PG.connect"
-status: ready
-updated: 2026-11-18
+status: claimed
+updated: 2026-11-19
 rfc: "0186-pg-gem-port"
 cluster: connection
 packages: ["pg", "activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 600
 priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T13:17:05Z"
+assignee: "pg-connection-exec-surface-moves-to-the-package"
 blocked-by: null
 closed-reason: null
 ---

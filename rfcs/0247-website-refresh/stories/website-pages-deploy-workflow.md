@@ -1,7 +1,7 @@
 ---
 title: "Deploy the website to GitHub Pages from main"
-status: ready
-updated: 2026-11-18
+status: in-progress
+updated: 2026-11-19
 rfc: "0247-website-refresh"
 cluster: website-deploy
 packages: [website]
@@ -9,9 +9,9 @@ deps: [website-remove-frontiers, website-docs-typedoc-fails-under-ts5]
 deps-rfc: []
 est-loc: 160
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10355
+claim: "2026-11-19T13:01:57Z"
+assignee: "website-pages-deploy-workflow"
 blocked-by: null
 closed-reason: null
 ---

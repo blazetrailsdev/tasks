@@ -1,6 +1,6 @@
 ---
 title: "i18n: port I18n::Tests::Localization::DateTime and ::Time into the api suites"
-status: claimed
+status: in-progress
 updated: 2026-11-19
 rfc: "0245-i18n-test-parity-100"
 cluster: api-mixins
@@ -9,7 +9,7 @@ deps: [i18n-api-tests-port-procs-and-localization]
 deps-rfc: []
 est-loc: 550
 priority: null
-pr: null
+pr: trails#10354
 claim: "2026-11-19T12:46:31Z"
 assignee: "i18n-api-tests-port-localization-datetime-and-time"
 blocked-by: null
