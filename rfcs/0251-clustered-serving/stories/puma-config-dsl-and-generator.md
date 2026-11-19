@@ -2,7 +2,7 @@
 title: "config/puma.ts: the puma.rb DSL on the cluster, and the generator template"
 status: draft
 updated: 2026-11-19
-rfc: "0000-clustered-serving"
+rfc: "0251-clustered-serving"
 cluster: config
 packages: [rackup, trailties]
 deps: [cluster-primary-and-workers]

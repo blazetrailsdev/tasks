@@ -2,7 +2,7 @@
 title: "A node:cluster primary that forks, supervises and restarts Rack workers"
 status: draft
 updated: 2026-11-19
-rfc: "0000-clustered-serving"
+rfc: "0251-clustered-serving"
 cluster: cluster
 packages: [rackup]
 deps: []

@@ -2,7 +2,7 @@
 title: "Port Solid Queue's Puma plugin onto the cluster primary"
 status: draft
 updated: 2026-11-19
-rfc: "0000-clustered-serving"
+rfc: "0251-clustered-serving"
 cluster: plugins
 packages: [solid-queue]
 deps: [puma-config-dsl-and-generator]

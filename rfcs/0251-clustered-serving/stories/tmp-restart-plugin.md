@@ -2,7 +2,7 @@
 title: "The tmp_restart plugin: a rolling restart on touching tmp/restart.txt"
 status: draft
 updated: 2026-11-19
-rfc: "0000-clustered-serving"
+rfc: "0251-clustered-serving"
 cluster: plugins
 packages: [rackup]
 deps: [puma-config-dsl-and-generator]

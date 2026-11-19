@@ -1,5 +1,5 @@
 ---
-rfc: "0000-clustered-serving"
+rfc: "0251-clustered-serving"
 title: "Clustered serving for trails server on node:cluster"
 status: draft
 created: 2026-11-19
@@ -15,12 +15,7 @@ clusters:
   - plugins
 ---
 
-<!-- Unnumbered until merge: copy this dir to `rfcs/0000-your-slug`, keep `rfc:`
-     as 0000-your-slug and the H1 below number-free. `scripts/finalize-rfc.mjs`
-     swaps 0000 for the assigned number at merge. Never use a `draft-` prefix —
-     `draft` is a lifecycle status, not a dir prefix (see top-level README). -->
-
-# RFC — Clustered serving for trails server on node:cluster
+# RFC 0251 — Clustered serving for trails server on node:cluster
 
 ## Summary
 

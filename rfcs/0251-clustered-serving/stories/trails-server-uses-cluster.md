@@ -2,7 +2,7 @@
 title: "trails server reads config/puma.ts and starts the cluster primary"
 status: draft
 updated: 2026-11-19
-rfc: "0000-clustered-serving"
+rfc: "0251-clustered-serving"
 cluster: cluster
 packages: [trailties]
 deps: [puma-config-dsl-and-generator]
