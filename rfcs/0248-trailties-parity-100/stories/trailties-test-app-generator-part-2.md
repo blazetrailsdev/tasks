@@ -5,7 +5,8 @@ updated: 2026-11-19
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
 packages: [trailties]
-deps: []
+deps:
+  - trailties-gemfile-to-package-json-mapping
 deps-rfc: []
 est-loc: 450
 priority: null
