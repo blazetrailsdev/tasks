@@ -5,7 +5,8 @@ updated: 2026-11-19
 rfc: "0136-trailmap"
 cluster: null
 packages: []
-deps: []
+deps:
+  - blob-import-before-attached-model-initializer
 deps-rfc: []
 est-loc: 20
 priority: null
