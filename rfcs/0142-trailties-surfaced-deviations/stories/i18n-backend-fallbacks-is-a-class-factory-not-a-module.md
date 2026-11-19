@@ -1,6 +1,6 @@
 ---
 title: "i18n-backend-fallbacks-is-a-class-factory-not-a-module"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

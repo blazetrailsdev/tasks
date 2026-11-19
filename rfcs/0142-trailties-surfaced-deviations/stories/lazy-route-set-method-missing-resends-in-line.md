@@ -1,7 +1,7 @@
 ---
 title: "lazy-route-set-method-missing-resends-in-line"
-status: ready
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10372
+claim: "2026-11-19T19:16:54Z"
+assignee: "i18n-railtie-initializers-unported"
 blocked-by: null
 closed-reason: null
 ---

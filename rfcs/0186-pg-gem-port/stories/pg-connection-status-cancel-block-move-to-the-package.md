@@ -1,7 +1,7 @@
 ---
 title: "pg: transaction_status, status, cancel, block, socket_io and reset are PG::Connection methods"
-status: ready
-updated: 2026-11-18
+status: done
+updated: 2026-11-19
 rfc: "0186-pg-gem-port"
 cluster: connection
 packages: ["pg", "activerecord"]
@@ -9,9 +9,9 @@ deps: ["pg-connection-exec-surface-moves-to-the-package"]
 deps-rfc: []
 est-loc: 450
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#10357
+claim: "2026-11-19T19:46:36Z"
+assignee: "pg-connection-escaping-moves-to-the-package"
 blocked-by: null
 closed-reason: null
 ---

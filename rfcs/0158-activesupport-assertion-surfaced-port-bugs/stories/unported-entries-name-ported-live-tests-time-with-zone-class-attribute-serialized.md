@@ -1,6 +1,6 @@
 ---
 title: "unported-files entries still name live tests (time_with_zone yaml, class attribute, serialized_attribute)"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

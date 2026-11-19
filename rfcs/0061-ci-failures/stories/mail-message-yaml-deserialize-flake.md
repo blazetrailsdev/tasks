@@ -1,6 +1,6 @@
 ---
 title: "Flake: mail Message YAML 'should deserialize after serializing'"
-status: ready
+status: in-progress
 updated: 2026-11-19
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10371
+claim: "2026-11-19T19:31:34Z"
+assignee: "mail-message-yaml-deserialize-flake"
 blocked-by: null
 closed-reason: null
 ---

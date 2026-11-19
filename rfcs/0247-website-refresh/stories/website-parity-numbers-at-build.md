@@ -1,6 +1,6 @@
 ---
 title: "Render parity:api / parity:test numbers from the generated package summary at build time"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0247-website-refresh"
 cluster: website-docs

@@ -1,6 +1,6 @@
 ---
 title: "Write the Composite Primary Keys guide"
-status: draft
+status: ready
 updated: 2026-11-19
 rfc: "0247-website-refresh"
 cluster: website-docs

@@ -1,7 +1,7 @@
 ---
 title: "pg: escape_bytea, unescape_bytea, quote_ident and escape are PG::Connection methods"
-status: ready
-updated: 2026-11-18
+status: claimed
+updated: 2026-11-19
 rfc: "0186-pg-gem-port"
 cluster: connection
 packages: ["pg", "activerecord"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: 4
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T19:46:36Z"
+assignee: "pg-connection-escaping-moves-to-the-package"
 blocked-by: null
 closed-reason: null
 ---

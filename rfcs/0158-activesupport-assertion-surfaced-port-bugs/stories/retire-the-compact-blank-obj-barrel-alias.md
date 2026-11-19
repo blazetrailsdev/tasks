@@ -1,6 +1,6 @@
 ---
 title: "Barrel renames Hash#compact_blank to compactBlankObj to dodge the Enumerable collision"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

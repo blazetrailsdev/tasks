@@ -1,7 +1,7 @@
 ---
 title: "Port Kernel#load once; Engine#loadSeed/loadConfigInitializer re-evaluate like load"
-status: ready
-updated: 2026-11-16
+status: done
+updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9867
+claim: "2026-11-19T19:16:54Z"
+assignee: "i18n-railtie-initializers-unported"
 blocked-by: null
 closed-reason: null
 ---

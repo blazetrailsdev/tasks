@@ -1,6 +1,6 @@
 ---
 title: "Rebuild the guides index on the Rails Guides table of contents and file a story per unwritten guide"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0247-website-refresh"
 cluster: website-docs

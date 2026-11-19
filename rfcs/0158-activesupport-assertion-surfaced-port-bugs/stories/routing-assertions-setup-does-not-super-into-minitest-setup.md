@@ -1,6 +1,6 @@
 ---
 title: "RoutingAssertions#setup does not call super: trails has no Minitest::Test#setup and the lifecycle never sends instance setup"
-status: in-progress
+status: blocked
 updated: 2026-11-19
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: trails#10358
 claim: "2026-11-19T14:31:38Z"
 assignee: "date-and-time-calculations-drops-eager-date-time-imports"
-blocked-by: null
+blocked-by: "Operator decision: RoutingAssertions#setup's super (routing.rb:107-110) needs a carrier superMethod, which raises actionpack's only-shrink parity:modules superMethod mark (16->17); converting the module to rbCallSuper breaks the live-include super to TestFixtures (CLAUDE.md 'binds super at include time'), tried and reverted on trails#10358."
 closed-reason: null
 ---
 

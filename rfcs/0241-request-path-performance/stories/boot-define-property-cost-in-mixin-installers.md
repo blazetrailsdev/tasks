@@ -1,6 +1,6 @@
 ---
 title: "boot-define-property-cost-in-mixin-installers"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0241-request-path-performance"
 cluster: null

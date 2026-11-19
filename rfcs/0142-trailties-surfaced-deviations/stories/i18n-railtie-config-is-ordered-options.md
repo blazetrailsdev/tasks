@@ -1,6 +1,6 @@
 ---
 title: "I18n::Railtie config.i18n is OrderedOptions with typed setter keys"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

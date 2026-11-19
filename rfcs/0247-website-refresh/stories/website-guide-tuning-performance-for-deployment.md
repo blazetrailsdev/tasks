@@ -1,6 +1,6 @@
 ---
 title: "Write the Tuning Performance for Deployment guide"
-status: draft
+status: ready
 updated: 2026-11-19
 rfc: "0247-website-refresh"
 cluster: website-docs

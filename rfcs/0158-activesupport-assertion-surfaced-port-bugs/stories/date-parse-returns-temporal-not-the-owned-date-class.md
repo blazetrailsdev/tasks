@@ -1,6 +1,6 @@
 ---
 title: "Date.parse / DateTime.parse answer Temporal values instead of the package's own Date / DateTime"
-status: ready
+status: blocked
 updated: 2026-11-19
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -12,9 +12,9 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-19T19:10:29Z"
+assignee: "date-parse-returns-temporal-not-the-owned-date-class"
+blocked-by: "waiting on operator ruling + sweep in ruby-date-value-is-the-owned-date-class-not-plain-date: every ::Date builder/to_date answers Temporal.PlainDate package-wide; converging parse alone splits ::Date into two values"
 closed-reason: null
 ---
 

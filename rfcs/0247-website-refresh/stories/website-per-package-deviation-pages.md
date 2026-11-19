@@ -1,6 +1,6 @@
 ---
 title: "Generate one docs page per published package from its ratified CLAUDE.md sections"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0247-website-refresh"
 cluster: website-docs

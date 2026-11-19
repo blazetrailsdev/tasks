@@ -1,6 +1,6 @@
 ---
 title: "trailties: api/generator.rb and api/task.rb are not ported"
-status: claimed
+status: in-progress
 updated: 2026-11-19
 rfc: "0248-trailties-parity-100"
 cluster: receipts
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#10373
 claim: "2026-11-19T18:33:07Z"
 assignee: "port-source-paths-for-not-namespaced-generators-test"
 blocked-by: null

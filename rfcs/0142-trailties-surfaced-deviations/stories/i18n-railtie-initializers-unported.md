@@ -1,7 +1,7 @@
 ---
 title: "i18n-railtie-initializers-unported"
-status: ready
-updated: 2026-10-27
+status: blocked
+updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -12,9 +12,9 @@ deps-rfc: []
 est-loc: 300
 priority: 6
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-19T19:16:54Z"
+assignee: "i18n-railtie-initializers-unported"
+blocked-by: "waits on finisher-awaits-async-load-hooks: initialize_i18n is async (setLoadPath, Path#existent) and runLoadHooks drops hook promises"
 closed-reason: null
 ---
 

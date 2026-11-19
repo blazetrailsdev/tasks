@@ -1,6 +1,6 @@
 ---
 title: "Rewrite the landing page copy in trails' own words and record the editor video"
-status: draft
+status: ready
 updated: 2026-11-19
 rfc: "0247-website-refresh"
 cluster: null

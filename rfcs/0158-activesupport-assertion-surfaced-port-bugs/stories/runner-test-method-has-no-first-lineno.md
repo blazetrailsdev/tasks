@@ -1,6 +1,6 @@
 ---
 title: "TestsWithoutAssertions warning prints line 0, and the fixtures harness still names its test case by the bare title"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

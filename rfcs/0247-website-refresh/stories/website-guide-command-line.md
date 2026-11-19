@@ -1,6 +1,6 @@
 ---
 title: "Write the The Rails Command Line guide"
-status: draft
+status: ready
 updated: 2026-11-19
 rfc: "0247-website-refresh"
 cluster: website-docs
