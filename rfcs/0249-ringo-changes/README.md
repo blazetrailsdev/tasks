@@ -1,7 +1,7 @@
 ---
 rfc: "0249-ringo-changes"
 title: "ringo: changes trailmap features need from the fleet process"
-status: draft
+status: active
 created: 2026-11-19
 updated: 2026-11-19
 owner: "@deanmarano"
