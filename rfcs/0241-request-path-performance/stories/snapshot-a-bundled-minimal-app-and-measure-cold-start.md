@@ -5,7 +5,8 @@ updated: 2026-11-19
 rfc: "0241-request-path-performance"
 cluster: null
 packages: []
-deps: []
+deps:
+  - nokogiri-extension-loads-on-first-parse-not-at-boot
 deps-rfc: []
 est-loc: 150
 priority: null
