@@ -5,9 +5,7 @@ updated: 2026-11-19
 rfc: "0238-turbo-port"
 cluster: null
 packages: []
-deps:
-  - turbo-system-tests-broadcasts
-  - turbo-streams-channel-class-path
+deps: []
 deps-rfc: []
 est-loc: null
 priority: null
