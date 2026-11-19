@@ -5,7 +5,8 @@ updated: 2026-11-19
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - pg-array-coders-move-to-the-package
 deps-rfc: []
 est-loc: 10
 priority: null
