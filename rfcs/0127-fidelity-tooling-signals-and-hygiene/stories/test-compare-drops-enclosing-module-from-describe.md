@@ -2,7 +2,7 @@
 title: "test-compare-drops-enclosing-module-from-describe"
 status: draft
 updated: 2026-11-18
-rfc: "0226-mail-stack-to-parity"
+rfc: "0127-fidelity-tooling-signals-and-hygiene"
 cluster: null
 packages: []
 deps: []
