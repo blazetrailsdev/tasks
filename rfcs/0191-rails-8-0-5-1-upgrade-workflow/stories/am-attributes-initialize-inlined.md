@@ -53,9 +53,9 @@ gate is changed to accept it.
 - [ ] `model.ts`'s segment is converged: guard
       `isModuleIncluded(new.target, Attributes)` carrying
       `@inventedArm if — PERMANENT`, body `this._attributes =
-    klass._defaultAttributes().deepDup()` at Ruby's `super` position, and
+klass._defaultAttributes().deepDup()` at Ruby's `super` position, and
       the constructor tagged `@inlinedFrom ActiveModel::Attributes#initialize
-    rails/v8.0.2/activemodel/lib/active_model/attributes.rb:106-109`.
+rails/v8.0.2/activemodel/lib/active_model/attributes.rb:106-109`.
 - [ ] CLAUDE.md § "A module installed at run time is inlined behind a guard"
       is amended to admit the tag on a guarded open-set segment.
 - [ ] `parity:api` shows activemodel `attributes.rb` at 21/21, and
