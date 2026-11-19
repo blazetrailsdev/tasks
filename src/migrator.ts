@@ -40,3 +40,19 @@ export async function status(): Promise<{ status: string; version: string; name:
 export async function hasPendingMigrations(): Promise<boolean> {
   return (await status()).some((r) => r.status === "down");
 }
+
+/**
+ * Refuse to run a verb against a database older than this CLI's schema.
+ *
+ * A CLI that adds a column writes it on every verb, so a database one
+ * migration behind fails each verb with `unknown attribute 'stage' for Story.`,
+ * which names neither the cause nor the fix (tasks-db-missing-stage-column).
+ */
+export async function checkPendingMigrations(): Promise<void> {
+  const pending = (await status()).filter((r) => r.status === "down");
+  if (pending.length === 0) return;
+  const names = pending.map((r) => `${r.version}_${r.name}`).join(", ");
+  throw new Error(
+    `Migrations are pending: ${names}. Run \`pnpm db:migrate\` in the tasks checkout to resolve.`,
+  );
+}

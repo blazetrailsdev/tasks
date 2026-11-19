@@ -15,6 +15,7 @@ import { connect, publishReadModels, VerbExit } from "./db.js";
 import { buildIndex } from "./readmodel.js";
 import { currentBranch, mainWorktree, resolveDbPath, resolveTasksDir } from "./db-path.js";
 import { ingest } from "./ingest.js";
+import { checkPendingMigrations } from "./migrator.js";
 import { exportState } from "./export.js";
 import {
   claimable,
@@ -186,6 +187,7 @@ async function main(): Promise<number> {
   }
 
   await connect();
+  await checkPendingMigrations();
   const json = flags.json === true;
 
   switch (cmd) {
