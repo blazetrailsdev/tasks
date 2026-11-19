@@ -1,6 +1,6 @@
 ---
 title: "Port Generators::Base#module_namespacing and Rails::Generators.namespace"
-status: in-progress
+status: ready
 updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: trails#10347
-claim: "2026-11-19T04:17:15Z"
-assignee: "generated-app-tsconfig-type-checks-test-dir"
+pr: null
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---
