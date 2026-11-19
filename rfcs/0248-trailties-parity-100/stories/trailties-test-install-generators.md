@@ -36,6 +36,9 @@ ported test fails, fix `packages/trailties/lib`; never rename or skip the test
 to make it pass. A gap that belongs to a ratified CLAUDE.md section gets a
 `PERMANENT-SKIP:` line that names the section.
 
+Excluded: `api_app_generator_test.rb:44`'s web-console assertion belongs to the web-console RFC
+(`web-console-railtie-and-app-generator-entry`, post-launch); leave it unported here.
+
 ## Acceptance criteria
 
 - [ ] Every listed file (or, for a `file:a-b` row, every Rails test whose `test` line is in that range) is matched, with no Miss left in `pnpm parity:test -- --package trailties`.

@@ -81,6 +81,11 @@ trailties drops below 100% on `parity:api` (Miss 0, inheritance and arity 100%)
 or `parity:test` (Miss/Desc/Move 0, no ✗ file, every Skip `PERMANENT-SKIP:`).
 Follow the shape of `activesupport-parity-100-gate` (RFC 0246).
 
+The three web-console tests (`app_generator_test.rb`'s `test_web_console` and
+`test_skip_dev_gems`, `api_app_generator_test.rb:44`'s assertion) are owned by
+the post-launch web-console RFC; the gate counts them as that RFC's, not as
+trailties misses.
+
 ## Acceptance criteria
 
 - [ ] The CI check exists, runs on PRs touching `packages/trailties`, and passes on main.
