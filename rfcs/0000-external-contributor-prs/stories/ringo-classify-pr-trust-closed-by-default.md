@@ -2,7 +2,7 @@
 title: "ringo: one PR trust check, closed by default, on every PR-scoped handler"
 status: draft
 updated: 2026-11-19
-rfc: "0252-external-contributor-prs"
+rfc: "0000-external-contributor-prs"
 cluster: trust-gate
 packages: []
 deps: []
@@ -32,6 +32,8 @@ detect forks.
   list, every PR is `external`.
 - Every PR-scoped entry point returns early for `external` before any `gh`
   write, reviewer assignment, Copilot request, pane spawn or pane send.
+- Exemption: `handleMerge` on an external PR still runs local bookkeeping
+  (story `done`, worktree cleanup) and makes no `gh` writes.
 - A table-driven Go test sends an external payload to every PR-scoped handler
   and asserts zero side effects. A trusted payload still assigns a reviewer
   (one handler is enough to cover this).

@@ -2,7 +2,7 @@
 title: "trailmap: redraft one comment with an instruction"
 status: draft
 updated: 2026-11-19
-rfc: "0252-external-contributor-prs"
+rfc: "0000-external-contributor-prs"
 cluster: external-review
 packages: []
 deps: [trailmap-review-draft-editor]

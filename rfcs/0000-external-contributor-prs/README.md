@@ -1,5 +1,5 @@
 ---
-rfc: "0252-external-contributor-prs"
+rfc: "0000-external-contributor-prs"
 title: "PRs from external contributors: no automation by default, owner-approved reviews"
 status: draft
 created: 2026-11-19
@@ -15,7 +15,7 @@ related-rfcs:
   - "0249-ringo-changes"
 ---
 
-# RFC 0252 — PRs from external contributors: no automation by default, owner-approved reviews
+# RFC — PRs from external contributors: no automation by default, owner-approved reviews
 
 ## Summary
 
@@ -92,7 +92,11 @@ from us until the owner acts.
 2. ringo `POST /external-review/start {repo, pr, focus}` spawns a review
    agent in a fresh worktree checked out at `refs/pull/<n>/head`.
    - **No GitHub write credential.** The pane starts with `GH_TOKEN` set to a
-     read-only token, or unset with only `gh api` GET allowed. An agent
+     read-only fine-grained PAT (`contents:read`, `pull_requests:read`,
+     `metadata:read` on the tracked repos), so the agent can still
+     `gh pr view` / `gh api` GET for context. The owner creates the PAT;
+     it is stored only in ringo's env file as `EXTERNAL_REVIEW_GH_TOKEN`,
+     and ringo refuses to start an external review when it is unset. An agent
      constraint (`agent_constraints.go`) also forbids `gh pr review|comment`.
      It is a second layer and not the boundary.
    - **Their code does not run on the host.** The review agent reads the diff
@@ -103,8 +107,10 @@ from us until the owner acts.
      discussion as untrusted content and says so.
 3. The agent writes `review-draft.json`: a summary, a suggested event
    (`COMMENT` / `REQUEST_CHANGES` / `APPROVE`), and a list of
-   `{path, line, side, body, rationale}`. It then POSTs the file to trailmap
-   (`POST /api/external-reviews`). `rationale` is shown only to the owner and
+   `{path, line, side, body, rationale}`. ringo stores it and serves it at
+   `GET /api/external-reviews?repo=&pr=`, and emits
+   `external_review.drafted` on `/events`; trailmap ingests the draft from
+   there. `rationale` is shown only to the owner and
    is never sent.
 4. trailmap's PR page shows each draft comment as an **editable textarea**
    next to its diff hunk, with approve and discard controls. The summary and
@@ -124,14 +130,17 @@ editable. **Redraft all** starts a new review against the new head.
 ### Merging an external PR
 
 ringo never auto-merges an external PR. Merging is a manual GitHub action.
-After the merge, the normal merge handling (story `done`, cleanup) runs,
-because the merge itself was the owner's decision.
+After the merge, `handleMerge` runs only its local bookkeeping (story
+`done`, worktree cleanup), because the merge itself was the owner's
+decision. It is the one exemption from the trust gate's early return, and it
+makes no `gh` writes for an external PR.
 
 ### tasks
 
 There is no schema change. `pr: trails#N` already accepts any PR. A story an
 external contributor is working on keeps `claim: null` and
-`assignee: <their login>`. The spawn loop already skips stories whose
+`assignee: <their login>`. An external PR never creates tasks rows by
+itself; it is linked to an existing story, or to none. The spawn loop already skips stories whose
 `assignee` is not empty, and the story
 `spawn-loop-skips-externally-assigned-stories` adds a test that pins this.
 
@@ -193,14 +202,11 @@ done inside the first trailmap story that needs it.
 
 ## Open questions
 
-- **Read-only token for the review pane:** use a fine-grained PAT with
-  `pull_requests:read` / `contents:read`, or no token with the agent working
-  only from a fetched diff? Recommendation: a read-only PAT, so the agent can
-  `gh pr view` / `gh api` for context.
-- **Does an external PR need its own story?** Recommendation: no. Link it to
-  an existing story (or none). An external PR never creates tasks rows by
-  itself.
+None open.
 
 ## Changelog
 
 - 2026-11-19: initial RFC
+- 2026-11-19: review fixes — `handleMerge` bookkeeping exempted from the
+  gate; drafts served by ringo, ingested by trailmap; read-only PAT decided;
+  Redraft all assigned to the editor story
