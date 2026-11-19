@@ -1,9 +1,9 @@
 ---
 rfc: "0248-trailties-parity-100"
 title: "trailties: 100% API and test parity"
-status: draft
+status: active
 created: 2026-11-18
-updated: 2026-11-18
+updated: 2026-11-19
 owner: "@deanmarano"
 packages:
   - trailties
