@@ -1,6 +1,6 @@
 ---
 title: "website-docs-typedoc-fails-under-ts5"
-status: ready
+status: in-progress
 updated: 2026-11-19
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10348
+claim: "2026-11-19T10:01:37Z"
+assignee: "website-docs-typedoc-fails-under-ts5"
 blocked-by: null
 closed-reason: null
 ---

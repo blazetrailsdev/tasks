@@ -1,6 +1,6 @@
 ---
 title: "trailmap: carry LOC, findings total and check counts so the session figure can show them"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: null

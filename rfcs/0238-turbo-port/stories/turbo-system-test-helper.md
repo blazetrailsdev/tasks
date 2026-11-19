@@ -1,6 +1,6 @@
 ---
 title: "turbo-system-test-helper"
-status: ready
+status: blocked
 updated: 2026-11-19
 rfc: "0238-turbo-port"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-19T10:46:38Z"
+assignee: "turbo-system-test-helper"
+blocked-by: "waiting on turbo-test-helpers (trails#10338, open): lib/test-assertions.ts and integration-test-assertions.ts this story tests and extends are not on main yet; building now would stack on #10338"
 closed-reason: null
 ---
 
