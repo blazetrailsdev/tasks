@@ -1,0 +1,40 @@
+---
+title: "turbo-system-tests-broadcasts"
+status: draft
+updated: 2026-11-19
+rfc: "0238-turbo-port"
+cluster: null
+packages: []
+deps: []
+deps-rfc: []
+est-loc: null
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+`turbo-system-tests-action-cable` landed the system-test server's websocket upgrade
+(`packages/actionpack/lib/action-dispatch/system-testing/server.ts`) and ported
+`vendor/turbo-rails/v2.0.23/test/system/assertions_test.rb` as
+`packages/turbo/test/system/assertions.system.test.ts`. Two things are left:
+
+1. `vendor/turbo-rails/v2.0.23/test/system/broadcasts_test.rb` (156 lines, 13 tests plus the
+   private `reconnect_cable_stream_source`, `assert_broadcasts_text` and
+   `assert_forwards_turbo_stream_tag_attribute` helpers) is not yet ported.
+2. `config.turbo.testConnectAfterActions` defaults to `["visit"]` (`packages/turbo/lib/engine.ts:71`,
+   Rails `engine.rb:8`), and `SystemTestCase` has no `visit`. On 2026-11-19 the operator ruled
+   "change default". The only navigation member `SystemTestCase` answers is `page()`, but
+   wrapping it recurses, because `connectTurboCableStreamSources` calls `this.page()`
+   (`lib/system-test-helper.ts:156`). Choose a default that names a method that is safe to wrap.
+
+## Acceptance criteria
+
+- `packages/turbo/test/system/broadcasts.system.test.ts` ports every test in broadcasts_test.rb
+  under its Rails name.
+- `testConnectAfterActions`' default names a `SystemTestCase` method, and the engine's wrap
+  does not recurse.
