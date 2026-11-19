@@ -171,15 +171,19 @@ and the last row matches everything, so every input has exactly one stage:
 | --- | -------------------------------------------------------- | -------------------- |
 | 1   | `merged`                                                 | Merged               |
 | 2   | a spawn with no PR                                       | Drafting             |
-| 3   | a PR with a reviewer assigned, or `openFindings` above 0 | Reviewer convergence |
-| 4   | a draft PR, `reviewCycles` 0                             | Self review          |
-| 5   | not draft, `ciStatus` passing                            | Ready to merge       |
+| 3   | not draft, `ciStatus` passing, `openFindings` 0          | Ready to merge       |
+| 4   | a PR with a reviewer assigned, or `openFindings` above 0 | Reviewer convergence |
+| 5   | a draft PR, `reviewCycles` 0                             | Self review          |
 | 6   | anything else                                            | Getting CI green     |
+
+Ready to merge comes before the reviewer rule (trailmap#173): a reviewer
+still assigned to a green, non-draft PR with no open findings has nothing left
+to converge on, so the PR is shown as ready.
 
 Row 6 covers a draft PR whose review has finished (`reviewCycles` above 0,
 no reviewer, no open findings) and any PR whose CI is pending or failing
 after review. Before review, CI is not the session's blocker, so a draft PR
-with red CI and no review yet is Self review (row 4). An agent's reported
+with red CI and no review yet is Self review (row 5). An agent's reported
 stage (`fleet-stage-signal`) refines row 2 only: a spawn whose story reports
 `self` is Self review. A reported stage never overrides rows 1 and 3–6,
 which rest on PR facts.
