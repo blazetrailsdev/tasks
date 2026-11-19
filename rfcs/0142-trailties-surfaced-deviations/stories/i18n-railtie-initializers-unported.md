@@ -7,6 +7,7 @@ cluster: null
 packages: []
 deps:
   - i18n-backend-fallbacks-is-a-class-factory-not-a-module
+  - finisher-awaits-async-load-hooks
 deps-rfc: []
 est-loc: 300
 priority: 6
