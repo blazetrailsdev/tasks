@@ -36,5 +36,11 @@ rake-command-exits-when-the-task-returns`.
   interpreter does once a non-serving command returns (with `server`/`dev`
   still alive, since `rackup`'s Node handler returns from `run` while
   listening), and the invented call in `RakeCommand.perform` is removed.
+- Converging also removes `rake.ts`'s top-level
+  `import { disconnectAllBang } from "@blazetrails/activerecord"`, which loads
+  Active Record for every rake invocation although railties'
+  `rake_command.rb` knows nothing of it (`dbconsole.ts` carries the same
+  import). If the receipt is ratified instead, keep the import lazy or
+  justify it there.
 - Or get the deviation ratified under trails CLAUDE.md "Runtime facts Node
   does not expose" and flip the receipt to `PERMANENT`.
