@@ -1,6 +1,6 @@
 ---
 title: "Port Runnable#stop"
-status: in-progress
+status: closed
 updated: 2026-11-19
 rfc: "0196-solid-stack"
 cluster: null
@@ -13,7 +13,7 @@ pr: trails#10361
 claim: "2026-11-19T15:16:34Z"
 assignee: "solid-queue-adapter-extends-abstract-adapter"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: Runnable's includers are a closed set (Poller, Scheduler: poller.rb:5, scheduler.rb:5), so CLAUDE.md § 'A module included by an open set of classes binds super at include time' keeps Runnable#stop (runnable.rb:20-28) inlined in each includer with @inlinedFrom, as main already has it; a Runnable member reaching Base#stop via rbCallSuper is the open-set shape. Reviewed on trails#10361."
 ---
 
 ## Context

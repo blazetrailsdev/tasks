@@ -1,6 +1,6 @@
 ---
 title: "boot-define-property-cost-in-mixin-installers"
-status: ready
+status: in-progress
 updated: 2026-11-19
 rfc: "0241-request-path-performance"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10363
+claim: "2026-11-19T16:31:33Z"
+assignee: "boot-define-property-cost-in-mixin-installers"
 blocked-by: null
 closed-reason: null
 ---

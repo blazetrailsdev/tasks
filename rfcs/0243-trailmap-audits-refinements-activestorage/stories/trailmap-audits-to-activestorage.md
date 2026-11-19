@@ -1,6 +1,6 @@
 ---
 title: "trailmap: Audit is a Base record with an attached body"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: audits

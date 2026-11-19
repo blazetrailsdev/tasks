@@ -1,7 +1,7 @@
 ---
 title: "trailties: audit the 20 global and 19 scoped API skips"
 status: ready
-updated: 2026-11-18
+updated: 2026-11-19
 rfc: "0248-trailties-parity-100"
 cluster: receipts
 packages: [trailties]

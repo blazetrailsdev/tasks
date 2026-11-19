@@ -1,6 +1,6 @@
 ---
 title: "turbo-streams-controller-test"
-status: claimed
+status: in-progress
 updated: 2026-11-19
 rfc: "0238-turbo-port"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10362
 claim: "2026-11-19T15:31:41Z"
 assignee: "turbo-stream-renderer-and-collector-camelcase"
 blocked-by: null

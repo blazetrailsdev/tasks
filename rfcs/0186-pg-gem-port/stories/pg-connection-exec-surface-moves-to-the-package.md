@@ -1,6 +1,6 @@
 ---
 title: "pg: PG.connect and PG::Connection's exec, prepare and close surface; new_client is PG.connect"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0186-pg-gem-port"
 cluster: connection

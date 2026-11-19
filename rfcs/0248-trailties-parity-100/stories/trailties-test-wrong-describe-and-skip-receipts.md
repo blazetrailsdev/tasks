@@ -1,7 +1,7 @@
 ---
 title: "trailties: fix the 16 wrong describes and receipt or port the 42 skips"
 status: ready
-updated: 2026-11-18
+updated: 2026-11-19
 rfc: "0248-trailties-parity-100"
 cluster: receipts
 packages: [trailties]

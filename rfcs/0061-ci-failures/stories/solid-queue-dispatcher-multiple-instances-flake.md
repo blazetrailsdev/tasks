@@ -1,6 +1,6 @@
 ---
 title: "Flake: solid-queue DispatcherTest 'run more than one instance of the dispatcher' (14 vs 15)"
-status: draft
+status: ready
 updated: 2026-11-19
 rfc: "0061-ci-failures"
 cluster: null

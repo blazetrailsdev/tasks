@@ -18,7 +18,7 @@ related-rfcs:
   - "0142-trailties-surfaced-deviations"
   - "0171-thor-port"
   - "0246-activesupport-parity-100"
-priority: 2
+priority: 5
 ---
 
 # RFC 0248 — trailties: 100% API and test parity

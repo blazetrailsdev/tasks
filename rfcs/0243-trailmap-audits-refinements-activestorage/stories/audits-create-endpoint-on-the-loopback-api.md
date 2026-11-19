@@ -1,7 +1,7 @@
 ---
 title: "trailmap: POST /audits on the loopback API attaches the report body"
-status: ready
-updated: 2026-11-18
+status: in-progress
+updated: 2026-11-19
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: audits
 packages: ["activestorage"]
@@ -9,9 +9,9 @@ deps: [trailmap-audits-to-activestorage, trailmap-ingest-token-guards-create-end
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#179
+claim: "2026-11-19T16:46:30Z"
+assignee: "audits-create-endpoint-on-the-loopback-api"
 blocked-by: null
 closed-reason: null
 ---

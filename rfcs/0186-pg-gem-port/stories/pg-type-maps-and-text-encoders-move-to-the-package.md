@@ -1,6 +1,6 @@
 ---
 title: "pg: TypeMapByOid, TypeMapByClass, the text encoders and the connection type-map accessors"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0186-pg-gem-port"
 cluster: result-and-coders

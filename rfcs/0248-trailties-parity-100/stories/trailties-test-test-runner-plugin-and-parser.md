@@ -1,7 +1,7 @@
 ---
 title: "trailties: port test_test, plugin test runner, test parser and minitest plugin tests"
 status: ready
-updated: 2026-11-18
+updated: 2026-11-19
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
 packages: [trailties]

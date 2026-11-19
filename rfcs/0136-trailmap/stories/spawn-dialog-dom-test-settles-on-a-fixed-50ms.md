@@ -1,6 +1,6 @@
 ---
 title: "The dashboard DOM tests wait a fixed 50ms for a POST, and time out under full-suite load"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0136-trailmap"
 cluster: null

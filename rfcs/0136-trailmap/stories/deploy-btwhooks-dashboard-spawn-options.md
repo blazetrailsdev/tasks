@@ -1,6 +1,6 @@
 ---
 title: "trailmap: deploy btwhooks spawn-options so the spawn dialog's Model and Worktree take effect"
-status: claimed
+status: in-progress
 updated: 2026-11-19
 rfc: "0136-trailmap"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: trailmap#178
 claim: "2026-11-19T15:46:21Z"
 assignee: "deploy-btwhooks-dashboard-spawn-options"
 blocked-by: null

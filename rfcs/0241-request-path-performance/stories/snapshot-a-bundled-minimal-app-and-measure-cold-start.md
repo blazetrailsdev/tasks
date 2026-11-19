@@ -1,6 +1,6 @@
 ---
 title: "Snapshot a bundled minimal trails app and measure its cold start"
-status: ready
+status: blocked
 updated: 2026-11-19
 rfc: "0241-request-path-performance"
 cluster: null
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-19T16:31:33Z"
+assignee: "boot-define-property-cost-in-mixin-installers"
+blocked-by: "nokogiri-extension-loads-on-first-parse-not-at-boot: WebAssembly is undefined under --build-snapshot and boot instantiates libxml2-wasm"
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "ringo:stub serves /events and the reviewer list, so /dashboard can be screenshot"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0136-trailmap"
 cluster: null

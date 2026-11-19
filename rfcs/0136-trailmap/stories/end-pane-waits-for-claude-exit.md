@@ -1,6 +1,6 @@
 ---
 title: "End pane waits for Claude to exit before typing the shell exit"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0136-trailmap"
 cluster: null
