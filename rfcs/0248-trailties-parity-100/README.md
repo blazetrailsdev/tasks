@@ -85,8 +85,8 @@ story `port-source-paths-for-not-namespaced-generators-test`.
 | Area                                                        | Miss | Story                                    |
 | ----------------------------------------------------------- | ---: | ---------------------------------------- |
 | `generators/app_base.rb` + plugin generator Gemfile entries |   28 | `trailties-api-app-base-gemfile-entries` |
-| other generator modules                                     |   39 | `trailties-api-generators-residue`       |
-| `commands/*` `perform` / constructors                       |   22 | `trailties-api-commands-perform-surface` |
+| other generator modules                                     |   35 | `trailties-api-generators-residue`       |
+| `commands/*` `perform` / constructors                       |   21 | `trailties-api-commands-perform-surface` |
 | `api/generator.rb`, `api/task.rb` (✗)                       |   15 | `trailties-api-rdoc-task-permanence`     |
 | railtie, configurable, engine, application                  |    9 | `trailties-api-railtie-engine-residue`   |
 
