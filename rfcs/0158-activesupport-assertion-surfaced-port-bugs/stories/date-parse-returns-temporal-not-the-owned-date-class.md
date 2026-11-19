@@ -6,7 +6,8 @@ rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:
   - "date"
-deps: []
+deps:
+  - ruby-date-value-is-the-owned-date-class-not-plain-date
 deps-rfc: []
 est-loc: 300
 priority: null
