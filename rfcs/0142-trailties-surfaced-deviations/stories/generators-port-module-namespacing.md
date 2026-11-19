@@ -5,7 +5,8 @@ updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps:
+  - generated-module-wrap-is-not-erasable-syntax
 deps-rfc: []
 est-loc: 150
 priority: null
