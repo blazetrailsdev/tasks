@@ -106,7 +106,12 @@ does), because each closes test rows:
 | `scaffold-generator-engine-subprocess-tests`           | 7 scaffold engine tests            |
 
 The rest of 0142 is fidelity work that does not move a parity number and stays
-there.
+there, with one exception. `port-plugin-helpers-with-new-plugin`, and through it
+`scaffold-generator-engine-subprocess-tests`, depends on the 0142 story
+`generated-plugin-bin-trails-cannot-boot`, which is `ready`. That story fixes a
+generated plugin's `bin/trails` boot and does not move a parity number itself,
+so it stays in 0142 as a cross-RFC dep. It gates 9 test rows here, so 0142
+should schedule it early.
 
 ## Design
 
@@ -157,7 +162,11 @@ renamed or skipped to pass.
 
 ## Rollout
 
-1. `trailties-test-move-misplaced-tests` first (several test stories depend on it).
+1. `trailties-test-move-misplaced-tests` first. This is a hard dep, not advice:
+   every port story whose target TS file the move touches lists it in `deps`.
+   Those are the 8 configuration parts, both multi-dbs parts, the two engine
+   stories, query logs, zeitwerk-and-loading, install generators and the three
+   moved-in stories. Their PRs never edit the same file at the same time.
 2. Test ports in parallel; the configuration and app-generator splits can run concurrently.
 3. API residue, structure, receipts.
 4. `trailties-test-wrong-describe-and-skip-receipts`, then `trailties-parity-100-gate`.
@@ -177,10 +186,6 @@ renamed or skipped to pass.
 2. **Do `api/generator.rb` and `api/task.rb` count?** They build Rails' own
    API docs. Recommendation: receipt them `PERMANENT:` under a new section for
    "Rails-repo maintenance tooling".
-3. **Do the `configuration_test.rb` line splits hold?** Ranges are even by
-   line, not by test; an agent that finds its range unbalanced says so in its PR
-   rather than taking tests from a neighbor's range. (Measured counts per range are
-   recorded in each story, so this should be rare.)
 
 ## Stories
 
@@ -240,9 +245,9 @@ renamed or skipped to pass.
 | `trailties-api-structure-inheritance-arity`             | api-residuals  |     300 |
 | `trailties-api-skip-receipts-audit`                     | receipts       |     150 |
 | `trailties-parity-100-gate`                             | receipts       |     150 |
-| `port-source-paths-for-not-namespaced-generators-test`  | moved          |       — |
-| `port-plugin-helpers-with-new-plugin`                   | moved          |       — |
-| `scaffold-generator-engine-subprocess-tests`            | moved          |       — |
+| `port-source-paths-for-not-namespaced-generators-test`  | test-ports     |      40 |
+| `port-plugin-helpers-with-new-plugin`                   | test-ports     |     120 |
+| `scaffold-generator-engine-subprocess-tests`            | test-ports     |     250 |
 
 ## Changelog
 
@@ -251,3 +256,7 @@ renamed or skipped to pass.
   counts, the split-story AC is per range, the wrong-describe breakdown is
   corrected (16), Alternatives is added, and the moved stories now depend on
   the misplaced-test move.
+- 2026-11-18: review fixes. Open question 3 is dropped because measured counts
+  settle it. The move is a hard dep of every story that touches the same
+  files. The 0142 blocker `generated-plugin-bin-trails-cannot-boot` is named,
+  and the moved stories get a cluster and packages.

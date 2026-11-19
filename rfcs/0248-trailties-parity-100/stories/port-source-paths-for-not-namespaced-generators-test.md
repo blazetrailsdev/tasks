@@ -3,8 +3,8 @@ title: "port-source-paths-for-not-namespaced-generators-test"
 status: ready
 updated: 2026-11-19
 rfc: "0248-trailties-parity-100"
-cluster: null
-packages: []
+cluster: test-ports
+packages: [trailties]
 deps: []
 deps-rfc: []
 est-loc: 40

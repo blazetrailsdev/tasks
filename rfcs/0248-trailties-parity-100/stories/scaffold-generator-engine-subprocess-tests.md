@@ -3,8 +3,8 @@ title: "Port the scaffold tests that run inside a generated engine"
 status: ready
 updated: 2026-11-10
 rfc: "0248-trailties-parity-100"
-cluster: null
-packages: []
+cluster: test-ports
+packages: [trailties]
 deps:
   - trailties-test-move-misplaced-tests
   - trailties-plugin-generator-part-2-and-plugin-command

@@ -5,7 +5,7 @@ updated: 2026-11-18
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
 packages: [trailties]
-deps: []
+deps: [trailties-test-move-misplaced-tests]
 deps-rfc: []
 est-loc: 300
 priority: null
