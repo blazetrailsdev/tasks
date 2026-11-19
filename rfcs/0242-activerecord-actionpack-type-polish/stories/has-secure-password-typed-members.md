@@ -1,6 +1,6 @@
 ---
 title: "has-secure-password-typed-members"
-status: ready
+status: in-progress
 updated: 2026-11-19
 rfc: "0242-activerecord-actionpack-type-polish"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10350
+claim: "2026-11-19T11:01:32Z"
+assignee: "activesupport-types-class-level-mixins-remainder"
 blocked-by: null
 closed-reason: null
 ---
