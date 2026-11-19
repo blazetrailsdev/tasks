@@ -1,7 +1,7 @@
 ---
 rfc: "0250-web-console-gem-port"
 title: "Port the web-console gem"
-status: draft
+status: postponed
 created: 2026-11-19
 updated: 2026-11-19
 owner: "@deanmarano"
