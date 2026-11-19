@@ -45,7 +45,7 @@ about the runtime, not `bun install`. **Post-launch.**
 | `node:sqlite` (`activerecord/lib/sqlite/node-sqlite.ts`)                                                           | present               | not present; Bun ships `bun:sqlite`                                  |
 | `node:http` (`rackup/lib/handler/node.ts:63`)                                                                      | present               | present, compatible                                                  |
 | `node:async_hooks` `AsyncLocalStorage`                                                                             | present               | present                                                              |
-| `node:cluster` (RFC 0251)                                                                                          | present               | `fork` present; behavior to verify                                   |
+| `node:cluster` (RFC 0251)                                                                                          | present               | `fork` present; clustered serving on Bun is a non-goal here          |
 | `pg`, `mysql2`                                                                                                     | pure JS               | pure JS, expected to work                                            |
 | bin shebangs (`trailties/bin/trails.js`)                                                                           | `#!/usr/bin/env node` | `bun trails` works; the shebang still names node                     |
 
@@ -81,13 +81,21 @@ reports that; the driver does not fake the missing ones.
 
 There is one Bun job. It runs a generated-app smoke (`new`, `db:migrate`,
 `server` plus one request, and `test`) and the activerecord sqlite suite on
-the Bun driver. The job does not block merges until it has been green for two
+the Bun driver, as vitest on the Bun runtime:
+`bun --bun node_modules/vitest/vitest.mjs run --project activerecord --project sqlite-drivers sqlite`
+from the repo root (the vitest projects are in the root `vitest.config.ts`).
+vitest 3.2.4 starts under Bun 1.3.6 this way; the `.bin/vitest` shell shim
+does not. The job does not block merges until it has been green for two
 weeks.
 
 ## Non-goals
 
 - **`bun install` / `bun.lockb` in generated apps.** pnpm stays (root CLAUDE.md).
-- **Running the trails monorepo's own vitest suite under `bun test`.**
+- **Bun's own test runner (`bun test`).** Tests stay on vitest. The
+  activerecord sqlite suite does run on the Bun runtime, as vitest under
+  `bun --bun` (§ CI). The rest of the monorepo suite stays on Node.
+- **Clustered serving on Bun.** RFC 0251 targets Node's `node:cluster`.
+  Running it on Bun is a follow-up once 0251 lands.
 - **Deno.** It has a separate compat layer. Doing Bun first tells us how much
   of the adapter work carries over.
 - **`Bun.SQL` drivers for Postgres/MySQL.** `pg` and `mysql2` are pure JS
@@ -112,21 +120,39 @@ weeks.
 1. `runtime-detection-and-bun-process-adapter`
 2. `zeitwerk-hooks-via-bun-plugin`
 3. `bun-sqlite-driver`
-4. `bun-generated-app-smoke-ci`
+4. `bun-generated-app-smoke-ci`, `document-bun-cli`
+5. `bun-ci-required-check`
 
 ## Verification
 
-- With Bun 1.3.x, `bun trails new app && cd app && bun trails db:migrate &&
+- With Bun 1.3.x (Open question 2), `bun trails new app && cd app && bun trails db:migrate &&
 bun trails test` passes.
 - `bun trails server` answers a request, and an edited model reloads in
   development.
-- The activerecord sqlite suite passes on `bun-sqlite`, apart from tests that
-  are skipped by capability with a receipt.
+- Every activerecord sqlite test (58 files under `test/cases`) that passes
+  on better-sqlite3 also passes on `bun-sqlite`, except at most 20
+  capability skips, each listed with its receipt in the driver.
 
 ## Open questions
 
-1. Is Bun a supported runtime with a CI gate, or best-effort with a
-   non-blocking job? (The draft says non-blocking first, then gating.)
-2. What is the minimum Bun version? (The draft says 1.3.)
-3. If `Bun.plugin` cannot express a zeitwerk hook, do we accept eager-load on
-   Bun?
+1. **Does the Bun CI job gate merges?** Options: (a) required from day one;
+   (b) non-blocking, then required after two weeks green; (c) best-effort
+   forever. Recommendation: (b). The flip is the named follow-up story
+   `bun-ci-required-check`.
+2. **What is the minimum Bun version?** Options: 1.2, or 1.3 (the version
+   measured here). Recommendation: 1.3. The CI job pins 1.3.x and
+   § Verification uses it.
+3. **What happens if `Bun.plugin` cannot express a zeitwerk hook shape?**
+   Options: (a) eager-load everything on Bun, which loses development
+   reloading; (b) treat it as a blocker. Recommendation: (b). An inexpressible
+   shape blocks `zeitwerk-hooks-via-bun-plugin`, which goes to `blocked` for
+   an operator ruling. If the ruling picks (a), eager-load is filed then as
+   its own story.
+
+## Changelog
+
+- 2026-11-19: initial RFC
+- 2026-11-19: review fixes. Open questions now list options and a
+  recommendation; the sqlite pass bar has a number; clustered serving is a
+  non-goal; the Bun vitest command is stated; the CLI docs and the
+  required-check flip are their own stories.

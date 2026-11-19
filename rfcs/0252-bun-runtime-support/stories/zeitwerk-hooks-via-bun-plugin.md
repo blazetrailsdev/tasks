@@ -24,4 +24,4 @@ closed-reason: null
 
 - [ ] The resolve/load hook shapes zeitwerk registers are implemented with `Bun.plugin` `onResolve`/`onLoad`.
 - [ ] Under Bun, a generated app boots, autoloads `app/models`, and reloads an edited file in development.
-- [ ] Any hook shape with no Bun equivalent still raises `NotImplementedError`, and the RFC lists that shape.
+- [ ] Any hook shape with no Bun equivalent still raises `NotImplementedError`. If a shape like that exists, this story goes to `blocked` for an operator ruling (RFC Open question 3).

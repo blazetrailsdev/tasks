@@ -4,7 +4,7 @@ status: draft
 updated: 2026-11-19
 rfc: "0252-bun-runtime-support"
 cluster: ci
-packages: [trailties]
+packages: [trailties, activerecord]
 deps: [zeitwerk-hooks-via-bun-plugin, bun-sqlite-driver]
 deps-rfc: []
 est-loc: 150
@@ -24,5 +24,4 @@ The RFC's § CI and § Verification.
 
 - [ ] The job installs Bun 1.3.x and runs `trails new`, `db:migrate`, `server` plus one request, and `test` under `bun`.
 - [ ] It runs the activerecord sqlite suite on `bun-sqlite`.
-- [ ] It is `continue-on-error`. Making it a required check is a follow-up after two weeks of green runs.
-- [ ] The trailties README documents `bun trails` / `bunx trails`.
+- [ ] It is `continue-on-error`. Making it required is `bun-ci-required-check` (RFC Open question 1).

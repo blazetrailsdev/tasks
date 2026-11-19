@@ -25,4 +25,11 @@ closed-reason: null
 - [ ] `lib/sqlite/bun-sqlite.ts` implements `SqliteDriver`, and `capabilities()` is truthful.
 - [ ] A `./connection-adapters/bun-sqlite-adapter.js` export exists.
 - [ ] Under Bun, `adapter: sqlite3` resolves to this driver with no change to `database.yml`.
-- [ ] The activerecord sqlite suite runs on it; each capability skip carries a receipt.
+- [ ] Every sqlite test that passes on better-sqlite3 passes on it, except at most 20 capability skips, each listed with a receipt.
+
+## Verification
+
+```sh
+cd packages/activerecord
+bun --bun ../../node_modules/vitest/vitest.mjs run test/cases --project sqlite
+```
