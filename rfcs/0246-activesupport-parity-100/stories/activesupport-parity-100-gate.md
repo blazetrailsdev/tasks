@@ -35,6 +35,14 @@ deps:
   - relocate-core-ext-enumerable-rb-methods-and-converge-sole
   - time-travel-test-port-three-time-zone-cases
   - with-options-implicit-receiver-instance-eval-arm
+  - activesupport-port-core-ext-regexp
+  - activesupport-port-evented-file-update-checker
+  - activesupport-port-fork-tracker
+  - activesupport-port-i18n-railtie
+  - activesupport-port-kernel-singleton-class
+  - activesupport-port-pathname-existence
+  - activesupport-port-railtie
+  - activesupport-port-xml-mini-libxml-engines
 deps-rfc: []
 est-loc: 150
 priority: null
