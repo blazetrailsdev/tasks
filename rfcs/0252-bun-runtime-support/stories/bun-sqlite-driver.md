@@ -30,6 +30,6 @@ closed-reason: null
 ## Verification
 
 ```sh
-cd packages/activerecord
-bun --bun ../../node_modules/vitest/vitest.mjs run test/cases --project sqlite
+# from the repo root
+bun --bun node_modules/vitest/vitest.mjs run --project activerecord --project sqlite-drivers sqlite
 ```
