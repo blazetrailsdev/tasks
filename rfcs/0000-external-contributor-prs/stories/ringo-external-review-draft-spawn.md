@@ -25,13 +25,17 @@ not run the contributor's code.
 ## Acceptance criteria
 
 - `POST /external-review/start {repo, pr, focus}` creates a worktree at
-  `refs/pull/<n>/head` and spawns Claude with a read-only GitHub token (or no
-  token, as the RFC's open question settles it). An agent constraint also
+  `refs/pull/<n>/head` and spawns Claude with `GH_TOKEN` set from
+  `EXTERNAL_REVIEW_GH_TOKEN`: an owner-provisioned fine-grained PAT,
+  read-only (`contents`, `pull_requests`, `metadata`), stored only in ringo's
+  env file. The endpoint answers 503 when it is unset. An agent constraint also
   forbids `gh pr review|comment|merge` and running scripts from the PR.
 - The prompt marks the PR body, commits and discussion as untrusted data.
 - The agent writes `review-draft.json` (`summary`, `event`, `comments[]` of
-  `{path, line, side, body, rationale}`) and POSTs it to trailmap's
-  `/api/external-reviews`. The session is parked, not discarded, so it can be
+  `{path, line, side, body, rationale}`); ringo stores it, serves it at
+  `GET /api/external-reviews?repo=&pr=` and emits `external_review.drafted`
+  on `/events`. The session is parked, not discarded, so it can be
   resumed for a redraft.
-- A Go test asserts the spawned pane's environment has no write-capable
-  token.
+- Go tests assert the pane's `GH_TOKEN` is the read-only PAT (never the
+  owner's token), and that a written draft is served by the GET and
+  announced on `/events`.

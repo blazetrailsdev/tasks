@@ -35,7 +35,8 @@ detect forks.
 - Exemption: `handleMerge` on an external PR still runs local bookkeeping
   (story `done`, worktree cleanup) and makes no `gh` writes.
 - A table-driven Go test sends an external payload to every PR-scoped handler
-  and asserts zero side effects. A trusted payload still assigns a reviewer
+  and asserts zero side effects (for `handleMerge`: bookkeeping only, zero
+  `gh` writes). A trusted payload still assigns a reviewer
   (one handler is enough to cover this).
 - A review or comment from an external login on a trusted PR is not
   delivered to the PR's agent pane.
