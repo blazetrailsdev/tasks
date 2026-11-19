@@ -1,7 +1,7 @@
 ---
 title: "internal mark counts Rails-backed private ports as debt"
-status: in-progress
-updated: 2026-11-18
+status: done
+updated: 2026-11-19
 rfc: "0061-ci-failures"
 cluster: null
 packages: ["scripts"]

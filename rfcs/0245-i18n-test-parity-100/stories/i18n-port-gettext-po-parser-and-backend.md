@@ -1,7 +1,7 @@
 ---
 title: "i18n: port Gettext::PoParser on the racc runtime and I18n::Backend::Gettext"
-status: claimed
-updated: 2026-11-18
+status: in-progress
+updated: 2026-11-19
 rfc: "0245-i18n-test-parity-100"
 cluster: gettext
 packages: [i18n]
@@ -9,7 +9,7 @@ deps: [i18n-port-gettext-helpers]
 deps-rfc: []
 est-loc: 650
 priority: null
-pr: null
+pr: trails#10326
 claim: "2026-11-18T23:06:40Z"
 assignee: "i18n-port-gettext-po-parser-and-backend"
 blocked-by: null

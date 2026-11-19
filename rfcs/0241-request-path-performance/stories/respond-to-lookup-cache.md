@@ -1,7 +1,7 @@
 ---
 title: "rbObjRespondTo walks the method chain on every call"
-status: in-progress
-updated: 2026-11-18
+status: done
+updated: 2026-11-19
 rfc: "0241-request-path-performance"
 cluster: request-perf
 packages: [ruby-compat]

@@ -1,7 +1,7 @@
 ---
 title: "The template resolver answers from the trails build view map, not app/views or .tse sources"
-status: in-progress
-updated: 2026-11-18
+status: done
+updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["actionview", "trails-tsc"]

@@ -1,7 +1,7 @@
 ---
 title: "Dashboard tests fail when the live TASKS_DATABASE and HUB_DATABASE_URL are exported"
-status: in-progress
-updated: 2026-11-18
+status: done
+updated: 2026-11-19
 rfc: "0136-trailmap"
 cluster: null
 packages: []

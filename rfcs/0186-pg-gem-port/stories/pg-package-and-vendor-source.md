@@ -1,7 +1,7 @@
 ---
 title: "Create @blazetrails/pg over node-pg: the namespace, constants and error classes"
-status: in-progress
-updated: 2026-11-18
+status: done
+updated: 2026-11-19
 rfc: "0186-pg-gem-port"
 cluster: package
 packages: ["pg", "scripts"]

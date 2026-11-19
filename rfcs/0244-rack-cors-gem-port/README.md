@@ -1,9 +1,9 @@
 ---
 rfc: "0244-rack-cors-gem-port"
 title: "Port the rack-cors gem"
-status: active
+status: closed
 created: 2026-11-17
-updated: 2026-11-18
+updated: 2026-11-19
 owner: "@deanmarano"
 packages:
   - "rack-cors"

@@ -1,7 +1,7 @@
 ---
 title: "Engine lib/tasks glob loads any .ts/.js, where Rails globs only *.rake"
-status: in-progress
-updated: 2026-11-18
+status: done
+updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

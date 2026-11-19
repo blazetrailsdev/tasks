@@ -1,7 +1,7 @@
 ---
 title: "generated-plugin-bin-trails-cannot-boot"
 status: ready
-updated: 2026-11-18
+updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

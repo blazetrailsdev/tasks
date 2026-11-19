@@ -1,7 +1,7 @@
 ---
 title: "actionpack DX type tests"
-status: in-progress
-updated: 2026-11-18
+status: done
+updated: 2026-11-19
 rfc: "0242-activerecord-actionpack-type-polish"
 cluster: type-polish-actionpack
 packages: [actionpack]

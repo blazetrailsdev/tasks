@@ -1,7 +1,7 @@
 ---
 title: "i18n: port i18n_test.rb's VERSION, Thread.current and Fiber tests and retire their baseline rows"
-status: in-progress
-updated: 2026-11-18
+status: done
+updated: 2026-11-19
 rfc: "0245-i18n-test-parity-100"
 cluster: residuals
 packages: [i18n]

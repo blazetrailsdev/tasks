@@ -1,7 +1,7 @@
 ---
 title: "pg: the coder writers raise FrozenError on a frozen coder"
-status: claimed
-updated: 2026-11-18
+status: done
+updated: 2026-11-19
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 9
-pr: null
+pr: trails#10327
 claim: "2026-11-18T23:51:36Z"
 assignee: "pg-connection-conndefaults-hash-and-connect-are-class-methods-over-libpq-keywords"
 blocked-by: null

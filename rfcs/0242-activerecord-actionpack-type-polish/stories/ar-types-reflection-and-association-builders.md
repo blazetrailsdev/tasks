@@ -1,7 +1,7 @@
 ---
 title: "Reflection and association builder parameters typed"
-status: ready
-updated: 2026-11-18
+status: claimed
+updated: 2026-11-19
 rfc: "0242-activerecord-actionpack-type-polish"
 cluster: type-polish-activerecord
 packages: [activerecord]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 600
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T00:36:53Z"
+assignee: "class-expression-lint-misses-namespace-import-esbuild-collision"
 blocked-by: null
 closed-reason: null
 ---

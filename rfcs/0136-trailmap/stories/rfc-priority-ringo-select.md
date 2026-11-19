@@ -1,7 +1,7 @@
 ---
 title: "RFC page priority is ringo's select (- and 1-9), not a number field"
-status: in-progress
-updated: 2026-11-18
+status: done
+updated: 2026-11-19
 rfc: "0136-trailmap"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "A bundled app pulls only its configured adapter's driver, not every loadPath target"
-status: in-progress
-updated: 2026-11-18
+status: done
+updated: 2026-11-19
 rfc: "0241-request-path-performance"
 cluster: null
 packages: ["activerecord"]

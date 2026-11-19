@@ -1,7 +1,7 @@
 ---
 title: "Daily GitHub Actions perf benchmark of the twelve-dollar-server, recorded for charting"
-status: in-progress
-updated: 2026-11-17
+status: done
+updated: 2026-11-19
 rfc: "0241-request-path-performance"
 cluster: "request-perf"
 packages: []

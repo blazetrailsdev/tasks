@@ -1,7 +1,7 @@
 ---
 title: "Seat turbo's dummy app and test classes with plain assignments, not constSet"
-status: draft
-updated: 2026-11-18
+status: ready
+updated: 2026-11-19
 rfc: "0238-turbo-port"
 cluster: null
 packages: []

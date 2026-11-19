@@ -1,7 +1,7 @@
 ---
 title: "Generators execute_command runs bin/<executor> through run inside in_root (actions.rb:461-472)"
-status: ready
-updated: 2026-11-16
+status: done
+updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9393
+claim: "2026-11-19T00:21:39Z"
+assignee: "converge-integration-test-helper-loads-to-one-site"
 blocked-by: null
 closed-reason: null
 ---

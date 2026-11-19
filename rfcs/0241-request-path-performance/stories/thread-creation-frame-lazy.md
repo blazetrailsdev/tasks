@@ -1,7 +1,7 @@
 ---
 title: "Thread.new captures an Error stack on every request"
-status: in-progress
-updated: 2026-11-17
+status: done
+updated: 2026-11-19
 rfc: "0241-request-path-performance"
 cluster: request-perf
 packages: [ruby-compat]

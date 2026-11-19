@@ -1,7 +1,7 @@
 ---
 title: "Hub-backed tests and the dashboard palette DOM test flake when the suite runs with Postgres"
-status: in-progress
-updated: 2026-11-18
+status: done
+updated: 2026-11-19
 rfc: "0136-trailmap"
 cluster: null
 packages: []

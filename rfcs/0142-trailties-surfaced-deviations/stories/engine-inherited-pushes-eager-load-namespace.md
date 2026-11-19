@@ -1,7 +1,7 @@
 ---
 title: "trailties: Engine.inherited's eager_load_namespaces << base is not in Engine.register"
-status: in-progress
-updated: 2026-11-18
+status: done
+updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "number_to_human unwraps the rounded BigDecimal because BigDecimal#/ is unported"
-status: ready
-updated: 2026-11-16
+status: closed
+updated: 2026-11-19
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:
@@ -11,10 +11,10 @@ deps-rfc: []
 est-loc: 160
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T00:06:44Z"
+assignee: "date-and-time-calculations-drops-eager-date-time-imports"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: Rails v8.0.2 number_to_human_converter.rb:16-17 itself does @number = Float(number) after rounding; trails' kernelFloat mirrors it and no DEVIATION comment remains."
 ---
 
 ## Refinement (2026-10-22)

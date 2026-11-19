@@ -1,7 +1,7 @@
 ---
 title: "Converge mailer/job TestHelper loads into one site at IntegrationTest load (no test-help/railtie awaited arms)"
-status: ready
-updated: 2026-11-18
+status: blocked
+updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-19T00:21:39Z"
+assignee: "converge-integration-test-helper-loads-to-one-site"
+blocked-by: "awaiting operator ruling: integration.ts runs action_dispatch_integration_test hooks synchronously at ES-import time, and actionpack cannot import actionmailer/activejob, so no single awaited site can load ActionMailer::TestHelper/TestCase and ActiveJob::TestHelper before it; the story's own AC asks for an operator PERMANENT ruling in that case"
 closed-reason: null
 ---
 

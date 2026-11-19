@@ -1,7 +1,7 @@
 ---
 title: "A trails app bundles into one esbuild file and runs on AWS Lambda"
-status: in-progress
-updated: 2026-11-18
+status: done
+updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trails-tsc", "actionview", "actionpack", "rack-session", "activerecord", "website"]

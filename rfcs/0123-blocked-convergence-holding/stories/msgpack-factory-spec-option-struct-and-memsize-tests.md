@@ -1,7 +1,7 @@
 ---
 title: "msgpack: factory_spec.rb's unpacker-option, Struct#to_a and memsize tests"
-status: in-progress
-updated: 2026-11-18
+status: done
+updated: 2026-11-19
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []

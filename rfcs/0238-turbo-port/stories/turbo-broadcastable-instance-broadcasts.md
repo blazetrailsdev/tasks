@@ -1,7 +1,7 @@
 ---
 title: "Port Turbo::Broadcastable's instance broadcast_* methods"
-status: in-progress
-updated: 2026-11-18
+status: done
+updated: 2026-11-19
 rfc: "0238-turbo-port"
 cluster: turbo
 packages: [turbo, activerecord]

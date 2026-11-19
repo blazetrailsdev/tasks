@@ -1,6 +1,6 @@
 ---
 title: "Port BatchId attr_accessors and SolidQueueAdapter#stopping"
-status: draft
+status: ready
 updated: 2026-11-19
 rfc: "0196-solid-stack"
 cluster: null

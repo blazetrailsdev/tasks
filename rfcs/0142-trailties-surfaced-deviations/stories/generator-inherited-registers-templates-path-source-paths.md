@@ -1,7 +1,7 @@
 ---
 title: "Generators::Base.inherited source_paths registration from templates_path"
-status: ready
-updated: 2026-11-16
+status: done
+updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9795
+claim: "2026-11-19T00:21:39Z"
+assignee: "converge-integration-test-helper-loads-to-one-site"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Psych ToRuby revives !ruby/hash-with-ivars (to_ruby.rb:274-286)"
-status: ready
-updated: 2026-11-16
+status: done
+updated: 2026-11-19
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10328
+claim: "2026-11-19T00:06:44Z"
+assignee: "date-and-time-calculations-drops-eager-date-time-imports"
 blocked-by: null
 closed-reason: null
 ---

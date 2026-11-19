@@ -1,7 +1,7 @@
 ---
 title: "mail drops its unused @blazetrails/activesupport dependency"
-status: in-progress
-updated: 2026-11-18
+status: done
+updated: 2026-11-19
 rfc: "0226-mail-stack-to-parity"
 cluster: null
 packages: []

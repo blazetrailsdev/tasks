@@ -1,7 +1,7 @@
 ---
 title: "activesupport: close the 19 API misses in the runtime and messages files"
-status: ready
-updated: 2026-11-18
+status: claimed
+updated: 2026-11-19
 rfc: "0246-activesupport-parity-100"
 cluster: api-residuals
 packages: [activesupport]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T00:51:38Z"
+assignee: "active-support-test-parallelization-threshold-unseated"
 blocked-by: null
 closed-reason: null
 ---

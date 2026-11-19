@@ -1,7 +1,7 @@
 ---
 title: "Lint: a class expression named like an aliased import's original name (esbuild TDZ)"
-status: in-progress
-updated: 2026-11-18
+status: done
+updated: 2026-11-19
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: ["actionpack", "rack-session", "activerecord"]
