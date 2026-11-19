@@ -86,7 +86,7 @@ and template in `trailties`, and the plugin in `solid-queue` as a port of
 ## Alternatives considered
 
 - **`config/server.ts` as a plain object.** Honest about what runs, but a Rails
-  developer looking for `puma.rb` does not find it. Open question 1.
+  developer looking for `puma.rb` does not find it. Decided: `config/puma.ts` (§ Decisions).
 - **Leave Puma permanent forever.** Rejected: one core per app is not a
   production server.
 - **Run workers as threads (`worker_threads`).** Rejected: a Rack app's
@@ -110,12 +110,13 @@ and template in `trailties`, and the plugin in `solid-queue` as a port of
 - With `SOLID_QUEUE_IN_PUMA=1`, a job enqueued by a request runs with no
   second command.
 
-## Open questions
+## Decisions
 
-1. **`config/puma.ts` or `config/server.ts`?** Recommendation: `config/puma.ts`,
-   since trails maps by Rails concept and the Rails concept is Puma's config.
-2. **Pool sizing.** Recommendation: keep `TRAILS_MAX_THREADS` as the variable
-   the generated database config reads for `pool`, documented as concurrent
-   connections per worker.
-3. **Worker count variable.** Recommendation: `WEB_CONCURRENCY`, as Puma and
-   Heroku-style hosts read it.
+Ruled by the operator on 2026-11-19:
+
+1. The generated file is `config/puma.ts`, since trails maps by Rails concept
+   and the Rails concept is Puma's config.
+2. `TRAILS_MAX_THREADS` sizes the database pool, meaning concurrent connections
+   per worker. The generated database configs gain the `pool:` line Rails'
+   templates have (`config/databases/sqlite3.yml.tt:9`), which trails' lack.
+3. `WEB_CONCURRENCY` sets the worker count.
