@@ -5,7 +5,9 @@ updated: 2026-11-19
 rfc: "0248-trailties-parity-100"
 cluster: api-residuals
 packages: [trailties]
-deps: [trailties-api-app-base-gemfile-entries]
+deps:
+  - trailties-api-app-base-gemfile-entries
+  - trailties-gemfile-to-package-json-mapping
 deps-rfc: []
 est-loc: 400
 priority: null
