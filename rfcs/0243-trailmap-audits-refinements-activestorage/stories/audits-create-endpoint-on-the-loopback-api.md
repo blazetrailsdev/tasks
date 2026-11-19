@@ -1,6 +1,6 @@
 ---
 title: "trailmap: POST /audits on the loopback API attaches the report body"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: audits

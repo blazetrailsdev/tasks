@@ -1,6 +1,6 @@
 ---
 title: "trailties: a generated app loads its gem ports through a Bundler.require analogue, not per-generator imports"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

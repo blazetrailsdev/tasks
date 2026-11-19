@@ -1,6 +1,6 @@
 ---
 title: "SolidQueueAdapter extends AbstractAdapter"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0196-solid-stack"
 cluster: null

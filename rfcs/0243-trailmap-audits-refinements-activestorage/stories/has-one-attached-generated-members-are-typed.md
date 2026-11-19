@@ -1,6 +1,6 @@
 ---
 title: "activestorage: has_one_attached / has_many_attached generated reader, writer and with_attached scope are typed on the model"
-status: draft
+status: ready
 updated: 2026-11-19
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: null

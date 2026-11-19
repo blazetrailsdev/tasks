@@ -1,6 +1,6 @@
 ---
 title: "Turbo dummy serves Rails' application.css in system tests"
-status: draft
+status: in-progress
 updated: 2026-11-19
 rfc: "0238-turbo-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10369
+claim: "2026-11-19T18:12:55Z"
+assignee: "turbo-dummy-application-stylesheet"
 blocked-by: null
 closed-reason: null
 ---

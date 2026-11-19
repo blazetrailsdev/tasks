@@ -1,6 +1,6 @@
 ---
 title: "db-seed-never-exits"
-status: ready
+status: in-progress
 updated: 2026-11-19
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10370
+claim: "2026-11-19T18:48:43Z"
+assignee: "db-seed-never-exits"
 blocked-by: null
 closed-reason: null
 ---

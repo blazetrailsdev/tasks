@@ -1,6 +1,6 @@
 ---
 title: "port-source-paths-for-not-namespaced-generators-test"
-status: ready
+status: claimed
 updated: 2026-11-19
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T18:33:07Z"
+assignee: "port-source-paths-for-not-namespaced-generators-test"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "turbo-system-tests-broadcasts"
-status: draft
+status: ready
 updated: 2026-11-19
 rfc: "0238-turbo-port"
 cluster: null

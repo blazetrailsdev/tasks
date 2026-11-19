@@ -21,7 +21,7 @@ related-rfcs:
   - "0184-msgpack-gem-port"
   - "0013-pg-rawconn-convergence"
   - "0187-sqlite3-gem-port"
-priority: 4
+priority: 2
 ---
 
 # RFC 0186 — pg gem wrapper

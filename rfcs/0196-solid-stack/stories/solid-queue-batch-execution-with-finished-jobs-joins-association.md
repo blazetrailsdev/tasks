@@ -1,6 +1,6 @@
 ---
 title: "BatchExecution.withFinishedJobs joins the job association, not a raw SQL fragment"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0196-solid-stack"
 cluster: null

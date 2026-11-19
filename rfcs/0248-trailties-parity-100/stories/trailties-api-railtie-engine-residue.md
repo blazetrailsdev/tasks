@@ -1,6 +1,6 @@
 ---
 title: "trailties: close the railtie, engine and application API misses"
-status: ready
+status: claimed
 updated: 2026-11-19
 rfc: "0248-trailties-parity-100"
 cluster: api-residuals
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T18:33:07Z"
+assignee: "port-source-paths-for-not-namespaced-generators-test"
 blocked-by: null
 closed-reason: null
 ---

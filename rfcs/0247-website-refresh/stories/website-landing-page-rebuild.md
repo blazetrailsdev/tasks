@@ -1,7 +1,7 @@
 ---
 title: "Rebuild the landing page on rubyonrails.org's structure with trails' own art and copy"
-status: ready
-updated: 2026-11-18
+status: in-progress
+updated: 2026-11-19
 rfc: "0247-website-refresh"
 cluster: website-landing
 packages: [website]
@@ -9,9 +9,9 @@ deps: [website-pages-deploy-workflow]
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10367
+claim: "2026-11-19T18:15:53Z"
+assignee: "website-landing-page-rebuild"
 blocked-by: null
 closed-reason: null
 ---

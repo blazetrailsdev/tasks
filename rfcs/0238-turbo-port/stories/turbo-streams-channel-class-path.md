@@ -1,6 +1,6 @@
 ---
 title: "turbo-streams-channel-class-path"
-status: draft
+status: in-progress
 updated: 2026-11-19
 rfc: "0238-turbo-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10369
+claim: "2026-11-19T18:54:09Z"
+assignee: "turbo-streams-channel-class-path"
 blocked-by: null
 closed-reason: null
 ---

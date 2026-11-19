@@ -1,6 +1,6 @@
 ---
 title: "turbo-system-tests-action-cable"
-status: ready
+status: in-progress
 updated: 2026-11-19
 rfc: "0238-turbo-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10369
+claim: "2026-11-19T18:49:21Z"
+assignee: "turbo-dummy-application-stylesheet"
 blocked-by: null
 closed-reason: null
 ---
