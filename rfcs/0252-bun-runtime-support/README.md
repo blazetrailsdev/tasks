@@ -46,7 +46,7 @@ about the runtime, not `bun install`. **Post-launch.**
 | `node:http` (`rackup/lib/handler/node.ts:63`)                                                                      | present               | present, compatible                                                  |
 | `node:async_hooks` `AsyncLocalStorage`                                                                             | present               | present                                                              |
 | `node:cluster` (RFC 0251)                                                                                          | present               | `fork` present; clustered serving on Bun is a non-goal here          |
-| `pg`, `mysql2`                                                                                                     | pure JS               | pure JS, expected to work                                            |
+| `pg`, `mysql2`                                                                                                     | pure JS               | pure JS; `require` succeeds on Bun 1.3.6 (2026-11-19)                |
 | bin shebangs (`trailties/bin/trails.js`)                                                                           | `#!/usr/bin/env node` | `bun trails` works; the shebang still names node                     |
 
 ## Design
@@ -57,12 +57,28 @@ ruby-compat gains `runtime()` returning `"node" | "bun"`, read once from
 `process.versions.bun`. Only adapters branch on it. Ported code never does.
 That is the same rule the expo adapter follows.
 
-### Module hooks → `Bun.plugin`
+### Module hooks → generation-keyed loading on `Bun.plugin`
 
-A `BunProcessAdapter` implements `registerHooks` on `Bun.plugin`, using
-`onResolve`/`onLoad`. It covers only the hook shapes zeitwerk registers. If a
-shape has no Bun equivalent, it raises the same `NotImplementedError` it
-raises today, and that shape is listed under § Non-goals.
+zeitwerk registers exactly one hook, a `resolve` hook
+(`zeitwerk/lib/core-ext/kernel.ts:34-55`). For files under an autoload root
+it appends `?zeitwerk=<generation>` to the URL, so after a reload the next
+`import` creates a new module instance. A spike on Bun 1.3.6 (2026-11-19)
+found three things:
+
+| Approach                                                                                        | Result                                                                       |
+| ----------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `import(url + "?zeitwerk=N")` with no hook                                                      | same instance for every N (Bun ignores the query)                            |
+| `Bun.plugin` `onResolve` returning `path + "?zeitwerk=N"`                                       | `ENOENT` (the query is read as part of the filename)                         |
+| `onResolve` into a plugin namespace keyed by generation, plus `onLoad` that reads the real file | new instance per generation, and the same instance for a repeated generation |
+
+So a one-to-one `registerHooks` shim is not possible. Instead,
+`ProcessAdapter` gains a narrower member, `registerGenerationalLoader(match,
+generationOf)`. On Node it wraps today's `registerHooks` resolve hook,
+unchanged. On Bun it is the namespace-plus-`onLoad` approach: `onLoad`
+returns the file's source with `loader: "ts"`/`"js"`, and its own relative
+imports resolve from the real file's directory. zeitwerk's `kernel.ts` calls
+the new member and no longer builds the hook itself. Node behavior and
+zeitwerk's tests do not change.
 
 ### SQLite → `bun:sqlite` driver
 
@@ -142,16 +158,20 @@ bun trails test` passes.
 2. **What is the minimum Bun version?** Options: 1.2, or 1.3 (the version
    measured here). Recommendation: 1.3. The CI job pins 1.3.x and
    § Verification uses it.
-3. **What happens if `Bun.plugin` cannot express a zeitwerk hook shape?**
-   Options: (a) eager-load everything on Bun, which loses development
-   reloading; (b) treat it as a blocker. Recommendation: (b). An inexpressible
-   shape blocks `zeitwerk-hooks-via-bun-plugin`, which goes to `blocked` for
-   an operator ruling. If the ruling picks (a), eager-load is filed then as
-   its own story.
+3. **What happens if the namespace loader fails on a real app?** For
+   example, source maps, `import.meta.url`, or relative imports might break
+   inside the plugin namespace. Options: (a) eager-load everything on Bun,
+   which loses development reloading; (b) treat it as a blocker.
+   Recommendation: (b). The story goes to `blocked` for an operator ruling,
+   and if the ruling picks (a), eager-load is filed then as its own story.
+   The spike in § Module hooks makes this less likely, because the core
+   mechanism works.
 
 ## Changelog
 
 - 2026-11-19: initial RFC
+- 2026-11-19: spike shows Bun ignores the `?zeitwerk=` query string, so
+  module hooks become a generation-keyed loader; `pg`/`mysql2` load on Bun.
 - 2026-11-19: review fixes. Open questions now list options and a
   recommendation; the sqlite pass bar has a number; clustered serving is a
   non-goal; the Bun vitest command is stated; the CLI docs and the
