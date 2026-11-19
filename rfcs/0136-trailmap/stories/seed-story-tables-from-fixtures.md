@@ -1,5 +1,5 @@
 ---
-title: "Seed stories, story_deps, story_paths and events from test/fixtures"
+title: "Seed the shared stories from test/fixtures and record why the rest stay inline"
 status: done
 updated: 2026-11-19
 rfc: "0136-trailmap"
