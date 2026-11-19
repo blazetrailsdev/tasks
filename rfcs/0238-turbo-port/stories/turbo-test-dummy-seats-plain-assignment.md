@@ -1,6 +1,6 @@
 ---
 title: "Seat turbo's dummy app and test classes with plain assignments, not constSet"
-status: ready
+status: in-progress
 updated: 2026-11-19
 rfc: "0238-turbo-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10338
+claim: "2026-11-19T03:01:22Z"
+assignee: "turbo-test-dummy-seats-plain-assignment"
 blocked-by: null
 closed-reason: null
 ---

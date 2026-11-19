@@ -1,7 +1,7 @@
 ---
 title: "Cut boot module-eval cost of ruby-compat mixin machinery and date/temporal deps"
-status: ready
-updated: 2026-11-18
+status: in-progress
+updated: 2026-11-19
 rfc: "0241-request-path-performance"
 cluster: null
 packages: ["ruby-compat"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#10339
+claim: "2026-11-19T03:06:43Z"
+assignee: "boot-module-eval-cost-of-mixin-machinery"
 blocked-by: null
 closed-reason: null
 ---

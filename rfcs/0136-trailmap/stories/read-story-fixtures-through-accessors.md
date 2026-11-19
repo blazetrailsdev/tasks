@@ -1,6 +1,6 @@
 ---
 title: "read-story-fixtures-through-accessors"
-status: draft
+status: ready
 updated: 2026-11-19
 rfc: "0136-trailmap"
 cluster: null

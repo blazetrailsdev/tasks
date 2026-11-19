@@ -1,9 +1,9 @@
 ---
 rfc: "0226-mail-stack-to-parity"
 title: "Mail stack to parity: mail, actionmailer and net-smtp"
-status: active
+status: closed
 created: 2026-11-09
-updated: 2026-11-09
+updated: 2026-11-19
 owner: "@deanmarano"
 packages:
   - "mail"

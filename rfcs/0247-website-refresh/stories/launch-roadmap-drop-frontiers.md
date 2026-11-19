@@ -1,6 +1,6 @@
 ---
 title: "launch-roadmap-drop-frontiers"
-status: ready
+status: done
 updated: 2026-11-19
 rfc: "0247-website-refresh"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10341
+claim: "2026-11-19T03:36:34Z"
+assignee: "launch-roadmap-drop-frontiers"
 blocked-by: null
 closed-reason: null
 ---

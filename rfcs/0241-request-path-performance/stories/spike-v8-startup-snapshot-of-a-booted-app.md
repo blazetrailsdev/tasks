@@ -1,6 +1,6 @@
 ---
 title: "Spike: a V8 startup snapshot of a booted trails app"
-status: claimed
+status: in-progress
 updated: 2026-11-19
 rfc: "0241-request-path-performance"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: trails#10337
 claim: "2026-11-19T02:51:40Z"
 assignee: "stimulus-controller-generator"
 blocked-by: null

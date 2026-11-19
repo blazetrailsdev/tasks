@@ -1,6 +1,6 @@
 ---
 title: "pnpm build typechecks without TRAILS_ENV or a database variable"
-status: draft
+status: ready
 updated: 2026-11-19
 rfc: "0136-trailmap"
 cluster: null

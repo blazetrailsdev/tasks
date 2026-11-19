@@ -1,6 +1,6 @@
 ---
 title: "Port StimulusGenerator (trails generate stimulus <name>)"
-status: claimed
+status: in-progress
 updated: 2026-11-19
 rfc: "0237-stimulus-port"
 cluster: stimulus
@@ -9,7 +9,7 @@ deps: [stimulus-package-and-install]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#10337
 claim: "2026-11-19T02:51:40Z"
 assignee: "stimulus-controller-generator"
 blocked-by: null

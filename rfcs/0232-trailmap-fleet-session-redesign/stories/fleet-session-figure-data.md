@@ -1,7 +1,7 @@
 ---
 title: "trailmap: carry LOC, findings total and check counts so the session figure can show them"
-status: ready
-updated: 2026-11-17
+status: in-progress
+updated: 2026-11-19
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#175
+claim: "2026-11-19T03:46:09Z"
+assignee: "fleet-session-figure-data"
 blocked-by: null
 closed-reason: null
 ---

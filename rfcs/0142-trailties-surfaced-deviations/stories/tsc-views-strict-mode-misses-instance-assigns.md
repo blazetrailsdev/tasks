@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc-views types instance assigns as never once every render site resolves"
-status: claimed
+status: in-progress
 updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#10337
 claim: "2026-11-19T02:51:40Z"
 assignee: "stimulus-controller-generator"
 blocked-by: null

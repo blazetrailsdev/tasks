@@ -1,6 +1,6 @@
 ---
 title: "Action Pack Tests failing on main @a87dce8b"
-status: claimed
+status: closed
 updated: 2026-11-19
 rfc: "0061-ci-failures"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: "2026-11-19T01:19:38Z"
 assignee: "red-a87dce8b"
 blocked-by: null
-closed-reason: null
+closed-reason: "One-off flake: StaticEncodingTest 'serves gzip files with not modified' got 200 instead of 304 once; absent from the last 100 failed CI runs, passes locally 6/6, and the Action Pack Tests rerun on run 44435378692 passed (job 135305725680). Per operator, no diagnostic unless it recurs."
 ---
 
 ## Context

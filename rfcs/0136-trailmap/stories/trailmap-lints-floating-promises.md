@@ -1,7 +1,7 @@
 ---
 title: "trailmap: lint floating promises so an unawaited async framework call fails CI"
-status: draft
-updated: 2026-11-18
+status: ready
+updated: 2026-11-19
 rfc: "0136-trailmap"
 cluster: null
 packages: []

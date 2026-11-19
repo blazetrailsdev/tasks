@@ -1,7 +1,7 @@
 ---
 title: "tasks: state verbs fail with unknown attribute 'stage' on the shared DB"
-status: ready
-updated: 2026-11-17
+status: done
+updated: 2026-11-19
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: null
 packages: []

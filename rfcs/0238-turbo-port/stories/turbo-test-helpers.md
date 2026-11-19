@@ -1,7 +1,7 @@
 ---
 title: "Port Turbo::TestAssertions, IntegrationTestAssertions, Broadcastable::TestHelper and SystemTestHelper"
-status: ready
-updated: 2026-11-17
+status: in-progress
+updated: 2026-11-19
 rfc: "0238-turbo-port"
 cluster: turbo
 packages: [turbo]
@@ -9,9 +9,9 @@ deps: [turbo-broadcastable-class-methods-and-callbacks]
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10338
+claim: "2026-11-19T03:01:22Z"
+assignee: "turbo-test-dummy-seats-plain-assignment"
 blocked-by: null
 closed-reason: null
 ---

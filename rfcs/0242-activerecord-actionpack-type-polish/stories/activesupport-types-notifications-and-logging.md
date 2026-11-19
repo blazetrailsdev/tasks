@@ -1,7 +1,7 @@
 ---
 title: "activesupport notifications and log subscribers typed without any"
-status: ready
-updated: 2026-11-18
+status: in-progress
+updated: 2026-11-19
 rfc: "0242-activerecord-actionpack-type-polish"
 cluster: type-polish-neighbours
 packages: [activesupport]
@@ -9,9 +9,9 @@ deps: [type-polish-count-double-casts]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10340
+claim: "2026-11-19T03:02:14Z"
+assignee: "activesupport-types-class-level-mixins"
 blocked-by: null
 closed-reason: null
 ---

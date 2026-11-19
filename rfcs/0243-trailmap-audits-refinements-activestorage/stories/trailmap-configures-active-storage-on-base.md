@@ -1,7 +1,7 @@
 ---
 title: "trailmap: configure Active Storage's Disk service on Base"
-status: ready
-updated: 2026-11-18
+status: done
+updated: 2026-11-19
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: storage
 packages: ["activestorage"]
@@ -13,9 +13,9 @@ deps:
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#174
+claim: "2026-11-19T03:21:38Z"
+assignee: "trailmap-configures-active-storage-on-base"
 blocked-by: null
 closed-reason: null
 ---

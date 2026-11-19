@@ -1,7 +1,7 @@
 ---
 title: "The pane page sends Enter and arrow keypresses, not only a line of text"
-status: draft
-updated: 2026-11-18
+status: ready
+updated: 2026-11-19
 rfc: "0136-trailmap"
 cluster: null
 packages: []
