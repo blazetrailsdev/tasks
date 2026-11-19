@@ -1,5 +1,5 @@
 ---
-title: "read-story-fixtures-through-accessors"
+title: "Read the stories and rfcs fixture rows through the fixture accessors"
 status: ready
 updated: 2026-11-19
 rfc: "0136-trailmap"
@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: ["autorun-test-context-augments-vitest-runner"]
 deps-rfc: []
-est-loc: null
+est-loc: 150
 priority: null
 pr: null
 claim: null
