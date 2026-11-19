@@ -1,6 +1,6 @@
 ---
 title: "SolidQueue Job type omits ConcurrencyControls members (handleConcurrencyConflict, block)"
-status: ready
+status: in-progress
 updated: 2026-11-19
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10333
+claim: "2026-11-19T01:26:11Z"
+assignee: "solid-queue-active-job-accessors-attr-accessor"
 blocked-by: null
 closed-reason: null
 ---

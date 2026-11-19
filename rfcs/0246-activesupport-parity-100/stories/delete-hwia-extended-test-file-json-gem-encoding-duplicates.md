@@ -1,6 +1,6 @@
 ---
 title: "activesupport: delete hwia-extended.test.ts; its JsonGemEncodingTest bodies are invented duplicates"
-status: claimed
+status: in-progress
 updated: 2026-11-19
 rfc: "0246-activesupport-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#10332
 claim: "2026-11-19T00:51:38Z"
 assignee: "active-support-test-parallelization-threshold-unseated"
 blocked-by: null

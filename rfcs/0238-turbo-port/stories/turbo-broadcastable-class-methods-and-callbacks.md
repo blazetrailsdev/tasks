@@ -1,7 +1,7 @@
 ---
 title: "Port Turbo::Broadcastable::ClassMethods, the commit callbacks and suppression"
-status: ready
-updated: 2026-11-17
+status: in-progress
+updated: 2026-11-19
 rfc: "0238-turbo-port"
 cluster: turbo
 packages: [turbo, activerecord]
@@ -9,9 +9,9 @@ deps: [turbo-broadcastable-instance-broadcasts]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10334
+claim: "2026-11-19T01:36:36Z"
+assignee: "turbo-broadcastable-class-methods-and-callbacks"
 blocked-by: null
 closed-reason: null
 ---

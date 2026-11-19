@@ -1,7 +1,7 @@
 ---
 title: "Port v1.7.2's AsyncSupervisor split and process-layer members"
 status: ready
-updated: 2026-11-18
+updated: 2026-11-19
 rfc: "0196-solid-stack"
 cluster: null
 packages: ["solid-queue"]

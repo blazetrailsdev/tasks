@@ -1,6 +1,6 @@
 ---
 title: "The class-expression shadowing lint misses the namespace-import form, which esbuild still collides"
-status: claimed
+status: in-progress
 updated: 2026-11-19
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: trails#10331
 claim: "2026-11-19T00:36:53Z"
 assignee: "class-expression-lint-misses-namespace-import-esbuild-collision"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "solid-queue-batch-test-membership-and-pending-migrations"
 status: ready
-updated: 2026-11-17
+updated: 2026-11-19
 rfc: "0196-solid-stack"
 cluster: null
 packages: []

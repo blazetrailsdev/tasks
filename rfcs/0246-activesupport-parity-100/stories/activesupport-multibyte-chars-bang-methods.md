@@ -1,6 +1,6 @@
 ---
 title: "activesupport: port or receipt Multibyte::Chars bang-method tests"
-status: claimed
+status: in-progress
 updated: 2026-11-19
 rfc: "0246-activesupport-parity-100"
 cluster: receipts
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#10332
 claim: "2026-11-19T00:51:38Z"
 assignee: "active-support-test-parallelization-threshold-unseated"
 blocked-by: null

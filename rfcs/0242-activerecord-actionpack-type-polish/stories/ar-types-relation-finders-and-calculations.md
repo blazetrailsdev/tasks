@@ -1,7 +1,7 @@
 ---
 title: "Relation finder, calculation, batch and merger types without any"
-status: ready
-updated: 2026-11-18
+status: in-progress
+updated: 2026-11-19
 rfc: "0242-activerecord-actionpack-type-polish"
 cluster: type-polish-activerecord
 packages: [activerecord]
@@ -9,9 +9,9 @@ deps: [type-polish-count-double-casts]
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10334
+claim: "2026-11-19T01:36:36Z"
+assignee: "turbo-broadcastable-class-methods-and-callbacks"
 blocked-by: null
 closed-reason: null
 ---

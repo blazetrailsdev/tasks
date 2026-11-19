@@ -1,7 +1,7 @@
 ---
 title: "activemodel lib without double casts"
-status: ready
-updated: 2026-11-18
+status: claimed
+updated: 2026-11-19
 rfc: "0242-activerecord-actionpack-type-polish"
 cluster: type-polish-neighbours
 packages: [activemodel]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T01:51:33Z"
+assignee: "activemodel-types-without-casts"
 blocked-by: null
 closed-reason: null
 ---

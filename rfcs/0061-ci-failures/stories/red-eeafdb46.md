@@ -1,6 +1,6 @@
 ---
 title: "Lint (rails-and-scripts) failing on main @eeafdb46"
-status: in-progress
+status: done
 updated: 2026-11-19
 rfc: "0061-ci-failures"
 cluster: null
