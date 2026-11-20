@@ -1,7 +1,7 @@
 ---
 title: "pg: the PG::TextDecoder classes the adapter registers, and add_pg_decoders"
-status: ready
-updated: 2026-11-18
+status: claimed
+updated: 2026-11-20
 rfc: "0186-pg-gem-port"
 cluster: result-and-coders
 packages: ["pg", "activerecord"]
@@ -15,8 +15,8 @@ deps-rfc: []
 est-loc: 450
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-20T04:56:37Z"
+assignee: "pg-text-decoders-move-to-the-package"
 blocked-by: null
 closed-reason: null
 ---

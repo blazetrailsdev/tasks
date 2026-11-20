@@ -1,6 +1,6 @@
 ---
 title: "audit-report skill: POST the report to trailmap instead of writing a file"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: writers
@@ -9,7 +9,7 @@ deps: [audits-create-endpoint-on-the-loopback-api]
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: trails#10401
+pr: null
 claim: "2026-11-20T03:51:34Z"
 assignee: "audit-report-skill-posts-to-trailmap"
 blocked-by: null
