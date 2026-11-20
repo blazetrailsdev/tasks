@@ -1,14 +1,14 @@
 ---
 title: "Close the RFC 0180 sqlite3-gem story as superseded and retag its receipts"
 status: ready
-updated: 2026-11-19
+updated: 2026-11-20
 rfc: "0187-sqlite3-gem-port"
 cluster: migration
 packages: ["activerecord"]
 deps: ["sqlite3-lift-the-nested-port-into-a-package"]
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 15
 pr: null
 claim: null
 assignee: null

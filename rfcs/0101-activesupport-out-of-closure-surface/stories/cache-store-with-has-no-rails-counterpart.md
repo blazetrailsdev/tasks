@@ -1,7 +1,7 @@
 ---
 title: "Cache::Store.with has no Rails counterpart"
-status: draft
-updated: 2026-10-11
+status: closed
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of fold-cache-store-with-into-object-with (same Store.with at cache/store.ts:116, same fix: fold into objectWith)."
 ---
 
 ## Context

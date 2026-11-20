@@ -13,6 +13,7 @@ related-rfcs:
   - "0136-trailmap"
   - "0200-github-ingestion-in-trailmap"
   - "0249-ringo-changes"
+priority: 5
 ---
 
 # RFC 0253 — External contributors: no automation by default, owner-approved replies

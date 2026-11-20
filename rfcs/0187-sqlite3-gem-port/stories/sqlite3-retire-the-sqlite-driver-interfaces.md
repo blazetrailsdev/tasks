@@ -1,7 +1,7 @@
 ---
 title: "Delete SqliteDriver, SqliteConnection, SqliteStatement and their Sync twins"
 status: ready
-updated: 2026-11-19
+updated: 2026-11-20
 rfc: "0187-sqlite3-gem-port"
 cluster: migration
 packages: ["activerecord", "sqlite3", "website"]
@@ -17,7 +17,7 @@ deps:
   ]
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 13
 pr: null
 claim: null
 assignee: null

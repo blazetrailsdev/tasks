@@ -1,6 +1,6 @@
 ---
 title: "pg: TextDecoder Integer/Float/Timestamp/Bytea bodies follow pg_text_decoder.c"
-status: draft
+status: ready
 updated: 2026-11-20
 rfc: "0186-pg-gem-port"
 cluster: null

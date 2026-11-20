@@ -1,6 +1,6 @@
 ---
 title: "trailmap: send the approved review to GitHub, exactly as edited"
-status: draft
+status: ready
 updated: 2026-11-20
 rfc: "0253-external-contributor-prs"
 cluster: external-review

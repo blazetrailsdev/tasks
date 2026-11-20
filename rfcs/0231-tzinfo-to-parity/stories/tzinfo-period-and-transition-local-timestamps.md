@@ -1,7 +1,7 @@
 ---
 title: "Port the TimestampWithOffset members of TimezoneTransition and TimezonePeriod"
-status: draft
-updated: 2026-11-11
+status: ready
+updated: 2026-11-20
 rfc: "0231-tzinfo-to-parity"
 cluster: null
 packages:

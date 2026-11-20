@@ -1,7 +1,7 @@
 ---
 title: "Port Hash#each/each_key/each_value/each_pair onto ruby-compat Hash and converge subclasses"
-status: draft
-updated: 2026-09-16
+status: closed
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Overlaps ordered-hash-novel-surface-burndown (OrderedHash's eachKey/eachValue/eachPair are its novel rows) and expands into rack Headers/HWIA Ruby-iterator churn; closed in the 0101/0246 dedupe refine."
 ---
 
 ## Context

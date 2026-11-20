@@ -1,7 +1,7 @@
 ---
 title: "activesupport: delete the free hexdigest wrapper; callers name ActiveSupport::Digest.hexdigest"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []

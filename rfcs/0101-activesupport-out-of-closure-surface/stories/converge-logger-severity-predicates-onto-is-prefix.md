@@ -1,7 +1,7 @@
 ---
 title: 'Logger severity predicates are string-named "debug?" getters instead of isDebug'
-status: draft
-updated: 2026-10-06
+status: ready
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []

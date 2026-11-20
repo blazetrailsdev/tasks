@@ -1,6 +1,6 @@
 ---
 title: "activesupport: close the 15 missing callbacks.rb members"
-status: claimed
+status: done
 updated: 2026-11-20
 rfc: "0246-activesupport-parity-100"
 cluster: api-residuals
@@ -9,7 +9,7 @@ deps: [relocate-core-ext-enumerable-rb-methods-and-converge-sole]
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#10415
 claim: "2026-11-20T15:59:38Z"
 assignee: "activesupport-api-callbacks-residue"
 blocked-by: null

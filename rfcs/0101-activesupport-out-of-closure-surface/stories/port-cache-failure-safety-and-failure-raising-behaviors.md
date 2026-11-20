@@ -1,7 +1,7 @@
 ---
 title: "port-cache-failure-safety-and-failure-raising-behaviors"
-status: draft
-updated: 2026-08-31
+status: closed
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered: test/cache/behaviors/failure-safety-behavior.ts (13 cases) and failure-raising-behavior.ts (12 cases) exist on origin/main 6267d89132; both include-hosts are the PERMANENT-deferred memcache/redis stores."
 ---
 
 ## Context

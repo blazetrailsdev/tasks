@@ -1,6 +1,6 @@
 ---
 title: "constant-lookup-test-sync-autoload-of-raising-fixture"
-status: draft
+status: ready
 updated: 2026-11-20
 rfc: "0246-activesupport-parity-100"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Duration ports respond_to_missing? / method_missing as named methods"
-status: draft
-updated: 2026-10-25
+status: closed
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Closed as a rubyism (operator refine 2026-11-20): forwarding every unknown method to the value via method_missing + rbFSend has no TS meaning — TS callers cannot type an unknown member on Duration, and the forward is a send by name."
 ---
 
 ## Context

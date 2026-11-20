@@ -1,7 +1,7 @@
 ---
 title: "converge-to-query-sort-onto-rails-string-sort"
-status: draft
-updated: 2026-09-02
+status: closed
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'Delivered: hash-utils.ts toQuery builds the parts then ''if (!String(namespace ?? "").includes("[]")) query.sort()'' on origin/main 6267d89132, the to_query.rb:20-27 shape.'
 ---
 
 ## Context

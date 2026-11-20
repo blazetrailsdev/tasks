@@ -1,7 +1,7 @@
 ---
 title: "activesupport-subscriber-call-send-without-name-guessing"
-status: draft
-updated: 2026-11-19
+status: ready
+updated: 2026-11-20
 rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "trailties: port the small commands/* and version tests"
-status: in-progress
-updated: 2026-11-19
+status: done
+updated: 2026-11-20
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
 packages: [trailties]

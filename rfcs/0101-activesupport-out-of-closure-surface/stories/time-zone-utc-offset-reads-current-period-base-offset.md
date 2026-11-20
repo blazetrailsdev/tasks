@@ -1,7 +1,7 @@
 ---
 title: "TimeZone#utcOffset reads tzinfo current_period.base_utc_offset"
-status: draft
-updated: 2026-09-16
+status: ready
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: ["activesupport"]

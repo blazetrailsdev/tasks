@@ -1,6 +1,6 @@
 ---
 title: "activesupport: try! has two ports, one rejecting readers, and neither is public_send"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

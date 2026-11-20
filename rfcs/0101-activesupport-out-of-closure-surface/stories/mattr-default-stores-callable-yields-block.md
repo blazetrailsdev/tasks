@@ -1,7 +1,7 @@
 ---
 title: "mattr/cattr store a callable default as-is; only a block is yielded"
-status: draft
-updated: 2026-10-26
+status: closed
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: ["activesupport"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'Delivered: module-ext.ts setMattrDefault now is (blk !== null && default == null) ? blk() : default, the Rails yield arm; ''typeof rawDefault === "function"'' no longer exists on origin/main 6267d89132.'
 ---
 
 ## Context

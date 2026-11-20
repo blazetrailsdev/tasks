@@ -1,7 +1,7 @@
 ---
 title: "Converge BroadcastLogger onto Rails' method_missing dispatch and dup"
-status: draft
-updated: 2026-09-17
+status: closed
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'Closed as a rubyism (operator refine 2026-11-20): the core is method_missing/respond_to_missing? dispatch to broadcasts. Its "debug?" getter bullet is owned by converge-logger-severity-predicates-onto-is-prefix.'
 ---
 
 ## Context

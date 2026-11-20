@@ -1,6 +1,6 @@
 ---
 title: "form-helpers-await-form-authenticity-token"
-status: draft
+status: in-progress
 updated: 2026-11-20
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10420
+claim: "2026-11-20T16:29:20Z"
+assignee: "form-helpers-await-form-authenticity-token"
 blocked-by: null
 closed-reason: null
 ---

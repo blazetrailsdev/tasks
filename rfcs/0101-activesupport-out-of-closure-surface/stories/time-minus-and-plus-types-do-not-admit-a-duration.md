@@ -1,7 +1,7 @@
 ---
 title: "Time#minus / #plus types do not admit a Duration after the core-ext reassigns them"
-status: draft
-updated: 2026-10-05
+status: closed
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered: core-ext/time/calculations.ts declare-module now declares minus(other: Duration): Time / minus(other: TimeWithZone): number (lines 415-416 on origin/main 6267d89132)."
 ---
 
 ## Context

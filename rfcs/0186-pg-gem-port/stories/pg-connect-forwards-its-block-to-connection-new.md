@@ -1,6 +1,6 @@
 ---
 title: "pg: PG.connect forwards its block to Connection.new"
-status: draft
+status: ready
 updated: 2026-11-20
 rfc: "0186-pg-gem-port"
 cluster: null

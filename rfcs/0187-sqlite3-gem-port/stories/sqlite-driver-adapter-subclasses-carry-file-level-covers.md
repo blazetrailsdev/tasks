@@ -1,14 +1,14 @@
 ---
 title: "activerecord: retire the file-level covers on the six SQLite driver adapter subclasses"
 status: ready
-updated: 2026-10-07
+updated: 2026-11-20
 rfc: "0187-sqlite3-gem-port"
 cluster: findings
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 300
-priority: null
+priority: 16
 pr: null
 claim: null
 assignee: null

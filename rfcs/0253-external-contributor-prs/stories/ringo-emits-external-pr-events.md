@@ -1,6 +1,6 @@
 ---
 title: "ringo: record external PR activity and emit external_pr.* events"
-status: draft
+status: ready
 updated: 2026-11-20
 rfc: "0253-external-contributor-prs"
 cluster: trust-gate

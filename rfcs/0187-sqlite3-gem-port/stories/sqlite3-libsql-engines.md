@@ -1,14 +1,14 @@
 ---
 title: "sqlite3: the three libsql drivers become engines under SQLite3::Database"
 status: ready
-updated: 2026-11-19
+updated: 2026-11-20
 rfc: "0187-sqlite3-gem-port"
 cluster: drivers
 packages: ["sqlite3", "activerecord"]
 deps: ["sqlite3-database-class-carries-the-gem-surface"]
 deps-rfc: []
 est-loc: 500
-priority: null
+priority: 8
 pr: null
 claim: null
 assignee: null

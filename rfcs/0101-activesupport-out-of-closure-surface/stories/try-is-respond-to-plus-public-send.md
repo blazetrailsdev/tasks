@@ -1,7 +1,7 @@
 ---
 title: "try / try! are respond_to? + public_send in core-ext/object/try.ts, one port"
-status: draft
-updated: 2026-10-06
+status: closed
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of 0158 try-bang-has-two-ports-and-neither-is-public-send (in-progress, trails#10412), whose AC also converges try onto try.rb:7-17."
 ---
 
 ## Context

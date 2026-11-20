@@ -1,7 +1,7 @@
 ---
 title: "TimeWithZone transfer_time_values_to_utc_constructor and #- converge to Rails' single arm"
-status: draft
-updated: 2026-11-18
+status: ready
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []

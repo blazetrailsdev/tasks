@@ -1,7 +1,7 @@
 ---
 title: "DescendantsTracker.subclasses/descendants dispatch to klass.subclasses as Rails does"
-status: draft
-updated: 2026-09-24
+status: ready
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []

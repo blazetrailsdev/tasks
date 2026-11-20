@@ -1,6 +1,6 @@
 ---
 title: "activesupport-testing-helper-stub-residue"
-status: in-progress
+status: closed
 updated: 2026-11-20
 rfc: "0246-activesupport-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: trails#10399
 claim: "2026-11-20T03:00:31Z"
 assignee: "activesupport-testing-helper-stub-residue"
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#10399 (merged): per-receiver TimeHelpers + time-travel ports. Remaining residue split into constant-lookup-test-sync-autoload-of-raising-fixture, free-time-helper-calls-travel-on-the-test-case and 0158 time-date-class-methods-allocate-receiver-subclass."
 ---
 
 ## Context

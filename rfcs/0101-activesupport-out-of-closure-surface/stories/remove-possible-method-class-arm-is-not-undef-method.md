@@ -1,7 +1,7 @@
 ---
 title: "removePossibleMethod's class arm assigns undefined instead of undef_method"
-status: draft
-updated: 2026-10-07
+status: ready
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []

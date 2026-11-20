@@ -1,6 +1,6 @@
 ---
 title: "date-time-now-and-date-today-allocate-receiver-subclass"
-status: draft
+status: closed
 updated: 2026-11-20
 rfc: "0246-activesupport-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of 0158 time-date-class-methods-allocate-receiver-subclass (same test time_travel_test.rb:465, same Time.#atInstant / Date.today allocation fix), which carries the date-parse-returns-temporal prerequisite edge."
 ---
 
 ## Context

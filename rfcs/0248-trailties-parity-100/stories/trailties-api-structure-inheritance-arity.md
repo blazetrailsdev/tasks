@@ -1,7 +1,7 @@
 ---
 title: "trailties: fix the 8 inheritance and 6 arity mismatches"
-status: in-progress
-updated: 2026-11-19
+status: done
+updated: 2026-11-20
 rfc: "0248-trailties-parity-100"
 cluster: api-residuals
 packages: [trailties]

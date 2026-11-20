@@ -1,7 +1,7 @@
 ---
 title: "ActiveSupport cache Entry/Store read Date.now instead of Time.now (travel_to does not reach the cache)"
-status: draft
-updated: 2026-09-28
+status: closed
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered: cache/entry.ts reads Time.now().toF() (lines 41,62) and store.ts mergedOptions uses Time.now(); git grep 'Date\\.now\\(\\)' packages/activesupport/lib/cache on origin/main 6267d89132 is empty. Its two Duration bullets duplicate cache-store-race-ttl-to-i-and-expiry-key-presence (race TTL) and converge-cache-store-merged-options (negative?)."
 ---
 
 ## Context

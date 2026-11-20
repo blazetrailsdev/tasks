@@ -10,7 +10,7 @@ packages:
   - "activesupport"
   - "trailties"
 clusters: []
-priority: 3
+priority: 5
 ---
 
 # activesupport out-of-closure surface: cache stores and XmlMini

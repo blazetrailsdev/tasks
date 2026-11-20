@@ -1,7 +1,7 @@
 ---
 title: "TestCase before_setup/after_teardown as one instance super chain (setup_and_teardown.rb:39-54)"
-status: draft
-updated: 2026-09-26
+status: closed
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate of 0158 active-support-test-case-composes-its-lifecycle-hooks-by-hand (ready): same four modules' before_setup/after_teardown through super in Rails' include/prepend order."
 ---
 
 ## Context

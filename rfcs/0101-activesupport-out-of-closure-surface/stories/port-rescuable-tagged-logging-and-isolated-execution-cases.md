@@ -1,7 +1,7 @@
 ---
 title: "port-rescuable-tagged-logging-and-isolated-execution-cases"
-status: draft
-updated: 2026-08-31
+status: closed
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: [scripts]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered: rescuable.test.ts (9), tagged-logging.test.ts (45), isolated-execution-state.test.ts (6) have 0 skips on origin/main 6267d89132; the one isolated_execution_state skip is owned by 0246 activesupport-test-skip-receipts."
 ---
 
 ## Context

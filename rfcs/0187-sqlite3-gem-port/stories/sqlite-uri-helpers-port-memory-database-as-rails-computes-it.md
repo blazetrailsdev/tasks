@@ -1,17 +1,17 @@
 ---
 title: "activerecord: sqlite-uri helpers port @memory_database as Rails computes it"
-status: ready
-updated: 2026-10-07
+status: in-progress
+updated: 2026-11-20
 rfc: "0187-sqlite3-gem-port"
 cluster: findings
 packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 17
+pr: trails#10422
+claim: "2026-11-20T16:12:41Z"
+assignee: "sqlite3-lift-the-nested-port-into-a-package"
 blocked-by: null
 closed-reason: null
 ---

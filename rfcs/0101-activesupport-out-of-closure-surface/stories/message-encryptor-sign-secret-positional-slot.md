@@ -1,7 +1,7 @@
 ---
 title: "message-encryptor-sign-secret-positional-slot"
-status: draft
-updated: 2026-10-14
+status: ready
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []

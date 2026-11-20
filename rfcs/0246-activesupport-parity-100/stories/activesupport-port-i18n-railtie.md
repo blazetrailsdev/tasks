@@ -1,7 +1,7 @@
 ---
 title: "activesupport-port-i18n-railtie"
-status: draft
-updated: 2026-11-19
+status: closed
+updated: 2026-11-20
 rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate/misplaced: I18n::Railtie is Trailtie in packages/trailties/lib/trailties/i18n.ts (trails#10394). initialize_i18n is owned by 0158 port-i18n-railtie-initialize-i18n; the unported-files row is owned by 0158 parity-maps-framework-railtie-to-trailties."
 ---
 
 # activesupport: port I18n::Railtie (i18n_railtie.rb)

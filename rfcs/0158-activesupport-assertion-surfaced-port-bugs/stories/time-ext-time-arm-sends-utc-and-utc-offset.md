@@ -1,6 +1,6 @@
 ---
 title: "time-ext.ts's Time arm sends utc?/utc_offset instead of reading getTimezoneOffset() inline"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

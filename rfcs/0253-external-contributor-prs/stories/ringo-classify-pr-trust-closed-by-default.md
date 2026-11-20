@@ -1,6 +1,6 @@
 ---
 title: "ringo: one PR trust check, closed by default, on every PR-scoped handler"
-status: draft
+status: done
 updated: 2026-11-20
 rfc: "0253-external-contributor-prs"
 cluster: trust-gate
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-20T16:23:50Z"
+assignee: "ringo-classify-pr-trust-closed-by-default"
 blocked-by: null
 closed-reason: null
 ---

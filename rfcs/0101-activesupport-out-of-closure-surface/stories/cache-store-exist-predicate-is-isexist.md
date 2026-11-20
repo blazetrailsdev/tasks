@@ -1,7 +1,7 @@
 ---
 title: "Cache Store#exist? ports as isExist, not exist"
-status: draft
-updated: 2026-11-11
+status: ready
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []

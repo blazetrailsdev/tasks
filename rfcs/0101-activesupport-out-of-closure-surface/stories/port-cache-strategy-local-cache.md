@@ -1,7 +1,7 @@
 ---
 title: "port Cache::Strategy::LocalCache so LocalCacheBehavior's 29 cases can run"
-status: blocked
-updated: 2026-08-13
+status: closed
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
@@ -13,8 +13,8 @@ priority: null
 pr: null
 claim: "2026-08-13T15:45:44Z"
 assignee: "naming-burndown-3-ar-structural-residue"
-blocked-by: "Blocked on a store that includes the strategy. Rails' LocalCacheBehavior is included by exactly two test files — vendor/rails/activesupport/test/cache/stores/mem_cache_store_test.rb and redis_cache_store_test.rb — and Strategy::LocalCache is 'prepend'ed by mem_cache_store.rb:42, redis_cache_store.rb:67 and null_store.rb:15 only. MemCacheStore and RedisCacheStore are both unported in trails, and NullStore swallows every write so the 29 behavior cases cannot run against it. The story explicitly forbids inventing a host store, so acceptance criterion 2 is unreachable until one of those two stores is ported. The Strategy::LocalCache port itself also needs a decision on how Ruby's 'prepend' (LocalCache's read_serialized_entry / write_serialized_entry / delete_entry / clear / increment all call super into the store) is spelled in trails — include()/Included<> gives no super chain."
-closed-reason: null
+blocked-by: null
+closed-reason: "Premise permanently gone: the only stores that include LocalCacheBehavior are MemCacheStore/RedisCacheStore, deferred PERMANENT by owner ruling 2026-10-17 (scripts/parity/unported-files/activesupport.ts:9); blocker cache-lookup-store-has-no-mem-cache-or-redis-store is closed."
 ---
 
 ## Context

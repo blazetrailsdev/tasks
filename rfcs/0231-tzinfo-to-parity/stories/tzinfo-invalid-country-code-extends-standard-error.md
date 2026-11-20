@@ -1,7 +1,7 @@
 ---
 title: "InvalidCountryCode extends StandardError, as country.rb:7 does"
-status: draft
-updated: 2026-11-14
+status: ready
+updated: 2026-11-20
 rfc: "0231-tzinfo-to-parity"
 cluster: null
 packages: []

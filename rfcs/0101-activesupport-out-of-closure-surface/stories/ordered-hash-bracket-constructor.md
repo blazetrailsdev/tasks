@@ -1,7 +1,7 @@
 ---
 title: "Converge OrderedHash.from onto Hash.[] (splat, nil padding, ArgumentError)"
-status: draft
-updated: 2026-09-16
+status: closed
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Closed as a rubyism (operator refine 2026-11-20): a Hash.[] splat constructor (flat odd-arg ArgumentError, nil padding) is Ruby call-syntax emulation; OrderedHash.from over [k,v] pairs is the TS shape."
 ---
 
 ## Context

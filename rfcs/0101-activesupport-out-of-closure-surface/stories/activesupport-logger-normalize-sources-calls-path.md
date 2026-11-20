@@ -1,7 +1,7 @@
 ---
 title: "ActiveSupport::Logger.normalize_sources calls source.path, not a path property"
-status: draft
-updated: 2026-10-27
+status: ready
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []

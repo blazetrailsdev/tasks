@@ -1,7 +1,7 @@
 ---
 title: "isDuplicable is a type check, not the duplicable? send, so a Singleton includer is dup'd"
-status: draft
-updated: 2026-10-02
+status: closed
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: ["activesupport"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Closed as a rubyism (operator refine 2026-11-20): the converged shape is the duplicable? send via rbObjRespondTo for Ruby Singleton includers; no TS caller defines isDuplicable() on an instance."
 ---
 
 ## Context

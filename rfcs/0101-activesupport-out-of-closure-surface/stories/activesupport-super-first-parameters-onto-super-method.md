@@ -1,7 +1,7 @@
 ---
 title: "activesupport: methods that thread super_ as a first parameter take Rails' parameter list"
-status: draft
-updated: 2026-10-02
+status: closed
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: ["activesupport", "trailties"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered: git grep 'monEnter(super_|isInclude(super_|readMessage(super_' over packages/activesupport/lib on origin/main 6267d89132 is empty."
 ---
 
 ## Context

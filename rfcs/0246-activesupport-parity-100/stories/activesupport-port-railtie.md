@@ -1,7 +1,7 @@
 ---
 title: "activesupport-port-railtie"
-status: draft
-updated: 2026-11-19
+status: closed
+updated: 2026-11-20
 rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Duplicate/misplaced: ActiveSupport::Railtie is ported in trailties (packages/trailties/lib/trailties/active-support.ts on origin/main 6267d89132 has 7 initializers), not packages/activesupport/lib. Remaining initializers are owned by 0101 activesupport-railtie-missing-thirteen-initializers; the unported-files row is owned by 0158 parity-maps-framework-railtie-to-trailties."
 ---
 
 # activesupport: port ActiveSupport::Railtie (railtie.rb)

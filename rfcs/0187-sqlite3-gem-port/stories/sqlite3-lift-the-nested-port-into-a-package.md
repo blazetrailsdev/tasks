@@ -1,17 +1,17 @@
 ---
 title: "Move packages/activerecord/src/sqlite/ to packages/sqlite3 as @blazetrails/sqlite3"
-status: ready
-updated: 2026-11-19
+status: in-progress
+updated: 2026-11-20
 rfc: "0187-sqlite3-gem-port"
 cluster: package
 packages: ["sqlite3", "activerecord", "scripts"]
 deps: []
 deps-rfc: []
 est-loc: 500
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 1
+pr: trails#10422
+claim: "2026-11-20T16:12:41Z"
+assignee: "sqlite3-lift-the-nested-port-into-a-package"
 blocked-by: null
 closed-reason: null
 ---

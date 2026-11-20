@@ -1,6 +1,6 @@
 ---
 title: "trailties: port the one- and two-test application/* files"
-status: claimed
+status: in-progress
 updated: 2026-11-20
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 480
 priority: null
-pr: null
+pr: trails#10419
 claim: "2026-11-20T14:54:35Z"
 assignee: "trailties-test-application-singletons"
 blocked-by: null

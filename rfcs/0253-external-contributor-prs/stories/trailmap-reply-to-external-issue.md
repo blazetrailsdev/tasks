@@ -1,6 +1,6 @@
 ---
 title: "trailmap: draft, edit and send a reply on an external issue"
-status: draft
+status: ready
 updated: 2026-11-20
 rfc: "0253-external-contributor-prs"
 cluster: external-review

@@ -1,6 +1,6 @@
 ---
 title: "Port test_helper.rb's shared setup/teardown with the use_transactional_tests guard"
-status: draft
+status: ready
 updated: 2026-11-20
 rfc: "0196-solid-stack"
 cluster: null

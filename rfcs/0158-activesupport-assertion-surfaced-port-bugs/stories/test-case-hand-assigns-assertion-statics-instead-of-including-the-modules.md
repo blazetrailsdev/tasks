@@ -1,6 +1,6 @@
 ---
 title: "activesupport: TestCase hand-assigns Assertions/Deprecation/ConstantStubbing/TimeHelpers as statics instead of including the modules"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

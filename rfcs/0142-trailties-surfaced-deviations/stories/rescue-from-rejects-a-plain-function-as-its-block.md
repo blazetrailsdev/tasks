@@ -1,6 +1,6 @@
 ---
 title: "activesupport: rescue_from rejects a plain function as its block, so a handler written the TS way does not boot"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

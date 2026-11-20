@@ -1,7 +1,7 @@
 ---
 title: "ConfigurationFile#render trims ERB where Rails' ERB.new does not"
-status: draft
-updated: 2026-09-30
+status: ready
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []

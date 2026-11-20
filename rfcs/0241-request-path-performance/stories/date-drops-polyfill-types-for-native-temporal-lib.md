@@ -1,6 +1,6 @@
 ---
 title: "date drops the polyfill's types once lint and typedoc read esnext.temporal"
-status: draft
+status: blocked
 updated: 2026-11-20
 rfc: "0241-request-path-performance"
 cluster: null
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-20T16:38:33Z"
+assignee: "date-drops-polyfill-types-for-native-temporal-lib"
+blocked-by: "waiting on lint-and-typedoc-read-esnext-temporal-lib: typescript-eslint and typedoc run on typescript-5 (5.9.3), which ships no esnext.temporal lib"
 closed-reason: null
 ---
 

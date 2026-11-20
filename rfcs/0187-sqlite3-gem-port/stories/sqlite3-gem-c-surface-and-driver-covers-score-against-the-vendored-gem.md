@@ -1,7 +1,7 @@
 ---
 title: "activerecord: the sqlite3 gem's C surface and the sqlite driver file covers score against the vendored gem"
 status: ready
-updated: 2026-10-07
+updated: 2026-11-20
 rfc: "0187-sqlite3-gem-port"
 cluster: findings
 packages: ["activerecord"]

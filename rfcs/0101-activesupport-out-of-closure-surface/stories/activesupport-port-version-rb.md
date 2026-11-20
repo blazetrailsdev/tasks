@@ -1,7 +1,7 @@
 ---
 title: "activesupport: port ActiveSupport.version and drop its version.rb exclusion row"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: ["activesupport"]

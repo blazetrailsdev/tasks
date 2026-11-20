@@ -1,7 +1,7 @@
 ---
 title: "port-cache-store-logger-and-cache-entry-cases"
-status: draft
-updated: 2026-08-31
+status: closed
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: [scripts]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered: test/cache/cache-store-logger.test.ts (4) and cache-entry.test.ts (4) carry 0 skip/todo on origin/main 6267d89132; any residual receipts belong to 0246 activesupport-test-skip-receipts."
 ---
 
 ## Context

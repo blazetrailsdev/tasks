@@ -1,6 +1,6 @@
 ---
 title: "ringo: record external issues and emit external_issue.* events"
-status: draft
+status: ready
 updated: 2026-11-20
 rfc: "0253-external-contributor-prs"
 cluster: trust-gate

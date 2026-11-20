@@ -1,7 +1,7 @@
 ---
 rfc: "0023-surfaced-deviations"
 title: "Surfaced deviations & follow-ups — standing backlog for port-discovered work"
-status: active
+status: closed
 created: 2026-06-11
 updated: 2026-11-20
 owner: "@deanmarano"

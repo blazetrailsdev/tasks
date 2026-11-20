@@ -1,7 +1,7 @@
 ---
 title: "cache-store-multi-reads-use-extract-options-bang"
-status: draft
-updated: 2026-09-26
+status: closed
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered: cache/store.ts readMulti/fetchMulti call extractOptionsBang(names) (lines 303, 351 on origin/main 6267d89132); the module-private extractOptions is gone."
 ---
 
 ## Context

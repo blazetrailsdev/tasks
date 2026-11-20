@@ -1,6 +1,6 @@
 ---
 title: "activerecord: receipt remaining PERMANENT-SKIP tests in unported-files"
-status: ready
+status: done
 updated: 2026-11-20
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 25
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10417
+claim: "2026-11-20T16:03:22Z"
+assignee: "activerecord-remaining-permanent-skips-in-unported-files"
 blocked-by: null
 closed-reason: null
 ---

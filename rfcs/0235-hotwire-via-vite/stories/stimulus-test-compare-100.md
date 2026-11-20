@@ -1,6 +1,6 @@
 ---
 title: "stimulus-rails test:compare reaches 100%"
-status: ready
+status: in-progress
 updated: 2026-11-20
 rfc: "0235-hotwire-via-vite"
 cluster: null
@@ -8,10 +8,10 @@ packages: ["stimulus"]
 deps: []
 deps-rfc: []
 est-loc: 20
-priority: null
-pr: null
-claim: null
-assignee: null
+priority: 2
+pr: trails#10421
+claim: "2026-11-20T16:25:32Z"
+assignee: "stimulus-test-compare-100"
 blocked-by: null
 closed-reason: null
 ---

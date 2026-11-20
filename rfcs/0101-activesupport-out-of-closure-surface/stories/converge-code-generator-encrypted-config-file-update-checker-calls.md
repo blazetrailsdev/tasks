@@ -1,7 +1,7 @@
 ---
 title: "converge-code-generator-encrypted-config-file-update-checker-calls"
-status: draft
-updated: 2026-10-28
+status: ready
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []

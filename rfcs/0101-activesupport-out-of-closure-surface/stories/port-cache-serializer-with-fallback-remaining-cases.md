@@ -1,7 +1,7 @@
 ---
 title: "port-cache-serializer-with-fallback-remaining-cases"
-status: draft
-updated: 2026-08-31
+status: closed
+updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered: test/cache/serializer-with-fallback.test.ts has 7 tests, 0 skips on origin/main 6267d89132; RFC 0246's measured miss table has no serializer_with_fallback row."
 ---
 
 ## Context
