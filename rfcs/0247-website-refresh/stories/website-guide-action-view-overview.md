@@ -1,7 +1,7 @@
 ---
 title: "Write the Action View Overview guide"
-status: ready
-updated: 2026-11-19
+status: claimed
+updated: 2026-11-20
 rfc: "0247-website-refresh"
 cluster: website-docs
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-20T14:51:51Z"
+assignee: "website-guide-action-view-helpers"
 blocked-by: null
 closed-reason: null
 ---

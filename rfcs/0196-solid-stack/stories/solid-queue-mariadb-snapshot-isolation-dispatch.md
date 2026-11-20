@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-mariadb-snapshot-isolation-dispatch"
-status: claimed
+status: blocked
 updated: 2026-11-20
 rfc: "0196-solid-stack"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-11-20T13:49:58Z"
 assignee: "solid-queue-mariadb-snapshot-isolation-dispatch"
-blocked-by: null
+blocked-by: "operator ruling 2026-11-20: follow upstream solid_queue; waiting on an upstream fix for MariaDB innodb_snapshot_isolation in dispatch"
 closed-reason: null
 ---
 

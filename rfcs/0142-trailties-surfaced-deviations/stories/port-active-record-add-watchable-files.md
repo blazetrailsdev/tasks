@@ -1,6 +1,6 @@
 ---
 title: "Port active_record.add_watchable_files so schema changes trigger reloading"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

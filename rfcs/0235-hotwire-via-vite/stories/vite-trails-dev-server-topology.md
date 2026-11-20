@@ -1,6 +1,6 @@
 ---
 title: "Run trails server in front of Vite: DevServerProxy middleware, Procfile.dev and bin/dev"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0235-hotwire-via-vite"
 cluster: vite

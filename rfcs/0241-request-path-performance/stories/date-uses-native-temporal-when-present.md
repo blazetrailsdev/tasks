@@ -1,6 +1,6 @@
 ---
 title: "date-uses-native-temporal-when-present"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0241-request-path-performance"
 cluster: null

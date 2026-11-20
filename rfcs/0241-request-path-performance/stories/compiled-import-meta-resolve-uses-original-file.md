@@ -1,6 +1,6 @@
 ---
 title: "Compiled config files resolve import.meta.resolve against the original file"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0241-request-path-performance"
 cluster: null

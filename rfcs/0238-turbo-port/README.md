@@ -1,9 +1,9 @@
 ---
 rfc: "0238-turbo-port"
 title: "Port the turbo-rails gem as @blazetrails/turbo"
-status: active
+status: closed
 created: 2026-11-12
-updated: 2026-11-17
+updated: 2026-11-20
 owner: "@deanmarano"
 packages:
   - "turbo"

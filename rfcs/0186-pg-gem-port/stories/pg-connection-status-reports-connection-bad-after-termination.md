@@ -1,6 +1,6 @@
 ---
 title: "pg: retest what a query raises after backend termination, against the wrapper"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0186-pg-gem-port"
 cluster: connection

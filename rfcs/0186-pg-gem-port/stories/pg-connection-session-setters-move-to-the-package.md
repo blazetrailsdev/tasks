@@ -1,6 +1,6 @@
 ---
 title: "pg: set_client_encoding, set_notice_receiver, server_version and conndefaults_hash"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0186-pg-gem-port"
 cluster: connection

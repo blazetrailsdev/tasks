@@ -1,6 +1,6 @@
 ---
 title: "trailties: decide and provide the css:install commands runCss dispatches to"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0235-hotwire-via-vite"
 cluster: null

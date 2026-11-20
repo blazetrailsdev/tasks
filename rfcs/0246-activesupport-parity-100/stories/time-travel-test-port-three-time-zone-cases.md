@@ -1,6 +1,6 @@
 ---
 title: "Port the three skipped TimeTravelTest time-zone cases (time_travel_test.rb:100-164)"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0246-activesupport-parity-100"
 cluster: null

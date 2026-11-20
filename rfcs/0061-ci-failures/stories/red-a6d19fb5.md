@@ -1,6 +1,6 @@
 ---
 title: "Action Pack Tests failing on main @a6d19fb5"
-status: ready
+status: done
 updated: 2026-11-20
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: trails#10410
+claim: "2026-11-20T14:40:00Z"
+assignee: "red-a6d19fb5"
 blocked-by: null
 closed-reason: null
 ---
