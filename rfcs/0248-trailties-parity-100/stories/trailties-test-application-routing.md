@@ -1,6 +1,6 @@
 ---
 title: "trailties: port application/routing_test.rb"
-status: claimed
+status: in-progress
 updated: 2026-11-20
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
+pr: trails#10403
 claim: "2026-11-20T04:17:34Z"
 assignee: "trailties-test-app-generator-part-3"
 blocked-by: null

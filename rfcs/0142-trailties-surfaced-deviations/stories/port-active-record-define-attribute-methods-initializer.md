@@ -1,6 +1,6 @@
 ---
 title: "Port the active_record.define_attribute_methods initializer and SchemaReflection#cached?"
-status: claimed
+status: in-progress
 updated: 2026-11-20
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#10404
 claim: "2026-11-20T04:43:38Z"
 assignee: "mailers-controller-view-paths-miss-app-views"
 blocked-by: null

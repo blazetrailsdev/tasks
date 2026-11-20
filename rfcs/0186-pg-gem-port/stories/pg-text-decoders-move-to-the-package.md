@@ -1,6 +1,6 @@
 ---
 title: "pg: the PG::TextDecoder classes the adapter registers, and add_pg_decoders"
-status: claimed
+status: in-progress
 updated: 2026-11-20
 rfc: "0186-pg-gem-port"
 cluster: result-and-coders
@@ -14,7 +14,7 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: 5
-pr: null
+pr: trails#10405
 claim: "2026-11-20T04:56:37Z"
 assignee: "pg-text-decoders-move-to-the-package"
 blocked-by: null
