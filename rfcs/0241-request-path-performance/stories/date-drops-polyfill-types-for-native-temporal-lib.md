@@ -5,7 +5,8 @@ updated: 2026-11-20
 rfc: "0241-request-path-performance"
 cluster: null
 packages: []
-deps: []
+deps:
+  - lint-and-typedoc-read-esnext-temporal-lib
 deps-rfc: []
 est-loc: 60
 priority: null
