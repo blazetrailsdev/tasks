@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: SQLite3::Statement is a class over an engine interface, with the gem's eight methods"
-status: ready
+status: blocked
 updated: 2026-11-20
 rfc: "0187-sqlite3-gem-port"
 cluster: database-and-statement
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 500
 priority: 3
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-20T21:24:50Z"
+assignee: "sqlite3-constants-and-fork-safety-ports"
+blocked-by: "awaiting operator answer to RFC 0187 open questions 1 (sync vs Promise engine) and 3 (setReadBigInts); measurement (b) reported in the bundle PR"
 closed-reason: null
 ---
 

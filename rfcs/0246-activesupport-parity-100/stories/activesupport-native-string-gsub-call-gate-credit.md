@@ -1,6 +1,6 @@
 ---
 title: "activesupport-native-string-gsub-call-gate-credit"
-status: claimed
+status: in-progress
 updated: 2026-11-20
 rfc: "0246-activesupport-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10445
 claim: "2026-11-20T20:58:47Z"
 assignee: "activesupport-api-deprecation-modules-weakset-hashbuilder-supers"
 blocked-by: null

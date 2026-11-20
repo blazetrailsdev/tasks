@@ -1,6 +1,6 @@
 ---
 title: "pg-connection-escape-identifier-is-pqescapeidentifier"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0186-pg-gem-port"
 cluster: null

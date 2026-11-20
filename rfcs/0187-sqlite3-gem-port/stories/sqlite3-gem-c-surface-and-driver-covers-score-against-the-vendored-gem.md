@@ -1,6 +1,6 @@
 ---
 title: "activerecord: the sqlite3 gem's C surface and the sqlite driver file covers score against the vendored gem"
-status: ready
+status: closed
 updated: 2026-11-20
 rfc: "0187-sqlite3-gem-port"
 cluster: findings
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-20T21:24:50Z"
+assignee: "sqlite3-constants-and-fork-safety-ports"
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by RFC 0187-sqlite3-gem-port"
 ---
 
 ## Context

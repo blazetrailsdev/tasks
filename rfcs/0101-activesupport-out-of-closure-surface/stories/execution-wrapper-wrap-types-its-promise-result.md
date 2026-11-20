@@ -1,6 +1,6 @@
 ---
 title: "ExecutionWrapper.wrap/perform type the promise a run hook returns"
-status: ready
+status: claimed
 updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-20T21:54:35Z"
+assignee: "converge-code-generator-encrypted-config-file-update-checker-calls"
 blocked-by: null
 closed-reason: null
 ---

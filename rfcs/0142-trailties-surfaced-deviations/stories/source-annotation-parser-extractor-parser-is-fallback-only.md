@@ -1,6 +1,6 @@
 ---
 title: "trailties: ParserExtractor::Parser exists only on Rails' no-Prism arm"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

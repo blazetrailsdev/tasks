@@ -1,6 +1,6 @@
 ---
 title: "session-reads-async-in-templates"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

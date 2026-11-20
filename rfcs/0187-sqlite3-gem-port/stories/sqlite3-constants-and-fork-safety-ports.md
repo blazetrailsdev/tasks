@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: SQLite3::Constants and ForkSafety.suppress_warnings! at their gem homes"
-status: ready
+status: in-progress
 updated: 2026-11-20
 rfc: "0187-sqlite3-gem-port"
 cluster: package
@@ -9,9 +9,9 @@ deps: ["sqlite3-lift-the-nested-port-into-a-package"]
 deps-rfc: []
 est-loc: 150
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#10450
+claim: "2026-11-20T21:24:50Z"
+assignee: "sqlite3-constants-and-fork-safety-ports"
 blocked-by: null
 closed-reason: null
 ---

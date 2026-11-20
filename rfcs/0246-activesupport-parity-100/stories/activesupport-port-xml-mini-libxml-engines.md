@@ -1,6 +1,6 @@
 ---
 title: "activesupport-port-xml-mini-libxml-engines"
-status: claimed
+status: ready
 updated: 2026-11-20
 rfc: "0246-activesupport-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-20T20:58:47Z"
-assignee: "activesupport-api-deprecation-modules-weakset-hashbuilder-supers"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

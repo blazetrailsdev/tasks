@@ -1,7 +1,7 @@
 ---
 title: "Port the fork supervisor and forked-lifecycle tests against real child processes"
-status: ready
-updated: 2026-11-18
+status: in-progress
+updated: 2026-11-20
 rfc: "0196-solid-stack"
 cluster: null
 packages: ["solid-queue"]
@@ -9,9 +9,9 @@ deps: ["solid-queue-fork-mode-unported-register"]
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10448
+claim: "2026-11-20T21:11:33Z"
+assignee: "solid-queue-fork-supervisor-tests-v1-7-2"
 blocked-by: null
 closed-reason: null
 ---
