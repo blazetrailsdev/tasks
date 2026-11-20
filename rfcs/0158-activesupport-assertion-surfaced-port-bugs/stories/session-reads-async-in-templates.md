@@ -5,7 +5,8 @@ updated: 2026-11-20
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: [actionpack]
-deps: []
+deps:
+  - form-helpers-await-form-authenticity-token
 deps-rfc: []
 est-loc: 200
 priority: null
