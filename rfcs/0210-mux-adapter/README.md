@@ -1,9 +1,9 @@
 ---
 rfc: "0210-mux-adapter"
 title: "Multiplexer adapter: fleet pane control in TypeScript, behind one interface for tmux and rmux"
-status: draft
+status: postponed
 created: 2026-10-28
-updated: 2026-10-28
+updated: 2026-11-20
 owner: "@deanmarano"
 packages: []
 related-rfcs:
