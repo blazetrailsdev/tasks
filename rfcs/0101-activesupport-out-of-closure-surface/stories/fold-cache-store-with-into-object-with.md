@@ -1,6 +1,6 @@
 ---
 title: "Fold invented Store.with into objectWith (Object#with) and make it async-aware"
-status: claimed
+status: in-progress
 updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#10431
 claim: "2026-11-20T17:30:40Z"
 assignee: "active-support-namespace-seats-test-case"
 blocked-by: null

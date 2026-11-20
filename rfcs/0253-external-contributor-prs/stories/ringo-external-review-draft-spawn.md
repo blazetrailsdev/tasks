@@ -1,6 +1,6 @@
 ---
 title: "ringo: spawn a credential-less review agent that drafts, never posts"
-status: ready
+status: claimed
 updated: 2026-11-20
 rfc: "0253-external-contributor-prs"
 cluster: external-review
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-20T18:54:13Z"
+assignee: "ringo-emits-external-issue-events"
 blocked-by: null
 closed-reason: null
 ---

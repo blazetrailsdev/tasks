@@ -1,6 +1,6 @@
 ---
 title: "ActiveSupport::Railtie ports 3 of 16 initializers, so config.beginning_of_week and 12 siblings are inert"
-status: claimed
+status: in-progress
 updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#10431
 claim: "2026-11-20T17:30:40Z"
 assignee: "active-support-namespace-seats-test-case"
 blocked-by: null

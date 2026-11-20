@@ -1,6 +1,6 @@
 ---
 title: "ringo: record external issues and emit external_issue.* events"
-status: ready
+status: claimed
 updated: 2026-11-20
 rfc: "0253-external-contributor-prs"
 cluster: trust-gate
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-20T18:54:13Z"
+assignee: "ringo-emits-external-issue-events"
 blocked-by: null
 closed-reason: null
 ---

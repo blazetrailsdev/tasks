@@ -1,6 +1,6 @@
 ---
 title: "activerecord: sqlite-uri helpers port @memory_database as Rails computes it"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0187-sqlite3-gem-port"
 cluster: findings
