@@ -5,7 +5,8 @@ updated: 2026-11-20
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - activesupport-port-evented-file-update-checker
 deps-rfc: []
 est-loc: null
 priority: null
