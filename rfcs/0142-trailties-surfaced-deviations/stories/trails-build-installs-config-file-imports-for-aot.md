@@ -1,7 +1,7 @@
 ---
 title: "trails build installs routes, environments, initializers and config file imports so an AOT build sees them"
 status: ready
-updated: 2026-11-16
+updated: 2026-11-20
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

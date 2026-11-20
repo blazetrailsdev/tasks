@@ -1,6 +1,6 @@
 ---
 title: 'Logger severity predicates are string-named "debug?" getters instead of isDebug'
-status: claimed
+status: in-progress
 updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#10453
 claim: "2026-11-20T21:54:35Z"
 assignee: "converge-code-generator-encrypted-config-file-update-checker-calls"
 blocked-by: null

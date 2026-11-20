@@ -1,6 +1,6 @@
 ---
 title: "Port test_helper.rb's shared setup/teardown with the use_transactional_tests guard"
-status: ready
+status: claimed
 updated: 2026-11-20
 rfc: "0196-solid-stack"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-20T22:59:33Z"
+assignee: "solid-queue-test-helper-shared-setup-teardown"
 blocked-by: null
 closed-reason: null
 ---

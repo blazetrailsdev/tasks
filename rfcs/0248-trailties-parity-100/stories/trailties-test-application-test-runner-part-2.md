@@ -1,6 +1,6 @@
 ---
 title: "trailties: port application/test_runner_test.rb lines 626-1479"
-status: claimed
+status: ready
 updated: 2026-11-20
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 480
 priority: null
 pr: null
-claim: "2026-11-20T21:41:32Z"
-assignee: "trailties-test-application-test-runner-part-2"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

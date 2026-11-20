@@ -1,6 +1,6 @@
 ---
 title: "activesupport-port-core-ext-regexp"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0246-activesupport-parity-100"
 cluster: null

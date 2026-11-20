@@ -1,6 +1,6 @@
 ---
 title: "pg: port the gem's specs for the wrapped methods and enroll the package in parity:test"
-status: ready
+status: in-progress
 updated: 2026-11-20
 rfc: "0186-pg-gem-port"
 cluster: package
@@ -9,9 +9,9 @@ deps: ["pg-connection-session-setters-move-to-the-package", "pg-text-decoders-mo
 deps-rfc: []
 est-loc: 500
 priority: 7
-pr: null
-claim: null
-assignee: null
+pr: trails#10455
+claim: "2026-11-20T22:33:32Z"
+assignee: "pg-gem-specs-enroll-in-parity-test"
 blocked-by: null
 closed-reason: null
 ---

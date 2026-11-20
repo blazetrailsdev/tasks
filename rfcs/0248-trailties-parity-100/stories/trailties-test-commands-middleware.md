@@ -1,6 +1,6 @@
 ---
 title: "trailties: port commands/middleware_test.rb"
-status: claimed
+status: in-progress
 updated: 2026-11-20
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: trails#10451
 claim: "2026-11-20T21:41:32Z"
 assignee: "trailties-test-application-test-runner-part-2"
 blocked-by: null

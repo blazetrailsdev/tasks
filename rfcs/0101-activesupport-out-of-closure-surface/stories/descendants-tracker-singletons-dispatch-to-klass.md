@@ -1,6 +1,6 @@
 ---
 title: "DescendantsTracker.subclasses/descendants dispatch to klass.subclasses as Rails does"
-status: claimed
+status: blocked
 updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-11-20T21:54:35Z"
 assignee: "converge-code-generator-encrypted-config-file-update-checker-calls"
-blocked-by: null
+blocked-by: "Needs an operator decision: Rails prepends ReloadedClassesFiltering onto Class (core_ext/class/subclasses.rb:23); trails cannot install on Function.prototype (CLAUDE.md 'Core extensions are not installed on native prototypes'), and classes that extend DescendantsTracker via callbacks.ts:1293 have no subclasses reader, so klass.subclasses dispatch breaks CurrentAttributes.defineCallbacks."
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "generate-tzinfo-data translates the Format 1 tree tzinfo-data actually ships"
-status: ready
+status: in-progress
 updated: 2026-11-20
 rfc: "0231-tzinfo-to-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10454
+claim: "2026-11-20T22:20:44Z"
+assignee: "data-timezone-delegates-periods-to-info"
 blocked-by: null
 closed-reason: null
 ---

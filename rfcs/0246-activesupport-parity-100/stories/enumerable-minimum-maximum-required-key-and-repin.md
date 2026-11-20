@@ -1,6 +1,6 @@
 ---
 title: "Enumerable#minimum/maximum take a required key; re-pin core_ext/enumerable.rb"
-status: ready
+status: claimed
 updated: 2026-11-20
 rfc: "0246-activesupport-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-20T22:47:06Z"
+assignee: "activesupport-api-misses-remainder-after-bundle"
 blocked-by: null
 closed-reason: null
 ---

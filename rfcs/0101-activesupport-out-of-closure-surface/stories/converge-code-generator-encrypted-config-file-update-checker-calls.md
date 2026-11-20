@@ -1,6 +1,6 @@
 ---
 title: "converge-code-generator-encrypted-config-file-update-checker-calls"
-status: claimed
+status: blocked
 updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-11-20T21:54:35Z"
 assignee: "converge-code-generator-encrypted-config-file-update-checker-calls"
-blocked-by: null
+blocked-by: "Remaining rows need infrastructure: Time.at(0) needs ruby-compat File.mtime to answer a Time (file_update_checker.rb:111-113); class_eval has no ruby-compat spelling for a JS class owner (code_generator.rb:75); EncryptedConfiguration#options reading async config needs delegateMissingTo over an async target (encrypted_configuration.rb:112-114). fetch/each_value/each_key arms already converged on main."
 closed-reason: null
 ---
 

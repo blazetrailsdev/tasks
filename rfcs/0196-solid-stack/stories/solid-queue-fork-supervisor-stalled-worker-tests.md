@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-fork-supervisor-stalled-worker-tests"
-status: draft
+status: in-progress
 updated: 2026-11-20
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10448
+claim: "2026-11-20T22:42:34Z"
+assignee: "solid-queue-fork-supervisor-stalled-worker-tests"
 blocked-by: null
 closed-reason: null
 ---
