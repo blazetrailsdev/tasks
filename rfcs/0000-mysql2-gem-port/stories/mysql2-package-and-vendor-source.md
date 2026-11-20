@@ -45,7 +45,7 @@ Shape and registrations: `packages/pg` (`pg-package-and-vendor-source`, trails#1
 - [ ] The `mysql2` entry in `vendor/sources.ts` gains `testPath: "spec/mysql2"`; `vendor/sources.lock.json` and `vendor/sources.test.ts`'s lists are updated. The `mirrors` entry moves from `packages/activerecord/package.json` to `packages/mysql2/package.json`.
 - [ ] `mysql2` leaves `PACKAGE_DIR_OVERRIDES` and `PACKAGE_SRC_SUBDIR`; api-compare reads it from `packages/mysql2/lib`. `client.ts`, `result.ts`, `statement.ts` stay in activerecord until `mysql2-client-result-statement-move-to-the-package`, so their members are unscored until then; the PR body prints the row.
 - [ ] `em.rb`, `field.rb` and `mysql2.rb` are `UNPORTED_FILES` rows, and every Ruby-defined method in an enrolled file that activerecord does not call (`parse_ssl_mode`, `find_default_ca_path`, `query_info`, `info`) is a `SCOPED_SKIP_GROUPS` entry, each with the reason "not called by activerecord". Check `SCOPED_SKIP_GROUPS` first.
-- [ ] Every registration in RFC 0186 § "Registration cost" items 1 to 6 and 8 is made for `mysql2`; CI runs the package's tests on the MariaDB lane; `.github/workflows/ci.yml` and `scripts/ci-suite-coverage.test.ts` fixture literals change together. `pnpm vitest run scripts/ vendor/` is green. `mysql2` is not added to `GATED_PACKAGES`.
+- [ ] Every registration in RFC 0186 § "Registration cost" items 1 to 6 and 8 is made for `mysql2`; CI runs the package's tests on the MariaDB lane (own step or activerecord's, per the RFC's open question 1); `.github/workflows/ci.yml` and `scripts/ci-suite-coverage.test.ts` fixture literals change together. `pnpm vitest run scripts/ vendor/` is green. `mysql2` is not added to `GATED_PACKAGES`.
 
 ## Verification
 

@@ -144,8 +144,8 @@ Of the gem methods activerecord calls (`mysql2_adapter.rb`, `mysql2/database_sta
 | `Mysql2::Client`    | 12: `close`, `closed?`, `ping`, `server_info`, `escape`, `last_id`, `affected_rows`, `prepare`, `set_server_option`, `abandon_results!`, `automatic_close=`, `warning_count` | 8: `default_query_options`, `initialize`, `parse_flags_array`, `parse_connect_attrs`, `query`, `local_offset`, `query_options`, `read_timeout` |
 | `Mysql2::Result`    | 4: `each`, `fields`, `free`, `size` (alias of `count`)                                                                                                                       | 0 (`to_a` is `Enumerable`)                                                                                                                     |
 | `Mysql2::Statement` | 2: `affected_rows`, `close`                                                                                                                                                  | 1: `execute`                                                                                                                                   |
-| `Mysql2::Error`     | 0                                                                                                                                                                            | 3 + 2 aliases: `initialize`, `new_with_args`, `clean_message`, `errno`, `error`                                                                |
-| **total**           | **18**                                                                                                                                                                       | **14**                                                                                                                                         |
+| `Mysql2::Error`     | 0                                                                                                                                                                            | 7, all of `error.rb` (scored 7/7 today): `initialize`, `new_with_args`, `clean_message`, `error_number`, `sql_state`, `errno`, `error`         |
+| **total**           | **18**                                                                                                                                                                       | **16**                                                                                                                                         |
 
 As with pg, the 18 C-defined methods keep their gem names, are reported as extra surface by
 `pnpm parity:api:extra --package mysql2`, carry no receipt, and gate nothing. `escape` is listed
@@ -190,8 +190,14 @@ the two readers.
 As RFC 0186 § "Registration cost", items 1 to 8, with `mysql2` substituted, plus: remove `mysql2`
 from `PACKAGE_DIR_OVERRIDES` and `PACKAGE_SRC_SUBDIR` (`scripts/api-compare/config.ts:47,118`); move
 the `mysql2` entry of `mirrors` from `packages/activerecord/package.json` to the new package; give
-the `vendor/sources.ts` entry `testPath: "spec/mysql2"`. The package's tests need a server, so its CI
-lane is the MariaDB lane, not Leaf Tests.
+the `vendor/sources.ts` entry `testPath: "spec/mysql2"`. The package's tests need a server, so they
+run on the MariaDB lane, not Leaf Tests; whether as their own step is open question 1.
+
+### Scoring
+
+As RFC 0186 § "Scoring": `parity:api` scores the Ruby `def`s under `lib/mysql2`; the C-defined
+methods keep their gem names, carry no receipt and no citation, and `mysql2` is not added to
+`GATED_PACKAGES`. The denominator is what activerecord calls.
 
 ## Rollout
 
@@ -210,11 +216,13 @@ The order is the `deps` graph.
 
 ### Sequencing with other RFCs
 
-This RFC sequences **after the Rails 8.0.5.2 upgrade (RFC 0191,
-`rails-8-0-5-1-upgrade-workflow`)**, alongside RFCs 0186 and 0187: the bump re-reads the adapter
-files this RFC cites, and a lift landing mid-bump moves the files the bump ledger is pinned against.
-Story 1 is the only one that can run before it; it touches no adapter body. Its output is one more
-self-contained driver package for RFC 0100 to publish.
+This RFC is scheduled **after the Rails 8.0.5.2 upgrade (RFC 0191,
+`rails-8-0-5-1-upgrade-workflow`)**, in the same wave as RFCs 0186 and 0187 (owner, 2026-11-20): the
+bump re-reads the adapter files this RFC cites, and a lift landing mid-bump moves files the bump
+ledger is pinned against. This is a scheduling decision, not a `deps-rfc` edge: RFC 0191 also scopes
+8.1 and stays open well past the 8.0.5.2 bump, so an edge on it would block these stories indefinitely, and
+neither sibling RFC carries one. Story 1 touches no adapter body and may run first. The output is
+one more self-contained driver package for RFC 0100 (`package-size-and-publish-shape`) to publish.
 
 ### Open mysql2 stories this RFC touches but does not absorb
 
@@ -250,6 +258,13 @@ work. Each keeps its home; a story here that moves a file a ready story cites up
 
 ## Verification
 
+The RFC is done when all of these hold on `main`:
+
+- `packages/activerecord/lib/mysql2/` does not exist, and `grep -rn "@blazetrails/active" packages/mysql2/lib` is empty.
+- `pnpm parity:api --package mysql2` reads **16/16** methods (the Ruby-defined surface in § "The measured split") with every other `lib/mysql2/*.rb` method an `UNPORTED_FILES` or `SCOPED_SKIP_GROUPS` row, against 12/33 today; no `[declaration-only]` row.
+- The 8 `@noRailsEquivalent` receipts in § "Receipts and run-time-assigned surface" are **0**, and `grep -rn "mysql2Client\|_handshakePacket\|_closing" packages/activerecord/lib` is empty.
+- `pnpm parity:test` lists the four `spec/mysql2/*_spec.rb` files with a non-negative delta.
+
 ```bash
 pnpm vitest run packages/mysql2 scripts/ vendor/
 pnpm parity:api --package mysql2
@@ -268,3 +283,4 @@ pnpm parity:api:extra --package mysql2
 ## Changelog
 
 - 2026-11-20: drafted.
+- 2026-11-20: concrete Verification targets; § Scoring; sequencing stated as a scheduling decision, not a `deps-rfc` edge; cross-reference added to the RFC 0156 story.
