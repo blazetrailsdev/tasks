@@ -2,7 +2,7 @@
 title: "ringo: one PR trust check, closed by default, on every PR-scoped handler"
 status: draft
 updated: 2026-11-19
-rfc: "0000-external-contributor-prs"
+rfc: "0253-external-contributor-prs"
 cluster: trust-gate
 packages: []
 deps: []

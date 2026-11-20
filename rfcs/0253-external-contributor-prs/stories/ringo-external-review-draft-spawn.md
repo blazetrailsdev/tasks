@@ -2,7 +2,7 @@
 title: "ringo: spawn a credential-less review agent that drafts, never posts"
 status: draft
 updated: 2026-11-19
-rfc: "0000-external-contributor-prs"
+rfc: "0253-external-contributor-prs"
 cluster: external-review
 packages: []
 deps: [ringo-classify-pr-trust-closed-by-default]

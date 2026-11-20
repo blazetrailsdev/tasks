@@ -2,7 +2,7 @@
 title: "trailmap: draft, edit and send a reply on an external issue"
 status: draft
 updated: 2026-11-19
-rfc: "0000-external-contributor-prs"
+rfc: "0253-external-contributor-prs"
 cluster: external-review
 packages: []
 deps: [ringo-emits-external-issue-events, trailmap-sends-approved-review-to-github]

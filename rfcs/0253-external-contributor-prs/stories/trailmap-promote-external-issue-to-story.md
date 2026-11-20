@@ -2,7 +2,7 @@
 title: "trailmap: promote an external issue to a draft story, owner-edited"
 status: draft
 updated: 2026-11-19
-rfc: "0000-external-contributor-prs"
+rfc: "0253-external-contributor-prs"
 cluster: external-review
 packages: []
 deps: [ringo-emits-external-issue-events, trailmap-external-pr-inbox]

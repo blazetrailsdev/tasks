@@ -2,7 +2,7 @@
 title: "ringo: record external PR activity and emit external_pr.* events"
 status: draft
 updated: 2026-11-19
-rfc: "0000-external-contributor-prs"
+rfc: "0253-external-contributor-prs"
 cluster: trust-gate
 packages: []
 deps: [ringo-classify-pr-trust-closed-by-default]

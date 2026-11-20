@@ -1,5 +1,5 @@
 ---
-rfc: "0000-external-contributor-prs"
+rfc: "0253-external-contributor-prs"
 title: "External contributors: no automation by default, owner-approved replies"
 status: draft
 created: 2026-11-19
@@ -15,7 +15,7 @@ related-rfcs:
   - "0249-ringo-changes"
 ---
 
-# RFC — External contributors: no automation by default, owner-approved replies
+# RFC 0253 — External contributors: no automation by default, owner-approved replies
 
 ## Summary
 
