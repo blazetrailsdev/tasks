@@ -1,5 +1,5 @@
 ---
-rfc: "0000-mysql2-gem-port"
+rfc: "0254-mysql2-gem-port"
 title: "mysql2: lift the nested mysql2 gem port out of activerecord into @blazetrails/mysql2"
 status: draft
 created: 2026-11-20
@@ -23,10 +23,7 @@ related-rfcs:
   - "0234-no-void-promises"
 ---
 
-<!-- Unnumbered until merge: `scripts/finalize-rfc.mjs` swaps 0000 for the
-     assigned number at merge. -->
-
-# RFC — mysql2 gem wrapper
+# RFC 0254 — mysql2 gem wrapper
 
 ## Summary
 

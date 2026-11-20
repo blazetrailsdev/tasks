@@ -2,7 +2,7 @@
 title: "Mysql2::Client is a class: protected constructor plus static async new, no run-time decorator"
 status: draft
 updated: 2026-11-20
-rfc: "0000-mysql2-gem-port"
+rfc: "0254-mysql2-gem-port"
 cluster: client
 packages: ["mysql2", "activerecord"]
 deps: ["mysql2-client-result-statement-move-to-the-package"]
