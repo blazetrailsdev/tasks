@@ -1,9 +1,9 @@
 ---
 rfc: "0253-external-contributor-prs"
 title: "External contributors: no automation by default, owner-approved replies"
-status: draft
+status: active
 created: 2026-11-19
-updated: 2026-11-19
+updated: 2026-11-20
 owner: "@deanmarano"
 packages: []
 clusters:
