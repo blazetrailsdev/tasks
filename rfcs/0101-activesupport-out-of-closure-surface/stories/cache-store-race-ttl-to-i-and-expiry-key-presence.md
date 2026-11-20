@@ -1,6 +1,6 @@
 ---
 title: "Cache::Store reads race_condition_ttl with to_i and expires_in/expires_at by key presence"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null

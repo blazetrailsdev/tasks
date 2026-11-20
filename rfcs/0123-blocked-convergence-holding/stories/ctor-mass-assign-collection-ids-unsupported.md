@@ -1,6 +1,6 @@
 ---
 title: "ctor-mass-assign-collection-ids-unsupported"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0123-blocked-convergence-holding"
 cluster: null

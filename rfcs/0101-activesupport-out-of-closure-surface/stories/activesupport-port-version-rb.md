@@ -1,6 +1,6 @@
 ---
 title: "activesupport: port ActiveSupport.version and drop its version.rb exclusion row"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null

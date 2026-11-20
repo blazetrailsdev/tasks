@@ -1,6 +1,6 @@
 ---
 title: "ActiveSupport::Railtie ports 3 of 16 initializers, so config.beginning_of_week and 12 siblings are inert"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null

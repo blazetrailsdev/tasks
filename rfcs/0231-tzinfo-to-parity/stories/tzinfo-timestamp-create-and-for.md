@@ -1,6 +1,6 @@
 ---
 title: "tzinfo-timestamp-create-and-for"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0231-tzinfo-to-parity"
 cluster: null

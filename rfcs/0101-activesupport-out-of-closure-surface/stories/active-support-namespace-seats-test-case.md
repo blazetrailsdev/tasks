@@ -1,6 +1,6 @@
 ---
 title: "ActiveSupport namespace seats TestCase (ActiveSupport::TestCase autoload)"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "website-serve-at-blazetrails-dev-domain"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0247-website-refresh"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "pg: TextDecoder Integer/Float/Timestamp/Bytea bodies follow pg_text_decoder.c"
-status: ready
+status: in-progress
 updated: 2026-11-20
 rfc: "0186-pg-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10443
+claim: "2026-11-20T20:45:34Z"
+assignee: "pg-connect-forwards-its-block-to-connection-new"
 blocked-by: null
 closed-reason: null
 ---

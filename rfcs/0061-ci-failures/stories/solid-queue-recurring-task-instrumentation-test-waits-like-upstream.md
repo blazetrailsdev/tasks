@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-recurring-task-instrumentation-test-waits-like-upstream"
-status: ready
+status: done
 updated: 2026-11-20
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10442
+claim: "2026-11-20T20:34:57Z"
+assignee: "solid-queue-recurring-task-instrumentation-test-waits-like-upstream"
 blocked-by: null
 closed-reason: null
 ---

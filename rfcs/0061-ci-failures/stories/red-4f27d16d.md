@@ -1,6 +1,6 @@
 ---
 title: "Active Record SQLite Tests (2) failing on main @4f27d16d"
-status: ready
+status: closed
 updated: 2026-11-20
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-20T20:52:42Z"
+assignee: "red-4f27d16d"
 blocked-by: null
-closed-reason: null
+closed-reason: "Already fixed by trails#10441: ConcurrencyControlsTest 'don't block claimed executions that get released' timed out in its 2s claim waitFor because beforeEach's 3s waitForRegisteredProcesses did not raise and workers had not registered on a loaded runner; #10441 (merged after 4f27d16d) widened that setup wait to 10s for every test in the file."
 ---
 
 ## Context

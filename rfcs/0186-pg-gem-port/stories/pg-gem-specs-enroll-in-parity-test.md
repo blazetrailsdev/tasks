@@ -1,7 +1,7 @@
 ---
 title: "pg: port the gem's specs for the wrapped methods and enroll the package in parity:test"
 status: ready
-updated: 2026-11-18
+updated: 2026-11-20
 rfc: "0186-pg-gem-port"
 cluster: package
 packages: ["pg", "scripts"]

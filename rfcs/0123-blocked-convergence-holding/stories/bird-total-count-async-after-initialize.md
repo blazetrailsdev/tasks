@@ -1,6 +1,6 @@
 ---
 title: "bird-total-count-async-after-initialize"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0123-blocked-convergence-holding"
 cluster: null
