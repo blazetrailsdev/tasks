@@ -5,7 +5,8 @@ updated: 2026-11-20
 rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - safe-buffer-declare-unsafe-string-methods
 deps-rfc: []
 est-loc: null
 priority: null
