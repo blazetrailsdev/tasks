@@ -1,6 +1,6 @@
 ---
 title: "Serverless spike: replace the deleted website rack-bridge import"
-status: draft
+status: closed
 updated: 2026-11-19
 rfc: "0241-request-path-performance"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#10363 (8a6a51017d): added examples/serverless-lambda/serverless/rack-bridge.ts and lambda.ts now imports ./rack-bridge.ts; bundle.mjs on origin/main has splitting:true and zero 'external' entries."
 ---
 
 ## Context

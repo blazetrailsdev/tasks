@@ -1,6 +1,6 @@
 ---
 title: "turbo-dummy-app-turbo-api-dependents"
-status: ready
+status: in-progress
 updated: 2026-11-19
 rfc: "0238-turbo-port"
 cluster: null
@@ -15,9 +15,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#10389
+claim: "2026-11-19T23:44:34Z"
+assignee: "channel-base-params-is-hash-with-indifferent-access"
 blocked-by: null
 closed-reason: null
 ---

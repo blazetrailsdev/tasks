@@ -1,6 +1,6 @@
 ---
 title: "date-current-answers-a-ruby-date"
-status: draft
+status: done
 updated: 2026-11-19
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10383
+claim: "2026-11-19T23:21:48Z"
+assignee: "date-current-answers-a-ruby-date"
 blocked-by: null
 closed-reason: null
 ---

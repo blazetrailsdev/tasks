@@ -1,6 +1,6 @@
 ---
 title: "pg: the wrapper raises PG::Error subclasses carrying a PG::Result; translate_exception reads error_field"
-status: claimed
+status: done
 updated: 2026-11-19
 rfc: "0186-pg-gem-port"
 cluster: connection
@@ -9,7 +9,7 @@ deps: ["pg-connection-exec-surface-moves-to-the-package"]
 deps-rfc: []
 est-loc: 500
 priority: 4
-pr: null
+pr: trails#10384
 claim: "2026-11-19T22:52:37Z"
 assignee: "call-args-gate-resolves-inherited-constructor-padding"
 blocked-by: null

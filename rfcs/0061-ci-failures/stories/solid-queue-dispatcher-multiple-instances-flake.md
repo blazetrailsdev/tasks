@@ -1,6 +1,6 @@
 ---
 title: "Flake: solid-queue DispatcherTest 'run more than one instance of the dispatcher' (14 vs 15)"
-status: claimed
+status: in-progress
 updated: 2026-11-19
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#10387
 claim: "2026-11-19T22:39:33Z"
 assignee: "solid-queue-dispatcher-multiple-instances-flake"
 blocked-by: null

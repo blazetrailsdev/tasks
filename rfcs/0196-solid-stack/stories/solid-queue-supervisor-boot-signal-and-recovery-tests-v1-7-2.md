@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-supervisor-boot-signal-and-recovery-tests-v1-7-2"
-status: ready
+status: in-progress
 updated: 2026-11-19
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10388
+claim: "2026-11-19T23:19:12Z"
+assignee: "solid-queue-batch-test-membership-and-pending-migrations"
 blocked-by: null
 closed-reason: null
 ---

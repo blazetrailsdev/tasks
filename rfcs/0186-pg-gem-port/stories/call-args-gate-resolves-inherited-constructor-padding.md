@@ -1,6 +1,6 @@
 ---
 title: "call-args-gate-resolves-inherited-constructor-padding"
-status: claimed
+status: done
 updated: 2026-11-19
 rfc: "0186-pg-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10384
 claim: "2026-11-19T22:52:37Z"
 assignee: "call-args-gate-resolves-inherited-constructor-padding"
 blocked-by: null

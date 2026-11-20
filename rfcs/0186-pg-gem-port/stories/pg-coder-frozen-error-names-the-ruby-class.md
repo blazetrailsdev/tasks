@@ -1,6 +1,6 @@
 ---
 title: "pg: a frozen coder's FrozenError names PG::TextEncoder::Array"
-status: claimed
+status: blocked
 updated: 2026-11-19
 rfc: "0186-pg-gem-port"
 cluster: null
@@ -12,9 +12,9 @@ deps-rfc: []
 est-loc: 10
 priority: null
 pr: null
-claim: "2026-11-19T22:52:37Z"
-assignee: "call-args-gate-resolves-inherited-constructor-padding"
-blocked-by: null
+claim: null
+assignee: null
+blocked-by: "needs pg-c-extension-classes-get-class-paths: PG::TextEncoder::Array is C-only, so no class-path row is generated"
 closed-reason: null
 ---
 

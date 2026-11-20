@@ -1,7 +1,7 @@
 ---
 title: "port-out-of-closure-activesupport-singleton-tail"
-status: ready
-updated: 2026-11-18
+status: in-progress
+updated: 2026-11-19
 rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: [scripts]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10386
+claim: "2026-11-19T23:05:59Z"
+assignee: "port-activesupport-testing-helper-stubs"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Mailer and job generators take the mountable_engine? arm for their application parent file"
-status: claimed
+status: in-progress
 updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#10385
 claim: "2026-11-19T22:26:42Z"
 assignee: "load-defaults-8-1-arm"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Compiled config files resolve import.meta.resolve against the original file"
-status: draft
+status: claimed
 updated: 2026-11-19
 rfc: "0241-request-path-performance"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 20
-priority: null
+priority: 2
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-19T23:58:01Z"
+assignee: "nokogiri-extension-loads-on-first-parse-not-at-boot"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activesupport-testing-helper-stub-residue"
-status: draft
+status: ready
 updated: 2026-11-19
 rfc: "0246-activesupport-parity-100"
 cluster: null
