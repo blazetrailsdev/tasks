@@ -11,6 +11,7 @@ packages:
   - "scripts"
   - "vite-assets"
   - "turbo"
+  - "stimulus"
 clusters:
   - ruling
   - vite
