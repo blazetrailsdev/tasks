@@ -10,6 +10,7 @@ packages:
   - "vite-trails"
   - "scripts"
   - "vite-assets"
+  - "turbo"
 clusters:
   - ruling
   - vite
