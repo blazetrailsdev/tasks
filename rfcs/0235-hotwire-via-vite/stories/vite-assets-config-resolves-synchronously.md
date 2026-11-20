@@ -1,6 +1,6 @@
 ---
 title: "ViteAssets#config is read synchronously once prewarmed; peekConfig retires"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0235-hotwire-via-vite"
 cluster: null

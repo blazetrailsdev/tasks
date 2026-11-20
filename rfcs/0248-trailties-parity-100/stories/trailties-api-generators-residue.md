@@ -1,7 +1,7 @@
 ---
 title: "trailties: close the generator-module API misses"
-status: ready
-updated: 2026-11-19
+status: in-progress
+updated: 2026-11-20
 rfc: "0248-trailties-parity-100"
 cluster: api-residuals
 packages: [trailties]
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10429
+claim: "2026-11-20T17:17:47Z"
+assignee: "trailties-api-generators-residue"
 blocked-by: null
 closed-reason: null
 ---

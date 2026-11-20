@@ -1,6 +1,6 @@
 ---
 title: "activesupport-logger-new-takes-shift-age-and-size"
-status: ready
+status: in-progress
 updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10431
+claim: "2026-11-20T17:30:40Z"
+assignee: "active-support-namespace-seats-test-case"
 blocked-by: null
 closed-reason: null
 ---

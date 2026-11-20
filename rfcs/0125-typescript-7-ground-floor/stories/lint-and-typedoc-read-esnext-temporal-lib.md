@@ -1,6 +1,6 @@
 ---
 title: "lint-and-typedoc-read-esnext-temporal-lib"
-status: draft
+status: in-progress
 updated: 2026-11-20
 rfc: "0125-typescript-7-ground-floor"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10430
+claim: "2026-11-20T17:57:48Z"
+assignee: "lint-and-typedoc-read-esnext-temporal-lib"
 blocked-by: null
 closed-reason: null
 ---

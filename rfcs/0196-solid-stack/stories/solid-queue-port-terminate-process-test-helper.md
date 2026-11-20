@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-port-terminate-process-test-helper"
-status: draft
+status: closed
 updated: 2026-11-20
 rfc: "0196-solid-stack"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: shipped in trails#10427 at reviewer request"
 ---
 
 ## Context

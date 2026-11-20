@@ -1,7 +1,7 @@
 ---
 title: "Write the Active Model Basics guide"
-status: ready
-updated: 2026-11-19
+status: done
+updated: 2026-11-20
 rfc: "0247-website-refresh"
 cluster: website-docs
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10426
+claim: "2026-11-20T17:04:36Z"
+assignee: "website-guide-active-model-basics"
 blocked-by: null
 closed-reason: null
 ---

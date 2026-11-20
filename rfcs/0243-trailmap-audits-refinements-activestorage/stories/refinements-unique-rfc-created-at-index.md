@@ -1,6 +1,6 @@
 ---
 title: "trailmap: unique (rfc_id, created_at) on refinements, rescue RecordNotUnique in POST /rfc-refines"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: null
