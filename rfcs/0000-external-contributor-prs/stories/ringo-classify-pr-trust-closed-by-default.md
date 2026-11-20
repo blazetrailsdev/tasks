@@ -40,5 +40,8 @@ detect forks.
   (one handler is enough to cover this).
 - A review or comment from an external login on a trusted PR is not
   delivered to the PR's agent pane.
+- A test pins that only reviews by trusted logins count as approvals or
+  change requests (ringo reads no verdicts today; the test guards any
+  future merge gate).
 - The PR notes the manual check of GitHub's "Require approval for all
   external contributors" Actions setting on each tracked repo.

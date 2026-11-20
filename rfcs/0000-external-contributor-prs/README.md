@@ -1,6 +1,6 @@
 ---
 rfc: "0000-external-contributor-prs"
-title: "PRs from external contributors: no automation by default, owner-approved reviews"
+title: "External contributors: no automation by default, owner-approved replies"
 status: draft
 created: 2026-11-19
 updated: 2026-11-19
@@ -15,7 +15,7 @@ related-rfcs:
   - "0249-ringo-changes"
 ---
 
-# RFC — PRs from external contributors: no automation by default, owner-approved reviews
+# RFC — External contributors: no automation by default, owner-approved replies
 
 ## Summary
 
@@ -135,6 +135,44 @@ After the merge, `handleMerge` runs only its local bookkeeping (story
 decision. It is the one exemption from the trust gate's early return, and it
 makes no `gh` writes for an external PR.
 
+### External issues
+
+ringo has no `issues` handler today (`webhook/handler.go` switches on no
+`issues` event), so an issue reaches nothing. An issue opened by an
+untrusted login is classified the same way as a PR (`TRUSTED_PR_AUTHORS`,
+read as "trusted authors") and **never becomes a story by itself**. A story
+is agent input: the spawn loop hands `ready` stories to agents, so an
+auto-created story would put a stranger's text into an agent prompt.
+
+- ringo records external `issues` and `issue_comment` events and emits
+  `external_issue.*` on `/events`. It makes no GitHub writes.
+- trailmap's inbox lists external issues next to external PRs, with two
+  actions:
+  - **Promote to story:** an agent drafts a story (title, Context,
+    Acceptance criteria) with the issue quoted as untrusted data. The owner
+    edits it in a text box and picks the RFC. The story is created with
+    status `draft` and a `Source: <repo>#<n>` line in its Context. It moves
+    to `ready` only by the owner's hand, as any draft does.
+  - **Reply:** an agent drafts a reply, the owner edits it, and it is sent
+    as an issue comment through the same send path as reviews.
+- Issues opened by trusted authors keep whatever handling they get today
+  (none, at `9c89ab4`).
+
+### Reviews and comments from external logins
+
+- **On a trusted PR (an agent's PR):** a review or comment from an external
+  login is never typed into the agent's pane. trailmap shows it in the
+  inbox with **Forward to agent**: a text box prefilled with a suggested
+  instruction, which the owner edits. ringo sends the owner's text to the
+  pane, with the reviewer's words appended as a quoted, untrusted block. The
+  owner can also **Reply** through the draft/edit/send path.
+- **On the contributor's own PR:** replies to the owner's review appear in
+  the inbox. A push marks the draft `stale` (see above). Answers go through
+  the same draft/edit/send path.
+- **Verdicts:** only reviews by trusted logins count as approvals or change
+  requests in ringo. ringo does not read verdicts at `9c89ab4`, so this is a
+  test that pins the rule for any future merge gate, not a behavior change.
+
 ### tasks
 
 There is no schema change. `pr: trails#N` already accepts any PR. A story an
@@ -156,6 +194,8 @@ itself; it is linked to an existing story, or to none. The spawn loop already sk
   GitHub CI covers it. If that stops being enough, sandboxing gets its own
   RFC.
 - **Multiple human reviewers or roles:** the owner is the only approver.
+- **Issue triage automation (labels, auto-close, dedupe):** every action on
+  an external issue is owner-initiated.
 
 ## Alternatives considered
 
@@ -183,6 +223,11 @@ itself; it is linked to an existing story, or to none. The spawn loop already sk
 4. `trailmap-review-draft-editor` (needs 3), then
    `trailmap-sends-approved-review-to-github`, `ringo-per-pr-trust-grant`
    and `trailmap-redraft-a-single-comment`.
+5. `ringo-emits-external-issue-events` (needs 1), then
+   `trailmap-promote-external-issue-to-story` and
+   `trailmap-reply-to-external-issue` (the latter needs the send story).
+   `trailmap-forward-external-review-to-agent` needs the inbox and the
+   gate.
 
 The trailmap stories that call new ringo endpoints also need the vendored
 ringo pin bumped (`0136-trailmap`, as in `0249-ringo-changes`). The bump is
@@ -198,7 +243,12 @@ done inside the first trailmap story that needs it.
   review with one edited comment and one discarded comment is sent, and the
   GitHub review contains exactly the edited text (1 manual run, recorded in
   `trailmap-sends-approved-review-to-github`'s PR).
-- 9 of 9 stories done.
+- The dry run also opens an issue from the second account. It shows in the
+  inbox, no story is created until **Promote to story**, and the promoted
+  story is `draft`. A comment from that account on an agent PR does not
+  reach the pane until it is forwarded, and the pane receives the owner's
+  edited text.
+- 13 of 13 stories done.
 
 ## Open questions
 
@@ -210,3 +260,6 @@ None open.
 - 2026-11-19: review fixes — `handleMerge` bookkeeping exempted from the
   gate; drafts served by ringo, ingested by trailmap; read-only PAT decided;
   Redraft all assigned to the editor story
+- 2026-11-19: added external issues (no auto-created stories; promote and
+  reply by hand) and external reviews on agent PRs (forward to agent by
+  hand; only trusted verdicts count)
