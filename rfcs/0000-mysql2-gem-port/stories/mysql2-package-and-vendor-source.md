@@ -36,16 +36,17 @@ deletes; this story moves them unchanged.
 `mysql2.rb` 0/1 (`Util.key_hash_as_symbols`). None of the three is called by activerecord.
 
 Shape and registrations: `packages/pg` (`pg-package-and-vendor-source`, trails#10317) and RFC 0186
-§ "Registration cost", items 1 to 6 and 8.
+§ "Registration cost", items 1 to 8: item 7 too, because activerecord imports the package from this story on.
 
 ## Acceptance criteria
 
 - [ ] `packages/mysql2` exists as `@blazetrails/mysql2`: `package.json` (`type: module`, `exports: {"."}`, `files: [dist]`, `build: tsc`, `mysql2` under `peerDependencies` with `peerDependenciesMeta.mysql2.optional: true`, `@blazetrails/ruby-compat` the only workspace dependency at this step), `tsconfig.json`, `README.md` with the RFC's surface table ("only what trails calls").
 - [ ] `lib/error.ts` is moved from `packages/activerecord/lib/mysql2/error.ts` by `git mv`; `lib/mysql2.ts` holds the `Mysql2` namespace; `lib/index.ts` re-exports. activerecord's `lib/mysql2/client.ts` imports `Error` / `DRIVER_ERRORS` from `@blazetrails/mysql2`.
 - [ ] The `mysql2` entry in `vendor/sources.ts` gains `testPath: "spec/mysql2"`; `vendor/sources.lock.json` and `vendor/sources.test.ts`'s lists are updated. The `mirrors` entry moves from `packages/activerecord/package.json` to `packages/mysql2/package.json`.
-- [ ] `mysql2` leaves `PACKAGE_DIR_OVERRIDES` and `PACKAGE_SRC_SUBDIR`; api-compare reads it from `packages/mysql2/lib`. `client.ts`, `result.ts`, `statement.ts` stay in activerecord until `mysql2-client-result-statement-move-to-the-package`, so their members are unscored until then; the PR body prints the row.
-- [ ] `em.rb`, `field.rb` and `mysql2.rb` are `UNPORTED_FILES` rows, and every Ruby-defined method in an enrolled file that activerecord does not call (`parse_ssl_mode`, `find_default_ca_path`, `query_info`, `info`) is a `SCOPED_SKIP_GROUPS` entry, each with the reason "not called by activerecord". Check `SCOPED_SKIP_GROUPS` first.
-- [ ] Every registration in RFC 0186 § "Registration cost" items 1 to 6 and 8 is made for `mysql2`; CI runs the package's tests on the MariaDB lane (own step or activerecord's, per the RFC's open question 1); `.github/workflows/ci.yml` and `scripts/ci-suite-coverage.test.ts` fixture literals change together. `pnpm vitest run scripts/ vendor/` is green. `mysql2` is not added to `GATED_PACKAGES`.
+- [ ] `mysql2` leaves `PACKAGE_DIR_OVERRIDES` and `PACKAGE_SRC_SUBDIR`; api-compare reads it from `packages/mysql2/lib`. `client.ts`, `result.ts`, `statement.ts` stay in activerecord until `mysql2-client-result-statement-move-to-the-package`, so their members are unscored until then. Expected row after this story: **7/16** (`error.rb` 7/7; `client.rb`'s 8 and `statement.rb`'s 1 unscored); the PR body prints it.
+- [ ] `em.rb`, `field.rb` and `mysql2.rb` are `UNPORTED_FILES` rows, and every Ruby-defined method in an enrolled file that activerecord does not call (`client.rb`'s `parse_ssl_mode`, `find_default_ca_path`, `query_info`, `info`; `result.rb`'s `server_flags`) is a `SCOPED_SKIP_GROUPS` entry, each with the reason "not called by activerecord". Check `SCOPED_SKIP_GROUPS` first.
+- [ ] `packages/activerecord/package.json` gains `@blazetrails/mysql2` as an optional peer (`peerDependenciesMeta`) and a dev dependency, and `packages/activerecord/dx-tests/tsconfig.json` / `virtualized-dx-tests/tsconfig.json` `paths` and the FileStore lock-worker resolve hook learn it (RFC 0186 § "Registration cost" item 7), so the `Error` import above resolves in this PR.
+- [ ] Every other registration in RFC 0186 § "Registration cost" items 1 to 6 and 8 is made for `mysql2`; CI runs the package's tests on the MariaDB lane (own step or activerecord's, per the RFC's open question 1); `.github/workflows/ci.yml` and `scripts/ci-suite-coverage.test.ts` fixture literals change together. `pnpm vitest run scripts/ vendor/` is green. `mysql2` is not added to `GATED_PACKAGES`.
 
 ## Verification
 

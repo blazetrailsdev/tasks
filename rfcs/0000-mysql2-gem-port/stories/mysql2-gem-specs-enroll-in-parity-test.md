@@ -5,7 +5,8 @@ updated: 2026-11-20
 rfc: "0000-mysql2-gem-port"
 cluster: scoring
 packages: ["mysql2", "scripts"]
-deps: ["mysql2-client-is-a-class-with-async-new"]
+deps:
+  ["mysql2-client-is-a-class-with-async-new", "mysql2-adapter-calls-the-gem-not-the-npm-connection"]
 deps-rfc: []
 est-loc: 450
 priority: null

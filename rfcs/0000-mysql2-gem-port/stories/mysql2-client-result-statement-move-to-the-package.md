@@ -43,8 +43,8 @@ surface and move with it.
 - [ ] `client.ts`, `result.ts`, `statement.ts` move to `packages/mysql2/lib/` by `git mv`; `packages/activerecord/lib/mysql2/` is deleted.
 - [ ] The package imports nothing from activerecord or activesupport (`grep -rn "@blazetrails/active" packages/mysql2/lib` is empty); `@blazetrails/date` is added as a workspace dependency.
 - [ ] The `TimeWithZone` / `quotedDate` / `defaultTimezone()` casting leaves `bind` and is done where Rails does it, in the adapter's bind type-casting; the gem's bind keeps only the arms `statement.c` has. A test that sent a `TimeWithZone` bind through `prepare`/`execute` still passes on the MariaDB lane.
-- [ ] `test/cases/mysql2/client.trails.test.ts` and `client-cast.trails.test.ts` move to `packages/mysql2/test/`; the other activerecord tests import from `@blazetrails/mysql2`. `packages/activerecord/package.json` gains `@blazetrails/mysql2` as an optional peer and dev dependency; dx-tests and virtualized-dx-tests `paths` are updated (RFC 0186 § "Registration cost" item 7).
-- [ ] `pnpm parity:api --package mysql2` scores `client.rb` / `result.rb` / `statement.rb` from the package with no regression from 12/33; the PR body prints the row.
+- [ ] `test/cases/mysql2/client.trails.test.ts` and `client-cast.trails.test.ts` move to `packages/mysql2/test/`; the other activerecord tests import from `@blazetrails/mysql2`. The dependency and `paths` registration was made in `mysql2-package-and-vendor-source`.
+- [ ] `pnpm parity:api --package mysql2` reads **12/16**: story 1's 7/16 plus the 4 `client.rb` matches (`default_query_options`, `parse_flags_array`, `parse_connect_attrs`, `query`) and `statement.rb`'s `execute`; the PR body prints the row. Story 3 takes it to 16/16.
 
 ## Verification
 

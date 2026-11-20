@@ -63,12 +63,12 @@ Measured on `origin/main` at `5c15a68516`, after `pnpm build`.
 
 ```text
 mysql2  —  12/33 methods (36.4%)  |  files: 4/7  |  inheritance: 3/4 (75%)  |  arity: 7/7 (100%)
-client.rb     4 match  8 miss  2 declaration-only
+client.rb     4 / 12  (8 missing, 2 of them declaration-only)
 em.rb         0 / 6
 error.rb      7 / 7
 field.rb      0 / 5
 mysql2.rb     0 / 1
-result.rb     0 / 1
+result.rb     0 / 1   (server_flags)
 statement.rb  1 / 1
 ```
 
@@ -118,7 +118,7 @@ Eight `@noRailsEquivalent PERMANENT` receipts sit in the nested port:
 | --------------------------- | ------------------ | ---------------------------------------------------------------------------------------------------------------- |
 | `DRIVER_ERRORS`             | `error.ts:3`       | deleted: the engine raises `Mysql2::Error` subclasses, so no npm error needs to answer `instanceof Mysql2.Error` |
 | `Error[Symbol.hasInstance]` | `error.ts:55`      | deleted, same reason                                                                                             |
-| `driverError`               | `client.ts:61`     | becomes the engine's `rb_raise_mysql2_error` analogue, unscored C-half, no receipt                               |
+| `driverError`               | `client.ts:61`     | story 4: becomes the engine's `rb_raise_mysql2_error` analogue, unscored C-half, no receipt                      |
 | `options`, `storeResult`    | `client.ts:99,113` | private engine members of `Client`, unscored C-half, no receipt                                                  |
 | `INVALID_DATE`              | `client.ts:393`    | an instance field of `Client` (the C wrapper's state), no receipt                                                |
 | `connect`                   | `client.ts:516`    | wrong receipt: `connect` is the gem's C private method; kept at that name, receipt deleted                       |
@@ -146,6 +146,14 @@ Of the gem methods activerecord calls (`mysql2_adapter.rb`, `mysql2/database_sta
 | `Mysql2::Statement` | 2: `affected_rows`, `close`                                                                                                                                                  | 1: `execute`                                                                                                                                   |
 | `Mysql2::Error`     | 0                                                                                                                                                                            | 7, all of `error.rb` (scored 7/7 today): `initialize`, `new_with_args`, `clean_message`, `error_number`, `sql_state`, `errno`, `error`         |
 | **total**           | **18**                                                                                                                                                                       | **16**                                                                                                                                         |
+
+How the 16 maps onto today's rows: `client.rb` has 12 Ruby rows; the 8 in the Client cell above are
+scored (4 match today: `default_query_options`, `parse_flags_array`, `parse_connect_attrs`, `query`;
+4 are missing: `initialize`, `local_offset`, and the declaration-only `query_options` /
+`read_timeout`), and the other 4 (`parse_ssl_mode`, `find_default_ca_path`, `query_info`, `info`) are
+`SCOPED_SKIP_GROUPS` rows. `result.rb`'s one row is `attr_reader :server_flags` (`result.rb:3`),
+which activerecord does not read, so it is a `SCOPED_SKIP_GROUPS` row too. `error.rb` is 7/7 and
+`statement.rb` 1/1 (`execute`) today. 8 + 7 + 1 = 16.
 
 As with pg, the 18 C-defined methods keep their gem names, are reported as extra surface by
 `pnpm parity:api:extra --package mysql2`, carry no receipt, and gate nothing. `escape` is listed
@@ -206,9 +214,12 @@ methods keep their gem names, carry no receipt and no citation, and `mysql2` is 
 2. `mysql2-client-result-statement-move-to-the-package`: `bind` goes to the adapter, the three files
    move, activerecord imports them by package name.
 3. `mysql2-client-is-a-class-with-async-new`: the class, `static async new`, the end of
-   `mysql2Client()` and of six receipts.
+   `mysql2Client()` and of five receipts (`initialize`, `connect`, `options`, `storeResult`,
+   `INVALID_DATE`).
 4. `mysql2-adapter-calls-the-gem-not-the-npm-connection`: the four adapter rows above; the engine
-   raises `TimeoutError` / `ConnectionError` and the last two receipts go.
+   raises `TimeoutError` / `ConnectionError` and the last three receipts go (`driverError`,
+   `DRIVER_ERRORS`, `Error[Symbol.hasInstance]`). 5 + 3 = the 8 in § "Receipts and
+   run-time-assigned surface".
 5. `mysql2-gem-specs-enroll-in-parity-test`: the gem's `spec/mysql2/*_spec.rb`, for the surface the
    package ships.
 
@@ -283,4 +294,5 @@ pnpm parity:api:extra --package mysql2
 ## Changelog
 
 - 2026-11-20: drafted.
+- 2026-11-20: review: receipt split 5 + 3 with `driverError` in story 4; the 16 mapped onto today's rows (`server_flags` skipped); activerecord's dependency on the package registered in story 1.
 - 2026-11-20: concrete Verification targets; § Scoring; sequencing stated as a scheduling decision, not a `deps-rfc` edge; cross-reference added to the RFC 0156 story.

@@ -37,7 +37,7 @@ Rails: `class Client; attr_reader :query_options, :read_timeout` (`vendor/mysql2
 
 Receipts this removes: `initialize` (`client.ts:551`) and `connect` (`:516`) are mis-receipted
 `@noRailsEquivalent PERMANENT` (both are gem names); `options` (`:99`), `storeResult` (`:113`) and
-`INVALID_DATE` (`:393`) become private members of the class, unscored C-half, unreceipted.
+`INVALID_DATE` (`:393`) become private members of the class, unscored C-half, unreceipted. `driverError` and the two `error.ts` receipts are left to `mysql2-adapter-calls-the-gem-not-the-npm-connection`, which rewrites the error boundary.
 
 This converges the mysql2 bullet of RFC 0156's
 `declaration-only-mysql2-client-readers-and-struct-attributes-writer` (`Client#query_options` /

@@ -49,7 +49,8 @@ the rest, so the classification belongs in the gem's engine boundary, and the ad
 - [ ] `serverVersion()` in the package reads the client's own `serverInfo`, not a handshake packet.
 - [ ] The package's error boundary raises `Mysql2::Error::TimeoutError` (with `errorNumber` null) for the npm timeout codes and `Mysql2::Error::ConnectionError` for the connection-lost / refused codes the adapter lists today, and a `Mysql2::Error` with `errno` otherwise; no npm error escapes the client unwrapped.
 - [ ] `translateException` is `mysql2_adapter.rb:172-182` line for line over `instanceof Mysql2.Error.TimeoutError` / `ConnectionError`; `isMysql2DriverTimeout` and `isMysql2ConnectionError` are deleted.
-- [ ] `DRIVER_ERRORS` and `Error[Symbol.hasInstance]` and their two `@noRailsEquivalent PERMANENT` receipts are deleted.
+- [ ] `driverError` (`client.ts:61-81` before the move) becomes a private member of `Client` at the engine boundary, the analogue of `rb_raise_mysql2_error` (`ext/mysql2/client.c:263`), and its `@noRailsEquivalent PERMANENT` receipt is deleted.
+- [ ] `DRIVER_ERRORS` and `Error[Symbol.hasInstance]` and their two `@noRailsEquivalent PERMANENT` receipts are deleted. With story 3's five, no `@noRailsEquivalent` remains in `packages/mysql2/lib`.
 - [ ] `pnpm parity:api:calls` and `pnpm parity:api:calls:args` show no new row for `mysql2_adapter.rb`; any row this converges is deleted from its baseline.
 
 ## Verification
