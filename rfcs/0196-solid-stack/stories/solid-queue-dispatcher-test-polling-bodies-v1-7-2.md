@@ -5,7 +5,8 @@ updated: 2026-11-20
 rfc: "0196-solid-stack"
 cluster: null
 packages: []
-deps: []
+deps:
+  - stringio-truncate
 deps-rfc: []
 est-loc: 50
 priority: null
