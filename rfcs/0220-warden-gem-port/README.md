@@ -1,9 +1,9 @@
 ---
 rfc: "0220-warden-gem-port"
 title: "@blazetrails/warden: port the warden gem and mount Warden::Manager in a trails app"
-status: draft
+status: postponed
 created: 2026-11-03
-updated: 2026-11-03
+updated: 2026-11-20
 owner: "@deanmarano"
 packages:
   - warden
