@@ -1,7 +1,7 @@
 ---
 title: "solid-queue-mariadb-snapshot-isolation-dispatch"
-status: ready
-updated: 2026-11-19
+status: claimed
+updated: 2026-11-20
 rfc: "0196-solid-stack"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-20T13:49:58Z"
+assignee: "solid-queue-mariadb-snapshot-isolation-dispatch"
 blocked-by: null
 closed-reason: null
 ---

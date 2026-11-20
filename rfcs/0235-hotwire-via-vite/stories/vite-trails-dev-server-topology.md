@@ -1,6 +1,6 @@
 ---
 title: "Run trails server in front of Vite: DevServerProxy middleware, Procfile.dev and bin/dev"
-status: ready
+status: in-progress
 updated: 2026-11-20
 rfc: "0235-hotwire-via-vite"
 cluster: vite
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10406
+claim: "2026-11-20T13:46:23Z"
+assignee: "vite-trails-dev-server-topology"
 blocked-by: null
 closed-reason: null
 ---

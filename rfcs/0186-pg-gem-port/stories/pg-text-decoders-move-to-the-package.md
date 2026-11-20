@@ -1,6 +1,6 @@
 ---
 title: "pg: the PG::TextDecoder classes the adapter registers, and add_pg_decoders"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0186-pg-gem-port"
 cluster: result-and-coders

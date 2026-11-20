@@ -1,6 +1,6 @@
 ---
 title: "Relocate core_ext/enumerable.rb methods into core-ext/enumerable.ts and converge sole"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0246-activesupport-parity-100"
 cluster: null

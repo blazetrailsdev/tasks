@@ -1,6 +1,6 @@
 ---
 title: "Port ForkSupervisor and the fork arms of Runnable on child_process.fork"
-status: claimed
+status: in-progress
 updated: 2026-11-20
 rfc: "0196-solid-stack"
 cluster: null
@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
+pr: trails#10407
 claim: "2026-11-20T03:12:38Z"
 assignee: "solid-queue-fork-mode-unported-register"
 blocked-by: null

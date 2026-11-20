@@ -1,6 +1,6 @@
 ---
 title: "session-reads-async-in-templates"
-status: claimed
+status: blocked
 updated: 2026-11-20
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: "2026-11-20T04:30:33Z"
 assignee: "session-reads-async-in-templates"
-blocked-by: null
+blocked-by: "waiting on form-helpers-await-form-authenticity-token (actionview form/CSRF helpers must await formAuthenticityToken first); WIP on branch session-reads-async-in-templates-dd1e"
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "redis-cache-store-binary-keys"
-status: draft
+status: done
 updated: 2026-11-20
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10394
 claim: null
 assignee: null
 blocked-by: null

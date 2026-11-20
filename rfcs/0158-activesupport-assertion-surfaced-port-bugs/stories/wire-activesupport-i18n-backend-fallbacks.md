@@ -1,6 +1,6 @@
 ---
 title: "Port I18n::Railtie.init_fallbacks so config.i18n.fallbacks mixes Backend::Fallbacks into the backend"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

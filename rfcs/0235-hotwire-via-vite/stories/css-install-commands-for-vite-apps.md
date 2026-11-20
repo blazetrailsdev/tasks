@@ -1,6 +1,6 @@
 ---
 title: "trailties: decide and provide the css:install commands runCss dispatches to"
-status: ready
+status: in-progress
 updated: 2026-11-20
 rfc: "0235-hotwire-via-vite"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10406
+claim: "2026-11-20T13:46:20Z"
+assignee: "css-install-commands-for-vite-apps"
 blocked-by: null
 closed-reason: null
 ---

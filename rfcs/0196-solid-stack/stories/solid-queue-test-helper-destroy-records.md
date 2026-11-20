@@ -1,6 +1,6 @@
 ---
 title: "Port test_helper.rb destroy_records into solid-queue shared test support"
-status: ready
+status: claimed
 updated: 2026-11-20
 rfc: "0196-solid-stack"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-20T13:49:58Z"
+assignee: "solid-queue-mariadb-snapshot-isolation-dispatch"
 blocked-by: null
 closed-reason: null
 ---
