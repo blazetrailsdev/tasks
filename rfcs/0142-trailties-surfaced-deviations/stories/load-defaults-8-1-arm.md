@@ -5,7 +5,8 @@ updated: 2026-11-19
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps:
+  - write-the-retrospective-and-scope-the-rails-8-1-upgrade
 deps-rfc: []
 est-loc: 300
 priority: null
