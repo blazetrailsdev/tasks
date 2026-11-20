@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-recurring-task-instrumentation-test-waits-like-upstream"
-status: draft
+status: ready
 updated: 2026-11-20
 rfc: "0061-ci-failures"
 cluster: null

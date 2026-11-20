@@ -1,7 +1,7 @@
 ---
 title: "scaffold-controller-hooks-test-framework-and-engine-arms"
-status: ready
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-20
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10433
+claim: "2026-11-20T19:14:42Z"
+assignee: "mailers-controller-view-paths-miss-app-views"
 blocked-by: null
 closed-reason: null
 ---

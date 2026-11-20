@@ -1,6 +1,6 @@
 ---
 title: "session-reads-async-in-templates"
-status: ready
+status: in-progress
 updated: 2026-11-20
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10434
+claim: "2026-11-20T19:01:35Z"
+assignee: "session-reads-async-in-templates"
 blocked-by: null
 closed-reason: null
 ---

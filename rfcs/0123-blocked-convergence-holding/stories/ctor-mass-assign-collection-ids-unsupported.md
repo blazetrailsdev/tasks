@@ -1,6 +1,6 @@
 ---
 title: "ctor-mass-assign-collection-ids-unsupported"
-status: ready
+status: in-progress
 updated: 2026-11-20
 rfc: "0123-blocked-convergence-holding"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10438
+claim: "2026-11-20T19:27:38Z"
+assignee: "bird-total-count-async-after-initialize"
 blocked-by: null
 closed-reason: null
 ---

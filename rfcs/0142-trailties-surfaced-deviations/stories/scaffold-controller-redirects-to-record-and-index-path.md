@@ -1,7 +1,7 @@
 ---
 title: "Scaffold controller redirects to the record and <index>_path, not string URLs"
-status: ready
-updated: 2026-11-16
+status: done
+updated: 2026-11-20
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-20T19:14:42Z"
+assignee: "mailers-controller-view-paths-miss-app-views"
 blocked-by: null
 closed-reason: null
 ---

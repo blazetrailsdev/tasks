@@ -1,6 +1,6 @@
 ---
 title: "tzinfo-timestamp-create-and-for"
-status: ready
+status: in-progress
 updated: 2026-11-20
 rfc: "0231-tzinfo-to-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10439
+claim: "2026-11-20T19:40:40Z"
+assignee: "data-timezone-delegates-periods-to-info"
 blocked-by: null
 closed-reason: null
 ---
