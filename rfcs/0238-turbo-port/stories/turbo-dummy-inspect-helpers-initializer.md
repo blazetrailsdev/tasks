@@ -1,6 +1,6 @@
 ---
 title: "turbo-dummy-inspect-helpers-initializer"
-status: ready
+status: in-progress
 updated: 2026-11-20
 rfc: "0238-turbo-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10400
+claim: "2026-11-20T03:25:46Z"
+assignee: "turbo-dummy-inspect-helpers-initializer"
 blocked-by: null
 closed-reason: null
 ---

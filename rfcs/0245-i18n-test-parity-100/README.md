@@ -1,9 +1,9 @@
 ---
 rfc: "0245-i18n-test-parity-100"
 title: "i18n: 100% test parity with the vendored i18n gem"
-status: active
+status: closed
 created: 2026-11-17
-updated: 2026-11-17
+updated: 2026-11-20
 owner: "@deanmarano"
 packages:
   - i18n

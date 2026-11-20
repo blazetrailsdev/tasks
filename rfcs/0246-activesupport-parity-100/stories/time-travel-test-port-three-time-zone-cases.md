@@ -1,7 +1,7 @@
 ---
 title: "Port the three skipped TimeTravelTest time-zone cases (time_travel_test.rb:100-164)"
-status: ready
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-20
 rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: [activesupport]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10399
+claim: "2026-11-20T03:00:31Z"
+assignee: "activesupport-testing-helper-stub-residue"
 blocked-by: null
 closed-reason: null
 ---

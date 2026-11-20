@@ -1,6 +1,6 @@
 ---
 title: "pg: set_client_encoding, set_notice_receiver, server_version and conndefaults_hash"
-status: claimed
+status: in-progress
 updated: 2026-11-20
 rfc: "0186-pg-gem-port"
 cluster: connection
@@ -9,7 +9,7 @@ deps: ["pg-connection-exec-surface-moves-to-the-package", "pg-errors-carry-resul
 deps-rfc: []
 est-loc: 400
 priority: 5
-pr: null
+pr: trails#10398
 claim: "2026-11-20T02:46:38Z"
 assignee: "pg-connection-session-setters-move-to-the-package"
 blocked-by: null

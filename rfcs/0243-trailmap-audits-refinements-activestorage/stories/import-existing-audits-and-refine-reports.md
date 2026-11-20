@@ -1,6 +1,6 @@
 ---
 title: "trailmap: one-time import of the audits directory and ringo's refine reports"
-status: ready
+status: claimed
 updated: 2026-11-20
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: import
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 220
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-20T03:51:34Z"
+assignee: "audit-report-skill-posts-to-trailmap"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "app-generator-css-option-tests"
-status: ready
-updated: 2026-11-17
+status: claimed
+updated: 2026-11-20
 rfc: "0235-hotwire-via-vite"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-20T03:38:49Z"
+assignee: "app-generator-css-option-tests"
 blocked-by: null
 closed-reason: null
 ---

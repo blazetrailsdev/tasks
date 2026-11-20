@@ -1,6 +1,6 @@
 ---
 title: "rfc-refine-done.sh: POST the refine report to trailmap, keep /cleanup-pane only for the reap"
-status: ready
+status: done
 updated: 2026-11-20
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: writers
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-20T03:51:34Z"
+assignee: "audit-report-skill-posts-to-trailmap"
 blocked-by: null
 closed-reason: null
 ---

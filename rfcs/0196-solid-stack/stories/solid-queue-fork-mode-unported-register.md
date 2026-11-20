@@ -1,7 +1,7 @@
 ---
 title: "Port ForkSupervisor and the fork arms of Runnable on child_process.fork"
-status: ready
-updated: 2026-11-19
+status: claimed
+updated: 2026-11-20
 rfc: "0196-solid-stack"
 cluster: null
 packages: ["solid-queue"]
@@ -12,8 +12,8 @@ deps-rfc: []
 est-loc: 500
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-20T03:12:38Z"
+assignee: "solid-queue-fork-mode-unported-register"
 blocked-by: null
 closed-reason: null
 ---
