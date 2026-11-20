@@ -29,3 +29,6 @@ can read (the Ruby globals). Left over from `turbo-dummy-app-turbo-api-dependent
 
 - `packages/turbo/test/dummy/config/initializers/inspect-helpers.ts` ports `inspect_helpers.rb`.
 - `packages/turbo/test/initializers/helpers.test.ts` ports `Turbo::HelpersInInitializersTest` with the Rails test name.
+- `packages/turbo/test/test-helper.ts` ports `vendor/turbo-rails/v2.0.23/test/test_helper.rb:17-23`'s setup
+  (`Turbo.current_request_id = nil`, clearing `turbo-` thread-locals) and the `ActionViewTestCaseExtensions`
+  includes for `ActionDispatch::IntegrationTest` and `ActionCable::Channel::TestCase` (`:36-42`).
