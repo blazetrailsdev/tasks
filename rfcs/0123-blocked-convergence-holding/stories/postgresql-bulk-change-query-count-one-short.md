@@ -1,7 +1,7 @@
 ---
 title: "postgresql-bulk-change-query-count-one-short"
-status: blocked
-updated: 2026-10-08
+status: ready
+updated: 2026-11-20
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: "2026-09-25T02:04:15Z"
-assignee: "port-ruby-method-arity-for-globalid-locator"
-blocked-by: 'Re-triaged 2026-10-08. The missing query is PostgreSQL lookup_cast_type regtype round-trip, now ratified as permanent (CLAUDE.md § "Adapter facts are prewarmed and peeked"; pg-lookup-cast-type-resolves-only-warmed-type-names closed). So the PG query count will stay one short. Remaining work: the two tests at migration.test.ts:2393,2425 are skipped whole; run them with the PostgreSQL expected count receipted against that section, or show that only the PG arm differs. Not blocked on other work; needs that port.'
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

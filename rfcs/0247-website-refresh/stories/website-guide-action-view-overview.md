@@ -1,6 +1,6 @@
 ---
 title: "Write the Action View Overview guide"
-status: claimed
+status: done
 updated: 2026-11-20
 rfc: "0247-website-refresh"
 cluster: website-docs
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#10411
 claim: "2026-11-20T14:51:51Z"
 assignee: "website-guide-action-view-helpers"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "ViteAssets#config is read synchronously once prewarmed; peekConfig retires"
-status: blocked
-updated: 2026-11-16
+status: ready
+updated: 2026-11-20
 rfc: "0235-hotwire-via-vite"
 cluster: null
 packages: [vite-assets]
@@ -12,7 +12,7 @@ priority: 1
 pr: null
 claim: null
 assignee: null
-blocked-by: "still live on origin/main 236cca0f5a: nothing outside vite-assets constructs DevServerProxy or awaits a boot-time ViteAssets.config() prewarm; that boot/proxy wiring is 0235-hotwire-via-vite/vite-trails-dev-server-topology (draft). peekConfig at packages/vite-assets/lib/vite-assets.ts:240; Config.configDefaults is already private (config.ts:200), so only the peekConfig bracket access remains."
+blocked-by: null
 closed-reason: null
 ---
 

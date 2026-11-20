@@ -1,7 +1,7 @@
 ---
 title: "activesupport: try! has two ports, one rejecting readers, and neither is public_send"
-status: ready
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-20
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10412
+claim: "2026-11-20T15:20:40Z"
+assignee: "stub-any-instance-does-not-intercept-js-new"
 blocked-by: null
 closed-reason: null
 ---

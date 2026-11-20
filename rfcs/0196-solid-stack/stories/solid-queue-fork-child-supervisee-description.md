@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-fork-child-supervisee-description"
-status: draft
+status: closed
 updated: 2026-11-20
 rfc: "0196-solid-stack"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "PERMANENT: operator ruled 2026-11-20 that start_process seats the configured process on the instance before start (trails#10407); instantiate matches configuration.rb."
 ---
 
 ## Context

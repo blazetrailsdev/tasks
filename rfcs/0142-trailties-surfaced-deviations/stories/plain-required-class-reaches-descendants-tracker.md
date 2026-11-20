@@ -1,6 +1,6 @@
 ---
 title: "plain-required-class-reaches-descendants-tracker"
-status: ready
+status: in-progress
 updated: 2026-11-20
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10413
+claim: "2026-11-20T15:33:39Z"
+assignee: "mailers-controller-view-paths-miss-app-views"
 blocked-by: null
 closed-reason: null
 ---

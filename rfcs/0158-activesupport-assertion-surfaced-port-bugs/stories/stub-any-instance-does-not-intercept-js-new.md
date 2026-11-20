@@ -1,7 +1,7 @@
 ---
 title: "stub-any-instance-does-not-intercept-js-new"
-status: ready
-updated: 2026-11-16
+status: blocked
+updated: 2026-11-20
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-20T15:20:40Z"
+assignee: "stub-any-instance-does-not-intercept-js-new"
+blocked-by: "operator decision: Mail::SMTP, Mail::TestMailer and Mail::Message are base classes built with 'new klass(...)' (mail/lib/message.ts:164, mail.ts:136); JS offers no outside hook on a base-class [[Construct]], so stubbing klass.new (method_call_assertions.rb:59-64) needs either the call sites to dispatch through a stubbable Klass.new / rbClassNewInstance, or a per-class constructor hook. Pick the mechanism."
 closed-reason: null
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "bird-total-count-async-after-initialize"
-status: blocked
-updated: 2026-09-24
+status: ready
+updated: 2026-11-20
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 30
 priority: null
 pr: null
-claim: "2026-09-24T18:14:09Z"
-assignee: "attribute-assignment-argument-error-names-js-number-not-integer"
-blocked-by: "Rails bird.rb:22-24 runs Bird.count inside after_initialize; trails runs the initialize chain strict-sync from the constructor (core.ts:676, base.ts:1727/1828, runCallbacks strict:'sync') and Relation#count is an awaited query, so no synchronous count exists to assign total_count before firstOrInitialize returns. Needs an awaitable new/initialize path (RFC 0087 one-surface-always-awaited), not a model-side fix."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

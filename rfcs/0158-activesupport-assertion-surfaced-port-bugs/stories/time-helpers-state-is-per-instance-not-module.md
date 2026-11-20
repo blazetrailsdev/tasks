@@ -1,7 +1,7 @@
 ---
 title: "TimeHelpers simple_stubs / in_block are per-instance (time_helpers.rb:262-266), not module state; unskip travel to with separate class"
-status: ready
-updated: 2026-11-16
+status: done
+updated: 2026-11-20
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10399
+claim: "2026-11-20T15:20:40Z"
+assignee: "stub-any-instance-does-not-intercept-js-new"
 blocked-by: null
 closed-reason: null
 ---

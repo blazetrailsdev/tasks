@@ -1,7 +1,7 @@
 ---
 title: "An error raised building the request answers 500, not a hang"
-status: ready
-updated: 2026-11-16
+status: done
+updated: 2026-11-20
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9545
+claim: "2026-11-20T15:33:39Z"
+assignee: "mailers-controller-view-paths-miss-app-views"
 blocked-by: null
 closed-reason: null
 ---
