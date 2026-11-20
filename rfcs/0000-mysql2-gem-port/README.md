@@ -293,6 +293,7 @@ pnpm parity:api:extra --package mysql2
 
 ## Changelog
 
+- 2026-11-20: story 2 names the `TimeWithZone` bind test it adds (none exists today).
 - 2026-11-20: drafted.
 - 2026-11-20: review: receipt split 5 + 3 with `driverError` in story 4; the 16 mapped onto today's rows (`server_flags` skipped); activerecord's dependency on the package registered in story 1.
 - 2026-11-20: concrete Verification targets; § Scoring; sequencing stated as a scheduling decision, not a `deps-rfc` edge; cross-reference added to the RFC 0156 story.
