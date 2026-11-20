@@ -20,6 +20,7 @@ packages:
   - "rack"
   - "activejob"
   - "trails-tsc"
+  - "date"
 clusters:
   - "connection-adapters"
   - "associations"
