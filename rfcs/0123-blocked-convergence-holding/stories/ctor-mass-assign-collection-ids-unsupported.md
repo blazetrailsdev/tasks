@@ -5,8 +5,7 @@ updated: 2026-09-24
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
-deps:
-  - sync-collection-mass-assignment-refuses-rails-replace
+deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
@@ -19,11 +18,17 @@ closed-reason: null
 
 ## Context
 
-`vendor/rails/activerecord/test/cases/associations/has_many_through_associations_test.rb` `test_collection_exists` does `Category.create!(author_ids: [author.id], name: "Primary")`. trails raises `UnknownAttributeError: unknown attribute 'author_ids' for Category` from `packages/activemodel/src/attribute-assignment.ts:54` (`attributeWriterMissing`), reached through `packages/activerecord/src/attribute-assignment.ts:44` (`_assignAttributes`). Rails routes `assign_attributes` to `public_send("author_ids=")` (`activerecord/lib/active_record/associations/collection_association.rb` `ids_writer`).
+`vendor/rails/v8.0.2/activerecord/test/cases/associations/has_many_through_associations_test.rb` `test_collection_exists` does `Category.create!(author_ids: [author.id], name: "Primary")`. In Rails, `assign_attributes` calls `author_ids=`, which is `ids_writer` (`activerecord/lib/active_record/associations/collection_association.rb`) and runs a `klass.where(pk => ids)` lookup at assignment time. trails' `CollectionAssociation#syncIdsWrite` refuses that lookup during synchronous construction, and `createBang` reaches the refusal through `new this(mergedAttrs)`.
 
-`packages/activerecord/src/associations/has-many-through-associations.test.ts` carries the parked `it.skip` test(s) pointing at this story.
+The parked test(s) are in `packages/activerecord/test/cases/associations/has-many-through-associations.test.ts`.
+
+## Ruling
+
+Ruled by the operator on 2026-11-20 (async create paths only): `new Klass` stays synchronous (RFC 0087). The awaited entry points Rails reaches through `new` (`create`, `create!`, `first_or_initialize`, `find_or_initialize_by`, association `build`/`create`) run the query-bearing part awaited, right after construction and before returning, at the position Rails runs it. A bare `new Klass(...)` keeps the synchronous refusal, receipted `PERMANENT` against packages/activerecord/CLAUDE.md § "A record is built with `new Klass` only". Parking the work until save stays banned. This story is an entry dependency of `entry-check-data-layer-parity-is-closed-on-8-0-2` (RFC 0191).
 
 ## Acceptance criteria
 
-- Constructor / create mass-assignment accepts collection `*_ids` writers.
-- The skipped test(s) are un-skipped and pass.
+- `create`, `createBang`, `firstOrCreate*`, `findOrCreateBy*` and association `create`/`build` accept collection `*_ids` attributes. The `ids_writer` lookup runs awaited, after the synchronous construction and before validation or save, in Rails' `assign_attributes` order relative to the other attributes.
+- A bare `new Klass({ authorIds: [...] })` keeps the synchronous refusal, receipted `PERMANENT` at the refusal site.
+- `test_collection_exists` and any sibling parked tests are un-skipped and pass with their Rails assertions unchanged.
+- No deferred or parked assignment that only runs at save.
