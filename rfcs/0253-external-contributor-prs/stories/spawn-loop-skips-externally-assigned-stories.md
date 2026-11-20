@@ -1,7 +1,7 @@
 ---
 title: "spawn loop: never pick a story with a non-empty assignee"
 status: draft
-updated: 2026-11-19
+updated: 2026-11-20
 rfc: "0253-external-contributor-prs"
 cluster: trust-gate
 packages: []

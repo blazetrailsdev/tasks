@@ -1,7 +1,7 @@
 ---
 title: "port-activesupport-testing-helper-stubs"
-status: in-progress
-updated: 2026-11-19
+status: done
+updated: 2026-11-20
 rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: [scripts]

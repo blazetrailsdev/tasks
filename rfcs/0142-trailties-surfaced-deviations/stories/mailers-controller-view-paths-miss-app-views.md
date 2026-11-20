@@ -1,7 +1,7 @@
 ---
 title: "mailers-controller-view-paths-miss-app-views"
 status: ready
-updated: 2026-11-19
+updated: 2026-11-20
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

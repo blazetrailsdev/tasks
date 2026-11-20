@@ -1,7 +1,7 @@
 ---
 title: "turbo-dummy-inspect-helpers-initializer"
-status: draft
-updated: 2026-11-19
+status: ready
+updated: 2026-11-20
 rfc: "0238-turbo-port"
 cluster: null
 packages: []

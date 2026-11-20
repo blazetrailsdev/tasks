@@ -1,7 +1,7 @@
 ---
 title: "AR migration .tt templates carry Rails' per-attribute body instead of calling invented builders"
-status: ready
-updated: 2026-11-19
+status: done
+updated: 2026-11-20
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9913
+claim: "2026-11-20T02:33:41Z"
+assignee: "load-defaults-8-1-arm"
 blocked-by: null
 closed-reason: null
 ---

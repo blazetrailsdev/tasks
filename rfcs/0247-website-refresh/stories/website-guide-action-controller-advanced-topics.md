@@ -1,6 +1,6 @@
 ---
 title: "Write the Action Controller Advanced Topics guide"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0247-website-refresh"
 cluster: website-docs

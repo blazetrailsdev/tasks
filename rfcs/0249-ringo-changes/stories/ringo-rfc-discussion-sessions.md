@@ -1,7 +1,7 @@
 ---
 title: "ringo: resumable per-RFC discussion sessions with a 5-minute idle reaper"
-status: claimed
-updated: 2026-11-19
+status: done
+updated: 2026-11-20
 rfc: "0249-ringo-changes"
 cluster: rfc-sessions
 packages: []

@@ -1,14 +1,14 @@
 ---
 title: "pg-connection-escape-identifier-is-pqescapeidentifier"
-status: draft
-updated: 2026-11-19
+status: ready
+updated: 2026-11-20
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 9
 pr: null
 claim: null
 assignee: null

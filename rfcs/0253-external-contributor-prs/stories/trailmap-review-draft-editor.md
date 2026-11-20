@@ -1,7 +1,7 @@
 ---
 title: "trailmap: edit, approve or discard each drafted review comment"
 status: draft
-updated: 2026-11-19
+updated: 2026-11-20
 rfc: "0253-external-contributor-prs"
 cluster: external-review
 packages: []

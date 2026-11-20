@@ -1,7 +1,7 @@
 ---
 title: "trailmap + ringo: forward an external review on an agent PR, in the owner's words"
 status: draft
-updated: 2026-11-19
+updated: 2026-11-20
 rfc: "0253-external-contributor-prs"
 cluster: external-review
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "Port I18n::Railtie.init_fallbacks so config.i18n.fallbacks mixes Backend::Fallbacks into the backend"
-status: ready
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-20
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10394
+claim: "2026-11-20T02:20:39Z"
+assignee: "redis-cache-store-async-over-npm-client"
 blocked-by: null
 closed-reason: null
 ---

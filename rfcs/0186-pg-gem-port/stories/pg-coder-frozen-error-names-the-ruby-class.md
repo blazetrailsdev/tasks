@@ -1,7 +1,7 @@
 ---
 title: "pg: a frozen coder's FrozenError names PG::TextEncoder::Array"
-status: blocked
-updated: 2026-11-19
+status: closed
+updated: 2026-11-20
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []
@@ -14,8 +14,8 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: "needs pg-c-extension-classes-get-class-paths: PG::TextEncoder::Array is C-only, so no class-path row is generated"
-closed-reason: null
+blocked-by: null
+closed-reason: "Out of charter: only reachable via pg-c-extension-classes-get-class-paths (closed, Non-goal C-extension scoring). Cosmetic FrozenError class name; existing test regex /^can't modify frozen \\S+: / is adequate for a node-pg wrapper."
 ---
 
 ## Context

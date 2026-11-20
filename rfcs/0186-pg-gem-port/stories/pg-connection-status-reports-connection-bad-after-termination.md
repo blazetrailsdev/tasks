@@ -1,7 +1,7 @@
 ---
 title: "pg: retest what a query raises after backend termination, against the wrapper"
-status: ready
-updated: 2026-11-18
+status: claimed
+updated: 2026-11-20
 rfc: "0186-pg-gem-port"
 cluster: connection
 packages: ["pg", "activerecord"]
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 200
 priority: 5
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-20T02:46:38Z"
+assignee: "pg-connection-session-setters-move-to-the-package"
 blocked-by: null
 closed-reason: null
 ---

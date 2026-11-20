@@ -1,7 +1,7 @@
 ---
 title: "ringo: spawn a credential-less review agent that drafts, never posts"
 status: draft
-updated: 2026-11-19
+updated: 2026-11-20
 rfc: "0253-external-contributor-prs"
 cluster: external-review
 packages: []

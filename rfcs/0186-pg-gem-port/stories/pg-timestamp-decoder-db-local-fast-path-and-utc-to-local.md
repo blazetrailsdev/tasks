@@ -1,7 +1,7 @@
 ---
 title: "activerecord: PG Timestamp decoder takes pg's mktime fast path and ports TimestampUtcToLocal"
-status: ready
-updated: 2026-11-18
+status: closed
+updated: 2026-11-20
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Too far into the weeds: story itself states 'The answer is the same, but the branch structure differs from C' — mirroring pg_text_dec_timestamp's mktime fast-path branch is C-porting (README Non-goal 'Porting the C'). TimestampUtcToLocal has no Rails caller (add_pg_decoders uses TimestampUtc/TimestampWithTimeZone only)."
 ---
 
 ## Context

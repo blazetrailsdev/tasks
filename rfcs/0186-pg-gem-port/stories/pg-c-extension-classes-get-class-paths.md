@@ -1,7 +1,7 @@
 ---
 title: "pg-c-extension-classes-get-class-paths"
-status: draft
-updated: 2026-11-19
+status: closed
+updated: 2026-11-20
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Out of charter (operator: small wrapper over node-pg, don't re-invent). Teaching the extractor/class-path walk about rb_define_class_under/pg_define_coder is exactly the README Non-goal 'No extractor arm that reads rb_define_method tables'; C-only classes stay unscored by design."
 ---
 
 ## Context

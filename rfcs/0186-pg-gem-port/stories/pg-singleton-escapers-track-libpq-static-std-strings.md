@@ -1,7 +1,7 @@
 ---
 title: "pg: singleton escapers follow libpq's static_std_strings"
-status: draft
-updated: 2026-11-19
+status: closed
+updated: 2026-11-20
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Too far into the weeds: emulates libpq's process-global static_std_strings mutated by every connection's ParameterStatus. Wrapper charter is massage-and-wrap node-pg, not re-implement libpq internals; no Rails caller depends on singleton escapers tracking connections."
 ---
 
 ## Context

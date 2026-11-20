@@ -1,6 +1,6 @@
 ---
 title: "blob-import-before-attached-model-initializer"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: null

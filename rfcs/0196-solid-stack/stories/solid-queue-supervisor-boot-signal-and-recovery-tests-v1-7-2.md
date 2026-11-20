@@ -1,7 +1,7 @@
 ---
 title: "solid-queue-supervisor-boot-signal-and-recovery-tests-v1-7-2"
-status: in-progress
-updated: 2026-11-19
+status: done
+updated: 2026-11-20
 rfc: "0196-solid-stack"
 cluster: null
 packages: []

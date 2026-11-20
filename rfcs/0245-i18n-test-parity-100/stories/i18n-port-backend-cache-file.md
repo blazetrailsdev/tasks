@@ -1,6 +1,6 @@
 ---
 title: "i18n: port I18n::Backend::CacheFile (its PERMANENT closure was mis-scoped)"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0245-i18n-test-parity-100"
 cluster: backend-mixins

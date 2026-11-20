@@ -1,7 +1,7 @@
 ---
 title: "trailties: port generators/app_generator_test.rb lines 589-989"
-status: ready
-updated: 2026-11-19
+status: in-progress
+updated: 2026-11-20
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
 packages: [trailties]
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10395
+claim: "2026-11-20T02:07:33Z"
+assignee: "trailties-test-app-generator-part-1"
 blocked-by: null
 closed-reason: null
 ---

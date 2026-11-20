@@ -1,7 +1,7 @@
 ---
 title: "port-ordered-hash-and-safe-buffer-stubs"
-status: ready
-updated: 2026-11-18
+status: in-progress
+updated: 2026-11-20
 rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: [activesupport]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10394
+claim: "2026-11-20T02:20:39Z"
+assignee: "redis-cache-store-async-over-npm-client"
 blocked-by: null
 closed-reason: null
 ---

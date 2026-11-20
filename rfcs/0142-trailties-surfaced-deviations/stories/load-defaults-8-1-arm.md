@@ -1,7 +1,7 @@
 ---
 title: "load-defaults-8-1-arm"
-status: ready
-updated: 2026-11-19
+status: blocked
+updated: 2026-11-20
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-20T02:33:41Z"
+assignee: "load-defaults-8-1-arm"
+blocked-by: "no Rails 8.1 tree is vendored; the 8.1 upgrade is scoped by RFC 0191 (write-the-retrospective-and-scope-the-rails-8-1-upgrade) after the v8.0.5.2 bump"
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "Converge DispatcherTest polling/sleeps bodies and rewind_io to v1.7.2"
-status: draft
+status: ready
 updated: 2026-11-20
 rfc: "0196-solid-stack"
 cluster: null

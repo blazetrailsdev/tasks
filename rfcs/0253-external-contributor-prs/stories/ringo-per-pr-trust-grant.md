@@ -1,7 +1,7 @@
 ---
 title: "ringo + trailmap: owner promotes a single external PR to trusted"
 status: draft
-updated: 2026-11-19
+updated: 2026-11-20
 rfc: "0253-external-contributor-prs"
 cluster: trust-gate
 packages: []

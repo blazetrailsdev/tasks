@@ -1,7 +1,7 @@
 ---
 title: "redis-cache-store-async-over-npm-client"
-status: ready
-updated: 2026-11-19
+status: in-progress
+updated: 2026-11-20
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: ["activesupport"]
@@ -9,9 +9,9 @@ deps: ["cache-store-async-store-and-local-stores"]
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10394
+claim: "2026-11-20T02:20:39Z"
+assignee: "redis-cache-store-async-over-npm-client"
 blocked-by: null
 closed-reason: null
 ---

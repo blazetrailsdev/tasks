@@ -1,7 +1,7 @@
 ---
 title: "activerecord: the PG text decoders and TypeMapByOid score against the pg gem"
-status: ready
-updated: 2026-11-18
+status: closed
+updated: 2026-11-20
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []
@@ -14,7 +14,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone / superseded: cites packages/activerecord/src/pg/ and extract-ruby-api.rb C_EXTENSION_DIRS — git grep C_EXTENSION_DIRS on origin/main finds nothing, pg now lives in packages/pg/lib (type-map-by-oid.ts, simple-decoder.ts, coder.ts exist). Remaining decoder move is pg-text-decoders-move-to-the-package."
 ---
 
 ## Context
