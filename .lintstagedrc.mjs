@@ -12,13 +12,13 @@
 // The rules prettier and markdownlint genuinely disagree on are already settled
 // in `.markdownlint-cli2.jsonc`, in prettier's favour.
 
-const IGNORED = ["rfcs/0000-template/", "index.md"];
+const IGNORED = ["rfcs/0000-template/", "index.md", "archive/"];
 const linted = (files) => files.filter((f) => !IGNORED.some((i) => f.includes(i)));
 
 export default {
   "*.md": (files) => {
     const md = linted(files);
-    const cmds = [`prettier --write ${files.join(" ")}`];
+    const cmds = md.length > 0 ? [`prettier --write ${md.join(" ")}`] : [];
     if (md.length > 0) cmds.push(`markdownlint-cli2 ${md.join(" ")}`);
     return cmds;
   },
