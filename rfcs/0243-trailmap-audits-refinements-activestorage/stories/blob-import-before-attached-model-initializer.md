@@ -1,6 +1,6 @@
 ---
 title: "blob-import-before-attached-model-initializer"
-status: claimed
+status: in-progress
 updated: 2026-11-20
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10391
 claim: "2026-11-20T00:10:36Z"
 assignee: "audit-report-skill-posts-to-trailmap"
 blocked-by: null

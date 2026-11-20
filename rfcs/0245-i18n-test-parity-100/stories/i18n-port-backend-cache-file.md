@@ -1,7 +1,7 @@
 ---
 title: "i18n: port I18n::Backend::CacheFile (its PERMANENT closure was mis-scoped)"
-status: ready
-updated: 2026-11-19
+status: in-progress
+updated: 2026-11-20
 rfc: "0245-i18n-test-parity-100"
 cluster: backend-mixins
 packages: [i18n]
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10392
+claim: "2026-11-20T01:02:39Z"
+assignee: "i18n-port-backend-cache-file"
 blocked-by: null
 closed-reason: null
 ---

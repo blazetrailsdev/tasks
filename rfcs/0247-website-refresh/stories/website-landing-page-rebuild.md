@@ -1,7 +1,7 @@
 ---
 title: "Rebuild the landing page on rubyonrails.org's structure with trails' own art and copy"
-status: in-progress
-updated: 2026-11-19
+status: done
+updated: 2026-11-20
 rfc: "0247-website-refresh"
 cluster: website-landing
 packages: [website]
