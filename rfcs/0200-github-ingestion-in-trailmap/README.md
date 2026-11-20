@@ -1,9 +1,9 @@
 ---
 rfc: "0200-github-ingestion-in-trailmap"
 title: "trailmap ingests GitHub events and relays them to ringo"
-status: draft
+status: postponed
 created: 2026-10-21
-updated: 2026-10-21
+updated: 2026-11-20
 owner: "@deanmarano"
 packages:
   - actionpack
