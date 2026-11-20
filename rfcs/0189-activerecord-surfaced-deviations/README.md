@@ -21,6 +21,7 @@ packages:
   - "activejob"
   - "trails-tsc"
   - "date"
+  - "sqlite3"
 clusters:
   - "connection-adapters"
   - "associations"
