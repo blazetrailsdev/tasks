@@ -38,11 +38,18 @@ deps:
   - activesupport-port-core-ext-regexp
   - activesupport-port-evented-file-update-checker
   - activesupport-port-fork-tracker
-  - activesupport-port-i18n-railtie
   - activesupport-port-kernel-singleton-class
   - activesupport-port-pathname-existence
-  - activesupport-port-railtie
   - activesupport-port-xml-mini-libxml-engines
+  - activesupport-api-deprecation-modules-weakset-hashbuilder-supers
+  - activesupport-api-misses-remainder-after-bundle
+  - activesupport-native-string-gsub-call-gate-credit
+  - constant-lookup-test-sync-autoload-of-raising-fixture
+  - encrypted-configuration-delegate-missing-to-options
+  - enumerable-minimum-maximum-required-key-and-repin
+  - free-time-helper-calls-travel-on-the-test-case
+  - load-interlock-aware-monitor-includes-mixin
+  - safe-buffer-declare-unsafe-string-methods
 deps-rfc: []
 est-loc: 150
 priority: null
