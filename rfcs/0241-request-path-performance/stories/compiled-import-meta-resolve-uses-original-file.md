@@ -1,7 +1,7 @@
 ---
 title: "Compiled config files resolve import.meta.resolve against the original file"
-status: claimed
-updated: 2026-11-19
+status: in-progress
+updated: 2026-11-20
 rfc: "0241-request-path-performance"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: 2
-pr: null
+pr: trails#10390
 claim: "2026-11-19T23:58:01Z"
 assignee: "nokogiri-extension-loads-on-first-parse-not-at-boot"
 blocked-by: null

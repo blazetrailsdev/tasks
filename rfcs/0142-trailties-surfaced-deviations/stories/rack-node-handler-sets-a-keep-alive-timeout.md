@@ -1,7 +1,7 @@
 ---
 title: "The Rack Node handler sets a keep-alive timeout"
-status: in-progress
-updated: 2026-11-19
+status: done
+updated: 2026-11-20
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "nokogiri-extension-loads-on-first-parse-not-at-boot"
-status: claimed
-updated: 2026-11-19
+status: blocked
+updated: 2026-11-20
 rfc: "0241-request-path-performance"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: 1
 pr: null
 claim: "2026-11-19T23:58:01Z"
 assignee: "nokogiri-extension-loads-on-first-parse-not-at-boot"
-blocked-by: null
+blocked-by: "Operator decision: CLAUDE.md § 'An adapter file is loaded by an awaited step' ratifies awaiting nokogiri/extension at boot (action_view.require_nokogiri) because Nokogiri parse entry points (HTML5.parse, sanitizer helpers) are synchronous; loading on first parse needs an async parse path or a reversal of that ruling. The TLA is inside libxml2-wasm/lib/libxml2.mjs:3 itself, so a CJS bundle fails whenever the module is bundled at all."
 closed-reason: null
 ---
 

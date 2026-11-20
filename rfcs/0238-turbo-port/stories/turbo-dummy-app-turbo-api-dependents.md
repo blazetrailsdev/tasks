@@ -1,7 +1,7 @@
 ---
 title: "turbo-dummy-app-turbo-api-dependents"
-status: in-progress
-updated: 2026-11-19
+status: done
+updated: 2026-11-20
 rfc: "0238-turbo-port"
 cluster: null
 packages: []

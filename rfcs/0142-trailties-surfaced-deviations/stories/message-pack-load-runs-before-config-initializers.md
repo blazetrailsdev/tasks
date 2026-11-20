@@ -1,7 +1,7 @@
 ---
 title: "require_message_pack runs before config/initializers; converge to after_initialize position"
-status: in-progress
-updated: 2026-11-19
+status: done
+updated: 2026-11-20
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

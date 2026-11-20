@@ -1,7 +1,7 @@
 ---
 title: "blob-import-before-attached-model-initializer"
-status: ready
-updated: 2026-11-19
+status: claimed
+updated: 2026-11-20
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-20T00:10:36Z"
+assignee: "audit-report-skill-posts-to-trailmap"
 blocked-by: null
 closed-reason: null
 ---

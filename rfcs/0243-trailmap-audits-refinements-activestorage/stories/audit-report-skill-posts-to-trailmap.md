@@ -1,7 +1,7 @@
 ---
 title: "audit-report skill: POST the report to trailmap instead of writing a file"
 status: ready
-updated: 2026-11-18
+updated: 2026-11-20
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: writers
 packages: []

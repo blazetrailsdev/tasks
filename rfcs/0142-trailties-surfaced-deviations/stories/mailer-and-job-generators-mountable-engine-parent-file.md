@@ -1,7 +1,7 @@
 ---
 title: "Mailer and job generators take the mountable_engine? arm for their application parent file"
-status: in-progress
-updated: 2026-11-19
+status: done
+updated: 2026-11-20
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

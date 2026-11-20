@@ -1,7 +1,7 @@
 ---
 title: "Model generator drops the static toString literal"
-status: in-progress
-updated: 2026-11-19
+status: done
+updated: 2026-11-20
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

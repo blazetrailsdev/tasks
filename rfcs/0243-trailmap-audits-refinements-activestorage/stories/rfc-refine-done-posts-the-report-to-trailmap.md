@@ -1,7 +1,7 @@
 ---
 title: "rfc-refine-done.sh: POST the refine report to trailmap, keep /cleanup-pane only for the reap"
 status: ready
-updated: 2026-11-18
+updated: 2026-11-20
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: writers
 packages: []
