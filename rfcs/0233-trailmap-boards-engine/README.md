@@ -1,9 +1,9 @@
 ---
 rfc: "0233-trailmap-boards-engine"
 title: "trailmap boards: a Trello-shaped engine run beside the task domain, then cut over"
-status: draft
+status: postponed
 created: 2026-11-11
-updated: 2026-11-11
+updated: 2026-11-20
 owner: "@deanmarano"
 packages:
   - trailties
