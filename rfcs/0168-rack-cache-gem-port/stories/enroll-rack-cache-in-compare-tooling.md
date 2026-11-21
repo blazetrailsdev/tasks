@@ -1,6 +1,6 @@
 ---
 title: "Enroll rack-cache in parity:api and parity:test"
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0168-rack-cache-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["rack-cache-package-skeleton"]
 deps-rfc: []
 est-loc: 220
 priority: 30
-pr: null
-claim: null
-assignee: null
+pr: trails#10503
+claim: "2026-11-21T15:27:37Z"
+assignee: "enroll-rack-cache-in-compare-tooling"
 blocked-by: null
 closed-reason: null
 ---

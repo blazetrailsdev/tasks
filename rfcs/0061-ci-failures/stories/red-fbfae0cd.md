@@ -1,6 +1,6 @@
 ---
 title: "Quickstart failing on main @fbfae0cd"
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: trails#10500
+claim: "2026-11-21T15:15:55Z"
+assignee: "red-fbfae0cd"
 blocked-by: null
 closed-reason: null
 ---

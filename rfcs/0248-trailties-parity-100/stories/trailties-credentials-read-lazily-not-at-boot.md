@@ -1,6 +1,6 @@
 ---
 title: "trailties-credentials-read-lazily-not-at-boot"
-status: claimed
+status: in-progress
 updated: 2026-11-21
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10499
 claim: "2026-11-21T14:48:39Z"
 assignee: "trailties-credentials-read-lazily-not-at-boot"
 blocked-by: null

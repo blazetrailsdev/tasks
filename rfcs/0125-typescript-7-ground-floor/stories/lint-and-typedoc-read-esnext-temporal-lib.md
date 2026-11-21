@@ -1,7 +1,7 @@
 ---
 title: "lint-and-typedoc-read-esnext-temporal-lib"
-status: in-progress
-updated: 2026-11-20
+status: done
+updated: 2026-11-21
 rfc: "0125-typescript-7-ground-floor"
 cluster: null
 packages: []

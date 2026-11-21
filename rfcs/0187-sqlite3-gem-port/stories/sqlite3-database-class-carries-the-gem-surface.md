@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: SQLite3::Database is a class over an engine interface, with the gem's methods the adapter calls"
-status: ready
+status: claimed
 updated: 2026-11-21
 rfc: "0187-sqlite3-gem-port"
 cluster: database-and-statement
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 550
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-21T15:53:37Z"
+assignee: "sqlite3-database-class-carries-the-gem-surface"
 blocked-by: null
 closed-reason: null
 ---
