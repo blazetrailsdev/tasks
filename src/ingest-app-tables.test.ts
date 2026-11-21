@@ -79,3 +79,18 @@ describe("trailmap's tables", () => {
     expect(await rows()).toEqual(before);
   });
 });
+
+describe("refinements", () => {
+  it("are unique on (rfc_id, created_at)", async () => {
+    const indexes = await Base.connection.selectAll(`PRAGMA index_list(refinements)`);
+    const index = [...indexes].find((i) => i.name === "index_refinements_on_rfc_id_and_created_at");
+    expect(index?.unique).toBe(1);
+
+    const insert = () =>
+      Base.connection.execute(
+        `INSERT INTO refinements (rfc_id, outcome, created_at, updated_at) VALUES ('0001-a', 'changed', '2026-11-18 00:00:00', '2026-11-18 00:00:00')`,
+      );
+    await insert();
+    await expect(insert()).rejects.toThrow(/UNIQUE/);
+  });
+});
