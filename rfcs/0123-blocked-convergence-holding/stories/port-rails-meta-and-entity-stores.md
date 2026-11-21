@@ -24,7 +24,8 @@ lines) defines `RailsMetaStore < Rack::Cache::MetaStore` (`:12`: `self.resolve`,
 Rack::Cache::EntityStore` (`:36`: `self.resolve`, `initialize`, `exist?`,
 `open`, `read`, `write`). Each class also seats itself as its base's `RAILS`
 scheme constant (`:33`, `:65`), which is how `Rack::Cache::Storage#create_store`
-resolves a `rails:/` URI. `pnpm parity:api --package actiondispatch` reports
+(`vendor/rack-cache/v1.17.0/lib/rack/cache/storage.rb:33-42`) resolves a
+`rails:/` URI. `pnpm parity:api --package actiondispatch` reports
 the file 0/6. `test/dispatch/rack_cache_test.rb` (`RackCacheMetaStoreTest`, 1
 test: "stuff is deep duped") has no trails file.
 
@@ -40,8 +41,9 @@ What the port needs from that package:
 
 - **Overriding the protected hooks from another package.** `RailsMetaStore#read`
   and `#write` override `MetaStore`'s protected abstract pair
-  (`rack-cache/v1.17.0/lib/rack/cache/meta_store.rb:172-182`), and
-  `RailsEntityStore#write` calls the private `slurp` (`entity_store.rb:14-23`).
+  (`vendor/rack-cache/v1.17.0/lib/rack/cache/meta_store.rb:172-182`), and
+  `RailsEntityStore#write` calls the private `slurp`
+  (`vendor/rack-cache/v1.17.0/lib/rack/cache/entity_store.rb:14-23`).
   The gem stories record both as `@internal` and reachable from a subclass.
 - **Async.** The gem's store methods are async (the `rack-cache-gem-port` RFC,
   "Async from the start"), so these overrides are async too. They `await`
