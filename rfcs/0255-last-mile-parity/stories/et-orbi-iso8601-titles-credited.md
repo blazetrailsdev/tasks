@@ -1,6 +1,6 @@
 ---
 title: "et-orbi: credit the seven iso8601 loop tests"
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0255-last-mile-parity"
 cluster: small-packages
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10517
+claim: "2026-11-21T19:34:33Z"
+assignee: "et-orbi-iso8601-titles-credited"
 blocked-by: null
 closed-reason: null
 ---

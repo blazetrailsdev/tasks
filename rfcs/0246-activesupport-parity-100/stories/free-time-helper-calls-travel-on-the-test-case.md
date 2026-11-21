@@ -1,6 +1,6 @@
 ---
 title: "free-time-helper-calls-travel-on-the-test-case"
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0246-activesupport-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10515
+claim: "2026-11-21T19:08:34Z"
+assignee: "activesupport-api-misses-remainder-after-bundle"
 blocked-by: null
 closed-reason: null
 ---

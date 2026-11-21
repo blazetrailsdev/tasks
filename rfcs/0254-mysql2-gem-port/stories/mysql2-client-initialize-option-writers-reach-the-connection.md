@@ -1,6 +1,6 @@
 ---
 title: "Mysql2::Client#initialize's option writers, charset_name= and ssl_set reach the npm connection"
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0254-mysql2-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10518
+claim: "2026-11-21T19:21:59Z"
+assignee: "mysql2-client-initialize-option-writers-reach-the-connection"
 blocked-by: null
 closed-reason: null
 ---
