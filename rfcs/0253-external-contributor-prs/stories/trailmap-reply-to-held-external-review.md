@@ -5,7 +5,8 @@ updated: 2026-11-21
 rfc: "0253-external-contributor-prs"
 cluster: null
 packages: []
-deps: []
+deps:
+  - trailmap-review-draft-editor
 deps-rfc: []
 est-loc: null
 priority: null
