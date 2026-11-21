@@ -1,7 +1,7 @@
 ---
 title: "trailties-test-application-singletons-rest"
-status: draft
-updated: 2026-11-20
+status: ready
+updated: 2026-11-21
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []

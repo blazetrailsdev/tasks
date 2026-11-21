@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: Statement#remainder comes from the engine's prepare tail"
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0187-sqlite3-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10524
+claim: "2026-11-21T21:05:34Z"
+assignee: "sqlite3-database-constructor-remaining-arms"
 blocked-by: null
 closed-reason: null
 ---

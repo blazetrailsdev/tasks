@@ -1,6 +1,6 @@
 ---
 title: "Engines guide: use the ported <engine>:install:migrations task"
-status: draft
+status: ready
 updated: 2026-11-21
 rfc: "0247-website-refresh"
 cluster: null

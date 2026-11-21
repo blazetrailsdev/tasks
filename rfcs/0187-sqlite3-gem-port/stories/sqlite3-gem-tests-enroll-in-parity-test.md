@@ -1,7 +1,7 @@
 ---
 title: "sqlite3: enroll the gem's tests for the wrapped methods in parity:test"
-status: ready
-updated: 2026-11-19
+status: done
+updated: 2026-11-21
 rfc: "0187-sqlite3-gem-port"
 cluster: package
 packages: ["sqlite3", "scripts"]
@@ -9,9 +9,9 @@ deps: ["sqlite3-database-class-carries-the-gem-surface"]
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10449
+claim: "2026-11-21T21:05:34Z"
+assignee: "sqlite3-database-constructor-remaining-arms"
 blocked-by: null
 closed-reason: null
 ---

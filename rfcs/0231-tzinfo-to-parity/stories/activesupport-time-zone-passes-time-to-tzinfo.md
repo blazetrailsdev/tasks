@@ -1,6 +1,6 @@
 ---
 title: "ActiveSupport TimeZone passes a Time to tzinfo, retiring Timezone's Date converter"
-status: draft
+status: ready
 updated: 2026-11-21
 rfc: "0231-tzinfo-to-parity"
 cluster: null

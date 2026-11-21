@@ -1,6 +1,6 @@
 ---
 title: "Port Rack::Cache::Key"
-status: claimed
+status: done
 updated: 2026-11-21
 rfc: "0168-rack-cache-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["enroll-rack-cache-in-compare-tooling"]
 deps-rfc: []
 est-loc: 150
 priority: 30
-pr: null
+pr: trails#10523
 claim: "2026-11-21T20:52:33Z"
 assignee: "port-rack-cache-cache-control-request-and-headers"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "pg: restore PG::Result#[] operator pin and pair the constructor once the manifest reads ext C classes"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0186-pg-gem-port"
 cluster: null

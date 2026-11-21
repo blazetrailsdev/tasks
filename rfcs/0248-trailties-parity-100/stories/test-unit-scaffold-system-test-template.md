@@ -1,7 +1,7 @@
 ---
 title: "trailties: port test_unit scaffold system_test template"
-status: draft
-updated: 2026-11-20
+status: ready
+updated: 2026-11-21
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []

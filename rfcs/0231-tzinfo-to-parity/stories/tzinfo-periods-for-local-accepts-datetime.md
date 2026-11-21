@@ -1,6 +1,6 @@
 ---
 title: "tzinfo-periods-for-local-accepts-datetime"
-status: draft
+status: ready
 updated: 2026-11-21
 rfc: "0231-tzinfo-to-parity"
 cluster: null

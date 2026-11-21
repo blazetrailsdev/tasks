@@ -1,6 +1,6 @@
 ---
 title: "Port test_utils.rb's time_with_offset helpers and assert_equal_with_offset_and_timezone_offset"
-status: draft
+status: ready
 updated: 2026-11-21
 rfc: "0231-tzinfo-to-parity"
 cluster: null

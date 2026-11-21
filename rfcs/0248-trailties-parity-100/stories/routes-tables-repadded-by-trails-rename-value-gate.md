@@ -1,6 +1,6 @@
 ---
 title: "routes-tables-repadded-by-trails-rename-value-gate"
-status: draft
+status: ready
 updated: 2026-11-21
 rfc: "0248-trailties-parity-100"
 cluster: null
