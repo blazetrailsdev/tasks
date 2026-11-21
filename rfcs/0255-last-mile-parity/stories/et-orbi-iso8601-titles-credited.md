@@ -2,7 +2,7 @@
 title: "et-orbi: credit the seven iso8601 loop tests"
 status: draft
 updated: 2026-11-20
-rfc: "0000-last-mile-parity"
+rfc: "0255-last-mile-parity"
 cluster: small-packages
 packages: [et-orbi, scripts]
 deps: []

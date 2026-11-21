@@ -2,7 +2,7 @@
 title: "vite-assets: port the ruby-config-file and to-env tests"
 status: draft
 updated: 2026-11-20
-rfc: "0000-last-mile-parity"
+rfc: "0255-last-mile-parity"
 cluster: small-packages
 packages: [vite-assets, vite-trails]
 deps: []

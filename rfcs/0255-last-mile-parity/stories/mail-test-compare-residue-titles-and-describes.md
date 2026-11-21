@@ -2,7 +2,7 @@
 title: "mail: credit the 17 tests lost to duplicate names, loop titles and escaped quotes"
 status: draft
 updated: 2026-11-20
-rfc: "0000-last-mile-parity"
+rfc: "0255-last-mile-parity"
 cluster: mail
 packages: [mail, scripts]
 deps: []

@@ -2,7 +2,7 @@
 title: "rack-test: UploadedFile's tempfile is unlinked on garbage collection"
 status: draft
 updated: 2026-11-20
-rfc: "0000-last-mile-parity"
+rfc: "0255-last-mile-parity"
 cluster: small-packages
 packages: [rack-test, ruby-compat]
 deps: []

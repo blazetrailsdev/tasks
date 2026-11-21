@@ -2,7 +2,7 @@
 title: "actionview: port assert_size_match! and HTMLSelector.context"
 status: draft
 updated: 2026-11-20
-rfc: "0000-last-mile-parity"
+rfc: "0255-last-mile-parity"
 cluster: small-packages
 packages: [actionview]
 deps: []

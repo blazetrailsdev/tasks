@@ -2,7 +2,7 @@
 title: "parity: report permanent skips apart from open gaps on both parity:test and the website"
 status: draft
 updated: 2026-11-20
-rfc: "0000-last-mile-parity"
+rfc: "0255-last-mile-parity"
 cluster: measurement
 packages: [scripts, website]
 deps: []

@@ -2,7 +2,7 @@
 title: "activestorage: port the empty-attachment errors and register the cloud-service tests"
 status: draft
 updated: 2026-11-20
-rfc: "0000-last-mile-parity"
+rfc: "0255-last-mile-parity"
 cluster: small-packages
 packages: [activestorage, scripts]
 deps: []

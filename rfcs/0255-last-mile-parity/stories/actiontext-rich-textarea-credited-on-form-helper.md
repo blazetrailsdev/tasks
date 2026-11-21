@@ -2,7 +2,7 @@
 title: "actiontext: credit rich_textarea / rich_text_area at tag_helper.rb"
 status: draft
 updated: 2026-11-20
-rfc: "0000-last-mile-parity"
+rfc: "0255-last-mile-parity"
 cluster: small-packages
 packages: [actiontext]
 deps: []
