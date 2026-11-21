@@ -56,50 +56,48 @@ Five Rails packages were enrolled after the 2026-10-13 figures
 This story changes no gate and ports nothing. A shortfall is reported, not
 fixed here.
 
-## Findings (2026-11-11, trails `876804dd8b`)
+## Findings (2026-11-21, trails `9825896d8f`)
 
 Measured after `pnpm build` with `API_COMPARE_FORCE=1 pnpm parity:api` and
-`pnpm parity:test`. Without the build `parity:api` refuses to measure
-(47 packages had no `dist`).
+`pnpm parity:test`. This supersedes the 2026-11-11 measurement at
+`876804dd8b`.
 
 | Package            | Methods   | Tests     | Unpinned matched bodies |
 | ------------------ | --------- | --------- | ----------------------- |
 | arel               | 1052/1052 | 739/739   | 0                       |
-| activemodel        | 820/821   | 1037/1037 | 1                       |
-| activerecord       | 6987/6991 | 8940/8965 | 180                     |
-| activesupport      | 2110/2266 | 3065/3379 | 137                     |
-| actiondispatch     | 1801/1809 | 1627/1670 | 0                       |
-| actioncontroller   | 852/854   | 1921/1949 | 1                       |
+| activemodel        | 821/821   | 1037/1037 | 2                       |
+| activerecord       | 6966/6966 | 8982/8986 | 129                     |
+| activesupport      | 2297/2342 | 3691/3725 | 265                     |
+| actiondispatch     | 1803/1809 | 1630/1670 | 2                       |
+| actioncontroller   | 854/854   | 1926/1949 | 1                       |
 | abstractcontroller | 178/178   | 52/52     | 0                       |
 | actionpackversion  | 2/2       | n/a       | 0                       |
-| actionview         | 3057/3057 | 2524/2562 | 34                      |
+| actionview         | 3057/3057 | 2528/2562 | 35                      |
 | actioncable        | 496/496   | 213/215   | 336                     |
 | activejob          | 369/369   | 395/395   | 192                     |
-| actionmailer       | 230/230   | 251/255   | 135                     |
-| activestorage      | 631/631   | 427/451   | 412                     |
-| actionmailbox      | 148/167   | 82/87     | 94                      |
-| actiontext         | 133/253   | 23/116    | 110                     |
-| trailties          | 1661/1787 | 679/2419  | 816                     |
+| actionmailer       | 229/229   | 251/255   | 135                     |
+| activestorage      | 631/631   | 441/451   | 412                     |
+| actionmailbox      | 174/174   | 105/105   | 119                     |
+| actiontext         | 245/245   | 115/116   | 165                     |
+| trailties          | 1754/1761 | 1009/2359 | 871                     |
 
-Overall: 26987/28857 methods (93.5%), 29100/33891 tests (85.9%).
+`parity:api` reports Data layer 8839/8839 methods (100%), files 440/440;
+AR closure 10069/10094. Overall across every source: 28875/30177 methods
+(95.7%), 32903/36976 tests (89%).
 
-### Shortfalls (reported, not fixed here)
+### Against the acceptance criteria
 
-- **Methods, data layer: not 100%.**
-  activemodel is missing `ActiveModel::Attributes#initialize`.
-  activerecord is missing `Associations::ThroughAssociation#source_reflection`,
-  `Encryption::EncryptedFixtures#initialize`,
-  `Migration::Compatibility::V6_0::TableDefinition#belongs_to` and
-  `Railties::ControllerRuntime#initialize`.
-- **Tests, activerecord: 8940/8965.** 17 are skipped, and 8 are missing in
-  `coders/yaml_column_test.rb`.
-- **CI on `main` is red.** The `876804dd8b` run failed the Active Record
-  SQLite (1, 2), PostgreSQL (1, 2, 3) and MariaDB (1, 2, 3) shards.
-  `96accbb487`, the commit before it, was green.
-- **RFC 0175 is closed** (`status: closed` in its README). That criterion is met.
+- **Methods, data layer: met.** arel, activemodel and activerecord are each
+  at 100%; the five 2026-11-11 gaps are gone.
+- **Tests, data layer: not met.** activerecord is 8982/8986: 4 skipped
+  (the tool rounds the row to 100%). arel and activemodel are at 100%.
+- **CI on `main`.** The run for `9825896d8f` was still pending when this
+  was measured; the latest completed, non-cancelled `main` run
+  (`56db5bf51c`) is green.
+- **RFC 0175 is closed** (`status: closed` in its README). Met.
 
 ### Stale-citation exposure
 
-907 of 1608 open stories (not `done` or `closed`) cite a Rails
-`<file>.rb:<line>` in their body: 639 draft, 149 ready, 111 blocked,
-7 claimed and 1 in progress.
+693 of 1471 open stories (not `done` or `closed`) cite a Rails
+`<file>.rb:<line>` in their body: 440 draft, 113 ready, 137 blocked and
+3 in progress.
