@@ -5,7 +5,8 @@ updated: 2026-11-21
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps:
+  - trails-internal-controllers-autoload-after-boot
 deps-rfc: []
 est-loc: null
 priority: null
