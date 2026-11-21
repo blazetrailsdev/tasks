@@ -1,13 +1,13 @@
 ---
-title: "trailmap-external-pr-inbox-age-and-sent"
+title: "trailmap: external PR inbox shows age and the sent state"
 status: draft
 updated: 2026-11-21
 rfc: "0253-external-contributor-prs"
-cluster: null
+cluster: external-review
 packages: []
-deps: []
+deps: [trailmap-external-pr-inbox, trailmap-sends-approved-review-to-github]
 deps-rfc: []
-est-loc: null
+est-loc: 80
 priority: null
 pr: null
 claim: null

@@ -5,7 +5,7 @@ updated: 2026-11-21
 rfc: "0253-external-contributor-prs"
 cluster: external-review
 packages: []
-deps: [ringo-emits-external-pr-events]
+deps: [ringo-emits-external-pr-events, ringo-external-review-draft-spawn]
 deps-rfc: []
 est-loc: 200
 priority: null
@@ -25,8 +25,9 @@ mark who wrote them.
 
 - The pulls index shows an **External** section (or badge), fed from
   `GET /api/external-prs` and kept live by `external_pr.*` events.
-- Each row shows the author, the age, the last activity, the review state
-  (`none`, `drafting`, `draft ready`, `sent`, `stale`) and a **Draft review**
-  button with an optional focus note.
+- Each row shows the author, the last activity, the review state (`none`,
+  `drafting`, `draft ready`, `stale`) and a **Draft review** button with an
+  optional focus note. The PR's age and the `sent` state need data ringo does
+  not record yet; they are `trailmap-external-pr-inbox-age-and-sent`.
 - Bumps the vendored ringo pin if this is the first story that needs the new
   endpoints.
