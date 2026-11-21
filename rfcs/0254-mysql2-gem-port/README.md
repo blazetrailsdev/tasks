@@ -1,9 +1,9 @@
 ---
 rfc: "0254-mysql2-gem-port"
 title: "mysql2: lift the nested mysql2 gem port out of activerecord into @blazetrails/mysql2"
-status: draft
+status: active
 created: 2026-11-20
-updated: 2026-11-20
+updated: 2026-11-21
 owner: "@deanmarano"
 packages:
   - mysql2
