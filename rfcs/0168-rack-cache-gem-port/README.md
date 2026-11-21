@@ -1,9 +1,9 @@
 ---
 rfc: "0168-rack-cache-gem-port"
 title: "@blazetrails/rack-cache: vendor the rack-cache gem and port it as its own package"
-status: postponed
+status: active
 created: 2026-09-28
-updated: 2026-11-20
+updated: 2026-11-21
 owner: "@deanmarano"
 packages:
   - scripts
