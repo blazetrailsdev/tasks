@@ -238,10 +238,15 @@ unported-files rows.
 1. **Phase 1, test misses:** inflector loops, the safe-buffer loop,
    time-with-zone (which also moves the misplaced `hash` test), time-ext,
    residual singletons, the message-pack cache serializer, connection pool
-   (both stories), fetch race, logger `log_at` and option merger.
+   (both stories), fetch race, logger `log_at` and option merger. Also the
+   three test stories from RFC `0000-last-mile-parity`:
+   `null-store-prepends-local-cache`,
+   `notifications-tests-port-all-but-allocations` and
+   `json-gem-encoding-and-pathname-blank-tests`.
 2. **Phase 2, API misses:** the Enumerable relocation first, because it
    clears 27 misses on two files. Then callbacks, test-case and time helpers,
-   subscriber and output safety, and the two singleton stories.
+   subscriber and output safety, the two singleton stories, and
+   `activesupport-api-format-version-compact-blank-rescue-handlers`.
 3. **Phase 3, skips and receipts:** the three moved stub-burndown stories, the
    time-travel zone cases, multibyte bang methods, parallelization (with the
    threshold seat), dependencies and the syntax-error proxy, skip receipts

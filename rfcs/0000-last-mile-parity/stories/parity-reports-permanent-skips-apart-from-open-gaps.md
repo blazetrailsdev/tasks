@@ -38,6 +38,9 @@ CLAUDE.md section or operator ruling, or a per-test `tests:` row in
 - [ ] The website shows the permanent count beside each ratio, linked to `permanentSkips`.
 - [ ] `PERMANENT-SKIP: upstream` is recognised and applied to the fugit and mail tests above.
 - [ ] Unit tests in `scripts/test-compare/` and `scripts/parity/` cover a permanent skip, a `BLOCKED:` skip and an unported `tests:` row.
+- [ ] The activesupport time-travel subclass skip, which cites the closed
+      `date-time-now-and-date-today-allocate-receiver-subclass`, is retargeted to
+      `BLOCKED: time-date-class-methods-allocate-receiver-subclass`.
 
 ## Verification
 

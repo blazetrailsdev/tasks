@@ -28,6 +28,10 @@ address titles containing `\"` (`address_spec.rb`).
 - [ ] Each test sits under the describe matching its upstream context.
 - [ ] Loop titles are literal or extractor-readable; escaped-quote titles normalise on both sides.
 - [ ] `parity:test --missing` shows no mail rows; no test name is reworded.
+- [ ] If the operator rules the two unique-boundary specs
+      (`vendor/mail/2.8.1/lib/mail/mail.rb:243-260`) PERMANENT, reword their
+      receipt: red under MRI only in isolation, as `@@uniq` seeds at -6. If the
+      ruling is to port them, port them so they pass in isolation.
 
 ## Verification
 

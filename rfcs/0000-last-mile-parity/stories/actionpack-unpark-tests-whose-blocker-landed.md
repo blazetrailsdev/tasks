@@ -28,6 +28,10 @@ includes one module with route helpers" are skipped `BLOCKED:` on
 
 - [ ] Each test runs as the Rails body and passes, or its receipt is rewritten to name the real remaining blocker.
 - [ ] No actionpack `BLOCKED:` line cites a done or closed story.
+- [ ] "[APP] instance variable with same name as engine"
+      (`vendor/rails/v8.0.2/actionpack/test/dispatch/prefix_generation_test.rb`):
+      if the operator rules that the 2026-10-26 ruling covers it, its skip cites
+      that ruling under `PERMANENT-SKIP:`. Otherwise it is ported here.
 
 ## Verification
 

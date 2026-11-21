@@ -32,6 +32,11 @@ parked under a stale `BLOCKED:` line instead of a `tests:` row.
 - [ ] `mem_cache_store_test.rb`'s 9 tests leave `parity:test --missing`.
 - [ ] The 4 `cache_store_setting_test.rb` mem-cache arms become unported `tests:` rows citing `SOLID_STACK_ONLY` (`unported-files/activesupport.ts:8`), and their `BLOCKED:` skips are removed.
 - [ ] A unit test pins the scope mapping.
+- [ ] If the operator confirms, close `port-mem-cache-store-test` and
+      `memcachestore-descends-from-rack-session-dalli` with
+      `PERMANENT: Solid stack only (owner ruling 2026-10-17)`. If the ruling
+      goes the other way, drop the `mem_cache_store_test.rb` `tests:` row
+      instead, and add both stories to `last-mile-parity-gate`'s `deps`.
 
 ## Verification
 

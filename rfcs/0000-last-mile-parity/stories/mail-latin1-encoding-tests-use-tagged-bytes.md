@@ -27,7 +27,6 @@ and CLAUDE.md "A String has no encoding tag either" allows a tagged
 ## Acceptance criteria
 
 - [ ] The five specs run over tagged `Uint8Array` input and pass.
-- [ ] The unique-boundary receipt (`vendor/mail/2.8.1/lib/mail/mail.rb:243-260`) is reworded: red under MRI only in isolation (`@@uniq` seeds at -6).
 
 ## Verification
 
