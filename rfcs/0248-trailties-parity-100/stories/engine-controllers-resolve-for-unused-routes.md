@@ -1,6 +1,6 @@
 ---
 title: "engine-controllers-resolve-for-unused-routes"
-status: claimed
+status: ready
 updated: 2026-11-21
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-21T21:57:40Z"
-assignee: "app-generator-css-tailwind-writes-tailwindcss-vite"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

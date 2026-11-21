@@ -1,6 +1,6 @@
 ---
 title: "pg C extension scan reads rb_define_const"
-status: draft
+status: ready
 updated: 2026-11-21
 rfc: "0186-pg-gem-port"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "trailmap: promote an external issue to a draft story, owner-edited"
-status: ready
+status: blocked
 updated: 2026-11-21
 rfc: "0253-external-contributor-prs"
 cluster: external-review
@@ -13,9 +13,9 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-21T22:23:36Z"
+assignee: "trailmap-promote-external-issue-to-story"
+blocked-by: "waiting on ringo-draft-story-from-external-issue: ringo has no endpoint that drafts a story from an external issue (operator ruling: block, file prereq)"
 closed-reason: null
 ---
 

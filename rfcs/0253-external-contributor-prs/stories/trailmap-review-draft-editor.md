@@ -1,6 +1,6 @@
 ---
 title: "trailmap: edit, approve or discard each drafted review comment"
-status: ready
+status: blocked
 updated: 2026-11-21
 rfc: "0253-external-contributor-prs"
 cluster: external-review
@@ -13,9 +13,9 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-21T22:23:36Z"
+assignee: "trailmap-promote-external-issue-to-story"
+blocked-by: "waiting on trailmap-pr-diff-hunk-source: trailmap has no PR diff source for placing comments next to hunks (operator ruling: block, file prereq)"
 closed-reason: null
 ---
 

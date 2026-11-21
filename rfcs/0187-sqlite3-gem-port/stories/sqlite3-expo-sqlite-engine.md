@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: expo-sqlite becomes an engine under SQLite3::Database"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0187-sqlite3-gem-port"
 cluster: drivers

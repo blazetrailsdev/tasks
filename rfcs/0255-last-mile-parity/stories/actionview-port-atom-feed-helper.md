@@ -1,6 +1,6 @@
 ---
 title: "actionview-port-atom-feed-helper"
-status: claimed
+status: ready
 updated: 2026-11-21
 rfc: "0255-last-mile-parity"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-21T21:31:42Z"
-assignee: "action-pack-assertions-park-criterion-drops-builder-three"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

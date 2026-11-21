@@ -1,6 +1,6 @@
 ---
 title: "Mysql2::Result#each is ported and the result_spec #each examples run"
-status: draft
+status: ready
 updated: 2026-11-21
 rfc: "0254-mysql2-gem-port"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

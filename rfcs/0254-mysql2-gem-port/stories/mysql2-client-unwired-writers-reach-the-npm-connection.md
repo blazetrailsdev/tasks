@@ -1,6 +1,6 @@
 ---
 title: "mysql2-client-unwired-writers-reach-the-npm-connection"
-status: draft
+status: ready
 updated: 2026-11-21
 rfc: "0254-mysql2-gem-port"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 4
 pr: null
 claim: null
 assignee: null

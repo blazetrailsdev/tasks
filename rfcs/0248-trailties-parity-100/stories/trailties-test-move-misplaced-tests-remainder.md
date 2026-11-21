@@ -1,6 +1,6 @@
 ---
 title: "trailties-test-move-misplaced-tests-remainder"
-status: ready
+status: closed
 updated: 2026-11-21
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: the remaining 7 misplaced tests moved in trails#10522 alongside trailties-test-move-misplaced-tests"
 ---
 
 ## Context

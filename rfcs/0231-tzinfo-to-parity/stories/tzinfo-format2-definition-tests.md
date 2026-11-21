@@ -1,6 +1,6 @@
 ---
 title: "tzinfo-format2-definition-tests"
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0231-tzinfo-to-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10529
+claim: "2026-11-21T22:36:40Z"
+assignee: "activesupport-time-zone-passes-time-to-tzinfo"
 blocked-by: null
 closed-reason: null
 ---

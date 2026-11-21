@@ -1,6 +1,6 @@
 ---
 title: "rack-proxy: port the examples and the LIVE-gated smoke tests"
-status: claimed
+status: in-progress
 updated: 2026-11-21
 rfc: "0255-last-mile-parity"
 cluster: small-packages
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#10527
 claim: "2026-11-21T21:31:42Z"
 assignee: "action-pack-assertions-park-criterion-drops-builder-three"
 blocked-by: null

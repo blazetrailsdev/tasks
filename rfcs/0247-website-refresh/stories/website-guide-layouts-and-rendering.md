@@ -1,6 +1,6 @@
 ---
 title: "Write the Layouts and Rendering in Rails guide"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0247-website-refresh"
 cluster: website-docs

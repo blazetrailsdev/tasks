@@ -1,6 +1,6 @@
 ---
 title: "Port test_utils.rb's time_with_offset helpers and assert_equal_with_offset_and_timezone_offset"
-status: ready
+status: blocked
 updated: 2026-11-21
 rfc: "0231-tzinfo-to-parity"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-21T22:36:40Z"
+assignee: "activesupport-time-zone-passes-time-to-tzinfo"
+blocked-by: "waits on tzinfo-with-offset-classes (TimeWithOffset/DateTimeWithOffset/TimestampWithOffset unported)"
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: Database#busy_handler has no npm client counterpart; record or resolve the retries gap"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0187-sqlite3-gem-port"
 cluster: drivers

@@ -1,6 +1,6 @@
 ---
 title: "generated-app-constant-is-app-const-base-application"
-status: claimed
+status: in-progress
 updated: 2026-11-21
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10528
 claim: "2026-11-21T21:57:40Z"
 assignee: "app-generator-css-tailwind-writes-tailwindcss-vite"
 blocked-by: null

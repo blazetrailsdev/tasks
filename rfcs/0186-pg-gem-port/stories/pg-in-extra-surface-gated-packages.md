@@ -1,6 +1,6 @@
 ---
 title: "Enroll pg in the extra-surface gate's GATED_PACKAGES"
-status: draft
+status: ready
 updated: 2026-11-21
 rfc: "0186-pg-gem-port"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 20
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

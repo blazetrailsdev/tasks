@@ -1,6 +1,6 @@
 ---
 title: "Write the Rails Internationalization (I18n) API guide"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0247-website-refresh"
 cluster: website-docs

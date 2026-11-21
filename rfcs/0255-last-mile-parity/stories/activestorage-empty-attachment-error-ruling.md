@@ -1,6 +1,6 @@
 ---
 title: "activestorage-empty-attachment-error-ruling"
-status: claimed
+status: blocked
 updated: 2026-11-21
 rfc: "0255-last-mile-parity"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-11-21T21:31:42Z"
 assignee: "action-pack-assertions-park-criterion-drops-builder-three"
-blocked-by: null
+blocked-by: "operator decision: read a JS TypeError as NoMethodError in resolve_asset_source (RFC 0255 open question 2)"
 closed-reason: null
 ---
 
