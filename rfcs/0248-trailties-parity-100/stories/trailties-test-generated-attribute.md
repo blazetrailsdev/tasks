@@ -1,6 +1,6 @@
 ---
 title: "trailties: port generators/generated_attribute_test.rb"
-status: claimed
+status: in-progress
 updated: 2026-11-21
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: trails#10482
 claim: "2026-11-21T04:50:34Z"
 assignee: "trailties-credentials-read-lazily-not-at-boot"
 blocked-by: null
