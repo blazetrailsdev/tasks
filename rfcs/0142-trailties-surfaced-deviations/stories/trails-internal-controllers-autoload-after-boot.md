@@ -1,6 +1,6 @@
 ---
 title: "trails-internal-controllers-autoload-after-boot"
-status: draft
+status: in-progress
 updated: 2026-11-21
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10520
+claim: "2026-11-21T20:27:21Z"
+assignee: "trails-internal-controllers-autoload-after-boot"
 blocked-by: null
 closed-reason: null
 ---

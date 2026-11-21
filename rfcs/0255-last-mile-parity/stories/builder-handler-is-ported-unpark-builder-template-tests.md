@@ -1,6 +1,6 @@
 ---
 title: "actionpack: the .builder handler is ported; unpark the builder template tests"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0255-last-mile-parity"
 cluster: actionpack

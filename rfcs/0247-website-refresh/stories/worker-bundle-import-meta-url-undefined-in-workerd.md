@@ -1,6 +1,6 @@
 ---
 title: "trails reads import.meta.url / import.meta.dirname, which workerd leaves undefined"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0247-website-refresh"
 cluster: null

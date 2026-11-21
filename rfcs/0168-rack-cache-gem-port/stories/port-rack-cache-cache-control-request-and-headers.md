@@ -1,6 +1,6 @@
 ---
 title: "Port Rack::Cache::CacheControl, Rack::Cache::Request and Rack::Cache::Headers"
-status: ready
+status: claimed
 updated: 2026-11-21
 rfc: "0168-rack-cache-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 380
 priority: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-21T20:52:33Z"
+assignee: "port-rack-cache-cache-control-request-and-headers"
 blocked-by: null
 closed-reason: null
 ---

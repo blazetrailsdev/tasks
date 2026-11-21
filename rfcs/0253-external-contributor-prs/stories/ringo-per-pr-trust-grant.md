@@ -1,7 +1,7 @@
 ---
 title: "ringo + trailmap: owner promotes a single external PR to trusted"
-status: ready
-updated: 2026-11-20
+status: in-progress
+updated: 2026-11-21
 rfc: "0253-external-contributor-prs"
 cluster: trust-gate
 packages: []
@@ -9,9 +9,9 @@ deps: [ringo-classify-pr-trust-closed-by-default, trailmap-external-pr-inbox]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#190
+claim: "2026-11-21T20:26:34Z"
+assignee: "ringo-per-pr-trust-grant"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activesupport-api-misses-remainder-after-bundle"
-status: ready
+status: claimed
 updated: 2026-11-21
 rfc: "0246-activesupport-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-21T20:39:36Z"
+assignee: "retake-the-body-pin-floor-at-the-last-8-0-2-commit"
 blocked-by: null
 closed-reason: null
 ---

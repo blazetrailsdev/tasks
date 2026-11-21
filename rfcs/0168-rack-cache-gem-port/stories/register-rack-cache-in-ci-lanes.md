@@ -1,6 +1,6 @@
 ---
 title: "Register rack-cache in the CI lanes"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0168-rack-cache-gem-port"
 cluster: null

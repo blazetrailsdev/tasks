@@ -1,7 +1,7 @@
 ---
 title: "trailties: port middleware exceptions and session tests"
-status: ready
-updated: 2026-11-19
+status: claimed
+updated: 2026-11-21
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
 packages: [trailties]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-21T20:39:36Z"
+assignee: "retake-the-body-pin-floor-at-the-last-8-0-2-commit"
 blocked-by: null
 closed-reason: null
 ---

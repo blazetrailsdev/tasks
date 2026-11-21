@@ -1,6 +1,6 @@
 ---
 title: "tasks: drop the builder three from action-pack-assertions' park criterion"
-status: draft
+status: ready
 updated: 2026-11-21
 rfc: "0255-last-mile-parity"
 cluster: null
