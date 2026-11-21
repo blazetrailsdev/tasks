@@ -5,7 +5,8 @@ updated: 2026-11-21
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps:
+  - signal-exception-esignal-init-integer-arm
 deps-rfc: []
 est-loc: 40
 priority: null
