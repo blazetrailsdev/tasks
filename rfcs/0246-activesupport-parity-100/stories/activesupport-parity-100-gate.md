@@ -6,6 +6,10 @@ rfc: "0246-activesupport-parity-100"
 cluster: receipts
 packages: [activesupport, scripts]
 deps:
+  - activesupport-api-format-version-compact-blank-rescue-handlers
+  - null-store-prepends-local-cache
+  - notifications-tests-port-all-but-allocations
+  - json-gem-encoding-and-pathname-blank-tests
   - activesupport-api-callbacks-residue
   - activesupport-api-dependencies-and-syntax-error-proxy
   - activesupport-api-parallelization-permanence
