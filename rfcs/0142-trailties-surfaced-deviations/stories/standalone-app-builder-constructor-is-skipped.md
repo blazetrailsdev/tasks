@@ -1,7 +1,7 @@
 ---
 title: "AppBase#builder skips a standalone AppBuilder's own constructor (Reflect.construct)"
-status: in-progress
-updated: 2026-11-20
+status: done
+updated: 2026-11-21
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

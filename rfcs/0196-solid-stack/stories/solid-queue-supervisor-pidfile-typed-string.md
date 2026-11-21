@@ -1,7 +1,7 @@
 ---
 title: "Type SolidQueue.supervisorPidfile as string | null"
-status: draft
-updated: 2026-11-20
+status: ready
+updated: 2026-11-21
 rfc: "0196-solid-stack"
 cluster: null
 packages: []

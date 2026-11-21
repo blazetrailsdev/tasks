@@ -1,7 +1,7 @@
 ---
 title: "base-exposes-query-constraints"
-status: draft
-updated: 2026-11-20
+status: ready
+updated: 2026-11-21
 rfc: "0247-website-refresh"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "tasks-cli-refinements-unique-index"
-status: draft
-updated: 2026-11-20
+status: ready
+updated: 2026-11-21
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: null
 packages: []

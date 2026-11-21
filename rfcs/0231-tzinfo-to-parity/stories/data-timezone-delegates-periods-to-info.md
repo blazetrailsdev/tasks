@@ -1,7 +1,7 @@
 ---
 title: "data-timezone-delegates-periods-to-info"
 status: ready
-updated: 2026-11-20
+updated: 2026-11-21
 rfc: "0231-tzinfo-to-parity"
 cluster: null
 packages: []

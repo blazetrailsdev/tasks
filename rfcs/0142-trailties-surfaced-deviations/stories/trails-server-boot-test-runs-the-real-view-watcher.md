@@ -1,7 +1,7 @@
 ---
 title: "trails server is tested booting the boot-app with its real view watcher"
 status: ready
-updated: 2026-11-16
+updated: 2026-11-21
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

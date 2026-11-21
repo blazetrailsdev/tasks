@@ -1,7 +1,7 @@
 ---
 title: "delegate-missing-to-writer-arm-without-guard"
-status: draft
-updated: 2026-11-20
+status: ready
+updated: 2026-11-21
 rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: []

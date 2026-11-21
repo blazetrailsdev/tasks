@@ -1,7 +1,7 @@
 ---
 title: "Cloudflare Workers example: libSQL arm and a Terraform-managed Worker script"
-status: draft
-updated: 2026-11-19
+status: ready
+updated: 2026-11-21
 rfc: "0247-website-refresh"
 cluster: null
 packages: ["activerecord"]

@@ -1,7 +1,7 @@
 ---
 title: "trails server's view watcher moves to a Procfile.dev beside the server (bin/dev)"
 status: ready
-updated: 2026-11-16
+updated: 2026-11-21
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

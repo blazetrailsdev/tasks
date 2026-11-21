@@ -1,7 +1,7 @@
 ---
 title: "trailties: port routes, unused routes, help and info command tests"
-status: ready
-updated: 2026-11-19
+status: in-progress
+updated: 2026-11-21
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
 packages: [trailties]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10463
+claim: "2026-11-21T00:04:54Z"
+assignee: "trailties-test-application-test-runner-part-2"
 blocked-by: null
 closed-reason: null
 ---

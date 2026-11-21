@@ -1,7 +1,7 @@
 ---
 title: "trails-tsc types columns in skip_time_zone_conversion_for_attributes as naive Time"
-status: ready
-updated: 2026-11-16
+status: done
+updated: 2026-11-21
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10464
+claim: "2026-11-21T00:31:09Z"
+assignee: "rack-node-handler-runs-requests-on-a-puma-style-thread-pool"
 blocked-by: null
 closed-reason: null
 ---

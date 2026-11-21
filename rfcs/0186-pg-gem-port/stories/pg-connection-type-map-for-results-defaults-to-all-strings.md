@@ -1,7 +1,7 @@
 ---
 title: "pg-connection-type-map-for-results-defaults-to-all-strings"
-status: draft
-updated: 2026-11-20
+status: claimed
+updated: 2026-11-21
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-21T00:56:32Z"
+assignee: "activerecord-root-imports-without-pg-is-pinned"
 blocked-by: null
 closed-reason: null
 ---

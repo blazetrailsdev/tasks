@@ -1,7 +1,7 @@
 ---
 title: "Write the Active Record and PostgreSQL guide"
-status: in-progress
-updated: 2026-11-20
+status: done
+updated: 2026-11-21
 rfc: "0247-website-refresh"
 cluster: website-docs
 packages: []

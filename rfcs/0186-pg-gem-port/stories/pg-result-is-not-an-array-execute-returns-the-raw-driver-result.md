@@ -1,7 +1,7 @@
 ---
 title: "activerecord: PG::Result is not an Array; execute returns the driver's raw result"
-status: ready
-updated: 2026-11-18
+status: claimed
+updated: 2026-11-21
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 500
 priority: 8
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-21T00:56:32Z"
+assignee: "activerecord-root-imports-without-pg-is-pinned"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Inflections#define_acronym_regex_patterns joins acronym values as Rails does (no sort/escape)"
-status: ready
-updated: 2026-11-20
+status: done
+updated: 2026-11-21
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10461
+claim: "2026-11-21T00:17:39Z"
+assignee: "inflections-acronym-regex-joins-values-unsorted"
 blocked-by: null
 closed-reason: null
 ---

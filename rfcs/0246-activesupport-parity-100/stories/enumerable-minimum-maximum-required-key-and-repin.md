@@ -1,7 +1,7 @@
 ---
 title: "Enumerable#minimum/maximum take a required key; re-pin core_ext/enumerable.rb"
-status: in-progress
-updated: 2026-11-20
+status: done
+updated: 2026-11-21
 rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: []

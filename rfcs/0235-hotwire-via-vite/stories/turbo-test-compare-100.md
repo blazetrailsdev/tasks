@@ -1,7 +1,7 @@
 ---
 title: "turbo-rails test:compare reaches 100%"
-status: in-progress
-updated: 2026-11-20
+status: done
+updated: 2026-11-21
 rfc: "0235-hotwire-via-vite"
 cluster: null
 packages: ["turbo", "scripts"]

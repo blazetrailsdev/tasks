@@ -1,7 +1,7 @@
 ---
 title: "trails reads import.meta.url / import.meta.dirname, which workerd leaves undefined"
-status: draft
-updated: 2026-11-19
+status: ready
+updated: 2026-11-21
 rfc: "0247-website-refresh"
 cluster: null
 packages: ["activesupport", "trailties"]

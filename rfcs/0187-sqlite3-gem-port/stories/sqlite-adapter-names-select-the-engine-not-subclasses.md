@@ -1,7 +1,7 @@
 ---
 title: "activerecord: retire the six SQLite adapter subclasses; every SQLite adapter name registers SQLite3Adapter"
-status: draft
-updated: 2026-11-20
+status: ready
+updated: 2026-11-21
 rfc: "0187-sqlite3-gem-port"
 cluster: null
 packages: ["activerecord", "sqlite3"]

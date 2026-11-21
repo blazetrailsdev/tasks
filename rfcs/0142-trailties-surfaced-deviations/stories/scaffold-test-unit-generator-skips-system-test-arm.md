@@ -1,7 +1,7 @@
 ---
 title: "scaffold-test-unit-generator-skips-system-test-arm"
-status: in-progress
-updated: 2026-11-20
+status: done
+updated: 2026-11-21
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

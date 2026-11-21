@@ -1,7 +1,7 @@
 ---
 title: "rack-etag-digests-only-array-bodies"
-status: draft
-updated: 2026-11-18
+status: done
+updated: 2026-11-21
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10460
 claim: null
 assignee: null
 blocked-by: null

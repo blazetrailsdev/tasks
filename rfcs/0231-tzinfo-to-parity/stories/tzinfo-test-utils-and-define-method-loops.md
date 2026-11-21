@@ -1,7 +1,7 @@
 ---
 title: "tzinfo-test-utils-and-define-method-loops"
-status: ready
-updated: 2026-11-20
+status: claimed
+updated: 2026-11-21
 rfc: "0231-tzinfo-to-parity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-21T00:43:32Z"
+assignee: "tzinfo-data-definitions-generated"
 blocked-by: null
 closed-reason: null
 ---

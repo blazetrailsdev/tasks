@@ -1,7 +1,7 @@
 ---
 title: "sqlite3: port test_pragmas.rb's three encoding tests"
-status: draft
-updated: 2026-11-20
+status: ready
+updated: 2026-11-21
 rfc: "0187-sqlite3-gem-port"
 cluster: null
 packages: []

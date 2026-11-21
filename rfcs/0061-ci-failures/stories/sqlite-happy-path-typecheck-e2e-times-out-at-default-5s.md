@@ -1,6 +1,6 @@
 ---
 title: "sqlite-happy-path-typecheck-e2e-times-out-at-default-5s"
-status: draft
+status: done
 updated: 2026-11-21
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10462
+claim: "2026-11-21T00:28:17Z"
+assignee: "sqlite-happy-path-typecheck-e2e-times-out-at-default-5s"
 blocked-by: null
 closed-reason: null
 ---
