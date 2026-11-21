@@ -1,6 +1,6 @@
 ---
 title: "tse-template-render-checks-partial-locals"
-status: draft
+status: in-progress
 updated: 2026-11-21
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10490
+claim: "2026-11-21T13:23:58Z"
+assignee: "tse-template-render-checks-partial-locals"
 blocked-by: null
 closed-reason: null
 ---

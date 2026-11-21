@@ -1,6 +1,6 @@
 ---
 title: "Create packages/rack-cache as a published workspace package"
-status: ready
+status: done
 updated: 2026-11-21
 rfc: "0168-rack-cache-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["vendor-rack-cache-source"]
 deps-rfc: []
 est-loc: 180
 priority: 30
-pr: null
-claim: null
-assignee: null
+pr: trails#10486
+claim: "2026-11-21T13:04:35Z"
+assignee: "rack-cache-package-skeleton"
 blocked-by: null
 closed-reason: null
 ---

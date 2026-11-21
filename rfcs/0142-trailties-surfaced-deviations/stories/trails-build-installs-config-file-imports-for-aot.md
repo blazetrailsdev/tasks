@@ -1,6 +1,6 @@
 ---
 title: "trails build installs routes, environments, initializers and config file imports so an AOT build sees them"
-status: claimed
+status: done
 updated: 2026-11-21
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#9863
 claim: "2026-11-21T12:38:36Z"
 assignee: "rack-node-handler-runs-requests-on-a-puma-style-thread-pool"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "solid-queue: fork child boots within Rails' test timeouts"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0196-solid-stack"
 cluster: null

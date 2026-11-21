@@ -1,7 +1,7 @@
 ---
 title: "activerecord: PG result type map answers a String for an OID with no coder"
-status: ready
-updated: 2026-11-18
+status: done
+updated: 2026-11-21
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: 8
-pr: null
-claim: null
-assignee: null
+pr: trails#10492
+claim: "2026-11-21T13:17:35Z"
+assignee: "enroll-pg-in-rails-private-jsdoc"
 blocked-by: null
 closed-reason: null
 ---

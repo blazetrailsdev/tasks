@@ -1,6 +1,6 @@
 ---
 title: "Mysql2::Client is a class: protected constructor plus static async new, no run-time decorator"
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0254-mysql2-gem-port"
 cluster: client
@@ -9,9 +9,9 @@ deps: ["mysql2-client-result-statement-move-to-the-package"]
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10491
+claim: "2026-11-21T13:04:24Z"
+assignee: "mysql2-client-result-statement-move-to-the-package"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Enroll packages/pg/lib in rails-private-jsdoc"
-status: draft
+status: done
 updated: 2026-11-21
 rfc: "0186-pg-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10492
+claim: "2026-11-21T13:17:35Z"
+assignee: "enroll-pg-in-rails-private-jsdoc"
 blocked-by: null
 closed-reason: null
 ---

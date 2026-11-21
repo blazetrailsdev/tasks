@@ -1,6 +1,6 @@
 ---
 title: "Move Mysql2::Client, Result and Statement into @blazetrails/mysql2; bind casting moves to the adapter"
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0254-mysql2-gem-port"
 cluster: package
@@ -9,9 +9,9 @@ deps: ["mysql2-package-and-vendor-source"]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10491
+claim: "2026-11-21T13:04:24Z"
+assignee: "mysql2-client-result-statement-move-to-the-package"
 blocked-by: null
 closed-reason: null
 ---

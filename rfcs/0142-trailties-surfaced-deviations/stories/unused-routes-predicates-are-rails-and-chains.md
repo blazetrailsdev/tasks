@@ -1,6 +1,6 @@
 ---
 title: "UnusedRoutes template_missing? / action_missing? are Rails' && expressions, not guarded returns"
-status: claimed
+status: done
 updated: 2026-11-21
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#10489
 claim: "2026-11-21T12:38:36Z"
 assignee: "rack-node-handler-runs-requests-on-a-puma-style-thread-pool"
 blocked-by: null

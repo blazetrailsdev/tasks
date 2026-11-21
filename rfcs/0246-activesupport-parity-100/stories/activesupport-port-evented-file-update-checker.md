@@ -1,6 +1,6 @@
 ---
 title: "activesupport-port-evented-file-update-checker"
-status: ready
+status: claimed
 updated: 2026-11-21
 rfc: "0246-activesupport-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-21T13:43:35Z"
+assignee: "activesupport-api-misses-remainder-after-bundle"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "postgresql-bulk-change-query-count-one-short"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0123-blocked-convergence-holding"
 cluster: null

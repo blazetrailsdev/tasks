@@ -1,6 +1,6 @@
 ---
 title: "pg-ruby-api-manifest-reads-ext-c-classes"
-status: draft
+status: ready
 updated: 2026-11-21
 rfc: "0186-pg-gem-port"
 cluster: null

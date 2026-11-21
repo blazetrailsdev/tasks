@@ -1,6 +1,6 @@
 ---
 title: "solid-queue parity:test sweep: remaining model/unit/integration tests and assertion mismatches"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0196-solid-stack"
 cluster: null
