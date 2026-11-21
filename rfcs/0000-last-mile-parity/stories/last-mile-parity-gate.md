@@ -63,3 +63,15 @@ permanent.
 - [ ] `parity:packages` shows each in-scope package at 100% of portable.
 - [ ] Each package's permanent count equals its `PERMANENT-SKIP` plus unported `tests:` rows.
 - [ ] No `BLOCKED:` line cites a done or closed story; no `PERMANENT-SKIP:` lacks a CLAUDE.md or ruling citation.
+
+## Definition of done
+
+Widening a register, converting a portable skip to `PERMANENT-SKIP:` without a
+ratified CLAUDE.md section or operator ruling, or renaming a test does not
+close this story.
+
+## Verification
+
+```sh
+pnpm parity:packages
+```

@@ -20,10 +20,16 @@ closed-reason: null
 
 `parity:api` lists three rails-dom-testing members on actionview:
 `assert_size_match!` ×2 and `HTMLSelector.context`
-(`rails-dom-testing` `lib/rails/dom/testing/assertions/selector_assertions.rb`,
-`.../html_selector.rb`).
+(`vendor/rails-dom-testing/v2.2.0/lib/rails/dom/testing/assertions/selector_assertions.rb`,
+`vendor/rails-dom-testing/v2.2.0/lib/rails/dom/testing/assertions/selector_assertions/html_selector.rb`).
 
 ## Acceptance criteria
 
 - [ ] All three are ported at their Rails names and files.
 - [ ] actionview shows 0 API missing.
+
+## Verification
+
+```sh
+pnpm parity:api --missing --package actionview  # 0 rows
+```

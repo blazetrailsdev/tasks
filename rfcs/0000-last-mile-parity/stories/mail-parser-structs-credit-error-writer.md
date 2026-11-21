@@ -26,3 +26,9 @@ expose or the extractor does not credit.
 
 - [ ] Each parser's Struct exposes `error` read and write, and `parity:api` credits `error=` on all 10.
 - [ ] mail's API missing count is 0.
+
+## Verification
+
+```sh
+pnpm parity:api --missing --package mail  # 0 rows
+```

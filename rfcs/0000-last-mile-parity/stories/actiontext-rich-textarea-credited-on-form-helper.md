@@ -28,3 +28,9 @@ exist but are not where the extractor looks.
 
 - [ ] Both methods are credited at `tag_helper.rb` on `parity:api`.
 - [ ] actiontext shows 0 API missing; the pattern-matching test stays PERMANENT.
+
+## Verification
+
+```sh
+pnpm parity:api --missing --package actiontext  # 0 rows
+```

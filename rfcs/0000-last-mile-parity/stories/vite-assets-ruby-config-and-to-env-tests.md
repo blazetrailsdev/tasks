@@ -29,3 +29,9 @@ vite-trails already reads (`packages/vite-trails/lib/config.ts:10-17`,
 
 - [ ] `loadRubyConfig` calls `rbFLoad` on the config file, as Rails' `load`.
 - [ ] Both tests run and pass, and the receipts are removed.
+
+## Verification
+
+```sh
+pnpm vitest run packages/vite-assets && pnpm parity:test --missing --package vite-assets
+```

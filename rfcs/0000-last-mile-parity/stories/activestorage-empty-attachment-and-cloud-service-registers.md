@@ -35,3 +35,9 @@ of 2026-10-28.
 - [ ] The three empty-attachment tests run and pass with the rescue receipted `@inventedArm` — or, if the operator refuses, are `PERMANENT-SKIP:` citing the ruling.
 - [ ] The 7 cloud-service tests are unported `tests:` rows citing RFC 0209, and their skips are removed.
 - [ ] `parity:test` shows activestorage at 100% of portable.
+
+## Verification
+
+```sh
+pnpm parity:test --missing --package activestorage
+```

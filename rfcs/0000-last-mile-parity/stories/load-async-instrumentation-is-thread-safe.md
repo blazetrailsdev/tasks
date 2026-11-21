@@ -27,3 +27,9 @@ ruby-compat `Thread`s.
 
 - [ ] The test is ported as the Rails body and passes on all three adapters.
 - [ ] If an event payload leaks across threads, fix `Instrumenter` / the async executor, not the test.
+
+## Verification
+
+```sh
+pnpm vitest run packages/activerecord/test/cases/relation/load-async.test.ts
+```

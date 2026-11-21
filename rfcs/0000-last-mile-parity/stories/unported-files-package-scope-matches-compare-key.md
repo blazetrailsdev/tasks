@@ -32,3 +32,9 @@ parked under a stale `BLOCKED:` line instead of a `tests:` row.
 - [ ] `mem_cache_store_test.rb`'s 9 tests leave `parity:test --missing`.
 - [ ] The 4 `cache_store_setting_test.rb` mem-cache arms become unported `tests:` rows citing `SOLID_STACK_ONLY` (`unported-files/activesupport.ts:8`), and their `BLOCKED:` skips are removed.
 - [ ] A unit test pins the scope mapping.
+
+## Verification
+
+```sh
+pnpm parity:test --missing --package actionpack  # no mem_cache_store rows
+```

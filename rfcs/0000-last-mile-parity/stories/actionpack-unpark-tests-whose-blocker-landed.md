@@ -28,3 +28,9 @@ includes one module with route helpers" are skipped `BLOCKED:` on
 
 - [ ] Each test runs as the Rails body and passes, or its receipt is rewritten to name the real remaining blocker.
 - [ ] No actionpack `BLOCKED:` line cites a done or closed story.
+
+## Verification
+
+```sh
+pnpm parity:test --package actionpack
+```

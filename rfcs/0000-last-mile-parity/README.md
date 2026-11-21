@@ -335,6 +335,8 @@ Each of these is a story acceptance item, not a separate story:
 
 ## Verification
 
+`last-mile-parity-gate` closes the RFC when all of these hold:
+
 - Each in-scope package except activesupport (which 0246 gates) reports
   100% of portable on `parity:test` and 0 missing on `parity:api`, with
   mysql2 left to RFC 0254 and rack-cache to RFC 0168.
@@ -364,3 +366,6 @@ Each of these is a story acceptance item, not a separate story:
 
 - 2026-11-20: initial RFC
 - 2026-11-20: RFC 0168 reactivated; rack-cache open question resolved
+- 2026-11-20: stories filed: 19 here, 4 into RFC 0246 (`activesupport-api-format-version-compact-blank-rescue-handlers`,
+  `null-store-prepends-local-cache`, `notifications-tests-port-all-but-allocations`,
+  `json-gem-encoding-and-pathname-blank-tests`)

@@ -30,3 +30,9 @@ The row `scripts/parity/unported-files/actionview.ts:30-38` is stale, and
 - [ ] The `builder.rb` unported-files row is deleted; the `atom_feed_helper.rb` row is re-checked and deleted or re-reasoned.
 - [ ] The 14 tests run as the Rails bodies with `.builder` fixtures and pass.
 - [ ] `action-pack-assertions-port-render-file-tests-and-park-the-builder-three`'s park criterion is rewritten to drop the builder half.
+
+## Verification
+
+```sh
+pnpm parity:test --missing --package actionpack && grep -c "builder" scripts/parity/unported-files/actionview.ts
+```

@@ -30,3 +30,9 @@ describe that does not match its Rails class, so it is not credited.
 - [ ] Both tests run as the Rails bodies and pass.
 - [ ] The misplaced test moves under the describe matching its Rails test class, name unchanged.
 - [ ] `parity:test` shows actionmailbox with no skipped or missing tests.
+
+## Verification
+
+```sh
+pnpm vitest run packages/actionmailbox/test/controllers/ingresses && pnpm parity:test --missing --package actionmailbox
+```

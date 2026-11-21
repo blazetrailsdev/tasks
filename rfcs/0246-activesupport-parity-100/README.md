@@ -299,3 +299,7 @@ unported-files rows.
   with real member lists, every permanence candidate names a real section or
   an open question, and the Rollout matches story ownership. The baseline
   re-measure story is dropped because this revision is the re-measure.
+- 2026-11-20: four stories added from RFC `0000-last-mile-parity`:
+  `activesupport-api-format-version-compact-blank-rescue-handlers`,
+  `null-store-prepends-local-cache`, `notifications-tests-port-all-but-allocations`,
+  `json-gem-encoding-and-pathname-blank-tests`.

@@ -28,3 +28,9 @@ closed-reason: null
 
 - [ ] Both aliases are declared where Rails declares them and credited on `parity:api`.
 - [ ] `test_case.rb` shows 0 API missing.
+
+## Verification
+
+```sh
+pnpm parity:api --missing --package actionpack
+```

@@ -38,3 +38,9 @@ CLAUDE.md section or operator ruling, or a per-test `tests:` row in
 - [ ] The website shows the permanent count beside each ratio, linked to `permanentSkips`.
 - [ ] `PERMANENT-SKIP: upstream` is recognised and applied to the fugit and mail tests above.
 - [ ] Unit tests in `scripts/test-compare/` and `scripts/parity/` cover a permanent skip, a `BLOCKED:` skip and an unported `tests:` row.
+
+## Verification
+
+```sh
+pnpm vitest run scripts/test-compare scripts/parity && pnpm parity:test
+```

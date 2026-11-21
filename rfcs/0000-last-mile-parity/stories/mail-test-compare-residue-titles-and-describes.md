@@ -28,3 +28,9 @@ address titles containing `\"` (`address_spec.rb`).
 - [ ] Each test sits under the describe matching its upstream context.
 - [ ] Loop titles are literal or extractor-readable; escaped-quote titles normalise on both sides.
 - [ ] `parity:test --missing` shows no mail rows; no test name is reworded.
+
+## Verification
+
+```sh
+pnpm parity:test --missing --package mail  # 0 rows
+```

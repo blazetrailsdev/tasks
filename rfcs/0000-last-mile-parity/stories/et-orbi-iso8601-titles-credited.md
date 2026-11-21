@@ -26,3 +26,9 @@ the call, so the Ruby `#{i.inspect}` titles go unmatched.
 
 - [ ] Either the titles are written as literals the extractor reads, or the extractor learns `rbInspect` over a literal loop array.
 - [ ] `parity:test` credits all 7; no test name changes.
+
+## Verification
+
+```sh
+pnpm parity:test --missing --package et-orbi  # 0 rows
+```

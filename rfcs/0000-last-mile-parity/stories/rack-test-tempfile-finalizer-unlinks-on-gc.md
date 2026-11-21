@@ -29,3 +29,9 @@ forced `gc()` (`v8.setFlagsFromString("--expose-gc")`) removed the file in
 - [ ] ruby-compat's Tempfile registers its unlink with a `FinalizationRegistry` where Ruby calls `define_finalizer`.
 - [ ] The rack-test spec runs and passes, forcing `gc()` the way the spec forces `GC.start`.
 - [ ] The truncated `PERMANENT-SKIP:` receipt is removed.
+
+## Verification
+
+```sh
+pnpm vitest run packages/rack-test packages/ruby-compat/test/tempfile.trails.test.ts
+```
