@@ -1,7 +1,7 @@
 ---
 title: "postgresql-bulk-change-query-count-one-short"
-status: claimed
-updated: 2026-11-20
+status: ready
+updated: 2026-11-21
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: "2026-11-20T19:27:38Z"
-assignee: "bird-total-count-async-after-initialize"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

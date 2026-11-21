@@ -1,7 +1,7 @@
 ---
 title: "btwhooks: stop persisting refine reports, read refinements and audits from trailmap"
-status: claimed
-updated: 2026-11-20
+status: ready
+updated: 2026-11-21
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: writers
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: "2026-11-20T14:02:39Z"
-assignee: "btwhooks-reads-refinements-and-audits-from-trailmap"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "BroadcastLogger: port initialize_copy, drop invented dup arm"
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#10483
+claim: "2026-11-21T10:02:36Z"
+assignee: "ordered-hash-each-receipts-bare-or-inherited"
 blocked-by: null
 closed-reason: null
 ---
