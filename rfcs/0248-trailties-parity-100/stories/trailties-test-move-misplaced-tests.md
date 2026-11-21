@@ -41,4 +41,7 @@ Paths are under `packages/trailties/test/`. Moves are `git mv` where a whole fil
 ## Acceptance criteria
 
 - [ ] `parity:test -- --package trailties` reports 0 misplaced.
-- [ ] No test body changes beyond imports and describe names.
+- [ ] No test body changes beyond imports and describe names, except where a moved
+      test becomes name-matched and the assertion ratchet surfaces its hidden
+      assertion debt: that debt is converged onto the Rails test in the same PR
+      (operator decision, 2026-11-21, trails#10522).
