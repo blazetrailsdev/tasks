@@ -5,7 +5,8 @@ updated: 2026-11-21
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - default-middleware-stack-omits-rack-cache
 deps-rfc: []
 est-loc: null
 priority: null
