@@ -1,6 +1,6 @@
 ---
 title: "trailties-test-console-and-dbconsole-pty"
-status: draft
+status: closed
 updated: 2026-11-21
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: duplicate of trailties-test-console-and-dbconsole, which stays open for the application/console and dbconsole PTY tests"
 ---
 
 ## Context

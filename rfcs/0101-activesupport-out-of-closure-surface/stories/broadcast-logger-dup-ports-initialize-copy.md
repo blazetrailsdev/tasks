@@ -1,6 +1,6 @@
 ---
 title: "BroadcastLogger: port initialize_copy, drop invented dup arm"
-status: draft
+status: ready
 updated: 2026-11-21
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

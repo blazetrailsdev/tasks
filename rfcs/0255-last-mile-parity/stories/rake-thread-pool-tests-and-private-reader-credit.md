@@ -1,7 +1,7 @@
 ---
 title: "rake: port the four thread-pool tests and credit private_reader"
 status: draft
-updated: 2026-11-20
+updated: 2026-11-21
 rfc: "0255-last-mile-parity"
 cluster: small-packages
 packages: [rake]

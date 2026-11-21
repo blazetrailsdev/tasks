@@ -1,6 +1,6 @@
 ---
 title: "pg-type-map-by-oid-default-type-map-is-all-strings"
-status: ready
+status: claimed
 updated: 2026-11-21
 rfc: "0186-pg-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-21T03:45:34Z"
+assignee: "pg-adapter-disconnect-keeps-timestamp-decoder-as-rails"
 blocked-by: null
 closed-reason: null
 ---

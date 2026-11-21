@@ -1,6 +1,6 @@
 ---
 title: "SafeBuffer strRange: mirror rb_str_subpat_set's raises, negative and named groups"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null

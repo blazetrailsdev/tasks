@@ -1,7 +1,7 @@
 ---
 title: "last mile: every in-scope package at 100% of portable"
 status: draft
-updated: 2026-11-20
+updated: 2026-11-21
 rfc: "0255-last-mile-parity"
 cluster: measurement
 packages: [scripts]

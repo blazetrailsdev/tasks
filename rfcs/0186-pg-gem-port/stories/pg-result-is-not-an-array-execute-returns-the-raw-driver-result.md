@@ -1,6 +1,6 @@
 ---
 title: "activerecord: PG::Result is not an Array; execute returns the driver's raw result"
-status: ready
+status: claimed
 updated: 2026-11-21
 rfc: "0186-pg-gem-port"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 500
 priority: 8
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-21T03:45:34Z"
+assignee: "pg-adapter-disconnect-keeps-timestamp-decoder-as-rails"
 blocked-by: null
 closed-reason: null
 ---

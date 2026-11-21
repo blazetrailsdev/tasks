@@ -1,6 +1,6 @@
 ---
 title: "trailties-multiple-applications-rake-tasks-and-isolate-namespace"
-status: draft
+status: ready
 updated: 2026-11-21
 rfc: "0248-trailties-parity-100"
 cluster: null

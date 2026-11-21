@@ -1,6 +1,6 @@
 ---
 title: "Vendor the rack-cache gem at v1.17.0 so every Rack::Cache citation resolves"
-status: claimed
+status: in-progress
 updated: 2026-11-21
 rfc: "0168-rack-cache-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 30
-pr: null
+pr: trails#10475
 claim: "2026-11-21T02:53:33Z"
 assignee: "vendor-rack-cache-source"
 blocked-by: null

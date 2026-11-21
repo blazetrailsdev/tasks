@@ -1,7 +1,7 @@
 ---
 title: "actionpack: TestCase's original_* aliases live on Live"
 status: draft
-updated: 2026-11-20
+updated: 2026-11-21
 rfc: "0255-last-mile-parity"
 cluster: actionpack
 packages: [actionpack]

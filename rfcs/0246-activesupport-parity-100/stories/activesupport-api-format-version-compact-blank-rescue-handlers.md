@@ -1,7 +1,7 @@
 ---
 title: "activesupport: port format_version, compact_blank! and rescue_handlers"
 status: draft
-updated: 2026-11-20
+updated: 2026-11-21
 rfc: "0246-activesupport-parity-100"
 cluster: api-residuals
 packages: [activesupport]

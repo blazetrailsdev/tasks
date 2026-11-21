@@ -1,6 +1,6 @@
 ---
 title: "TimeWithZone#time: type as Time | DateTime, drop as Time casts"
-status: draft
+status: ready
 updated: 2026-11-21
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

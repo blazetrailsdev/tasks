@@ -1,6 +1,6 @@
 ---
 title: "trailties: port console and dbconsole tests"
-status: in-progress
+status: ready
 updated: 2026-11-21
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: trails#10473
-claim: "2026-11-21T02:14:33Z"
-assignee: "trailties-test-console-and-dbconsole"
+pr: null
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

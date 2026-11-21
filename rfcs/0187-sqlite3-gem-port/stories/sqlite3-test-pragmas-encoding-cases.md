@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: port test_pragmas.rb's three encoding tests"
-status: ready
+status: claimed
 updated: 2026-11-21
 rfc: "0187-sqlite3-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-21T03:58:34Z"
+assignee: "sqlite3-busy-timeout-pragma-is-unverified-off-better-sqlite3"
 blocked-by: null
 closed-reason: null
 ---

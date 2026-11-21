@@ -1,6 +1,6 @@
 ---
 title: "Create @blazetrails/mysql2 over the npm mysql2 client and move Mysql2::Error into it"
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0254-mysql2-gem-port"
 cluster: package
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10477
+claim: "2026-11-21T03:32:33Z"
+assignee: "mysql2-package-and-vendor-source"
 blocked-by: null
 closed-reason: null
 ---

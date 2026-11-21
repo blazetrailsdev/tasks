@@ -1,6 +1,6 @@
 ---
 title: "data-timezone-delegates-periods-to-info"
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0231-tzinfo-to-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10476
+claim: "2026-11-21T03:06:35Z"
+assignee: "data-timezone-delegates-periods-to-info"
 blocked-by: null
 closed-reason: null
 ---
