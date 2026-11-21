@@ -2,7 +2,7 @@
 title: "converge-code-generator-encrypted-config-file-update-checker-calls"
 status: blocked
 updated: 2026-11-20
-rfc: "0101-activesupport-out-of-closure-surface"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
