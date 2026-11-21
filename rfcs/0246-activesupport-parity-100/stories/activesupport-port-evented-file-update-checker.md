@@ -5,7 +5,8 @@ updated: 2026-11-21
 rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - port-listen-gem-for-evented-file-update-checker
 deps-rfc: []
 est-loc: null
 priority: null
