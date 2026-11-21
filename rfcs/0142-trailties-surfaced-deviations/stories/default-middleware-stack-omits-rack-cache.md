@@ -39,7 +39,8 @@ trails' `packages/trailties/src/application/default-middleware-stack.ts`
 **Prerequisites, now tracked.** `Rack::Cache` itself is the
 `rack-cache-gem-port` RFC (`@blazetrails/rack-cache`, rack-cache 1.17.0).
 This story depends on `port-rack-cache-context`, which ports `Rack::Cache.new`
-and `Context`. The `rails:/` stores are
+(`vendor/rack-cache/v1.17.0/lib/rack/cache.rb:42-44`) and `Context`
+(`vendor/rack-cache/v1.17.0/lib/rack/cache/context.rb:9`). The `rails:/` stores are
 `0164-actiondispatch-http-parity/port-rails-meta-and-entity-stores`, a
 dependency too.
 
