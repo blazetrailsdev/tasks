@@ -5,7 +5,8 @@ updated: 2026-11-21
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - tse-generators-class-path-is-tse-not-acronym
 deps-rfc: []
 est-loc: 60
 priority: null
