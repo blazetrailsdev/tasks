@@ -18,7 +18,7 @@ related-rfcs:
   - "0164-actiondispatch-http-parity"
   - "0142-trailties-surfaced-deviations"
   - "0158-activesupport-assertion-surfaced-port-bugs"
-priority: 30
+priority: 2
 ---
 
 # RFC 0168 — `@blazetrails/rack-cache`

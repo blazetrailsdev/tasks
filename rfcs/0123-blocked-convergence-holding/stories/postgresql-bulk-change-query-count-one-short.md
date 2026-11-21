@@ -1,6 +1,6 @@
 ---
 title: "postgresql-bulk-change-query-count-one-short"
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0123-blocked-convergence-holding"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10485
+claim: "2026-11-21T12:51:34Z"
+assignee: "postgresql-bulk-change-query-count-one-short"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "actionmailbox: unpark the Postmark and Sendgrid non-UTF-8 ingress tests"
-status: draft
+status: ready
 updated: 2026-11-21
 rfc: "0255-last-mile-parity"
 cluster: small-packages

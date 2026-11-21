@@ -1,6 +1,6 @@
 ---
 title: "pg-type-map-by-oid-default-type-map-is-all-strings"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0186-pg-gem-port"
 cluster: null

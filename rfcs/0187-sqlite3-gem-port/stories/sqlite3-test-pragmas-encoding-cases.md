@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: port test_pragmas.rb's three encoding tests"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0187-sqlite3-gem-port"
 cluster: null

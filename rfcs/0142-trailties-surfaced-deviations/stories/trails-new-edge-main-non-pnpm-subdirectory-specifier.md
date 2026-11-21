@@ -1,6 +1,6 @@
 ---
 title: "trails new --edge/--main under npm/yarn/bun reach the package subdirectory"
-status: ready
+status: blocked
 updated: 2026-11-21
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-21T12:38:36Z"
+assignee: "rack-node-handler-runs-requests-on-a-puma-style-thread-pool"
+blocked-by: "npm has no git-subdirectory specifier and yarn/bun are not valid package managers; needs npm-edge-main-needs-published-prerelease-packages (a publish pipeline)"
 closed-reason: null
 ---
 

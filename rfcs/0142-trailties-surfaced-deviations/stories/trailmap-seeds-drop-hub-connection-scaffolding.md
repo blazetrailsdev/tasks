@@ -1,6 +1,6 @@
 ---
 title: "trailmap db/seeds.ts drops its Hub.establishConnection scaffolding once it vendors trails#8768"
-status: ready
+status: done
 updated: 2026-11-21
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#57
+claim: "2026-11-21T12:38:36Z"
+assignee: "rack-node-handler-runs-requests-on-a-puma-style-thread-pool"
 blocked-by: null
 closed-reason: null
 ---

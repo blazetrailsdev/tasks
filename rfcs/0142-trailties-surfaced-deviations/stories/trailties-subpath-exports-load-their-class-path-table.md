@@ -1,7 +1,7 @@
 ---
 title: "trailties subpath exports load their class-path table"
-status: ready
-updated: 2026-11-16
+status: claimed
+updated: 2026-11-21
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-21T12:38:36Z"
+assignee: "rack-node-handler-runs-requests-on-a-puma-style-thread-pool"
 blocked-by: null
 closed-reason: null
 ---

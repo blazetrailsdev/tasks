@@ -1,6 +1,6 @@
 ---
 title: "solid-queue parity:test sweep: remaining model/unit/integration tests and assertion mismatches"
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0196-solid-stack"
 cluster: null
@@ -22,9 +22,9 @@ deps:
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10484
+claim: "2026-11-21T12:49:28Z"
+assignee: "solid-queue-test-parity-sweep-v1-7-2"
 blocked-by: null
 closed-reason: null
 ---

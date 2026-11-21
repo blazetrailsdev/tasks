@@ -1,6 +1,6 @@
 ---
 title: "mail: port the latin-1 encoding tests over tagged Uint8Arrays"
-status: draft
+status: ready
 updated: 2026-11-21
 rfc: "0255-last-mile-parity"
 cluster: mail

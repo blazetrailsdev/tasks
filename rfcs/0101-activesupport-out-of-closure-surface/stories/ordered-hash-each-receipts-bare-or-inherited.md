@@ -1,6 +1,6 @@
 ---
 title: "OrderedHash each* overrides: inherit from ruby-compat Hash or bare PERMANENT receipts"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null

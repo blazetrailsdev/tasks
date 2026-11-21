@@ -48,6 +48,7 @@ clusters:
   - actionpack
   - mail
   - activesupport
+priority: 3
 ---
 
 # RFC 0255 — Last mile to 100% parity for the near-complete packages

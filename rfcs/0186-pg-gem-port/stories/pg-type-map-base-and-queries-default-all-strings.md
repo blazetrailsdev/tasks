@@ -1,6 +1,6 @@
 ---
 title: "pg-type-map-base-and-queries-default-all-strings"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0186-pg-gem-port"
 cluster: null

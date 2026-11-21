@@ -1,6 +1,6 @@
 ---
 title: "actionpack: unpark tests whose BLOCKED story is done or closed"
-status: draft
+status: ready
 updated: 2026-11-21
 rfc: "0255-last-mile-parity"
 cluster: actionpack

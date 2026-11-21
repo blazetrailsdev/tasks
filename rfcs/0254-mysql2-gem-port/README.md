@@ -21,6 +21,7 @@ related-rfcs:
   - "0100-package-size-and-publish-shape"
   - "0156-parity-beyond-name-presence"
   - "0234-no-void-promises"
+priority: 3
 ---
 
 # RFC 0254 — mysql2 gem wrapper
