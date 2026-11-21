@@ -5,7 +5,10 @@ updated: 2026-11-21
 rfc: "0253-external-contributor-prs"
 cluster: external-review
 packages: []
-deps: [ringo-emits-external-issue-events, trailmap-external-pr-inbox]
+deps:
+  - ringo-emits-external-issue-events
+  - trailmap-external-pr-inbox
+  - ringo-draft-story-from-external-issue
 deps-rfc: []
 est-loc: 250
 priority: null
