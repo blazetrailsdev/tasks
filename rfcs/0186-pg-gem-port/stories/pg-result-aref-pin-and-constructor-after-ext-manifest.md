@@ -1,6 +1,6 @@
 ---
 title: "pg: restore PG::Result#[] operator pin and pair the constructor once the manifest reads ext C classes"
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0186-pg-gem-port"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10513
+claim: "2026-11-21T18:42:31Z"
+assignee: "pg-result-aref-pin-and-constructor-after-ext-manifest"
 blocked-by: null
 closed-reason: null
 ---

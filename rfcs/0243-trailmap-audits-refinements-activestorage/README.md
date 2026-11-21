@@ -1,9 +1,9 @@
 ---
 rfc: "0243-trailmap-audits-refinements-activestorage"
 title: "trailmap: audits and RFC refinements are records with an Active Storage body"
-status: active
+status: closed
 created: 2026-11-17
-updated: 2026-11-18
+updated: 2026-11-21
 owner: "@deanmarano"
 packages:
   - activestorage

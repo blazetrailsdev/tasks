@@ -1,6 +1,6 @@
 ---
 title: "trailties: port generators_test.rb and the generators lookup tests"
-status: claimed
+status: done
 updated: 2026-11-21
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
+pr: trails#10511
 claim: "2026-11-21T17:24:32Z"
 assignee: "trailties-multiple-applications-rake-tasks-and-isolate-namespace"
 blocked-by: null

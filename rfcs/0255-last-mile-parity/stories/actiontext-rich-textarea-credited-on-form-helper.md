@@ -1,6 +1,6 @@
 ---
 title: "actiontext: credit rich_textarea / rich_text_area at tag_helper.rb"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0255-last-mile-parity"
 cluster: small-packages

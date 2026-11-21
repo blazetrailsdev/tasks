@@ -1,6 +1,6 @@
 ---
 title: "trailties: port console and dbconsole tests"
-status: claimed
+status: ready
 updated: 2026-11-21
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: "2026-11-21T17:24:32Z"
-assignee: "trailties-multiple-applications-rake-tasks-and-isolate-namespace"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

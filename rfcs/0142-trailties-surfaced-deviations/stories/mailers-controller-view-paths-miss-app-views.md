@@ -1,6 +1,6 @@
 ---
 title: "mailers-controller-view-paths-miss-app-views"
-status: ready
+status: blocked
 updated: 2026-11-21
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-21T18:16:30Z"
+assignee: "mailers-controller-view-paths-miss-app-views"
+blocked-by: "needs trails-internal-controllers-autoload-after-boot: Trails::ApplicationController must load after add_view_paths"
 closed-reason: null
 ---
 

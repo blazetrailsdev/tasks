@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: expo-sqlite becomes an engine under SQLite3::Database"
-status: ready
+status: claimed
 updated: 2026-11-21
 rfc: "0187-sqlite3-gem-port"
 cluster: drivers
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-21T18:55:37Z"
+assignee: "sqlite3-better-sqlite3-engine"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Entry check: the data layer is at 100% on Rails 8.0.2 and every gate is green"
-status: blocked
-updated: 2026-11-20
+status: done
+updated: 2026-11-21
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: entry
 packages: [arel, activemodel, activerecord]
@@ -23,7 +23,7 @@ priority: null
 pr: null
 claim: "2026-11-19T17:07:15Z"
 assignee: "entry-check-data-layer-parity-is-closed-on-8-0-2"
-blocked-by: "Operator ruling 2026-11-20: a receipted PERMANENT-SKIP counts as closed for entry; unreceipted skips still block. Remaining: activerecord-remaining-permanent-skips-in-unported-files (receipt each skip), postgresql-bulk-change-query-count-one-short (run both tests with the PG count receipted PERMANENT per 'Adapter facts are prewarmed and peeked', then close PERMANENT), and the two sync-construction stories, which stay entry deps by operator ruling: bird-total-count-async-after-initialize, ctor-mass-assign-collection-ids-unsupported. Async-executor stories removed as entry deps (not version-sensitive)."
+blocked-by: null
 closed-reason: null
 ---
 

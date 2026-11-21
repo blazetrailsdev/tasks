@@ -1,7 +1,7 @@
 ---
 title: "Retake the body-pin floor so no matched Rails body is unpinned at the flip"
 status: ready
-updated: 2026-11-16
+updated: 2026-11-21
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: entry
 packages:

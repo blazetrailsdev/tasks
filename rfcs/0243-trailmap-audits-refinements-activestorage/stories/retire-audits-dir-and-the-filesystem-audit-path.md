@@ -1,6 +1,6 @@
 ---
 title: "trailmap: delete AUDITS_DIR, the audits mount and the filesystem audit path"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: retire

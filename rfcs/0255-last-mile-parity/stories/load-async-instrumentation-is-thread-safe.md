@@ -1,6 +1,6 @@
 ---
 title: 'activerecord: port "load async instrumentation is thread safe"'
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0255-last-mile-parity"
 cluster: activerecord

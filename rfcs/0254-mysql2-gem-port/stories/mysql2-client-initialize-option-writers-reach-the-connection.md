@@ -1,6 +1,6 @@
 ---
 title: "Mysql2::Client#initialize's option writers, charset_name= and ssl_set reach the npm connection"
-status: draft
+status: ready
 updated: 2026-11-21
 rfc: "0254-mysql2-gem-port"
 cluster: null

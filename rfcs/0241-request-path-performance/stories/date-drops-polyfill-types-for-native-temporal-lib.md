@@ -1,6 +1,6 @@
 ---
 title: "date drops the polyfill's types once lint and typedoc read esnext.temporal"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0241-request-path-performance"
 cluster: null

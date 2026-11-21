@@ -1,6 +1,6 @@
 ---
 title: "actionview: port assert_size_match! and HTMLSelector.context"
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0255-last-mile-parity"
 cluster: small-packages
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10512
+claim: "2026-11-21T18:29:36Z"
+assignee: "retake-the-body-pin-floor-at-the-last-8-0-2-commit"
 blocked-by: null
 closed-reason: null
 ---
