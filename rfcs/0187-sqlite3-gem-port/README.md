@@ -370,12 +370,19 @@ is closed with the extractor arm it needed.
    property § "The adapter lock defaults to a monitor" depends on. Does "async from the first PR"
    mean every I/O method returns `Promise` on every engine, or that the surface is awaitable from
    the first PR (the union it has now)?
+   **Resolved 2026-11-21 (operator): the union `T | Promise<T>`.** Synchronous engines
+   (better-sqlite3, local `libsql`, `node:sqlite`, `sql.js`) answer synchronously, as the gem
+   does; expo-sqlite and libsql remote answer `Promise`. The sync open, the sync `encoding` and
+   the uncontended-`lock.synchronize` property are kept, and the stories are sized by the union
+   column of § Async. Measurement (a) is not needed.
 2. **`busy_handler`.** No client exposes it, so `retries` (`sqlite3_adapter.rb:829-833`) is
    unportable over any of the six. File it as blocked on upstream, or emulate with a retry loop in
    the engine (behaviour the gem does not have)?
 3. **`setReadBigInts`.** No gem counterpart; needed because JS numbers are not Ruby Integers. Keep
    as engine-private state the adapter toggles through a receipted method, or always read bigints
    and narrow in the adapter?
+   **Resolved 2026-11-21 (operator): engine-private state.** The engine holds the read-bigints
+   flag, and the adapter toggles it through one receipted method (`@noRailsEquivalent`).
 4. **The gem's tests.** `vendor/sqlite3/v2.6.0/test/` is 20 Minitest files, mostly outside the 20
    methods. Enroll `parity:test` for the files that cover them (`test_database.rb`,
    `test_statement.rb`, `test_pragmas.rb`, `test_integration_statement.rb`), or leave the package
@@ -394,3 +401,4 @@ is closed with the extractor arm it needed.
 - 2026-10-08: self-review round 1: corrected the `errors.ts` receipt split (3 C ports, 2 invented helpers); sections regrouped under `## Design` to match the template
 - 2026-10-08: owner decision, following RFC 0186: no C extractor arm. The package stays and its C half is unscored and ungated; `sqlite3-enroll-the-c-extension-surface` closed; the 3 `exception.c` receipts are deleted by the 0180 retire story instead of retagged; open question 6 resolved
 - 2026-10-08: owner decision: the score's denominator is the methods activerecord calls; story `sqlite3-score-only-what-activerecord-calls` added
+- 2026-11-21: operator answers to open questions 1 (union `T | Promise<T>`) and 3 (engine-private read-bigints toggle behind one receipted method)

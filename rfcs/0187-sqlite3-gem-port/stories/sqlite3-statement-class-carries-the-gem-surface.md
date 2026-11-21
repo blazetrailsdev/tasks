@@ -38,8 +38,8 @@ engine, they stop being six copies (e.g. `withNullBinds`, `sqlite/better-sqlite3
 
 - [ ] `packages/sqlite3/src/statement.ts` is `SQLite3.Statement` with `bindParams`, `columns`, `each` (+ `Enumerable` from ruby-compat, so `toA`), `mustBeOpenBang` ported from `statement.rb`, and `close`, `isClosed`, `bindParam`, `resetBang`, `step`, `isDone`, `columnCount`, `columnName` delegating to a private engine statement.
 - [ ] The engine-statement interface is internal to the package and has only the C primitives above. It is exported as a type from `"."` so `packages/website` can implement it.
-- [ ] Sync or `Promise` return types follow the answer to RFC 0187-sqlite3-gem-port open question 1. BEFORE converting anything, this story measures and reports in its PR body: (a) the AR `sqlite-mem` lane's wall time with `step` / `prepare` returning `Promise` on better-sqlite3 versus today, and (b) every caller that relies on a sync engine completing inside an un-awaited `lock.synchronize` block (CLAUDE.md § "The adapter lock defaults to a monitor"). If the question is unanswered when this is claimed, stop after the measurement.
-- [ ] `setReadBigInts` has no gem counterpart (RFC open question 3); implement the answer.
+- [ ] Return types are the union `T | Promise<T>` (RFC 0187 open question 1, resolved 2026-11-21): sync engines answer synchronously. Measurement (b) is reported in trails#10450, and measurement (a) is not needed.
+- [ ] `setReadBigInts` has no gem counterpart (RFC open question 3, resolved 2026-11-21): it is engine-private state, which the adapter toggles through one receipted method.
 - [ ] No driver is converted here; the class is exercised by a fake engine in `*.trails.test.ts` and by ported cases from `vendor/sqlite3/v2.6.0/test/test_statement.rb` for the eight methods.
 
 ## Verification
