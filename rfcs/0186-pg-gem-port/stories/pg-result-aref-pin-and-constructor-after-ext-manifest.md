@@ -5,7 +5,8 @@ updated: 2026-11-21
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - pg-ruby-api-manifest-reads-ext-c-classes
 deps-rfc: []
 est-loc: 40
 priority: null
