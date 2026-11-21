@@ -27,15 +27,16 @@ so nothing is read until a caller asks. The eager read breaks these ported
 Rails tests (left unported by trails#PR for this reason):
 
 - `railties/test/commands/credentials_test.rb:80` "edit command can add master key when require_master_key is true" — boot raises `MissingKeyError` before `ensure_encryption_key_has_been_added`.
-- `railties/test/commands/encrypted_test.rb:65` (same name) — same.
+- `railties/test/commands/encrypted_test.rb:65` "edit command can add master key when require_master_key is true" — same.
 - `railties/test/commands/credentials_test.rb:166` "edit command preserves user's content even if it contains invalid YAML" — second boot raises `InvalidContentError`.
 - `railties/test/application/credentials_test.rb:20` "reads credentials from customized path and key" — the prewarm runs before `load_environment_config`, so `config.credentials.content_path` set in `config/environments/production.ts` is never seen.
-- `railties/test/commands/credentials_test.rb:331,342` "respects config.credentials.{content,key}\_path when set in config/environments/\*.rb" — `credentials:show` under `TRAILS_ENV=production` raises `InvalidMessage`.
+- `railties/test/commands/credentials_test.rb:331` "respects config.credentials.content_path when set in config/environments/\*.rb" — `credentials:show` under `TRAILS_ENV=production` raises `InvalidMessage`.
+- `railties/test/commands/credentials_test.rb:342` "respects config.credentials.key_path when set in config/environments/\*.rb" — same.
 
 The only sync reader of the prewarmed value is `Configuration#secretKeyBase`
 (`packages/trailties/lib/application/configuration.ts`, `_credentials?.dig`).
 
-Also: `credentials_test.rb:147` "edit command can use custom template to
+Also: `railties/test/commands/credentials_test.rb:147` "edit command can use custom template to
 generate credentials file" fails with `LoadError ... credentials.yml.tt.js`:
 an app's `lib/templates/trails/credentials/credentials.yml.tt` is not
 compiled (root CLAUDE.md § "Templates are precompiled").
