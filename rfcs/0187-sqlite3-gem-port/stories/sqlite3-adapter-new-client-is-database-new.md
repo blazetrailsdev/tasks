@@ -5,7 +5,10 @@ updated: 2026-11-21
 rfc: "0187-sqlite3-gem-port"
 cluster: migration
 packages: ["activerecord", "sqlite3"]
-deps: ["sqlite3-better-sqlite3-engine"]
+deps:
+  - sqlite3-better-sqlite3-engine
+  - sqlite3-node-sqlite-engine
+  - sqlite3-libsql-engines
 deps-rfc: []
 est-loc: 300
 priority: null
