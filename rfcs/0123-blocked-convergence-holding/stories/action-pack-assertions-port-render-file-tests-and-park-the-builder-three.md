@@ -41,9 +41,10 @@ Rails source:
 
 ## Acceptance criteria
 
+The three "rendering xml" tests were ported by trails#10512 once the Builder
+handler landed; they are out of scope here.
+
 - The two `render_file` tests carry their Rails bodies and pass.
-- The three builder tests are `it.skip` under a `PERMANENT-SKIP:` line naming
-  the unported Builder handler.
 - The API-only test keeps a `BLOCKED:` line naming
   `api-redirect-to-override-and-head-response-are-invented`.
 - No line in the file cites the closed story.
