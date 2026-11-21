@@ -33,7 +33,7 @@ better-sqlite3 has no `step`: a statement runs to completion (`run` / `all` / `i
 - [ ] `packages/sqlite3/src/engine/better-sqlite3.ts` exports an engine implementing the package's internal engine interfaces and nothing else; `SqliteDriver` / `SqliteConnection` / `SqliteStatement` are no longer implemented in it.
 - [ ] Its file-level `@noRailsEquivalent CONVERGEABLE sqlite3-gem-c-surface-and-driver-covers-score-against-the-vendored-gem` cover is gone; what remains exported is either private to the package or carries a per-declaration receipt.
 - [ ] Error translation happens once, in `Statement` / `Database`, through `rbSqlite3Raise`; the engine's part is reporting the native status code. This engine's branch of `nativeStatus` (`errors.ts:195-210`) moves into the engine.
-- [ ] The matching `packages/activerecord/src/connection-adapters/better-sqlite3-adapter.ts` builds `new SQLite3.Database(...)` over this engine; the engine's existing `*.trails.test.ts` passes with only its construction changed.
+- [ ] `SQLite3::Database` runs over this engine in the package's own tests. The adapter's `new SQLite3.Database(...)` cutover is `sqlite3-adapter-new-client-is-database-new` (operator, 2026-11-21): it waits on every engine, so the legacy driver file stays until `sqlite3-retire-the-sqlite-driver-interfaces`.
 - [ ] `better-sqlite3`'s `timeout` constructor option is how `busy_handler_timeout=` is honoured; setting it after open is `PRAGMA busy_timeout`, which is what `sqlite3_busy_timeout` does. Cite `database.rb:692-700`.
 
 ## Verification

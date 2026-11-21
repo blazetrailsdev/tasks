@@ -32,5 +32,5 @@ covered by an existing story (searched: `tasks list | grep -i "busy\|retries"`).
 ## Acceptance criteria
 
 - [ ] For each of the six clients, the PR body cites the source line showing `sqlite3_busy_handler` is not reachable (as `better-sqlite3-driver-ignores-strict-false` cites `deps/defines.gypi:17`).
-- [ ] Then exactly RFC 0187-sqlite3-gem-port open question 2's answer: either the engines raise `SQLite3::NotSupportedException`-equivalent from `busyHandler` and this story is `tasks block`ed on upstream after filing nothing further, or a retry loop is implemented in the engine with a receipt naming it as behaviour the client lacks.
+- [ ] Per RFC 0187-sqlite3-gem-port open question 2's answer (operator, 2026-11-21: the retry loop), each engine runs the busy handler between attempts on `SQLITE_BUSY`, stopping when it answers `false`, under a `@noRailsEquivalent PERMANENT` receipt naming it as behaviour the client lacks.
 - [ ] The `retries` config is not silently ignored in either case; a test pins what happens.
