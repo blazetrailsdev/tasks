@@ -1,6 +1,6 @@
 ---
 title: "Test that the generated tzinfo-data2 fixtures match scripts/generate-tzinfo-data.ts"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0231-tzinfo-to-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: SQLite3::Constants and ForkSafety.suppress_warnings! at their gem homes"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0187-sqlite3-gem-port"
 cluster: package

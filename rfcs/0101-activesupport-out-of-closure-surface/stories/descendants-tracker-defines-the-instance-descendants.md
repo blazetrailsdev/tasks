@@ -1,6 +1,6 @@
 ---
 title: "DescendantsTracker#descendants and ReloadedClassesFiltering#descendants live in descendants-tracker.ts, not on ActiveRecord::Base"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null

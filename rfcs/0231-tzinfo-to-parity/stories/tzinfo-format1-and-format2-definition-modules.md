@@ -1,6 +1,6 @@
 ---
 title: "Port the Format2 definition modules and all of Format1"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0231-tzinfo-to-parity"
 cluster: null

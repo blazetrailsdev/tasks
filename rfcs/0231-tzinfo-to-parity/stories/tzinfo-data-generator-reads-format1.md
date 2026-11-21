@@ -1,6 +1,6 @@
 ---
 title: "generate-tzinfo-data translates the Format 1 tree tzinfo-data actually ships"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0231-tzinfo-to-parity"
 cluster: null

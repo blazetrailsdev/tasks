@@ -1,6 +1,6 @@
 ---
 title: "ExecutionWrapper.wrap/perform type the promise a run hook returns"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null

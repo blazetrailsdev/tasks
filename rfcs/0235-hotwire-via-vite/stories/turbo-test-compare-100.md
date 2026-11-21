@@ -1,6 +1,6 @@
 ---
 title: "turbo-rails test:compare reaches 100%"
-status: ready
+status: in-progress
 updated: 2026-11-20
 rfc: "0235-hotwire-via-vite"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#10460
+claim: "2026-11-20T23:25:31Z"
+assignee: "turbo-test-compare-100"
 blocked-by: null
 closed-reason: null
 ---

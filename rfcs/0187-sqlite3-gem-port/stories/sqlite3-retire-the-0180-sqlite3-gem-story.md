@@ -1,6 +1,6 @@
 ---
 title: "Close the RFC 0180 sqlite3-gem story as superseded and retag its receipts"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0187-sqlite3-gem-port"
 cluster: migration

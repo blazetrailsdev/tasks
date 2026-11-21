@@ -1,6 +1,6 @@
 ---
 title: "DateAndTime::Calculations hour/min/sec/nsec + overloads for DateTime receivers"
-status: in-progress
+status: done
 updated: 2026-11-20
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null

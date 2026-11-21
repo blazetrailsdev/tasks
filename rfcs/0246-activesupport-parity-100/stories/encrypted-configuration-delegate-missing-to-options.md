@@ -1,6 +1,6 @@
 ---
 title: "encrypted-configuration-delegate-missing-to-options"
-status: claimed
+status: in-progress
 updated: 2026-11-20
 rfc: "0246-activesupport-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10458
 claim: "2026-11-20T22:47:06Z"
 assignee: "activesupport-api-misses-remainder-after-bundle"
 blocked-by: null
