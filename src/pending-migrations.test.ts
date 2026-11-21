@@ -16,6 +16,8 @@ describe("checkPendingMigrations", () => {
   it("names the migration a database is missing", async () => {
     await rollback(1);
     const err = await checkPendingMigrations().catch((e: unknown) => e);
-    expect((err as Error).message).toMatch(/Migrations are pending: \d{14}_Create refinements\./);
+    expect((err as Error).message).toMatch(
+      /Migrations are pending: \d{14}_Make refinements rfc id and created at unique\./,
+    );
   });
 });
