@@ -32,6 +32,8 @@ packages:
   - turbo
   - vite-assets
   - vite-trails
+  - website
+  - ruby-compat
 related-rfcs:
   - "0246-activesupport-parity-100"
   - "0254-mysql2-gem-port"
