@@ -1,7 +1,7 @@
 ---
 title: "trailmap: inbox of external PRs on the pulls tab"
-status: ready
-updated: 2026-11-20
+status: in-progress
+updated: 2026-11-21
 rfc: "0253-external-contributor-prs"
 cluster: external-review
 packages: []
@@ -9,9 +9,9 @@ deps: [ringo-emits-external-pr-events]
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#189
+claim: "2026-11-21T17:37:31Z"
+assignee: "trailmap-external-pr-inbox"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "trailties-multiple-applications-rake-tasks-and-isolate-namespace"
-status: ready
+status: claimed
 updated: 2026-11-21
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-21T17:24:32Z"
+assignee: "trailties-multiple-applications-rake-tasks-and-isolate-namespace"
 blocked-by: null
 closed-reason: null
 ---
