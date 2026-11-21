@@ -2,7 +2,7 @@
 title: "tzinfo-periods-for-local-accepts-datetime"
 status: draft
 updated: 2026-11-21
-rfc: "0101-activesupport-out-of-closure-surface"
+rfc: "0231-tzinfo-to-parity"
 cluster: null
 packages: []
 deps: []
