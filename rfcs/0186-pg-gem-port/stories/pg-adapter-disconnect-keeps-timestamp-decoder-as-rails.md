@@ -1,6 +1,6 @@
 ---
 title: "pg-adapter-disconnect-keeps-timestamp-decoder-as-rails"
-status: claimed
+status: in-progress
 updated: 2026-11-21
 rfc: "0186-pg-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10478
 claim: "2026-11-21T03:45:34Z"
 assignee: "pg-adapter-disconnect-keeps-timestamp-decoder-as-rails"
 blocked-by: null

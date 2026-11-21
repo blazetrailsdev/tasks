@@ -1,6 +1,6 @@
 ---
 title: "solid-queue: fork child boots within Rails' test timeouts"
-status: ready
+status: claimed
 updated: 2026-11-21
 rfc: "0196-solid-stack"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-21T04:24:36Z"
+assignee: "solid-queue-fork-child-boot-fits-rails-timeouts"
 blocked-by: null
 closed-reason: null
 ---

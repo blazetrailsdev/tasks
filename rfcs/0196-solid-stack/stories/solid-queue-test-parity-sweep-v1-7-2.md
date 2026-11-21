@@ -1,7 +1,7 @@
 ---
 title: "solid-queue parity:test sweep: remaining model/unit/integration tests and assertion mismatches"
-status: ready
-updated: 2026-11-16
+status: claimed
+updated: 2026-11-21
 rfc: "0196-solid-stack"
 cluster: null
 packages: ["solid-queue"]
@@ -23,8 +23,8 @@ deps-rfc: []
 est-loc: 700
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-21T04:24:36Z"
+assignee: "solid-queue-fork-child-boot-fits-rails-timeouts"
 blocked-by: null
 closed-reason: null
 ---

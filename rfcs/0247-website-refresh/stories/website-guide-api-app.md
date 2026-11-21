@@ -1,7 +1,7 @@
 ---
 title: "Write the Using Rails for API-only Applications guide"
-status: ready
-updated: 2026-11-19
+status: in-progress
+updated: 2026-11-21
 rfc: "0247-website-refresh"
 cluster: website-docs
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10481
+claim: "2026-11-21T04:37:33Z"
+assignee: "website-guide-active-support-instrumentation"
 blocked-by: null
 closed-reason: null
 ---
