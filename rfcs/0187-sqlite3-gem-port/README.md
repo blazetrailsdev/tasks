@@ -378,6 +378,9 @@ is closed with the extractor arm it needed.
 2. **`busy_handler`.** No client exposes it, so `retries` (`sqlite3_adapter.rb:829-833`) is
    unportable over any of the six. File it as blocked on upstream, or emulate with a retry loop in
    the engine (behaviour the gem does not have)?
+   **Resolved 2026-11-21 (operator): the retry loop.** Each engine calls the handler between
+   attempts on `SQLITE_BUSY` and stops on `false`, as `rb_sqlite3_busy_handler` does. The
+   adapter's `new SQLite3.Database` cutover stays with `sqlite3-adapter-new-client-is-database-new`.
 3. **`setReadBigInts`.** No gem counterpart; needed because JS numbers are not Ruby Integers. Keep
    as engine-private state the adapter toggles through a receipted method, or always read bigints
    and narrow in the adapter?

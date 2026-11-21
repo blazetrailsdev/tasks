@@ -32,7 +32,7 @@ they landed.
 - [ ] `packages/sqlite3/src/engine/expo-sqlite.ts` exports an engine implementing the package's internal engine interfaces and nothing else; `SqliteDriver` / `SqliteConnection` / `SqliteStatement` are no longer implemented in it.
 - [ ] Its file-level `@noRailsEquivalent CONVERGEABLE sqlite3-gem-c-surface-and-driver-covers-score-against-the-vendored-gem` cover is gone; what remains exported is either private to the package or carries a per-declaration receipt.
 - [ ] Error translation happens once, in `Statement` / `Database`, through `rbSqlite3Raise`; the engine's part is reporting the native status code. This engine's branch of `nativeStatus` (`errors.ts:195-210`) moves into the engine.
-- [ ] The matching `packages/activerecord/src/connection-adapters/expo-sqlite-adapter.ts` builds `new SQLite3.Database(...)` over this engine; the engine's existing `*.trails.test.ts` passes with only its construction changed.
+- [ ] `SQLite3::Database` runs over this engine in the package's own tests. The adapter's `new SQLite3.Database(...)` cutover is `sqlite3-adapter-new-client-is-database-new` (operator, 2026-11-21): it waits on every engine, so the legacy driver file stays until `sqlite3-retire-the-sqlite-driver-interfaces`.
 - [ ] `changes` and `columnCount` are answered from the last result without I/O, as today.
 
 ## Verification
