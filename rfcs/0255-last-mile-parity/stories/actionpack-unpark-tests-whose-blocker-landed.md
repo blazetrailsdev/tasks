@@ -1,6 +1,6 @@
 ---
 title: "actionpack: unpark tests whose BLOCKED story is done or closed"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0255-last-mile-parity"
 cluster: actionpack
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: trails#10488
-claim: "2026-11-21T13:05:55Z"
-assignee: "action-controller-test-case-live-aliases-on-live"
+claim: "2026-11-21T14:35:23Z"
+assignee: "actionpack-unpark-tests-whose-blocker-landed"
 blocked-by: null
 closed-reason: null
 ---

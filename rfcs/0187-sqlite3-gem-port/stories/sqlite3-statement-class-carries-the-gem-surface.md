@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: SQLite3::Statement is a class over an engine interface, with the gem's eight methods"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0187-sqlite3-gem-port"
 cluster: database-and-statement

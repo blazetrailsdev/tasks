@@ -1,6 +1,6 @@
 ---
 title: "safe-buffer-declare-unsafe-string-methods"
-status: claimed
+status: in-progress
 updated: 2026-11-21
 rfc: "0246-activesupport-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10494
 claim: "2026-11-21T13:43:35Z"
 assignee: "activesupport-api-misses-remainder-after-bundle"
 blocked-by: null

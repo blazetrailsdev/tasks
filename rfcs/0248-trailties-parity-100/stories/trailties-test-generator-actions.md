@@ -1,7 +1,7 @@
 ---
 title: "trailties: port the generators/actions_test.rb misses"
-status: ready
-updated: 2026-11-19
+status: claimed
+updated: 2026-11-21
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
 packages: [trailties]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-21T14:48:39Z"
+assignee: "trailties-credentials-read-lazily-not-at-boot"
 blocked-by: null
 closed-reason: null
 ---

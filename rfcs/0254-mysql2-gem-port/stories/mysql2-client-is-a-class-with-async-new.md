@@ -1,6 +1,6 @@
 ---
 title: "Mysql2::Client is a class: protected constructor plus static async new, no run-time decorator"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0254-mysql2-gem-port"
 cluster: client

@@ -1,6 +1,6 @@
 ---
 title: "activesupport: ForkTracker.hook! prepends onto Process' singleton without a fake class"
-status: claimed
+status: ready
 updated: 2026-11-21
 rfc: "0246-activesupport-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: "2026-11-21T13:43:35Z"
-assignee: "activesupport-api-misses-remainder-after-bundle"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "actionmailbox: unpark the Postmark and Sendgrid non-UTF-8 ingress tests"
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0255-last-mile-parity"
 cluster: small-packages
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10495
+claim: "2026-11-21T14:09:38Z"
+assignee: "actionmailbox-unpark-non-utf8-ingress-tests"
 blocked-by: null
 closed-reason: null
 ---
