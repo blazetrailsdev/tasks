@@ -33,3 +33,19 @@ and CLAUDE.md "A String has no encoding tag either" allows a tagged
 ```sh
 pnpm vitest run packages/mail/test/encoding.test.ts
 ```
+
+## Progress
+
+The Subject spec ("should allow you to send in unencoded strings to fields and
+encode them") runs: `Field#create_field`'s `unfold`, `CommonField`'s
+`ensure_filename_quoted` and `UnstructuredField#fold` now keep the input's
+encoding tag on the bytes they rebuild (Ruby's `gsub` / `split` keep it).
+
+The six address-field specs stay `it.skip` under a `BLOCKED:` line naming this
+story. They fail in `Encodings.encode_non_usascii`
+(`vendor/mail/2.8.1/lib/mail/encodings.rb:170-190`) with
+`address.replace is not a function`: the address arrives as an ISO-8859-1
+tagged `Uint8Array`, and `encodeNonUsascii`, `bValueEncode` and
+`eachBase64ChunkByterange` (`packages/mail/lib/encodings.ts:152-185`) handle
+only a JS string. Each needs the tagged-bytes arm Ruby gets from `gsub` /
+`split` on a non-UTF-8 String.

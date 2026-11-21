@@ -32,3 +32,17 @@ expose or the extractor does not credit.
 ```sh
 pnpm parity:api --missing --package mail  # 0 rows
 ```
+
+## Findings
+
+The ten failing parsers are `module`s in Ruby (`AddressListsParser` &c.),
+ported as `extend({ ... })` object literals with `error: 0`;
+`PhraseListsParser` is a Ruby `class` with `static error = 0` and already
+credits. Each failing file also defines a `Struct.new(..., :error)`, so Ruby
+records `error=` at both levels (the Struct's instance writer and the module's
+`class << self; attr_accessor :error`). `compare.ts`'s `bothLevels` arm then
+needs a class-level `error` owner, but `harvestObjectLiteralMethods`
+(`scripts/api-compare/extract-ts-api.ts`) records an `extend()` literal's
+members at instance level, so the module's slot never pairs. Emitting a writer
+for each `dataSlots` slot was tried and does not change the count; the fix is
+seating `extend()` literal members at the module's singleton level.
