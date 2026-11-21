@@ -1,6 +1,6 @@
 ---
 title: "date drops the polyfill's types once lint and typedoc read esnext.temporal"
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0241-request-path-performance"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10509
+claim: "2026-11-21T16:45:30Z"
+assignee: "date-drops-polyfill-types-for-native-temporal-lib"
 blocked-by: null
 closed-reason: null
 ---

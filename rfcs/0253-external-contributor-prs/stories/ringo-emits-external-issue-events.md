@@ -1,7 +1,7 @@
 ---
 title: "ringo: record external issues and emit external_issue.* events"
-status: claimed
-updated: 2026-11-20
+status: done
+updated: 2026-11-21
 rfc: "0253-external-contributor-prs"
 cluster: trust-gate
 packages: []

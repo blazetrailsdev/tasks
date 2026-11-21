@@ -1,6 +1,6 @@
 ---
 title: "Mysql2Adapter calls the gem's closed?/close/server_info and translates Mysql2::Error subclasses, not npm error codes"
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0254-mysql2-gem-port"
 cluster: adapter-glue
@@ -9,9 +9,9 @@ deps: ["mysql2-client-is-a-class-with-async-new"]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10507
+claim: "2026-11-21T16:19:51Z"
+assignee: "mysql2-adapter-calls-the-gem-not-the-npm-connection"
 blocked-by: null
 closed-reason: null
 ---

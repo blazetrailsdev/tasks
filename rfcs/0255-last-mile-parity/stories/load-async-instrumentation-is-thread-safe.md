@@ -1,6 +1,6 @@
 ---
 title: 'activerecord: port "load async instrumentation is thread safe"'
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0255-last-mile-parity"
 cluster: activerecord
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10507
+claim: "2026-11-21T16:19:51Z"
+assignee: "mysql2-adapter-calls-the-gem-not-the-npm-connection"
 blocked-by: null
 closed-reason: null
 ---

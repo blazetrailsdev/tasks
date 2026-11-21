@@ -1,6 +1,6 @@
 ---
 title: "actiontext: credit rich_textarea / rich_text_area at tag_helper.rb"
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0255-last-mile-parity"
 cluster: small-packages
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10508
+claim: "2026-11-21T16:32:47Z"
+assignee: "actiontext-rich-textarea-credited-on-form-helper"
 blocked-by: null
 closed-reason: null
 ---

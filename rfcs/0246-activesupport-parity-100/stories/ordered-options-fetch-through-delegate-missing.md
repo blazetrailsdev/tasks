@@ -1,6 +1,6 @@
 ---
 title: "ordered-options-fetch-through-delegate-missing"
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0246-activesupport-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10506
+claim: "2026-11-21T16:06:58Z"
+assignee: "activesupport-api-misses-remainder-after-bundle"
 blocked-by: null
 closed-reason: null
 ---

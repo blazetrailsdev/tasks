@@ -1,6 +1,6 @@
 ---
 title: "pg-ruby-api-manifest-reads-ext-c-classes"
-status: claimed
+status: in-progress
 updated: 2026-11-21
 rfc: "0186-pg-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10504
 claim: "2026-11-21T15:40:29Z"
 assignee: "pg-ruby-api-manifest-reads-ext-c-classes"
 blocked-by: null

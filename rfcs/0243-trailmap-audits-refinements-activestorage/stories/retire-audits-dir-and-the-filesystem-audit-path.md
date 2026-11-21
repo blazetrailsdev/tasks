@@ -1,7 +1,7 @@
 ---
 title: "trailmap: delete AUDITS_DIR, the audits mount and the filesystem audit path"
-status: ready
-updated: 2026-11-18
+status: claimed
+updated: 2026-11-21
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: retire
 packages: []
@@ -15,8 +15,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-21T16:59:33Z"
+assignee: "retire-audits-dir-and-the-filesystem-audit-path"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activesupport-port-evented-file-update-checker"
-status: ready
+status: blocked
 updated: 2026-11-21
 rfc: "0246-activesupport-parity-100"
 cluster: null
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-21T16:06:58Z"
+assignee: "activesupport-api-misses-remainder-after-bundle"
+blocked-by: "needs the listen gem ported: port-listen-gem-for-evented-file-update-checker"
 closed-reason: null
 ---
 
