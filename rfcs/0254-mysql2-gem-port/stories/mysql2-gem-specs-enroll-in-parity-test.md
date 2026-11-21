@@ -1,7 +1,7 @@
 ---
 title: "Enroll the mysql2 gem's specs in parity:test for the surface the package ships"
-status: draft
-updated: 2026-11-20
+status: ready
+updated: 2026-11-21
 rfc: "0254-mysql2-gem-port"
 cluster: scoring
 packages: ["mysql2", "scripts"]

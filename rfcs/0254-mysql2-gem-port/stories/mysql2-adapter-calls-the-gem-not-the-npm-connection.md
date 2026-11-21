@@ -1,7 +1,7 @@
 ---
 title: "Mysql2Adapter calls the gem's closed?/close/server_info and translates Mysql2::Error subclasses, not npm error codes"
-status: draft
-updated: 2026-11-20
+status: ready
+updated: 2026-11-21
 rfc: "0254-mysql2-gem-port"
 cluster: adapter-glue
 packages: ["mysql2", "activerecord"]

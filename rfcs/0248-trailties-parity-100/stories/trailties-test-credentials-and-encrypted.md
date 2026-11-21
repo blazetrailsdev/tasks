@@ -1,7 +1,7 @@
 ---
 title: "trailties: port credentials and encrypted command tests"
-status: ready
-updated: 2026-11-19
+status: in-progress
+updated: 2026-11-21
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
 packages: [trailties]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10473
+claim: "2026-11-21T02:14:33Z"
+assignee: "trailties-test-console-and-dbconsole"
 blocked-by: null
 closed-reason: null
 ---

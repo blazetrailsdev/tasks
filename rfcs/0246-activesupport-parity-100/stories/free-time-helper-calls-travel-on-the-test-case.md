@@ -1,7 +1,7 @@
 ---
 title: "free-time-helper-calls-travel-on-the-test-case"
 status: ready
-updated: 2026-11-20
+updated: 2026-11-21
 rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "Port rack-cache's test_helper CacheContextHelpers harness"
-status: draft
-updated: 2026-09-29
+status: ready
+updated: 2026-11-21
 rfc: "0168-rack-cache-gem-port"
 cluster: null
 packages: ["rack-cache"]

@@ -1,6 +1,6 @@
 ---
 title: "A committed plain-node check pins that activerecord's root imports without pg"
-status: claimed
+status: done
 updated: 2026-11-21
 rfc: "0186-pg-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#10467
 claim: "2026-11-21T00:56:32Z"
 assignee: "activerecord-root-imports-without-pg-is-pinned"
 blocked-by: null

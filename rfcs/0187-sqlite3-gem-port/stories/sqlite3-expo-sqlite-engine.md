@@ -1,14 +1,14 @@
 ---
 title: "sqlite3: expo-sqlite becomes an engine under SQLite3::Database"
 status: ready
-updated: 2026-11-20
+updated: 2026-11-21
 rfc: "0187-sqlite3-gem-port"
 cluster: drivers
 packages: ["sqlite3", "activerecord"]
 deps: ["sqlite3-database-class-carries-the-gem-surface"]
 deps-rfc: []
 est-loc: 400
-priority: 9
+priority: null
 pr: null
 claim: null
 assignee: null

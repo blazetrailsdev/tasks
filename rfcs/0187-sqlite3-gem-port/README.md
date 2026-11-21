@@ -21,7 +21,7 @@ related-rfcs:
   - "0094-sqlite3-adapter-construction-fidelity"
   - "0184-msgpack-gem-port"
   - "0186-pg-gem-port"
-priority: 4
+priority: 2
 ---
 
 # RFC 0187 — sqlite3 gem wrapper

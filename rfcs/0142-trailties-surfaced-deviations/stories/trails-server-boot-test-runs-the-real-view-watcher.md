@@ -1,6 +1,6 @@
 ---
 title: "trails server is tested booting the boot-app with its real view watcher"
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10474
+claim: "2026-11-21T02:40:39Z"
+assignee: "mailers-controller-view-paths-miss-app-views"
 blocked-by: null
 closed-reason: null
 ---

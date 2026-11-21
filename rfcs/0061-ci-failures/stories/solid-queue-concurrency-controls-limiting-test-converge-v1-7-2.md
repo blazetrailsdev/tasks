@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-concurrency-controls-limiting-test-converge-v1-7-2"
-status: draft
+status: done
 updated: 2026-11-21
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10448
+claim: "2026-11-21T01:41:07Z"
+assignee: "solid-queue-concurrency-controls-limiting-test-converge-v1-7-2"
 blocked-by: null
 closed-reason: null
 ---

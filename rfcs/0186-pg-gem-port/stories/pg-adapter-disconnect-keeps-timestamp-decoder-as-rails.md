@@ -1,6 +1,6 @@
 ---
 title: "pg-adapter-disconnect-keeps-timestamp-decoder-as-rails"
-status: draft
+status: ready
 updated: 2026-11-21
 rfc: "0186-pg-gem-port"
 cluster: null

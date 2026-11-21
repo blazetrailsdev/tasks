@@ -1,6 +1,6 @@
 ---
 title: "tasks-cli-refinements-unique-index"
-status: ready
+status: done
 updated: 2026-11-21
 rfc: "0243-trailmap-audits-refinements-activestorage"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: tasks#369
+claim: "2026-11-21T01:48:31Z"
+assignee: "tasks-cli-refinements-unique-index"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "trailties: port routes, unused routes, help and info command tests"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0248-trailties-parity-100"
 cluster: test-ports

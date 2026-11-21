@@ -1,7 +1,7 @@
 ---
 title: "activesupport-port-evented-file-update-checker"
 status: ready
-updated: 2026-11-20
+updated: 2026-11-21
 rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: []

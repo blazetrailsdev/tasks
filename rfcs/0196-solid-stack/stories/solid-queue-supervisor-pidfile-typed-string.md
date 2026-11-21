@@ -1,6 +1,6 @@
 ---
 title: "Type SolidQueue.supervisorPidfile as string | null"
-status: ready
+status: done
 updated: 2026-11-21
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10468
+claim: "2026-11-21T01:22:31Z"
+assignee: "solid-queue-fork-child-boot-fits-rails-timeouts"
 blocked-by: null
 closed-reason: null
 ---

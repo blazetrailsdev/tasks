@@ -1,7 +1,7 @@
 ---
 title: "SafeBuffer strRange: mirror rb_str_subpat_set's raises, negative and named groups"
-status: ready
-updated: 2026-11-20
+status: in-progress
+updated: 2026-11-21
 rfc: "0101-activesupport-out-of-closure-surface"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10472
+claim: "2026-11-21T02:27:35Z"
+assignee: "receipt-or-converge-xml-mini-builder-surface"
 blocked-by: null
 closed-reason: null
 ---

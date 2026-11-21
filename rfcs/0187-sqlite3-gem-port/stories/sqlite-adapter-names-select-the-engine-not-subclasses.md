@@ -1,6 +1,6 @@
 ---
 title: "activerecord: retire the six SQLite adapter subclasses; every SQLite adapter name registers SQLite3Adapter"
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0187-sqlite3-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10469
+claim: "2026-11-21T01:35:30Z"
+assignee: "sqlite-adapter-names-select-the-engine-not-subclasses"
 blocked-by: null
 closed-reason: null
 ---

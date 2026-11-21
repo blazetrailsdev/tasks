@@ -1,6 +1,6 @@
 ---
 title: "activesupport: drop the invented terminator: false arm in Filters::Before"
-status: ready
+status: done
 updated: 2026-11-21
 rfc: "0246-activesupport-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10466
+claim: "2026-11-21T01:09:35Z"
+assignee: "activesupport-api-misses-remainder-after-bundle"
 blocked-by: null
 closed-reason: null
 ---

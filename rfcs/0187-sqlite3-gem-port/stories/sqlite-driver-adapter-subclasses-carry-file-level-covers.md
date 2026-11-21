@@ -8,7 +8,7 @@ packages: ["activerecord"]
 deps: []
 deps-rfc: []
 est-loc: 300
-priority: 16
+priority: null
 pr: trails#10457
 claim: "2026-11-20T23:12:51Z"
 assignee: "sqlite-driver-adapter-subclasses-carry-file-level-covers"

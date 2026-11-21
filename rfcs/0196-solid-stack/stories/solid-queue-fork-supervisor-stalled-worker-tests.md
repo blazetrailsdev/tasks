@@ -1,7 +1,7 @@
 ---
 title: "solid-queue-fork-supervisor-stalled-worker-tests"
-status: in-progress
-updated: 2026-11-20
+status: done
+updated: 2026-11-21
 rfc: "0196-solid-stack"
 cluster: null
 packages: []

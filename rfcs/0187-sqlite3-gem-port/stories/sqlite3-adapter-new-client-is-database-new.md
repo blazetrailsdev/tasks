@@ -1,14 +1,14 @@
 ---
 title: "SQLite3Adapter.new_client is ::SQLite3::Database.new(config[:database].to_s, config)"
 status: ready
-updated: 2026-11-20
+updated: 2026-11-21
 rfc: "0187-sqlite3-gem-port"
 cluster: migration
 packages: ["activerecord", "sqlite3"]
 deps: ["sqlite3-better-sqlite3-engine"]
 deps-rfc: []
 est-loc: 300
-priority: 10
+priority: null
 pr: null
 claim: null
 assignee: null

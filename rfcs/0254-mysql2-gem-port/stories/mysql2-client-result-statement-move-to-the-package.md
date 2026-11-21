@@ -1,7 +1,7 @@
 ---
 title: "Move Mysql2::Client, Result and Statement into @blazetrails/mysql2; bind casting moves to the adapter"
-status: draft
-updated: 2026-11-20
+status: ready
+updated: 2026-11-21
 rfc: "0254-mysql2-gem-port"
 cluster: package
 packages: ["mysql2", "activerecord"]

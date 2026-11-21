@@ -1,7 +1,7 @@
 ---
 title: "Write the Active Record Validations guide"
-status: ready
-updated: 2026-11-19
+status: done
+updated: 2026-11-21
 rfc: "0247-website-refresh"
 cluster: website-docs
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10471
+claim: "2026-11-21T02:02:13Z"
+assignee: "base-exposes-query-constraints"
 blocked-by: null
 closed-reason: null
 ---
