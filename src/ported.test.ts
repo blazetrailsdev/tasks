@@ -269,6 +269,19 @@ describe("nextBundle", () => {
     expect(bundle.map((s) => s.id).sort()).toEqual(["a1", "a2"]);
   });
 
+  it("spills leftover budget into the lead's RFC when its cluster can't fill it", () => {
+    const idx = index([
+      story({ id: "lead", cluster: "c1", est_loc: 150, priority: 1 }),
+      story({ id: "big", cluster: "c1", est_loc: 150 }),
+      story({ id: "s1", cluster: "c2", est_loc: 40 }),
+      story({ id: "s2", cluster: null, est_loc: 60 }),
+      story({ id: "s3", cluster: "c2", est_loc: 300 }),
+    ]);
+    const bundle = nextBundle(idx, { maxLoc: 250 });
+    expect(bundle[0].id).toBe("lead");
+    expect(bundle.map((s) => s.id).sort()).toEqual(["lead", "s1", "s2"]);
+  });
+
   it("leads with a prioritized story even when it has no est_loc", () => {
     // A prioritized story is an explicit "do this" — a missing estimate must
     // not exclude it the way it does for the unprioritized knapsack path.
