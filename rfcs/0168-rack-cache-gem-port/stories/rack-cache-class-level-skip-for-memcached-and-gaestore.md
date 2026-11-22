@@ -1,6 +1,6 @@
 ---
 title: "rack-cache-class-level-skip-for-memcached-and-gaestore"
-status: claimed
+status: closed
 updated: 2026-11-22
 rfc: "0168-rack-cache-gem-port"
 cluster: null
@@ -9,11 +9,11 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10552
 claim: "2026-11-22T03:35:34Z"
 assignee: "gate-rack-cache-extra-surface"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: the MemCached/GAEStore members are not counted missing. parity:api folds them into the same-named Heap/Disk/Dalli methods of meta_store.rb / entity_store.rb (same-name collapse), so the rack-cache total is 157 with or without a class skip; trails#10552 measured both."
 ---
 
 ## Context

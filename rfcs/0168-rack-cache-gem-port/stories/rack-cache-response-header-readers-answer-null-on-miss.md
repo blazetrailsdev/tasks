@@ -1,6 +1,6 @@
 ---
 title: "Rack::Cache::Response header readers answer nil, not undefined, on a miss"
-status: claimed
+status: in-progress
 updated: 2026-11-22
 rfc: "0168-rack-cache-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
+pr: trails#10552
 claim: "2026-11-22T03:35:34Z"
 assignee: "gate-rack-cache-extra-surface"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Port the Disk meta and entity stores (file: / disk: URIs)"
-status: claimed
+status: in-progress
 updated: 2026-11-22
 rfc: "0168-rack-cache-gem-port"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: 30
-pr: null
+pr: trails#10552
 claim: "2026-11-22T03:35:34Z"
 assignee: "gate-rack-cache-extra-surface"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "activesupport: port format_version, compact_blank! and rescue_handlers"
-status: ready
+status: in-progress
 updated: 2026-11-22
 rfc: "0246-activesupport-parity-100"
 cluster: api-residuals
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#10553
+claim: "2026-11-22T04:01:29Z"
+assignee: "activesupport-api-format-version-compact-blank-rescue-handlers"
 blocked-by: null
 closed-reason: null
 ---

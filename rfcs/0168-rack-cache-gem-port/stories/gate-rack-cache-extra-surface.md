@@ -1,6 +1,6 @@
 ---
 title: "Enroll rack-cache in the extra-surface gate"
-status: claimed
+status: in-progress
 updated: 2026-11-22
 rfc: "0168-rack-cache-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: trails#10552
 claim: "2026-11-22T03:35:34Z"
 assignee: "gate-rack-cache-extra-surface"
 blocked-by: null
