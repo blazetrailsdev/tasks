@@ -2,7 +2,7 @@
 title: "last mile: every in-scope package at 100% of portable"
 status: ready
 updated: 2026-11-21
-rfc: "0255-last-mile-parity"
+rfc: "0123-blocked-convergence-holding"
 cluster: measurement
 packages: [scripts]
 deps:

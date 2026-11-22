@@ -42,6 +42,7 @@ clusters:
   - "factory-returned"
   - "constructor-returned"
   - "gate"
+  - "measurement"
 related-rfcs:
   - "0078-sti-schema-reflection-fidelity"
   - "0096-naming-identifier-burndown"
