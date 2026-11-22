@@ -1,6 +1,6 @@
 ---
 title: "parity: retire unported tests: rows that name live activesupport/activerecord tests"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0061-ci-failures"
 cluster: null

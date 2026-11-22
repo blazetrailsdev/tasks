@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat-hash-answers-rack-headers-public-interface"
-status: in-progress
+status: closed
 updated: 2026-11-22
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: trails#10549
 claim: "2026-11-22T02:43:31Z"
 assignee: "ruby-compat-hash-answers-rack-headers-public-interface"
 blocked-by: null
-closed-reason: null
+closed-reason: 'PERMANENT: Rack::Headers#downcase_key is private in Rails, and trails has no runtime privates (CLAUDE.md, "Method visibility is compile-time only"); operator ruled 2026-11-21 "Private method, skip test". The Hash surface AC1 landed in trails#10549; the public interface test is a PERMANENT-SKIP.'
 ---
 
 ## Context

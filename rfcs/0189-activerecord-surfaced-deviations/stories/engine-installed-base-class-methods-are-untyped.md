@@ -1,6 +1,6 @@
 ---
 title: "engine-installed-base-class-methods-are-untyped"
-status: ready
+status: claimed
 updated: 2026-11-22
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-22T13:52:04Z"
+assignee: "activerecord-test-support-helper-stand-ins-remainder"
 blocked-by: null
 closed-reason: null
 ---

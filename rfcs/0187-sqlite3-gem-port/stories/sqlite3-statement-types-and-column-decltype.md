@@ -1,7 +1,7 @@
 ---
 title: "sqlite3-statement-types-and-column-decltype"
-status: in-progress
-updated: 2026-11-21
+status: done
+updated: 2026-11-22
 rfc: "0187-sqlite3-gem-port"
 cluster: null
 packages: []

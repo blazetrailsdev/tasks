@@ -1,6 +1,6 @@
 ---
 title: "activerecord-test-support-helper-stand-ins-and-harness"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

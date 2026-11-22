@@ -1,7 +1,7 @@
 ---
 title: "Write the Threading and Code Execution in Rails guide"
-status: ready
-updated: 2026-11-19
+status: in-progress
+updated: 2026-11-22
 rfc: "0247-website-refresh"
 cluster: website-docs
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10559
+claim: "2026-11-22T13:26:04Z"
+assignee: "website-guide-threading-and-code-execution"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "mail: eachChunkByterange walks a tagged Uint8Array's characters, not its bytes"
-status: ready
+status: in-progress
 updated: 2026-11-22
 rfc: "0255-last-mile-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10558
+claim: "2026-11-22T13:16:41Z"
+assignee: "each-chunk-byterange-walks-encoding-characters"
 blocked-by: null
 closed-reason: null
 ---
