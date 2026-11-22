@@ -1,6 +1,6 @@
 ---
 title: "test-compare drops an enclosing module from a Ruby test class name"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0255-last-mile-parity"
 cluster: null

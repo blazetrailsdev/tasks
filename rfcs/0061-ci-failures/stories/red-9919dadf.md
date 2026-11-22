@@ -1,6 +1,6 @@
 ---
 title: "Rails API/Test Comparison failing on main @9919dadf"
-status: ready
+status: closed
 updated: 2026-11-22
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-22T01:13:09Z"
+assignee: "red-9919dadf"
 blocked-by: null
-closed-reason: null
+closed-reason: "Infrastructure: Rails API/Test Comparison's class-paths step failed on 'git fetch' (Failed to connect to github.com port 443, exit 128); rerun of failed jobs on run 44968635278 is green."
 ---
 
 ## Context

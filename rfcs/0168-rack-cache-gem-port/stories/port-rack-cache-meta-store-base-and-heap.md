@@ -1,6 +1,6 @@
 ---
 title: "Port Rack::Cache::MetaStore with its Heap backend"
-status: claimed
+status: done
 updated: 2026-11-22
 rfc: "0168-rack-cache-gem-port"
 cluster: null
@@ -14,7 +14,7 @@ deps:
 deps-rfc: []
 est-loc: 600
 priority: 30
-pr: null
+pr: trails#10539
 claim: "2026-11-22T00:59:31Z"
 assignee: "port-rack-cache-meta-store-base-and-heap"
 blocked-by: null

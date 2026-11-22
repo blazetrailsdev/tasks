@@ -1,6 +1,6 @@
 ---
 title: "mail: credit error= on the ten parser Structs"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0255-last-mile-parity"
 cluster: mail

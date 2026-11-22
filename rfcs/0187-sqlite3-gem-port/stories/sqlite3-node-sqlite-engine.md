@@ -1,7 +1,7 @@
 ---
 title: "sqlite3: node:sqlite becomes an engine under SQLite3::Database"
-status: ready
-updated: 2026-11-21
+status: done
+updated: 2026-11-22
 rfc: "0187-sqlite3-gem-port"
 cluster: drivers
 packages: ["sqlite3", "activerecord"]
@@ -9,9 +9,9 @@ deps: ["sqlite3-database-class-carries-the-gem-surface"]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10540
+claim: "2026-11-22T01:12:31Z"
+assignee: "sqlite3-node-sqlite-engine"
 blocked-by: null
 closed-reason: null
 ---

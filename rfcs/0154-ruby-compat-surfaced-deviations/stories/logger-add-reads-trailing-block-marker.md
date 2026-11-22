@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: Logger#add reads its block through block(), so LoggerDelivery passes only severity"
-status: draft
+status: closed
 updated: 2026-11-22
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: CI's call-args gate does not flag LoggerDelivery#deliverBang's log call (trails#10536 run 44970200023 reported the receipt stale); the row was a local-run artefact."
 ---
 
 ## Context

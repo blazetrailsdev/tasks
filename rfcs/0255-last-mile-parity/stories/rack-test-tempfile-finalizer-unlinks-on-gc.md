@@ -1,6 +1,6 @@
 ---
 title: "rack-test: UploadedFile's tempfile is unlinked on garbage collection"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0255-last-mile-parity"
 cluster: small-packages

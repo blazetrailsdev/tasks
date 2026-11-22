@@ -1,6 +1,6 @@
 ---
 title: "trailties-app-dockerfile-base-packages-and-assets-precompile"
-status: claimed
+status: in-progress
 updated: 2026-11-22
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10538
 claim: "2026-11-22T00:33:34Z"
 assignee: "engine-controllers-resolve-for-unused-routes"
 blocked-by: null

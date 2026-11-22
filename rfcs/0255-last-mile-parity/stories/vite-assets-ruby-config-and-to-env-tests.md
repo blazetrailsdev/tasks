@@ -1,6 +1,6 @@
 ---
 title: "vite-assets: port the ruby-config-file and to-env tests"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0255-last-mile-parity"
 cluster: small-packages
