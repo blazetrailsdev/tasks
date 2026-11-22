@@ -1,6 +1,6 @@
 ---
 title: "Mirror the v8.0.5.2 activerecord test schema, models and fixtures in the canonical test schema"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: post-flip

@@ -1,6 +1,6 @@
 ---
 title: "activesupport-api-misses-remainder-2"
-status: ready
+status: in-progress
 updated: 2026-11-22
 rfc: "0246-activesupport-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#10566
+claim: "2026-11-22T14:44:08Z"
+assignee: "activesupport-api-misses-remainder-2"
 blocked-by: null
 closed-reason: null
 ---

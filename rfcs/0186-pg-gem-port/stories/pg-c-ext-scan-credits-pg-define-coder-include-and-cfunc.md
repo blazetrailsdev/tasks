@@ -1,6 +1,6 @@
 ---
 title: "pg C extension scan credits pg_define_coder's BinaryFormatting include and CFUNC const"
-status: ready
+status: done
 updated: 2026-11-22
 rfc: "0186-pg-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#10562
+claim: "2026-11-22T14:31:06Z"
+assignee: "pg-c-ext-scan-credits-pg-define-coder-include-and-cfunc"
 blocked-by: null
 closed-reason: null
 ---

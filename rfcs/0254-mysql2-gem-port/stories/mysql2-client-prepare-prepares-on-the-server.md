@@ -1,6 +1,6 @@
 ---
 title: "mysql2-client-prepare-prepares-on-the-server"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0254-mysql2-gem-port"
 cluster: null

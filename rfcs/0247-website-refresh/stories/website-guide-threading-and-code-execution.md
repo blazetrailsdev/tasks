@@ -1,6 +1,6 @@
 ---
 title: "Write the Threading and Code Execution in Rails guide"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0247-website-refresh"
 cluster: website-docs

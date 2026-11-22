@@ -1,6 +1,6 @@
 ---
 title: "mail: eachChunkByterange walks a tagged Uint8Array's characters, not its bytes"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0255-last-mile-parity"
 cluster: null

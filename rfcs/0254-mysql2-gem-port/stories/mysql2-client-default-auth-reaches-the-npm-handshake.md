@@ -1,6 +1,6 @@
 ---
 title: "mysql2-client-default-auth-reaches-the-npm-handshake"
-status: draft
+status: claimed
 updated: 2026-11-22
 rfc: "0254-mysql2-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-22T14:54:11Z"
+assignee: "mysql2-client-default-auth-reaches-the-npm-handshake"
 blocked-by: null
 closed-reason: null
 ---

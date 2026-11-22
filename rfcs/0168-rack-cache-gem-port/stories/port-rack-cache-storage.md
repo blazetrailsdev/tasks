@@ -1,7 +1,7 @@
 ---
 title: "Port Rack::Cache::Storage (URI → store resolution)"
-status: ready
-updated: 2026-11-21
+status: in-progress
+updated: 2026-11-22
 rfc: "0168-rack-cache-gem-port"
 cluster: null
 packages: ["rack-cache"]
@@ -9,9 +9,9 @@ deps: ["port-rack-cache-disk-stores"]
 deps-rfc: []
 est-loc: 200
 priority: 30
-pr: null
-claim: null
-assignee: null
+pr: trails#10563
+claim: "2026-11-22T14:18:06Z"
+assignee: "port-rack-cache-storage"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activesupport: port the json-gem encoding, pathname blank, signature? and logger-name residue"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0246-activesupport-parity-100"
 cluster: test-residuals

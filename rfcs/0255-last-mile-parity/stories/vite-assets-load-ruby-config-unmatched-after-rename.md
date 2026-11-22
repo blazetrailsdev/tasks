@@ -1,6 +1,6 @@
 ---
 title: "vite-assets-load-ruby-config-unmatched-after-rename"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0255-last-mile-parity"
 cluster: null
