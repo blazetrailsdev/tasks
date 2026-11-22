@@ -5,7 +5,9 @@ updated: 2026-11-21
 rfc: "0247-website-refresh"
 cluster: null
 packages: []
-deps: []
+deps:
+  - view-type-includes-engine-helpers
+  - attached-one-types-delegated-attachment-members
 deps-rfc: []
 est-loc: 150
 priority: null
