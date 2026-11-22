@@ -6,7 +6,7 @@ rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: []
 deps:
-  - listen-port-listener-fsm-and-listen-to
+  - listen-wraps-parcel-watcher
 deps-rfc: []
 est-loc: null
 priority: 6
