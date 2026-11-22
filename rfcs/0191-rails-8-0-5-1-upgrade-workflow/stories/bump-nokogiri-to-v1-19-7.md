@@ -1,6 +1,6 @@
 ---
 title: "Bump nokogiri from v1.18.3 to v1.19.7, the floor rails-html-sanitizer 1.7.2 forces"
-status: claimed
+status: in-progress
 updated: 2026-11-22
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: post-flip
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
+pr: trails#10577
 claim: "2026-11-22T15:44:07Z"
 assignee: "bump-nokogiri-to-v1-19-7"
 blocked-by: null

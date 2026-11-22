@@ -1,6 +1,6 @@
 ---
 title: "port-libxml-ruby-for-xml-mini-libxml-engines"
-status: ready
+status: in-progress
 updated: 2026-11-22
 rfc: "0246-activesupport-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 7
-pr: null
-claim: null
-assignee: null
+pr: trails#10575
+claim: "2026-11-22T16:04:08Z"
+assignee: "port-listen-gem-for-evented-file-update-checker"
 blocked-by: null
 closed-reason: null
 ---

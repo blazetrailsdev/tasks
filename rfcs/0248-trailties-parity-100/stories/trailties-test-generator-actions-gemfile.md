@@ -1,7 +1,7 @@
 ---
 title: "trailties-test-generator-actions-gemfile"
-status: ready
-updated: 2026-11-21
+status: in-progress
+updated: 2026-11-22
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10576
+claim: "2026-11-22T16:24:09Z"
+assignee: "trailties-gemfile-entries-and-inheritance-remainder"
 blocked-by: null
 closed-reason: null
 ---

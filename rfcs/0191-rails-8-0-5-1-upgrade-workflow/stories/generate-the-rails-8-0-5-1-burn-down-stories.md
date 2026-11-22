@@ -1,6 +1,6 @@
 ---
 title: "Build the burn-down story generator and generate the 8.0.5.2 stories"
-status: claimed
+status: in-progress
 updated: 2026-11-22
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: post-flip
@@ -9,7 +9,7 @@ deps: [flip-the-rails-ref-to-v8-0-5-1]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#10577
 claim: "2026-11-22T15:44:07Z"
 assignee: "bump-nokogiri-to-v1-19-7"
 blocked-by: null

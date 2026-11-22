@@ -1,7 +1,7 @@
 ---
 title: "Compile-check the landing page code samples and their shown diagnostics"
-status: ready
-updated: 2026-11-21
+status: done
+updated: 2026-11-22
 rfc: "0247-website-refresh"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10572
+claim: "2026-11-22T16:14:05Z"
+assignee: "website-landing-samples-compile-checked"
 blocked-by: null
 closed-reason: null
 ---

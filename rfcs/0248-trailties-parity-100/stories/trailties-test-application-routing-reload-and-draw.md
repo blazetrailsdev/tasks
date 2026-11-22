@@ -1,6 +1,6 @@
 ---
 title: "trailties-test-application-routing-reload-and-draw"
-status: claimed
+status: in-progress
 updated: 2026-11-22
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10579
 claim: "2026-11-22T15:14:13Z"
 assignee: "engine-controllers-resolve-for-unused-routes"
 blocked-by: null

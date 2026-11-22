@@ -1,6 +1,6 @@
 ---
 title: "port listen's polling adapter, Record, Change and event loop"
-status: draft
+status: in-progress
 updated: 2026-11-22
 rfc: "0246-activesupport-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10578
+claim: "2026-11-22T16:44:05Z"
+assignee: "listen-port-polling-adapter-record-and-event-loop"
 blocked-by: null
 closed-reason: null
 ---

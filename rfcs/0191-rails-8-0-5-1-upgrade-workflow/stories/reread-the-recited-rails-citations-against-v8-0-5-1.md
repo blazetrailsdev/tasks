@@ -1,7 +1,7 @@
 ---
 title: "Re-read every recited Rails citation against the v8.0.5.2 tree"
-status: ready
-updated: 2026-11-16
+status: claimed
+updated: 2026-11-22
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: post-flip
 packages: [scripts, activesupport, activejob, arel]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-22T16:34:07Z"
+assignee: "cable-redis-connection-errors-converges-at-the-flip"
 blocked-by: null
 closed-reason: null
 ---

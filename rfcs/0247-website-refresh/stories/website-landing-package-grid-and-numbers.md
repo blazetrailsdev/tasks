@@ -1,6 +1,6 @@
 ---
 title: "Landing package grid grouped like Rails' frameworks, with live parity figures"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0247-website-refresh"
 cluster: website-landing

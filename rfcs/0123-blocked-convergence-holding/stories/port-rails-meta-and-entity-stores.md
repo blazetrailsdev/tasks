@@ -1,6 +1,6 @@
 ---
 title: "Port RailsMetaStore / RailsEntityStore (http/rack_cache.rb) over @blazetrails/rack-cache"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0123-blocked-convergence-holding"
 cluster: null
