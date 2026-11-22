@@ -7,6 +7,7 @@ cluster: null
 packages: []
 deps:
   - listen-port-polling-adapter-record-and-event-loop
+  - listen-port-polling-adapter-queue-optimizer-and-event-loop
 deps-rfc: []
 est-loc: 600
 priority: null
