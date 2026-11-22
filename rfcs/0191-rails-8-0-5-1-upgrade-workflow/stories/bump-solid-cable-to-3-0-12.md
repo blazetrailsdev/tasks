@@ -1,6 +1,6 @@
 ---
 title: "bump-solid-cable-to-3-0-12"
-status: draft
+status: claimed
 updated: 2026-11-22
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-22T22:54:09Z"
+assignee: "bump-mini-magick-to-5-3-1"
 blocked-by: null
 closed-reason: null
 ---

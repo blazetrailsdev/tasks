@@ -1,7 +1,7 @@
 ---
 title: "Generated storage.yml names S3 and GCS and their npm packages"
-status: ready
-updated: 2026-11-02
+status: claimed
+updated: 2026-11-22
 rfc: "0215-activestorage-cloud-services"
 cluster: as-cloud-infra
 packages: [trailties]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-22T22:14:04Z"
+assignee: "activestorage-storage-yml-template-peers"
 blocked-by: null
 ---
 

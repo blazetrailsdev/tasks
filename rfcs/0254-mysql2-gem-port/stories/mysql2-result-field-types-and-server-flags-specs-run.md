@@ -1,6 +1,6 @@
 ---
 title: "mysql2 Result#field_types, server_flags and Enumerable specs run"
-status: ready
+status: claimed
 updated: 2026-11-22
 rfc: "0254-mysql2-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: 7
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-22T22:34:12Z"
+assignee: "mysql2-result-stream-option-reads-the-driver-row-stream"
 blocked-by: null
 closed-reason: null
 ---

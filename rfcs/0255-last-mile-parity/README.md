@@ -1,9 +1,9 @@
 ---
 rfc: "0255-last-mile-parity"
 title: "Last mile to 100% parity for the near-complete packages"
-status: active
+status: closed
 created: 2026-11-20
-updated: 2026-11-21
+updated: 2026-11-22
 owner: "@deanmarano"
 packages:
   - scripts

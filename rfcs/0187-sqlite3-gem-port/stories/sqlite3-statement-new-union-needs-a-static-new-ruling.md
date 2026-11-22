@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: rule on Statement.new answering T | Promise<T> against the static async new rule"
-status: draft
+status: ready
 updated: 2026-11-22
 rfc: "0187-sqlite3-gem-port"
 cluster: null

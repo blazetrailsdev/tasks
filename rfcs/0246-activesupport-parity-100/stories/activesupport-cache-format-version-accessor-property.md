@@ -1,6 +1,6 @@
 ---
 title: "activesupport-cache-format-version-accessor-property"
-status: draft
+status: in-progress
 updated: 2026-11-22
 rfc: "0246-activesupport-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10607
+claim: "2026-11-22T22:24:08Z"
+assignee: "activesupport-cache-format-version-accessor-property"
 blocked-by: null
 closed-reason: null
 ---

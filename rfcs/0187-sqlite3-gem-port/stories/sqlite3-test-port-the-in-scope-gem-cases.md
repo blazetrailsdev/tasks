@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: port the remaining in-scope gem tests (test_database, test_statement, test_integration_statement)"
-status: ready
+status: in-progress
 updated: 2026-11-22
 rfc: "0187-sqlite3-gem-port"
 cluster: findings
@@ -9,9 +9,9 @@ deps: ["sqlite3-test-parity-scopes-to-what-activerecord-calls"]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10604
+claim: "2026-11-22T22:04:07Z"
+assignee: "sqlite3-libsql-engines"
 blocked-by: null
 closed-reason: null
 ---

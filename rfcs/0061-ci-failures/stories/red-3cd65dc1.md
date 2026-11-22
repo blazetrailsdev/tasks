@@ -1,6 +1,6 @@
 ---
 title: "Active Record PostgreSQL Tests (3) failing on main @3cd65dc1"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0061-ci-failures"
 cluster: null

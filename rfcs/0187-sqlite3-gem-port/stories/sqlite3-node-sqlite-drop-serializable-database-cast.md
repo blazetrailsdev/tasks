@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-node-sqlite-drop-serializable-database-cast"
-status: draft
+status: ready
 updated: 2026-11-22
 rfc: "0187-sqlite3-gem-port"
 cluster: null

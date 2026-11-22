@@ -1,7 +1,7 @@
 ---
 title: "activesupport: Behavior#arity_coerce / arity_of_callable as module members"
-status: draft
-updated: 2026-11-21
+status: in-progress
+updated: 2026-11-22
 rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10607
+claim: "2026-11-22T22:24:08Z"
+assignee: "activesupport-cache-format-version-accessor-property"
 blocked-by: null
 closed-reason: null
 ---

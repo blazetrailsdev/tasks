@@ -1,6 +1,6 @@
 ---
 title: "mysql2-statement-result-casts-binary-cells-in-fetch-row-stmt"
-status: draft
+status: claimed
 updated: 2026-11-22
 rfc: "0254-mysql2-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-22T22:34:12Z"
+assignee: "mysql2-result-stream-option-reads-the-driver-row-stream"
 blocked-by: null
 closed-reason: null
 ---

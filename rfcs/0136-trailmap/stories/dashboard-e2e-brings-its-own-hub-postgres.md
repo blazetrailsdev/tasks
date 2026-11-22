@@ -1,6 +1,6 @@
 ---
 title: "dashboard-e2e brings its own hub Postgres for a local run"
-status: draft
+status: in-progress
 updated: 2026-11-22
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#195
+claim: "2026-11-22T22:18:55Z"
+assignee: "dashboard-e2e-brings-its-own-hub-postgres"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Find and fix the dashboard input that loses focus on a refresh"
-status: draft
+status: in-progress
 updated: 2026-11-22
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#195
+claim: "2026-11-22T22:18:55Z"
+assignee: "dashboard-input-loses-focus-on-refresh"
 blocked-by: null
 closed-reason: null
 ---

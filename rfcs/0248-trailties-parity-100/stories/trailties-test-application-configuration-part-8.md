@@ -1,6 +1,6 @@
 ---
 title: "trailties: port application/configuration_test.rb lines 4325-4895"
-status: ready
+status: claimed
 updated: 2026-11-22
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 480
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-22T22:14:04Z"
+assignee: "activestorage-storage-yml-template-peers"
 blocked-by: null
 closed-reason: null
 ---
