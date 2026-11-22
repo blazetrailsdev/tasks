@@ -1,5 +1,5 @@
 ---
-rfc: "0000-rails-8-0-5-2-burn-down"
+rfc: "0256-rails-8-0-5-2-burn-down"
 title: "Rails 8.0.5.2 burn-down: re-verify every drifted body and port every upstream test change"
 status: draft
 created: 2026-11-22
@@ -23,12 +23,7 @@ clusters:
   - burn-down
 ---
 
-<!-- Unnumbered until merge: copy this dir to `rfcs/0000-your-slug`, keep `rfc:`
-     as 0000-your-slug and the H1 below number-free. `scripts/finalize-rfc.mjs`
-     swaps 0000 for the assigned number at merge. Never use a `draft-` prefix —
-     `draft` is a lifecycle status, not a dir prefix (see top-level README). -->
-
-# RFC — Rails 8.0.5.2 burn-down
+# RFC 0256 — Rails 8.0.5.2 burn-down
 
 ## Summary
 
@@ -52,7 +47,7 @@ Every story here is generated, not hand-written, by
 ```sh
 pnpm parity:bump:stories --source rails --from v8.0.2 --to v8.0.5.2 \
   --from-tests <rails-tests.json extracted at v8.0.2> \
-  --rfc 0000-rails-8-0-5-2-burn-down --out rfcs/0000-rails-8-0-5-2-burn-down/stories \
+  --rfc 0256-rails-8-0-5-2-burn-down --out rfcs/0256-rails-8-0-5-2-burn-down/stories \
   --config scripts/parity/bump-ledger/rails.stories.json
 ```
 

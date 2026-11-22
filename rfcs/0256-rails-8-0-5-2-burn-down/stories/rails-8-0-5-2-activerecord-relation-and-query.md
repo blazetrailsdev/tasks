@@ -1,7 +1,7 @@
 ---
 title: "Burn down activerecord (relation-and-query) from rails v8.0.2 to v8.0.5.2"
 status: draft
-rfc: "0000-rails-8-0-5-2-burn-down"
+rfc: "0256-rails-8-0-5-2-burn-down"
 cluster: burn-down
 packages: ["activerecord"]
 deps:
