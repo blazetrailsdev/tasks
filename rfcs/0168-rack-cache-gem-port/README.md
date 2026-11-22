@@ -400,7 +400,9 @@ vendor → skeleton → enroll ─┬→ cache-control/request/headers → respo
    `cache-store-async-over-npm-clients` names, and `memcached`. Recommendation:
    use whatever that story picks, so trails ships one memcached client. If
    `port-rack-cache-memcache-stores` is claimed first, it picks `memjs` and
-   records the choice there. Deferred to that story.
+   records the choice there. **Resolved: `memjs`** (trails#10573), an optional
+   peer of `@blazetrails/rack-cache`. `cache-store-async-over-npm-clients`
+   closed without picking a client.
 2. **What stands in for `Marshal`?** Two sites need it.
    `MetaStore::Disk#read` / `#write` persist entries with `Marshal.load(io)` /
    `Marshal.dump(entries, io, -1)` (`meta_store.rb:246,255`). Rails'
