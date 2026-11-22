@@ -1,6 +1,6 @@
 ---
 title: "activerecord-test-support-helper-stand-ins-remainder"
-status: ready
+status: in-progress
 updated: 2026-11-22
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10571
+claim: "2026-11-22T15:34:12Z"
+assignee: "activerecord-test-support-helper-stand-ins-remainder"
 blocked-by: null
 closed-reason: null
 ---

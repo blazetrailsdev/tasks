@@ -1,7 +1,7 @@
 ---
 title: "Port RailsMetaStore / RailsEntityStore (http/rack_cache.rb) over @blazetrails/rack-cache"
-status: ready
-updated: 2026-10-14
+status: in-progress
+updated: 2026-11-22
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: ["port-rack-cache-storage"]
 deps-rfc: []
 est-loc: 200
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#10570
+claim: "2026-11-22T15:24:09Z"
+assignee: "port-rails-meta-and-entity-stores"
 blocked-by: null
 closed-reason: null
 ---

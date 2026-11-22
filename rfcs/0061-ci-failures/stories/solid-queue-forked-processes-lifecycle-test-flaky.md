@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-forked-processes-lifecycle-test-flaky"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: trails#10565
+pr: trails#10516
 claim: "2026-11-22T14:05:04Z"
 assignee: "solid-queue-forked-processes-lifecycle-test-flaky"
 blocked-by: null

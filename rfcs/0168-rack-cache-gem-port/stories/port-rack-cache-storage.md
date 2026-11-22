@@ -1,6 +1,6 @@
 ---
 title: "Port Rack::Cache::Storage (URI → store resolution)"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0168-rack-cache-gem-port"
 cluster: null

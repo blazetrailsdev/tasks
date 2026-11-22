@@ -1,6 +1,6 @@
 ---
 title: "mysql2-result-each-reads-its-cast-options-per-call"
-status: claimed
+status: in-progress
 updated: 2026-11-22
 rfc: "0254-mysql2-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10567
 claim: "2026-11-22T14:54:11Z"
 assignee: "mysql2-client-default-auth-reaches-the-npm-handshake"
 blocked-by: null

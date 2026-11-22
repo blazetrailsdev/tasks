@@ -1,7 +1,7 @@
 ---
 title: "Landing package grid grouped like Rails' frameworks, with live parity figures"
-status: ready
-updated: 2026-11-18
+status: in-progress
+updated: 2026-11-22
 rfc: "0247-website-refresh"
 cluster: website-landing
 packages: [website]
@@ -9,9 +9,9 @@ deps: [website-landing-page-rebuild, website-parity-numbers-at-build]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10572
+claim: "2026-11-22T15:04:08Z"
+assignee: "website-landing-package-grid-and-numbers"
 blocked-by: null
 closed-reason: null
 ---

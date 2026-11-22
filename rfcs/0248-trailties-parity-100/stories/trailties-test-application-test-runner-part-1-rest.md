@@ -1,7 +1,7 @@
 ---
 title: "trailties-test-application-test-runner-part-1-rest"
-status: ready
-updated: 2026-11-21
+status: claimed
+updated: 2026-11-22
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-22T15:14:13Z"
+assignee: "engine-controllers-resolve-for-unused-routes"
 blocked-by: null
 closed-reason: null
 ---
