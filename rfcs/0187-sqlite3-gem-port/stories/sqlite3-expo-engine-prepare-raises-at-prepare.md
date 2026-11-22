@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: expo engine raises a failed prepare from Database#prepare, with its SQL"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0187-sqlite3-gem-port"
 cluster: null

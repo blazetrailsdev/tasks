@@ -1,6 +1,6 @@
 ---
 title: "pg C extension scan credits pg_define_coder's BinaryFormatting include and CFUNC const"
-status: draft
+status: ready
 updated: 2026-11-22
 rfc: "0186-pg-gem-port"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 40
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

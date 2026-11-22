@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: node:sqlite engine honors strict (DQS off) and open_v2 without CREATE"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0187-sqlite3-gem-port"
 cluster: null

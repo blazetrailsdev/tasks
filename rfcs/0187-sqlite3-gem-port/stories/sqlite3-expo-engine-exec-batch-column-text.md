@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: expo engine execBatch answers sqlite3_exec's column text"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0187-sqlite3-gem-port"
 cluster: null

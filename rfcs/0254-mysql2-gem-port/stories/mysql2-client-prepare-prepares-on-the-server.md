@@ -1,6 +1,6 @@
 ---
 title: "mysql2-client-prepare-prepares-on-the-server"
-status: ready
+status: in-progress
 updated: 2026-11-22
 rfc: "0254-mysql2-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#10556
+claim: "2026-11-22T07:35:04Z"
+assignee: "mysql2-client-prepare-prepares-on-the-server"
 blocked-by: null
 closed-reason: null
 ---
