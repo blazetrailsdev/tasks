@@ -55,8 +55,9 @@ is reused by the 8.1 upgrade.
 - [ ] The stories for `actionview/lib/action_view/helpers/sanitize_helper.rb`
       and `text_helper.rb` carry a cross-RFC dep on
       `bump-rails-html-sanitizer-to-v1-7-2` (RFC § 1, Order).
-- [ ] After that RFC merges, each ledger row's `story` field is filled in,
-      and the ledger gate reds on a row without one.
+- [ ] Filling each ledger row's `story` field after that RFC merges, and the
+      ledger gate that reds on a row without one, is filed as
+      `fill-bump-ledger-story-fields`.
 - [ ] The generator has tests, and takes the source and the two refs as
       arguments with nothing specific to 8.0.5.2 in it.
 

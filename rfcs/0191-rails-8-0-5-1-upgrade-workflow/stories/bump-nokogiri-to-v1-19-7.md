@@ -41,16 +41,13 @@ RFC 0191's dry run and ledger, which are per source.
 - [ ] The nokogiri pin floor is retaken on `v1.18.3` first
       (`pnpm parity:api:pins:all` scoped to nokogiri), in its own commit or PR.
 - [ ] `pnpm parity:bump:dry-run --source nokogiri --ref v1.19.7` is run and
-      its report committed. If the seed and its fixes fit one PR, this story
-      is that PR: `ref`, `pnpm vendor:fetch --source nokogiri`,
-      `pnpm vendor:recite`, re-verified and re-pinned bodies, all gates green.
-      If not, the PR seeds `scripts/parity/bump-ledger/nokogiri.json` and the
-      remainder is filed as stories in this RFC with `pnpm tasks new`.
-- [ ] racc is moved to `v1.8.1` in the same PR if the dry run shows its
-      anchor citations move; otherwise the PR body says why it stays.
-- [ ] The `racc` entry's comment citation is rewritten by `vendor:recite`.
-- [ ] `pnpm parity:api` / `pnpm parity:test` deltas for nokogiri are in the
-      PR body.
+      its report committed under `scripts/parity/bump-ledger/reports/`.
+- [ ] The flip (`ref`, `pnpm vendor:fetch --source nokogiri`,
+      `pnpm vendor:recite`, the `nokogiri.json` ledger seed, re-verified and
+      re-pinned bodies, racc `v1.8.1`, and the nokogiri `parity:api` /
+      `parity:test` deltas) is filed as `flip-nokogiri-to-v1-19-7`, since the
+      ledger gate recomputes the seed from the base branch's pins and so
+      cannot pass in the PR that first lands them.
 
 ## Definition of done
 
