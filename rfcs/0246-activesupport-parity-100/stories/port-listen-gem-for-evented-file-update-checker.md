@@ -5,7 +5,8 @@ updated: 2026-11-22
 rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - listen-port-listener-fsm-and-listen-to
 deps-rfc: []
 est-loc: null
 priority: 6
