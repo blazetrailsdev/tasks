@@ -1,6 +1,6 @@
 ---
 title: "attached-one-types-delegated-attachment-members"
-status: claimed
+status: in-progress
 updated: 2026-11-22
 rfc: "0247-website-refresh"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10580
 claim: "2026-11-22T16:54:09Z"
 assignee: "attached-one-types-delegated-attachment-members"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "trailties-test-middleware-cookies-rotation"
-status: ready
-updated: 2026-11-21
+status: in-progress
+updated: 2026-11-22
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10581
+claim: "2026-11-22T17:04:31Z"
+assignee: "generated-attribute-valid-type-leases-connection"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Port Rack::Cache::Context and Rack::Cache.new"
-status: ready
-updated: 2026-11-21
+status: in-progress
+updated: 2026-11-22
 rfc: "0168-rack-cache-gem-port"
 cluster: null
 packages: ["rack-cache"]
@@ -14,9 +14,9 @@ deps:
 deps-rfc: []
 est-loc: 450
 priority: 30
-pr: null
-claim: null
-assignee: null
+pr: trails#10582
+claim: "2026-11-22T17:14:04Z"
+assignee: "port-rack-cache-context"
 blocked-by: null
 closed-reason: null
 ---
