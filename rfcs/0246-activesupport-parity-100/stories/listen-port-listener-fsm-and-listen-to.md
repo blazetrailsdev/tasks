@@ -5,7 +5,8 @@ updated: 2026-11-22
 rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - listen-port-polling-adapter-record-and-event-loop
 deps-rfc: []
 est-loc: 600
 priority: null
