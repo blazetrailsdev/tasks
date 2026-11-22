@@ -1,7 +1,7 @@
 ---
 title: "sqlite3: Database constructor ports default_transaction_mode, extensions and the block arm"
-status: in-progress
-updated: 2026-11-21
+status: done
+updated: 2026-11-22
 rfc: "0187-sqlite3-gem-port"
 cluster: null
 packages: []
