@@ -1,6 +1,6 @@
 ---
 title: "Re-read every recited Rails citation against the v8.0.5.2 tree"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: post-flip

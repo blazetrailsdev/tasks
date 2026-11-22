@@ -1,7 +1,7 @@
 ---
 title: "Port context_test.rb:1-452 (22 cases): pass, invalidate, private requests, 304s, reload and revalidate"
-status: ready
-updated: 2026-11-21
+status: claimed
+updated: 2026-11-22
 rfc: "0168-rack-cache-gem-port"
 cluster: null
 packages: ["rack-cache"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 380
 priority: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-22T20:55:16Z"
+assignee: "port-rack-cache-context-test-pass-and-revalidate"
 blocked-by: null
 closed-reason: null
 ---

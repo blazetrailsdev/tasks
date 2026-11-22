@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: Statement.new, Statement#execute and Database#prepare answer T | Promise<T>"
-status: draft
+status: in-progress
 updated: 2026-11-22
 rfc: "0187-sqlite3-gem-port"
 cluster: database-and-statement
@@ -9,9 +9,9 @@ deps: ["sqlite3-statement-class-carries-the-gem-surface"]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10596
+claim: "2026-11-22T21:00:57Z"
+assignee: "sqlite3-prepare-and-execute-answer-the-union"
 blocked-by: null
 closed-reason: null
 ---

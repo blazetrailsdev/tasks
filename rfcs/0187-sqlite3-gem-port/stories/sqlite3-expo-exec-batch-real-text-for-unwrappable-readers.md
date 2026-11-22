@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: expo execBatch answers REAL text for PRAGMA/RETURNING readers"
-status: ready
+status: blocked
 updated: 2026-11-22
 rfc: "0187-sqlite3-gem-port"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-22T20:24:13Z"
+assignee: "sqlite3-better-sqlite3-and-expo-engines-honor-strict"
+blocked-by: "upstream: expo-sqlite exposes no column storage class (typeof/column_type) for a statement a CTE cannot wrap (PRAGMA, RETURNING); executeForRawResultAsync answers JS numbers"
 closed-reason: null
 ---
 

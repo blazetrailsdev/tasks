@@ -1,7 +1,7 @@
 ---
 title: "Port context_test.rb:673-1033 (13 cases): validation, HEAD, POST invalidation, Vary and failure handling"
-status: ready
-updated: 2026-11-21
+status: claimed
+updated: 2026-11-22
 rfc: "0168-rack-cache-gem-port"
 cluster: null
 packages: ["rack-cache"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 400
 priority: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-22T20:55:16Z"
+assignee: "port-rack-cache-context-test-pass-and-revalidate"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Rack::Cache::Storage memo races across the createStore await"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0168-rack-cache-gem-port"
 cluster: null

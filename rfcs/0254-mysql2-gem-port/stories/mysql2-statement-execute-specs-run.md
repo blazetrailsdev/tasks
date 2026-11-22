@@ -1,6 +1,6 @@
 ---
 title: "mysql2 statement_spec execute/bind/last_id skips run"
-status: ready
+status: in-progress
 updated: 2026-11-22
 rfc: "0254-mysql2-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#10595
+claim: "2026-11-22T20:34:04Z"
+assignee: "mysql2-statement-result-each-reads-its-cast-options-per-call"
 blocked-by: null
 closed-reason: null
 ---

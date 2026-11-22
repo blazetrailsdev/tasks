@@ -1,6 +1,6 @@
 ---
 title: "trailties: port action text install, authentication, benchmark and api app generator misses"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0248-trailties-parity-100"
 cluster: test-ports

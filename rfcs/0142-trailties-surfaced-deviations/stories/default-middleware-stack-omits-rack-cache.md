@@ -1,6 +1,6 @@
 ---
 title: "DefaultMiddlewareStack omits Rack::Cache: port load_rack_cache and mount it"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

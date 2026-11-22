@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-expo-engine-honors-strict"
-status: draft
+status: blocked
 updated: 2026-11-22
 rfc: "0187-sqlite3-gem-port"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "upstream: expo-sqlite exposes no DQS open option or sqlite3_db_config"
 closed-reason: null
 ---
 

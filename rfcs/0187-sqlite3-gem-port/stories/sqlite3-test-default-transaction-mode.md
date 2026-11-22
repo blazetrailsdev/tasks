@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-test-default-transaction-mode"
-status: ready
+status: in-progress
 updated: 2026-11-22
 rfc: "0187-sqlite3-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10594
+claim: "2026-11-22T20:24:13Z"
+assignee: "sqlite3-better-sqlite3-and-expo-engines-honor-strict"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: parity:test counts only the gem tests for methods activerecord calls"
-status: ready
+status: in-progress
 updated: 2026-11-22
 rfc: "0187-sqlite3-gem-port"
 cluster: findings
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10594
+claim: "2026-11-22T20:24:13Z"
+assignee: "sqlite3-better-sqlite3-and-expo-engines-honor-strict"
 blocked-by: null
 closed-reason: null
 ---
