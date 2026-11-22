@@ -1,6 +1,6 @@
 ---
 title: "rack-cache-dalli-namespace-not-applied-by-memjs"
-status: draft
+status: in-progress
 updated: 2026-11-22
 rfc: "0168-rack-cache-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10592
+claim: "2026-11-22T19:34:13Z"
+assignee: "rack-cache-context-types-options-accessors"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "DefaultMiddlewareStack omits Rack::Cache: port load_rack_cache and mount it"
-status: claimed
+status: in-progress
 updated: 2026-11-22
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["port-rack-cache-context", "port-rails-meta-and-entity-stores"]
 deps-rfc: []
 est-loc: 150
 priority: 30
-pr: null
+pr: trails#10588
 claim: "2026-11-22T18:44:07Z"
 assignee: "default-middleware-stack-omits-rack-cache"
 blocked-by: null

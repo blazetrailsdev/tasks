@@ -1,6 +1,6 @@
 ---
 title: "Action Cable Redis adapter rescues CONNECTION_ERRORS, not ConnectionError"
-status: claimed
+status: in-progress
 updated: 2026-11-22
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#10593
 claim: "2026-11-22T16:34:07Z"
 assignee: "cable-redis-connection-errors-converges-at-the-flip"
 blocked-by: null

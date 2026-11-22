@@ -1,7 +1,7 @@
 ---
 title: "Port context_test.rb:455-672 (14 cases): fetch, cacheability and freshness hits"
-status: ready
-updated: 2026-11-21
+status: in-progress
+updated: 2026-11-22
 rfc: "0168-rack-cache-gem-port"
 cluster: null
 packages: ["rack-cache"]
@@ -9,9 +9,9 @@ deps: ["port-rack-cache-context-test-harness"]
 deps-rfc: []
 est-loc: 330
 priority: 30
-pr: null
-claim: null
-assignee: null
+pr: trails#10592
+claim: "2026-11-22T19:34:13Z"
+assignee: "rack-cache-context-types-options-accessors"
 blocked-by: null
 closed-reason: null
 ---

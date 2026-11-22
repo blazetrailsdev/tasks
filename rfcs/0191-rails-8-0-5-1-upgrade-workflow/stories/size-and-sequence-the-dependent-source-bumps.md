@@ -1,6 +1,6 @@
 ---
 title: "Dry-run each dependent source the Rails 8.0.5.2 lock moves, beyond the sanitizer chain, and file one bump story per source"
-status: claimed
+status: in-progress
 updated: 2026-11-22
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: post-flip
@@ -21,7 +21,7 @@ deps: [flip-the-rails-ref-to-v8-0-5-1]
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
+pr: trails#10593
 claim: "2026-11-22T16:34:07Z"
 assignee: "cable-redis-connection-errors-converges-at-the-flip"
 blocked-by: null

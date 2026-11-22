@@ -1,6 +1,6 @@
 ---
 title: "listen-wraps-parcel-watcher"
-status: ready
+status: in-progress
 updated: 2026-11-22
 rfc: "0246-activesupport-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10587
+claim: "2026-11-22T19:04:06Z"
+assignee: "listen-wraps-parcel-watcher"
 blocked-by: null
 closed-reason: null
 ---

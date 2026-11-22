@@ -1,6 +1,6 @@
 ---
 title: "trailties: port application/configuration_test.rb lines 2033-2716"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0248-trailties-parity-100"
 cluster: test-ports

@@ -1,6 +1,6 @@
 ---
 title: "trailties: port action text install, authentication, benchmark and api app generator misses"
-status: claimed
+status: in-progress
 updated: 2026-11-22
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
@@ -9,7 +9,7 @@ deps: [trailties-test-move-misplaced-tests]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#10588
 claim: "2026-11-22T18:44:07Z"
 assignee: "default-middleware-stack-omits-rack-cache"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: expo execBatch answers REAL text for PRAGMA/RETURNING readers"
-status: draft
+status: ready
 updated: 2026-11-22
 rfc: "0187-sqlite3-gem-port"
 cluster: null

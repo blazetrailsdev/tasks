@@ -1,6 +1,6 @@
 ---
 title: "view-type-includes-engine-helpers"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0247-website-refresh"
 cluster: null
