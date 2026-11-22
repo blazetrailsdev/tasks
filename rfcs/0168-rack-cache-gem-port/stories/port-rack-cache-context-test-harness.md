@@ -1,7 +1,7 @@
 ---
 title: "Port rack-cache's test_helper CacheContextHelpers harness"
-status: ready
-updated: 2026-11-21
+status: claimed
+updated: 2026-11-22
 rfc: "0168-rack-cache-gem-port"
 cluster: null
 packages: ["rack-cache"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 260
 priority: 30
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-22T18:54:06Z"
+assignee: "port-rack-cache-context-test-harness"
 blocked-by: null
 closed-reason: null
 ---

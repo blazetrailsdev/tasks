@@ -1,6 +1,6 @@
 ---
 title: "port listen's Listener, Fsm and Listen.to as @blazetrails/listen"
-status: ready
+status: closed
 updated: 2026-11-22
 rfc: "0246-activesupport-parity-100"
 cluster: null
@@ -15,7 +15,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: operator ruled 2026-11-22 that listen is a wrapper over @parcel/watcher, not a port of its internals; see listen-wraps-parcel-watcher."
 ---
 
 # port listen's Listener, Fsm and Listen.to as @blazetrails/listen

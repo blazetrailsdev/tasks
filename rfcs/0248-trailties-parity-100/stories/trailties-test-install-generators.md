@@ -1,7 +1,7 @@
 ---
 title: "trailties: port action text install, authentication, benchmark and api app generator misses"
-status: ready
-updated: 2026-11-19
+status: claimed
+updated: 2026-11-22
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
 packages: [trailties]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-22T18:44:07Z"
+assignee: "default-middleware-stack-omits-rack-cache"
 blocked-by: null
 closed-reason: null
 ---

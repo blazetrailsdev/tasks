@@ -1,6 +1,6 @@
 ---
 title: "port listen's polling adapter, Record, Change and event loop"
-status: in-progress
+status: closed
 updated: 2026-11-22
 rfc: "0246-activesupport-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ pr: trails#10578
 claim: "2026-11-22T16:44:05Z"
 assignee: "listen-port-polling-adapter-record-and-event-loop"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: operator ruled 2026-11-22 that listen is a wrapper over @parcel/watcher, not a port of its internals; see listen-wraps-parcel-watcher."
 ---
 
 # port listen's polling adapter, Record, Change and event loop
