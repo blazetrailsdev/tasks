@@ -1,6 +1,6 @@
 ---
 title: "solid-cable TrimJobTest 'trims a limited number of messages' deletes nothing on loaded PG runners"
-status: ready
+status: in-progress
 updated: 2026-11-22
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10550
+claim: "2026-11-22T03:22:33Z"
+assignee: "solid-cable-trim-job-limited-trim-flakes-on-pg"
 blocked-by: null
 closed-reason: null
 ---

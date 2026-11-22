@@ -1,6 +1,6 @@
 ---
 title: "activerecord-test-support-helper-stand-ins-remainder"
-status: draft
+status: ready
 updated: 2026-11-22
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

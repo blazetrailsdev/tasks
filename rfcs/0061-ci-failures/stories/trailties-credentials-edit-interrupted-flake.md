@@ -1,6 +1,6 @@
 ---
 title: "trailties-credentials-edit-interrupted-flake"
-status: ready
+status: done
 updated: 2026-11-22
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10543
+claim: "2026-11-22T03:22:33Z"
+assignee: "solid-cable-trim-job-limited-trim-flakes-on-pg"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activerecord-test-support-helper-stand-ins-and-harness"
-status: claimed
+status: in-progress
 updated: 2026-11-22
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10548
 claim: "2026-11-22T02:56:30Z"
 assignee: "activerecord-test-support-helper-stand-ins-and-harness"
 blocked-by: null

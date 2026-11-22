@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat-hash-answers-rack-headers-public-interface"
-status: claimed
+status: in-progress
 updated: 2026-11-22
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10549
 claim: "2026-11-22T02:43:31Z"
 assignee: "ruby-compat-hash-answers-rack-headers-public-interface"
 blocked-by: null
