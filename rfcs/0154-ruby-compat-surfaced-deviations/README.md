@@ -27,6 +27,7 @@ packages:
   - "image-processing"
   - "nokogiri"
   - "rack-session"
+  - "solid-cable"
 clusters:
   - "mri-relocation"
   - "measurement"
