@@ -88,10 +88,14 @@ owning `sanitize_helper.rb` and `text_helper.rb` also depends on
   check against the ledger in one sitting.
 - **Hand-written stories:** drift from the ledger the moment it changes; the
   generator keeps the ledger the single authority.
-- **Parallel stories (no package chain):** a downstream package re-verified
-  before its upstream would pin bodies against behavior that is still moving.
-  The chain follows the Rails dependency order; stories within one package
-  share deps and can run in parallel.
+- **Parallel stories (no package chain):** the generator emits one linear
+  package queue, which keeps one package's ledger edits merging at a time.
+  The queue is not the Rails gem dependency graph: activemodel and arel come
+  before activesupport, which both depend on, and actioncable, activejob and
+  activestorage are serialized though none depends on the one before it.
+  Replacing the queue with the gemspec graph is tracked as
+  `burn-down-generator-rails-dep-graph-and-splits` (RFC 0191). Until it
+  lands, the order is a fixed convention, not a dependency claim.
 
 ## Rollout
 
@@ -132,11 +136,15 @@ Each phase is one package; stories inside a phase run in parallel.
 ## Open questions
 
 1. **Stories over the 700 est-loc ceiling** (`rails-8-0-5-2-activestorage`
-   1030, `rails-8-0-5-2-activesupport-other` 870): kept whole under
-   `max-est-loc: 2500`. If a PR proves too large to review, split it with a
-   finer `rails.stories.json` rule and regenerate, not by hand. Deferred to
-   whoever claims those stories.
+   1030, `rails-8-0-5-2-activesupport-other` 870). Deferred to
+   `burn-down-generator-rails-dep-graph-and-splits` (RFC 0191). It splits
+   activestorage (analyzer/previewer/service vs models) and
+   activesupport-other (notifications/testing vs the rest) in
+   `rails.stories.json`, then regenerates these stories with the gemspec
+   dependency graph.
 
 ## Changelog
 
 - 2026-11-22: initial RFC, 23 generated stories
+- 2026-11-22: review: package order stated as a convention; dep graph and
+  oversized splits deferred to `burn-down-generator-rails-dep-graph-and-splits`
