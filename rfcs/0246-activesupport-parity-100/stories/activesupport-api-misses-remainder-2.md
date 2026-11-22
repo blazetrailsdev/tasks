@@ -5,7 +5,8 @@ updated: 2026-11-21
 rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - activesupport-api-misses-remainder-after-bundle
 deps-rfc: []
 est-loc: null
 priority: null
