@@ -1,6 +1,6 @@
 ---
 title: "humanize matches [[:alpha:]] words and its 8.0.5.2 test is ported"
-status: claimed
+status: in-progress
 updated: 2026-11-22
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#10554
 claim: "2026-11-22T04:20:05Z"
 assignee: "flip-the-rails-ref-to-v8-0-5-1"
 blocked-by: null

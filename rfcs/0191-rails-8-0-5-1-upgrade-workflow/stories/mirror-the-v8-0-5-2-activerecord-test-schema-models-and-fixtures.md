@@ -1,7 +1,7 @@
 ---
 title: "Mirror the v8.0.5.2 activerecord test schema, models and fixtures in the canonical test schema"
-status: ready
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-22
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: post-flip
 packages: ["activerecord"]
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10554
+claim: "2026-11-22T05:12:11Z"
+assignee: "flip-the-rails-ref-to-v8-0-5-1"
 blocked-by: null
 closed-reason: null
 ---

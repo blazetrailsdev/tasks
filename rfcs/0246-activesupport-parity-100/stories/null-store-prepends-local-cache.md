@@ -1,6 +1,6 @@
 ---
 title: "activesupport: NullStore prepends Strategy::LocalCache"
-status: claimed
+status: in-progress
 updated: 2026-11-22
 rfc: "0246-activesupport-parity-100"
 cluster: test-residuals
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 1
-pr: null
+pr: trails#10554
 claim: "2026-11-22T03:09:35Z"
 assignee: "flip-the-rails-ref-to-v8-0-5-1"
 blocked-by: null

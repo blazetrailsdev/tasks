@@ -1,6 +1,6 @@
 ---
 title: "Flip the rails ref to v8.0.5.2: lockfile, seeded ledger, recite, stale deletions, regenerated artifacts"
-status: claimed
+status: in-progress
 updated: 2026-11-22
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: flip
@@ -30,7 +30,7 @@ deps:
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
+pr: trails#10554
 claim: "2026-11-22T03:09:35Z"
 assignee: "flip-the-rails-ref-to-v8-0-5-1"
 blocked-by: null
