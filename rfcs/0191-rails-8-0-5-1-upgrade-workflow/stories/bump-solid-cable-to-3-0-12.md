@@ -5,7 +5,8 @@ updated: 2026-11-22
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
 packages: []
-deps: []
+deps:
+  - flip-the-rails-ref-to-v8-0-5-1
 deps-rfc: []
 est-loc: null
 priority: null
