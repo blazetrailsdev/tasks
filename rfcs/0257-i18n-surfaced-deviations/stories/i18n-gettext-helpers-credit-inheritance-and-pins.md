@@ -2,7 +2,7 @@
 title: "i18n: credit Gettext::Helpers to its module, fix the failing inheritance edge, pin bodies"
 status: ready
 updated: 2026-11-22
-rfc: "0000-i18n-surfaced-deviations"
+rfc: "0257-i18n-surfaced-deviations"
 cluster: null
 packages:
   - "i18n"
