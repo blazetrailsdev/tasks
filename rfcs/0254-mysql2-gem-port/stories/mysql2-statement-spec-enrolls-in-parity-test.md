@@ -1,7 +1,7 @@
 ---
 title: "mysql2-statement-spec-enrolls-in-parity-test"
-status: claimed
-updated: 2026-11-21
+status: done
+updated: 2026-11-22
 rfc: "0254-mysql2-gem-port"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
+pr: trails#10534
 claim: "2026-11-21T23:54:33Z"
 assignee: "mysql2-parse-ssl-mode-raises-name-error"
 blocked-by: null

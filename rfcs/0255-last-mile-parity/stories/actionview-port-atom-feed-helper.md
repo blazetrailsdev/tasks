@@ -1,7 +1,7 @@
 ---
 title: "actionview-port-atom-feed-helper"
 status: ready
-updated: 2026-11-21
+updated: 2026-11-22
 rfc: "0255-last-mile-parity"
 cluster: null
 packages: []

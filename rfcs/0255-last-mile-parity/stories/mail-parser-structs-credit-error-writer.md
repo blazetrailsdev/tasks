@@ -1,7 +1,7 @@
 ---
 title: "mail: credit error= on the ten parser Structs"
-status: ready
-updated: 2026-11-21
+status: in-progress
+updated: 2026-11-22
 rfc: "0255-last-mile-parity"
 cluster: mail
 packages: [mail]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10536
+claim: "2026-11-22T00:07:32Z"
+assignee: "actionview-port-atom-feed-helper"
 blocked-by: null
 closed-reason: null
 ---

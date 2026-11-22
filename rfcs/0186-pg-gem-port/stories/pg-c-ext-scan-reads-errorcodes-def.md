@@ -1,7 +1,7 @@
 ---
 title: "pg C extension scan reads errorcodes.def's error classes"
-status: in-progress
-updated: 2026-11-21
+status: done
+updated: 2026-11-22
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []

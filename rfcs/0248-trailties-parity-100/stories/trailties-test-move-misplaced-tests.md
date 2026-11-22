@@ -1,7 +1,7 @@
 ---
 title: "trailties: move the 120 misplaced tests to their Rails-convention files"
-status: in-progress
-updated: 2026-11-21
+status: done
+updated: 2026-11-22
 rfc: "0248-trailties-parity-100"
 cluster: test-structure
 packages: [trailties]

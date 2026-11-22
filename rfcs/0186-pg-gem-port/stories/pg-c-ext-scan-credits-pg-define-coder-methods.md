@@ -1,7 +1,7 @@
 ---
 title: "pg C extension scan credits pg_define_coder's encode/decode"
-status: in-progress
-updated: 2026-11-21
+status: done
+updated: 2026-11-22
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []

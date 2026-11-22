@@ -1,7 +1,7 @@
 ---
 title: "trailties: port test_unit scaffold system_test template"
-status: ready
-updated: 2026-11-21
+status: done
+updated: 2026-11-22
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10452
+claim: "2026-11-22T00:33:34Z"
+assignee: "engine-controllers-resolve-for-unused-routes"
 blocked-by: null
 closed-reason: null
 ---

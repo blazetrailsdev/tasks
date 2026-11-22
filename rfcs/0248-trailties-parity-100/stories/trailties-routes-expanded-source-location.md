@@ -1,7 +1,7 @@
 ---
 title: "trailties-routes-expanded-source-location"
 status: ready
-updated: 2026-11-21
+updated: 2026-11-22
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []

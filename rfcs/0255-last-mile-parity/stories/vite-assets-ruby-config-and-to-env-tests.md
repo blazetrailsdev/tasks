@@ -1,7 +1,7 @@
 ---
 title: "vite-assets: port the ruby-config-file and to-env tests"
-status: ready
-updated: 2026-11-21
+status: in-progress
+updated: 2026-11-22
 rfc: "0255-last-mile-parity"
 cluster: small-packages
 packages: [vite-assets, vite-trails]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 100
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10536
+claim: "2026-11-22T00:07:32Z"
+assignee: "actionview-port-atom-feed-helper"
 blocked-by: null
 closed-reason: null
 ---

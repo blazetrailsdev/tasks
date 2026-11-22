@@ -1,7 +1,7 @@
 ---
 title: "Trailties Tests (1) failing on main @cf2f4434"
-status: ready
-updated: 2026-11-21
+status: in-progress
+updated: 2026-11-22
 rfc: "0061-ci-failures"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: trails#10537
+claim: "2026-11-22T00:46:30Z"
+assignee: "red-cf2f4434"
 blocked-by: null
 closed-reason: null
 ---

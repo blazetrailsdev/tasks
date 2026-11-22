@@ -1,7 +1,7 @@
 ---
 title: "Active Record SQLite Tests (1) failing on main @5e31c2ea"
-status: in-progress
-updated: 2026-11-21
+status: done
+updated: 2026-11-22
 rfc: "0061-ci-failures"
 cluster: null
 packages: []
