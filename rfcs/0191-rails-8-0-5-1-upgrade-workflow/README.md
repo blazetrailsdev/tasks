@@ -960,11 +960,10 @@ Resolved or deferred:
   by the owner: yes, as designed in § 3. It suspends the per-unit ratchets on
   the seeded pairs and changed tests for the length of the burn-down; its
   rows are generated from two upstream tags and only shrink.
-- **Branch policy.** (Open question 2.) Deferred 2026-11-10 by the owner to
-  `tag-the-last-rails-8-0-2-commit`, which asks it before placing the tag.
-  Until answered the default is the recommendation (tags only; a
-  `<major>-<minor>-stable` branch cut from the tag when a published line
-  needs a fix). Nothing before the tag depends on it.
+- **Branch policy.** (Open question 2.) Resolved 2026-11-22 by the owner,
+  asked by `tag-the-last-rails-8-0-2-commit`: tags only. A
+  `<major>-<minor>-stable` branch is cut from the tag only when a published
+  line needs a fix; no branch is created at a flip.
 - **Does the ledger cover gates the dry run could not exercise?** (Open
   question 3.) Resolved 2026-11-10 by
   `bump-dry-run-runs-the-gates-against-a-candidate-ref`: it exercises the
@@ -980,9 +979,12 @@ Resolved or deferred:
   owner: yes. § 4, criterion 4.
 - **Version scheme, and release timing.** Deferred to the 8.1 upgrade RFC
   opened by `write-the-retrospective-and-scope-the-rails-8-1-upgrade`. § 6.
-- **Do dependent gems stop at the 8.0.5.2 lock's versions?** Deferred to
-  `size-and-sequence-the-dependent-source-bumps`, which asks it with the dry
-  runs in hand. It does not apply to the gemspec-forced chain (nokogiri,
+- **Do dependent gems stop at the 8.0.5.2 lock's versions?** Resolved
+  2026-11-22 by the owner, with the dry runs in hand
+  (`size-and-sequence-the-dependent-source-bumps`): yes, each moves to the
+  8.0.5.2 lock's version now rather than once with 8.1, and dev-Gemfile-only
+  gems (solid_cable; solid_queue already leads) follow the same rule. One
+  `bump-*` story per source. It does not apply to the gemspec-forced chain (nokogiri,
   loofah, rails-html-sanitizer), which moves to the 8.0.5.2 lock's versions.
 
 ## Changelog
