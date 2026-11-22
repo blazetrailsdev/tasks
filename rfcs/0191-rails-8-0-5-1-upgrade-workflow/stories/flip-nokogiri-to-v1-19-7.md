@@ -54,5 +54,5 @@ resolves racc 1.8.1, tag `^{}` `5229883dca5b451c8bfd322272ccd2ca6d526695`).
       dry run's seed (rerun `pnpm parity:bump:dry-run --source nokogiri --ref v1.19.7`),
       and `pnpm parity:api:pins:ledger` is green.
 - [ ] The nokogiri burn-down is generated with `pnpm parity:bump:stories --source nokogiri
-    --from v1.18.3 --to v1.19.7 …` and filed in this RFC.
+--from v1.18.3 --to v1.19.7 …` and filed in this RFC.
 - [ ] `parity:api` / `parity:test` deltas for nokogiri are in the PR body.
