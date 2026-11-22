@@ -2,7 +2,7 @@
 title: "activestorage-empty-attachment-error-ruling"
 status: blocked
 updated: 2026-11-21
-rfc: "0255-last-mile-parity"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
