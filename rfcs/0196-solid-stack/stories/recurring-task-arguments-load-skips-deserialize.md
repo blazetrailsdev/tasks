@@ -5,7 +5,8 @@ updated: 2026-11-22
 rfc: "0196-solid-stack"
 cluster: null
 packages: []
-deps: []
+deps:
+  - recurring-task-arguments-load-deserializes
 deps-rfc: []
 est-loc: null
 priority: null
