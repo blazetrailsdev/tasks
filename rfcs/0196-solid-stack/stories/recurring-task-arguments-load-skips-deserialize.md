@@ -1,6 +1,6 @@
 ---
 title: "recurring-task-arguments-load-skips-deserialize"
-status: draft
+status: blocked
 updated: 2026-11-22
 rfc: "0196-solid-stack"
 cluster: null
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "waits on recurring-task-arguments-load-deserializes (owner ruling pending on a sync/async ActiveJob::Arguments.deserialize in a coder load)"
 closed-reason: null
 ---
 

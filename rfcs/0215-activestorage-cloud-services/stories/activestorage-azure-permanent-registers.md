@@ -1,7 +1,7 @@
 ---
 title: "Record Azure as permanently unported in the parity registers"
-status: ready
-updated: 2026-11-02
+status: in-progress
+updated: 2026-11-22
 rfc: "0215-activestorage-cloud-services"
 cluster: as-cloud-infra
 packages: [activestorage]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10602
+claim: "2026-11-22T21:30:20Z"
+assignee: "activestorage-azure-permanent-registers"
 blocked-by: null
 ---
 

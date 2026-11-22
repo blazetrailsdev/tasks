@@ -1,6 +1,6 @@
 ---
 title: "trailties-test-middleware-cache-rack-cache"
-status: claimed
+status: done
 updated: 2026-11-22
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10598
 claim: "2026-11-22T20:44:20Z"
 assignee: "engine-controllers-resolve-for-unused-routes"
 blocked-by: null

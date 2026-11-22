@@ -1,6 +1,6 @@
 ---
 title: "trailties: port application/configuration_test.rb lines 699-1459"
-status: claimed
+status: in-progress
 updated: 2026-11-22
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
@@ -9,7 +9,7 @@ deps: [trailties-test-move-misplaced-tests]
 deps-rfc: []
 est-loc: 480
 priority: null
-pr: null
+pr: trails#10599
 claim: "2026-11-22T17:24:04Z"
 assignee: "trailties-test-application-configuration-part-2"
 blocked-by: null

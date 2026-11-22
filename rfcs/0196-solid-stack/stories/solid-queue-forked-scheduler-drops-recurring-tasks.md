@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-forked-scheduler-drops-recurring-tasks"
-status: draft
+status: done
 updated: 2026-11-22
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10600
+claim: "2026-11-22T21:26:17Z"
+assignee: "solid-queue-forked-scheduler-drops-recurring-tasks"
 blocked-by: null
 closed-reason: null
 ---

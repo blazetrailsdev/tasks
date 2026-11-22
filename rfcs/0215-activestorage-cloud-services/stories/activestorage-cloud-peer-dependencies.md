@@ -1,7 +1,7 @@
 ---
 title: "Declare the AWS and GCS SDKs as optional peers and keep them out of eager imports"
-status: ready
-updated: 2026-11-02
+status: in-progress
+updated: 2026-11-22
 rfc: "0215-activestorage-cloud-services"
 cluster: as-cloud-infra
 packages: [activestorage]
@@ -9,9 +9,9 @@ deps: [activestorage-configurator-loads-services]
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10602
+claim: "2026-11-22T21:30:20Z"
+assignee: "activestorage-azure-permanent-registers"
 blocked-by: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: Statement.new, Statement#execute and Database#prepare answer T | Promise<T>"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0187-sqlite3-gem-port"
 cluster: database-and-statement
