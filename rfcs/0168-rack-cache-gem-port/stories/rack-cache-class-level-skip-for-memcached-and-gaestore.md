@@ -1,7 +1,7 @@
 ---
 title: "rack-cache-class-level-skip-for-memcached-and-gaestore"
-status: draft
-updated: 2026-11-21
+status: ready
+updated: 2026-11-22
 rfc: "0168-rack-cache-gem-port"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "activesupport-api-misses-remainder-2"
-status: draft
-updated: 2026-11-21
+status: ready
+updated: 2026-11-22
 rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps:
   - activesupport-api-misses-remainder-after-bundle
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null

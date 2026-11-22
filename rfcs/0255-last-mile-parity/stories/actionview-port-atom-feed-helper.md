@@ -1,6 +1,6 @@
 ---
 title: "actionview-port-atom-feed-helper"
-status: claimed
+status: in-progress
 updated: 2026-11-22
 rfc: "0255-last-mile-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10541
 claim: "2026-11-22T01:51:30Z"
 assignee: "actionview-port-atom-feed-helper"
 blocked-by: null

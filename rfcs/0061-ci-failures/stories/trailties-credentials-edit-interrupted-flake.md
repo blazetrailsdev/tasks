@@ -1,7 +1,7 @@
 ---
 title: "trailties-credentials-edit-interrupted-flake"
-status: draft
-updated: 2026-11-21
+status: ready
+updated: 2026-11-22
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

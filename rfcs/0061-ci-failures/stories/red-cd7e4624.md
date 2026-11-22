@@ -1,6 +1,6 @@
 ---
 title: "Trailties Tests (1) failing on main @cd7e4624"
-status: ready
+status: in-progress
 updated: 2026-11-22
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: trails#10543
+claim: "2026-11-22T02:16:55Z"
+assignee: "red-cd7e4624"
 blocked-by: null
 closed-reason: null
 ---

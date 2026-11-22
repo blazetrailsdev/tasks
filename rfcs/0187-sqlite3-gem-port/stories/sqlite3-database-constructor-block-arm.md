@@ -1,7 +1,7 @@
 ---
 title: "sqlite3-database-constructor-block-arm"
-status: draft
-updated: 2026-11-21
+status: in-progress
+updated: 2026-11-22
 rfc: "0187-sqlite3-gem-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10524
+claim: "2026-11-22T02:10:52Z"
+assignee: "sqlite3-database-constructor-block-arm"
 blocked-by: null
 closed-reason: null
 ---

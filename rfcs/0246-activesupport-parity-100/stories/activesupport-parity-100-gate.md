@@ -1,7 +1,7 @@
 ---
 title: "activesupport: CI gate holding parity:api and parity:test at 100%"
 status: ready
-updated: 2026-11-18
+updated: 2026-11-22
 rfc: "0246-activesupport-parity-100"
 cluster: receipts
 packages: [activesupport, scripts]
@@ -56,7 +56,7 @@ deps:
   - safe-buffer-declare-unsafe-string-methods
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 20
 pr: null
 claim: null
 assignee: null

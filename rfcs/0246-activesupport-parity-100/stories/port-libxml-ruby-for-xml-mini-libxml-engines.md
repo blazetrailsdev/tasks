@@ -1,14 +1,14 @@
 ---
 title: "port-libxml-ruby-for-xml-mini-libxml-engines"
-status: draft
-updated: 2026-11-21
+status: ready
+updated: 2026-11-22
 rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 7
 pr: null
 claim: null
 assignee: null

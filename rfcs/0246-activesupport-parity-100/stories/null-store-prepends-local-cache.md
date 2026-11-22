@@ -1,14 +1,14 @@
 ---
 title: "activesupport: NullStore prepends Strategy::LocalCache"
-status: draft
-updated: 2026-11-21
+status: ready
+updated: 2026-11-22
 rfc: "0246-activesupport-parity-100"
 cluster: test-residuals
 packages: [activesupport]
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

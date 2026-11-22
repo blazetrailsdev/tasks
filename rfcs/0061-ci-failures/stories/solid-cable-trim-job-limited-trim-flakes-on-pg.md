@@ -1,7 +1,7 @@
 ---
 title: "solid-cable TrimJobTest 'trims a limited number of messages' deletes nothing on loaded PG runners"
-status: draft
-updated: 2026-11-18
+status: ready
+updated: 2026-11-22
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

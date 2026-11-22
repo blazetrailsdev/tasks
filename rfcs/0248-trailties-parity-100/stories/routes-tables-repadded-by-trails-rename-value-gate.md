@@ -1,6 +1,6 @@
 ---
 title: "routes-tables-repadded-by-trails-rename-value-gate"
-status: ready
+status: done
 updated: 2026-11-22
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10545
+claim: "2026-11-22T02:17:34Z"
+assignee: "generated-attribute-valid-type-leases-connection"
 blocked-by: null
 closed-reason: null
 ---

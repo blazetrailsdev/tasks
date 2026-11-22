@@ -1,7 +1,7 @@
 ---
 title: "rack-uploaded-file-delegates-keyword-arguments"
-status: draft
-updated: 2026-11-17
+status: done
+updated: 2026-11-22
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10544
+claim: "2026-11-22T02:30:33Z"
+assignee: "rack-uploaded-file-delegates-keyword-arguments"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,14 +1,14 @@
 ---
 title: "activesupport: port format_version, compact_blank! and rescue_handlers"
-status: draft
-updated: 2026-11-21
+status: ready
+updated: 2026-11-22
 rfc: "0246-activesupport-parity-100"
 cluster: api-residuals
 packages: [activesupport]
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 4
 pr: null
 claim: null
 assignee: null

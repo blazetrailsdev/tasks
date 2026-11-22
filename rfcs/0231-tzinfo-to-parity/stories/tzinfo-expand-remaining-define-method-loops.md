@@ -1,7 +1,7 @@
 ---
 title: "Expand tzinfo's 9 listed define_method loops in the Ruby test extractor"
-status: in-progress
-updated: 2026-11-21
+status: done
+updated: 2026-11-22
 rfc: "0231-tzinfo-to-parity"
 cluster: null
 packages: []

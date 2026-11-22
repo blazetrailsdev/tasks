@@ -1,7 +1,7 @@
 ---
 title: "sqlite3: better-sqlite3 engine binds ?NNN placeholders by index"
-status: draft
-updated: 2026-11-21
+status: ready
+updated: 2026-11-22
 rfc: "0187-sqlite3-gem-port"
 cluster: null
 packages: []
