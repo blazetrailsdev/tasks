@@ -1,6 +1,6 @@
 ---
 title: "trailties-isolation-tests-run-on-postgresql"
-status: draft
+status: in-progress
 updated: 2026-11-21
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10522
+claim: "2026-11-21T23:50:05Z"
+assignee: "trailties-isolation-tests-run-on-postgresql"
 blocked-by: null
 closed-reason: null
 ---

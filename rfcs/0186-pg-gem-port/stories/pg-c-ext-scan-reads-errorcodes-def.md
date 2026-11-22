@@ -1,6 +1,6 @@
 ---
 title: "pg C extension scan reads errorcodes.def's error classes"
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0186-pg-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#10531
+claim: "2026-11-21T23:15:30Z"
+assignee: "pg-in-extra-surface-gated-packages"
 blocked-by: null
 closed-reason: null
 ---

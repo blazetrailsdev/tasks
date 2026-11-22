@@ -1,6 +1,6 @@
 ---
 title: "parity: account for i18n's gettext backend files in the unported register"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0255-last-mile-parity"
 cluster: null

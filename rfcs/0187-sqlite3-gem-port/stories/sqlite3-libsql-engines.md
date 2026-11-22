@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: the three libsql drivers become engines under SQLite3::Database"
-status: ready
+status: in-progress
 updated: 2026-11-21
 rfc: "0187-sqlite3-gem-port"
 cluster: drivers
@@ -9,9 +9,9 @@ deps: ["sqlite3-database-class-carries-the-gem-surface"]
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10532
+claim: "2026-11-21T23:28:31Z"
+assignee: "sqlite3-adapter-new-client-is-database-new"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "class-paths: answer a reopened Ruby class like a reopened module"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0255-last-mile-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Port Rack::Cache::Response"
-status: ready
+status: done
 updated: 2026-11-21
 rfc: "0168-rack-cache-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: ["port-rack-cache-cache-control-request-and-headers"]
 deps-rfc: []
 est-loc: 520
 priority: 30
-pr: null
-claim: null
-assignee: null
+pr: trails#10530
+claim: "2026-11-21T23:02:30Z"
+assignee: "port-rack-cache-response"
 blocked-by: null
 closed-reason: null
 ---

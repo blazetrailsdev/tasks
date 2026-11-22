@@ -1,6 +1,6 @@
 ---
 title: "trailties: Initializable::Collection#tsort_each and InitializersCommand's call to it"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0248-trailties-parity-100"
 cluster: null

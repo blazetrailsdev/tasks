@@ -1,6 +1,6 @@
 ---
 title: "dir-chdir-restores-renamed-cwd-for-app-folder-renamed-test"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0248-trailties-parity-100"
 cluster: null

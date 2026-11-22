@@ -1,6 +1,6 @@
 ---
 title: "SQLite3Adapter.new_client is ::SQLite3::Database.new(config[:database].to_s, config)"
-status: ready
+status: blocked
 updated: 2026-11-21
 rfc: "0187-sqlite3-gem-port"
 cluster: migration
@@ -15,7 +15,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "Needs sqlite3-node-sqlite-engine (the node-sqlite adapter has no engine yet) and sqlite3-libsql-engines merged. Also, returning SQLite3::Database from newClient breaks every adapter call site that still uses the SqliteConnection API (exec, pragma, prepare().all, lastInsertRowId), so it must land together with sqlite3-adapter-perform-query-reads-the-gem-names and sqlite3-adapter-configure-connection-calls-the-gem-setters, or their deps must be inverted."
 closed-reason: null
 ---
 

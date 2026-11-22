@@ -1,6 +1,6 @@
 ---
 title: "parity: report permanent skips apart from open gaps on both parity:test and the website"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0255-last-mile-parity"
 cluster: measurement

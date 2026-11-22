@@ -1,6 +1,6 @@
 ---
 title: "rack-proxy: port the examples and the LIVE-gated smoke tests"
-status: in-progress
+status: done
 updated: 2026-11-21
 rfc: "0255-last-mile-parity"
 cluster: small-packages
