@@ -5,7 +5,8 @@ updated: 2026-11-23
 rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - isolation-tests-hooks-move-to-setup-teardown
 deps-rfc: []
 est-loc: 120
 priority: null
