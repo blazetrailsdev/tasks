@@ -32,6 +32,8 @@ multiple parts`, `uploading a small object with multipart_threshold configured`.
 
 ## Acceptance criteria
 
+- [ ] `test/service/s3-service.test.ts` includes `SharedServiceTests`, gated on
+      `SERVICE_CONFIGURATIONS.s3`, and the whole shared suite passes on SeaweedFS
 - [ ] The `s3_service_test.rb` row leaves `unported-files/activestorage.ts`
 - [ ] All twelve pass under the Rails names, on the emulator chosen by
       `activestorage-cloud-ci-emulators`; `uploading with server-side encryption`

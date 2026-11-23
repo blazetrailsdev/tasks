@@ -35,5 +35,6 @@ See the RFC, § "Gem-backed port rules and SDK differences".
       `activestorage-s3-service-multipart-and-compose`
 - [ ] The `pattern` half of the `service/s3_service.rb` row retires, with its baseline
       JSON row; the test half goes with `activestorage-s3-service-test`
-- [ ] The shared service tests pass on SeaweedFS, `compose` and `deleting by prefix`
-      excepted
+- [ ] Under a manual run of the shared service tests on SeaweedFS, all pass except
+      `compose` and `deleting by prefix`; committing that run moves to
+      `activestorage-s3-service-test`, once those two land
