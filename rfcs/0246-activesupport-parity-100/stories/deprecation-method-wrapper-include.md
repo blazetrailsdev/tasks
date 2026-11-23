@@ -1,6 +1,6 @@
 ---
 title: "deprecation-method-wrapper-include"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0246-activesupport-parity-100"
 cluster: null

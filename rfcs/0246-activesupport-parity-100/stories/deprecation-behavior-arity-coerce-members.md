@@ -1,6 +1,6 @@
 ---
 title: "activesupport: Behavior#arity_coerce / arity_of_callable as module members"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0246-activesupport-parity-100"
 cluster: null

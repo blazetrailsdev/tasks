@@ -1,6 +1,6 @@
 ---
 title: "burn-down-generator-rails-dep-graph-and-splits"
-status: claimed
+status: ready
 updated: 2026-11-22
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-22T22:54:09Z"
-assignee: "bump-mini-magick-to-5-3-1"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

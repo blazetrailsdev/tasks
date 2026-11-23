@@ -1,6 +1,6 @@
 ---
 title: "bump-pg-to-1-6-2"
-status: claimed
+status: in-progress
 updated: 2026-11-22
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10611
 claim: "2026-11-22T22:54:09Z"
 assignee: "bump-mini-magick-to-5-3-1"
 blocked-by: null

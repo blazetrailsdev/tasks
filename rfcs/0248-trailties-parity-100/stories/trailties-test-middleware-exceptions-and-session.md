@@ -1,6 +1,6 @@
 ---
 title: "trailties: port middleware exceptions and session tests"
-status: claimed
+status: in-progress
 updated: 2026-11-22
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#10610
 claim: "2026-11-22T22:14:04Z"
 assignee: "activestorage-storage-yml-template-peers"
 blocked-by: null

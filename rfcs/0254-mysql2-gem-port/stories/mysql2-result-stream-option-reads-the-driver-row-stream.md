@@ -1,6 +1,6 @@
 ---
 title: "mysql2-result-stream-option-reads-the-driver-row-stream"
-status: claimed
+status: in-progress
 updated: 2026-11-22
 rfc: "0254-mysql2-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10609
 claim: "2026-11-22T22:34:12Z"
 assignee: "mysql2-result-stream-option-reads-the-driver-row-stream"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: the three libsql drivers become engines under SQLite3::Database"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0187-sqlite3-gem-port"
 cluster: drivers

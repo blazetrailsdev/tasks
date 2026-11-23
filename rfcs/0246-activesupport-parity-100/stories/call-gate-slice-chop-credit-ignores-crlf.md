@@ -1,6 +1,6 @@
 ---
 title: "call gate: slice(0, -1) credits chop without the CRLF arm"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0246-activesupport-parity-100"
 cluster: null

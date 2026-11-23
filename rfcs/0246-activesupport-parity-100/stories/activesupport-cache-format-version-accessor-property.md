@@ -1,6 +1,6 @@
 ---
 title: "activesupport-cache-format-version-accessor-property"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0246-activesupport-parity-100"
 cluster: null

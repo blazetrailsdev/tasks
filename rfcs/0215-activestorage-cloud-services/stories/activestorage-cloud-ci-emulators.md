@@ -1,6 +1,6 @@
 ---
 title: "Run SeaweedFS and fake-gcs-server in a CI lane"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0215-activestorage-cloud-services"
 cluster: as-cloud-infra

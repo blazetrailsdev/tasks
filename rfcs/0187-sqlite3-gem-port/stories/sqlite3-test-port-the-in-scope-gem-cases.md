@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: port the remaining in-scope gem tests (test_database, test_statement, test_integration_statement)"
-status: in-progress
+status: done
 updated: 2026-11-22
 rfc: "0187-sqlite3-gem-port"
 cluster: findings
