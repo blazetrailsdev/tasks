@@ -1,7 +1,7 @@
 ---
 title: "bump-pg-to-1-6-2"
-status: in-progress
-updated: 2026-11-22
+status: done
+updated: 2026-11-23
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
 packages: []

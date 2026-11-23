@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-test-statement-and-database-remainders"
-status: ready
+status: in-progress
 updated: 2026-11-23
 rfc: "0187-sqlite3-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10632
+claim: "2026-11-23T09:41:12Z"
+assignee: "sqlite3-test-statement-and-database-remainders"
 blocked-by: null
 closed-reason: null
 ---

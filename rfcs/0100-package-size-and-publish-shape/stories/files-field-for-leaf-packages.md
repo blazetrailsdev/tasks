@@ -1,6 +1,6 @@
 ---
 title: "Add files field to date, did-you-mean, globalid, i18n"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0100-package-size-and-publish-shape"
 cluster: null

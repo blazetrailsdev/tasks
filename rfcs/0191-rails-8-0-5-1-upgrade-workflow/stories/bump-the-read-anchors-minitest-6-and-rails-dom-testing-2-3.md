@@ -1,7 +1,7 @@
 ---
 title: "bump-the-read-anchors-minitest-6-and-rails-dom-testing-2-3"
-status: in-progress
-updated: 2026-11-22
+status: done
+updated: 2026-11-23
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
 packages: []

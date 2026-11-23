@@ -1,6 +1,6 @@
 ---
 title: "Run check:hero on PRs touching examples/homepage, trails-tsc or tse-compiler"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0247-website-refresh"
 cluster: null

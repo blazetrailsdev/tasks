@@ -1,7 +1,7 @@
 ---
 title: "Find the Node seam for GCS issuer and signer"
-status: ready
-updated: 2026-11-02
+status: in-progress
+updated: 2026-11-23
 rfc: "0215-activestorage-cloud-services"
 cluster: as-cloud-gcs
 packages: [activestorage]
@@ -9,9 +9,9 @@ deps: [activestorage-gcs-service-urls]
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10633
+claim: "2026-11-23T09:42:28Z"
+assignee: "activestorage-engine-service-load-reads-lazy-configs"
 blocked-by: null
 ---
 
