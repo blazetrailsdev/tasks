@@ -2,7 +2,7 @@
 title: "unprepared-statement-reuse-proposal"
 status: blocked
 updated: 2026-11-18
-rfc: "0241-request-path-performance"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
