@@ -5,7 +5,10 @@ rfc: "0256-rails-8-0-5-2-burn-down"
 cluster: burn-down
 packages: ["trailties"]
 deps:
-  - rails-8-0-5-2-actiontext
+  - rails-8-0-5-2-actioncontroller
+  - rails-8-0-5-2-actiondispatch-http
+  - rails-8-0-5-2-actiondispatch-other
+  - rails-8-0-5-2-actiondispatch-routing
 deps-rfc: []
 est-loc: 435
 priority: null
