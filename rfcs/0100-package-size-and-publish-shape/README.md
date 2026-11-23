@@ -1,9 +1,9 @@
 ---
 rfc: "0100-package-size-and-publish-shape"
 title: "Package size, publish shape and release process"
-status: draft
+status: active
 created: 2026-08-11
-updated: 2026-11-18
+updated: 2026-11-23
 owner: "@deanmarano"
 packages:
   - "activerecord"
