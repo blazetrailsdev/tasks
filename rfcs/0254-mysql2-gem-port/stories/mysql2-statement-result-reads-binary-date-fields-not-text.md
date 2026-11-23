@@ -1,6 +1,6 @@
 ---
 title: "mysql2 fetchRowStmt builds date/time cells from the binary fields, not a re-parsed string"
-status: claimed
+status: in-progress
 updated: 2026-11-23
 rfc: "0254-mysql2-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#10640
 claim: "2026-11-23T13:32:34Z"
 assignee: "mysql2-local-infile-ports-infile-c"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "lint-staged runs prettier on .html and .svelte, matching CI's Prettier step"
-status: claimed
+status: in-progress
 updated: 2026-11-23
 rfc: "0247-website-refresh"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 5
 priority: null
-pr: null
+pr: trails#10641
 claim: "2026-11-23T13:52:26Z"
 assignee: "homepage-view-typecheck-virtualizer-gaps"
 blocked-by: null

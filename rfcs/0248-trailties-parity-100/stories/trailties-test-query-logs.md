@@ -1,6 +1,6 @@
 ---
 title: "trailties: port application/query_logs_test.rb"
-status: ready
+status: in-progress
 updated: 2026-11-23
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
@@ -9,9 +9,9 @@ deps: [trailties-test-move-misplaced-tests]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10642
+claim: "2026-11-23T14:02:29Z"
+assignee: "generated-attribute-valid-type-leases-connection"
 blocked-by: null
 closed-reason: null
 ---
