@@ -1,7 +1,7 @@
 ---
 title: "trailties: port application/rake/dbs_test.rb"
-status: ready
-updated: 2026-11-19
+status: claimed
+updated: 2026-11-23
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
 packages: [trailties]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 480
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-23T22:19:43Z"
+assignee: "trailties-test-rake-dbs"
 blocked-by: null
 closed-reason: null
 ---

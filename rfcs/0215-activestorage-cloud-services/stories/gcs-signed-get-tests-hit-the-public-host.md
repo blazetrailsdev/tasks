@@ -1,6 +1,6 @@
 ---
 title: "GCS signed-URL GET tests reach the object instead of passing on a text/plain 404"
-status: ready
+status: in-progress
 updated: 2026-11-23
 rfc: "0215-activestorage-cloud-services"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#10673
+claim: "2026-11-23T22:09:43Z"
+assignee: "gcs-signed-get-tests-hit-the-public-host"
 blocked-by: null
 closed-reason: null
 ---

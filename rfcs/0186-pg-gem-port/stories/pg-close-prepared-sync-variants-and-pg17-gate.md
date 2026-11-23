@@ -1,6 +1,6 @@
 ---
 title: "pg: sync close variants and PG17 gate for close_prepared/close_portal"
-status: draft
+status: in-progress
 updated: 2026-11-23
 rfc: "0186-pg-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10675
+claim: "2026-11-23T22:39:47Z"
+assignee: "pg-close-prepared-sync-variants-and-pg17-gate"
 blocked-by: null
 closed-reason: null
 ---

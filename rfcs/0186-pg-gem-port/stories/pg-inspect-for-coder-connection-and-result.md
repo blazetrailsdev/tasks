@@ -1,6 +1,6 @@
 ---
 title: "pg-inspect-for-coder-connection-and-result"
-status: claimed
+status: done
 updated: 2026-11-23
 rfc: "0186-pg-gem-port"
 cluster: "result-and-coders"
@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#10672
 claim: "2026-11-23T21:50:04Z"
 assignee: "pg-connection-pipeline-sync-and-chunked-rows-mode"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Declare accurate sideEffects arrays"
-status: blocked
+status: claimed
 updated: 2026-11-23
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
@@ -21,9 +21,9 @@ deps-rfc: []
 est-loc: 120
 priority: 5
 pr: null
-claim: "2026-11-23T13:42:29Z"
-assignee: "globalid-notice-file"
-blocked-by: "waiting on constants-table-and-autoload-thunks-pin-every-module: constants.generated + loadPath thunks pin every module"
+claim: "2026-11-23T22:49:47Z"
+assignee: "accurate-side-effects-declarations"
+blocked-by: null
 closed-reason: null
 ---
 

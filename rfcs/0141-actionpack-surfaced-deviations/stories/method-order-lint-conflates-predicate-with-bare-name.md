@@ -1,6 +1,6 @@
 ---
 title: "method-order-lint-conflates-predicate-with-bare-name"
-status: draft
+status: in-progress
 updated: 2026-11-23
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10671
+claim: "2026-11-23T22:01:08Z"
+assignee: "method-order-lint-conflates-predicate-with-bare-name"
 blocked-by: null
 closed-reason: null
 ---

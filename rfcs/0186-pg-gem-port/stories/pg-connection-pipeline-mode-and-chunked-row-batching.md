@@ -1,6 +1,6 @@
 ---
 title: "pg-connection-pipeline-mode-and-chunked-row-batching"
-status: draft
+status: ready
 updated: 2026-11-23
 rfc: "0186-pg-gem-port"
 cluster: null

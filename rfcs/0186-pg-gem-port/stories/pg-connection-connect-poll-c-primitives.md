@@ -1,6 +1,6 @@
 ---
 title: "pg-connection-connect-poll-c-primitives"
-status: draft
+status: ready
 updated: 2026-11-23
 rfc: "0186-pg-gem-port"
 cluster: null
