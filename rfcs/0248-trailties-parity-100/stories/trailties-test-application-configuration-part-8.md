@@ -1,7 +1,7 @@
 ---
 title: "trailties: port application/configuration_test.rb lines 4325-4895"
-status: ready
-updated: 2026-11-22
+status: in-progress
+updated: 2026-11-23
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
 packages: [trailties]
@@ -9,9 +9,9 @@ deps: [trailties-test-move-misplaced-tests]
 deps-rfc: []
 est-loc: 480
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10620
+claim: "2026-11-23T01:04:26Z"
+assignee: "engine-controllers-resolve-for-unused-routes"
 blocked-by: null
 closed-reason: null
 ---

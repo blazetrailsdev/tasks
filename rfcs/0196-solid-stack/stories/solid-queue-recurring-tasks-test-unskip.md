@@ -1,7 +1,7 @@
 ---
 title: "solid-queue: unskip RecurringTasksTest (unknown attribute 'key')"
-status: draft
-updated: 2026-11-21
+status: ready
+updated: 2026-11-23
 rfc: "0196-solid-stack"
 cluster: null
 packages: []

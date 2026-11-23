@@ -1,7 +1,7 @@
 ---
 title: "sqlite3-test-statement-and-database-remainders"
-status: draft
-updated: 2026-11-22
+status: ready
+updated: 2026-11-23
 rfc: "0187-sqlite3-gem-port"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "i18n: port I18n::Tests::Interpolation and Link, and un-exclude the cascade/memoize/pluralization api suites"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0257-i18n-surfaced-deviations"
 cluster: null

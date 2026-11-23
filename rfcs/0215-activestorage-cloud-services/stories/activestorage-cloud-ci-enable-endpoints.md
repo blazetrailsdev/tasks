@@ -1,7 +1,7 @@
 ---
 title: "activestorage-cloud-ci-enable-endpoints"
-status: draft
-updated: 2026-11-22
+status: ready
+updated: 2026-11-23
 rfc: "0215-activestorage-cloud-services"
 cluster: null
 packages: []

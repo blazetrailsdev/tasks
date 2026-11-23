@@ -1,7 +1,7 @@
 ---
 title: "stale-rack-cache-storage-receipt-names-landed-story"
-status: draft
-updated: 2026-11-22
+status: closed
+updated: 2026-11-23
 rfc: "0061-ci-failures"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: trails#10592 already removed the stale port-rack-cache-memcache-stores receipt from packages/rack-cache/lib/storage.ts on main."
 ---
 
 ## Context

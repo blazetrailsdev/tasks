@@ -1,7 +1,7 @@
 ---
 title: "sqlite3-libsql-replica-sync-reaches-the-engine"
-status: draft
-updated: 2026-11-22
+status: blocked
+updated: 2026-11-23
 rfc: "0187-sqlite3-gem-port"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "waits on sqlite3-adapter-new-client-is-database-new (itself blocked)"
 closed-reason: null
 ---
 

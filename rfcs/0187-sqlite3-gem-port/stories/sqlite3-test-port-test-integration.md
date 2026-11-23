@@ -1,7 +1,7 @@
 ---
 title: "sqlite3-test-port-test-integration"
-status: draft
-updated: 2026-11-22
+status: in-progress
+updated: 2026-11-23
 rfc: "0187-sqlite3-gem-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10619
+claim: "2026-11-23T01:25:01Z"
+assignee: "sqlite3-libsql-readonly-open-flag"
 blocked-by: null
 closed-reason: null
 ---

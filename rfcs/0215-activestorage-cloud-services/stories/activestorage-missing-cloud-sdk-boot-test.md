@@ -1,6 +1,6 @@
 ---
 title: "Test that a missing cloud SDK fails boot with Missing service adapter"
-status: draft
+status: ready
 updated: 2026-11-23
 rfc: "0215-activestorage-cloud-services"
 cluster: null

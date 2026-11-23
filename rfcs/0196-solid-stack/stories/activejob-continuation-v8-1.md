@@ -1,7 +1,7 @@
 ---
 title: "activejob-continuation-v8-1"
-status: draft
-updated: 2026-11-21
+status: ready
+updated: 2026-11-23
 rfc: "0196-solid-stack"
 cluster: null
 packages: []

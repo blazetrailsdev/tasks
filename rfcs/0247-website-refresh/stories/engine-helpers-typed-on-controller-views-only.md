@@ -1,7 +1,7 @@
 ---
 title: "Type engine helpers on controller views only, not every ActionView::Base"
-status: draft
-updated: 2026-11-22
+status: ready
+updated: 2026-11-23
 rfc: "0247-website-refresh"
 cluster: null
 packages: []

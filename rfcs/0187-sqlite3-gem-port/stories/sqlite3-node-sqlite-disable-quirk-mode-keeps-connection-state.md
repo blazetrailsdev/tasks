@@ -1,7 +1,7 @@
 ---
 title: "sqlite3: node:sqlite disableQuirkMode keeps connection state (no reopen)"
-status: ready
-updated: 2026-11-22
+status: blocked
+updated: 2026-11-23
 rfc: "0187-sqlite3-gem-port"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "upstream: node:sqlite 26.13 has no API to set SQLITE_DBCONFIG_DQS_* on an open DatabaseSync (prototype: open close prepare exec function ... serialize deserialize setAuthorizer); opening with DQS off needs strict passed to the engine, an operator decision on the EngineOpenV2 signature"
 closed-reason: null
 ---
 

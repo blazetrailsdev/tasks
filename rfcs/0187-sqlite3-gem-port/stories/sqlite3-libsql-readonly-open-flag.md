@@ -1,7 +1,7 @@
 ---
 title: "sqlite3-libsql-readonly-open-flag"
-status: draft
-updated: 2026-11-22
+status: blocked
+updated: 2026-11-23
 rfc: "0187-sqlite3-gem-port"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "operator decision: libsql 0.5.29 (latest) ignores readonly/flags options (index.js:99 hardcodes readonly=false) and rejects file:?mode=ro, so no open-flag route exists; needs upstream libsql support or a ruling"
 closed-reason: null
 ---
 

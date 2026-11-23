@@ -1,7 +1,7 @@
 ---
 title: "bump-zeitwerk-to-2-7-3"
-status: ready
-updated: 2026-11-22
+status: in-progress
+updated: 2026-11-23
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10621
+claim: "2026-11-23T01:14:06Z"
+assignee: "bump-zeitwerk-to-2-7-3"
 blocked-by: null
 closed-reason: null
 ---

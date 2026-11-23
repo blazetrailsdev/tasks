@@ -1,7 +1,7 @@
 ---
 title: "fill-bump-ledger-story-fields"
-status: ready
-updated: 2026-11-22
+status: blocked
+updated: 2026-11-23
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-23T01:14:06Z"
+assignee: "bump-zeitwerk-to-2-7-3"
+blocked-by: "waits on trails#10577 (generate-stories.ts not on main)"
 closed-reason: null
 ---
 

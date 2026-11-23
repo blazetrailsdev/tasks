@@ -1,6 +1,6 @@
 ---
 title: "Port GCSService's object calls"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0215-activestorage-cloud-services"
 cluster: as-cloud-gcs

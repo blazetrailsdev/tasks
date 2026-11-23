@@ -1,7 +1,7 @@
 ---
 title: "sqlite3-node-sqlite-drop-serializable-database-cast"
-status: ready
-updated: 2026-11-22
+status: blocked
+updated: 2026-11-23
 rfc: "0187-sqlite3-gem-port"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "bumping @types/node 25.3.5->26.6.6 across the 13 packages splits vite's types (packages/turbo/test/application-system-test-case.ts TS2345) and sqlite3 itself declares no @types/node; needs a workspace-wide bump story, or sqlite3-node-sqlite-disable-quirk-mode-keeps-connection-state removes the serialize path"
 closed-reason: null
 ---
 

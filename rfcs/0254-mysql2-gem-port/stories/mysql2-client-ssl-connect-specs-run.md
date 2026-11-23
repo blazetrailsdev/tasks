@@ -1,6 +1,6 @@
 ---
 title: "mysql2 SSL connect specs run"
-status: claimed
+status: in-progress
 updated: 2026-11-23
 rfc: "0254-mysql2-gem-port"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 8
-pr: null
+pr: trails#10616
 claim: "2026-11-23T00:54:06Z"
 assignee: "mysql2-client-spec-surface-skips-run"
 blocked-by: null

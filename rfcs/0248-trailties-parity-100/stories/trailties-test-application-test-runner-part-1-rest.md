@@ -1,7 +1,7 @@
 ---
 title: "trailties-test-application-test-runner-part-1-rest"
 status: ready
-updated: 2026-11-22
+updated: 2026-11-23
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "Homepage example show.html.tse typechecks (attached/rich-text readers reach Post)"
-status: draft
-updated: 2026-11-22
+status: ready
+updated: 2026-11-23
 rfc: "0247-website-refresh"
 cluster: null
 packages: []

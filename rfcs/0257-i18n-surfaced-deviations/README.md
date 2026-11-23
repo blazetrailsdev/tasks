@@ -1,9 +1,9 @@
 ---
 rfc: "0257-i18n-surfaced-deviations"
 title: "i18n surfaced deviations — the package's standing convergence bucket"
-status: active
+status: closed
 created: 2026-11-22
-updated: 2026-11-22
+updated: 2026-11-23
 owner: "@deanmarano"
 packages:
   - "i18n"
