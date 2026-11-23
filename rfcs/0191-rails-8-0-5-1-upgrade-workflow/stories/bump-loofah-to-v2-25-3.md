@@ -1,6 +1,6 @@
 ---
 title: "Bump loofah from v2.24.0 to v2.25.3, the floor rails-html-sanitizer 1.7.2 forces"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: post-flip

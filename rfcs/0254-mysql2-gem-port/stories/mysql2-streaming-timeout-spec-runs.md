@@ -1,6 +1,6 @@
 ---
 title: "mysql2 'streaming ended due to a timeout' spec runs or carries a verified skip"
-status: draft
+status: claimed
 updated: 2026-11-23
 rfc: "0254-mysql2-gem-port"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-23T13:32:34Z"
+assignee: "mysql2-local-infile-ports-infile-c"
 blocked-by: null
 closed-reason: null
 ---

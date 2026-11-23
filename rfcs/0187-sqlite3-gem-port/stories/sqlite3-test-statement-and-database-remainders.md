@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-test-statement-and-database-remainders"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0187-sqlite3-gem-port"
 cluster: null

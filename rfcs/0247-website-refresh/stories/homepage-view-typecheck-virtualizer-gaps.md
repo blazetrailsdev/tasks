@@ -1,6 +1,6 @@
 ---
 title: "homepage-view-typecheck-virtualizer-gaps"
-status: draft
+status: claimed
 updated: 2026-11-23
 rfc: "0247-website-refresh"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-23T13:52:26Z"
+assignee: "homepage-view-typecheck-virtualizer-gaps"
 blocked-by: null
 closed-reason: null
 ---

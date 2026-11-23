@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-test-raise-if-bind-params-not-an-array"
-status: draft
+status: ready
 updated: 2026-11-23
 rfc: "0187-sqlite3-gem-port"
 cluster: null

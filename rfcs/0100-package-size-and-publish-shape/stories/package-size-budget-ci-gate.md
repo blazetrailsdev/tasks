@@ -1,6 +1,6 @@
 ---
 title: "Package-size and bundle-size budget CI gate"
-status: ready
+status: blocked
 updated: 2026-11-23
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
@@ -17,9 +17,9 @@ deps-rfc: []
 est-loc: 200
 priority: 7
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-23T13:42:29Z"
+assignee: "globalid-notice-file"
+blocked-by: "waiting on constants-table-and-autoload-thunks-pin-every-module: constants.generated + loadPath thunks pin every module"
 closed-reason: null
 ---
 

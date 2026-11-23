@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-test-port-busy-handler-timeout-releases-gvl"
-status: draft
+status: ready
 updated: 2026-11-23
 rfc: "0187-sqlite3-gem-port"
 cluster: null

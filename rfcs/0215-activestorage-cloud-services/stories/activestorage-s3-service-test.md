@@ -1,6 +1,6 @@
 ---
 title: "Port s3_service_test.rb"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0215-activestorage-cloud-services"
 cluster: as-cloud-s3

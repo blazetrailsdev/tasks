@@ -1,6 +1,6 @@
 ---
 title: "activestorage-s3-upload-stream-backpressure-tests"
-status: draft
+status: ready
 updated: 2026-11-23
 rfc: "0215-activestorage-cloud-services"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: node-sqlite, libsql and expo engines mirror close_v2 and the NULL-st closed statement"
-status: draft
+status: ready
 updated: 2026-11-23
 rfc: "0187-sqlite3-gem-port"
 cluster: null

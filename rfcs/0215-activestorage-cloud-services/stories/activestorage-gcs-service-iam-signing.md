@@ -1,6 +1,6 @@
 ---
 title: "activestorage-gcs-service-iam-signing"
-status: draft
+status: ready
 updated: 2026-11-23
 rfc: "0215-activestorage-cloud-services"
 cluster: null

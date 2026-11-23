@@ -1,6 +1,6 @@
 ---
 title: "index-barrel-pins-database-tasks"
-status: draft
+status: in-progress
 updated: 2026-11-23
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10638
+claim: "2026-11-23T13:42:29Z"
+assignee: "globalid-notice-file"
 blocked-by: null
 closed-reason: null
 ---
