@@ -33,13 +33,12 @@ inside `packages/html-sanitizer/lib/loofah/`. Upstream `v2.24.0...v2.25.3` is
 - [ ] The tag `v2.25.3` and its `^{}` commit SHA are recorded.
 - [ ] loofah's pin floor is retaken on `v2.24.0` first.
 - [ ] `pnpm parity:bump:dry-run --source loofah --ref v2.25.3` is run and its
-      report committed; the bump is one PR (`ref`,
-      `pnpm vendor:fetch --source loofah`, `pnpm vendor:recite`, re-verified
-      and re-pinned bodies in `packages/html-sanitizer/lib/loofah/`, the new
-      upstream tests that trails' loofah test files mirror) or, if it does not
-      fit, a seeded ledger plus stories filed in this RFC.
-- [ ] Every gate is green; `parity:api` / `parity:test` deltas for loofah are
-      in the PR body.
+      report committed. The flip itself (`ref`, fetch, recite, re-verified and
+      re-pinned bodies, the new upstream tests) is `flip-loofah-to-v2-25-3`,
+      which waits on `flip-nokogiri-to-v1-19-7`, as nokogiri's own flip was
+      split out of `bump-nokogiri-to-v1-19-7`.
+- [ ] Every gate is green; the dry run's `parity:api` / `parity:test` deltas
+      for loofah are in the PR body.
 
 ## Definition of done
 
