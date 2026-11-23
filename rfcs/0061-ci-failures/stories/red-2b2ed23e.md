@@ -1,6 +1,6 @@
 ---
 title: "Quickstart failing on main @2b2ed23e"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0061-ci-failures"
 cluster: null

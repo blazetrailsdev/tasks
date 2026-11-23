@@ -1,6 +1,6 @@
 ---
 title: "Publish a first 0.1.0-alpha prerelease of every public package from release.yml"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0100-package-size-and-publish-shape"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "OrderedOptions#fetch: drop the invented miss check; KeyError from Hash#fetch"
-status: ready
+status: claimed
 updated: 2026-11-23
 rfc: "0246-activesupport-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-23T20:52:28Z"
+assignee: "isolation-included-parallelize-me"
 blocked-by: null
 closed-reason: null
 ---

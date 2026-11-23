@@ -1,6 +1,6 @@
 ---
 title: "Isolation.included parallelizes the including class (parallelize_me!)"
-status: ready
+status: blocked
 updated: 2026-11-23
 rfc: "0246-activesupport-parity-100"
 cluster: null
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-23T20:52:28Z"
+assignee: "isolation-included-parallelize-me"
+blocked-by: "waits on isolation-tests-hooks-move-to-setup-teardown: ~30 registered Isolation files share t across parent beforeEach/afterEach and would race when concurrent"
 closed-reason: null
 ---
 

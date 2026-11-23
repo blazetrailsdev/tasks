@@ -1,6 +1,6 @@
 ---
 title: "pg-coder-dup-and-composite-dimensions"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0186-pg-gem-port"
 cluster: "result-and-coders"

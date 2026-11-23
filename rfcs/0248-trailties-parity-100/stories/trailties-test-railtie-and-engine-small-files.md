@@ -1,6 +1,6 @@
 ---
 title: "trailties: port railtie, mounted engine and engine/* test misses"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0248-trailties-parity-100"
 cluster: test-ports

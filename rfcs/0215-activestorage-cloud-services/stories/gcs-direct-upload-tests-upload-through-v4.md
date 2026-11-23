@@ -1,6 +1,6 @@
 ---
 title: "GCS direct-upload tests upload through the v4 path instead of skipping"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0215-activestorage-cloud-services"
 cluster: null
