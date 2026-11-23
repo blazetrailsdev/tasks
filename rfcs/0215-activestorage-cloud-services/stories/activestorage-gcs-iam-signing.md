@@ -7,7 +7,7 @@ cluster: as-cloud-gcs
 packages: [activestorage]
 deps: [activestorage-gcs-iam-signing-spike]
 deps-rfc: []
-est-loc: 200
+est-loc: 120
 priority: null
 pr: null
 claim: null

@@ -235,6 +235,24 @@ Known gaps, none hidden:
   a second service with dummy credentials and no `endpoint`.
 - **IAM signing** needs a metadata server and IAM API; those two tests sit behind
   Rails' own `gsa_email` guard and stay skipped.
+- **fake-gcs serves no stored metadata on a GET.** It returns no
+  `Content-Disposition`, `Cache-Control` or `x-goog-meta-*` header, so
+  `gcs_service_test.rb`'s header assertions read the stored metadata through the
+  JSON API instead ("upload with content_type and content_disposition", "upload
+  with cache_control", "upload with custom_metadata", "update custom_metadata"),
+  and "upload with content_type" checks the query carries the inline
+  disposition. All five direct-upload tests that PUT a v2 URL are parked with
+  `PERMANENT-SKIP` naming fake-gcs; the signature itself is proved offline.
+- **IAM signing seam (spike).** `@google-cloud/storage` signs both v2 and v4
+  through `storage.authClient`: `getCredentials()` supplies `client_email` (the
+  Ruby `issuer:`) and `sign(blob)` the signature (the Ruby `signer:`). A
+  subclass of `google-auth-library`'s `GoogleAuth` overriding those two methods,
+  passed as `new Storage({ authClient })`, produced a v2 `GoogleAccessId=<issuer>`
+  URL and a v4 `X-Goog-Credential=<issuer>/…` URL with our signature. A plain
+  object does not work: Storage wraps anything that is not a `GoogleAuth` /
+  `AuthClient` and ignores its methods. `@google-cloud/storage` does not
+  re-export `GoogleAuth`, so the IAM story adds `google-auth-library` as an
+  optional peer beside it.
 - **Behaviour on real S3 and GCS is never exercised in CI.** That follows from
   decision 3, and this RFC accepts it.
 
@@ -318,3 +336,4 @@ None open. All four were resolved by the owner on 2026-11-02, as decisions 5 to 
   IAM spike split out
 - 2026-11-02: self-review: register row count, 0209 cross-reference, test-row
   retirement, trailties in scope
+- 2026-11-23: GCS IAM signing seam recorded (spike); fake-gcs metadata limits
