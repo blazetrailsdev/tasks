@@ -1,6 +1,6 @@
 ---
 title: "Run check:hero on PRs touching examples/homepage, trails-tsc or tse-compiler"
-status: claimed
+status: in-progress
 updated: 2026-11-23
 rfc: "0247-website-refresh"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
+pr: trails#10627
 claim: "2026-11-23T02:54:24Z"
 assignee: "check-hero-runs-on-example-and-compiler-changes"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "Write the bump runbook into vendor/README.md, CONTRIBUTING.md and CLAUDE.md"
-status: ready
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-23
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: post-flip
 packages: [scripts]
@@ -9,9 +9,9 @@ deps: [flip-the-rails-ref-to-v8-0-5-1, generate-the-rails-8-0-5-1-burn-down-stor
 deps-rfc: []
 est-loc: 0
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10631
+claim: "2026-11-23T03:24:05Z"
+assignee: "bump-loofah-to-v2-25-3"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Port S3Service multipart upload, compose and delete_prefixed"
-status: in-progress
+status: ready
 updated: 2026-11-23
 rfc: "0215-activestorage-cloud-services"
 cluster: as-cloud-s3
@@ -9,9 +9,9 @@ deps: [activestorage-s3-service-object-calls]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: trails#10625
-claim: "2026-11-23T02:14:04Z"
-assignee: "activestorage-cloud-ci-enable-endpoints"
+pr: null
+claim: null
+assignee: null
 blocked-by: null
 ---
 

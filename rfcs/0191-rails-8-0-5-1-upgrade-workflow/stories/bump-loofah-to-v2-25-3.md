@@ -1,7 +1,7 @@
 ---
 title: "Bump loofah from v2.24.0 to v2.25.3, the floor rails-html-sanitizer 1.7.2 forces"
-status: ready
-updated: 2026-11-16
+status: in-progress
+updated: 2026-11-23
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: post-flip
 packages: ["scripts", "html-sanitizer"]
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10631
+claim: "2026-11-23T03:24:05Z"
+assignee: "bump-loofah-to-v2-25-3"
 blocked-by: null
 closed-reason: null
 ---
