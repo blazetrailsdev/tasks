@@ -1,5 +1,5 @@
 ---
-title: "gcs-signed-get-content-type-tests-run-against-real-gcs"
+title: "GCS content-type signed-GET tests run un-skipped against an endpoint that answers the stored type"
 status: draft
 updated: 2026-11-23
 rfc: "0215-activestorage-cloud-services"
