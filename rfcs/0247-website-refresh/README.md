@@ -10,6 +10,8 @@ packages:
   - "activesupport"
   - "trailties"
   - "activerecord"
+  - "sqlite3"
+  - "i18n"
 clusters:
   - website-deploy
   - website-docs
