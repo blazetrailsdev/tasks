@@ -5,7 +5,8 @@ updated: 2026-11-23
 rfc: "0187-sqlite3-gem-port"
 cluster: null
 packages: []
-deps: []
+deps:
+  - sqlite3-adapter-new-client-is-database-new
 deps-rfc: []
 est-loc: null
 priority: null
