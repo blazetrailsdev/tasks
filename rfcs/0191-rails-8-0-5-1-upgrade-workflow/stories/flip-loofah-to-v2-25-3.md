@@ -5,7 +5,8 @@ updated: 2026-11-23
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
 packages: []
-deps: []
+deps:
+  - flip-nokogiri-to-v1-19-7
 deps-rfc: []
 est-loc: null
 priority: null
