@@ -1,9 +1,9 @@
 ---
 rfc: "0186-pg-gem-port"
 title: "pg: a @blazetrails/pg gem wrapper over node-pg"
-status: closed
+status: active
 created: 2026-10-08
-updated: 2026-11-22
+updated: 2026-11-23
 owner: "@deanmarano"
 packages:
   - pg
@@ -463,3 +463,4 @@ Three stories rehomed here from other RFCs are not in this order and bind only t
 - 2026-10-08: self-review round 1: located the two unverified call sites; verified `server_version` against node-pg 8.19's source; split the type-map story in two (every story now at or under 600 est-loc); sections regrouped under `## Design` to match the template
 - 2026-10-08: owner decision: the package stays, the C extractor arm and PGlite go. § Scoring now takes the msgpack shape (Ruby `def`s scored, C surface unscored and ungated); stories `c-ext-method-table-extractor-arm`, `ruby-extractor-reads-c-defined-gem-methods`, `pg-enroll-the-c-extension-surface` and `pg-pglite-engine` closed; open questions 3 and 4 resolved; § Motivation notes what trails#8687 already landed
 - 2026-10-08: owner decision: the score's denominator is the methods activerecord calls; uncalled gem files and methods are unported-files rows and scoped skips
+- 2026-11-23: owner decision: reopened to reach 100% of the scored denominator, `parity:api` 96/118 and `parity:test` 50/53, on pg 1.6.2. Seven stories cover the 22 missing methods, the 2 inheritance mismatches and the 3 unpassed tests. Excluded files and scoped skips stay excluded.
