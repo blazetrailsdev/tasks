@@ -1,6 +1,6 @@
 ---
 title: "Publish a first 0.1.0-alpha prerelease of every public package from release.yml"
-status: claimed
+status: in-progress
 updated: 2026-11-23
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 1
-pr: null
+pr: trails#10659
 claim: "2026-11-23T18:59:09Z"
 assignee: "first-alpha-practice-publish"
 blocked-by: null

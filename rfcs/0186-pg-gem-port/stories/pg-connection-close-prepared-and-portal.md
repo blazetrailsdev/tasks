@@ -1,6 +1,6 @@
 ---
 title: "pg-connection-close-prepared-and-portal"
-status: ready
+status: in-progress
 updated: 2026-11-23
 rfc: "0186-pg-gem-port"
 cluster: "connection"
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10664
+claim: "2026-11-23T19:32:21Z"
+assignee: "pg-coder-dup-and-composite-dimensions"
 blocked-by: null
 closed-reason: null
 ---

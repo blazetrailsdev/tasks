@@ -1,6 +1,6 @@
 ---
 title: "activestorage-s3-upload-stream-backpressure-tests"
-status: ready
+status: in-progress
 updated: 2026-11-23
 rfc: "0215-activestorage-cloud-services"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#10663
+claim: "2026-11-23T19:42:16Z"
+assignee: "s3-public-virtual-host-get-hits-the-virtual-host"
 blocked-by: null
 closed-reason: null
 ---

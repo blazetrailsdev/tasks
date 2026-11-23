@@ -1,7 +1,7 @@
 ---
 title: "trailties: port railtie, mounted engine and engine/* test misses"
-status: ready
-updated: 2026-11-19
+status: in-progress
+updated: 2026-11-23
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
 packages: [trailties]
@@ -9,9 +9,9 @@ deps: [trailties-test-move-misplaced-tests]
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10658
+claim: "2026-11-23T19:12:22Z"
+assignee: "generated-attribute-valid-type-leases-connection"
 blocked-by: null
 closed-reason: null
 ---

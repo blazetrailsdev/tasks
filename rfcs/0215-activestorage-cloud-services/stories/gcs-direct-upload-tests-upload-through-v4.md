@@ -1,6 +1,6 @@
 ---
 title: "GCS direct-upload tests upload through the v4 path instead of skipping"
-status: ready
+status: in-progress
 updated: 2026-11-23
 rfc: "0215-activestorage-cloud-services"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#10657
+claim: "2026-11-23T19:11:15Z"
+assignee: "gcs-direct-upload-tests-upload-through-v4"
 blocked-by: null
 closed-reason: null
 ---

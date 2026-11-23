@@ -1,6 +1,6 @@
 ---
 title: "Port thor v1.4.0's utf-8 collision diff spec"
-status: ready
+status: in-progress
 updated: 2026-11-23
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10661
+claim: "2026-11-23T19:22:17Z"
+assignee: "port-racc-1-8-1-racc-command-tests"
 blocked-by: null
 closed-reason: null
 ---

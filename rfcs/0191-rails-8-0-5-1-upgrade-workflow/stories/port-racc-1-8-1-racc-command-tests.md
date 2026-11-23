@@ -1,6 +1,6 @@
 ---
 title: "Port racc v1.8.1's four new test_racc_command tests"
-status: ready
+status: blocked
 updated: 2026-11-23
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-23T19:22:17Z"
+assignee: "port-racc-1-8-1-racc-command-tests"
+blocked-by: "needs racc's grammar compiler / racc command ported (or ruled out of scope): racc-grammar-compiler-port-or-scope-ruling"
 closed-reason: null
 ---
 

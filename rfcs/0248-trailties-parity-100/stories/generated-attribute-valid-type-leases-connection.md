@@ -1,6 +1,6 @@
 ---
 title: "generated-attribute-valid-type-leases-connection"
-status: ready
+status: blocked
 updated: 2026-11-23
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-23T19:12:22Z"
+assignee: "generated-attribute-valid-type-leases-connection"
+blocked-by: "operator decision: leasing in valid_type? needs an async NamedBase initialize (static async new), which conflicts with trailties CLAUDE.md 'Thor dispatch is async' rule that Thor constructors stay synchronous"
 closed-reason: null
 ---
 

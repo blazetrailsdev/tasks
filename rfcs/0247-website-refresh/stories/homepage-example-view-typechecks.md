@@ -1,6 +1,6 @@
 ---
 title: "Homepage example show.html.tse typechecks (attached/rich-text readers reach Post)"
-status: ready
+status: done
 updated: 2026-11-23
 rfc: "0247-website-refresh"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10641
+claim: "2026-11-23T19:02:25Z"
+assignee: "homepage-example-view-typechecks"
 blocked-by: null
 closed-reason: null
 ---
