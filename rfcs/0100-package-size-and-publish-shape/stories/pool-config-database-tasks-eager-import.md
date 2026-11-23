@@ -1,7 +1,7 @@
 ---
 title: "PoolConfig must not import DatabaseTasks at module scope"
-status: draft
-updated: 2026-08-11
+status: done
+updated: 2026-11-23
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#8491
+claim: "2026-11-23T02:08:34Z"
+assignee: "exclude-compiled-tests-from-published-dist"
 blocked-by: null
 closed-reason: null
 ---

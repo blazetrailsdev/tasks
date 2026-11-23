@@ -1,7 +1,7 @@
 ---
 title: "Release workflow publishes every public package together"
-status: draft
-updated: 2026-11-18
+status: ready
+updated: 2026-11-23
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
 packages: []

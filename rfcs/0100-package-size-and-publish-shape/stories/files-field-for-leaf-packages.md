@@ -1,7 +1,7 @@
 ---
 title: "Add files field to date, did-you-mean, globalid, i18n"
-status: draft
-updated: 2026-08-11
+status: in-progress
+updated: 2026-11-23
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
 packages: ["date", "i18n", "globalid", "did-you-mean", "activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#10626
+claim: "2026-11-23T02:44:05Z"
+assignee: "files-field-for-leaf-packages"
 blocked-by: null
 closed-reason: null
 ---

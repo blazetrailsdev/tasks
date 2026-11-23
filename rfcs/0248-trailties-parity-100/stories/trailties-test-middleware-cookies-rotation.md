@@ -1,7 +1,7 @@
 ---
 title: "trailties-test-middleware-cookies-rotation"
-status: in-progress
-updated: 2026-11-22
+status: done
+updated: 2026-11-23
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []

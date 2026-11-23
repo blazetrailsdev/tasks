@@ -1,7 +1,7 @@
 ---
 title: "DebugView's RESCUES_TEMPLATE_PATHS points at a templates/ directory the package never ships"
-status: draft
-updated: 2026-09-08
+status: ready
+updated: 2026-11-23
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
 packages: []

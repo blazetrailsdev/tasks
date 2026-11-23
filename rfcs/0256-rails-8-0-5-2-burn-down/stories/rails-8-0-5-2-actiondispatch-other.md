@@ -1,6 +1,6 @@
 ---
 title: "Burn down actiondispatch (other) from rails v8.0.2 to v8.0.5.2"
-status: draft
+status: ready
 rfc: "0256-rails-8-0-5-2-burn-down"
 cluster: burn-down
 packages: ["actionpack"]
@@ -14,7 +14,7 @@ claim: null
 assignee: null
 blocked-by: null
 closed-reason: null
-updated: 2026-11-22
+updated: 2026-11-23
 ---
 
 ## Context

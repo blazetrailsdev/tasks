@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-test-port-test-database-readonly-readwrite"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0187-sqlite3-gem-port"
 cluster: null

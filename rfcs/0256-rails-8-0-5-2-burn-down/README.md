@@ -21,6 +21,7 @@ packages:
 max-est-loc: 2500 # each story owns a whole package or subsystem of the bump; the PR LOC ceiling is waived for them
 clusters:
   - burn-down
+priority: 5
 ---
 
 # RFC 0256 — Rails 8.0.5.2 burn-down

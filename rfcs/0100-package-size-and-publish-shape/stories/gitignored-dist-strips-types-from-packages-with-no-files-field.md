@@ -1,7 +1,7 @@
 ---
 title: "Packing a package with no files field now ships no type declarations at all"
-status: draft
-updated: 2026-09-09
+status: ready
+updated: 2026-11-23
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
 packages: []

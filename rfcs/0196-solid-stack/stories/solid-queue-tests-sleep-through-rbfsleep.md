@@ -1,6 +1,6 @@
 ---
 title: "solid-queue tests sleep through rbFSleep, not a bare setTimeout"
-status: ready
+status: done
 updated: 2026-11-23
 rfc: "0196-solid-stack"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10623
+claim: "2026-11-23T02:24:04Z"
+assignee: "activejob-continuation-v8-1"
 blocked-by: null
 closed-reason: null
 ---

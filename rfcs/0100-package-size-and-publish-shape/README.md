@@ -19,6 +19,7 @@ packages:
 clusters: []
 related-rfcs:
   - "0192-package-entry-point-boot-cost"
+priority: 4
 ---
 
 ## Summary

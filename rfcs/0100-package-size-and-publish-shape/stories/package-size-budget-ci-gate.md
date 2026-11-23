@@ -1,7 +1,7 @@
 ---
 title: "Package-size and bundle-size budget CI gate"
-status: draft
-updated: 2026-08-11
+status: ready
+updated: 2026-11-23
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
 packages: ["activerecord"]

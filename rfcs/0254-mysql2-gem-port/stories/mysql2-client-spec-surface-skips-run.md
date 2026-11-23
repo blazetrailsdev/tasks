@@ -1,6 +1,6 @@
 ---
 title: "mysql2 client_spec skips citing the RFC surface table run (escape, info, select_db, query options, local_infile...)"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0254-mysql2-gem-port"
 cluster: null

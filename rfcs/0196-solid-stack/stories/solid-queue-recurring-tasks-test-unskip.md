@@ -1,6 +1,6 @@
 ---
 title: "solid-queue: unskip RecurringTasksTest (unknown attribute 'key')"
-status: ready
+status: blocked
 updated: 2026-11-23
 rfc: "0196-solid-stack"
 cluster: null
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-23T02:24:04Z"
+assignee: "activejob-continuation-v8-1"
+blocked-by: "unknown attribute 'key' fixed by trails#10600; tests now wait on recurring-task-arguments-load-skips-deserialize"
 closed-reason: null
 ---
 

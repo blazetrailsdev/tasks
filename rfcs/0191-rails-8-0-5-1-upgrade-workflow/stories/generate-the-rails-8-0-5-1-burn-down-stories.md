@@ -1,7 +1,7 @@
 ---
 title: "Build the burn-down story generator and generate the 8.0.5.2 stories"
-status: in-progress
-updated: 2026-11-22
+status: done
+updated: 2026-11-23
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: post-flip
 packages: [scripts]

@@ -1,6 +1,6 @@
 ---
 title: "Type engine helpers on controller views only, not every ActionView::Base"
-status: ready
+status: claimed
 updated: 2026-11-23
 rfc: "0247-website-refresh"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-23T02:54:24Z"
+assignee: "check-hero-runs-on-example-and-compiler-changes"
 blocked-by: null
 closed-reason: null
 ---

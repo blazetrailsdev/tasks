@@ -1,9 +1,9 @@
 ---
 rfc: "0241-request-path-performance"
 title: "Request-path performance, measured against Rails on the $12 Server Challenge"
-status: active
+status: closed
 created: 2026-11-13
-updated: 2026-11-17
+updated: 2026-11-23
 owner: "@deanmarano"
 packages:
   - "activerecord"

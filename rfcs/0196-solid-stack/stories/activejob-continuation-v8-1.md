@@ -1,6 +1,6 @@
 ---
 title: "activejob-continuation-v8-1"
-status: ready
+status: blocked
 updated: 2026-11-23
 rfc: "0196-solid-stack"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-23T02:24:04Z"
+assignee: "activejob-continuation-v8-1"
+blocked-by: "waits on a vendored Rails >= 8.1 (vendor/rails is v8.0.5.2, no active_job/continuation)"
 closed-reason: null
 ---
 

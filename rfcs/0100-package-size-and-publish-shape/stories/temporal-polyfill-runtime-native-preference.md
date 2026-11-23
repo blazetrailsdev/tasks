@@ -1,7 +1,7 @@
 ---
 title: "Prefer native Temporal over the polyfill"
-status: draft
-updated: 2026-08-11
+status: done
+updated: 2026-11-23
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
 packages: ["date"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 6
-pr: null
-claim: null
-assignee: null
+pr: trails#10509
+claim: "2026-11-23T02:44:05Z"
+assignee: "files-field-for-leaf-packages"
 blocked-by: null
 closed-reason: null
 ---

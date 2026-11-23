@@ -1,6 +1,6 @@
 ---
 title: "bump-zeitwerk-to-2-7-3"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "Port racc v1.8.1's four new test_racc_command tests"
-status: draft
-updated: 2026-11-22
+status: ready
+updated: 2026-11-23
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
 packages: []

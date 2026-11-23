@@ -1,7 +1,7 @@
 ---
 title: "Port thor v1.4.0's utf-8 collision diff spec"
-status: draft
-updated: 2026-11-22
+status: ready
+updated: 2026-11-23
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
 packages: ["thor"]

@@ -1,7 +1,7 @@
 ---
 title: "Port pg v1.6.2's new and changed specs"
-status: draft
-updated: 2026-11-22
+status: ready
+updated: 2026-11-23
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
 packages: ["pg"]

@@ -1,6 +1,6 @@
 ---
 title: "activestorage-cloud-ci-enable-endpoints"
-status: ready
+status: in-progress
 updated: 2026-11-23
 rfc: "0215-activestorage-cloud-services"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10625
+claim: "2026-11-23T02:14:04Z"
+assignee: "activestorage-cloud-ci-enable-endpoints"
 blocked-by: null
 closed-reason: null
 ---

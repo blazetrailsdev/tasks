@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-fork-supervisor-boot-fits-rails-timeouts"
-status: ready
+status: blocked
 updated: 2026-11-23
 rfc: "0196-solid-stack"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-23T02:24:04Z"
+assignee: "activejob-continuation-v8-1"
+blocked-by: "waits on an operator decision for the fork child startup mechanism (V8 startup snapshot vs pre-warmed child); exceeds this bundle"
 closed-reason: null
 ---
 

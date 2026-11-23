@@ -1,7 +1,7 @@
 ---
 title: "Unpublish the AR test harness from the main package"
-status: draft
-updated: 2026-08-11
+status: done
+updated: 2026-11-23
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
 packages: ["activerecord"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#10036
+claim: "2026-11-23T02:08:34Z"
+assignee: "exclude-compiled-tests-from-published-dist"
 blocked-by: null
 closed-reason: null
 ---
