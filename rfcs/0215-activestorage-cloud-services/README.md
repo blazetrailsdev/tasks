@@ -216,6 +216,16 @@ Known gaps, none hidden:
 - **S3 SSE.** "uploading with server-side encryption" fails on SeaweedFS as
   started. `activestorage-cloud-ci-emulators` tries its KMS configuration. The
   fallback is RustFS or MinIO with their key set, for that one test.
+- **S3 virtual-host public URL.** `public_url(virtual_host: true)` is
+  aws-sdk's `public_url`, which puts the bucket name itself in the host:
+  `https://trails-public/<key>` (`s3_public_service_test.rb:26-33`). That host is
+  the bucket as a CNAME, served over TLS. No emulator answers it: the name has
+  no DNS record on a CI runner, nothing listens on 443, and SeaweedFS's
+  `-s3.domainName` routes only `<bucket>.<domain>`, never a bare bucket host.
+  `fetch` forbids setting `Host`, so the request cannot be aimed at the
+  emulator with the bucket as its host either. So "public URL generation
+  (virtual host enabled)" asserts the URL's shape and GETs the same key
+  path-style, which proves anonymous read, not virtual-host routing.
 - **GCS v2 signed PUT.** fake-gcs answers `400 invalid uploadType` to a v2 URL
   and routes only v4. Rails uses v2 unless `cache_control` is set
   (`gcs_service.rb:95`). So "direct upload" (twice), "direct upload with content
