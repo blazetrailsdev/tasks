@@ -1,7 +1,7 @@
 ---
 title: "sqlite3: rule on Statement.new answering T | Promise<T> against the static async new rule"
-status: ready
-updated: 2026-11-22
+status: in-progress
+updated: 2026-11-23
 rfc: "0187-sqlite3-gem-port"
 cluster: null
 packages: ["sqlite3"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10613
+claim: "2026-11-23T00:24:08Z"
+assignee: "sqlite3-expo-engine-reads-bigints"
 blocked-by: null
 closed-reason: null
 ---

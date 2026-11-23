@@ -1,7 +1,7 @@
 ---
 title: "mysql2-statement-result-casts-binary-cells-in-fetch-row-stmt"
-status: in-progress
-updated: 2026-11-22
+status: done
+updated: 2026-11-23
 rfc: "0254-mysql2-gem-port"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "mysql2 multiple-result-set and session_track specs run"
-status: ready
-updated: 2026-11-22
+status: claimed
+updated: 2026-11-23
 rfc: "0254-mysql2-gem-port"
 cluster: null
 packages: ["mysql2"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: 6
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-23T00:54:06Z"
+assignee: "mysql2-client-spec-surface-skips-run"
 blocked-by: null
 closed-reason: null
 ---

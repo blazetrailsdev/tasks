@@ -1,7 +1,7 @@
 ---
 title: "i18n: port I18n::Tests::Interpolation and Link, and un-exclude the cascade/memoize/pluralization api suites"
-status: ready
-updated: 2026-11-22
+status: in-progress
+updated: 2026-11-23
 rfc: "0257-i18n-surfaced-deviations"
 cluster: null
 packages:
@@ -10,9 +10,9 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10612
+claim: "2026-11-23T00:14:06Z"
+assignee: "i18n-api-tests-port-interpolation-link-and-unexclude-backend-suites"
 blocked-by: null
 closed-reason: null
 ---

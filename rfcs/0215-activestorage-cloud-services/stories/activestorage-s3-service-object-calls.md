@@ -1,7 +1,7 @@
 ---
 title: "Port S3Service's object calls"
-status: ready
-updated: 2026-11-02
+status: in-progress
+updated: 2026-11-23
 rfc: "0215-activestorage-cloud-services"
 cluster: as-cloud-s3
 packages: [activestorage]
@@ -9,9 +9,9 @@ deps: [activestorage-cloud-peer-dependencies, activestorage-service-url-is-async
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10614
+claim: "2026-11-23T00:34:04Z"
+assignee: "activestorage-engine-awaits-service-load"
 blocked-by: null
 ---
 

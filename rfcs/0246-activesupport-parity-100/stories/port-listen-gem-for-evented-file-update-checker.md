@@ -1,7 +1,7 @@
 ---
 title: "port-listen-gem-for-evented-file-update-checker"
-status: ready
-updated: 2026-11-22
+status: done
+updated: 2026-11-23
 rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 6
-pr: null
-claim: null
-assignee: null
+pr: trails#10587
+claim: "2026-11-23T00:44:03Z"
+assignee: "port-listen-gem-for-evented-file-update-checker"
 blocked-by: null
 closed-reason: null
 ---

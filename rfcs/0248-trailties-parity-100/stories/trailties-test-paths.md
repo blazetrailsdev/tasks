@@ -1,7 +1,7 @@
 ---
 title: "trailties: port paths_test.rb and application/paths_test.rb misses"
-status: in-progress
-updated: 2026-11-22
+status: done
+updated: 2026-11-23
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
 packages: [trailties]

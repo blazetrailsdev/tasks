@@ -1,7 +1,7 @@
 ---
 title: "Generated storage.yml names S3 and GCS and their npm packages"
-status: in-progress
-updated: 2026-11-22
+status: done
+updated: 2026-11-23
 rfc: "0215-activestorage-cloud-services"
 cluster: as-cloud-infra
 packages: [trailties]

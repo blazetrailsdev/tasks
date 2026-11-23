@@ -1,7 +1,7 @@
 ---
 title: "Await Configurator.load in the active_storage.services initializer"
-status: ready
-updated: 2026-11-02
+status: in-progress
+updated: 2026-11-23
 rfc: "0215-activestorage-cloud-services"
 cluster: as-cloud-infra
 packages: [activestorage]
@@ -9,9 +9,9 @@ deps: [activestorage-configurator-loads-services, activestorage-engine]
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10614
+claim: "2026-11-23T00:34:04Z"
+assignee: "activestorage-engine-awaits-service-load"
 blocked-by: null
 ---
 

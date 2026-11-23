@@ -1,7 +1,7 @@
 ---
 title: "mysql2 Result#field_types, server_flags and Enumerable specs run"
-status: in-progress
-updated: 2026-11-22
+status: done
+updated: 2026-11-23
 rfc: "0254-mysql2-gem-port"
 cluster: null
 packages: ["mysql2"]
