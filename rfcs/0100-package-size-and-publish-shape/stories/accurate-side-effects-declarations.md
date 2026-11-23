@@ -15,7 +15,8 @@ packages:
     "globalid",
     "did-you-mean",
   ]
-deps: []
+deps:
+  - constants-table-and-autoload-thunks-pin-every-module
 deps-rfc: []
 est-loc: 120
 priority: 5
