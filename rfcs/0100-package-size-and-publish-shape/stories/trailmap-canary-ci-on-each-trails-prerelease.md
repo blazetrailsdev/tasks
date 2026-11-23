@@ -8,7 +8,7 @@ packages: []
 deps: ["trailmap-installs-published-packages-from-npm"]
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

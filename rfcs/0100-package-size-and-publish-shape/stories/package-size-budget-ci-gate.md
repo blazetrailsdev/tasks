@@ -15,7 +15,7 @@ deps:
   ]
 deps-rfc: []
 est-loc: 200
-priority: 7
+priority: 6
 pr: null
 claim: "2026-11-23T13:42:29Z"
 assignee: "globalid-notice-file"

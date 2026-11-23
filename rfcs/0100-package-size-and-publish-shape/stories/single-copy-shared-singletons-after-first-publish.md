@@ -9,7 +9,7 @@ deps:
   - first-alpha-practice-publish
 deps-rfc: []
 est-loc: 60
-priority: 9
+priority: 8
 pr: null
 claim: null
 assignee: null

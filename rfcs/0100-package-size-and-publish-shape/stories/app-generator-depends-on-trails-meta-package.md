@@ -1,6 +1,6 @@
 ---
 title: "App generator depends on the @blazetrails/trails meta-package, as Gemfile.tt depends on rails"
-status: ready
+status: claimed
 updated: 2026-11-23
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
@@ -8,10 +8,10 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 80
-priority: 8
+priority: 7
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-23T18:59:09Z"
+assignee: "first-alpha-practice-publish"
 blocked-by: null
 closed-reason: null
 ---

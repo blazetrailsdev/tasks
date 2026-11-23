@@ -8,7 +8,7 @@ packages: []
 deps: ["first-alpha-practice-publish"]
 deps-rfc: []
 est-loc: 80
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null
