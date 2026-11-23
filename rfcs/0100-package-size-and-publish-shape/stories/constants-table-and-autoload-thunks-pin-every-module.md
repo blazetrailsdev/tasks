@@ -38,9 +38,10 @@ seeds after both of them.
 
 ## Acceptance criteria
 
-1. The class-path table no longer statically imports every module from the barrel. For
-   example, each module seats its own row, or the table is reached lazily.
-2. Autoload thunks no longer force the target into a non-split bundle. Either verify the
-   shape under `--splitting` and measure with it, or record the measurement method in the RFC.
-3. The metafile for `import { Base }` no longer contains `dist/tasks/**`, and the measured
-   number of inputs is recorded.
+1. The `tasks/*` modules no longer appear in the barrel's class-path table: each seats its
+   own row in a `constants.<file>.generated.ts` it imports.
+2. The measurement method for autoload thunks (`--splitting`, thunk targets excluded) is
+   recorded in RFC 0100 `measurements.md`, with the input counts.
+3. The rest of the pin moves to `barrel-constants-table-and-tasks-reexports-stop-pinning`:
+   the other modules in the table, the static `tasks/*` re-exports in `lib/index.ts`, and
+   the `dist/tasks/**`-free metafile.
