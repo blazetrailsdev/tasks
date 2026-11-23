@@ -2,7 +2,7 @@
 title: "mysql2 CLIENT_ERRORS texts are pinned to Connector/C's client_errors[]"
 status: draft
 updated: 2026-11-23
-rfc: "0254-mysql2-gem-port"
+rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
