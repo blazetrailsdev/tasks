@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-libsql-replica-sync-reaches-the-engine"
-status: blocked
+status: ready
 updated: 2026-11-23
 rfc: "0187-sqlite3-gem-port"
 cluster: null
@@ -9,11 +9,11 @@ deps:
   - sqlite3-adapter-new-client-is-database-new
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null
-blocked-by: "waits on sqlite3-adapter-new-client-is-database-new (itself blocked)"
+blocked-by: null
 closed-reason: null
 ---
 

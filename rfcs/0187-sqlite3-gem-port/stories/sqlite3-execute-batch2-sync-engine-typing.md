@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: executeBatch2 on a sync engine answers unknown[], not a union"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0187-sqlite3-gem-port"
 cluster: null

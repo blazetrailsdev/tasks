@@ -1,6 +1,6 @@
 ---
 title: "S3 public virtual-host test GETs the virtual-host URL"
-status: draft
+status: ready
 updated: 2026-11-23
 rfc: "0215-activestorage-cloud-services"
 cluster: null

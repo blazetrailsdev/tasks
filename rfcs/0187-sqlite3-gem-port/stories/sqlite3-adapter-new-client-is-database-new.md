@@ -1,7 +1,7 @@
 ---
 title: "SQLite3Adapter.new_client is ::SQLite3::Database.new(config[:database].to_s, config)"
-status: blocked
-updated: 2026-11-22
+status: ready
+updated: 2026-11-23
 rfc: "0187-sqlite3-gem-port"
 cluster: migration
 packages: ["activerecord", "sqlite3"]
@@ -11,11 +11,11 @@ deps:
   - sqlite3-libsql-engines
 deps-rfc: []
 est-loc: 300
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null
-blocked-by: "Needs sqlite3-libsql-engines merged (no packages/sqlite3/lib/engine/libsql.ts on origin/main 23d8807ff1; its PR trails#10532 closed unmerged 2026-11-21). The node:sqlite engine landed (trails#10540), so that half of the old reason is gone. Also, returning SQLite3::Database from newClient breaks every adapter call site that still uses the SqliteConnection API (exec, pragma, prepare().all, lastInsertRowId), so it must land together with sqlite3-adapter-perform-query-reads-the-gem-names and sqlite3-adapter-configure-connection-calls-the-gem-setters, or their deps must be inverted."
+blocked-by: null
 closed-reason: null
 ---
 

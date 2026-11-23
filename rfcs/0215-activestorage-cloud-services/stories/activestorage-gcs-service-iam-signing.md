@@ -1,6 +1,6 @@
 ---
 title: "activestorage-gcs-service-iam-signing"
-status: ready
+status: closed
 updated: 2026-11-23
 rfc: "0215-activestorage-cloud-services"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#10648 (25426addf0): origin/main gcs-service.ts:214-215,319-320 port the if @config[:iam] arm via iamBucket({issuer, signer}); MetadataServerError/MetadataServerNotFoundError at :14-19; gcs-service.trails.test.ts 'GCSService IAM signing' covers issuer/metadata server/signBlob with a stubbed signer."
 ---
 
 ## Context

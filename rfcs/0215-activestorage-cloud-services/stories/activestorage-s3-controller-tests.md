@@ -1,6 +1,6 @@
 ---
 title: "Port the S3 arms of the controller tests"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0215-activestorage-cloud-services"
 cluster: as-cloud-s3

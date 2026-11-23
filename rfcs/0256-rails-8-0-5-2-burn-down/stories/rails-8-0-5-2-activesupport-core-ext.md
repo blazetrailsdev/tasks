@@ -1,6 +1,6 @@
 ---
 title: "Burn down activesupport (core-ext) from rails v8.0.2 to v8.0.5.2"
-status: in-progress
+status: done
 rfc: "0256-rails-8-0-5-2-burn-down"
 cluster: burn-down
 packages: ["activesupport"]

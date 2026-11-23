@@ -1,6 +1,6 @@
 ---
 title: "Isolation.included parallelizes the including class (parallelize_me!)"
-status: draft
+status: ready
 updated: 2026-11-23
 rfc: "0246-activesupport-parity-100"
 cluster: null
