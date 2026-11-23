@@ -5,7 +5,7 @@ rfc: "0256-rails-8-0-5-2-burn-down"
 cluster: burn-down
 packages: ["actiontext"]
 deps:
-  - rails-8-0-5-2-actionmailbox
+  - rails-8-0-5-2-activestorage
 deps-rfc: []
 est-loc: 65
 priority: null
