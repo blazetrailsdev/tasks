@@ -1,7 +1,7 @@
 ---
 title: "Port s3_service_test.rb"
-status: ready
-updated: 2026-11-02
+status: in-progress
+updated: 2026-11-23
 rfc: "0215-activestorage-cloud-services"
 cluster: as-cloud-s3
 packages: [activestorage]
@@ -15,9 +15,9 @@ deps:
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10637
+claim: "2026-11-23T10:42:26Z"
+assignee: "activestorage-s3-service-test"
 blocked-by: null
 ---
 

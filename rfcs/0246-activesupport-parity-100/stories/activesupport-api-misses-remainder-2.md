@@ -1,7 +1,7 @@
 ---
 title: "activesupport-api-misses-remainder-2"
-status: in-progress
-updated: 2026-11-22
+status: done
+updated: 2026-11-23
 rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: []

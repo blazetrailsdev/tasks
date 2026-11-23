@@ -1,7 +1,7 @@
 ---
 title: "dashboard-e2e brings its own hub Postgres for a local run"
-status: in-progress
-updated: 2026-11-22
+status: done
+updated: 2026-11-23
 rfc: "0136-trailmap"
 cluster: null
 packages: []

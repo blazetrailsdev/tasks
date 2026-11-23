@@ -1,7 +1,7 @@
 ---
 title: "Find and fix the dashboard input that loses focus on a refresh"
-status: in-progress
-updated: 2026-11-22
+status: done
+updated: 2026-11-23
 rfc: "0136-trailmap"
 cluster: null
 packages: []

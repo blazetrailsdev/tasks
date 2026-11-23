@@ -1,6 +1,6 @@
 ---
 title: "Port pg v1.6.2's new and changed specs"
-status: ready
+status: in-progress
 updated: 2026-11-23
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10636
+claim: "2026-11-23T10:32:25Z"
+assignee: "port-pg-1-6-2-specs"
 blocked-by: null
 closed-reason: null
 ---
