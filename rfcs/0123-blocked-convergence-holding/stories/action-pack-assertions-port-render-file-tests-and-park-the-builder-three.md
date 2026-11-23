@@ -1,7 +1,7 @@
 ---
 title: "actionpack: port the two render_file tests, park the three Builder tests permanently"
-status: draft
-updated: 2026-10-08
+status: in-progress
+updated: 2026-11-23
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["actionpack"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10649
+claim: "2026-11-23T16:49:49Z"
+assignee: "action-pack-assertions-port-render-file-tests-and-park-the-builder-three"
 blocked-by: null
 closed-reason: null
 ---

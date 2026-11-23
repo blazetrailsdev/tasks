@@ -1,6 +1,6 @@
 ---
 title: "sqlite3: executeBatch2 on a sync engine answers unknown[], not a union"
-status: ready
+status: in-progress
 updated: 2026-11-23
 rfc: "0187-sqlite3-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10645
+claim: "2026-11-23T16:02:20Z"
+assignee: "sqlite3-execute-batch2-sync-engine-typing"
 blocked-by: null
 closed-reason: null
 ---

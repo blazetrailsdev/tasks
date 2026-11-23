@@ -1,6 +1,6 @@
 ---
 title: "constants-table-and-autoload-thunks-pin-every-module"
-status: draft
+status: ready
 updated: 2026-11-23
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 4
 pr: null
 claim: null
 assignee: null

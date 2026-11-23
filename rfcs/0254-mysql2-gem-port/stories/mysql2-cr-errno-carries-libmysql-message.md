@@ -1,6 +1,6 @@
 ---
 title: "mysql2 errors mapped to a CR_* number carry libmysql's message text"
-status: ready
+status: in-progress
 updated: 2026-11-23
 rfc: "0254-mysql2-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#10647
+claim: "2026-11-23T16:32:18Z"
+assignee: "mysql2-cr-errno-carries-libmysql-message"
 blocked-by: null
 closed-reason: null
 ---

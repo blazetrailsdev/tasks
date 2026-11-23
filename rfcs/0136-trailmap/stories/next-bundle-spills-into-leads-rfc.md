@@ -1,6 +1,6 @@
 ---
 title: "Port next-bundle's cross-cluster spill into the lead's RFC"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0136-trailmap"
 cluster: null

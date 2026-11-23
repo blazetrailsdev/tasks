@@ -1,6 +1,6 @@
 ---
 title: "Verify one ruby-compat/activesupport copy from a registry install of two published packages"
-status: draft
+status: blocked
 updated: 2026-11-23
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
@@ -8,11 +8,11 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 9
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "needs first 0.1.0-alpha0.N practice publish (release.yml on a v* tag); npm view @blazetrails/activerecord 404s on 2026-11-23 — nothing published yet"
 closed-reason: null
 ---
 

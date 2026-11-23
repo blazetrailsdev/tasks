@@ -1,7 +1,7 @@
 ---
 title: "Port gcs_public_service_test.rb"
-status: ready
-updated: 2026-11-02
+status: in-progress
+updated: 2026-11-23
 rfc: "0215-activestorage-cloud-services"
 cluster: as-cloud-gcs
 packages: [activestorage]
@@ -9,9 +9,9 @@ deps: [activestorage-gcs-service-test]
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10648
+claim: "2026-11-23T16:22:17Z"
+assignee: "activestorage-gcs-controller-tests"
 blocked-by: null
 ---
 
