@@ -1,7 +1,7 @@
 ---
 title: "Bump rails-html-sanitizer from v1.6.2 to v1.7.2, the floor actionview 8.0.5.2's gemspec requires"
-status: ready
-updated: 2026-11-16
+status: blocked
+updated: 2026-11-23
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: post-flip
 packages: ["scripts", "html-sanitizer", "actionview"]
@@ -12,9 +12,9 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-23T15:52:13Z"
+assignee: "bump-rails-html-sanitizer-to-v1-7-2"
+blocked-by: "v1.7.2 sanitizer.rb/scrubbers.rb call Loofah::HTML5::Scrub.allowed_uri?/prefixed_attribute_name/scrub_attribute_value (loofah 2.25); packages/loofah is still v2.24.0 — waits on flip-loofah-to-v2-25-3 (draft)"
 closed-reason: null
 ---
 

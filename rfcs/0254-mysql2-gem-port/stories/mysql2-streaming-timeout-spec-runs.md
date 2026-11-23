@@ -1,6 +1,6 @@
 ---
 title: "mysql2 'streaming ended due to a timeout' spec runs or carries a verified skip"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0254-mysql2-gem-port"
 cluster: null

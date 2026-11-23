@@ -1,6 +1,6 @@
 ---
 title: "mysql2 errors mapped to a CR_* number carry libmysql's message text"
-status: draft
+status: ready
 updated: 2026-11-23
 rfc: "0254-mysql2-gem-port"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 60
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

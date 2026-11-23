@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc finds mailer views by ActionMailer::Base subclass, not -mailer.ts suffix"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0247-website-refresh"
 cluster: null

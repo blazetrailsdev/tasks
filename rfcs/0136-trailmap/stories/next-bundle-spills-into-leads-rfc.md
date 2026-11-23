@@ -1,6 +1,6 @@
 ---
 title: "Port next-bundle's cross-cluster spill into the lead's RFC"
-status: draft
+status: in-progress
 updated: 2026-11-23
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trailmap#197
+claim: "2026-11-23T15:45:07Z"
+assignee: "next-bundle-spills-into-leads-rfc"
 blocked-by: null
 closed-reason: null
 ---

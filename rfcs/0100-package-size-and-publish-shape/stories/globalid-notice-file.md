@@ -1,6 +1,6 @@
 ---
 title: "Add NOTICE to globalid and pack it"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0100-package-size-and-publish-shape"
 cluster: null

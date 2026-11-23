@@ -1,6 +1,6 @@
 ---
 title: "homepage-view-typecheck-virtualizer-gaps"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0247-website-refresh"
 cluster: null

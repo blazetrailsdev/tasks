@@ -1,7 +1,7 @@
 ---
 title: "Close out: the Rails ledger is empty and deleted, v8.0.2 is pruned, the floor is retaken at v8.0.5.2"
-status: ready
-updated: 2026-11-16
+status: blocked
+updated: 2026-11-23
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: close
 packages: [scripts]
@@ -14,9 +14,9 @@ deps-rfc: []
 est-loc: 50
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-23T15:52:13Z"
+assignee: "bump-rails-html-sanitizer-to-v1-7-2"
+blocked-by: "waits on the Rails 8.0.5.2 burn-down: bump-ledger/rails.json still has 235 rows, rails.tests.json 30 (2026-11-23)"
 closed-reason: null
 ---
 

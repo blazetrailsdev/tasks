@@ -1,6 +1,6 @@
 ---
 title: "lint-staged runs prettier on .html and .svelte, matching CI's Prettier step"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0247-website-refresh"
 cluster: null

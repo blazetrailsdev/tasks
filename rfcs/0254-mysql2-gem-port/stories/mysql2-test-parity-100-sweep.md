@@ -1,6 +1,6 @@
 ---
 title: "mysql2 test parity 100%: no scope-only skips remain"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0254-mysql2-gem-port"
 cluster: null
@@ -19,7 +19,7 @@ deps:
 deps-rfc: []
 est-loc: 50
 priority: 9
-pr: trails#10624
+pr: trails#10640
 claim: "2026-11-23T02:34:06Z"
 assignee: "mysql2-test-parity-100-sweep"
 blocked-by: null

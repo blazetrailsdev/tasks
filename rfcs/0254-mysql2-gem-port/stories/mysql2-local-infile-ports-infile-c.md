@@ -1,6 +1,6 @@
 ---
 title: "mysql2 LOCAL INFILE ports infile.c over an infileStreamFactory"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0254-mysql2-gem-port"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Load cloud service files from the configs on_load reads, not an initializer snapshot"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0215-activestorage-cloud-services"
 cluster: null

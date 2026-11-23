@@ -1,6 +1,6 @@
 ---
 title: "mysql2 multi-statement ERR surfaces at next_result, earlier sets kept"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0254-mysql2-gem-port"
 cluster: null
