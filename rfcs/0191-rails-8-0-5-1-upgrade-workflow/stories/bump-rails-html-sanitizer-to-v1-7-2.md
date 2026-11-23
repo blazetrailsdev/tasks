@@ -7,6 +7,7 @@ cluster: post-flip
 packages: ["scripts", "html-sanitizer", "actionview"]
 deps:
   - bump-loofah-to-v2-25-3
+  - flip-loofah-to-v2-25-3
 deps-rfc: []
 est-loc: 200
 priority: null
