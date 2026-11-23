@@ -5,9 +5,10 @@ rfc: "0256-rails-8-0-5-2-burn-down"
 cluster: burn-down
 packages: ["actioncable"]
 deps:
-  - rails-8-0-5-2-actionview-helpers
-  - rails-8-0-5-2-actionview-rendering
-  - rails-8-0-5-2-actionview-sanitizer-helpers
+  - rails-8-0-5-2-actioncontroller
+  - rails-8-0-5-2-actiondispatch-http
+  - rails-8-0-5-2-actiondispatch-other
+  - rails-8-0-5-2-actiondispatch-routing
 deps-rfc: []
 est-loc: 75
 priority: null
