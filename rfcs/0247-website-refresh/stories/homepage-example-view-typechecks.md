@@ -5,7 +5,8 @@ updated: 2026-11-23
 rfc: "0247-website-refresh"
 cluster: null
 packages: []
-deps: []
+deps:
+  - homepage-view-typecheck-virtualizer-gaps
 deps-rfc: []
 est-loc: 80
 priority: null
