@@ -5,7 +5,8 @@ updated: 2026-11-23
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
 packages: []
-deps: []
+deps:
+  - racc-grammar-compiler-port-or-scope-ruling
 deps-rfc: []
 est-loc: 120
 priority: null
