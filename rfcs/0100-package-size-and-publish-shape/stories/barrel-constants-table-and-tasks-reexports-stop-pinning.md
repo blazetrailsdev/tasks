@@ -5,7 +5,8 @@ updated: 2026-11-23
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
 packages: []
-deps: []
+deps:
+  - accurate-side-effects-declarations
 deps-rfc: []
 est-loc: null
 priority: null
