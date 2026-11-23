@@ -1,6 +1,6 @@
 ---
 title: "GCS signed-URL GET tests reach the object instead of passing on a text/plain 404"
-status: draft
+status: ready
 updated: 2026-11-23
 rfc: "0215-activestorage-cloud-services"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 30
-priority: null
+priority: 1
 pr: null
 claim: null
 assignee: null

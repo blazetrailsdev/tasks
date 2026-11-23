@@ -1,6 +1,6 @@
 ---
 title: "Burn down actionview (helpers) from rails v8.0.2 to v8.0.5.2"
-status: ready
+status: in-progress
 rfc: "0256-rails-8-0-5-2-burn-down"
 cluster: burn-down
 packages: ["actionview"]
@@ -8,9 +8,9 @@ deps: []
 deps-rfc: []
 est-loc: 420
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10670
+claim: "2026-11-23T21:22:02Z"
+assignee: "rails-8-0-5-2-actionview-helpers"
 blocked-by: null
 closed-reason: null
 updated: 2026-11-23

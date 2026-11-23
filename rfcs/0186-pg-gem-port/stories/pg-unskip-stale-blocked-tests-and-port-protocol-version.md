@@ -1,6 +1,6 @@
 ---
 title: "pg-unskip-stale-blocked-tests-and-port-protocol-version"
-status: ready
+status: claimed
 updated: 2026-11-23
 rfc: "0186-pg-gem-port"
 cluster: "connection"
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-23T21:50:04Z"
+assignee: "pg-connection-pipeline-sync-and-chunked-rows-mode"
 blocked-by: null
 closed-reason: null
 ---

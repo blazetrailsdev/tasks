@@ -1,6 +1,6 @@
 ---
 title: "pg-connection-pipeline-sync-and-chunked-rows-mode"
-status: ready
+status: claimed
 updated: 2026-11-23
 rfc: "0186-pg-gem-port"
 cluster: "connection"
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 450
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-23T21:50:04Z"
+assignee: "pg-connection-pipeline-sync-and-chunked-rows-mode"
 blocked-by: null
 closed-reason: null
 ---

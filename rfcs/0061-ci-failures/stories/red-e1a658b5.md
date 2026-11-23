@@ -1,6 +1,6 @@
 ---
 title: "Active Record SQLite Tests (1) failing on main @e1a658b5"
-status: ready
+status: done
 updated: 2026-11-23
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: trails#10667
+claim: "2026-11-23T21:28:28Z"
+assignee: "red-e1a658b5"
 blocked-by: null
 closed-reason: null
 ---

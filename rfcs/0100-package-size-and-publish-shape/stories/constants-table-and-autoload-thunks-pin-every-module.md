@@ -1,6 +1,6 @@
 ---
 title: "constants-table-and-autoload-thunks-pin-every-module"
-status: ready
+status: in-progress
 updated: 2026-11-23
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#10666
+claim: "2026-11-23T21:02:27Z"
+assignee: "trailmap-installs-published-packages-from-npm"
 blocked-by: null
 closed-reason: null
 ---
