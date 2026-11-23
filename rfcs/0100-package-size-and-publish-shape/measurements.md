@@ -223,3 +223,24 @@ Bundle: 1.82 MB → ~1.5 MB with W4+W6 (single adapter, no rake tasks), → ~1.3
 
 _Method: `pnpm build`; `npm pack --dry-run --json` per package; closure assembled by extracting each `npm pack` tarball into a temp `node_modules/@blazetrails/_`and`npm install --omit=optional`for the three external deps; bundle via`esbuild@0.25.5 --bundle --format=esm --minify --platform=node --metafile`. All work in scratchpad; no source changed.\*
 ````
+
+## `import { Base }` closure after the tasks tables moved off the barrel (2026-11-23)
+
+`tasks/*` now each import their own `constants.<file>.generated.ts`, so the barrel's
+`constants.generated.ts` no longer names them. Method: `esbuild@0.27.3 --bundle --format=esm
+--platform=node --metafile` on `import { Base } from "@blazetrails/activerecord"`, counting the
+inputs of the entry output (non-split) or of the outputs statically reachable from the entry
+(`--splitting`).
+
+| Shape                                                            | Inputs | `dist/tasks/**` |
+| ---------------------------------------------------------------- | ------ | --------------- |
+| As shipped, no `sideEffects`                                     | 1,058  | 4               |
+| `--splitting`, no `sideEffects`                                  | 826    | 2               |
+| `--splitting`, `tasks/**` and tables marked side-effect free     | 824    | 2               |
+| Non-split, same `sideEffects`, `loadPath` thunk targets excluded | 1,019  | 0               |
+
+The `loadPath` autoload thunks are measured by excluding their targets. A non-split esbuild
+build inlines every `import()` target by construction. Under `--splitting`, esbuild still emits a
+bare `import "./chunk"` for `database-tasks` and `sqlite-database-tasks`, which the barrel
+re-exports statically and `loadPath` imports dynamically. `accurate-side-effects-declarations`
+and `package-size-budget-ci-gate` measure against the 1,019 row.
