@@ -1019,3 +1019,17 @@ Resolved or deferred:
   test rows); the `v8.0.5.1` re-run's difference from 2026-10-13 explained by
   pins added since. Open question 3 resolved.
 - 2026-11-11: burn-down cut one PR per package, about 20–25 PRs (owner).
+- 2026-11-23: the runbook is written into trails' vendor/README.md
+  (`document-the-minor-bump-runbook`). The real bumps contradicted the plan in
+  four places, and § 3 and § 7 should be read with these corrections:
+  - **A bump that needs a ledger merges its pin floor in its own PR first.**
+    `parity:api:pins:ledger` recomputes the seed from the base branch's pins,
+    so a floor and a seed in one PR never agree (trails#10577). A bump with no
+    ledger carries its floor as its first commit (zeitwerk, trails#10621).
+  - **A gem's floor is per source.** `pnpm parity:api:pins:all` rewrites every
+    package's pins and clears rails ledger rows. A gem bump keeps only its own
+    package's new pins.
+  - **Ledger pair kinds also include `signature` and `constant`**, beside
+    `drift` and `removed` (trails#10554).
+  - **The dry run restores every tracked file from `HEAD`.** Uncommitted work
+    in the tree is lost, so commit it before starting the run.
