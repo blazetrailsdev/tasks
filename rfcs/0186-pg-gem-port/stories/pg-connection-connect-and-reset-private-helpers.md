@@ -6,7 +6,8 @@ rfc: "0186-pg-gem-port"
 cluster: "connection"
 packages:
   - "pg"
-deps: []
+deps:
+  - pg-connection-connect-poll-c-primitives
 deps-rfc: []
 est-loc: 350
 priority: null
