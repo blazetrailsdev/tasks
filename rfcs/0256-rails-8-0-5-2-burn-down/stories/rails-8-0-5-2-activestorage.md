@@ -5,7 +5,15 @@ rfc: "0256-rails-8-0-5-2-burn-down"
 cluster: burn-down
 packages: ["activestorage"]
 deps:
+  - rails-8-0-5-2-actioncontroller
+  - rails-8-0-5-2-actiondispatch-http
+  - rails-8-0-5-2-actiondispatch-other
+  - rails-8-0-5-2-actiondispatch-routing
   - rails-8-0-5-2-activejob
+  - rails-8-0-5-2-activerecord-associations
+  - rails-8-0-5-2-activerecord-connection-adapters
+  - rails-8-0-5-2-activerecord-migrations-and-schema
+  - rails-8-0-5-2-activerecord-relation-and-query
 deps-rfc: []
 est-loc: 1030
 priority: null
