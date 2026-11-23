@@ -176,6 +176,23 @@ Out of scope: splitting `activerecord` into subpackages; changing the public
 API surface; making anything lazier than Rails is; touching the optional-peer
 arrangement for native drivers (already correct).
 
+## Decision: which sourcemaps ship
+
+Packages publish `.js.map` and not `.d.ts.map` (option (b) of
+`stop-publishing-sourcemaps`). A `.d.ts.map` only lets an editor jump from a
+`.d.ts` to the `.ts` it came from, and no package ships its `lib/`, so on a
+consumer's disk it points at nothing. A `.js.map` still works there: under
+`--enable-source-maps` Node maps a stack frame to the original file and line
+from the map alone, which keeps traces into trails internals readable. Shipping
+`lib/` as well (option (c)) was not taken.
+
+`tsc` still emits both kinds, because local development and the parity tooling
+read them. Only the tarball changes, through a `"!dist/**/*.d.ts.map"` entry in
+each published package's `files`. The shared `tsconfig.json` cannot do this,
+because it controls emit, not packing. `@blazetrails/activerecord` went from
+5,905,671 B unpacked, 1,515 files and a 1,092,535 B tarball to 5,022,962 B,
+1,137 files and 947,726 B.
+
 ## Non-goals / risks
 
 - **Do not break `dist/` for the repo's own test runs.** Vitest runs from
