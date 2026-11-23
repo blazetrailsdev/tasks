@@ -166,6 +166,15 @@ and the `rails` gem is a code-free meta-gem over the set
 
 The size stories below land before the first real publish.
 
+### First alpha prerelease
+
+The first prerelease is `0.1.0-alpha0.1`, published by `release.yml` on the
+tag `v0.1.0-alpha0.1` under the dist-tag `alpha` (a tag containing `-alpha`
+publishes as `alpha`, any other as `latest`). Each later practice publish
+bumps the last segment (`pnpm release:version 0.1.0-alpha0.N`, then tag
+`v0.1.0-alpha0.N`). Install with `@blazetrails/trails@alpha`; its
+`dependencies` are exact pins at the same version.
+
 ## Scope
 
 In scope: versioning, internal pins, the meta-package, the
