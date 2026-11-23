@@ -5,7 +5,8 @@ updated: 2026-11-23
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
 packages: []
-deps: []
+deps:
+  - first-alpha-practice-publish
 deps-rfc: []
 est-loc: 60
 priority: 9
