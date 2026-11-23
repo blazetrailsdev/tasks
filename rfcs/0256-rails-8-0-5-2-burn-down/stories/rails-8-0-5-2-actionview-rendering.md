@@ -4,10 +4,7 @@ status: ready
 rfc: "0256-rails-8-0-5-2-burn-down"
 cluster: burn-down
 packages: ["actionview"]
-deps:
-  - rails-8-0-5-2-actiondispatch-http
-  - rails-8-0-5-2-actiondispatch-other
-  - rails-8-0-5-2-actiondispatch-routing
+deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
