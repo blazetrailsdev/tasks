@@ -4,8 +4,7 @@ status: ready
 rfc: "0256-rails-8-0-5-2-burn-down"
 cluster: burn-down
 packages: ["activejob"]
-deps:
-  - rails-8-0-5-2-actioncable
+deps: []
 deps-rfc: []
 est-loc: 75
 priority: null
