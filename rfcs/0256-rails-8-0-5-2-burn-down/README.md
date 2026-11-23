@@ -1,9 +1,9 @@
 ---
 rfc: "0256-rails-8-0-5-2-burn-down"
 title: "Rails 8.0.5.2 burn-down: re-verify every drifted body and port every upstream test change"
-status: draft
+status: active
 created: 2026-11-22
-updated: 2026-11-22
+updated: 2026-11-23
 owner: "@deanmarano"
 packages:
   - "arel"
