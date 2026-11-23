@@ -5,9 +5,6 @@ rfc: "0256-rails-8-0-5-2-burn-down"
 cluster: burn-down
 packages: ["actionview"]
 deps:
-  - rails-8-0-5-2-actiondispatch-http
-  - rails-8-0-5-2-actiondispatch-other
-  - rails-8-0-5-2-actiondispatch-routing
   - bump-rails-html-sanitizer-to-v1-7-2
 deps-rfc: []
 est-loc: 85
