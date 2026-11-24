@@ -1,6 +1,6 @@
 ---
 title: "Shard body-pins.json per package, one pin per line, to stop burndown merge conflicts"
-status: in-progress
+status: done
 updated: 2026-11-24
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null

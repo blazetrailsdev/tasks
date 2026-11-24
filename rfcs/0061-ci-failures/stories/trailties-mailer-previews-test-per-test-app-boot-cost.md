@@ -1,7 +1,7 @@
 ---
 title: "Cut mailer-previews.test.ts per-test app boot cost and fold it back into the trailties shards"
-status: draft
-updated: 2026-11-22
+status: ready
+updated: 2026-11-24
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

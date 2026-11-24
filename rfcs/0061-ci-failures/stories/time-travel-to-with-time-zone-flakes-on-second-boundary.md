@@ -1,7 +1,7 @@
 ---
 title: "time-travel-to-with-time-zone-flakes-on-second-boundary"
-status: draft
-updated: 2026-11-22
+status: ready
+updated: 2026-11-24
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "trails build also precompiles templates, so an app has one build step before assets:precompile"
-status: draft
+status: ready
 updated: 2026-11-24
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

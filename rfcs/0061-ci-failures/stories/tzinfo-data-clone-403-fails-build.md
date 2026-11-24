@@ -1,7 +1,7 @@
 ---
 title: "tzinfo-data-clone-403-fails-build"
-status: draft
-updated: 2026-11-23
+status: ready
+updated: 2026-11-24
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

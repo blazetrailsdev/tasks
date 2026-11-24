@@ -1,7 +1,7 @@
 ---
 title: "reaper tests clear Reaper.pools under a live reaper thread (splice TypeError)"
-status: draft
-updated: 2026-11-22
+status: ready
+updated: 2026-11-24
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

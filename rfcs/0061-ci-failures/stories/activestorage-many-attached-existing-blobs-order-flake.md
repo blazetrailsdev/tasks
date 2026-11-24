@@ -1,7 +1,7 @@
 ---
 title: "Fix order flake in ManyAttachedTest existing-blobs test on PostgreSQL"
-status: draft
-updated: 2026-11-17
+status: ready
+updated: 2026-11-24
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

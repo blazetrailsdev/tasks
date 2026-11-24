@@ -1,7 +1,7 @@
 ---
 title: "Trailties Tests shard 1 has ~25% headroom under its 20m timeout"
-status: draft
-updated: 2026-11-20
+status: ready
+updated: 2026-11-24
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

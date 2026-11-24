@@ -1,7 +1,7 @@
 ---
 title: "Keep the AR shard duration table fresh"
-status: draft
-updated: 2026-11-17
+status: ready
+updated: 2026-11-24
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

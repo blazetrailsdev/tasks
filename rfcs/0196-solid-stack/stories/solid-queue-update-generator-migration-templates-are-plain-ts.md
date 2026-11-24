@@ -1,6 +1,6 @@
 ---
 title: "SolidQueue::UpdateGenerator migration templates are plain .ts files"
-status: draft
+status: ready
 updated: 2026-11-24
 rfc: "0196-solid-stack"
 cluster: null

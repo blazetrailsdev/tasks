@@ -1,7 +1,7 @@
 ---
 title: "Rails-private credit keys by owner and static, not file-wide name"
-status: draft
-updated: 2026-11-18
+status: ready
+updated: 2026-11-24
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

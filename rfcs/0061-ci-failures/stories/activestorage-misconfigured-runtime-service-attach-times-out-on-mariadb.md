@@ -1,7 +1,7 @@
 ---
 title: "activestorage-misconfigured-runtime-service-attach-times-out-on-mariadb"
-status: draft
-updated: 2026-11-23
+status: ready
+updated: 2026-11-24
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

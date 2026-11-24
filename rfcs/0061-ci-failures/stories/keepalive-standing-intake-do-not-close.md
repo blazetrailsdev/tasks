@@ -1,7 +1,7 @@
 ---
 title: "Keep-alive: standing CI-failures intake — do not close"
 status: draft
-updated: 2026-08-03
+updated: 2026-11-24
 rfc: "0061-ci-failures"
 cluster: null
 deps: []
