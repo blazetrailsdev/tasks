@@ -1,6 +1,6 @@
 ---
 title: "nokogiri-xml-node-parse-in-context"
-status: claimed
+status: blocked
 updated: 2026-11-24
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: "2026-11-24T15:52:37Z"
 assignee: "nokogiri-html5-document-fragment-gumbo-fragment"
-blocked-by: null
+blocked-by: "waiting on nokogiri-libxml2-wasm-export-missing-c-functions (libxml2-wasm 0.7.1 lacks the C export)"
 closed-reason: null
 ---
 

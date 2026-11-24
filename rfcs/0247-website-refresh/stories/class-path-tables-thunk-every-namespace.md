@@ -1,6 +1,6 @@
 ---
 title: "class-path-tables-thunk-every-namespace"
-status: in-progress
+status: done
 updated: 2026-11-24
 rfc: "0247-website-refresh"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "nokogiri-xml-document-parse-pathname-arm"
-status: claimed
+status: in-progress
 updated: 2026-11-24
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10698
 claim: "2026-11-24T15:52:37Z"
 assignee: "nokogiri-html5-document-fragment-gumbo-fragment"
 blocked-by: null

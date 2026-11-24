@@ -1,6 +1,6 @@
 ---
 title: "Website hosts the browser-sqlite example as a /playground"
-status: claimed
+status: done
 updated: 2026-11-24
 rfc: "0247-website-refresh"
 cluster: website-deploy
@@ -9,7 +9,7 @@ deps: ["browser-sqlite-static-production-bundle"]
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#10697
 claim: "2026-11-24T15:56:53Z"
 assignee: "website-browser-sqlite-playground"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Burn down actionmailbox from rails v8.0.2 to v8.0.5.2"
-status: ready
+status: in-progress
 rfc: "0256-rails-8-0-5-2-burn-down"
 cluster: burn-down
 packages: ["actionmailbox"]
@@ -9,12 +9,12 @@ deps:
 deps-rfc: []
 est-loc: 75
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10699
+claim: "2026-11-24T16:16:58Z"
+assignee: "rails-8-0-5-2-actionmailbox"
 blocked-by: null
 closed-reason: null
-updated: 2026-11-23
+updated: 2026-11-24
 ---
 
 ## Context

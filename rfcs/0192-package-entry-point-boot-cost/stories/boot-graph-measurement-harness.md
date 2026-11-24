@@ -1,6 +1,6 @@
 ---
 title: "A committed boot-graph harness: loaded-vs-shipped module ratios per package, reproducible and regression-visible"
-status: ready
+status: in-progress
 updated: 2026-11-24
 rfc: "0192-package-entry-point-boot-cost"
 cluster: "measurement"
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 320
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10701
+claim: "2026-11-24T16:26:52Z"
+assignee: "boot-graph-measurement-harness"
 blocked-by: null
 ---
 

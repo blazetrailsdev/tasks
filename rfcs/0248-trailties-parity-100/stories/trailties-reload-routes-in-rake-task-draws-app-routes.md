@@ -1,6 +1,6 @@
 ---
 title: "trailties-reload-routes-in-rake-task-draws-app-routes"
-status: ready
+status: done
 updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10700
+claim: "2026-11-24T16:07:13Z"
+assignee: "all-railties-app-types-engine-configs-without-template-imports"
 blocked-by: null
 closed-reason: null
 ---
