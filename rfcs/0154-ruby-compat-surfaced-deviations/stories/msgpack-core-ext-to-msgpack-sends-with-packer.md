@@ -1,7 +1,7 @@
 ---
 title: "msgpack: CoreExt#to_msgpack sends to_msgpack_with_packer instead of calling it"
-status: draft
-updated: 2026-10-20
+status: ready
+updated: 2026-11-24
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "trails rake dispatch ends the process when the task returns, as Ruby's interpreter does"
-status: draft
-updated: 2026-11-19
+status: ready
+updated: 2026-11-24
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

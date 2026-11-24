@@ -1,7 +1,7 @@
 ---
 title: "flash-reader-is-a-hand-written-getter-not-a-delegate-call"
-status: blocked
-updated: 2026-11-16
+status: ready
+updated: 2026-11-24
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-15T23:07:34Z"
-assignee: "authentication-generator-e2e-request-cycle"
-blocked-by: "operator decision: Delegation.generate cannot know at definition time that a String target's member is an accessor. Read-time dispatch (tried in this bundle's PR) turns every String-target delegate into an accessor, which reds rbObjMethod introspection (module_test 'delegation line number' / 'delegate line with nil') and the 'reader and writer pair' delegation test. It needs a ruling on how delegate decides accessor shape (e.g. an as:-style receiver class hint)."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

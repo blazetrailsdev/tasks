@@ -1,6 +1,6 @@
 ---
 title: "Replace the two namespace imports of the ruby-compat barrel on the app boot path"
-status: draft
+status: ready
 updated: 2026-11-24
 rfc: "0192-package-entry-point-boot-cost"
 cluster: null

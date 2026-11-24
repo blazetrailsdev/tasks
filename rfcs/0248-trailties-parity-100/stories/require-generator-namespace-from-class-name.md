@@ -1,7 +1,7 @@
 ---
 title: "trailties: requireGenerator stops deriving namespaces from file paths"
-status: ready
-updated: 2026-11-21
+status: done
+updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10713
+claim: "2026-11-24T21:07:00Z"
+assignee: "query-logs-pet-connection-in-request"
 blocked-by: null
 closed-reason: null
 ---

@@ -31,6 +31,7 @@ clusters:
   - rails-core
   - small-packages
   - scoping
+priority: 2
 ---
 
 # RFC 0259 — Every package at 97% or above reaches 100%

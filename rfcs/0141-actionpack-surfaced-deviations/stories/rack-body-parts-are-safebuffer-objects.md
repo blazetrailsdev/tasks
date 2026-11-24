@@ -1,7 +1,7 @@
 ---
 title: "rack-body-parts-are-safebuffer-objects"
-status: draft
-updated: 2026-11-21
+status: ready
+updated: 2026-11-24
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "html5-document-extends-xml-document-chain"
-status: draft
-updated: 2026-11-17
+status: ready
+updated: 2026-11-24
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []

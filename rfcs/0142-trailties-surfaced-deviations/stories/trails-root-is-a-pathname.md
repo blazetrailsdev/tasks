@@ -1,7 +1,7 @@
 ---
 title: "trails-root-is-a-pathname"
-status: draft
-updated: 2026-11-17
+status: ready
+updated: 2026-11-24
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

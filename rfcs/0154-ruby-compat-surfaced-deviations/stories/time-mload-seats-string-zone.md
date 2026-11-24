@@ -1,7 +1,7 @@
 ---
 title: "time-mload-seats-string-zone"
-status: draft
-updated: 2026-10-16
+status: ready
+updated: 2026-11-24
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []

@@ -5,7 +5,10 @@ updated: 2026-11-24
 rfc: "0192-package-entry-point-boot-cost"
 cluster: "findings"
 packages: ["activesupport", "ruby-compat"]
-deps: ["ruby-compat-wildcard-subpath-export", "boot-graph-measurement-harness"]
+deps:
+  - ruby-compat-wildcard-subpath-export
+  - boot-graph-measurement-harness
+  - ruby-compat-include-load-time-mixins-reach-narrow-subpaths
 deps-rfc: []
 est-loc: 320
 priority: null

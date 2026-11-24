@@ -1,15 +1,18 @@
 ---
 title: "actionpack: migrate its 219 ruby-compat barrel imports to subpaths"
-status: claimed
+status: done
 updated: 2026-11-24
 rfc: "0192-package-entry-point-boot-cost"
 cluster: "findings"
 packages: ["actionpack", "ruby-compat"]
-deps: ["ruby-compat-wildcard-subpath-export", "boot-graph-measurement-harness"]
+deps:
+  - ruby-compat-wildcard-subpath-export
+  - boot-graph-measurement-harness
+  - class-paths-generator-imports-define-constants-by-subpath
 deps-rfc: []
 est-loc: 240
 priority: null
-pr: null
+pr: trails#10707
 claim: "2026-11-24T17:46:52Z"
 assignee: "migrate-actionpack-off-the-ruby-compat-barrel"
 blocked-by: null

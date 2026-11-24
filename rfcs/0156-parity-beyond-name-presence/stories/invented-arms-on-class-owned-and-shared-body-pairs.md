@@ -1,7 +1,7 @@
 ---
 title: "invented-arms-on-class-owned-and-shared-body-pairs"
-status: draft
-updated: 2026-11-17
+status: ready
+updated: 2026-11-24
 rfc: "0156-parity-beyond-name-presence"
 cluster: null
 packages: []

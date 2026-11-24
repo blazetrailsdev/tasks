@@ -1,6 +1,6 @@
 ---
 title: "SQLite3 perform_query, the statement pool and encoding call the gem's methods"
-status: in-progress
+status: done
 updated: 2026-11-24
 rfc: "0187-sqlite3-gem-port"
 cluster: migration

@@ -1,6 +1,6 @@
 ---
 title: "pg: conninfo rows carry libpq's envvar/label/dispchar/dispsize"
-status: ready
+status: in-progress
 updated: 2026-11-24
 rfc: "0186-pg-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#10717
+claim: "2026-11-24T19:36:54Z"
+assignee: "pg-exec-copy-in-returns-copy-in-result"
 blocked-by: null
 closed-reason: null
 ---

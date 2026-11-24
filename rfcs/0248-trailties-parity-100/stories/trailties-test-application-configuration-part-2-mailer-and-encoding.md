@@ -1,6 +1,6 @@
 ---
 title: "trailties-test-application-configuration-part-2-mailer-and-encoding"
-status: claimed
+status: done
 updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10713
 claim: "2026-11-24T17:07:12Z"
 assignee: "query-logs-pet-connection-in-request"
 blocked-by: null

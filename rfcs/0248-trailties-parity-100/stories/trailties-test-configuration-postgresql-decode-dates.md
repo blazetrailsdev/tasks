@@ -1,6 +1,6 @@
 ---
 title: "trailties-test-configuration-postgresql-decode-dates"
-status: claimed
+status: in-progress
 updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10709
 claim: "2026-11-24T17:56:59Z"
 assignee: "trailties-test-configuration-config-for-yaml"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "capture-subprocess-io-moves-to-minitest"
-status: draft
-updated: 2026-10-30
+status: closed
+updated: 2026-11-24
 rfc: "0206-minitest-port-and-assertions-to-expect"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: Minitest is not ported (operator ruling, reaffirmed 2026-11-24); test code uses Vitest expect and extends @blazetrails/vitest-matchers only where needed."
 ---
 
 ## Context

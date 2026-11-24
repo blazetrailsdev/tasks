@@ -1,6 +1,6 @@
 ---
 title: "trailties-railtie-class-names-match-rails"
-status: claimed
+status: in-progress
 updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: "2026-11-24T17:07:12Z"
-assignee: "query-logs-pet-connection-in-request"
+pr: trails#10715
+claim: "2026-11-24T19:07:22Z"
+assignee: "trailties-railtie-class-names-match-rails"
 blocked-by: null
 closed-reason: null
 ---
