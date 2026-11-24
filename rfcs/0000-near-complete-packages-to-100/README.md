@@ -127,8 +127,9 @@ That way an unported caller still pulls its callee into scope.
 
 ### Known external gates
 
-Two items in `small-packages-reach-100` wait on stories already `blocked`
-elsewhere. They are wired in as `deps`, so they stay visible:
+Two packages wait on stories already `blocked`
+elsewhere. They get their own story, `gated-packages-reach-100`, held by `deps`, so the
+shippable packages are not held with them:
 
 - actionmailer (4 tests): `stub-any-instance-does-not-intercept-js-new`
   (RFC 0158), which waits on an operator decision about intercepting
@@ -156,7 +157,8 @@ elsewhere. They are wired in as `deps`, so they stay visible:
 
 ## Rollout
 
-1. Small packages: `small-packages-reach-100`.
+1. Small packages: `small-packages-reach-100`, then
+   `gated-packages-reach-100` once its deps land.
 2. Rails core, in parallel: `activerecord-reaches-100`,
    `activesupport-reaches-100`, `actionview-reaches-100`,
    `actiondispatch-reaches-100`, `actioncontroller-reaches-100`,
