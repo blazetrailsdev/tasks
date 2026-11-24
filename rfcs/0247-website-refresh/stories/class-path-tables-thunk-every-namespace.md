@@ -1,6 +1,6 @@
 ---
 title: "class-path-tables-thunk-every-namespace"
-status: draft
+status: claimed
 updated: 2026-11-24
 rfc: "0247-website-refresh"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-24T02:49:51Z"
+assignee: "class-path-tables-thunk-every-namespace"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activestorage-image-magick-security-policy"
-status: draft
+status: ready
 updated: 2026-11-24
 rfc: "0256-rails-8-0-5-2-burn-down"
 cluster: null

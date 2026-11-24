@@ -1,7 +1,7 @@
 ---
 title: "trailties/all carries the engine config types; drop application.ts.tt's import type lines"
-status: draft
-updated: 2026-11-22
+status: claimed
+updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-24T02:59:56Z"
+assignee: "activestorage-index-import-loads-blob-eagerly"
 blocked-by: null
 closed-reason: null
 ---

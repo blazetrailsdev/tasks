@@ -1,6 +1,6 @@
 ---
 title: "trailties-test-application-test-runner-part-1-remainder"
-status: draft
+status: ready
 updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: null

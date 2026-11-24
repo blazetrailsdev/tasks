@@ -1,7 +1,7 @@
 ---
 title: "trailties: a reloaded model re-reads config/database.ts, so use_postgresql can follow boot"
-status: draft
-updated: 2026-11-22
+status: ready
+updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []

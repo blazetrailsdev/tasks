@@ -1,7 +1,7 @@
 ---
 title: "trailties-references-scaffold-model-file-loads"
-status: draft
-updated: 2026-11-23
+status: ready
+updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []

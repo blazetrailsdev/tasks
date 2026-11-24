@@ -14,7 +14,7 @@ pr: null
 claim: "2026-11-23T19:22:17Z"
 assignee: "port-racc-1-8-1-racc-command-tests"
 blocked-by: null
-closed-reason: 'PERMANENT: racc''s grammar compiler is out of scope by operator ruling 2026-11-23 (CLAUDE.md § "racc''s grammar compiler is not ported", trails#10681); every test_racc_command.rb test runs the racc command.'
+closed-reason: 'PERMANENT: test_racc_command.rb tests racc''s grammar compiler, which the operator ruled on 2026-11-23 is not ported (CLAUDE.md, "racc''s grammar compiler is not ported"); its unported-files row is PERMANENT in trails#10661.'
 ---
 
 ## Context

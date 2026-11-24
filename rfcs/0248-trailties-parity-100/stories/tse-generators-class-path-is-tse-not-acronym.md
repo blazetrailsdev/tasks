@@ -1,7 +1,7 @@
 ---
 title: "trailties: Erb::Generators port's class path is Tse::Generators, so namespace-from-class-name answers tse:"
-status: draft
-updated: 2026-11-21
+status: ready
+updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []

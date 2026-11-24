@@ -1,7 +1,7 @@
 ---
 title: "scoped-parity-gates-judge-unextracted-packages-stale"
-status: draft
-updated: 2026-11-23
+status: in-progress
+updated: 2026-11-24
 rfc: "0061-ci-failures"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10661
+claim: "2026-11-24T02:43:52Z"
+assignee: "scoped-parity-gates-judge-unextracted-packages-stale"
 blocked-by: null
 closed-reason: null
 ---

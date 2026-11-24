@@ -1,6 +1,6 @@
 ---
 title: "racc-grammar-compiler-port-or-scope-ruling"
-status: done
+status: closed
 updated: 2026-11-24
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
@@ -13,7 +13,7 @@ pr: trails#10681
 claim: "2026-11-24T00:19:50Z"
 assignee: "racc-grammar-compiler-port-or-scope-ruling"
 blocked-by: null
-closed-reason: null
+closed-reason: 'PERMANENT: operator ruled 2026-11-23 that racc''s grammar compiler is not ported; each racc version bump regenerates the grammars with Ruby''s racc and ports the generated parser (CLAUDE.md, "racc''s grammar compiler is not ported"; trails#10661).'
 ---
 
 ## Context
