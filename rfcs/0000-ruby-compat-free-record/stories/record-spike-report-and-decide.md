@@ -4,7 +4,7 @@ status: draft
 updated: 2026-11-24
 rfc: "0000-ruby-compat-free-record"
 cluster: spike
-packages: []
+packages: ["scripts"]
 deps: ["record-spike-on-sqlite-in-one-pr"]
 deps-rfc: []
 est-loc: 150
