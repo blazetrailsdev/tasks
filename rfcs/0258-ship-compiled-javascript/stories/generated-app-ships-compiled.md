@@ -28,10 +28,12 @@ TypeScript loader to production.
 - `bin/trails.tt` (app and plugin) resolves `config/application.{ts,js}`
   beside itself, so the same file works from source and from `dist/`.
 - The generated `build` script emits to `dist/`, `bin/` included.
-  `Dockerfile.tt` runs it and `trails build`, and copies `dist/` plus
+  `Dockerfile.tt` runs it, then `trails build` inside `dist/`, and copies `dist/` plus
   production-only dependencies into the runtime stage. `CMD` runs the
   compiled server under `node --no-experimental-strip-types`.
 - `tsx` and `typescript` are devDependencies only, and absent from the
   runtime stage.
+- Existing apps migrate with `trails app:update`. The PR lists the
+  resulting diff for a stock app as the upgrade note.
 - Generator tests assert the templates. The behaviour is proven by
   `generated-app-boots-compiled-without-tsx`.

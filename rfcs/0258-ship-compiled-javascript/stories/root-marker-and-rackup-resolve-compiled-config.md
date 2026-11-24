@@ -36,10 +36,13 @@ Rails finds `config.ru` with `find_root("config.ru")` and lets
 - `server`'s `--config` default is `config.ts` when that exists and
   `config.js` otherwise. An explicit `--config` is taken as given.
 - `command/actions` uses the same rule.
+- When a `registerCompiledFiles` map is installed, a lookup for `x.ts` is
+  answered by a `x.js` key as well as a `x.ts` key, so a map written from a
+  compiled tree serves sites that still ask for `.ts`.
 - Tests cover a fixture tree with only `.js` files, and one with both, where
   `.ts` wins.
 
 ## Found by
 
 trailmap#198, via `compiled-app-cannot-boot-without-tsx` (RFC 0142), which
-this story and the next supersede.
+this story and the next supersede. That story is closed and points here.

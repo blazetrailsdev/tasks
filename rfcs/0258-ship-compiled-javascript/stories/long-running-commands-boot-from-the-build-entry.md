@@ -29,12 +29,21 @@ still depends on globbing `app/`.
 
 ## Acceptance
 
-- When `.trails/entry.generated.js` exists beside the application root,
-  `server`, `jobs` and `db:prepare` boot by importing it. When it doesn't,
-  they boot as today, so development is unchanged.
+- `server`, `jobs` and `db:prepare` boot by importing
+  `<root>/.trails/entry.generated.js` only when the root is a compiled root:
+  the marker found was `config.js`, with no `config.ts` beside it. In every
+  other case they boot as today.
+- A source tree with a stale `.trails/entry.generated.js` beside it (from a
+  local `trails build`) still boots through `config/environment` and the
+  autoloader, with a test.
+- `trails build` run from inside a tsc `dist/` writes `dist/.trails/`. Its
+  imports resolve to `.js` modules, and its `registerCompiledFiles` keys are
+  the `.js` paths. A test builds a fixture `dist/`, runs `trails build` there,
+  and boots from the entry under `node --no-experimental-strip-types`. Fix
+  anything in `trails-tsc`'s `buildAutoload` that assumes source.
 - The rule lives in one place in trailties, which solid-queue's CLI calls
   rather than copying.
-- Tests: with a built entry, the boot does not glob `app/` and still serves a
+- Tests: with a built entry in a compiled root, the boot does not glob `app/` and still serves a
   request and performs a job. Without one, the existing boot tests pass
   unchanged.
 - Measure boot time with and without the entry for one example app, and put
