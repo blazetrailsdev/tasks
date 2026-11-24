@@ -1,7 +1,7 @@
 ---
 title: "trailties: port content security policy and permissions policy tests"
-status: claimed
-updated: 2026-11-23
+status: ready
+updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
 packages: [trailties]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: "2026-11-23T23:09:45Z"
-assignee: "trailties-test-runner"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

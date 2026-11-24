@@ -1,7 +1,7 @@
 ---
 title: "pg: sync close variants and PG17 gate for close_prepared/close_portal"
-status: in-progress
-updated: 2026-11-23
+status: done
+updated: 2026-11-24
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []
