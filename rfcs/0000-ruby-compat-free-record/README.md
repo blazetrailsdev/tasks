@@ -148,8 +148,9 @@ this draft was researched.
 ### One hand-written sibling _(ruled 2026-11-24)_
 
 A new package beside `@blazetrails/activerecord`. It is not a Rails mirror:
-the fidelity rules, `parity:api` and the call gates do not apply to it, and
-the faithful port is not touched to make room for it. It is written once, by
+the fidelity rules, `parity:api` and the call gates do not apply to it. The
+faithful port changes only where a file the sibling shares is freed of
+ruby-compat (see "The floor"), and that change must keep its gates green. It is written once, by
 hand, as flat TypeScript classes. A build-time transform of the faithful port
 and an in-place replacement were both considered and not chosen (see
 Alternatives).
@@ -196,8 +197,8 @@ of what it does not carry:
 - `Marshal`, Psych YAML and `init_with` / `encode_with`;
 - `composed_of`;
 - singleton-class validations;
-- a ruby-compat `Hash`, `Range`, `Rational` or `BigDecimal` in any return
-  position (see Open questions for the decimal type).
+- a ruby-compat `Hash`, `Range` or `Rational` in any return position. What a
+  `decimal` column returns is Open question 2.
 
 Migrations, the schema dumper, fixtures and database tasks are not
 reimplemented. They are development-time and test-time tools that never sit
@@ -257,8 +258,9 @@ into an AST and then visited on every execution. The sibling's relation is an
 immutable value holding its clauses. Compiling it yields a SQL string and a
 bind list, and the compiled statement is cached by the relation's shape, so a
 repeated `Post.where({ id }).first()` costs a cache lookup and one prepared
-execute. A small expression builder covers what apps reach Arel for
-(`Post.arelTable.title.matches(…)`); full Arel interop is Open question 3.
+execute. A small expression builder covers what apps reach Arel for (comparison
+and pattern predicates on a column, and SQL function calls); full Arel
+interop is Open question 3.
 
 ### Correctness: differential tests gate, the Rails suite measures _(ruled 2026-11-24)_
 
@@ -268,7 +270,10 @@ execute. A small expression builder covers what apps reach Arel for
 - **The ported Rails suite as the progress metric.** `packages/activerecord/test`
   is run with the sibling substituted for the faithful port. The pass count is
   an only-grow mark. Tests for the unsupported list above are named in a
-  published skip file, each with the reason.
+  published skip file, each with the reason. That suite loads its schema and
+  fixtures through the faithful port, which the sibling does not reimplement,
+  so the runner keeps the faithful port for setup and substitutes only the
+  models under test. Whether that seam is clean is Open question 7.
 
 ## Non-goals
 
