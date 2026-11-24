@@ -6,7 +6,8 @@ rfc: "0136-trailmap"
 cluster: null
 packages: []
 deps: []
-deps-rfc: []
+deps-rfc:
+  - 0258-ship-compiled-javascript
 est-loc: 120
 priority: null
 pr: null
