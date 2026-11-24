@@ -1,6 +1,6 @@
 ---
 title: "Mime::Type.register is reachable from an app"
-status: draft
+status: closed
 updated: 2026-11-24
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: MimeType is exported from @blazetrails/actionpack (packages/actionpack/lib/action-dispatch/index.ts:61); an app calls MimeType.register directly."
 ---
 
 ## Context

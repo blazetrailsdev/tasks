@@ -1,6 +1,6 @@
 ---
 title: "quote and type cast a SafeBuffer as a String"
-status: draft
+status: in-progress
 updated: 2026-11-24
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10720
+claim: "2026-11-24T21:01:58Z"
+assignee: "quote-safe-buffer-as-string"
 blocked-by: null
 closed-reason: null
 ---

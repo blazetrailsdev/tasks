@@ -1,6 +1,6 @@
 ---
 title: "generated-constants-import-defineconstants-by-subpath"
-status: draft
+status: ready
 updated: 2026-11-24
 rfc: "0192-package-entry-point-boot-cost"
 cluster: null

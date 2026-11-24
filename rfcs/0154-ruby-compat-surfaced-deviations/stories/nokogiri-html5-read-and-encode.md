@@ -1,6 +1,6 @@
 ---
 title: "Port Nokogiri::HTML5.read and encode"
-status: draft
+status: in-progress
 updated: 2026-11-24
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10720
+claim: "2026-11-24T21:02:12Z"
+assignee: "nokogiri-html5-read-and-encode"
 blocked-by: null
 closed-reason: null
 ---

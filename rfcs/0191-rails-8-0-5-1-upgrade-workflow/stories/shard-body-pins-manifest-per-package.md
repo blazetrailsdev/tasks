@@ -1,6 +1,6 @@
 ---
 title: "Shard body-pins.json per package, one pin per line, to stop burndown merge conflicts"
-status: draft
+status: in-progress
 updated: 2026-11-24
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#10724
+claim: "2026-11-24T21:41:17Z"
+assignee: "shard-body-pins-manifest-per-package"
 blocked-by: null
 closed-reason: null
 ---

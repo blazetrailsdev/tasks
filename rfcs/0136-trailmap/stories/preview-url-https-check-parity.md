@@ -1,6 +1,6 @@
 ---
 title: "Preview URL https check agrees between trails and Rails apps"
-status: draft
+status: in-progress
 updated: 2026-11-24
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#199
+claim: "2026-11-24T21:08:04Z"
+assignee: "preview-url-https-check-parity"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "activerecord: @blazetrails/sqlite3 is an optional peer, not a dependency"
-status: draft
+status: in-progress
 updated: 2026-11-24
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10722
+claim: "2026-11-24T21:30:35Z"
+assignee: "activerecord-sqlite3-is-an-optional-peer"
 blocked-by: null
 closed-reason: null
 ---

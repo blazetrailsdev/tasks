@@ -1,6 +1,6 @@
 ---
 title: "Base.connection inside a request fails in a booted multi-db app (query_logs_test Pet.connection)"
-status: ready
+status: in-progress
 updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10725
+claim: "2026-11-24T21:07:00Z"
+assignee: "query-logs-pet-connection-in-request"
 blocked-by: null
 closed-reason: null
 ---

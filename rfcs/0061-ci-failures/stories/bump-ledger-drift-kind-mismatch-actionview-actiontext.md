@@ -1,6 +1,6 @@
 ---
 title: "bump-ledger-drift-kind-mismatch-actionview-actiontext"
-status: draft
+status: closed
 updated: 2026-11-24
 rfc: "0061-ci-failures"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: main passes lint-bump-ledger.ts at 65161fd9aa; the rows red only on trails#10715 because its branch predated #10704/#10711. Rebasing the PR cleared it."
 ---
 
 ## Context

@@ -1,6 +1,6 @@
 ---
 title: "Port active record.set signed id verifier secret"
-status: draft
+status: in-progress
 updated: 2026-11-24
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10720
+claim: "2026-11-24T21:02:05Z"
+assignee: "set-signed-id-verifier-secret-initializer"
 blocked-by: null
 closed-reason: null
 ---

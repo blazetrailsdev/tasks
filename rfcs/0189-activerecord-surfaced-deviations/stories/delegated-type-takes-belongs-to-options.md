@@ -1,6 +1,6 @@
 ---
 title: "delegated type accepts belongs to options"
-status: draft
+status: in-progress
 updated: 2026-11-24
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10720
+claim: "2026-11-24T21:02:02Z"
+assignee: "delegated-type-takes-belongs-to-options"
 blocked-by: null
 closed-reason: null
 ---
