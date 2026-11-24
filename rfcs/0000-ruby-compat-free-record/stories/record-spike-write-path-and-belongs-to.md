@@ -34,8 +34,10 @@ and assignment").
       schema load, not through a string-keyed send.
 - [ ] `changes` and `isChanged` for assigned attributes; `update` writes only
       changed columns, as ActiveRecord does.
-- [ ] `static { this.belongsTo("author") }` defines the reader and writer at
-      declaration time. The reader's return type is ActiveRecord's
+- [ ] `static { this.belongsTo("author", { className: "Author", foreignKey: "author_id" }) }`
+      defines the reader and writer at declaration time. Both options are
+      required in the spike, which has no inflector; the class is found in a
+      module-private map of spike models by name. The reader's return type is ActiveRecord's
       (`Author | null | Promise<Author | null>`), and `includes("author")`
       loads it in one extra query.
 - [ ] For each write the spike supports, a test asserts the SQL and binds

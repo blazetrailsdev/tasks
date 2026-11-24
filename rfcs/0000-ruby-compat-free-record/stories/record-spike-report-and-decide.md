@@ -25,9 +25,11 @@ and decides whether phases 2 to 6 of "Rollout" are filed.
 ## Acceptance criteria
 
 - [ ] The README's "Verification" records, for the spike and for
-      `@blazetrails/activerecord`: modules loaded and median import time from
-      `scripts/boot-graph/measure.mts --entry`; load, `find`, insert and
-      update ratios to the bare driver; and heap allocated per loaded record.
+      `@blazetrails/activerecord`: modules loaded and median import time,
+      both of which `scripts/boot-graph/measure.mts --entry` already prints;
+      and the load, `find`, insert and update ratios to the bare driver and
+      the heap retained per loaded record, all of which the bench prints
+      after the three earlier stories. This story adds no measurement code.
       Each proposed target is confirmed or replaced by a number the
       measurements support.
 - [ ] Open question 1 (driver layer) and Open question 4 (lazy association

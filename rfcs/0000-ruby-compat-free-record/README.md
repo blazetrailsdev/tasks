@@ -159,6 +159,28 @@ It covers what activerecord, activemodel and arel cover together, in one
 package, because the three-way split exists to mirror Rails gems and buys
 nothing here.
 
+### Relation to other RFCs
+
+- [RFC 0194](../0194-ruby-compat-native-first/README.md) and
+  [RFC 0197](../0197-plain-object-modules-replace-ruby-compat-module/README.md),
+  both closed, made the faithful port cheaper in place: native forms where
+  behaviour is identical, cheaper dispatch, plain-object modules. This RFC
+  does not supersede or reopen them, and the faithful port keeps converging
+  under their rules. They stop short of what this RFC is after, because a
+  Rails mirror must keep `include()`, Arel's AST and the adapter layer. The
+  overlap is one-way: the shared files this RFC frees of ruby-compat (see
+  "The floor") are freed by RFC 0194's rule, native form where identical.
+- [RFC 0221](../0221-no-returned-proxies/README.md) retired the Proxy that
+  is returned to a caller and kept the one installed in a prototype chain.
+  The faithful port still installs those for `find_by_*` matchers, relation
+  delegation, `CommandRecorder` and fixture accessors (the Proxy column of
+  the table above). The sibling has neither shape.
+- [RFC 0223](../0223-package-layout-mirrors-a-rails-gem/README.md) fixes a
+  package's root as `lib/` plus `test/`, with the test tree laid out as the
+  upstream gem's. The sibling follows the `lib/` and `test/` roots. It has no
+  upstream gem, so its test tree mirrors nothing, and folding three gems'
+  worth of surface into one package is outside what RFC 0223 governs.
+
 ### Goals _(ruled 2026-11-24)_
 
 1. Boot cost and bundle size.
@@ -318,7 +340,10 @@ decides whether the RFC goes ahead and files the rest. The spike lives in
 `scripts/bench/record-spike/` in trails, not in `packages/`, so it takes on
 no publish, CI-lane or parity registration before the decision is made.
 
-1. **Spike.** One model on SQLite, measured against the bare driver.
+1. **Spike.** One model on SQLite, measured against the bare driver. The
+   spike imports no trails package at all, activesupport included: its models
+   name their table, foreign key and associated class explicitly, so nothing
+   is inflected. Sharing activesupport is phase 2 work.
    - `raw-driver-baseline-in-load-records-bench`
    - `record-spike-reflection-and-read-path`
    - `record-spike-write-path-and-belongs-to`
@@ -371,9 +396,14 @@ or replaced by the spike's measurements.
    small interface of the sibling's own. Recommendation: (b)
    for the spike, since it is the shortest path to the raw-SQL number, and
    decide on (a) from what the spike shows.
-2. **Time and decimal types.** A drop-in returns what ActiveRecord returns: a
-   Temporal value for time columns, and `BigDecimal` for decimals.
-   `BigDecimal` and `TimeWithZone` live on ruby-compat. Options: free those
+2. **Time and decimal types.** A drop-in returns what ActiveRecord returns.
+   For a `decimal` column that is `BigDecimal`. For a time column it is one
+   of `TimeWithZone`, a `Temporal.ZonedDateTime` or `Temporal.Instant`, or
+   `@blazetrails/date`'s `Time`, depending on the column and on time-zone-aware
+   attributes (`packages/activemodel/lib/type/helpers/time-value.ts`).
+   `BigDecimal`, `TimeWithZone` and `Time` all import ruby-compat today. The
+   spike returns a native `Temporal.Instant` and reads no `decimal` column,
+   and records that as a known difference. Options: free those
    two classes of ruby-compat; or return a native value (string or number for
    decimals) and list it as a difference. Recommendation: free them, because a
    changed column type breaks the drop-in promise for every app with a

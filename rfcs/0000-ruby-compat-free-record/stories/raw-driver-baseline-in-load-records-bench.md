@@ -4,10 +4,10 @@ status: draft
 updated: 2026-11-24
 rfc: "0000-ruby-compat-free-record"
 cluster: spike
-packages: ["activerecord"]
+packages: []
 deps: []
 deps-rfc: []
-est-loc: 120
+est-loc: 150
 priority: null
 pr: null
 claim: null
@@ -36,6 +36,9 @@ baseline before it has anything to compare with.
       12,000 times.
 - [ ] Each run prints both pairs and their ratios: ActiveRecord load over
       driver load, ActiveRecord `find` over driver `get`.
+- [ ] Run with `--expose-gc`, it also prints heap bytes retained per loaded
+      record for each side: `heapUsed` after a forced collection with the
+      12,000 results held, less `heapUsed` before the load.
 - [ ] The two ratios, with the Node version and machine, are written into
       the RFC README's "Motivation" under "Raw SQL gap", replacing the
       sentence that says the cost is not known.
@@ -47,4 +50,10 @@ plain `node` or `tsx`.
 
 ## Verification
 
-    pnpm tsx scripts/bench/activerecord-load-records.mts
+    node --expose-gc --import tsx scripts/bench/activerecord-load-records.mts
+
+## Notes
+
+The change is in `scripts/bench/` only; no package is touched. `better-sqlite3`
+is a root devDependency of trails (`package.json`), so a script under
+`scripts/` resolves it with no new dependency.
