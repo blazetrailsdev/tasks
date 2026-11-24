@@ -5,7 +5,8 @@ updated: 2026-11-24
 rfc: "0259-near-complete-packages-to-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - actiondispatch-reaches-100
 deps-rfc: []
 est-loc: null
 priority: null
