@@ -1,7 +1,7 @@
 ---
 title: "pg-connection-connect-poll-c-primitives"
-status: ready
-updated: 2026-11-23
+status: in-progress
+updated: 2026-11-24
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10691
+claim: "2026-11-24T03:10:16Z"
+assignee: "pg-connection-connect-poll-c-primitives"
 blocked-by: null
 closed-reason: null
 ---

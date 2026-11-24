@@ -1,7 +1,7 @@
 ---
 title: "pg-put-copy-data-and-flush-sync-async-pairs"
-status: draft
-updated: 2026-11-23
+status: ready
+updated: 2026-11-24
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "scoped-parity-gates-judge-unextracted-packages-stale"
-status: in-progress
+status: done
 updated: 2026-11-24
 rfc: "0061-ci-failures"
 cluster: null

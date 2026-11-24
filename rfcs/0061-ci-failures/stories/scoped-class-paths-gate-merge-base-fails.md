@@ -1,6 +1,6 @@
 ---
 title: "scoped-class-paths-gate-merge-base-fails"
-status: in-progress
+status: done
 updated: 2026-11-24
 rfc: "0061-ci-failures"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "A compiled (dist/) application cannot boot under plain node: the framework hardcodes .ts filenames"
-status: draft
-updated: 2026-11-23
+status: closed
+updated: 2026-11-24
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties", "actionpack", "activerecord"]
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "superseded by RFC 0258 (tasks#376): 0258-ship-compiled-javascript/root-marker-and-rackup-resolve-compiled-config and named-boot-loads-resolve-ts-then-js"
 ---
 
 ## Context

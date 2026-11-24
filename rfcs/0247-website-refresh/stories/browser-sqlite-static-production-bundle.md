@@ -1,6 +1,6 @@
 ---
 title: "browser-sqlite builds to a static bundle (Rollup TDZ, eager lazy import, i18n self-import)"
-status: in-progress
+status: done
 updated: 2026-11-24
 rfc: "0247-website-refresh"
 cluster: website-deploy

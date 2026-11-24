@@ -1,6 +1,6 @@
 ---
 title: "trailties: async NamedBase construction so valid_type? can lease a connection"
-status: claimed
+status: blocked
 updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: "2026-11-24T02:59:56Z"
 assignee: "activestorage-index-import-loads-blob-eagerly"
-blocked-by: null
+blocked-by: "needs operator ruling on async NamedBase construction vs trailties CLAUDE.md 'Thor dispatch is async' (constructors stay synchronous)"
 closed-reason: null
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "trailties: port rake migrations, framework and rake_test"
-status: in-progress
-updated: 2026-11-23
+status: done
+updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
 packages: [trailties]

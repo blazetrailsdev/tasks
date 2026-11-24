@@ -1,6 +1,6 @@
 ---
 title: "Port the two autosave tests Rails v8.0.5.2 added"
-status: ready
+status: in-progress
 updated: 2026-11-24
 rfc: "0256-rails-8-0-5-2-burn-down"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 90
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10690
+claim: "2026-11-24T03:02:06Z"
+assignee: "activestorage-image-magick-security-policy"
 blocked-by: null
 closed-reason: null
 ---

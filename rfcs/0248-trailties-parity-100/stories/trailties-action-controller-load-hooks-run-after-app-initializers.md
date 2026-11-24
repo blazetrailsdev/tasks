@@ -1,6 +1,6 @@
 ---
 title: "trailties-action-controller-load-hooks-run-after-app-initializers"
-status: claimed
+status: blocked
 updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: "2026-11-24T02:59:56Z"
 assignee: "activestorage-index-import-loads-blob-eagerly"
-blocked-by: null
+blocked-by: "needs operator ruling: framework-class-load-hooks-fire-after-app-initializers"
 closed-reason: null
 ---
 

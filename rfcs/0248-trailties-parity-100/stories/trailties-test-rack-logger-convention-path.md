@@ -1,6 +1,6 @@
 ---
 title: "trailties: move rack_logger_test port to its convention path"
-status: claimed
+status: done
 updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: null
+pr: trails#10522
 claim: "2026-11-24T02:59:56Z"
 assignee: "activestorage-index-import-loads-blob-eagerly"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Marcel::MimeType.for(extension:) call sites pass Rails' arguments (variation, representable)"
-status: draft
+status: ready
 updated: 2026-11-24
 rfc: "0215-activestorage-cloud-services"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "activestorage-vips-block-untrusted-loaders"
-status: ready
+status: in-progress
 updated: 2026-11-24
 rfc: "0256-rails-8-0-5-2-burn-down"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10689
+claim: "2026-11-24T03:25:10Z"
+assignee: "activestorage-vips-block-untrusted-loaders"
 blocked-by: null
 closed-reason: null
 ---

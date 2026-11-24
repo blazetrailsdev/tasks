@@ -1,6 +1,6 @@
 ---
 title: "application.ts.tt: port the dummy_app load_defaults VERSION.to_f arm"
-status: claimed
+status: blocked
 updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#10692
 claim: "2026-11-24T02:59:56Z"
 assignee: "activestorage-index-import-loads-blob-eagerly"
-blocked-by: null
+blocked-by: "needs operator ruling: Trails.VERSION.STRING is 0.1.0.alpha0.1, so to_f is 0.1 and loadDefaults has no 0.1 arm (Rails gets 8.0); trails#10692 review"
 closed-reason: null
 ---
 
