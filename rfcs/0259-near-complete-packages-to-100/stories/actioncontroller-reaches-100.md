@@ -1,6 +1,6 @@
 ---
 title: "actioncontroller: reach 100% on parity"
-status: claimed
+status: blocked
 rfc: "0259-near-complete-packages-to-100"
 cluster: rails-core
 packages: [actionpack]
@@ -12,10 +12,10 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#10707
 claim: "2026-11-24T17:46:52Z"
 assignee: "migrate-actionpack-off-the-ruby-compat-barrel"
-blocked-by: null
+blocked-by: "remaining 5 skips depend on deps: port-did-you-mean-correctable-onto-name-error, routes-helpers-with-records-subclass-include-in-ancestry, helper-name-error-has-no-did-you-mean, action-pack-assertions-port-render-file-tests-and-park-the-builder-three; progress shipped in trails#10707"
 closed-reason: null
 updated: 2026-11-24
 ---

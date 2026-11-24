@@ -1,6 +1,6 @@
 ---
 title: "actiondispatch: reach 100% on parity"
-status: ready
+status: in-progress
 rfc: "0259-near-complete-packages-to-100"
 cluster: rails-core
 packages: [actionpack]
@@ -8,9 +8,9 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10710
+claim: "2026-11-24T18:06:55Z"
+assignee: "actiondispatch-reaches-100"
 blocked-by: null
 closed-reason: null
 updated: 2026-11-24

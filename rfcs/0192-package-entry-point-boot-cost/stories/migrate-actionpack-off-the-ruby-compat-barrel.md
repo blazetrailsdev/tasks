@@ -1,6 +1,6 @@
 ---
 title: "actionpack: migrate its 219 ruby-compat barrel imports to subpaths"
-status: claimed
+status: in-progress
 updated: 2026-11-24
 rfc: "0192-package-entry-point-boot-cost"
 cluster: "findings"
@@ -9,7 +9,7 @@ deps: ["ruby-compat-wildcard-subpath-export", "boot-graph-measurement-harness"]
 deps-rfc: []
 est-loc: 240
 priority: null
-pr: null
+pr: trails#10707
 claim: "2026-11-24T17:46:52Z"
 assignee: "migrate-actionpack-off-the-ruby-compat-barrel"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "trailties-test-railties-engine-rest"
-status: claimed
+status: ready
 updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-24T17:56:59Z"
-assignee: "trailties-test-configuration-config-for-yaml"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

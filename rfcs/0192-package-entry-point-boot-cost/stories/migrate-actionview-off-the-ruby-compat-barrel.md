@@ -1,6 +1,6 @@
 ---
 title: "actionview: migrate its 95 ruby-compat barrel imports to subpaths"
-status: ready
+status: in-progress
 updated: 2026-11-24
 rfc: "0192-package-entry-point-boot-cost"
 cluster: "findings"
@@ -9,9 +9,9 @@ deps: ["ruby-compat-wildcard-subpath-export", "boot-graph-measurement-harness"]
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10711
+claim: "2026-11-24T18:36:56Z"
+assignee: "migrate-actionview-off-the-ruby-compat-barrel"
 blocked-by: null
 ---
 
