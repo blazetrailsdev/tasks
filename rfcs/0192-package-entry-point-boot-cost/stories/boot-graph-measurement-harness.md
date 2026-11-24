@@ -31,10 +31,13 @@ Shipped counts come from counting `dist/**/*.js` per package.
 
 - [ ] A committed script reports, for a given entry point: total resolved
       modules, and per-package loaded / shipped / ratio, sorted by loaded
-- [ ] It reproduces the RFC's headline figures on the `examples/` app boot:
-      **1284 total**, ruby-compat **147/147**, activerecord **251/2357**
+- [ ] It measures the `examples/serverless-lambda` app boot and commits the
+      result as its baseline. The RFC's October figures (**1284 total**,
+      ruby-compat **147/147**, activerecord **251/2357**) predate tree growth;
+      re-measured 2026-11-24: **1890 total**, ruby-compat **205/206**,
+      activerecord **343/382** (`dist/**/*.js`)
 - [ ] It can measure a bare specifier as well as an app entry
-      (`@blazetrails/ruby-compat` → 139 modules)
+      (`@blazetrails/ruby-compat` → 139 modules in October, 178 on 2026-11-24)
 - [ ] Timings are reported as a median of N warm runs, not a single cold run
 - [ ] Runs in CI on the `examples/` app and prints the table in the job log
 - [ ] A documented, committed baseline file the script diffs against
