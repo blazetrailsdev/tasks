@@ -1,5 +1,5 @@
 ---
-rfc: "0000-near-complete-packages-to-100"
+rfc: "0259-near-complete-packages-to-100"
 title: "Every package at 97% or above reaches 100%"
 status: active
 created: 2026-11-24
@@ -33,9 +33,7 @@ clusters:
   - scoping
 ---
 
-<!-- Unnumbered until merge. -->
-
-# RFC — Every package at 97% or above reaches 100%
+# RFC 0259 — Every package at 97% or above reaches 100%
 
 ## Summary
 

@@ -1,7 +1,7 @@
 ---
 title: "Small packages: close the last 1-2 tests each"
 status: ready
-rfc: "0000-near-complete-packages-to-100"
+rfc: "0259-near-complete-packages-to-100"
 cluster: small-packages
 packages: [actioncable, actionmailbox, activejob, actionview, rack-session, sqlite3, mini-magick]
 deps: []

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: reach 100% on parity"
 status: ready
-rfc: "0000-near-complete-packages-to-100"
+rfc: "0259-near-complete-packages-to-100"
 cluster: rails-core
 packages: [activerecord]
 deps: []

@@ -1,7 +1,7 @@
 ---
 title: "libxml-ruby: score only what XmlMini reaches"
 status: ready
-rfc: "0000-near-complete-packages-to-100"
+rfc: "0259-near-complete-packages-to-100"
 cluster: scoping
 packages: [libxml-ruby, scripts]
 deps: []

@@ -1,7 +1,7 @@
 ---
 title: "nokogiri: score only the surface trails' callers reach"
 status: ready
-rfc: "0000-near-complete-packages-to-100"
+rfc: "0259-near-complete-packages-to-100"
 cluster: scoping
 packages: [nokogiri, scripts]
 deps: []

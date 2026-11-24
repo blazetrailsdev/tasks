@@ -1,7 +1,7 @@
 ---
 title: "actionmailer, turbo-rails: reach 100% once their blockers land"
 status: ready
-rfc: "0000-near-complete-packages-to-100"
+rfc: "0259-near-complete-packages-to-100"
 cluster: small-packages
 packages: [actionmailer, turbo]
 deps: [stub-any-instance-does-not-intercept-js-new, i18n-railtie-initializers-unported]
