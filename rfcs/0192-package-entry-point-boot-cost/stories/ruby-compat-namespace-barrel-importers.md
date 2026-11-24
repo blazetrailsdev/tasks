@@ -1,0 +1,39 @@
+---
+title: "Replace the two namespace imports of the ruby-compat barrel on the app boot path"
+status: draft
+updated: 2026-11-24
+rfc: "0192-package-entry-point-boot-cost"
+cluster: null
+packages: []
+deps: []
+deps-rfc: []
+est-loc: 40
+priority: null
+pr: null
+claim: null
+assignee: null
+blocked-by: null
+closed-reason: null
+---
+
+## Context
+
+`scripts/boot-graph/measure.mts` (trails#10701) found two files loaded at the
+`examples/serverless-lambda` boot that import the whole ruby-compat barrel by
+namespace, so no per-binding subpath migration can shrink their cost:
+
+- `packages/activerecord/src/relation/spawn-methods.ts:3` — `import * as RubyCompat from "@blazetrails/ruby-compat"`
+- `packages/rack-session` `cookie` module (dist `cookie.js`) — namespace import of the barrel
+
+`scripts/boot-graph/baseline.json` lists them in `wholeBarrelImports`. With them
+replaced by named subpath imports, the ruby-compat union target is 180
+(`rubyCompatTarget`) instead of 205 (`rubyCompatTargetWithWholeBarrelImports`).
+The per-package migrate stories count named barrel imports; a
+namespace-import codemod does not touch these.
+
+## Acceptance criteria
+
+- [ ] Both files import only the bindings they use, from the owning subpaths
+      in `scripts/boot-graph/scc-map.json`
+- [ ] `wholeBarrelImports` in `baseline.json` is empty after `--write`, and
+      `rubyCompatTargetWithWholeBarrelImports` equals `rubyCompatTarget`
