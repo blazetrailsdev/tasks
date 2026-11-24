@@ -1,7 +1,7 @@
 ---
 title: "trailties-test-console-irb-and-dbconsole-remainder"
 status: claimed
-updated: 2026-11-23
+updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-23T21:19:51Z"
-assignee: "engine-controllers-resolve-for-unused-routes"
+claim: "2026-11-24T00:39:46Z"
+assignee: "trailties-test-console-irb-and-dbconsole-remainder"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "trailties: port commands/server, application/server and rackup tests"
-status: claimed
-updated: 2026-11-23
+status: in-progress
+updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
 packages: [trailties]
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
+pr: trails#10680
 claim: "2026-11-23T23:59:53Z"
 assignee: "trailties-test-server-and-rackup"
 blocked-by: null

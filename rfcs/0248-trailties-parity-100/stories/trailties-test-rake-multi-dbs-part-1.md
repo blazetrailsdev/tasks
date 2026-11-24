@@ -1,7 +1,7 @@
 ---
 title: "trailties: port application/rake/multi_dbs_test.rb lines 1-860"
-status: claimed
-updated: 2026-11-23
+status: in-progress
+updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
 packages: [trailties]
@@ -9,7 +9,7 @@ deps: [trailties-test-move-misplaced-tests]
 deps-rfc: []
 est-loc: 450
 priority: null
-pr: null
+pr: trails#10686
 claim: "2026-11-23T22:59:46Z"
 assignee: "trailties-test-rake-multi-dbs-part-1"
 blocked-by: null

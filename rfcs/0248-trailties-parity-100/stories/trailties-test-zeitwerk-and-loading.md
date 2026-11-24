@@ -1,7 +1,7 @@
 ---
 title: "trailties: port zeitwerk integration, checker, inflector and loading tests"
-status: ready
-updated: 2026-11-19
+status: in-progress
+updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
 packages: [trailties]
@@ -9,9 +9,9 @@ deps: [trailties-test-move-misplaced-tests]
 deps-rfc: []
 est-loc: 480
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10684
+claim: "2026-11-24T00:09:48Z"
+assignee: "rails-8-0-5-2-trailties"
 blocked-by: null
 closed-reason: null
 ---

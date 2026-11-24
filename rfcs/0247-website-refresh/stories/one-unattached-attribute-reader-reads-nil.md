@@ -1,7 +1,7 @@
 ---
 title: "Attached::One: an unattached One reads null for Attachment/Blob attribute readers"
-status: ready
-updated: 2026-11-23
+status: in-progress
+updated: 2026-11-24
 rfc: "0247-website-refresh"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10685
+claim: "2026-11-24T00:29:46Z"
+assignee: "one-unattached-attribute-reader-reads-nil"
 blocked-by: null
 closed-reason: null
 ---

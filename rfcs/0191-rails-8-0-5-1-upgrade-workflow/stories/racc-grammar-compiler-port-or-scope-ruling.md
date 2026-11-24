@@ -1,7 +1,7 @@
 ---
 title: "racc-grammar-compiler-port-or-scope-ruling"
-status: ready
-updated: 2026-11-23
+status: done
+updated: 2026-11-24
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10681
+claim: "2026-11-24T00:19:50Z"
+assignee: "racc-grammar-compiler-port-or-scope-ruling"
 blocked-by: null
 closed-reason: null
 ---

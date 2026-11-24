@@ -1,7 +1,7 @@
 ---
 title: "body-pins --pin-all scoped to one source for gem pin floors"
-status: in-progress
-updated: 2026-11-23
+status: done
+updated: 2026-11-24
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
 packages: []

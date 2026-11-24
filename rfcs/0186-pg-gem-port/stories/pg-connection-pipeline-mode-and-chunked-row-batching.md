@@ -1,7 +1,7 @@
 ---
 title: "pg-connection-pipeline-mode-and-chunked-row-batching"
-status: claimed
-updated: 2026-11-23
+status: in-progress
+updated: 2026-11-24
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10682
 claim: "2026-11-23T23:29:45Z"
 assignee: "pg-connection-connect-poll-c-primitives"
 blocked-by: null

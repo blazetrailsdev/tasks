@@ -1,7 +1,7 @@
 ---
 title: "browser-sqlite builds to a static bundle (Rollup TDZ, eager lazy import, i18n self-import)"
-status: claimed
-updated: 2026-11-23
+status: in-progress
+updated: 2026-11-24
 rfc: "0247-website-refresh"
 cluster: website-deploy
 packages: ["activerecord", "sqlite3", "i18n"]
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#10683
 claim: "2026-11-23T23:49:45Z"
 assignee: "browser-sqlite-static-production-bundle"
 blocked-by: null
