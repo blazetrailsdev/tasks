@@ -34,7 +34,7 @@ extractor or by a rename, not by a skip row.
 
 ## Acceptance criteria
 
-- [ ] trailmap API is 100% for activestorage, trailties and solid-queue.
+- [ ] API (`methodsMissing` summed over `package-summary.json` from `pnpm parity:packages`) is 100% for activestorage, trailties and solid-queue.
 - [ ] Each removed member has a reasoned `unported-files` or
       `SCOPED_SKIP_GROUPS` entry.
 

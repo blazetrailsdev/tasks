@@ -125,6 +125,17 @@ taken from the Ruby callers in `vendor/rails/v8.0.5.2/` and the vendored
 rails-html-sanitizer and rails-dom-testing, not from the current TS port.
 That way an unported caller still pulls its callee into scope.
 
+### Known external gates
+
+Two items in `small-packages-reach-100` wait on stories already `blocked`
+elsewhere. They are wired in as `deps`, so they stay visible:
+
+- actionmailer (4 tests): `stub-any-instance-does-not-intercept-js-new`
+  (RFC 0158), which waits on an operator decision about intercepting
+  `new klass(...)`.
+- turbo-rails (1 test): `i18n-railtie-initializers-unported` (RFC 0142),
+  which waits on `finisher-awaits-async-load-hooks`.
+
 ## Non-goals
 
 - **Packages below 97%** (activestorage tests 90.3%, trailties tests 75.8%,
@@ -156,7 +167,7 @@ That way an unported caller still pulls its callee into scope.
 ## Verification
 
 - `pnpm parity:test` shows 100.0 for every package in the Motivation table.
-- trailmap shows API 100% for activerecord, activesupport, actionview,
+- API is 100% (`methodsMissing` is 0 in `package-summary.json`, the figure trailmap shows) for activerecord, activesupport, actionview,
   activestorage, trailties and solid-queue.
 - Every remaining skip in those packages carries `PERMANENT-SKIP:` with a
   citation.
