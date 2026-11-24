@@ -34,12 +34,16 @@ extractor or by a rename, not by a skip row.
 
 ## Acceptance criteria
 
-- [ ] API (`methodsMissing` summed over `package-summary.json` from `pnpm parity:packages`) is 100% for activestorage, trailties and solid-queue.
+- [ ] `methodsMissing` is 0 for activestorage, trailties and solid-queue in
+      `package-summary.json` (`pnpm parity:packages`).
 - [ ] Each removed member has a reasoned `unported-files` or
       `SCOPED_SKIP_GROUPS` entry.
 
 ## Verification
 
 ```sh
-pnpm parity:api --missing
+pnpm parity:api --missing --package activestorage
+pnpm parity:api --missing --package trailties
+pnpm parity:api --missing --package solid-queue
+pnpm parity:packages
 ```

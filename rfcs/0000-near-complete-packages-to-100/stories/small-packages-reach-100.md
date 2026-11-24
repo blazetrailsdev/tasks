@@ -67,5 +67,11 @@ receipt.
 ## Verification
 
 ```sh
-pnpm parity:changed
+pnpm parity:test -- --package actioncable
+pnpm parity:test -- --package actionmailbox
+pnpm parity:test -- --package activejob
+pnpm parity:test -- --package rack-session
+pnpm parity:test -- --package sqlite3
+pnpm parity:test -- --package mini-magick
+pnpm parity:test -- --package rails-dom-testing
 ```

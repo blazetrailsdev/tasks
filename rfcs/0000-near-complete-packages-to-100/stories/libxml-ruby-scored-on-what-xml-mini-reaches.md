@@ -31,6 +31,9 @@ stories today.
 
 - [ ] `scripts/parity/unported-files/libxml-ruby.ts` removes every gem file
       outside the XmlMini call set.
+- [ ] The PR body records the expected API and test denominators the call set
+      implies, and `pnpm parity:api` / `pnpm parity:test` report exactly those
+      totals after the change.
 - [ ] The PR body tables that set with Ruby `file:line`.
 - [ ] Out-of-scope gem tests leave the test denominator.
 

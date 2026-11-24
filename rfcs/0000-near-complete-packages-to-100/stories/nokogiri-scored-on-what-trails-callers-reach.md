@@ -38,6 +38,9 @@ scope through the TS port.
       caller reaches, with a single "not called by trails" reason.
 - [ ] Partly reached files carry `SCOPED_SKIP_GROUPS` rows for the members
       nothing calls.
+- [ ] The PR body records the expected API and test denominators the call set
+      implies, and `pnpm parity:api` / `pnpm parity:test` report exactly those
+      totals after the change.
 - [ ] The PR body tables the caller → gem-member set, with Ruby `file:line`.
 - [ ] Gem tests that exercise only out-of-scope files leave the test
       denominator through the same rows.

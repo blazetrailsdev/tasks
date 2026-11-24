@@ -169,12 +169,14 @@ shippable packages are not held with them:
 ## Verification
 
 - `pnpm parity:test` shows 100.0 for every package in the Motivation table.
-- API is 100% (`methodsMissing` is 0 in `package-summary.json`, the figure trailmap shows) for activerecord, activesupport, actionview,
-  activestorage, trailties and solid-queue.
+- `methodsMissing` is 0 in `package-summary.json` (the figure trailmap shows)
+  for activerecord, activesupport, actionview, activestorage, trailties and
+  solid-queue.
 - Every remaining skip in those packages carries `PERMANENT-SKIP:` with a
   citation.
-- nokogiri's and libxml-ruby's denominators shrink to the scoped set, and each
-  removed file carries a reason.
+- nokogiri's and libxml-ruby's API and test denominators equal the totals
+  each scoping PR records from its call-set table, as `parity:api` and
+  `parity:test` report them. Every removed file carries a reason.
 
 ## Open questions
 

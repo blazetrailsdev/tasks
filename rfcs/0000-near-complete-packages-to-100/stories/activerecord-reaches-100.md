@@ -89,7 +89,7 @@ receipt.
 ## Acceptance criteria
 
 - [ ] `pnpm parity:test` reports 100.0 for `activerecord`.
-- [ ] API (`methodsMissing` summed over `package-summary.json` from `pnpm parity:packages`) for `activerecord` is 100%.
+- [ ] `methodsMissing` is 0 for `activerecord` in `package-summary.json` (`pnpm parity:packages`).
 - [ ] Every remaining `it.skip` in the package sits under a `PERMANENT-SKIP:`
       line citing a CLAUDE.md section or a dated operator ruling.
 - [ ] Items needing a ruling are listed in the PR body with their Rails
@@ -101,4 +101,6 @@ receipt.
 
 ```sh
 pnpm parity:test -- --package activerecord
+pnpm parity:api --missing --package activerecord
+pnpm parity:packages
 ```
