@@ -16,6 +16,7 @@ packages:
   - "did-you-mean"
   - "trailties"
   - "ruby-compat"
+  - "sqlite3"
 clusters: []
 related-rfcs:
   - "0192-package-entry-point-boot-cost"
