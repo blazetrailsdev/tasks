@@ -15,6 +15,7 @@ packages:
   - "activerecord-cli"
   - "activerecord"
   - "activesupport"
+  - "tse-compiler"
 clusters:
   - "action-controller"
   - "test-harness"
