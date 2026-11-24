@@ -5,7 +5,8 @@ updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - framework-class-load-hooks-fire-after-app-initializers
 deps-rfc: []
 est-loc: null
 priority: null
