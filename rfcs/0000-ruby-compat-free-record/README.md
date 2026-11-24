@@ -5,6 +5,7 @@ status: draft
 created: 2026-11-24
 updated: 2026-11-24
 owner: "@deanmarano"
+max-est-loc: 1500
 packages:
   - "activerecord"
   - "activemodel"
@@ -65,7 +66,7 @@ All figures are from `main` at `5e737fa9c2`, non-test `lib/` files.
 
 - **Boot.** The app boot in `scripts/boot-graph/baseline.json` loads 343
   activerecord modules, 205 ruby-compat, 193 activesupport, 85 arel and 74
-  activemodel: 900 modules before the first query.
+  activemodel: about 900 modules before the first query.
   [RFC 0192](../0192-package-entry-point-boot-cost/README.md) measured one
   binding from the ruby-compat barrel at 139 modules and 147 ms.
 - **Request path.** [RFC 0241](../0241-request-path-performance/README.md) found
@@ -75,9 +76,11 @@ All figures are from `main` at `5e737fa9c2`, non-test `lib/` files.
   runs through `rbEqual` / `rbHash` dispatch, Ruby-truthiness helpers and
   Arel's AST (95 `rbEqual` / `rbHash` calls, 26 `rbObjClone` calls).
 - **Raw SQL gap.** `scripts/bench/activerecord-load-records.mts` loads 12,000
-  rows of 24 columns and reports microseconds per record. There is no figure
-  beside it for the same query through the bare driver, so the cost of the
-  model layer is not known. This RFC makes that ratio the headline number.
+  rows of 24 columns. Measured by the spike (trails#10723, Node v26.13.0,
+  Linux x64, in-memory SQLite), ActiveRecord costs 5.5 times the bare driver
+  to load those rows into records, 45 times for a primary-key `find`, and
+  about 150 times for an insert or a one-column update. The full table is
+  under "Verification". This RFC makes those ratios the headline numbers.
 
 ### What depends on ruby-compat, feature by feature
 
@@ -335,18 +338,23 @@ interop is Open question 3.
 
 ## Rollout
 
-Only the spike is filed with this RFC. It is four stories, and its last one
-decides whether the RFC goes ahead and files the rest. The spike lives in
-`scripts/bench/record-spike/` in trails, not in `packages/`, so it takes on
-no publish, CI-lane or parity registration before the decision is made.
+Only the spike is filed with this RFC. It is two stories: one builds and
+measures it, and the other decides whether the RFC goes ahead and files the
+rest. The spike lives in `scripts/bench/record-spike/` in trails, not in
+`packages/`, so it takes on no publish, CI-lane or parity registration before
+the decision is made.
+
+The build story is about 1,500 lines, over the 700-line ceiling, so this
+README sets `max-est-loc: 1500`. It is one PR because its parts are only
+meaningful together: the ratios need the read path, the write path and the
+bare-driver column side by side, and all of it sits in one directory that no
+package imports. The phases after the spike go back to the usual ceiling.
 
 1. **Spike.** One model on SQLite, measured against the bare driver. The
    spike imports no trails package at all, activesupport included: its models
    name their table, foreign key and associated class explicitly, so nothing
    is inflected. Sharing activesupport is phase 2 work.
-   - `raw-driver-baseline-in-load-records-bench`
-   - `record-spike-reflection-and-read-path`
-   - `record-spike-write-path-and-belongs-to`
+   - `record-spike-on-sqlite-in-one-pr`
    - `record-spike-report-and-decide`
 2. **Floor.** Compat-free activesupport subpaths; quoting, type map and
    reflection queries freed in the faithful port; the driver decision
@@ -369,13 +377,18 @@ not.
 ## Verification
 
 - **Zero ruby-compat.** `scripts/boot-graph/measure.mts --entry` on the
-  sibling loads 0 ruby-compat modules, held as a CI ceiling of 0.
+  sibling loads 0 ruby-compat modules, held as a CI ceiling of 0. _The spike
+  loads 0._
 - **Boot.** Importing the sibling and its SQLite adapter loads at most 100
-  modules, against 900 for the activerecord stack today.
-- **Raw SQL ratio.** Loading 12,000 rows of 24 columns into records costs at
-  most 1.5 times the bare driver returning the same rows as objects, and a
-  primary-key `find` at most 2 times a bare prepared `get`. The current
-  ratios are measured by the spike and recorded here.
+  modules, against 897 for `@blazetrails/activerecord` today. _The spike
+  loads 26: 9 of its own, 15 of `better-sqlite3` and 2 of the `tsx` loader.
+  The ceiling stays at 100, since the full package will be several times the
+  spike._
+- **Raw SQL ratio.** Against the bare driver returning the same rows as
+  objects: a load into records costs at most 1.5 times, a primary-key `find`
+  at most 1.5 times, and an insert or a one-column update at most 3 times.
+  _The spike measures 0.8, 0.9, 2.3 and 2.4. The `find` target was 2 and is
+  tightened. The write target is new._
 - **Request path.** `examples/twelve-dollar-server` on the sibling beats the
   faithful port's p95 and score on RFC 0241's rig.
 - **Drop-in.** The README's model example and the `dx-tests` type tests
@@ -384,8 +397,57 @@ not.
   and the Rails-suite mark is at least 80% of the tests not on the skip list
   before the package is called usable.
 
-The module ceiling, both ratios and the 80% bar are proposals to be confirmed
-or replaced by the spike's measurements.
+The 80% bar is still a proposal. The other targets are now set from the
+spike's measurements below.
+
+### What the spike measured
+
+From trails#10723, before merge. Node v26.13.0, Linux x64, 12,000 rows of 24
+columns on in-memory SQLite, median of 5 runs. Microseconds per row. Writes
+run inside one transaction on every side. The host is shared and absolute
+figures moved by up to 60% between runs, so read the ratios to one
+significant figure. `record-spike-report-and-decide` takes them again on
+merged code.
+
+| Measure                       | driver | spike | activerecord | spike / driver | activerecord / driver |
+| ----------------------------- | -----: | ----: | -----------: | -------------: | --------------------: |
+| load                          |   2.90 |  2.44 |        16.03 |            0.8 |                   5.5 |
+| load, then read every column  |   3.95 | 12.21 |        83.12 |            3.1 |                  21.0 |
+| find by id                    |   5.20 |  4.49 |       231.85 |            0.9 |                  44.6 |
+| belongsTo, unloaded           |   4.92 |  5.39 |       348.07 |            1.1 |                  70.8 |
+| load with belongsTo preloaded |   3.57 |  2.91 |        17.39 |            0.8 |                   4.9 |
+| insert                        |   3.88 |  8.87 |       607.67 |            2.3 |                 156.6 |
+| update one column             |   2.31 |  5.57 |       345.93 |            2.4 |                 149.9 |
+| heap bytes retained per row   |    738 |   853 |        1,302 |            1.2 |                   1.8 |
+
+| Entry                       | Modules | ruby-compat modules | Median import |
+| --------------------------- | ------: | ------------------: | ------------: |
+| `record-spike/index.ts`     |      26 |                   0 |         38 ms |
+| `@blazetrails/activerecord` |     897 |                 205 |      1,026 ms |
+
+Three things the numbers do not show on their own:
+
+- **A bound `LIMIT` is slow on SQLite.** ActiveRecord sends
+  `… WHERE "id" = ? LIMIT ?` for `find`. On `better-sqlite3` that lookup took
+  25 µs with the limit bound and 2.6 µs with `LIMIT 1` in the text. The
+  spike writes the limit as a literal. That is its one difference in SQL
+  from ActiveRecord, and the faithful port pays the cost on every `find`,
+  `findBy` and `first`.
+- **Temporal is paid only on read.** Building a `Temporal.Instant` costs 0.5
+  to 1 µs on this Node. A loaded datetime stays a string until its reader is
+  called, and an assigned string already in the database's form is bound as
+  it is. Reading eight datetime columns per row is nearly all of the gap
+  between "load" and "load, then read every column". This bears on Open
+  question 2: any time type built per read costs about this much.
+- **The virtualizer recognises spike models unchanged.**
+  `packages/activerecord-cli/lib/type-virtualization` finds a class
+  extending the spike's `Base`, reads its `tableName` and `belongsTo`, and
+  emits the accessor pairs and the `Author | null | Promise<Author | null>`
+  reader. What it emits is wrong for the sibling in three places: key
+  columns are typed `import("@blazetrails/activerecord").PrimaryKeyValue`,
+  datetime columns `TimeWithZone | Time`, and each attribute gets 17
+  dirty-tracking members the spike does not define. The conformance phase
+  needs the emitted types to be chosen per target package.
 
 ## Open questions
 
@@ -393,9 +455,11 @@ or replaced by the spike's measurements.
    ruby-compat in most files. Options: (a) burn those three packages down to
    zero ruby-compat and sit on them; (b) sit on the npm engines they wrap
    (`better-sqlite3`, `expo-sqlite`, `libsql`, npm `pg`, npm `mysql2`) with a
-   small interface of the sibling's own. Recommendation: (b)
-   for the spike, since it is the shortest path to the raw-SQL number, and
-   decide on (a) from what the spike shows.
+   small interface of the sibling's own. **Answered by the spike: (b).** On
+   `better-sqlite3` directly, a 60-line connection with a prepared-statement
+   cache puts `find` and load at the bare driver's cost. Nothing in the
+   measurements argues for burning the three driver packages down first. The
+   same has still to be shown on npm `pg` and `mysql2`, which are async.
 2. **Time and decimal types.** A drop-in returns what ActiveRecord returns.
    For a `decimal` column that is `BigDecimal`. For a time column it is one
    of `TimeWithZone`, a `Temporal.ZonedDateTime` or `Temporal.Instant`, or
@@ -415,8 +479,11 @@ or replaced by the spike's measurements.
    which the table above rates easy.
 4. **Lazy association readers.** ActiveRecord's `post.author` is
    `Author | null | Promise<Author | null>`. Keeping it is required for
-   drop-in; it is also a polymorphic return on a hot path. Recommendation:
-   keep it, measure it in the spike.
+   drop-in; it is also a polymorphic return on a hot path. **Answered by the
+   spike: keep it.** A loaded association and a null foreign key answer
+   without a promise, and only an unloaded one costs a promise. An unloaded
+   read measured 1.1 times a bare `get`, and a load with the association
+   preloaded 0.8 times the driver doing the same join by hand.
 5. **Framework integration.** actionpack, actionview, activejob, globalid and
    trailties type against `ActiveRecord::Base`. Does a sibling record have to
    work with `formWith`, `redirectTo(post)`, GlobalID and
@@ -424,10 +491,23 @@ or replaced by the spike's measurements.
    interface (`toKey`, `toParam`, `modelName`, `errors`, `isPersisted`) the
    sibling satisfies, and leave job-backed features out of the first version.
 6. **Name.** `@blazetrails/record` is a placeholder.
-7. **Does the faithful port's test suite parameterize cleanly?** Its tests
-   import `Base` and the canonical models directly. The conformance phase
-   needs an alias seam. Sized by the spike.
+7. **Does the faithful port's test suite parameterize cleanly?** **Answered
+   by reading, not yet by running: no, not through an import alias.** Of 983
+   test files under `packages/activerecord/test`, 808 import the library by
+   relative path and 1 by package name, so an alias on the package name
+   redirects almost nothing. 604 call `fixtures()`, which needs the
+   connection handler, transactional fixtures and the canonical schema
+   loader, and 405 import the 200 canonical model files, whose class bodies
+   call the whole association and callback surface at import. The seam that
+   works today is the one the spike's test uses: one test body handed two
+   sets of models. Running the Rails suite against the sibling needs its own
+   port of the test support and its own copies of the models, and is sized
+   in the conformance phase. `record-spike-report-and-decide` points one
+   file at the spike to confirm this.
 
 ## Changelog
 
 - 2026-11-24: initial RFC, with the four spike stories
+- 2026-11-24: the three build stories became one (`max-est-loc: 1500`); the
+  spike's first measurements, taken on trails#10723, are recorded under
+  "Verification", with answers to Open questions 1, 4 and 7

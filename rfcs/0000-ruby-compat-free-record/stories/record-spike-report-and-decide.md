@@ -5,7 +5,7 @@ updated: 2026-11-24
 rfc: "0000-ruby-compat-free-record"
 cluster: spike
 packages: []
-deps: ["record-spike-write-path-and-belongs-to"]
+deps: ["record-spike-on-sqlite-in-one-pr"]
 deps-rfc: []
 est-loc: 150
 priority: null
@@ -29,7 +29,8 @@ and decides whether phases 2 to 6 of "Rollout" are filed.
       both of which `scripts/boot-graph/measure.mts --entry` already prints;
       and the load, `find`, insert and update ratios to the bare driver and
       the heap retained per loaded record, all of which the bench prints
-      after the three earlier stories. This story adds no measurement code.
+      after `record-spike-on-sqlite-in-one-pr`. This story adds no
+      measurement code.
       Each proposed target is confirmed or replaced by a number the
       measurements support.
 - [ ] Open question 1 (driver layer) and Open question 4 (lazy association
@@ -45,6 +46,14 @@ and decides whether phases 2 to 6 of "Rollout" are filed.
       (2, 3, 5 and 6). On a decision to go ahead, stories for phases 2 to 6
       are filed under this RFC, each at or under the est-loc ceiling. On a
       decision not to, the RFC is closed with the numbers as the reason.
+
+## Notes
+
+The README already records a first set of measurements, taken on
+trails#10723 before it merged, with answers to Open questions 1, 4 and 7 and
+the virtualizer check. This story takes them again on merged code, runs the
+one test file the answer to Open question 7 only traces, and puts the result
+to the operator.
 
 ## Definition of done
 
