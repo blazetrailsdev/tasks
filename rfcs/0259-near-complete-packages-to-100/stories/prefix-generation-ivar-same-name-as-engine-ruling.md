@@ -1,6 +1,6 @@
 ---
 title: "prefix-generation-ivar-same-name-as-engine-ruling"
-status: draft
+status: ready
 updated: 2026-11-24
 rfc: "0259-near-complete-packages-to-100"
 cluster: null

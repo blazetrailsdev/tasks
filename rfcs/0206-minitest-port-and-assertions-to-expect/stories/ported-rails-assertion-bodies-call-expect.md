@@ -1,7 +1,7 @@
 ---
 title: "Ported Rails assertion bodies call Vitest expect instead of Minitest helpers"
-status: draft
-updated: 2026-10-23
+status: ready
+updated: 2026-11-24
 rfc: "0206-minitest-port-and-assertions-to-expect"
 cluster: rails-bodies
 packages: ["activesupport", "actionpack", "actionview", "activemodel", "activerecord"]

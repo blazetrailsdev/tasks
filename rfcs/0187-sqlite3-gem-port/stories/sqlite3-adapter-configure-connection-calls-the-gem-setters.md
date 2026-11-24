@@ -1,6 +1,6 @@
 ---
 title: "SQLite3 configure_connection and reconnect call busy_handler_timeout=, busy_handler, rollback and the pragma setters"
-status: in-progress
+status: done
 updated: 2026-11-24
 rfc: "0187-sqlite3-gem-port"
 cluster: migration

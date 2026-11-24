@@ -1,7 +1,7 @@
 ---
 title: "port-redis-cache-store-test"
-status: draft
-updated: 2026-11-20
+status: ready
+updated: 2026-11-24
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []

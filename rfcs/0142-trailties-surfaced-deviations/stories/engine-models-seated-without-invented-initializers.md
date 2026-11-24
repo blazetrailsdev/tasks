@@ -1,7 +1,7 @@
 ---
 title: "engine-models-seated-without-invented-initializers"
-status: draft
-updated: 2026-11-22
+status: ready
+updated: 2026-11-24
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []

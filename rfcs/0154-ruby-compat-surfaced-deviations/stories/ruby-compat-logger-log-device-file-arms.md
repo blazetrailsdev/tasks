@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat-logger-log-device-file-arms"
-status: draft
-updated: 2026-10-27
+status: ready
+updated: 2026-11-24
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: include.ts's load-time mixins reach every narrow-subpath entry"
-status: ready
+status: in-progress
 updated: 2026-11-24
 rfc: "0192-package-entry-point-boot-cost"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10719
+claim: "2026-11-24T20:36:53Z"
+assignee: "class-paths-generator-imports-define-constants-by-subpath"
 blocked-by: null
 closed-reason: null
 ---

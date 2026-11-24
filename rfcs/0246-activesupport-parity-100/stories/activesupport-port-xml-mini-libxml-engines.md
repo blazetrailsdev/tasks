@@ -1,7 +1,7 @@
 ---
 title: "activesupport-port-xml-mini-libxml-engines"
-status: blocked
-updated: 2026-11-21
+status: ready
+updated: 2026-11-24
 rfc: "0246-activesupport-parity-100"
 cluster: null
 packages: []
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-21T16:06:58Z"
-assignee: "activesupport-api-misses-remainder-after-bundle"
-blocked-by: "needs libxml-ruby ported: port-libxml-ruby-for-xml-mini-libxml-engines"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

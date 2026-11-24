@@ -1,7 +1,7 @@
 ---
 title: "activesupport: RANGE_FORMATS[:db] keeps a toFsDb helper because a JS number has no to_fs seat"
-status: draft
-updated: 2026-10-10
+status: ready
+updated: 2026-11-24
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []

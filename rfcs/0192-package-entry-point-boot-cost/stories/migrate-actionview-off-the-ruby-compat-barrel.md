@@ -1,6 +1,6 @@
 ---
 title: "actionview: migrate its 95 ruby-compat barrel imports to subpaths"
-status: in-progress
+status: done
 updated: 2026-11-24
 rfc: "0192-package-entry-point-boot-cost"
 cluster: "findings"

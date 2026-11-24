@@ -1,6 +1,6 @@
 ---
 title: "actionpack: migrate test ruby-compat barrel imports to subpaths"
-status: draft
+status: in-progress
 updated: 2026-11-24
 rfc: "0192-package-entry-point-boot-cost"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 800
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10719
+claim: "2026-11-24T20:36:53Z"
+assignee: "class-paths-generator-imports-define-constants-by-subpath"
 blocked-by: null
 closed-reason: null
 ---

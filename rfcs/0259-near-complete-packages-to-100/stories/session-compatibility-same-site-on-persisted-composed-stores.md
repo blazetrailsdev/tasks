@@ -1,6 +1,6 @@
 ---
 title: "session-compatibility-same-site-on-persisted-composed-stores"
-status: draft
+status: ready
 updated: 2026-11-24
 rfc: "0259-near-complete-packages-to-100"
 cluster: null

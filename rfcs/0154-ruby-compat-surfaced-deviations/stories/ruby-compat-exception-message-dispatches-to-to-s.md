@@ -1,7 +1,7 @@
 ---
 title: "Thor, SQLite3 and I18n errors drop hand-rolled message/to_s pairs onto Exception#message"
-status: draft
-updated: 2026-10-01
+status: ready
+updated: 2026-11-24
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: ["ruby-compat", "trailties"]
