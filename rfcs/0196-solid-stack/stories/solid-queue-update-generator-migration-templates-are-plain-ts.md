@@ -1,13 +1,13 @@
 ---
-title: "solid-queue-update-generator-migration-templates-are-plain-ts"
+title: "SolidQueue::UpdateGenerator migration templates are plain .ts files"
 status: draft
 updated: 2026-11-24
 rfc: "0196-solid-stack"
 cluster: null
-packages: []
+packages: [solid-queue]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 60
 priority: null
 pr: null
 claim: null
