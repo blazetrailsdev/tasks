@@ -5,7 +5,8 @@ updated: 2026-11-24
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: ["nokogiri"]
-deps: []
+deps:
+  - nokogiri-html5-read-and-encode
 deps-rfc: []
 est-loc: null
 priority: null
