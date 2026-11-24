@@ -403,11 +403,11 @@ or replaced by the spike's measurements.
    attributes (`packages/activemodel/lib/type/helpers/time-value.ts`).
    `BigDecimal`, `TimeWithZone` and `Time` all import ruby-compat today. The
    spike returns a native `Temporal.Instant` and reads no `decimal` column,
-   and records that as a known difference. Options: free those
-   two classes of ruby-compat; or return a native value (string or number for
-   decimals) and list it as a difference. Recommendation: free them, because a
-   changed column type breaks the drop-in promise for every app with a
-   `decimal` column.
+   and records that as a known difference. Options: free all
+   three classes of ruby-compat; or return a native value (a string or number
+   for decimals, a Temporal value for times) and list it as a difference.
+   Recommendation: free all three, because a changed column type breaks the
+   drop-in promise for every app with a `decimal` or time column.
 3. **Arel interop.** Should the sibling accept `@blazetrails/arel` nodes in
    `where` / `order` / `select`? Accepting them puts arel, and so ruby-compat,
    on the graph of any app that uses them. Recommendation: no; ship the small
