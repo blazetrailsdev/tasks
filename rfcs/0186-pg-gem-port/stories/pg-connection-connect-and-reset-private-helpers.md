@@ -1,6 +1,6 @@
 ---
 title: "pg-connection-connect-and-reset-private-helpers"
-status: in-progress
+status: done
 updated: 2026-11-24
 rfc: "0186-pg-gem-port"
 cluster: "connection"
