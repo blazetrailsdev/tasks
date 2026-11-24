@@ -55,7 +55,9 @@ The related story `twitter-clone-smoke-migrations-extend-migration-directly`
   409 for `RecordNotUnique`); `express` is no longer a dependency.
 - Scripts are the generated ones: `dev`/`start` = `trails server`,
   `db:*` = `trails db:*`, `build` via `trails-tsc --schema db/schema.ts`;
-  deploy is `trails build` + `trails assets:precompile` (README).
+  deploy is `trails build` (README). An `--api` app has no asset pipeline, so there is
+  no `assets:precompile` step, as the generated `--api` Dockerfile omits it
+  (`packages/trailties/lib/generators/trails/app/templates/Dockerfile.tt:54-57`).
 - The smoke is a vitest test under `test/` booted through
   `test/global-setup.ts` + `test/test-helper.ts`, and CI runs it via the
   example's `test` script.
