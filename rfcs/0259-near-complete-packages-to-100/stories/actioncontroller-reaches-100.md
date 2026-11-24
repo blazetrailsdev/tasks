@@ -4,7 +4,11 @@ status: claimed
 rfc: "0259-near-complete-packages-to-100"
 cluster: rails-core
 packages: [actionpack]
-deps: []
+deps:
+  - port-did-you-mean-correctable-onto-name-error
+  - routes-helpers-with-records-subclass-include-in-ancestry
+  - helper-name-error-has-no-did-you-mean
+  - action-pack-assertions-port-render-file-tests-and-park-the-builder-three
 deps-rfc: []
 est-loc: 300
 priority: null
