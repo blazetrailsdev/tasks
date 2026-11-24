@@ -1,9 +1,9 @@
 ---
 rfc: "0192-package-entry-point-boot-cost"
 title: "Package entry-point shape and boot cost: what a consumer pays to import one binding"
-status: draft
+status: active
 created: 2026-10-13
-updated: 2026-10-13
+updated: 2026-11-24
 owner: "@deanmarano"
 packages:
   - "ruby-compat"
