@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: include.ts's load-time mixins reach every narrow-subpath entry"
-status: draft
-updated: 2026-10-16
+status: ready
+updated: 2026-11-24
 rfc: "0192-package-entry-point-boot-cost"
 cluster: null
 packages: []

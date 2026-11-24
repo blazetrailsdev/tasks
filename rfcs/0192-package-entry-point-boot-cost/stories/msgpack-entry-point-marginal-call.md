@@ -1,7 +1,7 @@
 ---
 title: "msgpack: decide whether its entry point is worth changing at all (21 modules over 6 call sites)"
-status: draft
-updated: 2026-10-14
+status: ready
+updated: 2026-11-24
 rfc: "0192-package-entry-point-boot-cost"
 cluster: "measurement"
 packages: ["msgpack"]

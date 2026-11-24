@@ -1,7 +1,7 @@
 ---
 title: "nokogiri-xml-node-parse-in-context"
-status: draft
-updated: 2026-11-08
+status: claimed
+updated: 2026-11-24
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-24T15:52:37Z"
+assignee: "nokogiri-html5-document-fragment-gumbo-fragment"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "A committed boot-graph harness: loaded-vs-shipped module ratios per package, reproducible and regression-visible"
-status: draft
-updated: 2026-10-14
+status: ready
+updated: 2026-11-24
 rfc: "0192-package-entry-point-boot-cost"
 cluster: "measurement"
 packages: [ruby-compat]
