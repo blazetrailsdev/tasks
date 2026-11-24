@@ -1,13 +1,13 @@
 ---
-title: "solid-cable-install-generator-writes-cable-yml"
+title: "SolidCable::InstallGenerator writes config/cable.yml as Rails does"
 status: draft
 updated: 2026-11-24
 rfc: "0196-solid-stack"
 cluster: null
-packages: []
+packages: [solid-cable]
 deps: []
 deps-rfc: []
-est-loc: null
+est-loc: 80
 priority: null
 pr: null
 claim: null
