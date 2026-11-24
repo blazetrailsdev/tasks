@@ -1,6 +1,6 @@
 ---
 title: "Port the two autosave tests Rails v8.0.5.2 added"
-status: in-progress
+status: done
 updated: 2026-11-24
 rfc: "0256-rails-8-0-5-2-burn-down"
 cluster: null

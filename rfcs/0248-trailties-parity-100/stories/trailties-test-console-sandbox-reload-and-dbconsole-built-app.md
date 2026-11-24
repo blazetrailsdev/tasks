@@ -1,6 +1,6 @@
 ---
 title: "trailties-test-console-sandbox-reload-and-dbconsole-built-app"
-status: ready
+status: done
 updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10687
 claim: null
 assignee: null
 blocked-by: null
