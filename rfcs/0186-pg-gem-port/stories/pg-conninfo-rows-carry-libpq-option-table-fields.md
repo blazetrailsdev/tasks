@@ -1,6 +1,6 @@
 ---
 title: "pg: conninfo rows carry libpq's envvar/label/dispchar/dispsize"
-status: draft
+status: ready
 updated: 2026-11-24
 rfc: "0186-pg-gem-port"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: 120
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

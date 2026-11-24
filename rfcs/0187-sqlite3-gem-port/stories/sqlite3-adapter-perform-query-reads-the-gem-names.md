@@ -1,7 +1,7 @@
 ---
 title: "SQLite3 perform_query, the statement pool and encoding call the gem's methods"
-status: ready
-updated: 2026-11-23
+status: in-progress
+updated: 2026-11-24
 rfc: "0187-sqlite3-gem-port"
 cluster: migration
 packages: ["activerecord", "sqlite3"]
@@ -9,9 +9,9 @@ deps: ["sqlite3-adapter-new-client-is-database-new"]
 deps-rfc: []
 est-loc: 350
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#10705
+claim: "2026-11-24T17:36:07Z"
+assignee: "sqlite3-adapter-perform-query-reads-the-gem-names"
 blocked-by: null
 closed-reason: null
 ---

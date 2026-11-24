@@ -1,6 +1,6 @@
 ---
 title: "pg-exec-copy-in-returns-copy-in-result"
-status: draft
+status: ready
 updated: 2026-11-24
 rfc: "0186-pg-gem-port"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

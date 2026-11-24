@@ -1,7 +1,7 @@
 ---
 title: "SQLite3 configure_connection and reconnect call busy_handler_timeout=, busy_handler, rollback and the pragma setters"
-status: ready
-updated: 2026-11-23
+status: in-progress
+updated: 2026-11-24
 rfc: "0187-sqlite3-gem-port"
 cluster: migration
 packages: ["activerecord", "sqlite3"]
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 300
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#10705
+claim: "2026-11-24T17:36:14Z"
+assignee: "sqlite3-adapter-configure-connection-calls-the-gem-setters"
 blocked-by: null
 closed-reason: null
 ---

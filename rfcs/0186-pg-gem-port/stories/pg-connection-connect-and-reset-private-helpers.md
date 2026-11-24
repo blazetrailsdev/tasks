@@ -1,7 +1,7 @@
 ---
 title: "pg-connection-connect-and-reset-private-helpers"
-status: blocked
-updated: 2026-11-23
+status: in-progress
+updated: 2026-11-24
 rfc: "0186-pg-gem-port"
 cluster: "connection"
 packages:
@@ -10,11 +10,11 @@ deps:
   - pg-connection-connect-poll-c-primitives
 deps-rfc: []
 est-loc: 350
-priority: null
-pr: null
-claim: "2026-11-23T19:32:21Z"
-assignee: "pg-coder-dup-and-composite-dimensions"
-blocked-by: "needs pg-connection-connect-poll-c-primitives: conninfo_hash/connect_start/connect_poll etc. are unported"
+priority: 1
+pr: trails#10706
+claim: "2026-11-24T17:36:56Z"
+assignee: "pg-connection-connect-and-reset-private-helpers"
+blocked-by: null
 closed-reason: null
 ---
 

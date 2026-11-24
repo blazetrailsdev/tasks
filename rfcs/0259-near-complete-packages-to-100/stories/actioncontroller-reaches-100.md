@@ -1,6 +1,6 @@
 ---
 title: "actioncontroller: reach 100% on parity"
-status: ready
+status: claimed
 rfc: "0259-near-complete-packages-to-100"
 cluster: rails-core
 packages: [actionpack]
@@ -9,10 +9,11 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-24T17:46:52Z"
+assignee: "migrate-actionpack-off-the-ruby-compat-barrel"
 blocked-by: null
 closed-reason: null
+updated: 2026-11-24
 ---
 
 ## Context

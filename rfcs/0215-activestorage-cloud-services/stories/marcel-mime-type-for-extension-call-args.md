@@ -1,6 +1,6 @@
 ---
 title: "Marcel::MimeType.for(extension:) call sites pass Rails' arguments (variation, representable)"
-status: claimed
+status: done
 updated: 2026-11-24
 rfc: "0215-activestorage-cloud-services"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: null
+pr: trails#10688
 claim: "2026-11-24T16:56:54Z"
 assignee: "marcel-mime-type-for-extension-call-args"
 blocked-by: null

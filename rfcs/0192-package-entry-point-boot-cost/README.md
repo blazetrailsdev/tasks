@@ -32,6 +32,7 @@ clusters:
   - "findings"
 related-rfcs:
   - "0100-package-size-and-publish-shape"
+priority: 4
 ---
 
 # RFC 0192 — Package entry-point shape and boot cost
