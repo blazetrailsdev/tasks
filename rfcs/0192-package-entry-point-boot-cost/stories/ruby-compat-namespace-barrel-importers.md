@@ -22,8 +22,8 @@ closed-reason: null
 `examples/serverless-lambda` boot that import the whole ruby-compat barrel by
 namespace, so no per-binding subpath migration can shrink their cost:
 
-- `packages/activerecord/src/relation/spawn-methods.ts:3` — `import * as RubyCompat from "@blazetrails/ruby-compat"`
-- `packages/rack-session` `cookie` module (dist `cookie.js`) — namespace import of the barrel
+- `packages/activerecord/lib/relation/spawn-methods.ts` — `import * as RubyCompat from "@blazetrails/ruby-compat"`
+- `packages/rack-session/lib/cookie.ts:3` — namespace import of the barrel
 
 `scripts/boot-graph/baseline.json` lists them in `wholeBarrelImports`. With them
 replaced by named subpath imports, the ruby-compat union target is 180
