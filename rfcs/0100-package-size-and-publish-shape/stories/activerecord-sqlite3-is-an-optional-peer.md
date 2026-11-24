@@ -46,5 +46,6 @@ also depends on it.
   generator adds the gem; pg/mysql apps do not get it.
 - solid-queue's dependency is reviewed for the same treatment (match
   solid_queue.gemspec).
-- Typecheck still passes for consumers that do not install it (type-only
-  references stay `import type`).
+- Consumer typecheck without the package (`skipLibCheck: false`) moved to
+  `activerecord-main-entry-dts-names-no-optional-adapter-peer` by operator
+  ruling on 2026-11-24, since pg and mysql2 fail it the same way.
