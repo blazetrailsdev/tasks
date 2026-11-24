@@ -1,6 +1,6 @@
 ---
 title: "Burn down activestorage from rails v8.0.2 to v8.0.5.2"
-status: ready
+status: claimed
 rfc: "0256-rails-8-0-5-2-burn-down"
 cluster: burn-down
 packages: ["activestorage"]
@@ -18,11 +18,11 @@ deps-rfc: []
 est-loc: 1030
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-24T01:39:48Z"
+assignee: "rails-8-0-5-2-activestorage"
 blocked-by: null
 closed-reason: null
-updated: 2026-11-23
+updated: 2026-11-24
 ---
 
 ## Context

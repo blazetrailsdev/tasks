@@ -1,6 +1,6 @@
 ---
 title: "trailties-test-console-irb-and-dbconsole-remainder"
-status: claimed
+status: in-progress
 updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10687
 claim: "2026-11-24T00:39:46Z"
 assignee: "trailties-test-console-irb-and-dbconsole-remainder"
 blocked-by: null

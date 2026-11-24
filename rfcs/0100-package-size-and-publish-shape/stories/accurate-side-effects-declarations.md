@@ -1,7 +1,7 @@
 ---
 title: "Declare accurate sideEffects arrays"
-status: in-progress
-updated: 2026-11-23
+status: done
+updated: 2026-11-24
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
 packages:

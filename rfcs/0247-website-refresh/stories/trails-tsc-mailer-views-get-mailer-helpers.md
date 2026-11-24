@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc-mailer-views-get-mailer-helpers"
-status: in-progress
+status: done
 updated: 2026-11-24
 rfc: "0247-website-refresh"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "trailties: port railties/engine_test.rb misses"
-status: claimed
-updated: 2026-11-23
+status: in-progress
+updated: 2026-11-24
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
 packages: [trailties]
@@ -9,7 +9,7 @@ deps: [trailties-test-move-misplaced-tests]
 deps-rfc: []
 est-loc: 480
 priority: null
-pr: null
+pr: trails#10688
 claim: "2026-11-23T21:19:51Z"
 assignee: "engine-controllers-resolve-for-unused-routes"
 blocked-by: null
