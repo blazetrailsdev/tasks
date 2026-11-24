@@ -15,6 +15,13 @@ packages:
   - "sqlite3"
   - "pg"
   - "mysql2"
+related-rfcs:
+  - "0192-package-entry-point-boot-cost"
+  - "0241-request-path-performance"
+  - "0194-ruby-compat-native-first"
+  - "0197-plain-object-modules-replace-ruby-compat-module"
+  - "0221-no-returned-proxies"
+  - "0223-package-layout-mirrors-a-rails-gem"
 clusters:
   - spike
   - query
@@ -58,11 +65,12 @@ All figures are from `main` at `5e737fa9c2`, non-test `lib/` files.
 
 - **Boot.** The app boot in `scripts/boot-graph/baseline.json` loads 343
   activerecord modules, 205 ruby-compat, 193 activesupport, 85 arel and 74
-  activemodel: 900 modules before the first query. The `0192` RFC measured
-  one binding from the ruby-compat barrel at 139 modules and 147 ms.
-- **Request path.** The `0241` RFC found trails and Rails at the same CPU
-  per request with trails' p95 five times worse, from allocation and major
-  GC. `Base` is assembled by 118 `include()` / `extend()` calls in `base.ts`,
+  activemodel: 900 modules before the first query.
+  [RFC 0192](../0192-package-entry-point-boot-cost/README.md) measured one
+  binding from the ruby-compat barrel at 139 modules and 147 ms.
+- **Request path.** [RFC 0241](../0241-request-path-performance/README.md) found
+  trails and Rails at the same CPU per request (1.42 ms) with trails' p95 at
+  121 ms against 26 ms, from allocation and major GC. `Base` is assembled by 118 `include()` / `extend()` calls in `base.ts`,
   so every model's prototype is built by copying at load, and the hot path
   runs through `rbEqual` / `rbHash` dispatch, Ruby-truthiness helpers and
   Arel's AST (95 `rbEqual` / `rbHash` calls, 26 `rbObjClone` calls).
@@ -227,18 +235,19 @@ as the sibling's exported type names match for the common surface.
   them `notifications`. The pieces the sibling needs and that do import it
   (`callbacks` 1 import, `class-attribute` 1, `isolated-execution-state` 2,
   the inflector, `duration` 4, `time-with-zone` 3) are each brought to zero or
-  given a compat-free subpath, as stories under this RFC that extend the
-  `0192` RFC's subpath work. Where a piece cannot be freed (see Open
-  question 2) the sibling carries its own.
+  given a compat-free subpath, as stories under this RFC that extend
+  RFC 0192's subpath work. Where a piece cannot be freed (see Open question 2)
+  the sibling carries its own.
 - **Connection adapters are not shared.** The sibling has its own thin layer:
   lease a connection, execute a prepared statement with binds, read rows. It
   borrows three things from the faithful port by subpath, each freed of
   ruby-compat first: quoting, the SQL-type-to-cast-type map, and the
   schema-reflection queries.
 - **Drivers.** `@blazetrails/sqlite3`, `pg` and `mysql2` are ports of the Ruby
-  gems and import ruby-compat in 18 of 28, 16 of 29 and 7 of 8 files. Whether
-  the sibling sits on them or on the npm engines beneath them is Open
-  question 1.
+  gems and import ruby-compat in 18 of 28, 16 of 29 and 7 of 8 files. Each
+  wraps an npm engine it takes as a peer dependency: `better-sqlite3`,
+  `expo-sqlite` or `libsql`; npm `pg`; npm `mysql2`. Whether the sibling sits
+  on the ports or on those engines is Open question 1.
 
 ### Queries compile straight to SQL
 
@@ -285,7 +294,8 @@ execute. A small expression builder covers what apps reach Arel for
   result would still carry Arel's AST and the adapter layer, so it would meet
   the boot goal and miss the raw-SQL one.
 - **Replace the faithful port in place.** Not chosen: it gives up the Rails
-  mirror and every gate that keeps it honest, for packages 18 others build on.
+  mirror and every gate that keeps it honest, for three packages that 13
+  others in the workspace depend on.
 - **Have `trails-tsc` emit accessors at build time.** Removes the last
   run-time definition. Not chosen: it makes a build step mandatory for every
   model, including in the console and in tests.
@@ -298,28 +308,33 @@ execute. A small expression builder covers what apps reach Arel for
 
 ## Rollout
 
-Stories are written once the open questions are settled; none are filed with
-this draft.
+Only the spike is filed with this RFC. It is four stories, and its last one
+decides whether the RFC goes ahead and files the rest. The spike lives in
+`scripts/bench/record-spike/` in trails, not in `packages/`, so it takes on
+no publish, CI-lane or parity registration before the decision is made.
 
-1. **Spike.** One model on SQLite: reflection, `find`, `where`, `order`,
-   `limit`, `create`, `update`, `destroy`, `belongsTo`. Plus a raw-driver
-   baseline beside `scripts/bench/activerecord-load-records.mts`. The spike
-   reports the three Verification numbers and decides whether the RFC goes
-   ahead.
+1. **Spike.** One model on SQLite, measured against the bare driver.
+   - `raw-driver-baseline-in-load-records-bench`
+   - `record-spike-reflection-and-read-path`
+   - `record-spike-write-path-and-belongs-to`
+   - `record-spike-report-and-decide`
 2. **Floor.** Compat-free activesupport subpaths; quoting, type map and
    reflection queries freed in the faithful port; the driver decision
-   implemented.
+   implemented; the package created under `packages/`.
 3. **Query.** Relation, the SQL compiler and its statement cache, calculations,
    `pluck`, batches, `insertAll`, joins, `includes` / `preload` / `eagerLoad`.
 4. **Model.** Attributes and types, dirty tracking, validations, callbacks,
    transactions, persistence, locking, timestamps, enums, scopes, STI,
    normalization, secure password and tokens, stores, encryption.
-5. **Associations.** `belongsTo`, `hasOne`, `hasMany`, through,
-   `hasAndBelongsToMany`, polymorphic, autosave, nested attributes, counter
-   caches.
+5. **Associations.** `belongsTo` in full, `hasOne`, `hasMany`, through, `hasAndBelongsToMany`,
+   polymorphic, autosave, nested attributes, counter caches.
 6. **Conformance.** The differential harness, the Rails-suite runner and its
    mark, the `trails-tsc` virtualizer check against the sibling, and one
    example app (`examples/twelve-dollar-server`) switched by import.
+
+Phases 2 to 6 have no stories yet. `record-spike-report-and-decide` files them
+if the spike's numbers support going ahead, and closes this RFC if they do
+not.
 
 ## Verification
 
@@ -332,7 +347,7 @@ this draft.
   primary-key `find` at most 2 times a bare prepared `get`. The current
   ratios are measured by the spike and recorded here.
 - **Request path.** `examples/twelve-dollar-server` on the sibling beats the
-  faithful port's p95 and score on the `0241` RFC's rig.
+  faithful port's p95 and score on RFC 0241's rig.
 - **Drop-in.** The README's model example and the `dx-tests` type tests
   compile against the sibling unchanged apart from the import.
 - **Conformance.** The differential corpus is green on all three databases,
@@ -346,9 +361,9 @@ or replaced by the spike's measurements.
 
 1. **Which driver layer?** `@blazetrails/sqlite3`, `pg` and `mysql2` import
    ruby-compat in most files. Options: (a) burn those three packages down to
-   zero ruby-compat and sit on them; (b) sit on the npm engines beneath them
-   (`better-sqlite3` / `node:sqlite`, and the wire clients for PostgreSQL and
-   MySQL) with a small interface of the sibling's own. Recommendation: (b)
+   zero ruby-compat and sit on them; (b) sit on the npm engines they wrap
+   (`better-sqlite3`, `expo-sqlite`, `libsql`, npm `pg`, npm `mysql2`) with a
+   small interface of the sibling's own. Recommendation: (b)
    for the spike, since it is the shortest path to the raw-SQL number, and
    decide on (a) from what the spike shows.
 2. **Time and decimal types.** A drop-in returns what ActiveRecord returns: a
@@ -380,4 +395,4 @@ or replaced by the spike's measurements.
 
 ## Changelog
 
-- 2026-11-24: initial RFC
+- 2026-11-24: initial RFC, with the four spike stories
