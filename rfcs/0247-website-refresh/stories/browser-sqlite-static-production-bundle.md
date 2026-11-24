@@ -1,6 +1,6 @@
 ---
 title: "browser-sqlite builds to a static bundle (Rollup TDZ, eager lazy import, i18n self-import)"
-status: draft
+status: claimed
 updated: 2026-11-23
 rfc: "0247-website-refresh"
 cluster: website-deploy
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 200
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-23T23:49:45Z"
+assignee: "browser-sqlite-static-production-bundle"
 blocked-by: null
 closed-reason: null
 ---

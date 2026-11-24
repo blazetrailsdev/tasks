@@ -1,7 +1,7 @@
 ---
 title: "trailties: fix the 16 wrong describes and receipt or port the 42 skips"
-status: ready
-updated: 2026-11-19
+status: claimed
+updated: 2026-11-23
 rfc: "0248-trailties-parity-100"
 cluster: receipts
 packages: [trailties]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 350
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-23T23:09:45Z"
+assignee: "trailties-test-runner"
 blocked-by: null
 closed-reason: null
 ---

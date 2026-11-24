@@ -1,6 +1,6 @@
 ---
 title: "Burn down activerecord (relation-and-query) from rails v8.0.2 to v8.0.5.2"
-status: claimed
+status: in-progress
 rfc: "0256-rails-8-0-5-2-burn-down"
 cluster: burn-down
 packages: ["activerecord"]
@@ -11,7 +11,7 @@ deps:
 deps-rfc: []
 est-loc: 240
 priority: null
-pr: null
+pr: trails#10677
 claim: "2026-11-23T22:49:47Z"
 assignee: "accurate-side-effects-declarations"
 blocked-by: null

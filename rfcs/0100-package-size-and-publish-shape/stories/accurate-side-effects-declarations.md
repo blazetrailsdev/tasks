@@ -1,6 +1,6 @@
 ---
 title: "Declare accurate sideEffects arrays"
-status: claimed
+status: in-progress
 updated: 2026-11-23
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
@@ -20,7 +20,7 @@ deps:
 deps-rfc: []
 est-loc: 120
 priority: 5
-pr: null
+pr: trails#10677
 claim: "2026-11-23T22:49:47Z"
 assignee: "accurate-side-effects-declarations"
 blocked-by: null

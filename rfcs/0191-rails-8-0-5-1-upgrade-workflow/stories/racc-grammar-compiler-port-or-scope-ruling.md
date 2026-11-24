@@ -1,6 +1,6 @@
 ---
 title: "racc-grammar-compiler-port-or-scope-ruling"
-status: draft
+status: ready
 updated: 2026-11-23
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null

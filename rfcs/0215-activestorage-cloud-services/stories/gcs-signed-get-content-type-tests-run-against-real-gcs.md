@@ -1,6 +1,6 @@
 ---
 title: "GCS content-type signed-GET tests run un-skipped against an endpoint that answers the stored type"
-status: draft
+status: blocked
 updated: 2026-11-23
 rfc: "0215-activestorage-cloud-services"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-23T23:39:45Z"
+assignee: "gcs-signed-get-content-type-tests-run-against-real-gcs"
+blocked-by: "waiting on trails#10673 (open; parks the three tests in the same file this story un-skips; working on it now would stack on that PR)"
 closed-reason: null
 ---
 

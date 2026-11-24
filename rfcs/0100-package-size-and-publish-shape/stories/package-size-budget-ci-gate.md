@@ -1,6 +1,6 @@
 ---
 title: "Package-size and bundle-size budget CI gate"
-status: claimed
+status: in-progress
 updated: 2026-11-23
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
@@ -16,7 +16,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: 6
-pr: null
+pr: trails#10677
 claim: "2026-11-23T22:49:47Z"
 assignee: "accurate-side-effects-declarations"
 blocked-by: null

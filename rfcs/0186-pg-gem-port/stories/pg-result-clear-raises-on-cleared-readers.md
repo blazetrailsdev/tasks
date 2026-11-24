@@ -1,6 +1,6 @@
 ---
 title: "pg-result-clear-raises-on-cleared-readers"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0186-pg-gem-port"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Website hosts the browser-sqlite example as a /playground"
-status: draft
+status: ready
 updated: 2026-11-23
 rfc: "0247-website-refresh"
 cluster: website-deploy

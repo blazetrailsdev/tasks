@@ -1,6 +1,6 @@
 ---
 title: "body-pins --pin-all scoped to one source for gem pin floors"
-status: draft
+status: in-progress
 updated: 2026-11-23
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10679
+claim: "2026-11-23T23:19:57Z"
+assignee: "body-pins-pin-all-scoped-to-one-source"
 blocked-by: null
 closed-reason: null
 ---

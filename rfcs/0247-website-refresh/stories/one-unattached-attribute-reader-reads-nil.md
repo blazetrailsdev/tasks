@@ -1,6 +1,6 @@
 ---
 title: "Attached::One: an unattached One reads null for Attachment/Blob attribute readers"
-status: draft
+status: ready
 updated: 2026-11-23
 rfc: "0247-website-refresh"
 cluster: null

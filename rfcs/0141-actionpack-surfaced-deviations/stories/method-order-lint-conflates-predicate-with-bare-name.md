@@ -1,6 +1,6 @@
 ---
 title: "method-order-lint-conflates-predicate-with-bare-name"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

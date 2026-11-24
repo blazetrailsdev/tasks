@@ -1,6 +1,6 @@
 ---
 title: "OrderedOptions#fetch: drop the invented miss check; KeyError from Hash#fetch"
-status: in-progress
+status: done
 updated: 2026-11-23
 rfc: "0246-activesupport-parity-100"
 cluster: null

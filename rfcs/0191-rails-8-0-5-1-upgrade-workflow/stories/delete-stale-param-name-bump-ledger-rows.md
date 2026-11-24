@@ -1,6 +1,6 @@
 ---
 title: "Delete three stale param-name bump-ledger rows (schema_up_to_date?, try, try!)"
-status: draft
+status: done
 updated: 2026-11-23
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10665
+claim: "2026-11-23T23:19:57Z"
+assignee: "body-pins-pin-all-scoped-to-one-source"
 blocked-by: null
 closed-reason: null
 ---

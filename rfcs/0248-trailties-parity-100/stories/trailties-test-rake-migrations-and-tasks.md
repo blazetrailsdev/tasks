@@ -1,6 +1,6 @@
 ---
 title: "trailties: port rake migrations, framework and rake_test"
-status: claimed
+status: in-progress
 updated: 2026-11-23
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 480
 priority: null
-pr: null
+pr: trails#10678
 claim: "2026-11-23T22:19:43Z"
 assignee: "trailties-test-rake-dbs"
 blocked-by: null
