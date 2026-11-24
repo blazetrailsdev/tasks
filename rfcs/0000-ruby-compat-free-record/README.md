@@ -16,6 +16,7 @@ packages:
   - "sqlite3"
   - "pg"
   - "mysql2"
+  - "scripts"
 related-rfcs:
   - "0192-package-entry-point-boot-cost"
   - "0241-request-path-performance"
