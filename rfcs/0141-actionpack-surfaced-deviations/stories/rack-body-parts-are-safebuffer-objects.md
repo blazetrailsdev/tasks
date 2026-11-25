@@ -1,7 +1,7 @@
 ---
 title: "rack-body-parts-are-safebuffer-objects"
-status: ready
-updated: 2026-11-24
+status: in-progress
+updated: 2026-11-25
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10730
+claim: "2026-11-25T01:17:24Z"
+assignee: "flash-reader-is-a-hand-written-getter-not-a-delegate-call"
 blocked-by: null
 closed-reason: null
 ---

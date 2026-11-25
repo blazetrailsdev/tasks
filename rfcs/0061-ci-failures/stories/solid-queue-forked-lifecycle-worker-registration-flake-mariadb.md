@@ -1,7 +1,7 @@
 ---
 title: "solid-queue-forked-lifecycle-worker-registration-flake-mariadb"
-status: ready
-updated: 2026-11-24
+status: closed
+updated: 2026-11-25
 rfc: "0061-ci-failures"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#10516 (d1a86e243b): root-caused the exact ['default'] vs ['background','default'] setup failure on MariaDB (3) to the 3s waitForRegisteredProcesses overrunning trails' fresh-process fork boot; setup now waits 10s (origin/main forked-processes-lifecycle.test.ts: waitForRegisteredProcesses(3, { timeout: 10 }) before assertRegisteredWorkersFor). Merged after this story was filed."
 ---
 
 ## Context

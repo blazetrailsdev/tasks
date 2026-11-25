@@ -1,7 +1,7 @@
 ---
 title: "trails server, bin/jobs and db:prepare boot from the trails build entry when it exists"
-status: draft
-updated: 2026-11-24
+status: ready
+updated: 2026-11-25
 rfc: "0258-ship-compiled-javascript"
 cluster: null
 packages: ["trailties", "solid-queue", "trails-tsc"]

@@ -12,6 +12,7 @@ packages:
   - "trails-tsc"
   - "solid-queue"
 clusters: []
+priority: 5
 ---
 
 # RFC 0258 — ship compiled JavaScript

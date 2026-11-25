@@ -1,7 +1,7 @@
 ---
 title: "Application.findRoot and the server's rackup default accept a compiled config.js"
-status: draft
-updated: 2026-11-24
+status: ready
+updated: 2026-11-25
 rfc: "0258-ship-compiled-javascript"
 cluster: null
 packages: ["trailties"]

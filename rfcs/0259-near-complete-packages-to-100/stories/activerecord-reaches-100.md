@@ -1,6 +1,6 @@
 ---
 title: "activerecord: reach 100% on parity"
-status: in-progress
+status: done
 rfc: "0259-near-complete-packages-to-100"
 cluster: rails-core
 packages: [activerecord]
@@ -13,7 +13,7 @@ claim: "2026-11-24T20:06:51Z"
 assignee: "activerecord-reaches-100"
 blocked-by: null
 closed-reason: null
-updated: 2026-11-24
+updated: 2026-11-25
 ---
 
 ## Context

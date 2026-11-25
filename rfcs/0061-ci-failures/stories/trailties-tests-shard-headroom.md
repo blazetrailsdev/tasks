@@ -1,7 +1,7 @@
 ---
 title: "Trailties Tests shard 1 has ~25% headroom under its 20m timeout"
-status: ready
-updated: 2026-11-24
+status: closed
+updated: 2026-11-25
 rfc: "0061-ci-failures"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Premise gone: trails#10693 (c8d73a5c01) rebalanced Trailties Tests to 6 duration-balanced shards (TRAILTIES_SHARD_TOTAL: 6, VITEST_SHARD_DURATIONS: trailties) with the heavy app files (configuration, routing, mailer-previews, frameworks+exceptions, multi-dbs) on dedicated legs via TRAILTIES_EXCLUDE (origin/main .github/workflows/ci.yml:1233-1259). The 2-shard/20m layout this story measured no longer exists; per-file follow-ups remain in trailties-mailer-previews-test-per-test-app-boot-cost and trailties-configuration-test-runtime-headroom."
 ---
 
 ## Context

@@ -1,7 +1,7 @@
 ---
 title: "S3 public virtual-host test GETs the virtual-host URL"
 status: blocked
-updated: 2026-11-23
+updated: 2026-11-25
 rfc: "0215-activestorage-cloud-services"
 cluster: null
 packages: []
@@ -12,7 +12,7 @@ priority: 2
 pr: trails#10663
 claim: "2026-11-23T19:42:16Z"
 assignee: "s3-public-virtual-host-get-hits-the-virtual-host"
-blocked-by: "No emulator answers https://<bucket>/<key>: bare bucket host needs DNS+TLS, SeaweedFS -s3.domainName routes only <bucket>.<domain>, fetch cannot set Host (recorded in tasks#375). Needs an operator ruling to close PERMANENT."
+blocked-by: "Operator: provision a domain-named public S3 bucket behind HTTPS (CloudFront + ACM) and add its credentials as repo secrets; see the story's Approach section."
 closed-reason: null
 ---
 

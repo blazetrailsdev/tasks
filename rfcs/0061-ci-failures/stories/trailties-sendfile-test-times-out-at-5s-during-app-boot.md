@@ -1,7 +1,7 @@
 ---
 title: "trailties-sendfile-test-times-out-at-5s-during-app-boot"
-status: ready
-updated: 2026-11-24
+status: closed
+updated: 2026-11-25
 rfc: "0061-ci-failures"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#10555 (c13559f66c, 'give SendfileTest the isolated-app timeout'): origin/main sendfile.test.ts:34 is describe('SendfileTest', { timeout: 120_000 }), replacing the 5s default that fired — the AC's 'timeout that fits their real cost' arm."
 ---
 
 ## Context

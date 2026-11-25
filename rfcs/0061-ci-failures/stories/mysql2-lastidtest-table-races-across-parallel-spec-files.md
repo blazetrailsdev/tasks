@@ -1,7 +1,7 @@
 ---
 title: "mysql2-lastidtest-table-races-across-parallel-spec-files"
-status: ready
-updated: 2026-11-24
+status: closed
+updated: 2026-11-25
 rfc: "0061-ci-failures"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "Delivered by trails#10564 (7ca094157e, 'serialize lastIdTest users across parallel spec files'): spec-helper.ts:88 lastIdTestLock takes GET_LOCK('lastIdTest') in beforeEach/RELEASE_LOCK in afterEach, used by client.test.ts:664 and statement.test.ts:511,537 on origin/main. The cited trails#10566 run predated that merge on its base."
 ---
 
 # mysql2 lastIdTest table races across parallel spec files
