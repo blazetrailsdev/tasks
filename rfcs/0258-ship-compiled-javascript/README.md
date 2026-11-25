@@ -1,9 +1,9 @@
 ---
 rfc: "0258-ship-compiled-javascript"
 title: "A trails application ships and runs as compiled JavaScript, with no TypeScript at run time"
-status: draft
+status: active
 created: 2026-11-23
-updated: 2026-11-23
+updated: 2026-11-25
 owner: "@deanmarano"
 packages:
   - "trailties"
