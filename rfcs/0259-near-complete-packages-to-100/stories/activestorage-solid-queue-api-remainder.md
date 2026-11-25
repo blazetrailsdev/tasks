@@ -1,6 +1,6 @@
 ---
 title: "activestorage-solid-queue-api-remainder"
-status: ready
+status: in-progress
 updated: 2026-11-25
 rfc: "0259-near-complete-packages-to-100"
 cluster: null
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10760
+claim: "2026-11-25T17:55:01Z"
+assignee: "activestorage-solid-queue-api-remainder"
 blocked-by: null
 closed-reason: null
 ---

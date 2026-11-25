@@ -1,7 +1,7 @@
 ---
 title: "sqlite3: the parity score counts only the gem methods activerecord calls"
-status: ready
-updated: 2026-11-23
+status: done
+updated: 2026-11-25
 rfc: "0187-sqlite3-gem-port"
 cluster: package
 packages: ["scripts", "sqlite3"]
@@ -9,9 +9,9 @@ deps: ["sqlite3-retire-the-sqlite-driver-interfaces"]
 deps-rfc: []
 est-loc: 150
 priority: 5
-pr: null
-claim: null
-assignee: null
+pr: trails#10694
+claim: "2026-11-25T17:15:12Z"
+assignee: "sqlite3-score-only-what-activerecord-calls"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Repo Checks failing on main @db63656c"
-status: ready
+status: done
 updated: 2026-11-25
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: trails#10757
+claim: "2026-11-25T17:15:55Z"
+assignee: "red-db63656c"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Write the bump ledger one row per line to stop burndown merge conflicts"
-status: draft
-updated: 2026-11-24
+status: ready
+updated: 2026-11-25
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
 packages: []

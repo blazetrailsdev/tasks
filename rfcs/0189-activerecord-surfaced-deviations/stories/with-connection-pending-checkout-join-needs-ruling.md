@@ -1,6 +1,6 @@
 ---
 title: "withConnection: ratify or converge the pending-checkout join arm"
-status: blocked
+status: ready
 updated: 2026-11-25
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-25T15:44:50Z"
-assignee: "named-boot-loads-resolve-ts-then-js"
-blocked-by: "operator decision: converge was chosen, but no connection_pool.rb:405-424-shaped body keeps 'withConnection overlapping on an empty lease checks out one connection' green - the join's holder count is what stops a sibling's release freeing a connection another in-flight call uses (one JS context shares the lease across await checkout). Needs a ruling on ratifying vs dropping that trails test."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

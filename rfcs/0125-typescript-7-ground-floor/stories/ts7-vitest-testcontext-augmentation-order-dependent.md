@@ -1,7 +1,7 @@
 ---
 title: "TS7 nightly drops vitest TestContext augmentation depending on file order"
-status: draft
-updated: 2026-11-20
+status: ready
+updated: 2026-11-25
 rfc: "0125-typescript-7-ground-floor"
 cluster: null
 packages: []

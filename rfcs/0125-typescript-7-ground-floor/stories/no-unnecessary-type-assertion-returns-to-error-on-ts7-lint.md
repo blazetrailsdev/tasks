@@ -1,7 +1,7 @@
 ---
 title: "no-unnecessary-type-assertion-returns-to-error-on-ts7-lint"
-status: draft
-updated: 2026-11-21
+status: ready
+updated: 2026-11-25
 rfc: "0125-typescript-7-ground-floor"
 cluster: null
 packages: []

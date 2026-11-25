@@ -1,7 +1,7 @@
 ---
 title: "tzinfo-data-clone-403-fails-build"
-status: ready
-updated: 2026-11-24
+status: in-progress
+updated: 2026-11-25
 rfc: "0061-ci-failures"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10759
+claim: "2026-11-25T17:00:37Z"
+assignee: "activestorage-many-attached-existing-blobs-order-flake"
 blocked-by: null
 closed-reason: null
 ---

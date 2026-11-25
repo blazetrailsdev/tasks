@@ -1,7 +1,7 @@
 ---
 title: "A bun:sqlite SqliteDriver selected for the sqlite3 adapter under Bun"
-status: draft
-updated: 2026-11-19
+status: in-progress
+updated: 2026-11-25
 rfc: "0252-bun-runtime-support"
 cluster: sqlite
 packages: [activerecord]
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10758
+claim: "2026-11-25T17:03:48Z"
+assignee: "runtime-detection-and-bun-process-adapter"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "Declare @types/node in every package whose lib uses import.meta.dirname/filename"
-status: draft
-updated: 2026-11-18
+status: ready
+updated: 2026-11-25
 rfc: "0125-typescript-7-ground-floor"
 cluster: build-infra
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-engine-module-surface-ruling"
-status: draft
+status: blocked
 updated: 2026-11-25
 rfc: "0187-sqlite3-gem-port"
 cluster: null
@@ -12,7 +12,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "operator decision: whether engine-module exports outside the gem (errors, nodeSqlite, replicaEngine/remoteEngine/buildReplicaOptions/LibsqlReplicaOptions, bindParameterIndex/Names) are PERMANENT; not agent-actionable"
 closed-reason: null
 ---
 

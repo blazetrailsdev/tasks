@@ -1,7 +1,7 @@
 ---
 title: "barrel-constants-table-and-tasks-reexports-stop-pinning"
-status: draft
-updated: 2026-11-23
+status: ready
+updated: 2026-11-25
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "Make the Bun CI job a required check"
-status: draft
-updated: 2026-11-19
+status: ready
+updated: 2026-11-25
 rfc: "0252-bun-runtime-support"
 cluster: ci
 packages: [trailties]

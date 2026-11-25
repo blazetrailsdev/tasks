@@ -1,6 +1,6 @@
 ---
 title: "activerecord: connection-adapters and associations off the ruby-compat barrel"
-status: draft
+status: ready
 updated: 2026-11-25
 rfc: "0192-package-entry-point-boot-cost"
 cluster: null

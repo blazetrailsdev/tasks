@@ -1,14 +1,14 @@
 ---
 title: "sqlite3-engine-busy-handler-skips-deadlock"
-status: draft
-updated: 2026-11-24
+status: ready
+updated: 2026-11-25
 rfc: "0187-sqlite3-gem-port"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

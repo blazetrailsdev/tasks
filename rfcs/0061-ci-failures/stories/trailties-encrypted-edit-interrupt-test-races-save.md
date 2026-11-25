@@ -1,7 +1,7 @@
 ---
 title: "trailties-encrypted-edit-interrupt-test-races-save"
 status: ready
-updated: 2026-11-24
+updated: 2026-11-25
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

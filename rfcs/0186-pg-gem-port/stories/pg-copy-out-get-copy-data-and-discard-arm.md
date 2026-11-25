@@ -1,6 +1,6 @@
 ---
 title: "pg-copy-out-get-copy-data-and-discard-arm"
-status: ready
+status: in-progress
 updated: 2026-11-25
 rfc: "0186-pg-gem-port"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 4
-pr: null
-claim: null
-assignee: null
+pr: trails#10756
+claim: "2026-11-25T17:02:05Z"
+assignee: "pg-copy-out-get-copy-data-and-discard-arm"
 blocked-by: null
 closed-reason: null
 ---

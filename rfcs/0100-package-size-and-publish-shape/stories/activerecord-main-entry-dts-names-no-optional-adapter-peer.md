@@ -1,7 +1,7 @@
 ---
 title: "activerecord-main-entry-dts-names-no-optional-adapter-peer"
-status: draft
-updated: 2026-11-24
+status: ready
+updated: 2026-11-25
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
 packages: []

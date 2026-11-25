@@ -1,6 +1,6 @@
 ---
 title: "engine-models-seated-without-invented-initializers"
-status: claimed
+status: in-progress
 updated: 2026-11-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10754
 claim: "2026-11-25T15:59:41Z"
 assignee: "engine-models-seated-without-invented-initializers"
 blocked-by: null

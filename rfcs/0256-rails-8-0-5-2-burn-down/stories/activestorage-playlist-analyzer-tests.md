@@ -1,7 +1,7 @@
 ---
 title: "Port activestorage's v8.0.5.2 playlist analyzer tests"
-status: draft
-updated: 2026-11-24
+status: ready
+updated: 2026-11-25
 rfc: "0256-rails-8-0-5-2-burn-down"
 cluster: null
 packages: []
