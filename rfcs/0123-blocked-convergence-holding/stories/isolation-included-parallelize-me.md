@@ -2,7 +2,7 @@
 title: "Isolation.included parallelizes the including class (parallelize_me!)"
 status: blocked
 updated: 2026-11-23
-rfc: "0246-activesupport-parity-100"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps:
