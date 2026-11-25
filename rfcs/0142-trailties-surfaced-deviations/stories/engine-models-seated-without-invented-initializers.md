@@ -1,6 +1,6 @@
 ---
 title: "engine-models-seated-without-invented-initializers"
-status: in-progress
+status: blocked
 updated: 2026-11-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ priority: null
 pr: trails#10754
 claim: "2026-11-25T15:59:41Z"
 assignee: "engine-models-seated-without-invented-initializers"
-blocked-by: null
+blocked-by: "needs package-engine-models-reload: engine models do not reload once the main autoloader owns them"
 closed-reason: null
 ---
 
