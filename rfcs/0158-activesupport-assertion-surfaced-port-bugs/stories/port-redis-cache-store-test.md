@@ -1,6 +1,6 @@
 ---
 title: "port-redis-cache-store-test"
-status: claimed
+status: in-progress
 updated: 2026-11-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10735
 claim: "2026-11-25T12:29:39Z"
 assignee: "activesupport-port-evented-file-update-checker"
 blocked-by: null

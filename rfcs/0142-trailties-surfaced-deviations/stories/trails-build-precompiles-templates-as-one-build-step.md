@@ -1,6 +1,6 @@
 ---
 title: "trails build also precompiles templates, so an app has one build step before assets:precompile"
-status: claimed
+status: done
 updated: 2026-11-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
+pr: trails#10734
 claim: "2026-11-25T12:59:41Z"
 assignee: "trails-build-precompiles-templates-as-one-build-step"
 blocked-by: null

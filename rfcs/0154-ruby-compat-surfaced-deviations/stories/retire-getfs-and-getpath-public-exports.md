@@ -1,7 +1,7 @@
 ---
 title: "Retire getFs/getPath from ruby-compat's public exports onto File/Dir"
-status: ready
-updated: 2026-11-24
+status: blocked
+updated: 2026-11-25
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: ["ruby-compat"]
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
-blocked-by: null
+pr: trails#10736
+claim: "2026-11-25T13:29:41Z"
+assignee: "adopt-rbobjdup-rbobjclone-at-remaining-copy-sites"
+blocked-by: "remaining callers and export removal: trailties-reaches-fs-through-file-and-dir, thor-zeitwerk-tsc-vite-reach-fs-through-file-and-dir, retire-getfs-getpath-test-callers-and-exports"
 closed-reason: null
 ---
 

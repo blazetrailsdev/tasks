@@ -1,6 +1,6 @@
 ---
 title: "Rails-private credit keys by owner and static, not file-wide name"
-status: ready
+status: claimed
 updated: 2026-11-25
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-25T13:59:45Z"
+assignee: "activestorage-many-attached-existing-blobs-order-flake"
 blocked-by: null
 closed-reason: null
 ---

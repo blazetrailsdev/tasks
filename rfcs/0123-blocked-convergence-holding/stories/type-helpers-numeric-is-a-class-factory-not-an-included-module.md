@@ -1,7 +1,7 @@
 ---
 title: "activemodel: Type::Helpers::Numeric is a class factory (applyNumericMixin), not an included module"
-status: ready
-updated: 2026-11-24
+status: in-progress
+updated: 2026-11-25
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activemodel"]
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 180
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10737
+claim: "2026-11-25T13:14:44Z"
+assignee: "reopen-rfc-0087-constructor-arm-for-association-io-at-assignment"
 blocked-by: null
 closed-reason: null
 ---

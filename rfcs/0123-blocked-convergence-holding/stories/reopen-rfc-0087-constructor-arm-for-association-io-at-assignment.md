@@ -1,7 +1,7 @@
 ---
 title: "activerecord: design how association I/O owed at assignment completes for new, update and create (RFC 0087 constructor arm reopened)"
 status: ready
-updated: 2026-11-24
+updated: 2026-11-25
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: ["activerecord", "activemodel"]

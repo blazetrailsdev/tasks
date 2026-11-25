@@ -1,7 +1,7 @@
 ---
 title: "save-chain-cold-record-detector-misses-tables-without-primary-key"
-status: ready
-updated: 2026-11-24
+status: in-progress
+updated: 2026-11-25
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10738
+claim: "2026-11-25T13:44:39Z"
+assignee: "save-chain-cold-record-detector-misses-tables-without-primary-key"
 blocked-by: null
 closed-reason: null
 ---

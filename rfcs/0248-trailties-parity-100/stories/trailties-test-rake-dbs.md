@@ -1,6 +1,6 @@
 ---
 title: "trailties: port application/rake/dbs_test.rb"
-status: claimed
+status: ready
 updated: 2026-11-25
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 480
 priority: null
 pr: null
-claim: "2026-11-25T12:59:41Z"
-assignee: "trails-build-precompiles-templates-as-one-build-step"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

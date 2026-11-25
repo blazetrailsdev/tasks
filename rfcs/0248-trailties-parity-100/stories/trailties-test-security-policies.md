@@ -1,6 +1,6 @@
 ---
 title: "trailties: port content security policy and permissions policy tests"
-status: claimed
+status: done
 updated: 2026-11-25
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#10734
 claim: "2026-11-25T12:59:41Z"
 assignee: "trails-build-precompiles-templates-as-one-build-step"
 blocked-by: null

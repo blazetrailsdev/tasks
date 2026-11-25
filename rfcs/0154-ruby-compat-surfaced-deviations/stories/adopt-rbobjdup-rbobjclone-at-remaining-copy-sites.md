@@ -1,7 +1,7 @@
 ---
 title: "Adopt rbObjDup/rbObjClone at the remaining open-coded copy sites across packages"
-status: ready
-updated: 2026-11-24
+status: in-progress
+updated: 2026-11-25
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: [ruby-compat]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10736
+claim: "2026-11-25T13:29:41Z"
+assignee: "adopt-rbobjdup-rbobjclone-at-remaining-copy-sites"
 blocked-by: null
 closed-reason: null
 ---
