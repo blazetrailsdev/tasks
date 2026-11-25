@@ -2,7 +2,7 @@
 title: "isolation-tests-hooks-move-to-setup-teardown"
 status: draft
 updated: 2026-11-23
-rfc: "0246-activesupport-parity-100"
+rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
