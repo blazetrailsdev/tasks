@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat detects Bun and selects a BunProcessAdapter"
-status: in-progress
+status: done
 updated: 2026-11-25
 rfc: "0252-bun-runtime-support"
 cluster: runtime

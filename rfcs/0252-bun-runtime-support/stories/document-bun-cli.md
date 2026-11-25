@@ -1,6 +1,6 @@
 ---
 title: "Document running trails under bun / bunx"
-status: in-progress
+status: done
 updated: 2026-11-25
 rfc: "0252-bun-runtime-support"
 cluster: runtime

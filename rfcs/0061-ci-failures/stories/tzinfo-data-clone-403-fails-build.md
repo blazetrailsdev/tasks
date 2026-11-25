@@ -1,6 +1,6 @@
 ---
 title: "tzinfo-data-clone-403-fails-build"
-status: in-progress
+status: done
 updated: 2026-11-25
 rfc: "0061-ci-failures"
 cluster: null

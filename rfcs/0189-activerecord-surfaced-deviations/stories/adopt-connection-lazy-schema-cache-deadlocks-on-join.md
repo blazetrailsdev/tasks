@@ -1,6 +1,6 @@
 ---
 title: "adopt-connection-lazy-schema-cache-deadlocks-on-join"
-status: draft
+status: in-progress
 updated: 2026-11-25
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10763
+claim: "2026-11-25T21:21:58Z"
+assignee: "adopt-connection-lazy-schema-cache-deadlocks-on-join"
 blocked-by: null
 closed-reason: null
 ---
