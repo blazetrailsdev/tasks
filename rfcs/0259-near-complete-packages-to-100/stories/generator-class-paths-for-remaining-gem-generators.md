@@ -2,7 +2,7 @@
 title: "Seat the generator class paths of solid-cache, actiontext, actionmailbox and stimulus"
 status: draft
 updated: 2026-11-24
-rfc: "0196-solid-stack"
+rfc: "0259-near-complete-packages-to-100"
 cluster: null
 packages: []
 deps: []
