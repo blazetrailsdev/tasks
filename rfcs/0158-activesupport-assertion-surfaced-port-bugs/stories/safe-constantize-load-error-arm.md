@@ -2,7 +2,7 @@
 title: "Port safe_constantize's LoadError rescue arm"
 status: draft
 updated: 2026-11-23
-rfc: "0246-activesupport-parity-100"
+rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
 deps: []
