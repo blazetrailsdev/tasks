@@ -1,6 +1,6 @@
 ---
 title: "S3 public virtual-host test GETs the virtual-host URL"
-status: blocked
+status: ready
 updated: 2026-11-25
 rfc: "0215-activestorage-cloud-services"
 cluster: null
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 2
-pr: trails#10663
-claim: "2026-11-23T19:42:16Z"
-assignee: "s3-public-virtual-host-get-hits-the-virtual-host"
-blocked-by: "Operator: provision a domain-named public S3 bucket behind HTTPS (CloudFront + ACM) and add its credentials as repo secrets; see the story's Approach section."
+pr: null
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "activesupport-api-remainder-reaches-100"
-status: draft
+status: ready
 updated: 2026-11-25
 rfc: "0259-near-complete-packages-to-100"
 cluster: null

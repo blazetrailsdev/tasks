@@ -1,6 +1,6 @@
 ---
 title: "nokogiri-xml-node-to-s-and-fragment-to-xhtml"
-status: ready
+status: in-progress
 updated: 2026-11-25
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#10748
+claim: "2026-11-25T15:14:41Z"
+assignee: "nokogiri-libxml2-wasm-export-missing-c-functions"
 blocked-by: null
 closed-reason: null
 ---

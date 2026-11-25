@@ -1,6 +1,6 @@
 ---
 title: "pg: wait_for_notify dispatches on block arity; queued-notify spec title matches"
-status: claimed
+status: in-progress
 updated: 2026-11-25
 rfc: "0186-pg-gem-port"
 cluster: connection
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 2
-pr: null
+pr: trails#10745
 claim: "2026-11-25T14:52:59Z"
 assignee: "pg-result-fmod-ftable-ftablecol-no-column-cases"
 blocked-by: null

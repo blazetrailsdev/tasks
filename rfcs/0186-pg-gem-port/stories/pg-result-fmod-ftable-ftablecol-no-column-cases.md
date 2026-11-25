@@ -1,6 +1,6 @@
 ---
 title: "pg: Result#fmod/ftable/ftablecol no-typemod and no-table spec examples"
-status: claimed
+status: in-progress
 updated: 2026-11-25
 rfc: "0186-pg-gem-port"
 cluster: result-and-coders
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: 1
-pr: null
+pr: trails#10745
 claim: "2026-11-25T14:52:59Z"
 assignee: "pg-result-fmod-ftable-ftablecol-no-column-cases"
 blocked-by: null

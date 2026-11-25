@@ -1,6 +1,6 @@
 ---
 title: "Retire activesupport's clock holder now that Time.now is cheap"
-status: claimed
+status: in-progress
 updated: 2026-11-25
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#10746
 claim: "2026-11-25T14:59:41Z"
 assignee: "migrate-activesupport-off-the-ruby-compat-barrel"
 blocked-by: null

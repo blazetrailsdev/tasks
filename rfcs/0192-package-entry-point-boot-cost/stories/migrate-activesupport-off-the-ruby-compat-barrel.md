@@ -1,6 +1,6 @@
 ---
 title: "activesupport: migrate its 291 ruby-compat barrel imports to subpaths"
-status: claimed
+status: in-progress
 updated: 2026-11-25
 rfc: "0192-package-entry-point-boot-cost"
 cluster: "findings"
@@ -12,7 +12,7 @@ deps:
 deps-rfc: []
 est-loc: 320
 priority: null
-pr: null
+pr: trails#10746
 claim: "2026-11-25T14:59:41Z"
 assignee: "migrate-activesupport-off-the-ruby-compat-barrel"
 blocked-by: null

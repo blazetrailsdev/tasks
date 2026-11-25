@@ -1,7 +1,7 @@
 ---
 title: "trails-root-is-a-pathname"
-status: ready
-updated: 2026-11-24
+status: claimed
+updated: 2026-11-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-25T15:59:41Z"
+assignee: "engine-models-seated-without-invented-initializers"
 blocked-by: null
 closed-reason: null
 ---
