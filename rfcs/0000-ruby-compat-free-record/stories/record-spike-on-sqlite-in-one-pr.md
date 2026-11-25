@@ -7,7 +7,7 @@ cluster: spike
 packages: ["scripts"]
 deps: []
 deps-rfc: []
-est-loc: 1500
+est-loc: 2200
 priority: null
 pr: null
 claim: null
@@ -77,12 +77,28 @@ Write path:
       type is ActiveRecord's (`Author | null | Promise<Author | null>`), and
       `includes("author")` loads it in one extra query.
 
+Validations:
+
+- [ ] `validates` with `presence`, `length`, `numericality`, `inclusion` and
+      `uniqueness`, and `allowNil` / `allowBlank`. `isValid`, `save`
+      returning `false`, `saveBang` and `createBang` raising `RecordInvalid`.
+- [ ] Validation is a function over a record that returns plain entries;
+      `record.errors` (`fullMessages`, `messages`, `messagesFor`, `details`,
+      `count`, `add`) is a view over them, and message text is built only
+      when read.
+- [ ] Messages are English by default. An application's translations come
+      through a function set on `Base`, asked for ActiveRecord's keys in
+      ActiveRecord's order, so the spike imports no i18n library.
+- [ ] The bench reports an insert with validations beside the plain insert.
+
 Correctness:
 
 - [ ] One test body runs against ActiveRecord models and against spike
       models. For each query the spike supports it asserts the same
       `toSql()`, and for each read and write the same statements and binds,
-      read through a `sql.active_record` subscriber on the faithful side.
+      read through a `sql.active_record` subscriber on the faithful side. For
+      validations it asserts the same validity, messages, details and raised
+      message, with and without stored translations.
 - [ ] `scripts/boot-graph/measure.mts --entry` on the spike's entry file
       reports 0 ruby-compat modules.
 - [ ] The spike's README lists every difference from ActiveRecord the test
@@ -102,7 +118,7 @@ that always returns a promise.
 
 ## Notes
 
-Validations, callbacks and transactions are not part of the spike.
+Callbacks and transactions are not part of the spike.
 `trails-tsc` typing of the spike's models is checked by
 `record-spike-report-and-decide`. `better-sqlite3` is a root devDependency of
 trails, so a script under `scripts/` resolves it with no new dependency.

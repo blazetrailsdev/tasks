@@ -5,7 +5,7 @@ status: draft
 created: 2026-11-24
 updated: 2026-11-24
 owner: "@deanmarano"
-max-est-loc: 1500
+max-est-loc: 2200
 packages:
   - "activerecord"
   - "activemodel"
@@ -78,7 +78,7 @@ All figures are from `main` at `5e737fa9c2`, non-test `lib/` files.
   Arel's AST (95 `rbEqual` / `rbHash` calls, 26 `rbObjClone` calls).
 - **Raw SQL gap.** `scripts/bench/activerecord-load-records.mts` loads 12,000
   rows of 24 columns. Measured by the spike (trails#10723, Node v26.13.0,
-  Linux x64, in-memory SQLite), ActiveRecord costs 5.5 times the bare driver
+  Linux x64, in-memory SQLite), ActiveRecord costs about 5 times the bare driver
   to load those rows into records, 45 times for a primary-key `find`, and
   about 150 times for an insert or a one-column update. The full table is
   under "Verification". This RFC makes those ratios the headline numbers.
@@ -345,8 +345,8 @@ rest. The spike lives in `scripts/bench/record-spike/` in trails, not in
 `packages/`, so it takes on no publish, CI-lane or parity registration before
 the decision is made.
 
-The build story is about 1,500 lines, over the 700-line ceiling, so this
-README sets `max-est-loc: 1500`. It is one PR because its parts are only
+The build story is about 2,200 lines, over the 700-line ceiling, so this
+README sets `max-est-loc: 2200`. It is one PR because its parts are only
 meaningful together: the ratios need the read path, the write path and the
 bare-driver column side by side, and all of it sits in one directory that no
 package imports. The phases after the spike go back to the usual ceiling.
@@ -388,8 +388,9 @@ not.
 - **Raw SQL ratio.** Against the bare driver returning the same rows as
   objects: a load into records costs at most 1.5 times, a primary-key `find`
   at most 1.5 times, and an insert or a one-column update at most 3 times.
-  _The spike measures 0.8, 0.9, 2.3 and 2.4. The `find` target was 2 and is
-  tightened. The write target is new._
+  _The spike measures 0.9, 0.9, 2.6 and 2.3, and 2.8 for an insert with
+  three validations. The `find` target was 2 and is tightened. The write
+  target is new._
 - **Request path.** `examples/twelve-dollar-server` on the sibling beats the
   faithful port's p95 and score on RFC 0241's rig.
 - **Drop-in.** The README's model example and the `dx-tests` type tests
@@ -412,21 +413,22 @@ merged code.
 
 | Measure                       | driver | spike | activerecord | spike / driver | activerecord / driver |
 | ----------------------------- | -----: | ----: | -----------: | -------------: | --------------------: |
-| load                          |   2.90 |  2.44 |        16.03 |            0.8 |                   5.5 |
-| load, then read every column  |   3.95 | 12.21 |        83.12 |            3.1 |                  21.0 |
-| find by id                    |   5.20 |  4.49 |       231.85 |            0.9 |                  44.6 |
-| belongsTo, unloaded           |   4.92 |  5.39 |       348.07 |            1.1 |                  70.8 |
-| load with belongsTo preloaded |   3.57 |  2.91 |        17.39 |            0.8 |                   4.9 |
-| insert                        |   3.88 |  8.87 |       607.67 |            2.3 |                 156.6 |
-| update one column             |   2.31 |  5.57 |       345.93 |            2.4 |                 149.9 |
-| heap bytes retained per row   |    738 |   853 |        1,302 |            1.2 |                   1.8 |
+| load                          |   2.46 |  2.26 |        11.28 |            0.9 |                   4.6 |
+| load, then read every column  |   2.87 | 11.90 |        64.47 |            4.1 |                  22.4 |
+| find by id                    |   4.63 |  4.12 |       207.05 |            0.9 |                  44.7 |
+| belongsTo, unloaded           |   3.90 |  4.40 |       306.74 |            1.1 |                  78.6 |
+| load with belongsTo preloaded |   2.51 |  2.83 |        15.36 |            1.1 |                   6.1 |
+| insert                        |   3.63 |  9.58 |       570.30 |            2.6 |                 157.2 |
+| update one column             |   2.10 |  4.82 |       322.01 |            2.3 |                 153.4 |
+| insert, three validations     |   3.61 | 10.23 |       600.08 |            2.8 |                 166.1 |
+| heap bytes retained per row   |    734 |   850 |        1,297 |            1.2 |                   1.8 |
 
 | Entry                       | Modules | ruby-compat modules | Median import |
 | --------------------------- | ------: | ------------------: | ------------: |
 | `record-spike/index.ts`     |      26 |                   0 |         38 ms |
 | `@blazetrails/activerecord` |     897 |                 205 |      1,026 ms |
 
-Three things the numbers do not show on their own:
+Four things the numbers do not show on their own:
 
 - **A bound `LIMIT` is slow on SQLite.** ActiveRecord sends
   `… WHERE "id" = ? LIMIT ?` for `find`. On `better-sqlite3` that lookup took
@@ -440,6 +442,16 @@ Three things the numbers do not show on their own:
   it is. Reading eight datetime columns per row is nearly all of the gap
   between "load" and "load, then read every column". This bears on Open
   question 2: any time type built per read costs about this much.
+- **Validation is a function, and i18n is a parameter.** The spike's
+  validators are closures built at declaration; `validate(record)` returns
+  plain entries and `record.errors` is a view over them, with message text
+  built only when read. Three validations add about 0.7 µs to an insert,
+  against about 30 µs in ActiveRecord. Translations come through a function
+  set on `Base`, asked for ActiveRecord's keys in ActiveRecord's order. With
+  that function wired to `@blazetrails/i18n`, the spike's messages equal
+  ActiveRecord's for an app's stored translations, and i18n stays off the
+  sibling's import graph. `@blazetrails/i18n` imports ruby-compat in 25
+  files today, so a direct dependency would put ruby-compat back.
 - **The virtualizer recognises spike models unchanged.**
   `packages/activerecord-cli/lib/type-virtualization` finds a class
   extending the spike's `Base`, reads its `tableName` and `belongsTo`, and
@@ -484,7 +496,7 @@ Three things the numbers do not show on their own:
    spike: keep it.** A loaded association and a null foreign key answer
    without a promise, and only an unloaded one costs a promise. An unloaded
    read measured 1.1 times a bare `get`, and a load with the association
-   preloaded 0.8 times the driver doing the same join by hand.
+   preloaded 1.1 times the driver doing the same join by hand.
 5. **Framework integration.** actionpack, actionview, activejob, globalid and
    trailties type against `ActiveRecord::Base`. Does a sibling record have to
    work with `formWith`, `redirectTo(post)`, GlobalID and
@@ -509,6 +521,8 @@ Three things the numbers do not show on their own:
 ## Changelog
 
 - 2026-11-24: initial RFC, with the four spike stories
-- 2026-11-24: the three build stories became one (`max-est-loc: 1500`); the
+- 2026-11-24: the three build stories became one (`max-est-loc: 2200`); the
   spike's first measurements, taken on trails#10723, are recorded under
   "Verification", with answers to Open questions 1, 4 and 7
+- 2026-11-24: the spike gained validations, errors and translated messages,
+  by the operator's ruling that a record is not one without them
