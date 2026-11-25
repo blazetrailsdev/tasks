@@ -34,3 +34,11 @@ Ruled by the operator on 2026-11-20 (async create paths only): `new Klass` stays
 - `bird.ts` mirrors `bird.rb`: `after_initialize` assigns `totalCount` from `await Bird.count()` with no `void`/unawaited promise.
 - "first or initialize with block" is un-skipped and passes with its Rails assertions unchanged.
 - The bare-`new` arm is receipted `PERMANENT` at the refusal site.
+
+## Re-cut 2026-11-25 against RFC 0087 "Amendment 2026-11-25"
+
+Supersedes the acceptance criteria above.
+
+- [ ] Every awaited construction path in the amendment's point 2 runs `_runInitializeCallbacks` through `deferringToAssignment` even when no attribute was captured, and awaits it before returning.
+- [ ] `bird.ts` awaits `Bird.count()` in its `after_initialize`; a bare `new Bird` with `enableCount` raises, receipted `PERMANENT`.
+- [ ] "first or initialize with block" un-skipped with Rails' assertions.

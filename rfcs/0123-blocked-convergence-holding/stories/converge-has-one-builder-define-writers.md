@@ -40,3 +40,11 @@ belongs_to relies on. Deleting the override breaks ~30 has_one tests.
   (the Rails home), without inventing a per-macro branch there.
 - Its `@noRailsEquivalent CONVERGEABLE` receipt is removed and `pnpm parity:api:extra:tighten` run.
 - has_one / belongs_to suites stay green.
+
+## Re-cut 2026-11-25 against RFC 0087 "Amendment 2026-11-25"
+
+Supersedes the acceptance criteria above.
+
+- [ ] `Builder::Association.defineWriters` emits, for every macro, `name=`, `set#{Name}` and a property setter, all calling `association(name).writer(value)`; `HasOne.defineWriters` deleted.
+- [ ] A persisted-owner property assignment `firm.account = a` raises through the synchronous refusal; `has-one-persisted-setter-throws.trails.test.ts`'s "assigning the property is a plain JS write to a getter-only accessor" arm is updated to the raise (the test name is kept).
+- [ ] Receipt removed, `pnpm parity:api:extra:tighten` run.

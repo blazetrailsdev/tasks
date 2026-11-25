@@ -92,3 +92,11 @@ not a precondition owned elsewhere.
       `packages/activerecord/src/associations/` stay green — in particular
       `has-one-persisted-setter-throws.trails.test.ts` and
       `collection-awaitable-writers.trails.test.ts`.
+
+## Re-cut 2026-11-25 against RFC 0087 "Amendment 2026-11-25"
+
+Supersedes the acceptance criteria above.
+
+- [ ] `update` / `updateBang` call `this.assignAttributes(attributes)` inside `capturingAssignment` within `withTransactionReturningStatus`, and await the captured promise before `save` / `saveBang` (`persistence.rb#update` / `#update!`).
+- [ ] Both `@missingRailsCall assign_attributes` receipts deleted; `assertAssignedSynchronously` re-receipted `PERMANENT` against "A record is built with `new Klass` only".
+- [ ] `has-one-persisted-setter-throws.trails.test.ts` and `collection-awaitable-writers.trails.test.ts` green, `await author.update({ postIds })` included.

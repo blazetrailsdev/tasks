@@ -35,3 +35,10 @@ are a plain `each` with three arms and two trailing `if`s. The chain adds four `
 - [ ] `assignNestedParameterAttributes` is `pairs.each { |k, v| _assign_attribute(k, v) }` with no `pending` arm.
 - [ ] `new Foo({ ... })` still assigns synchronously and `update` / `create` still await association writes.
 - [ ] Both `@inventedArm if` receipts are deleted and the invented report shows no row for either.
+
+## Re-cut 2026-11-25 against RFC 0087 "Amendment 2026-11-25"
+
+Supersedes the acceptance criteria above.
+
+- [ ] Determine whether any key assigned after an I/O-bearing association key reads that association's state before the I/O settles. If none does, hand each writer promise to the capture in order (no chain in `_assignAttributes` / `assignNestedParameterAttributes`), reaching Rails' arms (`attribute_assignment.rb:6-28`), and delete both `@inventedArm if` receipts.
+- [ ] If one does, `pnpm tasks block` this story on an operator ruling naming the case; do not rewrite the receipt.

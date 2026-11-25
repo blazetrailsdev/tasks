@@ -69,3 +69,12 @@ blocker; do NOT close it by rewriting the justification.
       not a regression target).
 - [ ] Coverage for all three arms above, including the new-owner-with-primary-key
       case pinned in `collection-proxy-replace-diff.trails.test.ts`.
+
+## Re-cut 2026-11-25 against RFC 0087 "Amendment 2026-11-25"
+
+Supersedes the acceptance criteria above.
+
+- [ ] `CollectionAssociation#syncWrite` / `#syncIdsWrite`, `assigningSynchronously` and `Builder::CollectionAssociation.defineWriters` are deleted; `name=` / `nameIds=` call `writer` / `idsWriter` as `builder/association.rb:112-118` and `builder/collection_association.rb` emit them.
+- [ ] Under a capture (`create`, `update`, association `build`/`create`) all three arms run Rails' replace (`collection_association.rb:242-256`), including `await Firm.create({ id: 5, clients })`.
+- [ ] A bare `new Firm({ id: 5, clients })` / `assignAttributes` raises through `assertAssignedSynchronously`, receipted `PERMANENT`; `CollectionPersistedAssignmentError` / `CollectionIdsAssignmentError` go if nothing else raises them.
+- [ ] Coverage in `collection-proxy-replace-diff.trails.test.ts` for both the captured and the bare arm.

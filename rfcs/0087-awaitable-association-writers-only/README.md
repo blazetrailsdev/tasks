@@ -229,7 +229,101 @@ acceptance criteria are met by the awaitable surface performing the replace
 on all three arms, and by the synchronous arms refusing, not by making the
 constructor do I/O.
 
+## Amendment 2026-11-25: association I/O owed at assignment (constructor arm reopened)
+
+Owner ruling 2026-10-08 (blocked-story triage, decisions 3 and 12) reopened the
+constructor arm settled in "Open questions" above. Rails runs the I/O at the
+assignment, inside `new`, `assign_attributes` and `update`:
+
+- `CollectionAssociation#replace` (`vendor/rails/v8.0.5.2/activerecord/lib/active_record/associations/collection_association.rb:242-256`)
+  runs `load_target` (`:244`) when `find_target?` holds, which
+  `ForeignAssociation#foreign_key_present?` (`associations/foreign_association.rb:5-11`)
+  makes true for a new owner with its primary key set, and `delete_or_destroy`
+  (`:392-397`) for a removed persisted record.
+- `HasOneAssociation#replace` (`associations/has_one_association.rb:59-84`)
+  saves on a persisted owner (`record.save`, `:76`).
+- `CollectionAssociation#ids_writer` (`collection_association.rb:65-84`) queries.
+- An `after_initialize` callback may query (`activerecord/test/models/bird.rb:21-23`).
+
+`new Klass` stays synchronous (packages/activerecord/CLAUDE.md § "A record is
+built with `new Klass` only"), `assign_attributes` returns nil
+(`activemodel/lib/active_model/attribute_assignment.rb:28-36`), and nothing is
+parked on a record for `save` to drain (`retire-the-parked-promise-pattern`).
+
+### Decision: the awaiting caller owns the promise; a synchronous caller refuses
+
+The mechanism already in `main` for `has_one_attached` and the create paths is
+made the one mechanism for every assignment-time I/O
+(packages/activerecord/CLAUDE.md § "A create path awaits its block before
+saving"):
+
+1. **Writers are Rails' writers.** A generated `name=` is
+   `association(name).writer(value)` (`builder/association.rb:112-118`) for
+   every macro, and `#{singular}_ids=` is `ids_writer`. The writer returns its
+   promise when it owed I/O, and a value otherwise. There is no second,
+   synchronous writer: `HasOneAssociation#syncWrite`,
+   `CollectionAssociation#syncWrite` / `#syncIdsWrite`, the
+   `assigningSynchronously` flag and the per-macro `defineWriters` overrides
+   are deleted.
+2. **An awaited entry point opens a capture.** `create`, `create!`,
+   `Relation#create` / `first_or_create` / `first_or_initialize` /
+   `find_or_initialize_by`, association `build` / `create` and `update` /
+   `update!` wrap the Rails call (`new`, or `assign_attributes`) in
+   `awaitingAssignment` / `capturingAssignment`. Inside the capture,
+   `assignAttributes` hands the writer's promise to the capture and the
+   constructor hands its block and `_runInitializeCallbacks` to
+   `deferringToAssignment`, so they run after it in Rails' order. The entry
+   point awaits the capture before it returns or saves, at the position Rails
+   ran the I/O. `update` therefore calls `assign_attributes` as
+   `persistence.rb#update` does, inside `with_transaction_returning_status`.
+3. **No capture, no I/O: refuse.** A bare `new Klass({...})` or
+   `record.assignAttributes({...})` whose writer returns a promise raises
+   (`assertAssignedSynchronously`), naming `await record.setAttributes(...)`.
+   An `after_initialize` callback returning a promise under a bare `new` raises
+   the same way. The refusal is the only deviation left, it is `PERMANENT`
+   against "A record is built with `new Klass` only", and it never schedules or
+   drops the work. `new Firm({ id: 5, clients })` raises; `await
+Firm.create({ id: 5, clients })` and `await firm.setAttributes({ clients })`
+   run Rails' replace.
+4. **`setAttributes`** stays the awaitable spelling of `assign_attributes` for
+   a caller holding a record (`@noRailsEquivalent PERMANENT`).
+
+### Decision: property setters
+
+`define_writers` emits one shape for every macro: the `name=` method calling
+`writer`, the `set#{Name}` alias (the settled `setX()` idiom), and the
+property setter, whose body is the same `writer` call under the synchronous
+rule of point 3. So `post.author = a` (belongs_to, never I/O) works,
+`newFirm.account = a` on an unpersisted owner works (`save &&=
+owner.persisted?`, `has_one_association.rb:66`), and `firm.account = a` on a
+persisted owner raises loudly as an assignment that owes I/O. No per-macro
+branch, no getter-only accessor. This reverses Design §1's deletion of the
+has_one property setter: §1 deleted it because its persisted-owner arm was a
+silent split; under this amendment that arm is the uniform refusal every
+synchronous caller gets, and the Rails `define_writers` body is restored.
+`converge-has-one-builder-define-writers` lands it.
+
+### What stays as debt
+
+`_assignAttributes`' `pending` chain (`activerecord/lib/active_record/attribute_assignment.rb:6-28`
+is a plain `each`) is how a key after an I/O-bearing key is assigned after
+that I/O, which Rails gets from running the I/O in line. Under a capture the
+chain is load-bearing. `assign-attributes-pending-promise-chain-arms` converges
+it to Rails' arms by running each awaited key's promise to the capture
+instead of chaining, if keys after it can be shown not to read the
+association's state; otherwise it needs an operator ruling to be made
+`PERMANENT`. That is the one open question.
+
+### Stories re-cut against this amendment
+
+- `sync-collection-mass-assignment-refuses-rails-replace`
+- `update-must-call-assign-attributes-carried-from-0087`
+- `assign-attributes-pending-promise-chain-arms`
+- `bird-total-count-async-after-initialize`
+- `converge-has-one-builder-define-writers`
+
 ## Changelog
 
 - 2026-08-03: initial RFC. Extends RFC 0068, which introduced `set#{Name}` and
   the persisted-owner throw; this RFC removes the remaining synchronous arm.
+- 2026-11-25: amendment reopening the constructor arm (story `reopen-rfc-0087-constructor-arm-for-association-io-at-assignment`).
