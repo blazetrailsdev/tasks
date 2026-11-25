@@ -244,3 +244,22 @@ build inlines every `import()` target by construction. Under `--splitting`, esbu
 bare `import "./chunk"` for `database-tasks` and `sqlite-database-tasks`, which the barrel
 re-exports statically and `loadPath` imports dynamically. `accurate-side-effects-declarations`
 and `package-size-budget-ci-gate` measure against the 1,019 row.
+
+## `import { Base }` closure after `lib/index.ts` stopped re-exporting `tasks/*` (2026-11-25)
+
+`lib/index.ts` no longer re-exports `DatabaseTasks`, `DatabaseNotSupported`,
+`eachCurrentEnvironment` or the three adapter task classes; callers import the `tasks/*`
+subpaths, and `database-tasks` imports its three siblings. Method: `esbuild@0.28.2 --bundle
+--format=esm --platform=node --splitting --metafile` on `import { Base } from
+"@blazetrails/activerecord"` with the shipped `sideEffects`, counting the inputs of the outputs
+statically reachable from the entry.
+
+| Shape                         | Inputs (static closure) | All inputs | `dist/tasks/**` |
+| ----------------------------- | ----------------------- | ---------- | --------------- |
+| Before (main at `b76621e89e`) | 848                     | 1,048      | 4               |
+| After                         | 842                     | 1,050      | 0               |
+
+The barrel's `constants.generated.ts` now pins one module the closure would otherwise shake,
+`dist/trailties/job-runtime.js` (removing the barrel import drops the closure by that module and
+the table itself). Giving `trailties/` its own tables does not shake it: the table import makes
+`job-runtime` side-effecting, and `lib/index.ts` re-exports `JobRuntime`.
