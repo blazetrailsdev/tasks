@@ -5,7 +5,8 @@ updated: 2026-11-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps:
+  - package-engine-models-reload
 deps-rfc: []
 est-loc: null
 priority: null
