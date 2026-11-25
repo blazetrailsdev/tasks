@@ -5,7 +5,9 @@ updated: 2026-11-19
 rfc: "0252-bun-runtime-support"
 cluster: sqlite
 packages: [activerecord]
-deps: [runtime-detection-and-bun-process-adapter]
+deps:
+  - runtime-detection-and-bun-process-adapter
+  - temporal-on-bun
 deps-rfc: []
 est-loc: 400
 priority: null
