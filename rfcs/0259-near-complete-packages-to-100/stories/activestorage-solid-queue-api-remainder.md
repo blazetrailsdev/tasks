@@ -5,7 +5,8 @@ updated: 2026-11-25
 rfc: "0259-near-complete-packages-to-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - api-near-complete-packages-reach-100
 deps-rfc: []
 est-loc: null
 priority: null
