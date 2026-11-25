@@ -1,7 +1,7 @@
 ---
 title: "actionpack: migrate test ruby-compat barrel imports to subpaths"
-status: in-progress
-updated: 2026-11-24
+status: done
+updated: 2026-11-25
 rfc: "0192-package-entry-point-boot-cost"
 cluster: null
 packages: []

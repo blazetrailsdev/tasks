@@ -1,7 +1,7 @@
 ---
 title: "delegated type accepts belongs to options"
-status: in-progress
-updated: 2026-11-24
+status: done
+updated: 2026-11-25
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: ["activerecord"]

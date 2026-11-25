@@ -1,7 +1,7 @@
 ---
 title: "Seat ActionDispatch::Http::UploadedFile"
-status: in-progress
-updated: 2026-11-24
+status: done
+updated: 2026-11-25
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: ["actionpack"]

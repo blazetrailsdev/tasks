@@ -1,7 +1,7 @@
 ---
 title: "examples/twitter-clone converges onto the trails new app layout"
-status: in-progress
-updated: 2026-11-24
+status: done
+updated: 2026-11-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties"]
