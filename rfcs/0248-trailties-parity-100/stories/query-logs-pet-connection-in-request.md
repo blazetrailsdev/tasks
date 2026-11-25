@@ -1,7 +1,7 @@
 ---
 title: "Base.connection inside a request fails in a booted multi-db app (query_logs_test Pet.connection)"
-status: in-progress
-updated: 2026-11-24
+status: done
+updated: 2026-11-25
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []

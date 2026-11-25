@@ -1,9 +1,9 @@
 ---
 rfc: "0246-activesupport-parity-100"
 title: "activesupport: 100% API and test parity"
-status: active
+status: closed
 created: 2026-11-18
-updated: 2026-11-18
+updated: 2026-11-25
 owner: "@deanmarano"
 packages:
   - activesupport

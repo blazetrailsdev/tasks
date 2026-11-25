@@ -1,7 +1,7 @@
 ---
 title: "activesupport: CI gate holding parity:api and parity:test at 100%"
-status: ready
-updated: 2026-11-22
+status: closed
+updated: 2026-11-25
 rfc: "0246-activesupport-parity-100"
 cluster: receipts
 packages: [activesupport, scripts]
@@ -61,7 +61,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "RFC 0246 sunset before 100%: evented_file_update_checker and xml_mini/libxml{,sax} still unported on origin/main (re-homed to 0158), so a 100% gate cannot pass; re-file the gate when those land"
 ---
 
 ## Context

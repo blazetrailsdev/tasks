@@ -1,6 +1,6 @@
 ---
 title: "flash-reader-is-a-hand-written-getter-not-a-delegate-call"
-status: in-progress
+status: done
 updated: 2026-11-25
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null

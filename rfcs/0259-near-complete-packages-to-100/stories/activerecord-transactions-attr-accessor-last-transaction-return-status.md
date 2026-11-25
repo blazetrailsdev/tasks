@@ -1,7 +1,7 @@
 ---
 title: "activerecord-transactions-attr-accessor-last-transaction-return-status"
-status: ready
-updated: 2026-11-24
+status: in-progress
+updated: 2026-11-25
 rfc: "0259-near-complete-packages-to-100"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10732
+claim: "2026-11-25T03:29:16Z"
+assignee: "actionview-reaches-100-remainder"
 blocked-by: null
 closed-reason: null
 ---
