@@ -207,6 +207,15 @@ excludes.
 **S3: SeaweedFS** (`chrislusf/seaweedfs`), the one candidate passing every check
 but SSE. Its `SERVICE_CONFIGURATIONS` sets `endpoint` and `forcePathStyle`.
 
+**S3 virtual host: a real bucket.** No emulator answers `https://<bucket>/<key>`
+(tasks#375). So "public URL generation (virtual host enabled)" is skipped on
+SeaweedFS and runs, with the rest of `S3PublicServiceTest`, against
+`public.blazetrails.dev` in the opt-in `activestorage-s3-public-tests` job. The
+job authenticates by GitHub OIDC, so it has no stored credentials, and it is
+not in the `ci` aggregator. This is an exception to decision 3, ruled by the
+operator on 2026-11-24. The infrastructure is in `blazetrailsdev/platform`
+(`ci-storage`).
+
 **GCS: fake-gcs-server** (`fsouza/fake-gcs-server`) passed MD5 rejection, range,
 404, prefix listing, compose, metadata update, signed GET, v4 signed PUT and
 public GET.
