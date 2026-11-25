@@ -1,6 +1,6 @@
 ---
 title: "trailties: port application/rake/dbs_test.rb"
-status: claimed
+status: in-progress
 updated: 2026-11-25
 rfc: "0248-trailties-parity-100"
 cluster: test-ports
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 480
 priority: null
-pr: null
+pr: trails#10763
 claim: "2026-11-25T15:44:50Z"
 assignee: "named-boot-loads-resolve-ts-then-js"
 blocked-by: null

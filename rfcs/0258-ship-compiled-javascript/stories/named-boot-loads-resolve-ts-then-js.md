@@ -1,6 +1,6 @@
 ---
 title: "Files the boot loads by name resolve .ts then .js in a compiled tree"
-status: claimed
+status: in-progress
 updated: 2026-11-25
 rfc: "0258-ship-compiled-javascript"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["root-marker-and-rackup-resolve-compiled-config"]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#10763
 claim: "2026-11-25T15:44:50Z"
 assignee: "named-boot-loads-resolve-ts-then-js"
 blocked-by: null

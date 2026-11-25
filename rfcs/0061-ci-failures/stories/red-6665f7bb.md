@@ -1,6 +1,6 @@
 ---
 title: "Build site failing on main @6665f7bb"
-status: ready
+status: in-progress
 updated: 2026-11-25
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: trails#10764
+claim: "2026-11-25T19:17:03Z"
+assignee: "red-6665f7bb"
 blocked-by: null
 closed-reason: null
 ---

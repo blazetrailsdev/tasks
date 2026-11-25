@@ -1,6 +1,6 @@
 ---
 title: "Port Kernel#Rational's String arm (string_to_r_strict / parse_rat)"
-status: in-progress
+status: done
 updated: 2026-11-25
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

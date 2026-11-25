@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: IO#read(length) answers a one-char-per-byte string where the ASCII-8BIT seat is a Uint8Array"
-status: in-progress
+status: done
 updated: 2026-11-25
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
