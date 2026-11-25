@@ -1,6 +1,6 @@
 ---
 title: "pg: Result#fmod/ftable/ftablecol no-typemod and no-table spec examples"
-status: in-progress
+status: done
 updated: 2026-11-25
 rfc: "0186-pg-gem-port"
 cluster: result-and-coders

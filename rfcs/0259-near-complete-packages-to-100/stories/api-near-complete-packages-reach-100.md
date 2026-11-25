@@ -1,6 +1,6 @@
 ---
 title: "activestorage, trailties, solid-queue: close the API gap"
-status: in-progress
+status: done
 rfc: "0259-near-complete-packages-to-100"
 cluster: small-packages
 packages: [activestorage, trailties, solid-queue]

@@ -1,6 +1,6 @@
 ---
 title: "pg: result strings keep the encoding they were fetched under"
-status: in-progress
+status: done
 updated: 2026-11-25
 rfc: "0186-pg-gem-port"
 cluster: result-and-coders

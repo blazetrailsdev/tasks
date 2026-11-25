@@ -1,6 +1,6 @@
 ---
 title: "pg: wait_for_notify dispatches on block arity; queued-notify spec title matches"
-status: in-progress
+status: done
 updated: 2026-11-25
 rfc: "0186-pg-gem-port"
 cluster: connection

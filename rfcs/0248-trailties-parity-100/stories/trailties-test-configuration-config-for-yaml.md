@@ -1,6 +1,6 @@
 ---
 title: "trailties-test-configuration-config-for-yaml"
-status: blocked
+status: done
 updated: 2026-11-25
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10750
 claim: "2026-11-25T15:29:51Z"
 assignee: "trailties-reload-rereads-database-config-for-use-postgresql"
-blocked-by: "operator decision: configFor reads config/<name>.yml via ConfigurationFile.parse, or config files are TS modules by ratified CLAUDE.md section"
+blocked-by: null
 closed-reason: null
 ---
 

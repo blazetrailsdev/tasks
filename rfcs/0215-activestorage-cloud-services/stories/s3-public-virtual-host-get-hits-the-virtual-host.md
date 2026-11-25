@@ -1,6 +1,6 @@
 ---
 title: "S3 public virtual-host test GETs the virtual-host URL"
-status: ready
+status: in-progress
 updated: 2026-11-25
 rfc: "0215-activestorage-cloud-services"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#10752
+claim: "2026-11-25T16:29:12Z"
+assignee: "s3-public-virtual-host-get-hits-the-virtual-host"
 blocked-by: null
 closed-reason: null
 ---

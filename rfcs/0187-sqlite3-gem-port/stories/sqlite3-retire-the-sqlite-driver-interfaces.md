@@ -1,6 +1,6 @@
 ---
 title: "Delete SqliteDriver, SqliteConnection, SqliteStatement and their Sync twins"
-status: in-progress
+status: done
 updated: 2026-11-25
 rfc: "0187-sqlite3-gem-port"
 cluster: migration

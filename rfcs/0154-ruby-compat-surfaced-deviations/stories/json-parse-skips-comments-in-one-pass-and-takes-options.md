@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: JSON.parse skips comments in one pass and takes the options hash"
-status: ready
-updated: 2026-11-24
+status: in-progress
+updated: 2026-11-25
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10751
+claim: "2026-11-25T16:29:53Z"
+assignee: "io-read-length-answers-a-binary-string-where-the-ascii-8bit-seat-is-uint8array"
 blocked-by: null
 closed-reason: null
 ---

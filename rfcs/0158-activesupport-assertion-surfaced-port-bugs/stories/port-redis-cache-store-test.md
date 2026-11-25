@@ -1,6 +1,6 @@
 ---
 title: "port-redis-cache-store-test"
-status: in-progress
+status: done
 updated: 2026-11-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null

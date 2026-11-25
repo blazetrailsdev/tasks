@@ -1,6 +1,6 @@
 ---
 title: "activerecord: design how association I/O owed at assignment completes for new, update and create (RFC 0087 constructor arm reopened)"
-status: ready
+status: done
 updated: 2026-11-25
 rfc: "0123-blocked-convergence-holding"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-25T16:14:42Z"
+assignee: "reopen-rfc-0087-constructor-arm-for-association-io-at-assignment"
 blocked-by: null
 closed-reason: null
 ---
