@@ -2,7 +2,7 @@
 title: "SolidCable::InstallGenerator writes config/cable.yml as Rails does"
 status: blocked
 updated: 2026-11-25
-rfc: "0196-solid-stack"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: [solid-cable]
 deps: []
