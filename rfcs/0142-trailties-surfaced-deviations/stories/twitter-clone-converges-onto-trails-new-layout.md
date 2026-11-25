@@ -1,6 +1,6 @@
 ---
 title: "examples/twitter-clone converges onto the trails new app layout"
-status: draft
+status: in-progress
 updated: 2026-11-24
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 600
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10727
+claim: "2026-11-24T23:06:15Z"
+assignee: "twitter-clone-converges-onto-trails-new-layout"
 blocked-by: null
 closed-reason: null
 ---
