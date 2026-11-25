@@ -2,7 +2,7 @@
 title: "Converge DispatcherTest polling/sleeps bodies and rewind_io to v1.7.2"
 status: ready
 updated: 2026-11-20
-rfc: "0196-solid-stack"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps:
