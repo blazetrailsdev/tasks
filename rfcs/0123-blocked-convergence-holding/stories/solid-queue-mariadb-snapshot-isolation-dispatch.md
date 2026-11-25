@@ -2,7 +2,7 @@
 title: "solid-queue-mariadb-snapshot-isolation-dispatch"
 status: blocked
 updated: 2026-11-20
-rfc: "0196-solid-stack"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
