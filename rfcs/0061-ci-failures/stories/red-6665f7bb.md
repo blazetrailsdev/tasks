@@ -1,6 +1,6 @@
 ---
 title: "Build site failing on main @6665f7bb"
-status: in-progress
+status: done
 updated: 2026-11-25
 rfc: "0061-ci-failures"
 cluster: null
