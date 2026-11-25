@@ -2,7 +2,7 @@
 title: "SolidQueue::UpdateGenerator migration templates are plain .ts files"
 status: ready
 updated: 2026-11-24
-rfc: "0196-solid-stack"
+rfc: "0259-near-complete-packages-to-100"
 cluster: null
 packages: [solid-queue]
 deps: []
