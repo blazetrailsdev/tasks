@@ -1,7 +1,7 @@
 ---
 title: "trailties: '.' entry mirrors rails.rb instead of resolving to the CLI"
-status: ready
-updated: 2026-11-24
+status: done
+updated: 2026-11-25
 rfc: "0192-package-entry-point-boot-cost"
 cluster: "findings"
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["boot-graph-measurement-harness", "trailties-main-entry-point-is-the-cli"
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#9495
+claim: "2026-11-25T12:25:55Z"
+assignee: "root-marker-and-rackup-resolve-compiled-config"
 blocked-by: null
 closed-reason: null
 ---

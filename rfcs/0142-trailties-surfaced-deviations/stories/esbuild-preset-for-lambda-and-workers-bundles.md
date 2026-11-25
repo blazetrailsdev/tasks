@@ -1,7 +1,7 @@
 ---
 title: "Ship an esbuild preset for the trails-specific Lambda / Workers bundle workarounds"
-status: ready
-updated: 2026-11-24
+status: in-progress
+updated: 2026-11-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#10733
+claim: "2026-11-25T12:25:55Z"
+assignee: "root-marker-and-rackup-resolve-compiled-config"
 blocked-by: null
 closed-reason: null
 ---

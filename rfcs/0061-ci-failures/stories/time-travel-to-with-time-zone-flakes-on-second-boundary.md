@@ -1,6 +1,6 @@
 ---
 title: "time-travel-to-with-time-zone-flakes-on-second-boundary"
-status: in-progress
+status: done
 updated: 2026-11-25
 rfc: "0061-ci-failures"
 cluster: null

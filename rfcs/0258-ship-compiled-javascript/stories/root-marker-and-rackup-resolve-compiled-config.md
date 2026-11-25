@@ -1,6 +1,6 @@
 ---
 title: "Application.findRoot and the server's rackup default accept a compiled config.js"
-status: ready
+status: in-progress
 updated: 2026-11-25
 rfc: "0258-ship-compiled-javascript"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10733
+claim: "2026-11-25T12:25:55Z"
+assignee: "root-marker-and-rackup-resolve-compiled-config"
 blocked-by: null
 closed-reason: null
 ---

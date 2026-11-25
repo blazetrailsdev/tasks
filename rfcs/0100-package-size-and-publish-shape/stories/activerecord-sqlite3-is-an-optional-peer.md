@@ -1,7 +1,7 @@
 ---
 title: "activerecord: @blazetrails/sqlite3 is an optional peer, not a dependency"
-status: in-progress
-updated: 2026-11-24
+status: done
+updated: 2026-11-25
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
 packages: ["activerecord", "sqlite3", "trailties"]

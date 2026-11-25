@@ -1,7 +1,7 @@
 ---
 title: "pg-exec-copy-in-returns-copy-in-result"
-status: in-progress
-updated: 2026-11-24
+status: done
+updated: 2026-11-25
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []

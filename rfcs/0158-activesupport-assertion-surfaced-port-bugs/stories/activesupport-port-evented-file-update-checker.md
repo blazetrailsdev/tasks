@@ -1,7 +1,7 @@
 ---
 title: "activesupport-port-evented-file-update-checker"
-status: ready
-updated: 2026-11-24
+status: claimed
+updated: 2026-11-25
 rfc: "0158-activesupport-assertion-surfaced-port-bugs"
 cluster: null
 packages: []
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-25T12:29:39Z"
+assignee: "activesupport-port-evented-file-update-checker"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,14 +1,14 @@
 ---
 title: "nokogiri-xml-document-parse-empty-pathname"
-status: draft
-updated: 2026-11-24
+status: ready
+updated: 2026-11-25
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null

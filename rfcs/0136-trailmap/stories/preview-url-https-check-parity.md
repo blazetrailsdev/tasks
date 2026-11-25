@@ -1,7 +1,7 @@
 ---
 title: "Preview URL https check agrees between trails and Rails apps"
-status: in-progress
-updated: 2026-11-24
+status: done
+updated: 2026-11-25
 rfc: "0136-trailmap"
 cluster: null
 packages: []

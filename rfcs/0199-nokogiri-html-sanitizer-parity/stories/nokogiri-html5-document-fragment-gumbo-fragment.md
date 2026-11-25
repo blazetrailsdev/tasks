@@ -1,7 +1,7 @@
 ---
 title: "nokogiri-html5-document-fragment-gumbo-fragment"
-status: in-progress
-updated: 2026-11-24
+status: done
+updated: 2026-11-25
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
 packages: []

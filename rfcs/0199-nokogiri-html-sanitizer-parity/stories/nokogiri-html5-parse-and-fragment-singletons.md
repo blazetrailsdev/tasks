@@ -1,7 +1,7 @@
 ---
 title: "Nokogiri::HTML5.parse / .fragment singleton methods"
-status: in-progress
-updated: 2026-11-24
+status: done
+updated: 2026-11-25
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
 packages: []
