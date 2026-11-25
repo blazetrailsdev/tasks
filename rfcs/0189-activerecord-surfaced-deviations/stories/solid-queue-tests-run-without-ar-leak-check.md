@@ -2,7 +2,7 @@
 title: "solid-queue tests run without AR's leak check; dummy shutdown_timeout 2s"
 status: draft
 updated: 2026-11-25
-rfc: "0196-solid-stack"
+rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
