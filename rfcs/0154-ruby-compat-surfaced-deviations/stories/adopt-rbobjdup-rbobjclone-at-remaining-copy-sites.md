@@ -1,6 +1,6 @@
 ---
 title: "Adopt rbObjDup/rbObjClone at the remaining open-coded copy sites across packages"
-status: in-progress
+status: done
 updated: 2026-11-25
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

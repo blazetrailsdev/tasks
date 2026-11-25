@@ -1,6 +1,6 @@
 ---
 title: "pg: result strings keep the encoding they were fetched under"
-status: ready
+status: claimed
 updated: 2026-11-25
 rfc: "0186-pg-gem-port"
 cluster: result-and-coders
@@ -8,10 +8,10 @@ packages: ["pg"]
 deps: []
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 3
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-25T14:52:59Z"
+assignee: "pg-result-fmod-ftable-ftablecol-no-column-cases"
 blocked-by: null
 closed-reason: null
 ---

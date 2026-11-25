@@ -1,6 +1,6 @@
 ---
 title: "Application.findRoot and the server's rackup default accept a compiled config.js"
-status: in-progress
+status: done
 updated: 2026-11-25
 rfc: "0258-ship-compiled-javascript"
 cluster: null

@@ -1,7 +1,7 @@
 ---
 title: "activerecord: migrate its 605 ruby-compat barrel imports to subpaths"
 status: ready
-updated: 2026-11-24
+updated: 2026-11-25
 rfc: "0192-package-entry-point-boot-cost"
 cluster: "findings"
 packages: ["activerecord", "ruby-compat"]

@@ -1,6 +1,6 @@
 ---
 title: "trailties-configuration-test-runtime-headroom"
-status: claimed
+status: done
 updated: 2026-11-25
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10729
 claim: "2026-11-25T13:59:45Z"
 assignee: "activestorage-many-attached-existing-blobs-order-flake"
 blocked-by: null

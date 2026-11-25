@@ -1,7 +1,7 @@
 ---
 title: "arel: migrate its 90 ruby-compat barrel imports to subpaths"
-status: ready
-updated: 2026-11-24
+status: in-progress
+updated: 2026-11-25
 rfc: "0192-package-entry-point-boot-cost"
 cluster: "findings"
 packages: ["arel", "ruby-compat"]
@@ -12,9 +12,9 @@ deps:
 deps-rfc: []
 est-loc: 110
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10743
+claim: "2026-11-25T14:41:01Z"
+assignee: "generated-constants-import-defineconstants-by-subpath"
 blocked-by: null
 ---
 

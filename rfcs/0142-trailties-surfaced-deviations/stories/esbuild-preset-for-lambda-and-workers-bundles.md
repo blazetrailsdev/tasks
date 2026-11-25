@@ -1,6 +1,6 @@
 ---
 title: "Ship an esbuild preset for the trails-specific Lambda / Workers bundle workarounds"
-status: in-progress
+status: done
 updated: 2026-11-25
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

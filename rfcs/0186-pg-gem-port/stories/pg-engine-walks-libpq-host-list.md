@@ -1,14 +1,14 @@
 ---
 title: "pg: engine walks libpq's host list so connect_to_hosts / reset reach resolve_hosts"
-status: draft
-updated: 2026-11-24
+status: ready
+updated: 2026-11-25
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: 250
-priority: null
+priority: 5
 pr: null
 claim: null
 assignee: null

@@ -1,6 +1,6 @@
 ---
 title: "activesupport: reach 100% on parity"
-status: claimed
+status: in-progress
 rfc: "0259-near-complete-packages-to-100"
 cluster: rails-core
 packages: [activesupport]
@@ -8,7 +8,7 @@ deps: []
 deps-rfc: []
 est-loc: 500
 priority: null
-pr: null
+pr: trails#10740
 claim: "2026-11-25T13:42:42Z"
 assignee: "actionview-reaches-100-remainder"
 blocked-by: null

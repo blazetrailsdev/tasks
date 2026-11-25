@@ -1,7 +1,7 @@
 ---
 title: "SolidCable::InstallGenerator writes config/cable.yml as Rails does"
-status: ready
-updated: 2026-11-24
+status: blocked
+updated: 2026-11-25
 rfc: "0196-solid-stack"
 cluster: null
 packages: [solid-cable]
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-25T14:44:47Z"
+assignee: "solid-cable-install-generator-writes-cable-yml"
+blocked-by: "operator decision: trails app config is TS modules repo-wide — Application#configFor (packages/trailties/lib/application.ts:518-551) loads only .ts/.js, actioncable's engine reads config/cable.ts (packages/actioncable/lib/engine.ts:72), and the app generator writes config/cable.ts. A cable.yml from the solid_cable generator would be read by nothing unless configFor gains a YAML arm and the engine/app generator switch to cable.yml; that repo-wide config-format choice is the operator's. If TS config is ratified, this story closes PERMANENT and the receipt becomes PERMANENT."
 closed-reason: null
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "sqlite3-libsql-replica-sync-reaches-the-engine"
-status: ready
-updated: 2026-11-23
+status: blocked
+updated: 2026-11-25
 rfc: "0187-sqlite3-gem-port"
 cluster: null
 packages: []
@@ -10,10 +10,10 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
-claim: null
-assignee: null
-blocked-by: null
+pr: trails#10741
+claim: "2026-11-25T14:14:43Z"
+assignee: "sqlite3-libsql-replica-sync-reaches-the-engine"
+blocked-by: "awaiting operator ruling in sqlite3-engine-module-surface-ruling"
 closed-reason: null
 ---
 

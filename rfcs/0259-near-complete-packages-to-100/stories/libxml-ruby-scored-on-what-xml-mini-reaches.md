@@ -1,6 +1,6 @@
 ---
 title: "libxml-ruby: score only what XmlMini reaches"
-status: ready
+status: done
 rfc: "0259-near-complete-packages-to-100"
 cluster: scoping
 packages: [libxml-ruby, scripts]
@@ -8,12 +8,12 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10742
+claim: "2026-11-25T14:29:55Z"
+assignee: "libxml-ruby-scored-on-what-xml-mini-reaches"
 blocked-by: null
 closed-reason: null
-updated: 2026-11-24
+updated: 2026-11-25
 ---
 
 ## Context
