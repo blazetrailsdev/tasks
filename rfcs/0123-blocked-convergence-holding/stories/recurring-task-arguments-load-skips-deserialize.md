@@ -2,7 +2,7 @@
 title: "recurring-task-arguments-load-skips-deserialize"
 status: blocked
 updated: 2026-11-22
-rfc: "0196-solid-stack"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps:
