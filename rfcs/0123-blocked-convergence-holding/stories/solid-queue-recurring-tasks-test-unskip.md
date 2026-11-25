@@ -2,7 +2,7 @@
 title: "solid-queue: unskip RecurringTasksTest (unknown attribute 'key')"
 status: blocked
 updated: 2026-11-23
-rfc: "0196-solid-stack"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps:
