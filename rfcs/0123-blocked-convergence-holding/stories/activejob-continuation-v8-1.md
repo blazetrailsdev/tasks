@@ -2,7 +2,7 @@
 title: "activejob-continuation-v8-1"
 status: blocked
 updated: 2026-11-23
-rfc: "0196-solid-stack"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
