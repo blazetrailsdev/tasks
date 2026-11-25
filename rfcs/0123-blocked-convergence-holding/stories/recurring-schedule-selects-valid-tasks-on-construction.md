@@ -2,7 +2,7 @@
 title: "recurring-schedule-selects-valid-tasks-on-construction"
 status: blocked
 updated: 2026-10-26
-rfc: "0196-solid-stack"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
