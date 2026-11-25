@@ -27,14 +27,24 @@ way Rails does. `s3_public_service_test.rb` runs only when
 `SERVICE_CONFIGURATIONS[:s3_public]` is set (`:7`), against a real S3 bucket.
 The lane is opt-in, gated on AWS secrets, and fork PRs skip it.
 
-Operator prerequisites, which block the story until done:
+Infrastructure is provisioned (2026-11-25) in the private
+`blazetrailsdev/platform` repo, stack `ci-storage`:
 
-- An S3 bucket whose name is a domain the operator controls, e.g.
-  `trails-ci-public.<domain>`, with a public-read policy for objects.
-- DNS for that name, served over HTTPS, since `public_url` builds `https://`.
-  S3 website endpoints are HTTP only, so this needs CloudFront (or another TLS
-  front) with the bucket as origin and an ACM certificate for the name.
-- An IAM user, or an OIDC role, scoped to that bucket, stored as repo secrets.
+- Bucket `public.blazetrails.dev` (us-east-1), ACLs enabled, objects expire
+  after 1 day. HTTPS goes through CloudFront at `https://public.blazetrails.dev`,
+  and DNS is at Namecheap via dokku-dns. A `public-read` PUT followed by a GET
+  of `https://public.blazetrails.dev/<key>` returns 200.
+- CI authenticates by GitHub OIDC (no keys). Role
+  `trails-ci-s3-public` trusts `repo:blazetrailsdev/trails` on
+  `refs/heads/main` and `pull_request`. It can list the bucket and get, put,
+  set ACLs on and delete objects in it.
+- Repository variables (not secrets): `AWS_S3_PUBLIC_ROLE_ARN`,
+  `AWS_S3_PUBLIC_BUCKET`, `AWS_S3_PUBLIC_REGION`.
+
+The job needs `permissions: id-token: write` and
+`aws-actions/configure-aws-credentials` with `role-to-assume:
+${{ vars.AWS_S3_PUBLIC_ROLE_ARN }}`. Gate it on that variable being set, and
+expect forks to get no OIDC token.
 
 ## Acceptance criteria
 
