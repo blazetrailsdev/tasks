@@ -1,6 +1,6 @@
 ---
 title: "Publish through npm trusted publishing (OIDC) and retire NPM_TOKEN"
-status: ready
+status: blocked
 updated: 2026-11-26
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 20
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-26T14:44:44Z"
+assignee: "migration-resolves-database-tasks-without-explicit-import"
+blocked-by: "waiting on the first token publish of @blazetrails/* (none exist on npm as of 2026-11-26; last tag run 45281419331 failed) and on the operator adding a Trusted Publisher per package on npmjs.com; removing NPM_TOKEN before then breaks the first publish"
 closed-reason: null
 ---
 

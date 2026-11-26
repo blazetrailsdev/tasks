@@ -1,6 +1,6 @@
 ---
 title: "trails new generates an app whose image runs compiled JavaScript"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0258-ship-compiled-javascript"
 cluster: null

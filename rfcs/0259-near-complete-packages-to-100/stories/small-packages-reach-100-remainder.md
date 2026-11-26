@@ -1,6 +1,6 @@
 ---
 title: "small-packages-reach-100-remainder"
-status: ready
+status: claimed
 updated: 2026-11-26
 rfc: "0259-near-complete-packages-to-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-26T14:14:48Z"
+assignee: "generator-class-paths-actiontext-actionmailbox-stimulus"
 blocked-by: null
 closed-reason: null
 ---
