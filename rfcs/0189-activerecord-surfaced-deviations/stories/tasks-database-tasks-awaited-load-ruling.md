@@ -1,6 +1,6 @@
 ---
 title: "Rule on how Tasks::DatabaseTasks' autoload is awaited (entry points vs one boot-time load)"
-status: draft
+status: ready
 updated: 2026-11-26
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

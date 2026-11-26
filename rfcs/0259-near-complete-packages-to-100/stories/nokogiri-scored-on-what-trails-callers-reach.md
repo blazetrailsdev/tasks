@@ -1,6 +1,6 @@
 ---
 title: "nokogiri: score only the surface trails' callers reach"
-status: claimed
+status: ready
 rfc: "0259-near-complete-packages-to-100"
 cluster: scoping
 packages: [nokogiri, scripts]
@@ -9,8 +9,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: "2026-11-26T14:14:48Z"
-assignee: "generator-class-paths-actiontext-actionmailbox-stimulus"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 updated: 2026-11-26

@@ -1,6 +1,6 @@
 ---
 title: "nokogiri-xml-document-parse-empty-pathname"
-status: ready
+status: in-progress
 updated: 2026-11-26
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 3
-pr: null
-claim: null
-assignee: null
+pr: trails#10806
+claim: "2026-11-26T15:44:48Z"
+assignee: "nokogiri-libxml2-wasm-export-missing-c-functions"
 blocked-by: null
 closed-reason: null
 ---

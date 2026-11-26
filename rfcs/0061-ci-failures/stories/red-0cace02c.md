@@ -1,6 +1,6 @@
 ---
 title: "Trailties Tests (routing-mailers-frameworks, packages/trailties/test/application/routing.test.ts ... failing on main @0cace02c"
-status: ready
+status: in-progress
 updated: 2026-11-26
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: null
-claim: null
-assignee: null
+pr: trails#10805
+claim: "2026-11-26T15:41:32Z"
+assignee: "red-0cace02c"
 blocked-by: null
 closed-reason: null
 ---

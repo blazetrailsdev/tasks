@@ -1,6 +1,6 @@
 ---
 title: "solid-cable reaches 100% on parity:test and parity:api after the v3.0.12 bump"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

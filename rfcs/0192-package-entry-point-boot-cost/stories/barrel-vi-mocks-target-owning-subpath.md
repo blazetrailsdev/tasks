@@ -1,6 +1,6 @@
 ---
 title: "tests: vi.mock ruby-compat bindings on their owning subpath, not the barrel"
-status: ready
+status: in-progress
 updated: 2026-11-26
 rfc: "0192-package-entry-point-boot-cost"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10804
+claim: "2026-11-26T15:14:49Z"
+assignee: "barrel-vi-mocks-target-owning-subpath"
 blocked-by: null
 closed-reason: null
 ---
