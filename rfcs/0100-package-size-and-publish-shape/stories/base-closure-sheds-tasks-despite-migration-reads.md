@@ -24,8 +24,8 @@ the `import { Base }` static closure (esbuild `--splitting`, 848 → 842 inputs)
 `packages/activerecord/lib/migration.ts`: the `connectionPool` getter (`:1033`,
 `migration.rb:182`), `:1494` and `:1825`. In Rails these reads are a synchronous autoload of
 `Tasks::DatabaseTasks` (`active_record.rb:173-179`). The trails `Tasks` seat loads asynchronously,
-so the PR had to add `import "./tasks/database-tasks.js"` to `migration.ts`. `migration.ts` is in
-the `Base` closure, so all four tasks modules came back (848 inputs, 4 `dist/tasks/**`).
+so the PR put a bare `import "./tasks/database-tasks.js"` back into `lib/index.ts`. Importing it from
+`migration.ts` instead fails the `import-cycles` gate, because 40 existing module-eval reads end up inside a cycle. Either way, all four tasks modules came back (848 inputs, 4 `dist/tasks/**`).
 `database-tasks.ts` imports its three siblings so that `classForAdapter`'s `constGet` can find
 them (`database_tasks.rb:582-588`).
 
