@@ -5,7 +5,9 @@ updated: 2026-11-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps:
+  - base-includes-api-not-extends-model
+  - model-test-extenders-include-model
 deps-rfc: []
 est-loc: null
 priority: null
