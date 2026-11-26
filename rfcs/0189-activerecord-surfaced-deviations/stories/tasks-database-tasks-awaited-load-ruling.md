@@ -2,7 +2,7 @@
 title: "Rule on how Tasks::DatabaseTasks' autoload is awaited (entry points vs one boot-time load)"
 status: draft
 updated: 2026-11-26
-rfc: "0100-package-size-and-publish-shape"
+rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
   - "activerecord"
