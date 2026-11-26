@@ -5,7 +5,8 @@ updated: 2026-11-26
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
-deps: []
+deps:
+  - lease-shape-for-overlapping-async-blocks
 deps-rfc: []
 est-loc: null
 priority: null
