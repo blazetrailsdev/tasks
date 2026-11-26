@@ -2,7 +2,7 @@
 title: "SQLite engines read the transaction state for deadlock detection; libsql and bun implement isDeadlock"
 status: draft
 updated: 2026-11-26
-rfc: "0187-sqlite3-gem-port"
+rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages: []
 deps: []
