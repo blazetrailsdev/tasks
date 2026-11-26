@@ -1,7 +1,7 @@
 ---
 title: "trailties-test-generators-lookup-namespace-nesting"
-status: claimed
-updated: 2026-11-25
+status: in-progress
+updated: 2026-11-26
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10770
 claim: "2026-11-25T23:45:03Z"
 assignee: "trailties-reload-rereads-database-config-for-use-postgresql"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "Replace the two namespace imports of the ruby-compat barrel on the app boot path"
-status: claimed
-updated: 2026-11-25
+status: done
+updated: 2026-11-26
 rfc: "0192-package-entry-point-boot-cost"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
+pr: trails#10771
 claim: "2026-11-25T23:29:45Z"
 assignee: "migrate-activemodel-and-arel-tests-off-the-ruby-compat-barrel"
 blocked-by: null

@@ -1,6 +1,6 @@
 ---
 title: "Small packages: close the last 1-2 tests each"
-status: in-progress
+status: done
 rfc: "0259-near-complete-packages-to-100"
 cluster: small-packages
 packages: [actioncable, actionmailbox, activejob, actionview, rack-session, sqlite3, mini-magick]
@@ -13,7 +13,7 @@ claim: "2026-11-25T23:06:53Z"
 assignee: "activesupport-api-remainder-reaches-100"
 blocked-by: null
 closed-reason: null
-updated: 2026-11-25
+updated: 2026-11-26
 ---
 
 ## Context

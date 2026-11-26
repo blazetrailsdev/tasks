@@ -1,7 +1,7 @@
 ---
 title: "activesupport: RANGE_FORMATS[:db] keeps a toFsDb helper because a JS number has no to_fs seat"
-status: ready
-updated: 2026-11-24
+status: blocked
+updated: 2026-11-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 150
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-26T00:29:56Z"
+assignee: "json-parse-skips-comments-in-one-pass-and-takes-options"
+blocked-by: "operator decision: RANGE_FORMATS[:db] sends one :db to every receiver, but trails spells it two ways: NumericWithFormat.toFs branches on Symbol (when Integer, String -> to_s(format); numeric/conversions.rb:113-140) so it takes ':db', while Time/Date toFs read DATE_FORMATS['db'] bare. Seating toFs on rbCInteger/rbCFloat is easy; sending 'db' to it hits number.toString('db') (RangeError). Needs a ruling on the Symbol spelling of to_fs formats across Numeric and Date/Time."
 closed-reason: null
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "barrel-constants-table-and-tasks-reexports-stop-pinning"
-status: in-progress
-updated: 2026-11-25
+status: blocked
+updated: 2026-11-26
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ priority: null
 pr: trails#10768
 claim: "2026-11-25T23:14:49Z"
 assignee: "activerecord-main-entry-dts-names-no-optional-adapter-peer"
-blocked-by: null
+blocked-by: "waiting on base-closure-sheds-tasks-despite-migration-reads and barrel-constants-table-reached-lazily; trails#10768 removed the re-exports, but migration.ts must import tasks/database-tasks"
 closed-reason: null
 ---
 

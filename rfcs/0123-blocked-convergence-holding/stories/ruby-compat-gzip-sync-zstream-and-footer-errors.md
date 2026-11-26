@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat-gzip-sync-zstream-and-footer-errors"
-status: ready
-updated: 2026-11-24
+status: in-progress
+updated: 2026-11-26
 rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10772
+claim: "2026-11-26T00:14:45Z"
+assignee: "ruby-compat-gzip-sync-zstream-and-footer-errors"
 blocked-by: null
 closed-reason: null
 ---

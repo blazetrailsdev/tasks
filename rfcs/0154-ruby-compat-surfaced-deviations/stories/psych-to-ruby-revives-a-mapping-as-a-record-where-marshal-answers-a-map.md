@@ -1,7 +1,7 @@
 ---
 title: "psych-to-ruby-revives-a-mapping-as-a-record-where-marshal-answers-a-map"
 status: ready
-updated: 2026-11-24
+updated: 2026-11-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "Files the boot loads by name resolve .ts then .js in a compiled tree"
-status: in-progress
-updated: 2026-11-25
+status: done
+updated: 2026-11-26
 rfc: "0258-ship-compiled-javascript"
 cluster: null
 packages: ["trailties", "actionpack", "activerecord"]

@@ -1,6 +1,6 @@
 ---
 title: "Port activestorage's v8.0.5.2 playlist analyzer tests"
-status: claimed
+status: done
 updated: 2026-11-26
 rfc: "0256-rails-8-0-5-2-burn-down"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#10769
 claim: "2026-11-26T00:00:07Z"
 assignee: "activestorage-playlist-analyzer-tests"
 blocked-by: null

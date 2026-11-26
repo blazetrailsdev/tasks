@@ -1,7 +1,7 @@
 ---
 title: "Thor, SQLite3 and I18n errors drop hand-rolled message/to_s pairs onto Exception#message"
-status: ready
-updated: 2026-11-24
+status: claimed
+updated: 2026-11-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: ["ruby-compat", "trailties"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-26T00:29:56Z"
+assignee: "json-parse-skips-comments-in-one-pass-and-takes-options"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: rb_exec_getargs ports rb_check_argv (arity, [program, argv0], NUL byte)"
-status: ready
-updated: 2026-11-24
+status: claimed
+updated: 2026-11-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-26T00:29:56Z"
+assignee: "json-parse-skips-comments-in-one-pass-and-takes-options"
 blocked-by: null
 closed-reason: null
 ---

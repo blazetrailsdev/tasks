@@ -1,7 +1,7 @@
 ---
 title: "withConnection: ratify or converge the pending-checkout join arm"
-status: ready
-updated: 2026-11-25
+status: claimed
+updated: 2026-11-26
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-26T00:44:43Z"
+assignee: "with-connection-pending-checkout-join-needs-ruling"
 blocked-by: null
 closed-reason: null
 ---

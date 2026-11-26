@@ -1,7 +1,7 @@
 ---
 title: "rbObjClone takes a fast path for plain data fields, and Relation#clone uses it"
 status: ready
-updated: 2026-11-24
+updated: 2026-11-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []

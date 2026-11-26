@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat-kernel-at-exit"
-status: ready
-updated: 2026-11-24
+status: blocked
+updated: 2026-11-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-26T00:29:56Z"
+assignee: "json-parse-skips-comments-in-one-pass-and-takes-options"
+blocked-by: "operator decision: Kernel#at_exit is already ported (process-adapter.ts atExit, LIFO over onExit). What remains is Pidfile's block, whose delete is async fs (hard rule: async fs only), and Node's exit event runs synchronously, so an async at_exit block needs a decided shape (beforeExit-awaited end procs, a Thread, or a sync-fs exception)."
 closed-reason: null
 ---
 

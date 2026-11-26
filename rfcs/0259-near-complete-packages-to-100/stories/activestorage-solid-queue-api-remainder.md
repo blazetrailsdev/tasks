@@ -1,7 +1,7 @@
 ---
 title: "activestorage-solid-queue-api-remainder"
-status: in-progress
-updated: 2026-11-25
+status: done
+updated: 2026-11-26
 rfc: "0259-near-complete-packages-to-100"
 cluster: null
 packages: []

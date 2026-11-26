@@ -1,7 +1,7 @@
 ---
 title: "model-is-an-includable-concern"
 status: ready
-updated: 2026-11-25
+updated: 2026-11-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []

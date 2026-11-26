@@ -1,7 +1,7 @@
 ---
 title: "msgpack: CoreExt#to_msgpack sends to_msgpack_with_packer instead of calling it"
-status: ready
-updated: 2026-11-25
+status: closed
+updated: 2026-11-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 50
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-26T00:29:56Z"
+assignee: "json-parse-skips-comments-in-one-pass-and-takes-options"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: the premise that only host typing blocks a direct call is wrong. CoreExt#toMsgpack is installed on rbCNilClass, rbCTrueClass, rbCFalseClass, rbCFloat, rbCInteger, rbCString and rbCSymbol, whose receivers are JS primitives (null, true, 1, 'x'); rbFSend calls toMsgpack with this bound to the primitive, and null.toMsgpackWithPacker / (1).toMsgpackWithPacker has no property to read, since trails installs nothing on native prototypes (CLAUDE.md, 'Core extensions are not installed on native prototypes'). The send is the only dispatch that reaches rbModDefineMethod's class-table seat for a primitive self."
 ---
 
 ## Context
