@@ -33,7 +33,9 @@ re-exports `JobRuntime`, so it stays.
 
 ## Acceptance criteria
 
-1. Every module in the barrel's table seats its own row, or the table is reached lazily, so
-   `constants.generated.ts` no longer statically imports every module.
+1. The barrel's `constants.generated.ts` statically imports no module the `import { Base }` closure
+   would otherwise shake: dropping the table import leaves the static-closure input count unchanged.
+   (Rows are read synchronously by `rbModName`, so a lazy table is not possible; the remaining rows'
+   modules are all reached by the barrel's own exports.)
 2. `dist/trailties/job-runtime.js` is not in the `import { Base }` static closure (esbuild,
    `--splitting`, shipped `sideEffects`), and the input count is recorded in `measurements.md`.
