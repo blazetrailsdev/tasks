@@ -1,6 +1,6 @@
 ---
 title: "vitest finds no test files for the other project under Bun"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0252-bun-runtime-support"
 cluster: null

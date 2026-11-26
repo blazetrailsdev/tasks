@@ -1,6 +1,6 @@
 ---
 title: "Publish through npm trusted publishing (OIDC) and retire NPM_TOKEN"
-status: draft
+status: ready
 updated: 2026-11-26
 rfc: "0100-package-size-and-publish-shape"
 cluster: null

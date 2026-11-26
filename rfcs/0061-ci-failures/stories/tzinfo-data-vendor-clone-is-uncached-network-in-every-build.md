@@ -1,6 +1,6 @@
 ---
 title: "tzinfo-data-vendor-clone-is-uncached-network-in-every-build"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0061-ci-failures"
 cluster: null

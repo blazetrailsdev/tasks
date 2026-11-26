@@ -1,6 +1,6 @@
 ---
 title: "Make the workspace typecheck under typescript-5 so typedoc can drop skipErrorChecking"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0061-ci-failures"
 cluster: null

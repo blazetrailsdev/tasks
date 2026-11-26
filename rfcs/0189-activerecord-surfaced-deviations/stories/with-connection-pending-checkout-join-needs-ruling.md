@@ -1,6 +1,6 @@
 ---
 title: "withConnection: ratify or converge the pending-checkout join arm"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

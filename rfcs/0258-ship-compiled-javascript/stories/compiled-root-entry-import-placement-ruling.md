@@ -1,6 +1,6 @@
 ---
 title: "compiled-root-entry-import-placement-ruling"
-status: draft
+status: ready
 updated: 2026-11-26
 rfc: "0258-ship-compiled-javascript"
 cluster: null

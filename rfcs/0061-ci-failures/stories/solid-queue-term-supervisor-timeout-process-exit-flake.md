@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-term-supervisor-timeout-process-exit-flake"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0061-ci-failures"
 cluster: null

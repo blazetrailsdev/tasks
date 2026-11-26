@@ -1,6 +1,6 @@
 ---
 title: "trails server, bin/jobs and db:prepare boot from the trails build entry when it exists"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0258-ship-compiled-javascript"
 cluster: null

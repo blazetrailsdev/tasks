@@ -1,7 +1,7 @@
 ---
 title: "nokogiri-libxml2-wasm-export-missing-c-functions"
-status: claimed
-updated: 2026-11-25
+status: ready
+updated: 2026-11-26
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 1
 pr: null
-claim: "2026-11-25T15:14:41Z"
-assignee: "nokogiri-libxml2-wasm-export-missing-c-functions"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

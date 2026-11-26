@@ -1,6 +1,6 @@
 ---
 title: "Playground smoke runs on example-only PRs and in Firefox and WebKit"
-status: ready
+status: claimed
 updated: 2026-11-26
 rfc: "0247-website-refresh"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-26T10:44:44Z"
+assignee: "playground-bundle-size-and-unused-mailer-chunk"
 blocked-by: null
 closed-reason: null
 ---

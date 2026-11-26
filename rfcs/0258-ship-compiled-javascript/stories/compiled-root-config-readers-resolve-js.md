@@ -1,6 +1,6 @@
 ---
 title: "compiled-root-config-readers-resolve-js"
-status: draft
+status: ready
 updated: 2026-11-26
 rfc: "0258-ship-compiled-javascript"
 cluster: null

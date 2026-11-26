@@ -1,6 +1,6 @@
 ---
 title: "nokogiri: XML::Document extends XML::Node"
-status: ready
+status: done
 updated: 2026-11-26
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10790
+claim: "2026-11-26T10:14:47Z"
+assignee: "nokogiri-gumbo-fragment-context-form-walk-and-encoding"
 blocked-by: null
 closed-reason: null
 ---

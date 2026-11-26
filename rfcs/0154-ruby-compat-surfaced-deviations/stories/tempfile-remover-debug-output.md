@@ -1,6 +1,6 @@
 ---
 title: "tempfile-remover-debug-output"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

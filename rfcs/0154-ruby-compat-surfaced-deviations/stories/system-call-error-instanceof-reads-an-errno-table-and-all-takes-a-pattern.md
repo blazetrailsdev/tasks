@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: SystemCallError instanceof reads an errno table; Enumerator#isAll takes a pattern"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
