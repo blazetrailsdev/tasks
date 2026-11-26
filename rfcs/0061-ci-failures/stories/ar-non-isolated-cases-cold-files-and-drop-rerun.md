@@ -1,5 +1,5 @@
 ---
-title: "ar-non-isolated-cases-cold-files-and-drop-rerun"
+title: "AR non-isolated cases: fix the five cold-module files, collect a week of re-runs, drop the re-run"
 status: draft
 updated: 2026-11-26
 rfc: "0061-ci-failures"
@@ -18,35 +18,43 @@ closed-reason: null
 
 ## Context
 
-The PR that closed `ar-non-isolated-cases-leaks-shrink-isolated-list-and-drop-rerun`
-found the dominant leak: `test/support/test-setup-dy.ts`'s shared-fork re-entry
-reset tables and `FixtureSet`'s cache but not `TestFixtures`'
-`alreadyLoadedFixtures` (`lib/test-fixtures.ts:118`, Rails'
-`@@already_loaded_fixtures`, `vendor/rails/v8.0.5.2/activerecord/lib/active_record/test_fixtures.rb:121-131`),
-so a later file with the same fixture key skipped loading against emptied
-tables (`RecordNotFound` in `Fixture#find`). With that fixed, 54 of the 59
-`AR_ISOLATED_CASES` files passed in one shared fork and left the list. Five
-still fail there and stay listed:
+trails#10800 found the main shared-fork leak. `test/support/test-setup-dy.ts`
+re-entry did not clear `TestFixtures`' `alreadyLoadedFixtures`
+(`lib/test-fixtures.ts:118`, Rails' `@@already_loaded_fixtures`,
+`vendor/rails/v8.0.5.2/activerecord/lib/active_record/test_fixtures.rb:121-131`).
+With that fixed, `AR_ISOLATED_CASES` went from 61 files to 7. Five files still
+fail in a shared fork. Each one asserts on state that a fresh module graph has
+and a shared fork does not. What each one reads:
 
-- `cases/canonical-model-seats.trails.test.ts`
-- `cases/cold-model-construction.trails.test.ts`
-- `cases/encryption/message-pack-message-serializer.trails.test.ts`
-- `cases/enum-cold-schema.trails.test.ts`
-- `cases/support/template-stamp.trails.test.ts`
+- `cases/canonical-model-seats.trails.test.ts`: "seats every canonical model's
+  constant" raises `NameError: uninitialized constant Admin::Account`
+  (`:30`). An earlier file in the fork removes or replaces a `TopLevel`
+  constant seat (`rbModRemoveConst` / `constSet`), and the model modules
+  that seat it are not evaluated again.
+- `cases/cold-model-construction.trails.test.ts` and
+  `cases/enum-cold-schema.trails.test.ts`: each expects a model's schema to be
+  unreflected and gets a `Column`. The class-level schema memos
+  (`_columnsHash`, `_schemaLoaded`) and the pool's `SchemaCache` were warmed
+  by an earlier file, and nothing resets them on a canonical model.
+- `cases/encryption/message-pack-message-serializer.trails.test.ts`: asserts
+  that `active_support/message_pack` is not loaded. An earlier file loaded
+  it, and module load state cannot be undone in a shared module graph.
+- `cases/support/template-stamp.trails.test.ts`: three snapshot-width
+  assertions. They read the template stamp table, which an earlier file's
+  boot or schema step already wrote.
 
-`scripts/ci/ar-non-isolated-cases.sh` now emits a `::warning title=AR
-non-isolated re-run::<file>` annotation per re-run file, so the re-run list
-can be collected from the check-run annotations of `main` runs. The scheduled
-and dispatched SQLite runs skip the non-isolated step and run every case
-isolated (`AR_SPLIT=all`).
+`scripts/ci/ar-non-isolated-cases.sh` emits a
+`::warning title=AR non-isolated re-run::<file>` annotation for each file it
+re-runs. The scheduled and dispatched runs of all three adapter lanes skip
+the non-isolated step and run every case isolated (`AR_SPLIT=all`).
 
 ## Acceptance criteria
 
-- Each of the five files above is fixed to restore what it reads cold (or
-  its dependence on a fresh module graph is shown and it stays listed with
-  the reason in the config comment).
-- The re-run annotations on `main` over a week are collected across the
-  SQLite, PostgreSQL and MariaDB lanes, and each leaker (not the victim) is
-  fixed.
-- Once a week of `main` shows zero re-runs, the re-run is removed from
-  `scripts/ci/ar-non-isolated-cases.sh`, so a non-isolated failure is a red.
+- For each file above, the leak is fixed: the test resets what it reads
+  cold, or the writer restores it. The file then leaves the list.
+  `message-pack-message-serializer` can stay listed only if the test needs a
+  fresh module graph by construction; if so, the config records that.
+- Collect the re-run annotations from `main` over a week, across the SQLite,
+  PostgreSQL and MariaDB lanes. Identify each leaker (not the victim) and fix it.
+- Once a week of `main` runs shows zero re-runs, remove the re-run from
+  `scripts/ci/ar-non-isolated-cases.sh`, so that a non-isolated failure is a red.

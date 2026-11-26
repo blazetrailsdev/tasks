@@ -56,10 +56,7 @@ leaves the next file with fresh modules and a stale `globalThis` boot record
   `teardown`; read the Rails test at
   `vendor/rails/v8.0.5.2/activerecord/test/cases/` for the file first) and
   removed from the list, or split into its own story naming the leak.
-- The files the script re-ran on `main` over a week of runs are collected from
-  the job logs, and each leaker (not the victim) is identified and fixed.
-- Once the re-run count on `main` is zero across the three adapter lanes for a
-  week, the re-run in `scripts/ci/ar-non-isolated-cases.sh` is removed, so a
-  non-isolated failure is a red.
+- The week of re-run data and removing the re-run moved to
+  `ar-non-isolated-cases-cold-files-and-drop-rerun`.
 - A scheduled or labelled lane runs the same cases isolated, so a test that
   passes only because of a leak is caught.
