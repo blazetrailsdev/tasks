@@ -2,7 +2,7 @@
 title: "sqlite3: expo execBatch answers REAL text for PRAGMA/RETURNING readers"
 status: blocked
 updated: 2026-11-22
-rfc: "0187-sqlite3-gem-port"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
