@@ -5,7 +5,8 @@ updated: 2026-11-26
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []
-deps: []
+deps:
+  - isolation-harness-cache-store-is-mem-cache-store
 deps-rfc: []
 est-loc: null
 priority: null
