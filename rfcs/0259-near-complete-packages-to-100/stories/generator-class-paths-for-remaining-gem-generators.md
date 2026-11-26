@@ -1,6 +1,6 @@
 ---
 title: "Seat the generator class paths of solid-cache, actiontext, actionmailbox and stimulus"
-status: ready
+status: in-progress
 updated: 2026-11-25
 rfc: "0259-near-complete-packages-to-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10767
+claim: "2026-11-25T23:06:53Z"
+assignee: "activesupport-api-remainder-reaches-100"
 blocked-by: null
 closed-reason: null
 ---

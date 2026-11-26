@@ -1,6 +1,6 @@
 ---
 title: "sqlite-connect-fails-in-read-only-db-dir"
-status: draft
+status: closed
 updated: 2026-11-25
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: 'FALSIFIED: Rails 8.0.5.1 fails dbs_test''s db:drop bad-permissions test the same way as non-root (WAL needs a writable directory); parked under packages/trailties/CLAUDE.md, "A sqlite db:drop in a read-only directory fails upstream too".'
 ---
 
 ## Context

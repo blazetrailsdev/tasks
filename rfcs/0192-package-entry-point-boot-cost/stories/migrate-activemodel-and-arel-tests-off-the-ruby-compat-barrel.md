@@ -1,6 +1,6 @@
 ---
 title: "activemodel and arel tests off the ruby-compat barrel"
-status: ready
+status: claimed
 updated: 2026-11-25
 rfc: "0192-package-entry-point-boot-cost"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 500
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-25T23:29:45Z"
+assignee: "migrate-activemodel-and-arel-tests-off-the-ruby-compat-barrel"
 blocked-by: null
 closed-reason: null
 ---

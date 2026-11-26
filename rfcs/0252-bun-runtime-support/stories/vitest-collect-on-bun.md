@@ -1,6 +1,6 @@
 ---
 title: "vitest-collect-on-bun"
-status: draft
+status: ready
 updated: 2026-11-25
 rfc: "0252-bun-runtime-support"
 cluster: null

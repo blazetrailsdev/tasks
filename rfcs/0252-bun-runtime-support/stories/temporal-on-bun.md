@@ -1,6 +1,6 @@
 ---
 title: "temporal-on-bun"
-status: blocked
+status: in-progress
 updated: 2026-11-25
 rfc: "0252-bun-runtime-support"
 cluster: null
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10766
 claim: "2026-11-25T21:17:55Z"
 assignee: "temporal-on-bun"
-blocked-by: "Operator decision: Bun 1.3.6 has no global Temporal and date.ts:3958 'extends Temporal.ZonedDateTime' at module eval; the only in-scope fix is a Temporal polyfill loaded by BunProcessAdapter (@js-temporal/polyfill, as examples/browser-sqlite and react-native-notes already do app-side), which is a new third-party runtime dep the worker rules forbid. Needs a ruling: library dep vs app-installed polyfill vs wait for Bun Temporal."
+blocked-by: null
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "activerecord-main-entry-dts-names-no-optional-adapter-peer"
-status: ready
+status: in-progress
 updated: 2026-11-25
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10768
+claim: "2026-11-25T23:14:49Z"
+assignee: "activerecord-main-entry-dts-names-no-optional-adapter-peer"
 blocked-by: null
 closed-reason: null
 ---

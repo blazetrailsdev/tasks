@@ -1,6 +1,6 @@
 ---
 title: "trailties: a reloaded model re-reads config/database.ts, so use_postgresql can follow boot"
-status: ready
+status: closed
 updated: 2026-11-25
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-25T23:45:03Z"
+assignee: "trailties-reload-rereads-database-config-for-use-postgresql"
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: Rails re-reads database.yml through on_load(:active_record) firing at Base's lazy first load (activerecord/lib/active_record/railtie.rb:256-261), not through reload; tracked as trailties-active-record-load-hook-runs-at-first-base-reference."
 ---
 
 ## Context
