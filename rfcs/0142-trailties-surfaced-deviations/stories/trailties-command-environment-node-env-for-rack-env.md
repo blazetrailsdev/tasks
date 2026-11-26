@@ -1,6 +1,6 @@
 ---
 title: "trailties: Command.environment reads NODE_ENV in Rails' RACK_ENV slot"
-status: draft
+status: in-progress
 updated: 2026-11-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10811
+claim: "2026-11-26T17:44:43Z"
+assignee: "trailties-command-environment-node-env-for-rack-env"
 blocked-by: null
 closed-reason: null
 ---

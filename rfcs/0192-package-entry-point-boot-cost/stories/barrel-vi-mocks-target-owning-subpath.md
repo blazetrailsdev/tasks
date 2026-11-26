@@ -1,6 +1,6 @@
 ---
 title: "tests: vi.mock ruby-compat bindings on their owning subpath, not the barrel"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0192-package-entry-point-boot-cost"
 cluster: null

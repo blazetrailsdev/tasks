@@ -1,6 +1,6 @@
 ---
 title: "activerecord: top-level test/cases files off the ruby-compat barrel"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0192-package-entry-point-boot-cost"
 cluster: null

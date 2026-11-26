@@ -1,6 +1,6 @@
 ---
 title: "response-body-does-not-buffer-readable-stream"
-status: draft
+status: ready
 updated: 2026-11-26
 rfc: "0259-near-complete-packages-to-100"
 cluster: null

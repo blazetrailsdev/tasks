@@ -1,6 +1,6 @@
 ---
 title: "Playground: per-tab storage, find in the editor, readable framework traces"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0247-website-refresh"
 cluster: null

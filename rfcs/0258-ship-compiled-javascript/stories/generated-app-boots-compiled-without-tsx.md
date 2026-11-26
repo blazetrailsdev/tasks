@@ -1,7 +1,7 @@
 ---
 title: "End to end: a generated app built and run with production dependencies only, no tsx"
-status: ready
-updated: 2026-11-25
+status: in-progress
+updated: 2026-11-26
 rfc: "0258-ship-compiled-javascript"
 cluster: null
 packages: ["trailties"]
@@ -9,9 +9,9 @@ deps: ["generated-app-ships-compiled"]
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10812
+claim: "2026-11-26T17:14:43Z"
+assignee: "generated-app-boots-compiled-without-tsx"
 blocked-by: null
 closed-reason: null
 ---
