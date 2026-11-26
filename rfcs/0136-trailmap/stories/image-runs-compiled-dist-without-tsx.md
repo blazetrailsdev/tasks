@@ -1,7 +1,7 @@
 ---
 title: "The trailmap image runs its compiled dist/ under plain node, with no tsx or typescript at run time"
-status: draft
-updated: 2026-11-24
+status: ready
+updated: 2026-11-26
 rfc: "0136-trailmap"
 cluster: null
 packages: []

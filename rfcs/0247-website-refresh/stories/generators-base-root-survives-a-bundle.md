@@ -1,6 +1,6 @@
 ---
 title: "generators-base-root-survives-a-bundle"
-status: ready
+status: in-progress
 updated: 2026-11-26
 rfc: "0247-website-refresh"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10822
+claim: "2026-11-26T22:34:25Z"
+assignee: "generators-base-root-survives-a-bundle"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "RFC page: a long-running discussion session tab, parked when idle and resumed on demand"
-status: draft
-updated: 2026-11-19
+status: ready
+updated: 2026-11-26
 rfc: "0136-trailmap"
 cluster: null
 packages: []

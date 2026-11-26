@@ -1,7 +1,7 @@
 ---
 title: "Morph the fleet list with Turbo's idiomorph, and land #195's other review fixes"
-status: draft
-updated: 2026-11-22
+status: ready
+updated: 2026-11-26
 rfc: "0136-trailmap"
 cluster: null
 packages: []

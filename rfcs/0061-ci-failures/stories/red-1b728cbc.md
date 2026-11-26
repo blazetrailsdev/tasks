@@ -1,6 +1,6 @@
 ---
 title: "Rails API/Test Comparison failing on main @1b728cbc"
-status: ready
+status: closed
 updated: 2026-11-26
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,10 +10,10 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-26T22:26:16Z"
+assignee: "red-1b728cbc"
 blocked-by: null
-closed-reason: null
+closed-reason: "conventions-doc gate: docs/ruby-ts-conventions.md went stale with #10818 (nokogiri scoped skips); already fixed on main by #10820, which regenerated it. Local regen on 1354a9bdd1 yields no diff."
 ---
 
 ## Context

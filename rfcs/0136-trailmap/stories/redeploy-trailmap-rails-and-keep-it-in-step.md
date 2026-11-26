@@ -1,7 +1,7 @@
 ---
 title: "Redeploy trailmap-rails from main (stale pre-0243 build lists 0 audits) and keep the twin in step"
-status: draft
-updated: 2026-11-21
+status: ready
+updated: 2026-11-26
 rfc: "0136-trailmap"
 cluster: null
 packages: []

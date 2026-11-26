@@ -1,7 +1,7 @@
 ---
 title: "ringo: audit the callers of the bare /spawn, then retire it or route it through the start script"
-status: draft
-updated: 2026-11-19
+status: ready
+updated: 2026-11-26
 rfc: "0136-trailmap"
 cluster: null
 packages: []

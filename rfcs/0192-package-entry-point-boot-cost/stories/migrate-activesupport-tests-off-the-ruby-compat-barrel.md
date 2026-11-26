@@ -1,6 +1,6 @@
 ---
 title: "activesupport tests: migrate 168 ruby-compat barrel imports to subpaths"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0192-package-entry-point-boot-cost"
 cluster: null

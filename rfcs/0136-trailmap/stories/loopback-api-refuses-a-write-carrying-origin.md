@@ -1,7 +1,7 @@
 ---
 title: "The loopback API refuses a write carrying Origin, so an html audit's script cannot post to a verb"
-status: draft
-updated: 2026-11-20
+status: ready
+updated: 2026-11-26
 rfc: "0136-trailmap"
 cluster: null
 packages: []

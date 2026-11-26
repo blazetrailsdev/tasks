@@ -1,7 +1,7 @@
 ---
 title: "trailmap: warm Active Storage's model schemas at boot"
-status: draft
-updated: 2026-11-19
+status: ready
+updated: 2026-11-26
 rfc: "0136-trailmap"
 cluster: null
 packages: []

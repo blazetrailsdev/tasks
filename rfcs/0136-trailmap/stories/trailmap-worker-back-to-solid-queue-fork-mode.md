@@ -1,7 +1,7 @@
 ---
 title: "Return trailmap's worker to Solid Queue fork mode once trails#10600 is vendored"
-status: draft
-updated: 2026-11-22
+status: ready
+updated: 2026-11-26
 rfc: "0136-trailmap"
 cluster: null
 packages: []

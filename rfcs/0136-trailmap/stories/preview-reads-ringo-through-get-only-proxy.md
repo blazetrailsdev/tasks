@@ -1,7 +1,7 @@
 ---
 title: "Previews read ringo through a GET-only proxy"
-status: draft
-updated: 2026-11-24
+status: ready
+updated: 2026-11-26
 rfc: "0136-trailmap"
 cluster: null
 packages: []

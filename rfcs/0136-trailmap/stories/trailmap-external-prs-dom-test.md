@@ -1,7 +1,7 @@
 ---
 title: "trailmap: DOM test for the pulls tab's External inbox script"
-status: draft
-updated: 2026-11-21
+status: ready
+updated: 2026-11-26
 rfc: "0136-trailmap"
 cluster: null
 packages: []

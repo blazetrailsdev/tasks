@@ -1,6 +1,6 @@
 ---
 title: "nokogiri-xml-document-new-version-and-wrap"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "trailties: port the remaining 18 multi_dbs_test.rb tests and their lib gaps"
-status: ready
+status: claimed
 updated: 2026-11-26
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-26T22:44:51Z"
+assignee: "trailties-test-application-configuration-harness-remainder"
 blocked-by: null
 closed-reason: null
 ---
