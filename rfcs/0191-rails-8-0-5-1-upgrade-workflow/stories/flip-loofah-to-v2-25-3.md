@@ -1,6 +1,6 @@
 ---
 title: "Flip loofah to v2.25.3 and converge html5/scrub.rb"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null

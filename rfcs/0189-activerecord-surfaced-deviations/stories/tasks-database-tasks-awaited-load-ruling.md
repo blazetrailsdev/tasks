@@ -1,6 +1,6 @@
 ---
 title: "Rule on how Tasks::DatabaseTasks' autoload is awaited (entry points vs one boot-time load)"
-status: ready
+status: claimed
 updated: 2026-11-26
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: 40
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-26T19:44:44Z"
+assignee: "lease-holds-count-overlapping-blocks"
 blocked-by: null
 closed-reason: null
 ---
