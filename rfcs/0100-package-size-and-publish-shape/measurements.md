@@ -266,3 +266,16 @@ the table itself). Giving `trailties/` its own tables does not shake it: the tab
 
 `Migration` reads `ActiveRecord.Tasks.DatabaseTasks` synchronously, so `migration.ts` must import
 `tasks/database-tasks`, and that brings all four modules back (`base-closure-sheds-tasks-despite-migration-reads`).
+
+## `import { Base }` closure after `tasks/*` and `JobRuntime` left the barrel (2026-11-25)
+
+trails#10788: `lib/index.ts` no longer imports `tasks/database-tasks` (a booted app loads it from
+trailties' active-record railtie; non-booted code imports the subpath) and no longer re-exports
+`JobRuntime`, which trailties imports from `trailties/job-runtime.js` and which carries its own
+table. Method as above: `esbuild@0.28.2 --bundle --format=esm --platform=node --splitting
+--metafile`, shipped `sideEffects`.
+
+| Shape                         | Inputs (static closure) | All inputs | `dist/tasks/**` | `job-runtime` |
+| ----------------------------- | ----------------------- | ---------- | --------------- | ------------- |
+| Before (main at `b7ef88a623`) | 848                     | 1,048      | 4               | 1             |
+| After                         | 824                     | 1,048      | 0               | 0             |
