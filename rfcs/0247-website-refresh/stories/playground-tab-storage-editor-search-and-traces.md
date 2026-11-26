@@ -1,6 +1,6 @@
 ---
 title: "Playground: per-tab storage, find in the editor, readable framework traces"
-status: ready
+status: in-progress
 updated: 2026-11-26
 rfc: "0247-website-refresh"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10808
+claim: "2026-11-26T16:14:48Z"
+assignee: "playground-generators-and-example-apps"
 blocked-by: null
 closed-reason: null
 ---

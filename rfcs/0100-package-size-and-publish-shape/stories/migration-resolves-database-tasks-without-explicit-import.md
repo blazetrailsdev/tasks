@@ -1,6 +1,6 @@
 ---
 title: "Migration resolves Tasks::DatabaseTasks without an explicit subpath import"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
