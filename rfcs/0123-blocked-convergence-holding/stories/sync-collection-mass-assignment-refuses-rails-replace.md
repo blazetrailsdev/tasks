@@ -72,9 +72,16 @@ blocker; do NOT close it by rewriting the justification.
 
 ## Re-cut 2026-11-25 against RFC 0087 "Amendment 2026-11-25"
 
-Supersedes the acceptance criteria above.
+Supersedes the acceptance criteria above. Corrected 2026-11-26: the captured
+arms already run Rails' replace on main, and `syncWrite` cannot be deleted,
+because `replace` starts its query before it returns (RFC 0087 amendment,
+point 1).
 
-- [ ] `CollectionAssociation#syncWrite` / `#syncIdsWrite`, `assigningSynchronously` and `Builder::CollectionAssociation.defineWriters` are deleted; `name=` / `nameIds=` call `writer` / `idsWriter` as `builder/association.rb:112-118` and `builder/collection_association.rb` emit them.
-- [ ] Under a capture (`create`, `update`, association `build`/`create`) all three arms run Rails' replace (`collection_association.rb:242-256`), including `await Firm.create({ id: 5, clients })`.
-- [ ] A bare `new Firm({ id: 5, clients })` / `assignAttributes` raises through `assertAssignedSynchronously`, receipted `PERMANENT`; `CollectionPersistedAssignmentError` / `CollectionIdsAssignmentError` go if nothing else raises them.
-- [ ] Coverage in `collection-proxy-replace-diff.trails.test.ts` for both the captured and the bare arm.
+- [x] Under a capture, Rails' replace runs on a new owner with its primary key
+      set (`await Firm.create({ id, clients })`) and on a persisted owner
+      (`await firm.update({ clients })`), pinned in
+      `collection-proxy-replace-diff.trails.test.ts`.
+- [ ] Outside a capture, `syncWrite` / `syncIdsWrite` refuse before any I/O
+      starts, as today. Once the operator rules that refusal `PERMANENT`,
+      re-receipt both `PERMANENT` (and the builder's `@inventedArm if`) and close
+      this story `PERMANENT:`.

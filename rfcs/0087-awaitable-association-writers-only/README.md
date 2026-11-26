@@ -257,14 +257,15 @@ made the one mechanism for every assignment-time I/O
 (packages/activerecord/CLAUDE.md § "A create path awaits its block before
 saving"):
 
-1. **Writers are Rails' writers.** A generated `name=` is
-   `association(name).writer(value)` (`builder/association.rb:112-118`) for
-   every macro, and `#{singular}_ids=` is `ids_writer`. The writer returns its
-   promise when it owed I/O, and a value otherwise. There is no second,
-   synchronous writer: `HasOneAssociation#syncWrite`,
-   `CollectionAssociation#syncWrite` / `#syncIdsWrite`, the
-   `assigningSynchronously` flag and the per-macro `defineWriters` overrides
-   are deleted.
+1. **Writers are Rails' writers under a capture.** Inside a capture (point 2) a generated `name=` calls `association(name).writer(value)`
+   (`builder/association.rb:112-118`) and `#{singular}_ids=` calls
+   `ids_writer`, returning the writer's promise when it owed I/O. Outside one,
+   `CollectionAssociation#syncWrite` / `#syncIdsWrite` and
+   `HasOneAssociation#syncWrite` stay as the refusal of point 3, because
+   `replace` starts `load_target` (`collection_association.rb:244`) and the
+   deletes before it returns: a refusal raised after calling the writer would
+   leave that work running unowned. So the refusal is checked before any I/O
+   is started, and the `assigningSynchronously` branch that picks it stays.
 2. **An awaited entry point opens a capture.** `create`, `create!`,
    `Relation#create` / `first_or_create` / `first_or_initialize` /
    `find_or_initialize_by`, association `build` / `create` and `update` /
@@ -280,7 +281,7 @@ saving"):
    `record.assignAttributes({...})` whose writer returns a promise raises
    (`assertAssignedSynchronously`), naming `await record.setAttributes(...)`.
    An `after_initialize` callback returning a promise under a bare `new` raises
-   the same way. The refusal is the only deviation left, it is `PERMANENT`
+   the same way. The refusal is the only deviation left, it is to be ruled `PERMANENT`
    against "A record is built with `new Klass` only", and it never schedules or
    drops the work. `new Firm({ id: 5, clients })` raises; `await
 Firm.create({ id: 5, clients })` and `await firm.setAttributes({ clients })`
