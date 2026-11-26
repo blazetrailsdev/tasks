@@ -1,9 +1,9 @@
 ---
 rfc: "0252-bun-runtime-support"
 title: "Run trails apps on the Bun runtime"
-status: draft
+status: active
 created: 2026-11-19
-updated: 2026-11-19
+updated: 2026-11-26
 owner: "@deanmarano"
 packages:
   - "ruby-compat"
