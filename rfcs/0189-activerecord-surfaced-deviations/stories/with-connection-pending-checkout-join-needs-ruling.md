@@ -6,7 +6,8 @@ rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
 packages:
   - "activerecord"
-deps: []
+deps:
+  - lease-connection-holds-pending-checkout
 deps-rfc: []
 est-loc: null
 priority: null
