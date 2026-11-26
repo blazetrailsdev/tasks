@@ -1,6 +1,6 @@
 ---
 title: "solid-queue: fork-supervisor test waits run to the full 10s where the supervisor never registers"
-status: draft
+status: in-progress
 updated: 2026-11-26
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10775
+claim: "2026-11-26T01:14:45Z"
+assignee: "ci-ar-adapter-shards-dynamic-work-queue"
 blocked-by: null
 closed-reason: null
 ---

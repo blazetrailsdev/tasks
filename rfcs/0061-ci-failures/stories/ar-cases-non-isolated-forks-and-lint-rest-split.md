@@ -1,6 +1,6 @@
 ---
 title: "CI: run Active Record cases in non-isolated forks and split Lint (rest)"
-status: draft
+status: in-progress
 updated: 2026-11-26
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10765
+claim: "2026-11-26T01:02:21Z"
+assignee: "ar-cases-non-isolated-forks-and-lint-rest-split"
 blocked-by: null
 closed-reason: null
 ---

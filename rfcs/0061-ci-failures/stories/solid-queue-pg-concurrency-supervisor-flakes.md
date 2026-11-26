@@ -1,7 +1,7 @@
 ---
 title: "solid-queue-pg-concurrency-supervisor-flakes"
 status: ready
-updated: 2026-11-25
+updated: 2026-11-26
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

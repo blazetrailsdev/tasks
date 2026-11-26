@@ -1,6 +1,6 @@
 ---
 title: "Write the bump ledger one row per line to stop burndown merge conflicts"
-status: claimed
+status: done
 updated: 2026-11-26
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#10774
 claim: "2026-11-26T00:59:44Z"
 assignee: "bump-ledger-one-row-per-line"
 blocked-by: null

@@ -1,7 +1,7 @@
 ---
 title: "SolidQueue::UpdateGenerator migration templates are plain .ts files"
-status: ready
-updated: 2026-11-25
+status: claimed
+updated: 2026-11-26
 rfc: "0259-near-complete-packages-to-100"
 cluster: null
 packages: [solid-queue]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-26T01:59:56Z"
+assignee: "activesupport-api-remainder-reaches-100"
 blocked-by: null
 closed-reason: null
 ---

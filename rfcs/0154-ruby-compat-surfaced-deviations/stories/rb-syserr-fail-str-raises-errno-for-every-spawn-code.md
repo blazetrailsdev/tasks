@@ -1,6 +1,6 @@
 ---
 title: "rb-syserr-fail-str-raises-errno-for-every-spawn-code"
-status: claimed
+status: in-progress
 updated: 2026-11-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10773
 claim: "2026-11-26T00:29:56Z"
 assignee: "json-parse-skips-comments-in-one-pass-and-takes-options"
 blocked-by: null

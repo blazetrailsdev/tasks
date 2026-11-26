@@ -1,7 +1,7 @@
 ---
 title: "expo-sqlite engine's busy loop moves onto Database#_busyRetry"
-status: ready
-updated: 2026-11-25
+status: in-progress
+updated: 2026-11-26
 rfc: "0187-sqlite3-gem-port"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#10776
+claim: "2026-11-26T01:45:14Z"
+assignee: "sqlite3-expo-engine-busy-retry-on-the-gem-layer"
 blocked-by: null
 closed-reason: null
 ---
