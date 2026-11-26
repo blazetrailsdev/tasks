@@ -1,6 +1,6 @@
 ---
 title: "flip-nokogiri-to-v1-19-7"
-status: ready
+status: in-progress
 updated: 2026-11-26
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10799
+claim: "2026-11-26T13:14:43Z"
+assignee: "flip-nokogiri-to-v1-19-7"
 blocked-by: null
 closed-reason: null
 ---

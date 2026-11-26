@@ -1,6 +1,6 @@
 ---
 title: "nokogiri-1-19-7-nokogiri"
-status: draft
+status: ready
 updated: 2026-11-26
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null

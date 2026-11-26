@@ -1,6 +1,6 @@
 ---
 title: "AR non-isolated cases: fix the state leaks, shrink AR_ISOLATED_CASES, drop the isolated re-run"
-status: ready
+status: in-progress
 updated: 2026-11-26
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10800
+claim: "2026-11-26T13:44:45Z"
+assignee: "ar-non-isolated-cases-leaks-shrink-isolated-list-and-drop-rerun"
 blocked-by: null
 closed-reason: null
 ---
