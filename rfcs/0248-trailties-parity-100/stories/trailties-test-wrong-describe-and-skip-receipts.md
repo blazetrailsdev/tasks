@@ -1,6 +1,6 @@
 ---
 title: "trailties: fix the 16 wrong describes and receipt or port the 42 skips"
-status: claimed
+status: in-progress
 updated: 2026-11-26
 rfc: "0248-trailties-parity-100"
 cluster: receipts
@@ -9,7 +9,7 @@ deps: [trailties-test-move-misplaced-tests]
 deps-rfc: []
 est-loc: 350
 priority: null
-pr: null
+pr: trails#10780
 claim: "2026-11-26T02:44:42Z"
 assignee: "long-running-commands-boot-from-the-build-entry"
 blocked-by: null

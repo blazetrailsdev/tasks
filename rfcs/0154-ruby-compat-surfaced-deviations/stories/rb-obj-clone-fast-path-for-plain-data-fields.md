@@ -1,6 +1,6 @@
 ---
 title: "rbObjClone takes a fast path for plain data fields, and Relation#clone uses it"
-status: claimed
+status: in-progress
 updated: 2026-11-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
+pr: trails#10786
 claim: "2026-11-26T02:59:51Z"
 assignee: "kernel-integer-bignum-callers-narrow-with-number"
 blocked-by: null

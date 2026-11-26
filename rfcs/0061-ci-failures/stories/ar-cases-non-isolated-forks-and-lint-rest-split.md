@@ -1,6 +1,6 @@
 ---
 title: "CI: run Active Record cases in non-isolated forks and split Lint (rest)"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0061-ci-failures"
 cluster: null

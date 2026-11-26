@@ -1,6 +1,6 @@
 ---
 title: "trails server, bin/jobs and db:prepare boot from the trails build entry when it exists"
-status: claimed
+status: in-progress
 updated: 2026-11-26
 rfc: "0258-ship-compiled-javascript"
 cluster: null
@@ -9,7 +9,7 @@ deps: ["named-boot-loads-resolve-ts-then-js"]
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
+pr: trails#10780
 claim: "2026-11-26T02:44:42Z"
 assignee: "long-running-commands-boot-from-the-build-entry"
 blocked-by: null

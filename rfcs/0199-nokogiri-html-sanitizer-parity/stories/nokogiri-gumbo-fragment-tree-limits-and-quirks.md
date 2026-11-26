@@ -1,7 +1,7 @@
 ---
 title: "nokogiri-gumbo-fragment-tree-limits-and-quirks"
-status: in-progress
-updated: 2026-11-25
+status: done
+updated: 2026-11-26
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
 packages: []

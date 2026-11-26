@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-term-supervisor-timeout-process-exit-flake"
-status: ready
+status: in-progress
 updated: 2026-11-26
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10783
+claim: "2026-11-26T03:14:44Z"
+assignee: "ci-ar-adapter-shards-dynamic-work-queue"
 blocked-by: null
 closed-reason: null
 ---

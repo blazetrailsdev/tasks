@@ -1,6 +1,6 @@
 ---
 title: "AR non-isolated cases: fix the state leaks, shrink AR_ISOLATED_CASES, drop the isolated re-run"
-status: draft
+status: ready
 updated: 2026-11-26
 rfc: "0061-ci-failures"
 cluster: null

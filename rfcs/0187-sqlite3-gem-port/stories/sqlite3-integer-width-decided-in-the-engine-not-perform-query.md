@@ -1,6 +1,6 @@
 ---
 title: "SQLite integer width is decided in the engine, not in perform_query"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0187-sqlite3-gem-port"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat-logger-log-device-file-arms"
-status: claimed
+status: ready
 updated: 2026-11-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-26T02:59:51Z"
-assignee: "kernel-integer-bignum-callers-narrow-with-number"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

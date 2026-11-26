@@ -1,6 +1,6 @@
 ---
 title: "Kernel#Integer bignum callers narrow with Number() where Ruby keeps an Integer"
-status: claimed
+status: blocked
 updated: 2026-11-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,10 +9,10 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
+pr: trails#10786
 claim: "2026-11-26T02:59:51Z"
 assignee: "kernel-integer-bignum-callers-narrow-with-number"
-blocked-by: null
+blocked-by: "waiting on time-obj2vint-keeps-a-bignum-year (Time year Bignum); other sites converged in trails#10786"
 closed-reason: null
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "pg-copy-out-get-copy-data-and-discard-arm"
-status: in-progress
-updated: 2026-11-25
+status: done
+updated: 2026-11-26
 rfc: "0186-pg-gem-port"
 cluster: null
 packages: []

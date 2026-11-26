@@ -1,7 +1,7 @@
 ---
 title: "vitest-collect-on-bun"
-status: ready
-updated: 2026-11-25
+status: in-progress
+updated: 2026-11-26
 rfc: "0252-bun-runtime-support"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10782
+claim: "2026-11-26T03:17:36Z"
+assignee: "vitest-collect-on-bun"
 blocked-by: null
 closed-reason: null
 ---

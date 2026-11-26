@@ -1,6 +1,6 @@
 ---
 title: "activesupport-api-remainder-reaches-100"
-status: claimed
+status: in-progress
 updated: 2026-11-26
 rfc: "0259-near-complete-packages-to-100"
 cluster: null
@@ -10,7 +10,7 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10781
 claim: "2026-11-26T01:59:56Z"
 assignee: "activesupport-api-remainder-reaches-100"
 blocked-by: null

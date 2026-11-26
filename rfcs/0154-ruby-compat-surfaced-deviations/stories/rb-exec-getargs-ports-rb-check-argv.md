@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: rb_exec_getargs ports rb_check_argv (arity, [program, argv0], NUL byte)"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

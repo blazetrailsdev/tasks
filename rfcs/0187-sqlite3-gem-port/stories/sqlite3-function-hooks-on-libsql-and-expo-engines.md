@@ -1,6 +1,6 @@
 ---
 title: "Function, aggregate and authorizer hooks on the libsql and expo-sqlite engines"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0187-sqlite3-gem-port"
 cluster: null
