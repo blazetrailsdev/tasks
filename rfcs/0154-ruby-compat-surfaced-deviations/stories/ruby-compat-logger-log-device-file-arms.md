@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat-logger-log-device-file-arms"
-status: ready
+status: blocked
 updated: 2026-11-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-26T12:14:48Z"
+assignee: "model-is-an-includable-concern"
+blocked-by: "operator decision: Logger::LogDevice#write is synchronous (Logger#add calls it sync), so check_shift_log / create_logfile / lock_shift_log need synchronous fs (stat, rename, flock, File.open integer modes) against the async-fs-only rule; also File::WRONLY/APPEND/CREAT/EXCL values are platform fcntl constants the fs adapter does not expose"
 closed-reason: null
 ---
 

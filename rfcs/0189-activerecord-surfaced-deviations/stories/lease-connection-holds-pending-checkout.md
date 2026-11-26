@@ -1,6 +1,6 @@
 ---
 title: "lease-connection-holds-pending-checkout"
-status: ready
+status: in-progress
 updated: 2026-11-26
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10798
+claim: "2026-11-26T12:44:42Z"
+assignee: "lease-connection-holds-pending-checkout"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "compiled-root-config-readers-resolve-js"
-status: claimed
+status: in-progress
 updated: 2026-11-26
 rfc: "0258-ship-compiled-javascript"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10796
 claim: "2026-11-26T11:57:14Z"
 assignee: "compiled-root-config-readers-resolve-js"
 blocked-by: null

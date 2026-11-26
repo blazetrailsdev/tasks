@@ -1,6 +1,6 @@
 ---
 title: "solid-cable reaches 100% on parity:test and parity:api after the v3.0.12 bump"
-status: draft
+status: in-progress
 updated: 2026-11-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10795
+claim: "2026-11-26T12:09:16Z"
+assignee: "solid-cable-parity-100-after-3-0-12-bump"
 blocked-by: null
 closed-reason: null
 ---

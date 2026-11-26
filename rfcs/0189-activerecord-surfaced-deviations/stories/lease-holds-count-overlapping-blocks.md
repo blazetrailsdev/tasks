@@ -1,6 +1,6 @@
 ---
 title: "lease-holds-count-overlapping-blocks"
-status: draft
+status: ready
 updated: 2026-11-26
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null

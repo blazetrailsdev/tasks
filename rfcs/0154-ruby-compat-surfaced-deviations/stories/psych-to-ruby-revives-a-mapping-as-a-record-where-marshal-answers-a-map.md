@@ -1,6 +1,6 @@
 ---
 title: "psych-to-ruby-revives-a-mapping-as-a-record-where-marshal-answers-a-map"
-status: ready
+status: in-progress
 updated: 2026-11-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10797
+claim: "2026-11-26T12:14:48Z"
+assignee: "model-is-an-includable-concern"
 blocked-by: null
 closed-reason: null
 ---
