@@ -1,10 +1,10 @@
 ---
-title: "trailties-test-rake-multi-dbs-part-4"
+title: "trailties: port the remaining 18 multi_dbs_test.rb tests and their lib gaps"
 status: draft
 updated: 2026-11-26
 rfc: "0248-trailties-parity-100"
 cluster: null
-packages: []
+packages: [trailties]
 deps: []
 deps-rfc: []
 est-loc: null
