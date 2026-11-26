@@ -1,7 +1,7 @@
 ---
 title: "Playground bundle: find why actionmailer and libxml2 ship, and shrink it"
-status: draft
-updated: 2026-11-25
+status: ready
+updated: 2026-11-26
 rfc: "0247-website-refresh"
 cluster: null
 packages: []

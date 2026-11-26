@@ -1,7 +1,7 @@
 ---
 title: "nokogiri: XML::Document extends XML::Node"
-status: draft
-updated: 2026-11-25
+status: ready
+updated: 2026-11-26
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
 packages: []

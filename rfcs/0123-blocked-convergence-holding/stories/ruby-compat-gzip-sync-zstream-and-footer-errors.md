@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat-gzip-sync-zstream-and-footer-errors"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0123-blocked-convergence-holding"
 cluster: null

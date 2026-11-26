@@ -1,7 +1,7 @@
 ---
 title: "inlined-from-gate-skips-modules-include-modules-at-skips"
-status: draft
-updated: 2026-11-25
+status: ready
+updated: 2026-11-26
 rfc: "0259-near-complete-packages-to-100"
 cluster: null
 packages: []

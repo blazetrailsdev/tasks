@@ -1,6 +1,6 @@
 ---
 title: "Kernel#Integer bignum callers narrow with Number() where Ruby keeps an Integer"
-status: ready
+status: claimed
 updated: 2026-11-26
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 60
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-26T02:59:51Z"
+assignee: "kernel-integer-bignum-callers-narrow-with-number"
 blocked-by: null
 closed-reason: null
 ---

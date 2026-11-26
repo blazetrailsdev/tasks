@@ -1,7 +1,7 @@
 ---
 title: "temporal-on-bun"
-status: in-progress
-updated: 2026-11-25
+status: done
+updated: 2026-11-26
 rfc: "0252-bun-runtime-support"
 cluster: null
 packages: []

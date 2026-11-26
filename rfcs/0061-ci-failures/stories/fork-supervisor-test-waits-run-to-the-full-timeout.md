@@ -1,6 +1,6 @@
 ---
 title: "solid-queue: fork-supervisor test waits run to the full 10s where the supervisor never registers"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0061-ci-failures"
 cluster: null

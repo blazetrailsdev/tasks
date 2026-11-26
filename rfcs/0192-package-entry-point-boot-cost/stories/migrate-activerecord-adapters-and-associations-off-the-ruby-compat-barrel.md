@@ -1,7 +1,7 @@
 ---
 title: "activerecord: connection-adapters and associations off the ruby-compat barrel"
-status: ready
-updated: 2026-11-25
+status: in-progress
+updated: 2026-11-26
 rfc: "0192-package-entry-point-boot-cost"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 700
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10777
+claim: "2026-11-26T02:14:41Z"
+assignee: "migrate-activerecord-adapters-and-associations-off-the-ruby-compat-barrel"
 blocked-by: null
 closed-reason: null
 ---

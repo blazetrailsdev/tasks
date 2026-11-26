@@ -1,7 +1,7 @@
 ---
 title: "Playground smoke runs on example-only PRs and in Firefox and WebKit"
-status: draft
-updated: 2026-11-25
+status: ready
+updated: 2026-11-26
 rfc: "0247-website-refresh"
 cluster: null
 packages: []

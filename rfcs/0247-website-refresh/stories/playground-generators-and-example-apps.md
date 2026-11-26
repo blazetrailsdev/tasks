@@ -1,7 +1,7 @@
 ---
 title: "Playground runs trails generators and offers more than one example app"
-status: draft
-updated: 2026-11-25
+status: ready
+updated: 2026-11-26
 rfc: "0247-website-refresh"
 cluster: null
 packages: []

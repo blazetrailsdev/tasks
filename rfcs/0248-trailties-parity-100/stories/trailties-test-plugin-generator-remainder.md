@@ -1,7 +1,7 @@
 ---
 title: "trailties-test-plugin-generator-remainder"
-status: ready
-updated: 2026-11-25
+status: done
+updated: 2026-11-26
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10778
+claim: "2026-11-26T02:29:50Z"
+assignee: "trailties-test-application-configuration-harness-remainder"
 blocked-by: null
 closed-reason: null
 ---
