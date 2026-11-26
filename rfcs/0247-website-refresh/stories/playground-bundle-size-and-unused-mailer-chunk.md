@@ -1,6 +1,6 @@
 ---
 title: "Playground bundle: find why actionmailer and libxml2 ship, and shrink it"
-status: claimed
+status: done
 updated: 2026-11-26
 rfc: "0247-website-refresh"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
+pr: trails#10791
 claim: "2026-11-26T10:44:44Z"
 assignee: "playground-bundle-size-and-unused-mailer-chunk"
 blocked-by: null

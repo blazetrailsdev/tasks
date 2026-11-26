@@ -1,7 +1,7 @@
 ---
 title: "trailties: port the remaining 20 multi_dbs_test.rb tests and their lib gaps"
 status: ready
-updated: 2026-11-24
+updated: 2026-11-26
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []

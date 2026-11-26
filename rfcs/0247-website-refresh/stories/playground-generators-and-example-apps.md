@@ -1,6 +1,6 @@
 ---
 title: "Playground runs trails generators and offers more than one example app"
-status: claimed
+status: ready
 updated: 2026-11-26
 rfc: "0247-website-refresh"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 500
 priority: null
 pr: null
-claim: "2026-11-26T10:44:44Z"
-assignee: "playground-bundle-size-and-unused-mailer-chunk"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

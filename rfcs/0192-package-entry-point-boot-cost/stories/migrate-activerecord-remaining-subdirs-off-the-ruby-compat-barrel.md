@@ -1,7 +1,7 @@
 ---
 title: "activerecord: remaining lib subdirectories off the ruby-compat barrel"
-status: ready
-updated: 2026-11-25
+status: done
+updated: 2026-11-26
 rfc: "0192-package-entry-point-boot-cost"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 660
 priority: null
-pr: null
+pr: trails#10789
 claim: null
 assignee: null
 blocked-by: null

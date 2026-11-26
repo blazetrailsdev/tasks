@@ -1,7 +1,7 @@
 ---
 title: "trails new generates an app whose image runs compiled JavaScript"
-status: ready
-updated: 2026-11-25
+status: claimed
+updated: 2026-11-26
 rfc: "0258-ship-compiled-javascript"
 cluster: null
 packages: ["trailties"]
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-26T11:57:14Z"
+assignee: "compiled-root-config-readers-resolve-js"
 blocked-by: null
 closed-reason: null
 ---

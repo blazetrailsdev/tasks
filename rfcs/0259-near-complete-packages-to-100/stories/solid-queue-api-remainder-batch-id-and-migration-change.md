@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-api-remainder-batch-id-and-migration-change"
-status: ready
+status: in-progress
 updated: 2026-11-26
 rfc: "0259-near-complete-packages-to-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10794
+claim: "2026-11-26T11:03:07Z"
+assignee: "solid-queue-api-remainder-batch-id-and-migration-change"
 blocked-by: null
 closed-reason: null
 ---
