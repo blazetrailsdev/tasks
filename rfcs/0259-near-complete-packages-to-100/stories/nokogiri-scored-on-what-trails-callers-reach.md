@@ -1,6 +1,6 @@
 ---
 title: "nokogiri: score only the surface trails' callers reach"
-status: ready
+status: in-progress
 rfc: "0259-near-complete-packages-to-100"
 cluster: scoping
 packages: [nokogiri, scripts]
@@ -8,9 +8,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10818
+claim: "2026-11-26T20:44:43Z"
+assignee: "nokogiri-scored-on-what-trails-callers-reach"
 blocked-by: null
 closed-reason: null
 updated: 2026-11-26

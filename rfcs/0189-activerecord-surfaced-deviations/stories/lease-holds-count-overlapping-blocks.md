@@ -1,6 +1,6 @@
 ---
 title: "lease-holds-count-overlapping-blocks"
-status: claimed
+status: blocked
 updated: 2026-11-26
 rfc: "0189-activerecord-surfaced-deviations"
 cluster: null
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: "2026-11-26T19:44:44Z"
 assignee: "lease-holds-count-overlapping-blocks"
-blocked-by: null
+blocked-by: "awaits design story lease-shape-for-overlapping-async-blocks (operator deferred 2026-11-26; per-block fork regresses nested and concurrent leases)"
 closed-reason: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "AR non-isolated cases: fix the five cold-module files, collect a week of re-runs, drop the re-run"
-status: ready
+status: in-progress
 updated: 2026-11-26
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10817
+claim: "2026-11-26T20:14:46Z"
+assignee: "ar-non-isolated-cases-cold-files-and-drop-rerun"
 blocked-by: null
 closed-reason: null
 ---

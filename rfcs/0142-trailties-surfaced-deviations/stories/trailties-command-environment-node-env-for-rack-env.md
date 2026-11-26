@@ -1,6 +1,6 @@
 ---
 title: "trailties: Command.environment reads NODE_ENV in Rails' RACK_ENV slot"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
