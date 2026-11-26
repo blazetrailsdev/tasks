@@ -1,5 +1,5 @@
 ---
-rfc: "0000-parity-gates-catch-semantic-drift"
+rfc: "0260-parity-gates-catch-semantic-drift"
 title: "Parity gates catch the drift the Writebook port found"
 status: draft
 created: 2026-11-26
@@ -15,11 +15,7 @@ clusters:
   - parity-gates
 ---
 
-<!-- Unnumbered until merge: copy this dir to `rfcs/0000-your-slug`, keep `rfc:`
-     as 0000-your-slug and the H1 below number-free. `scripts/finalize-rfc.mjs`
-     swaps 0000 for the assigned number at merge. -->
-
-# RFC — Parity gates catch the drift the Writebook port found
+# RFC 0260 — Parity gates catch the drift the Writebook port found
 
 ## Summary
 
