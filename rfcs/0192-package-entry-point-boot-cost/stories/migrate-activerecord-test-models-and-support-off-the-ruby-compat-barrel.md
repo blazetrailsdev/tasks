@@ -1,6 +1,6 @@
 ---
 title: "activerecord: test/models and test/support off the ruby-compat barrel"
-status: ready
+status: in-progress
 updated: 2026-11-26
 rfc: "0192-package-entry-point-boot-cost"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 460
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10819
+claim: "2026-11-26T21:14:45Z"
+assignee: "migrate-activerecord-test-models-and-support-off-the-ruby-compat-barrel"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "ruby-compat: Init_Rational/Init_Numeric work in include.ts reaches narrow-subpath entries"
 status: ready
-updated: 2026-11-25
+updated: 2026-11-26
 rfc: "0192-package-entry-point-boot-cost"
 cluster: null
 packages: []

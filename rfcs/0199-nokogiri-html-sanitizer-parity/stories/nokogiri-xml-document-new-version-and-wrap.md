@@ -1,6 +1,6 @@
 ---
 title: "nokogiri-xml-document-new-version-and-wrap"
-status: ready
+status: in-progress
 updated: 2026-11-26
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 1
-pr: null
-claim: null
-assignee: null
+pr: trails#10821
+claim: "2026-11-26T21:44:43Z"
+assignee: "nokogiri-xml-document-new-version-and-wrap"
 blocked-by: null
 closed-reason: null
 ---
