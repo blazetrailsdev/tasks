@@ -263,3 +263,6 @@ The barrel's `constants.generated.ts` now pins one module the closure would othe
 `dist/trailties/job-runtime.js` (removing the barrel import drops the closure by that module and
 the table itself). Giving `trailties/` its own tables does not shake it: the table import makes
 `job-runtime` side-effecting, and `lib/index.ts` re-exports `JobRuntime`.
+
+`Migration` reads `ActiveRecord.Tasks.DatabaseTasks` synchronously, so `migration.ts` must import
+`tasks/database-tasks`, and that brings all four modules back (`base-closure-sheds-tasks-despite-migration-reads`).
