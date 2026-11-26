@@ -2,7 +2,7 @@
 title: "sqlite3-libsql-readonly-open-flag"
 status: blocked
 updated: 2026-11-23
-rfc: "0187-sqlite3-gem-port"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
