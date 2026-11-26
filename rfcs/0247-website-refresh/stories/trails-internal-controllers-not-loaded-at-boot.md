@@ -1,6 +1,6 @@
 ---
 title: "trails-internal-controllers-not-loaded-at-boot"
-status: draft
+status: ready
 updated: 2026-11-26
 rfc: "0247-website-refresh"
 cluster: null

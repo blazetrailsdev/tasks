@@ -1,6 +1,6 @@
 ---
 title: "response-body-does-not-buffer-enumerator"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0259-near-complete-packages-to-100"
 cluster: null

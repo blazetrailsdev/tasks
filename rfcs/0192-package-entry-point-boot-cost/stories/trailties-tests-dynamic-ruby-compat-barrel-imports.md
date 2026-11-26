@@ -1,6 +1,6 @@
 ---
 title: "trailties tests: dynamic ruby-compat barrel imports onto owning subpaths"
-status: draft
+status: ready
 updated: 2026-11-26
 rfc: "0192-package-entry-point-boot-cost"
 cluster: null

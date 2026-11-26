@@ -1,6 +1,6 @@
 ---
 title: "End to end: a generated app built and run with production dependencies only, no tsx"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0258-ship-compiled-javascript"
 cluster: null

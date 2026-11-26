@@ -1,7 +1,7 @@
 ---
 title: "Flip loofah to v2.25.3 and converge html5/scrub.rb"
-status: ready
-updated: 2026-11-23
+status: in-progress
+updated: 2026-11-26
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10813
+claim: "2026-11-26T18:22:28Z"
+assignee: "burn-down-stories-file-cleanly"
 blocked-by: null
 closed-reason: null
 ---

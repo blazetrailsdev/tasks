@@ -1,6 +1,6 @@
 ---
 title: "Burn down nokogiri from nokogiri v1.18.3 to v1.19.7"
-status: ready
+status: in-progress
 updated: 2026-11-26
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10813
+claim: "2026-11-26T18:22:28Z"
+assignee: "burn-down-stories-file-cleanly"
 blocked-by: null
 closed-reason: null
 ---

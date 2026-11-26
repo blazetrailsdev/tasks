@@ -1,6 +1,6 @@
 ---
 title: "Engine#loadGenerators imports generators.js by literal specifier so the playground can call it"
-status: draft
+status: ready
 updated: 2026-11-26
 rfc: "0247-website-refresh"
 cluster: null

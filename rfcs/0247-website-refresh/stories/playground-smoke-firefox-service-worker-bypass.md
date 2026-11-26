@@ -1,6 +1,6 @@
 ---
 title: "playground-smoke-firefox-service-worker-bypass"
-status: draft
+status: ready
 updated: 2026-11-26
 rfc: "0247-website-refresh"
 cluster: null
