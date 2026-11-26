@@ -1,5 +1,5 @@
 ---
-title: "nokogiri-1-19-7-nokogiri"
+title: "Burn down nokogiri from nokogiri v1.18.3 to v1.19.7"
 status: ready
 updated: 2026-11-26
 rfc: "0191-rails-8-0-5-1-upgrade-workflow"
