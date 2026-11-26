@@ -1,7 +1,7 @@
 ---
 title: "activerecord: migrate its 605 ruby-compat barrel imports to subpaths"
-status: ready
-updated: 2026-11-25
+status: in-progress
+updated: 2026-11-26
 rfc: "0192-package-entry-point-boot-cost"
 cluster: "findings"
 packages: ["activerecord", "ruby-compat"]
@@ -12,9 +12,9 @@ deps:
 deps-rfc: []
 est-loc: 650
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10789
+claim: "2026-11-26T04:44:46Z"
+assignee: "migrate-activerecord-off-the-ruby-compat-barrel"
 blocked-by: null
 ---
 

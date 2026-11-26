@@ -1,6 +1,6 @@
 ---
 title: "small-packages-reach-100-remainder"
-status: claimed
+status: ready
 updated: 2026-11-26
 rfc: "0259-near-complete-packages-to-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-26T03:44:51Z"
-assignee: "encrypted-configuration-invalid-content-error-message-override"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "encrypted-configuration-invalid-content-error-message-override"
-status: claimed
+status: in-progress
 updated: 2026-11-26
 rfc: "0259-near-complete-packages-to-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10787
 claim: "2026-11-26T03:44:51Z"
 assignee: "encrypted-configuration-invalid-content-error-message-override"
 blocked-by: null

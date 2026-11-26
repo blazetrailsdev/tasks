@@ -1,6 +1,6 @@
 ---
 title: "barrel-constants-table-reached-lazily"
-status: ready
+status: in-progress
 updated: 2026-11-26
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10788
+claim: "2026-11-26T04:14:41Z"
+assignee: "barrel-constants-table-reached-lazily"
 blocked-by: null
 closed-reason: null
 ---
