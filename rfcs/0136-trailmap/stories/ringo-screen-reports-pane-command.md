@@ -27,7 +27,7 @@ Claude Code's TUI wording would make it type `exit` into Claude.
 
 ## Acceptance criteria
 
-- ringo's screen body adds `command` (tmux `#{pane_current_command}`), with a test in btwebooks.
+- [ ] ringo's screen body adds `command` (tmux `#{pane_current_command}`), with a test in btwebooks.
 - [x] `claudeHasExited` uses `command` when it is present, and keeps the screen
       reading only as a fallback. Landed in trailmap#207, as a shell allowlist
       (bash, zsh, fish, sh, dash, ksh, tcsh, csh, nu, pwsh, xonsh; a login `-`
