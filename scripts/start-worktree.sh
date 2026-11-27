@@ -2,6 +2,11 @@
 # start-worktree.sh — spin up a fresh tasks worktree ready to work in.
 #
 # Usage: scripts/start-worktree.sh <name>
+#        scripts/start-worktree.sh --branch <existing-branch> [<name>]
+#
+# --branch checks out an EXISTING branch (local, else origin/<branch>) instead
+# of cutting a new one — used to re-attach a worker to an open PR whose
+# worktree was reaped. <name> defaults to the branch with "/" -> "-".
 #
 #   1. Fast-forwards the main worktree's view of origin/main (fetch only).
 #   2. Creates ~/github/blazetrailsdev/worktrees/<name> on a new branch <name>
@@ -15,12 +20,25 @@
 # skills linking that repo needs — tasks is just markdown + a little tooling.
 set -euo pipefail
 
-if [[ $# -ne 1 || -z "${1:-}" ]]; then
-  echo "Usage: $0 <name>" >&2
-  exit 2
+BRANCH=""
+if [[ "${1:-}" == "--branch" ]]; then
+  BRANCH="${2:-}"
+  if [[ -z "$BRANCH" || $# -gt 3 ]]; then
+    echo "Usage: $0 --branch <existing-branch> [<name>]" >&2
+    exit 2
+  fi
+  NAME="${3:-$(printf '%s' "$BRANCH" | tr '/' '-')}"
+  case "$BRANCH" in
+    -*|*..*) echo "Invalid branch name: $BRANCH" >&2; exit 2 ;;
+  esac
+else
+  if [[ $# -ne 1 || -z "${1:-}" ]]; then
+    echo "Usage: $0 <name>" >&2
+    echo "       $0 --branch <existing-branch> [<name>]" >&2
+    exit 2
+  fi
+  NAME="$1"
 fi
-
-NAME="$1"
 case "$NAME" in
   */*|*..*|"") echo "Invalid worktree name: $NAME" >&2; exit 2 ;;
 esac
@@ -59,8 +77,20 @@ git -C "$MAIN_REPO" fetch origin --prune
 # never blocks the worktree creation.
 mkdir -p "$WORKTREES_ROOT"
 
-echo "==> Creating worktree at $TARGET on new branch '$NAME' from origin/main"
-git -C "$MAIN_REPO" worktree add -b "$NAME" "$TARGET" origin/main
+if [[ -n "$BRANCH" ]]; then
+  echo "==> Creating worktree at $TARGET on existing branch '$BRANCH'"
+  if git -C "$MAIN_REPO" show-ref --verify --quiet "refs/heads/$BRANCH"; then
+    git -C "$MAIN_REPO" worktree add "$TARGET" "$BRANCH"
+  elif git -C "$MAIN_REPO" show-ref --verify --quiet "refs/remotes/origin/$BRANCH"; then
+    git -C "$MAIN_REPO" worktree add --track -b "$BRANCH" "$TARGET" "origin/$BRANCH"
+  else
+    echo "Branch $BRANCH exists neither locally nor on origin." >&2
+    exit 1
+  fi
+else
+  echo "==> Creating worktree at $TARGET on new branch '$NAME' from origin/main"
+  git -C "$MAIN_REPO" worktree add -b "$NAME" "$TARGET" origin/main
+fi
 flock -u 9
 exec 9>&-
 
@@ -75,7 +105,9 @@ cleanup_partial_worktree() {
     rm -rf "$TARGET"
     git -C "$MAIN_REPO" worktree prune 2>/dev/null || true
   fi
-  if ! git -C "$MAIN_REPO" branch -D "$NAME" 2>/dev/null; then
+  if [[ -n "$BRANCH" ]]; then
+    echo "    keeping existing branch $BRANCH (not created by this run)" >&2
+  elif ! git -C "$MAIN_REPO" branch -D "$NAME" 2>/dev/null; then
     echo "    note: branch $NAME was not deletable (already gone or never created)" >&2
   fi
 }
@@ -104,4 +136,8 @@ WORKTREE_CREATED=0  # success — disable EXIT-trap cleanup
 echo
 echo "Done. New worktree:"
 echo "  $TARGET"
-echo "  branch: $NAME (tracking nothing yet — push with: git push -u origin $NAME)"
+if [[ -n "$BRANCH" ]]; then
+  echo "  branch: $BRANCH (existing)"
+else
+  echo "  branch: $NAME (tracking nothing yet — push with: git push -u origin $NAME)"
+fi
