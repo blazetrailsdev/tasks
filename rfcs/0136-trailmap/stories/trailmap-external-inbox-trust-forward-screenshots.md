@@ -1,7 +1,7 @@
 ---
 title: "trailmap: screenshots of the External inbox's Trust and Forward states (follow-up to #190)"
 status: ready
-updated: 2026-11-26
+updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "trailmap-rails reports errors to Bugsink (sentry-rails twin of the error-reporting initializer)"
-status: ready
-updated: 2026-11-26
+status: in-progress
+updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#208
+claim: "2026-11-27T12:44:36Z"
+assignee: "deploy-from-the-ci-built-image"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,6 +1,6 @@
 ---
 title: "Deploy the image CI already built and smoke-tested (dokku git:from-image), not a rebuild on the box"
-status: ready
+status: in-progress
 updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#208
+claim: "2026-11-27T12:44:36Z"
+assignee: "deploy-from-the-ci-built-image"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "A tasks ranking change turns every trailmap PR's gate red without warning"
 status: ready
-updated: 2026-11-26
+updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null
 packages: []

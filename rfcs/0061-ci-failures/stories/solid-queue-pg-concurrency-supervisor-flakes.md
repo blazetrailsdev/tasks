@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-pg-concurrency-supervisor-flakes"
-status: claimed
+status: done
 updated: 2026-11-27
 rfc: "0061-ci-failures"
 cluster: null
