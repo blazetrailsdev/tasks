@@ -1,6 +1,6 @@
 ---
 title: "Repo Checks failing on main @bd970dec"
-status: claimed
+status: closed
 updated: 2026-11-27
 rfc: "0061-ci-failures"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: "2026-11-27T14:19:19Z"
 assignee: "red-bd970dec"
 blocked-by: null
-closed-reason: null
+closed-reason: "Not a code failure: model-is-an-includable-concern and sync-collection-mass-assignment-refuses-rails-replace were wrongly marked done (trails#10814/#10807 said they stay open), so stale-story-references flagged their live CONVERGEABLE receipts. Restored state (ready / blocked), synced to tasks main 575eea2e3; Repo Checks rerun green on 22f131e."
 ---
 
 ## Context

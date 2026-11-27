@@ -1,7 +1,7 @@
 ---
 title: "port-did-you-mean-correctable-onto-name-error"
-status: draft
-updated: 2026-09-28
+status: in-progress
+updated: 2026-11-27
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10842
+claim: "2026-11-27T15:11:05Z"
+assignee: "port-did-you-mean-correctable-onto-name-error"
 blocked-by: null
 closed-reason: null
 ---
