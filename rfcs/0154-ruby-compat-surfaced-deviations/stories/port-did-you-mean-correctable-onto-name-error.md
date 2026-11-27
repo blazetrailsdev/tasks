@@ -1,6 +1,6 @@
 ---
 title: "port-did-you-mean-correctable-onto-name-error"
-status: in-progress
+status: done
 updated: 2026-11-27
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null

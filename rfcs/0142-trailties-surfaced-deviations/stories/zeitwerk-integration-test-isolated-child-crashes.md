@@ -1,6 +1,6 @@
 ---
 title: "zeitwerk-integration.test.ts: isolated child exits silently; tracked classes and once-autoloader tests fail"
-status: draft
+status: ready
 updated: 2026-11-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null

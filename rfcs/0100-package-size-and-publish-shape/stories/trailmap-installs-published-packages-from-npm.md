@@ -1,7 +1,7 @@
 ---
 title: "trailmap installs @blazetrails/* from npm instead of vendored tarballs"
-status: blocked
-updated: 2026-11-23
+status: ready
+updated: 2026-11-27
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 80
 priority: 2
 pr: null
-claim: "2026-11-23T21:02:27Z"
-assignee: "trailmap-installs-published-packages-from-npm"
-blocked-by: "no @blazetrails/* package is on the npm registry yet (npm view @blazetrails/trails: E404, 2026-11-23); waits on first-alpha-practice-publish"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

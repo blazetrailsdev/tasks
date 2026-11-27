@@ -1,6 +1,6 @@
 ---
 title: "trailties-isolation-harness-collects-nothing-locally"
-status: draft
+status: in-progress
 updated: 2026-11-27
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10846
+claim: "2026-11-27T17:21:17Z"
+assignee: "trailties-isolation-harness-collects-nothing-locally"
 blocked-by: null
 closed-reason: null
 ---

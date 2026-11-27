@@ -1,6 +1,6 @@
 ---
 title: "trailties-test-test-schema-and-integration-remainder"
-status: ready
+status: in-progress
 updated: 2026-11-27
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10849
+claim: "2026-11-27T17:14:50Z"
+assignee: "trailties-test-application-singletons-rest"
 blocked-by: null
 closed-reason: null
 ---

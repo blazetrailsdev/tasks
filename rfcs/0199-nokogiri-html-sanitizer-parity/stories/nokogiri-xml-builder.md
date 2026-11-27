@@ -1,6 +1,6 @@
 ---
 title: "nokogiri-xml-builder"
-status: claimed
+status: in-progress
 updated: 2026-11-27
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10845
 claim: "2026-11-27T16:44:51Z"
 assignee: "nokogiri-xml-builder"
 blocked-by: null

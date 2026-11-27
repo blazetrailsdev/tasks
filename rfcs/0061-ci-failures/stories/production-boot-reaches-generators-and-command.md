@@ -1,6 +1,6 @@
 ---
 title: "production-boot-reaches-generators-and-command"
-status: draft
+status: ready
 updated: 2026-11-27
 rfc: "0061-ci-failures"
 cluster: null
