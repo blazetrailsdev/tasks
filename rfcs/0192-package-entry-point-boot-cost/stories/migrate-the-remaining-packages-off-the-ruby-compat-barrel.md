@@ -22,6 +22,8 @@ closed-reason: null
 
 Boot-graph harness (`pnpm tsx scripts/boot-graph/measure.mts`): ruby-compat still loads 205 of its 206 modules, against a target of 180. Barrel importers in the boot graph include rake, tzinfo, nokogiri, pg, sqlite3, zeitwerk and actionview.
 
+Also left by trails#10836: activejob and msgpack (dropped for the LOC ceiling), and the three `NetModule` augmentations (`mail/lib/network/retriever-methods/imap.ts`, `pop3.ts`, `net-smtp/lib/protocol.ts`), which stay on the barrel because ESLint's project service (TS 6 with source redirects) cannot resolve an augmentation of the nested subpath `@blazetrails/ruby-compat/net/protocol`.
+
 ## Acceptance criteria
 
 - [ ] `git grep 'from "@blazetrails/ruby-compat"' -- 'packages/*/lib'` returns 0, outside generator templates
