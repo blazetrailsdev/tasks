@@ -1,7 +1,7 @@
 ---
 title: "Schedule AR adapter shard files from a shared run-time work queue"
-status: ready
-updated: 2026-11-26
+status: in-progress
+updated: 2026-11-27
 rfc: "0061-ci-failures"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10835
+claim: "2026-11-27T04:14:44Z"
+assignee: "ci-ar-adapter-shards-dynamic-work-queue"
 blocked-by: null
 closed-reason: null
 ---

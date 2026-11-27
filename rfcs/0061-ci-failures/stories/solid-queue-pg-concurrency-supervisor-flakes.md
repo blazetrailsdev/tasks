@@ -1,7 +1,7 @@
 ---
 title: "solid-queue-pg-concurrency-supervisor-flakes"
-status: ready
-updated: 2026-11-26
+status: claimed
+updated: 2026-11-27
 rfc: "0061-ci-failures"
 cluster: null
 packages: []
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-27T04:14:44Z"
+assignee: "ci-ar-adapter-shards-dynamic-work-queue"
 blocked-by: null
 closed-reason: null
 ---
