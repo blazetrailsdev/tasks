@@ -5,7 +5,8 @@ updated: 2026-11-26
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - nokogiri-libxml2-wasm-export-missing-c-functions
 deps-rfc: []
 est-loc: null
 priority: null
