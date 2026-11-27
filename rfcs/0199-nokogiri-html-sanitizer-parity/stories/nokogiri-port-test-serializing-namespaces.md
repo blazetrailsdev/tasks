@@ -5,7 +5,8 @@ updated: 2026-11-26
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
 packages: []
-deps: []
+deps:
+  - nokogiri-xml-builder
 deps-rfc: []
 est-loc: 150
 priority: null
