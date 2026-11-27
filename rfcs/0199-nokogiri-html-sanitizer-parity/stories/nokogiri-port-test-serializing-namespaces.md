@@ -1,6 +1,6 @@
 ---
 title: "Port nokogiri v1.19.7 test_serializing_namespaces.rb"
-status: draft
+status: ready
 updated: 2026-11-26
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Port do_xinclude's safe_copy arm onto XML::Node"
-status: draft
+status: ready
 updated: 2026-11-26
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null

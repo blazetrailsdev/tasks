@@ -1,6 +1,6 @@
 ---
 title: "trailties-test-application-configuration-part-7b"
-status: claimed
+status: ready
 updated: 2026-11-26
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -11,8 +11,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-26T22:44:51Z"
-assignee: "trailties-test-application-configuration-harness-remainder"
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

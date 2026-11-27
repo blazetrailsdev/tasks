@@ -1,6 +1,6 @@
 ---
 title: "generators-base-root-survives-a-bundle"
-status: in-progress
+status: done
 updated: 2026-11-26
 rfc: "0247-website-refresh"
 cluster: null

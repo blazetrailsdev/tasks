@@ -1,6 +1,6 @@
 ---
 title: "AR PostgreSQL non-isolated cases step runs 126-309s and one shard exceeded baseline"
-status: ready
+status: claimed
 updated: 2026-11-26
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 80
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-26T23:44:44Z"
+assignee: "ar-postgres-non-isolated-cases-step-slower-than-sqlite"
 blocked-by: null
 closed-reason: null
 ---

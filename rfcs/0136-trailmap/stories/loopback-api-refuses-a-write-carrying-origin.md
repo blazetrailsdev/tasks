@@ -1,6 +1,6 @@
 ---
 title: "The loopback API refuses a write carrying Origin, so an html audit's script cannot post to a verb"
-status: ready
+status: in-progress
 updated: 2026-11-26
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 60
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#205
+claim: "2026-11-26T23:14:37Z"
+assignee: "bump-the-ringo-pin-for-rfc-session-endpoints"
 blocked-by: null
 closed-reason: null
 ---
