@@ -1,7 +1,7 @@
 ---
 title: "playground-smoke-firefox-service-worker-bypass"
-status: ready
-updated: 2026-11-26
+status: blocked
+updated: 2026-11-27
 rfc: "0247-website-refresh"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-27T02:14:44Z"
+assignee: "playground-smoke-firefox-service-worker-bypass"
+blocked-by: "upstream Playwright: Juggler (Firefox 1.60) never lets a service worker control a reloaded page; minimal repro in trails#10828 body"
 closed-reason: null
 ---
 

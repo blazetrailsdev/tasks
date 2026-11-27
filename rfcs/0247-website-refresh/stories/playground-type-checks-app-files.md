@@ -1,7 +1,7 @@
 ---
 title: "Playground reports type errors, not only syntax errors"
-status: ready
-updated: 2026-11-26
+status: in-progress
+updated: 2026-11-27
 rfc: "0247-website-refresh"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 400
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10828
+claim: "2026-11-27T02:14:44Z"
+assignee: "playground-smoke-firefox-service-worker-bypass"
 blocked-by: null
 closed-reason: null
 ---

@@ -1,7 +1,7 @@
 ---
 title: "trailties-test-zeitwerk-integration-and-loading-remainder"
-status: ready
-updated: 2026-11-24
+status: in-progress
+updated: 2026-11-27
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10830
+claim: "2026-11-27T02:44:58Z"
+assignee: "trailties-test-application-configuration-harness-remainder"
 blocked-by: null
 closed-reason: null
 ---

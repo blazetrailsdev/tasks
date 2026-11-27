@@ -1,6 +1,6 @@
 ---
 title: "XML::Document wrap forwards init args and runs initialize"
-status: in-progress
+status: done
 updated: 2026-11-27
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null

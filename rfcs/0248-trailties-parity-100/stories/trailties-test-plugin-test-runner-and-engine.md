@@ -1,7 +1,7 @@
 ---
 title: "trailties-test-plugin-test-runner-and-engine"
 status: ready
-updated: 2026-11-26
+updated: 2026-11-27
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []

@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-engines-without-sqlite3-interrupt"
-status: in-progress
+status: done
 updated: 2026-11-27
 rfc: "0259-near-complete-packages-to-100"
 cluster: null
