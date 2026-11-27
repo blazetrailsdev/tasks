@@ -4,7 +4,9 @@ status: draft
 updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null
-packages: []
+est-loc: 120
+packages:
+  - website
 deps:
   - move-browser-sqlite-into-website-as-playground
 deps-rfc: []
