@@ -5,7 +5,8 @@ updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null
 packages: []
-deps: []
+deps:
+  - move-browser-sqlite-into-website-as-playground
 deps-rfc: []
 est-loc: null
 priority: null
