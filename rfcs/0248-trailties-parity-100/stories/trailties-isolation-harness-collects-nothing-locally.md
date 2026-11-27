@@ -46,5 +46,5 @@ remainder stories).
 
 ## Acceptance criteria
 
-- [ ] Root-cause why the ruby-compat import cycle stalls or leaves `TopLevel` undefined under vite-node when entered concurrently or at `dir.ts`, and fix the cycle rather than the entry order.
+- [ ] Root-cause why the ruby-compat import cycle stalls or leaves `TopLevel` undefined under vite-node, and stop the trailties globalSetup files from entering it concurrently. The cycle fix itself is `ruby-compat-variable-reads-toplevel-at-module-eval`.
 - [ ] `pnpm exec vitest run --project trailties packages/trailties/test/application/version.test.ts` and `... test-runner.test.ts -t "run single file$"` pass locally.
