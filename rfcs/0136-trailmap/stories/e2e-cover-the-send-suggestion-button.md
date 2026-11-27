@@ -1,6 +1,6 @@
 ---
 title: "dashboard-e2e covers the Send suggestion button and its repaint"
-status: in-progress
+status: done
 updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null

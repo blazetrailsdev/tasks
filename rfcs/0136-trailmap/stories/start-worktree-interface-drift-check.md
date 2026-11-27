@@ -1,6 +1,6 @@
 ---
 title: "Nothing catches trailmap's start-worktree.sh drifting from the trails interface ringo calls"
-status: in-progress
+status: done
 updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null

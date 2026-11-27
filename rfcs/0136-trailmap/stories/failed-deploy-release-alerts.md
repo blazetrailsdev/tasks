@@ -1,6 +1,6 @@
 ---
 title: "A failed dokku release task alerts instead of silently leaving the old image live"
-status: in-progress
+status: done
 updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null

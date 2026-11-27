@@ -1,6 +1,6 @@
 ---
 title: "ringo: the pane screen body carries the pane's command"
-status: draft
+status: closed
 updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "duplicate of ringo-screen-reports-pane-command, which stays open for its ringo half (trailmap half in trailmap#209)"
 ---
 
 ## Context

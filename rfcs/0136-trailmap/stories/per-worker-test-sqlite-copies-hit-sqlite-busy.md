@@ -1,6 +1,6 @@
 ---
 title: "Per-worker test.sqlite3-N copies hit SQLITE_BUSY after an interrupted run"
-status: in-progress
+status: done
 updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null

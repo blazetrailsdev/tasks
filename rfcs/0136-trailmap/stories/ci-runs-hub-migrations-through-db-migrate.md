@@ -1,6 +1,6 @@
 ---
 title: "CI runs pending hub migrations through bin/trails db:prepare over a non-empty hub"
-status: in-progress
+status: done
 updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null

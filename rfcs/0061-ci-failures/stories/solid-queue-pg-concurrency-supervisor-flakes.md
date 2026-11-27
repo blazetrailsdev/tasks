@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10810
 claim: "2026-11-27T11:14:50Z"
 assignee: "solid-queue-pg-concurrency-supervisor-flakes"
 blocked-by: null

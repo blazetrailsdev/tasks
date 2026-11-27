@@ -1,6 +1,6 @@
 ---
 title: "Full test runs flake on an empty Vite manifest"
-status: in-progress
+status: done
 updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null

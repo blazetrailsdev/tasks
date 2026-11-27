@@ -1,6 +1,6 @@
 ---
 title: "Repo Checks failing on main @bd970dec"
-status: ready
+status: claimed
 updated: 2026-11-27
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-27T14:19:19Z"
+assignee: "red-bd970dec"
 blocked-by: null
 closed-reason: null
 ---

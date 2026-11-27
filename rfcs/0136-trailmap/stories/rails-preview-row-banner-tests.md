@@ -1,6 +1,6 @@
 ---
 title: "Rails twin tests the preview row and banner"
-status: in-progress
+status: done
 updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null

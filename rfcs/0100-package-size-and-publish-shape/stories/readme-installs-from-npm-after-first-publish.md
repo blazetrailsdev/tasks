@@ -1,6 +1,6 @@
 ---
 title: "README installs @blazetrails/* from npm once the first alpha is published"
-status: draft
+status: ready
 updated: 2026-11-27
 rfc: "0100-package-size-and-publish-shape"
 cluster: null

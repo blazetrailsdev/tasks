@@ -1,6 +1,6 @@
 ---
 title: "ringo's pane screen reports the pane's command, so End pane stops scraping"
-status: in-progress
+status: ready
 updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: trailmap#209
-claim: "2026-11-27T13:44:36Z"
-assignee: "failed-deploy-release-alerts"
+pr: null
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

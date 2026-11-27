@@ -1,6 +1,6 @@
 ---
 title: "model-is-an-includable-concern"
-status: done
+status: ready
 updated: 2026-11-27
 rfc: "0154-ruby-compat-surfaced-deviations"
 cluster: null
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: null
 priority: null
-pr: trails#10814
-claim: "2026-11-26T18:44:55Z"
-assignee: "model-is-an-includable-concern"
+pr: null
+claim: null
+assignee: null
 blocked-by: null
 closed-reason: null
 ---

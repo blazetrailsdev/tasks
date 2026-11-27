@@ -1,6 +1,6 @@
 ---
 title: "script/tandem normalises trails' /vite-dev/assets script paths"
-status: in-progress
+status: done
 updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "Mass-assigned collection replace refuses three Rails call sites instead of performing them"
-status: done
+status: blocked
 updated: 2026-11-27
 rfc: "0123-blocked-convergence-holding"
 cluster: null
@@ -13,7 +13,7 @@ priority: null
 pr: trails#10807
 claim: "2026-11-26T15:25:22Z"
 assignee: "sync-collection-mass-assignment-refuses-rails-replace"
-blocked-by: null
+blocked-by: "operator ruling on making the bare-new refusal PERMANENT (trails#10807)"
 closed-reason: null
 ---
 
