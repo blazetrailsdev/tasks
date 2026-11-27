@@ -1,7 +1,7 @@
 ---
 title: "Port do_xinclude's safe_copy arm onto XML::Node"
-status: ready
-updated: 2026-11-26
+status: blocked
+updated: 2026-11-27
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
 packages: []
@@ -11,9 +11,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
-blocked-by: null
+claim: "2026-11-27T01:14:45Z"
+assignee: "nokogiri-do-xinclude-safe-copy-arm"
+blocked-by: "story nokogiri-libxml2-wasm-export-missing-c-functions: libxml2-wasm 0.7.1 exports no _xmlDocCopyNode, _xmlReplaceNode or _xmlXIncludeProcessTreeFlags, which safe_process_xinclude (ext/nokogiri/xml_node.c:2265) calls"
 closed-reason: null
 ---
 

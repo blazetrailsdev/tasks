@@ -1,7 +1,7 @@
 ---
 title: "XML::Document wrap forwards init args and runs initialize"
-status: ready
-updated: 2026-11-26
+status: in-progress
+updated: 2026-11-27
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10827
+claim: "2026-11-27T01:14:45Z"
+assignee: "nokogiri-do-xinclude-safe-copy-arm"
 blocked-by: null
 closed-reason: null
 ---
