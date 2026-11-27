@@ -1,6 +1,6 @@
 ---
 title: "solid-queue-pg-concurrency-supervisor-flakes"
-status: ready
+status: claimed
 updated: 2026-11-27
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-27T11:14:50Z"
+assignee: "solid-queue-pg-concurrency-supervisor-flakes"
 blocked-by: null
 closed-reason: null
 ---
