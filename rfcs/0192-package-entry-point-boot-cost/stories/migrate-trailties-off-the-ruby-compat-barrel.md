@@ -1,6 +1,6 @@
 ---
 title: "trailties: migrate its 213 ruby-compat barrel imports to subpaths"
-status: in-progress
+status: done
 updated: 2026-11-27
 rfc: "0192-package-entry-point-boot-cost"
 cluster: "findings"

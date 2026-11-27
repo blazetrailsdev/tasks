@@ -1,7 +1,7 @@
 ---
 title: "Page scripts survive Turbo Drive, so their pages drop the reload opt-out"
 status: ready
-updated: 2026-11-26
+updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "Two tests fail on the dev box on main and pass in CI"
-status: in-progress
-updated: 2026-11-26
+status: done
+updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null
 packages: []

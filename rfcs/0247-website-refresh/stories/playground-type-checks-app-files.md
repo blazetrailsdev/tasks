@@ -1,6 +1,6 @@
 ---
 title: "Playground reports type errors, not only syntax errors"
-status: in-progress
+status: done
 updated: 2026-11-27
 rfc: "0247-website-refresh"
 cluster: null

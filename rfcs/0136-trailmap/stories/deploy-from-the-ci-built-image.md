@@ -1,7 +1,7 @@
 ---
 title: "Deploy the image CI already built and smoke-tested (dokku git:from-image), not a rebuild on the box"
 status: ready
-updated: 2026-11-26
+updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null
 packages: []

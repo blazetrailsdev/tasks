@@ -1,7 +1,7 @@
 ---
 title: "preview.sh: sweep finds stray DNS records; nginx failure messages say what's true"
-status: in-progress
-updated: 2026-11-26
+status: done
+updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null
 packages: []

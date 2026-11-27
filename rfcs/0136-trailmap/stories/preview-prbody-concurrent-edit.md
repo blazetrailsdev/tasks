@@ -1,7 +1,7 @@
 ---
 title: "preview.sh prBody does not overwrite a concurrent PR body edit"
-status: in-progress
-updated: 2026-11-26
+status: done
+updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null
 packages: []

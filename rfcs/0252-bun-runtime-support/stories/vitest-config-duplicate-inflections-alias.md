@@ -1,6 +1,6 @@
 ---
 title: "vitest.config.ts declares the inflections alias twice"
-status: ready
+status: done
 updated: 2026-11-27
 rfc: "0252-bun-runtime-support"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 4
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10833
+claim: "2026-11-27T03:44:45Z"
+assignee: "vitest-config-duplicate-inflections-alias"
 blocked-by: null
 closed-reason: null
 ---

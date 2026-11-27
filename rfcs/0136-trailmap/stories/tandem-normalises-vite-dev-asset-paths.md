@@ -1,7 +1,7 @@
 ---
 title: "script/tandem normalises trails' /vite-dev/assets script paths"
-status: ready
-updated: 2026-11-26
+status: in-progress
+updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 10
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#206
+claim: "2026-11-27T03:14:41Z"
+assignee: "ci-runs-hub-migrations-through-db-migrate"
 blocked-by: null
 closed-reason: null
 ---

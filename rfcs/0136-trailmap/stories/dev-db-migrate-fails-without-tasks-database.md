@@ -1,7 +1,7 @@
 ---
 title: "trailmap: dev db:migrate dies with 'No database file specified' when TASKS_DATABASE is unset"
-status: in-progress
-updated: 2026-11-26
+status: done
+updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null
 packages: []
