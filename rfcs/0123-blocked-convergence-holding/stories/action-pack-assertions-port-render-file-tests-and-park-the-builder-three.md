@@ -1,6 +1,6 @@
 ---
 title: "actionpack: port the two render_file tests, park the three Builder tests permanently"
-status: in-progress
+status: done
 updated: 2026-11-27
 rfc: "0123-blocked-convergence-holding"
 cluster: null

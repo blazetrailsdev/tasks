@@ -1,6 +1,6 @@
 ---
 title: "migrate-the-remaining-packages-off-the-ruby-compat-barrel"
-status: ready
+status: in-progress
 updated: 2026-11-27
 rfc: "0192-package-entry-point-boot-cost"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10844
+claim: "2026-11-27T16:14:48Z"
+assignee: "generator-templates-import-ruby-compat-by-subpath"
 blocked-by: null
 closed-reason: null
 ---

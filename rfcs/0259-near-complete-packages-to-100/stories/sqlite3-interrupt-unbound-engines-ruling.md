@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-interrupt-unbound-engines-ruling"
-status: claimed
+status: in-progress
 updated: 2026-11-27
 rfc: "0259-near-complete-packages-to-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10843
 claim: "2026-11-27T15:33:37Z"
 assignee: "sqlite3-interrupt-unbound-engines-ruling"
 blocked-by: null
