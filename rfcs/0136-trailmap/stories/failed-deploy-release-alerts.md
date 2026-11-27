@@ -1,6 +1,6 @@
 ---
 title: "A failed dokku release task alerts instead of silently leaving the old image live"
-status: ready
+status: in-progress
 updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 50
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#209
+claim: "2026-11-27T13:44:36Z"
+assignee: "failed-deploy-release-alerts"
 blocked-by: null
 closed-reason: null
 ---

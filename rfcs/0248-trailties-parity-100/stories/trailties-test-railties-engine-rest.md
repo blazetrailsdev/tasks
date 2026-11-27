@@ -1,6 +1,6 @@
 ---
 title: "trailties-test-railties-engine-rest"
-status: ready
+status: claimed
 updated: 2026-11-27
 rfc: "0248-trailties-parity-100"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-27T13:14:48Z"
+assignee: "trailties-test-application-test-runner-part-1-remainder"
 blocked-by: null
 closed-reason: null
 ---
