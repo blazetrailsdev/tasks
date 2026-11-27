@@ -1,7 +1,7 @@
 ---
 title: "AR non-isolated cases: fix the five cold-module files, collect a week of re-runs, drop the re-run"
-status: in-progress
-updated: 2026-11-26
+status: done
+updated: 2026-11-27
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

@@ -1,7 +1,7 @@
 ---
 title: "Deploy ringo's RFC session and rfc-spawns endpoints and bump the vendored ringo pin"
 status: ready
-updated: 2026-11-26
+updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null
 packages: []

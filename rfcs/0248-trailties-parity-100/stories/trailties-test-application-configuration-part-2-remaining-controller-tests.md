@@ -1,7 +1,7 @@
 ---
 title: "trailties-test-application-configuration-part-2-remaining-controller-tests"
-status: in-progress
-updated: 2026-11-26
+status: done
+updated: 2026-11-27
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []
