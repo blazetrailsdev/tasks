@@ -1,7 +1,7 @@
 ---
 title: "trailties: migrate its 213 ruby-compat barrel imports to subpaths"
-status: ready
-updated: 2026-11-26
+status: in-progress
+updated: 2026-11-27
 rfc: "0192-package-entry-point-boot-cost"
 cluster: "findings"
 packages: ["trailties", "ruby-compat"]
@@ -12,9 +12,9 @@ deps:
 deps-rfc: []
 est-loc: 240
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10826
+claim: "2026-11-27T00:44:44Z"
+assignee: "migrate-trailties-off-the-ruby-compat-barrel"
 blocked-by: null
 ---
 

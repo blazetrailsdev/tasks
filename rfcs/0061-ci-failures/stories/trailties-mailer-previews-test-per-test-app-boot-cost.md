@@ -1,7 +1,7 @@
 ---
 title: "Cut mailer-previews.test.ts per-test app boot cost and fold it back into the trailties shards"
-status: claimed
-updated: 2026-11-26
+status: in-progress
+updated: 2026-11-27
 rfc: "0061-ci-failures"
 cluster: null
 packages: []
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: 120
 priority: null
-pr: null
+pr: trails#10824
 claim: "2026-11-26T23:44:44Z"
 assignee: "ar-postgres-non-isolated-cases-step-slower-than-sqlite"
 blocked-by: null

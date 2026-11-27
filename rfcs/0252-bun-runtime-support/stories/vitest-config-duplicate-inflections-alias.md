@@ -1,7 +1,7 @@
 ---
 title: "vitest.config.ts declares the inflections alias twice"
-status: draft
-updated: 2026-11-26
+status: ready
+updated: 2026-11-27
 rfc: "0252-bun-runtime-support"
 cluster: null
 packages: []
