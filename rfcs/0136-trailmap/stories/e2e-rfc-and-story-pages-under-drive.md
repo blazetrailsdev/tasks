@@ -1,6 +1,6 @@
 ---
 title: "e2e drives the RFC and story pages under Turbo Drive: visits, form submits, refusals, Back"
-status: draft
+status: ready
 updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null

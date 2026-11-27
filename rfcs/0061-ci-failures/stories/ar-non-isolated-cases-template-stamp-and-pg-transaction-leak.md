@@ -1,7 +1,7 @@
 ---
 title: "ar-non-isolated-cases-template-stamp-and-pg-transaction-leak"
-status: draft
-updated: 2026-11-26
+status: ready
+updated: 2026-11-27
 rfc: "0061-ci-failures"
 cluster: null
 packages: []

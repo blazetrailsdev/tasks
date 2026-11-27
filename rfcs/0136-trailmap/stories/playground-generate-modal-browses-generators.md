@@ -1,6 +1,6 @@
 ---
 title: "playground-generate-modal-browses-generators"
-status: draft
+status: ready
 updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null

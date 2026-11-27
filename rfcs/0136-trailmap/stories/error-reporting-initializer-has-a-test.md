@@ -1,6 +1,6 @@
 ---
 title: "trailmap: config/initializers/error-reporting.ts gets a test for its set and unset SENTRY_DSN branches"
-status: draft
+status: ready
 updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null

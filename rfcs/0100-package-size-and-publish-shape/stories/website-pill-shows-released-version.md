@@ -1,6 +1,6 @@
 ---
 title: "website-pill-shows-released-version"
-status: draft
+status: done
 updated: 2026-11-27
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10852
+claim: "2026-11-27T18:19:46Z"
+assignee: "website-pill-shows-released-version"
 blocked-by: null
 closed-reason: null
 ---

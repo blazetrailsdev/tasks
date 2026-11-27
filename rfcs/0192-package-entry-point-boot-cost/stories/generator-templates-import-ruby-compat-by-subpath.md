@@ -1,6 +1,6 @@
 ---
 title: "trailties: generator templates import ruby-compat by subpath"
-status: in-progress
+status: done
 updated: 2026-11-27
 rfc: "0192-package-entry-point-boot-cost"
 cluster: null

@@ -1,6 +1,6 @@
 ---
 title: "app-only-browser-sqlite-example"
-status: draft
+status: ready
 updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null

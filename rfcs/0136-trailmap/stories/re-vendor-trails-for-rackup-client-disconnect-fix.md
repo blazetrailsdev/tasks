@@ -1,6 +1,6 @@
 ---
 title: "Re-vendor trails for the rackup client-disconnect worker-leak fix (trails#10829)"
-status: draft
+status: ready
 updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null

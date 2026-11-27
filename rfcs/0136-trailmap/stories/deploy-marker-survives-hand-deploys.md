@@ -1,6 +1,6 @@
 ---
 title: "trailmap: deploy.sh --from-image detects a hand deploy of the same sha instead of rebuilding git source"
-status: draft
+status: ready
 updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null

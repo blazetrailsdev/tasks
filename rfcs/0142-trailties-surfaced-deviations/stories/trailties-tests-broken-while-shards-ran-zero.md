@@ -1,6 +1,6 @@
 ---
 title: "trailties: loading, action-mailer-boot and test-runner tests broke while the shards ran zero tests"
-status: ready
+status: in-progress
 updated: 2026-11-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 250
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10854
+claim: "2026-11-27T18:44:45Z"
+assignee: "trailties-tests-broken-while-shards-ran-zero"
 blocked-by: null
 closed-reason: null
 ---

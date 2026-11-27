@@ -1,6 +1,6 @@
 ---
 title: "Uptime Kuma monitors trailmap web over the fleet network and a test hang alerts within 2 minutes"
-status: draft
+status: ready
 updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null

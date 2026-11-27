@@ -1,7 +1,7 @@
 ---
 title: "Generator generator template emits import.meta.dirname for __dir__"
-status: draft
-updated: 2026-11-26
+status: ready
+updated: 2026-11-27
 rfc: "0247-website-refresh"
 cluster: null
 packages: []

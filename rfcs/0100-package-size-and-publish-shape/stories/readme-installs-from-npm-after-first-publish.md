@@ -1,6 +1,6 @@
 ---
 title: "README installs @blazetrails/* from npm once the first alpha is published"
-status: ready
+status: done
 updated: 2026-11-27
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10850
+claim: "2026-11-27T18:04:00Z"
+assignee: "readme-installs-from-npm-after-first-publish"
 blocked-by: null
 closed-reason: null
 ---

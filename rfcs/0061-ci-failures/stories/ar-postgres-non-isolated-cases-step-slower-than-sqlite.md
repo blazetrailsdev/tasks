@@ -1,6 +1,6 @@
 ---
 title: "AR PostgreSQL non-isolated cases step runs 126-309s and one shard exceeded baseline"
-status: in-progress
+status: done
 updated: 2026-11-27
 rfc: "0061-ci-failures"
 cluster: null

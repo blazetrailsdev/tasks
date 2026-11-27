@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-define-function-with-flags-unbound-engines"
-status: draft
+status: ready
 updated: 2026-11-27
 rfc: "0259-near-complete-packages-to-100"
 cluster: null

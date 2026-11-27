@@ -1,6 +1,6 @@
 ---
 title: "production-boot-reaches-generators-and-command"
-status: ready
+status: done
 updated: 2026-11-27
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10824
 claim: null
 assignee: null
 blocked-by: null

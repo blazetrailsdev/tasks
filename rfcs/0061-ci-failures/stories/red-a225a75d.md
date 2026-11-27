@@ -1,6 +1,6 @@
 ---
 title: "Trailties Tests (6) failing on main @a225a75d"
-status: ready
+status: claimed
 updated: 2026-11-27
 rfc: "0061-ci-failures"
 cluster: null
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: null
 priority: 0
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-27T18:57:44Z"
+assignee: "red-a225a75d"
 blocked-by: null
 closed-reason: null
 ---

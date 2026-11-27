@@ -1,6 +1,6 @@
 ---
 title: "Playground type-checks .tse views"
-status: draft
+status: ready
 updated: 2026-11-27
 rfc: "0247-website-refresh"
 cluster: null

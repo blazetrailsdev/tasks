@@ -1,6 +1,6 @@
 ---
 title: "Playground type-check worker shares the TypeScript chunk and slims declarations"
-status: draft
+status: ready
 updated: 2026-11-27
 rfc: "0247-website-refresh"
 cluster: null

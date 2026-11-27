@@ -1,6 +1,6 @@
 ---
 title: "Deploy ringo's RFC session and rfc-spawns endpoints and bump the vendored ringo pin"
-status: ready
+status: done
 updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null
@@ -11,9 +11,9 @@ deps:
 deps-rfc: []
 est-loc: 80
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trailmap#211
+claim: "2026-11-27T18:02:00Z"
+assignee: "bump-the-ringo-pin-for-rfc-session-endpoints"
 blocked-by: null
 closed-reason: null
 ---

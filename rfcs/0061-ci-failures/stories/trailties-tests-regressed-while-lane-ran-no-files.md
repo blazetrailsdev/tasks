@@ -1,6 +1,6 @@
 ---
 title: "trailties-tests-regressed-while-lane-ran-no-files"
-status: ready
+status: closed
 updated: 2026-11-27
 rfc: "0061-ci-failures"
 cluster: null
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "FALSIFIED: duplicate of trailties-tests-broken-while-shards-ran-zero and zeitwerk-integration-test-isolated-child-crashes, which trails#10824 filed for the same skipped tests"
 ---
 
 ## Context

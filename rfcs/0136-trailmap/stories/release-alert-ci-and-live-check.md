@@ -1,6 +1,6 @@
 ---
 title: "bin/release's failure mail is tested in CI and on one real failed release"
-status: draft
+status: ready
 updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null

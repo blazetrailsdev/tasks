@@ -1,6 +1,6 @@
 ---
 title: "move-browser-sqlite-into-website-as-playground"
-status: draft
+status: ready
 updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null

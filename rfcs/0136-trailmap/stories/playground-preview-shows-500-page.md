@@ -1,6 +1,6 @@
 ---
 title: "playground-preview-shows-500-page"
-status: draft
+status: ready
 updated: 2026-11-27
 rfc: "0136-trailmap"
 cluster: null

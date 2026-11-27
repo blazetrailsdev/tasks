@@ -1,6 +1,6 @@
 ---
 title: "ruby-compat: fold numeric-class.ts into numeric.ts by breaking numeric.ts's load cycle"
-status: draft
+status: ready
 updated: 2026-11-27
 rfc: "0192-package-entry-point-boot-cost"
 cluster: null
