@@ -18,6 +18,7 @@ packages:
   - arel
   - rack-test
   - minitest
+  - image-processing
 clusters:
   - rails-bodies
   - assertion-tooling
