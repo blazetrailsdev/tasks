@@ -7,7 +7,7 @@ cluster: null
 packages: []
 deps: []
 deps-rfc: []
-est-loc: 40
+est-loc: 20
 priority: null
 pr: null
 claim: null
@@ -28,5 +28,13 @@ Claude Code's TUI wording would make it type `exit` into Claude.
 ## Acceptance criteria
 
 - ringo's screen body adds `command` (tmux `#{pane_current_command}`), with a test in btwebooks.
-- `claudeHasExited` uses `command` (anything but `claude`/`node`) when it is present,
-  and keeps the screen reading only as a fallback.
+- [x] `claudeHasExited` uses `command` when it is present, and keeps the screen
+      reading only as a fallback. Landed in trailmap#207, as a shell allowlist
+      (bash, zsh, fish, sh, dash, ksh, tcsh, csh, nu, pwsh, xonsh; a login `-`
+      prefix stripped) rather than "anything but `claude`/`node`": the native
+      Claude Code binary reports its version (`2.1.3`) as the pane command. An
+      unlisted shell fails safe — End pane's `waitForShell` times out and sends
+      nothing.
+
+What is left is the btwebooks half only: trailmap reads `command` as soon as
+ringo sends it.
