@@ -1,6 +1,6 @@
 ---
 title: "The tail: migrate the remaining 14 packages' 161 ruby-compat barrel imports"
-status: claimed
+status: in-progress
 updated: 2026-11-27
 rfc: "0192-package-entry-point-boot-cost"
 cluster: "findings"
@@ -34,7 +34,7 @@ deps:
 deps-rfc: []
 est-loc: 200
 priority: null
-pr: null
+pr: trails#10836
 claim: "2026-11-27T04:44:45Z"
 assignee: "migrate-the-tail-packages-off-the-ruby-compat-barrel"
 blocked-by: null
