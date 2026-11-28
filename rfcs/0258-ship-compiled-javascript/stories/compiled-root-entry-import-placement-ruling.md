@@ -29,3 +29,11 @@ Why it sits there: the entry's `install.generated.js` sets `loader.imports` / `l
   - move it into the generated `config/environment` template;
   - move it elsewhere.
 - The receipt and code match that ruling.
+
+## Ruling (operator, 2026-11-27)
+
+Move it elsewhere: a Bootstrap initializer. Remove the entry import from `Application#initializeBang`, so `initialize!` matches Rails again (raise guard, `run_initializers`, `@initialized = true`). Add a trails Bootstrap initializer (e.g. `load_compiled_entry`) that does the same import under the same conditions (compiled root, entry no older than `config.js`), ordered before `setup_main_autoloader`.
+
+- Confirm `runInitializers` awaits an async initializer body; if it does not, make it await, since the import is async.
+- Replace the `@inventedArm if — CONVERGEABLE` receipt on `initializeBang` with a receipt on the new initializer that names it as a trails-only Bootstrap initializer with no Rails counterpart.
+- Every boot path (`config/environment`, `bin/jobs`, rake `environment`) still loads the entry before `setup_main_autoloader`; cover this with a test.
