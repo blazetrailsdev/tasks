@@ -1,9 +1,9 @@
 ---
 rfc: "0260-parity-gates-catch-semantic-drift"
 title: "Parity gates catch the drift the Writebook port found"
-status: draft
+status: active
 created: 2026-11-26
-updated: 2026-11-26
+updated: 2026-11-28
 owner: "@deanmarano"
 packages:
   - scripts
