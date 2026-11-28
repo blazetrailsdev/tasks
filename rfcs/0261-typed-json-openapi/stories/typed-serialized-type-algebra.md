@@ -1,6 +1,6 @@
 ---
 title: "activemodel: Serialized<M, O, B> types the hash serializable_hash returns"
-status: in-progress
+status: done
 updated: 2026-11-28
 rfc: "0261-typed-json-openapi"
 cluster: typed-serialization

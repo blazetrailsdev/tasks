@@ -1,7 +1,7 @@
 ---
 title: "A hung trailmap web process is detected internally and leaves a diagnostic report"
-status: in-progress
-updated: 2026-11-27
+status: done
+updated: 2026-11-28
 rfc: "0136-trailmap"
 cluster: null
 packages: []
