@@ -1,6 +1,6 @@
 ---
 title: "System Tests (chromium) failing on main @29acdcf5"
-status: in-progress
+status: done
 updated: 2026-11-28
 rfc: "0061-ci-failures"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 0
-pr: trails#10869
+pr: trails#10870
 claim: "2026-11-28T14:16:04Z"
 assignee: "red-29acdcf5"
 blocked-by: null

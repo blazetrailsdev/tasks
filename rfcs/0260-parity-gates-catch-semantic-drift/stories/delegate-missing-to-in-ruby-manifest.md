@@ -1,6 +1,6 @@
 ---
 title: "Ruby manifest records delegate_missing_to's generated method_missing / respond_to_missing?"
-status: ready
+status: claimed
 updated: 2026-11-28
 rfc: "0260-parity-gates-catch-semantic-drift"
 cluster: parity-gates
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 250
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-28T16:49:52Z"
+assignee: "delegate-missing-to-in-ruby-manifest"
 blocked-by: null
 closed-reason: null
 ---

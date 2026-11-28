@@ -1,6 +1,6 @@
 ---
 title: "ActiveModel attribute-method patterns map a `?` suffix to a `has` prefix"
-status: ready
+status: in-progress
 updated: 2026-11-28
 rfc: "0208-predicate-and-underscore-naming"
 cluster: ar-generated-predicates
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 150
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10873
+claim: "2026-11-28T16:29:47Z"
+assignee: "activemodel-attribute-method-suffix-maps-predicate-to-has-prefix"
 blocked-by: null
 closed-reason: null
 ---

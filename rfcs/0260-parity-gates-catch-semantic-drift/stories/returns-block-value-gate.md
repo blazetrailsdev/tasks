@@ -1,6 +1,6 @@
 ---
 title: "parity:api:returns gates a block-returning method ported as void"
-status: ready
+status: claimed
 updated: 2026-11-28
 rfc: "0260-parity-gates-catch-semantic-drift"
 cluster: parity-gates
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-28T16:49:52Z"
+assignee: "delegate-missing-to-in-ruby-manifest"
 blocked-by: null
 closed-reason: null
 ---

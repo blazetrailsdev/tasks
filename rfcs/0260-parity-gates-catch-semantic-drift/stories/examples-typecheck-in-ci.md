@@ -1,6 +1,6 @@
 ---
 title: "CI typechecks every examples/* app on a packages/ change"
-status: ready
+status: claimed
 updated: 2026-11-28
 rfc: "0260-parity-gates-catch-semantic-drift"
 cluster: parity-gates
@@ -10,8 +10,8 @@ deps-rfc: []
 est-loc: 120
 priority: null
 pr: null
-claim: null
-assignee: null
+claim: "2026-11-28T16:49:52Z"
+assignee: "delegate-missing-to-in-ruby-manifest"
 blocked-by: null
 closed-reason: null
 ---
