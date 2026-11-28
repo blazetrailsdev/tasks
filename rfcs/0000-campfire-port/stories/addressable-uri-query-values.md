@@ -27,7 +27,8 @@ different string (`+` for space, insertion order).
 
 ## Acceptance criteria
 
-- [ ] `addressable` vendored in `vendor/sources.ts` and a new `packages/addressable`
+- [ ] addressable 2.10.0 vendored and `packages/addressable` created
+- [ ] the new package registered as a new package needs (`ci.yml` lanes, the workspace guard fixture, `vendor/sources.ts`)
 - [ ] `URI.parse`, `queryValues`, `setQueryValues`, `toS`, `encodeComponent`, `unencodeComponent` ported at their Rails names, parse delegating to Node's `URL`
 - [ ] the gem's spec examples for those methods ported and passing
 - [ ] nothing else of the gem ported

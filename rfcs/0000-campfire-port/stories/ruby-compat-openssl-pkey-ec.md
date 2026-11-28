@@ -26,6 +26,6 @@ RFC § Design. web-push 3.1.0's `encryption.rb` and `vapid_key.rb` use
 
 ## Acceptance criteria
 
-- [ ] `PKey::EC`, `EC::Group`, `EC::Point` with the methods web-push calls, each citing `vendor/ruby` openssl ext where behaviour is pinned
+- [ ] `PKey::EC`, `EC::Group`, `EC::Point` with the methods web-push calls, each citing `vendor/ruby/v3.3.11/ext/openssl` where behaviour is pinned
 - [ ] ES256 sign through `PKey::EC#sign`
-- [ ] tests from the openssl gem's `test_pkey_ec.rb` for those methods
+- [ ] tests from `vendor/ruby/v3.3.11/test/openssl/test_pkey_ec.rb` for those methods

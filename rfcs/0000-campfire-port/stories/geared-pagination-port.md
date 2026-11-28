@@ -29,3 +29,4 @@ through Addressable.
 - [ ] `geared_pagination` 1.2.0 vendored, `packages/geared-pagination` created
 - [ ] `Controller`, `Recordset`, `Page`, `Portions`, `Ratios`, `Cursor`, `Headers` ported
 - [ ] the gem's test suite ported and passing
+- [ ] the new package registered as a new package needs (`ci.yml` lanes, the workspace guard fixture, `vendor/sources.ts`)

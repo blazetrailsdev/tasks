@@ -4,7 +4,7 @@ status: draft
 updated: 2026-11-27
 rfc: "0000-campfire-port"
 cluster: campfire-app
-packages: []
+packages: [scripts]
 deps: []
 deps-rfc: []
 est-loc: 30

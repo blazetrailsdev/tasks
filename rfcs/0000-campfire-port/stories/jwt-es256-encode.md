@@ -18,11 +18,12 @@ blocked-by: null
 ## Context
 
 RFC § Design. web-push's `Request#build_vapid_header` calls
-`JWT.encode(payload, key, "ES256", header)`. jwt 3.x is 2,925 lines; only
+`JWT.encode(payload, key, "ES256", header)`. jwt 3.3.1 is 2,925 lines; only
 the encode path and the ECDSA algorithm are reached.
 
 ## Acceptance criteria
 
-- [ ] jwt vendored, `packages/jwt` with `JWT.encode`, `Encode`, `JWA::Ecdsa` signing, `Base64.url_encode`
+- [ ] jwt 3.3.1 vendored, `packages/jwt` with `JWT.encode`, `Encode`, `JWA::Ecdsa` signing, `Base64.url_encode`
 - [ ] the gem's encode specs for ES256 ported and passing
 - [ ] decode and other algorithms not ported
+- [ ] the new package registered as a new package needs (`ci.yml` lanes, the workspace guard fixture, `vendor/sources.ts`)

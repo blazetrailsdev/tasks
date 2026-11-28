@@ -25,3 +25,4 @@ RFC § Design. 119 lines. Campfire's `ApplicationPlatform < PlatformAgent`
 
 - [ ] platform_agent 1.0.1 vendored, `packages/platform-agent` created
 - [ ] the gem's tests ported and passing
+- [ ] the new package registered as a new package needs (`ci.yml` lanes, the workspace guard fixture, `vendor/sources.ts`)

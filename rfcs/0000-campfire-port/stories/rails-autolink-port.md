@@ -25,3 +25,4 @@ The gem adds `auto_link` to `ActionView::Helpers::TextHelper`.
 
 - [ ] rails_autolink 1.1.8 vendored, `packages/autolink` adding `autoLink`, `autoLinkUrls`, `autoLinkEmailAddresses` to TextHelper
 - [ ] the gem's `test_rails_autolink.rb` ported and passing
+- [ ] the new package registered as a new package needs (`ci.yml` lanes, the workspace guard fixture, `vendor/sources.ts`)

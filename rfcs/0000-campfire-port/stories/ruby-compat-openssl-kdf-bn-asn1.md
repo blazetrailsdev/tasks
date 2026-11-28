@@ -25,4 +25,4 @@ and `vapid_key.rb` builds a key from raw bytes with `OpenSSL::BN` and an
 ## Acceptance criteria
 
 - [ ] `KDF.hkdf`, `BN` (new from string/int with base, `to_s(2)`), and the ASN1 classes and `to_der` web-push reaches
-- [ ] tests from the openssl gem's `test_kdf.rb`, `test_bn.rb` and `test_asn1.rb` for those methods
+- [ ] tests from `vendor/ruby/v3.3.11/test/openssl/test_kdf.rb`, `test_bn.rb` and `test_asn1.rb` for those methods
