@@ -1,9 +1,9 @@
 ---
 rfc: "0208-predicate-and-underscore-naming"
 title: "Predicate and underscore naming: what Rails requires, what trails invented"
-status: draft
+status: active
 created: 2026-10-26
-updated: 2026-10-26
+updated: 2026-11-28
 owner: "@deanmarano"
 packages:
   [
