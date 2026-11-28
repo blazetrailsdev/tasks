@@ -140,6 +140,11 @@ schemas), the converter (step 3), and `--check`. It runs over the program `trail
    `type: [..., "null"]`, and named model shapes become `components.schemas`
    refs, keyed by model name plus an options hash so two different `only:`
    shapes of `Post` don't collide.
+   A `number` is emitted as `type: number` and not widened to include
+   `null`, even though `Float.asJson` encodes NaN/Infinity as `null`
+   (`packages/activesupport/lib/core-ext/object/json.ts:107`). TS can't type
+   finiteness, and widening would make every numeric column nullable in the
+   client.
 4. Write `tmp/openapi.json` (configurable). A `--check` mode diffs it against a
    committed copy, so CI catches API changes.
 
