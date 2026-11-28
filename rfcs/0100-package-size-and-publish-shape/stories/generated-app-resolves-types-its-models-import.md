@@ -1,7 +1,7 @@
 ---
 title: "generated-app-resolves-types-its-models-import"
-status: draft
-updated: 2026-11-27
+status: in-progress
+updated: 2026-11-28
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10856
+claim: "2026-11-28T01:09:28Z"
+assignee: "trailmap-installs-published-packages-from-npm"
 blocked-by: null
 closed-reason: null
 ---

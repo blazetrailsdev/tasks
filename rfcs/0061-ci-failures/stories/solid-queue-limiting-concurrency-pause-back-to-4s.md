@@ -1,7 +1,7 @@
 ---
 title: "solid-queue: restore C's 4s pause in limiting-concurrency test"
-status: ready
-updated: 2026-11-27
+status: in-progress
+updated: 2026-11-28
 rfc: "0061-ci-failures"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 20
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10857
+claim: "2026-11-28T01:29:50Z"
+assignee: "ar-lane-vitest-silent-exit-runs-no-files"
 blocked-by: null
 closed-reason: null
 ---

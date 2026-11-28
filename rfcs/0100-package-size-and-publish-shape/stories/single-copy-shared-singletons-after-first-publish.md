@@ -1,7 +1,7 @@
 ---
 title: "Verify one ruby-compat/activesupport copy from a registry install of two published packages"
-status: ready
-updated: 2026-11-27
+status: in-progress
+updated: 2026-11-28
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps:
 deps-rfc: []
 est-loc: 60
 priority: 8
-pr: null
-claim: null
-assignee: null
+pr: trails#10856
+claim: "2026-11-28T01:09:28Z"
+assignee: "trailmap-installs-published-packages-from-npm"
 blocked-by: null
 closed-reason: null
 ---

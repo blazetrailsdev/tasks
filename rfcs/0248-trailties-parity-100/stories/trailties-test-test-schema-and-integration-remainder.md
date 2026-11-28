@@ -1,7 +1,7 @@
 ---
 title: "trailties-test-test-schema-and-integration-remainder"
-status: in-progress
-updated: 2026-11-27
+status: done
+updated: 2026-11-28
 rfc: "0248-trailties-parity-100"
 cluster: null
 packages: []
