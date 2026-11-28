@@ -5,7 +5,7 @@ updated: 2026-11-27
 rfc: "0000-typed-json-openapi"
 cluster: openapi
 packages: [actionpack]
-deps: []
+deps: [activerecord-asjson-returns-serialized]
 deps-rfc: []
 est-loc: 150
 priority: null
@@ -26,4 +26,6 @@ bare model or relation as its no-option `Serialized`.
 
 - [ ] The checker can read `J` from `this.render({ json: x, status })` at the call
       site (type test through a helper that captures `J`).
+- [ ] `this.render({ json: post })` with a bare model types the body as
+      `Serialized<Post>`, and with a relation as `Serialized<Post>[]`.
 - [ ] The existing `RenderArgs` type tests from trails#8315 / trails#9199 still pass.

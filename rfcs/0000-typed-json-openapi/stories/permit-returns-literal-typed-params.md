@@ -3,7 +3,7 @@ title: "actionpack: require(...).permit(...) returns params typed by the permitt
 status: draft
 updated: 2026-11-27
 rfc: "0000-typed-json-openapi"
-cluster: openapi
+cluster: typed-serialization
 packages: [actionpack]
 deps: []
 deps-rfc: []

@@ -5,7 +5,7 @@ updated: 2026-11-27
 rfc: "0000-typed-json-openapi"
 cluster: openapi
 packages: [trails-tsc]
-deps: [trails-tsc-openapi-plugin, permit-returns-literal-typed-params]
+deps: [openapi-extract-routes-and-render-types, permit-returns-literal-typed-params]
 deps-rfc: []
 est-loc: 300
 priority: null

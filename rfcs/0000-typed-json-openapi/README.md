@@ -83,8 +83,13 @@ Types only, in `activemodel/lib/serialization.ts`, beside `SerializeOptions`:
   camelized member's return type (`full_name` → `fullName()`, awaited), and
   `include` adds each association serialized recursively with its own options.
 
-The draft prototype (trails PR linked from the first story) lands this with type
-tests and changes no runtime code.
+The draft prototype, blazetrailsdev/trails#10860, lands this with type tests
+and changes no runtime code. It follows `serializable_hash` branch for branch:
+a nil `only:` falls through to `except:`; a nil singular association is an
+_optional_ key, not `| null`, because `serializable_add_includes` skips it
+(`if records = send(association)`); and `methods:` accepts a member's Rails
+spelling, including the `foo?` → `isFoo()` predicate rule that trails' runtime
+applies.
 
 ### 2. `asJson` / `serializableHash` return `Serialized`
 
@@ -110,7 +115,8 @@ A model or relation passed as `json:` (Rails calls `to_json` on it) is typed as
 
 ### 4. `trails-tsc` `openapi` plugin
 
-The plugin runs over the program `trails-tsc` already builds, beside `tse`:
+The plugin lands in three stories: extraction (steps 1, 2 and 4, with inline
+schemas), the converter (step 3), and `--check`. It runs over the program `trails-tsc` already builds, beside `tse`:
 
 1. Evaluate `config/routes.ts` through the route set's inspector (the same data
    `trails routes` prints) to get each route's verb, path, and `controller#action`.
@@ -125,8 +131,8 @@ The plugin runs over the program `trails-tsc` already builds, beside `tse`:
 4. Write `tmp/openapi.json` (configurable). A `--check` mode diffs it against a
    committed copy, so CI catches API changes.
 
-`ts-json-schema-generator`'s type formatter is the candidate converter. Using it
-is an open question (dependency weight against writing ~400 lines of our own).
+The converter is `ts-json-schema-generator`'s type formatter, wrapped in our
+own `$ref` naming (Open question 3).
 
 ### 5. Request bodies from strong params
 
@@ -169,10 +175,12 @@ typed as `Record<string, unknown>`.
 Stories in dependency order:
 
 1. `typed-serialized-type-algebra`: the types and type tests (draft PR exists).
-2. `activerecord-asjson-returns-serialized` and
-   `render-json-option-carries-body-type`, in parallel.
-3. `trails-tsc-openapi-plugin`.
-4. `permit-returns-literal-typed-params` → `openapi-request-bodies-from-permit`.
+2. `activerecord-asjson-returns-serialized` → `render-json-option-carries-body-type`
+   (it types a bare model as `Serialized<M>`, so it needs `Base` wired).
+   `permit-returns-literal-typed-params` runs in parallel with both.
+3. `openapi-extract-routes-and-render-types` → `openapi-json-schema-converter`
+   → `openapi-check-mode`.
+4. `openapi-request-bodies-from-permit`.
 5. `dev-mode-json-drift-check`.
 6. `trailmap-frontend-typed-client`, the proving-ground consumer.
 
@@ -181,21 +189,47 @@ Stories in dependency order:
 - Type tests (`expectTypeOf`) for every option shape at each layer.
 - The plugin's output for a fixture app is snapshot-tested, and validated with an
   OpenAPI 3.1 validator.
-- trailmap's frontend compiles against the generated client, and the drift check
-  is clean on its request suite.
+- trailmap's frontend compiles against the generated client, with zero
+  hand-written response types left, and the drift check reports zero mismatches
+  over its request suite.
 
 ## Open questions
 
-1. **Compile-time cost.** Recursive `Serialized` over deep `include` trees may
-   slow the checker. Should depth be capped (e.g. 4), and at what measured cost?
-2. **`methods:` names.** The prototype maps Rails names by camelizing them, and
-   doesn't handle the `?` → `is_` predicate rule yet. Should it?
-3. **Converter.** Use `ts-json-schema-generator`, or write our own on the checker?
-4. **Where routes come from.** Evaluate `config/routes.ts` at build time
-   (it's code), or statically parse the `draw` block?
-5. **Large integer columns.** A `bigint` JSON-encodes as a string in Rails
-   (`ActiveSupport::JSON`); should `JsonValue` map it to `string`?
+Each one has a recommendation, and names the story that absorbs the answer.
+
+1. **Compile-time cost of recursive `include`.** Options: no cap; a fixed depth
+   cap; a cap only past a measured threshold. **Recommendation:** measure
+   first. `activerecord-asjson-returns-serialized` benchmarks `tsc` on
+   trailmap with 1-, 3- and 5-deep includes. If 5-deep adds more than 10% to
+   check time, cap recursion at 4 (deeper levels become
+   `Record<string, unknown>`). The cap is an AC of that story, not the
+   type-algebra one.
+2. **`methods:` names and the `?` predicate rule.** _Resolved in the
+   prototype:_ `methods:` accepts the member name, its underscored Rails
+   spelling, or `foo?` for an `isFoo()` member, matching trails' runtime
+   `camelized(n.endsWith("?") ? is_… : n)`. Absorbed by
+   `typed-serialized-type-algebra` (AC 3).
+3. **Converter.** Options: `ts-json-schema-generator`'s formatter; our own
+   walker on the checker. **Recommendation:** the formatter, since it already
+   handles unions, literals, intersections and recursion, and is a dev-only
+   dependency of `trails-tsc`. A walker of our own is ~400 lines that
+   duplicates it. `openapi-json-schema-converter` is sized on that basis, and
+   the walker becomes a follow-up story only if the formatter can't key
+   `$ref`s by options hash.
+4. **Where routes come from.** Options: evaluate `config/routes.ts`;
+   statically parse `draw`. **Recommendation:** evaluate it. Routes are code
+   (`concerns`, loops, `scope` helpers), and static parsing would only
+   approximate the route set the app serves. The route set's inspector already
+   gives verb, path and endpoint. Absorbed by
+   `openapi-extract-routes-and-render-types` (step 1).
+5. **`bigint` columns.** _Resolved in the prototype:_ `JsonValue<bigint>` is
+   `string`, matching `Numeric.asJson`
+   (`packages/activesupport/lib/core-ext/object/json.ts:101`). Absorbed by
+   `typed-serialized-type-algebra`.
 
 ## Changelog
 
 - 2026-11-27: Draft.
+- 2026-11-27: Review round 1. Split the plugin story into three, fixed the
+  render and trailmap dep edges, gave every open question a recommendation, and
+  recorded the prototype's Rails-fidelity fixes.

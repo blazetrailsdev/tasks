@@ -5,7 +5,7 @@ updated: 2026-11-27
 rfc: "0000-typed-json-openapi"
 cluster: openapi
 packages: [actionpack]
-deps: [trails-tsc-openapi-plugin]
+deps: [openapi-json-schema-converter]
 deps-rfc: []
 est-loc: 300
 priority: null

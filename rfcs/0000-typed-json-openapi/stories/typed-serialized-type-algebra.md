@@ -21,17 +21,19 @@ RFC § Design 1. `SerializeOptions` (`packages/activemodel/lib/serialization.ts:
 types its keys as `string`, so nothing computes the hash's shape. This story adds
 types only: `AttributeKeys`, `AssociationKeys`, `AssociationTarget`,
 `TypedSerializeOptions`, `TypedIncludeHash`, `JsonValue` and `Serialized`,
-each with a `@noRailsEquivalent PERMANENT` receipt. A draft prototype is open
-on the `typed-serialization-openapi` branch.
+each with a `@noRailsEquivalent PERMANENT` receipt. The prototype is blazetrailsdev/trails#10860.
 
 ## Acceptance criteria
 
 - [ ] No options gives every attribute, with base-class members excluded.
 - [ ] `only` wins over `except`, and both accept a string or an array.
-- [ ] `methods` adds keys under their Rails name, typed by the camelized
-      member's awaited return.
+- [ ] `methods` adds keys under their Rails name, typed by the awaited return of
+      the member that trails' runtime calls (`full_name` → `fullName()`, `admin?` →
+      `isAdmin()`), and an unknown name fails `TypedSerializeOptions`.
+- [ ] A nil `only:` falls through to `except:`, and `bigint` encodes as `string`.
 - [ ] `include` (string, array, hash, or a mixed array) serializes
-      associations recursively. belongs_to stays nullable, and has_many becomes an array.
+      associations recursively. A nil-able singular association is an optional key
+      (`serializable_add_includes` skips nil), and has_many becomes an array.
 - [ ] An unknown `only` / `include` key, or a nested key that's wrong for the
       target model, fails `TypedSerializeOptions`.
 - [ ] No runtime code changes.
