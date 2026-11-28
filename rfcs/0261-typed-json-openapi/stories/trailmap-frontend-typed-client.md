@@ -1,7 +1,7 @@
 ---
 title: "trailmap: frontend consumes the generated OpenAPI through openapi-fetch"
 status: draft
-updated: 2026-11-27
+updated: 2026-11-28
 rfc: "0261-typed-json-openapi"
 cluster: openapi
 packages: [actionpack, trails-tsc]

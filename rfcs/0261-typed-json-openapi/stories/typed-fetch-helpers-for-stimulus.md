@@ -1,7 +1,7 @@
 ---
 title: "stimulus: typed fetch helpers generated from the OpenAPI document"
 status: draft
-updated: 2026-11-27
+updated: 2026-11-28
 rfc: "0261-typed-json-openapi"
 cluster: follow-ons
 packages: [stimulus, trails-tsc]

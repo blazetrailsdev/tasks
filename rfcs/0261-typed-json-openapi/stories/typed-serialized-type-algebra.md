@@ -1,7 +1,7 @@
 ---
 title: "activemodel: Serialized<M, O, B> types the hash serializable_hash returns"
-status: draft
-updated: 2026-11-27
+status: in-progress
+updated: 2026-11-28
 rfc: "0261-typed-json-openapi"
 cluster: typed-serialization
 packages: [activemodel]
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 300
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10860
+claim: "2026-11-28T04:05:58Z"
+assignee: "typed-serialized-type-algebra"
 blocked-by: null
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: "trails-tsc openapi: named components.schemas refs, enums and nullables"
 status: draft
-updated: 2026-11-27
+updated: 2026-11-28
 rfc: "0261-typed-json-openapi"
 cluster: openapi
 packages: [trails-tsc]

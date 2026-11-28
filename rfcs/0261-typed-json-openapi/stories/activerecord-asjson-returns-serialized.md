@@ -1,7 +1,7 @@
 ---
 title: "activerecord: serializableHash returns Serialized and asJson returns SerializedJson"
 status: draft
-updated: 2026-11-27
+updated: 2026-11-28
 rfc: "0261-typed-json-openapi"
 cluster: typed-serialization
 packages: [activerecord]
