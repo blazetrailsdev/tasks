@@ -2,7 +2,7 @@
 title: "GCS content-type signed-GET tests run un-skipped against an endpoint that answers the stored type"
 status: blocked
 updated: 2026-11-24
-rfc: "0215-activestorage-cloud-services"
+rfc: "0123-blocked-convergence-holding"
 cluster: null
 packages: []
 deps: []
