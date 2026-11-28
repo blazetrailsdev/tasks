@@ -2,7 +2,7 @@
 title: "trails-tsc openapi: pair routes with each action's render({ json }) types and emit a document with inline schemas"
 status: draft
 updated: 2026-11-27
-rfc: "0000-typed-json-openapi"
+rfc: "0261-typed-json-openapi"
 cluster: openapi
 packages: [trails-tsc]
 deps: [render-json-option-carries-body-type]

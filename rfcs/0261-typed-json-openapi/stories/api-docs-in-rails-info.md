@@ -2,7 +2,7 @@
 title: "trailties: an API tab on /rails/info rendered from the OpenAPI document"
 status: draft
 updated: 2026-11-27
-rfc: "0000-typed-json-openapi"
+rfc: "0261-typed-json-openapi"
 cluster: follow-ons
 packages: [trailties, trails-tsc]
 deps: [openapi-json-schema-converter]

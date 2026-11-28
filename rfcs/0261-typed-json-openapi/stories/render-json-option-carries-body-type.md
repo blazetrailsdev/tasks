@@ -2,7 +2,7 @@
 title: "actionpack: render({ json }) carries the body's type"
 status: draft
 updated: 2026-11-27
-rfc: "0000-typed-json-openapi"
+rfc: "0261-typed-json-openapi"
 cluster: openapi
 packages: [actionpack]
 deps: [activerecord-asjson-returns-serialized]

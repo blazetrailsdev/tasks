@@ -2,7 +2,7 @@
 title: "activemodel: Serialized<M, O, B> types the hash serializable_hash returns"
 status: draft
 updated: 2026-11-27
-rfc: "0000-typed-json-openapi"
+rfc: "0261-typed-json-openapi"
 cluster: typed-serialization
 packages: [activemodel]
 deps: []

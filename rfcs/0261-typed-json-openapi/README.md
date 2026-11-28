@@ -1,5 +1,5 @@
 ---
-rfc: "0000-typed-json-openapi"
+rfc: "0261-typed-json-openapi"
 title: "Typed as_json and render json:, and an OpenAPI spec generated from them"
 status: draft
 created: 2026-11-27
@@ -18,9 +18,7 @@ clusters:
   - follow-ons
 ---
 
-<!-- Unnumbered until merge. -->
-
-# RFC — Typed as_json and render json:, and an OpenAPI spec generated from them
+# RFC 0261 — Typed as_json and render json:, and an OpenAPI spec generated from them
 
 ## Summary
 

@@ -2,7 +2,7 @@
 title: "trails-tsc openapi: --check fails when the document differs from the committed copy"
 status: draft
 updated: 2026-11-27
-rfc: "0000-typed-json-openapi"
+rfc: "0261-typed-json-openapi"
 cluster: openapi
 packages: [trails-tsc]
 deps: [openapi-extract-routes-and-render-types]
