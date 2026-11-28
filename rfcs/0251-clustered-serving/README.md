@@ -1,9 +1,9 @@
 ---
 rfc: "0251-clustered-serving"
 title: "Clustered serving for trails server on node:cluster"
-status: draft
+status: active
 created: 2026-11-19
-updated: 2026-11-19
+updated: 2026-11-28
 owner: "@deanmarano"
 packages:
   - "rackup"
