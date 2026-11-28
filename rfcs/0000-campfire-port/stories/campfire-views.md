@@ -5,7 +5,8 @@ updated: 2026-11-27
 rfc: "0000-campfire-port"
 cluster: campfire-app
 packages: [examples, actionview]
-deps: [campfire-helpers, campfire-controllers-top-level-and-concerns]
+deps:
+  [campfire-helpers, campfire-controllers-top-level-and-concerns, campfire-controllers-namespaced]
 deps-rfc: []
 est-loc: 2350
 priority: null

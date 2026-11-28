@@ -35,6 +35,6 @@ own ruling (RFC Open question 3).
 
 - [ ] lexxy vendored, `packages/lexxy` with each Ruby file ported
 - [ ] the operator has ruled on Lexxy's `FormHelper` / `FormBuilder` reopen, and the port follows that ruling
-- [ ] `lexxy.js` copied byte for byte and served from the package's assets
+- [ ] `lexxy.js` copied byte for byte and served from the package's assets, as the gem's engine serves it
 - [ ] the new package registered as a new package needs (`ci.yml` lanes, the workspace guard fixture, `vendor/sources.ts`)
 - [ ] the gem's Ruby tests ported and passing

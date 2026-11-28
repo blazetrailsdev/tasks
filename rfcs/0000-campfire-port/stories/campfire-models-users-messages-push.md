@@ -5,7 +5,7 @@ updated: 2026-11-27
 rfc: "0000-campfire-port"
 cluster: campfire-app
 packages: [examples, activerecord, actiontext]
-deps: [campfire-app-skeleton, platform-agent-port]
+deps: [campfire-app-skeleton, platform-agent-port, campfire-lib-rails-ext-and-restricted-http]
 deps-rfc: []
 est-loc: 1950
 priority: null
@@ -26,6 +26,9 @@ RFC § Design (The app). `user.rb` and `user/` (294 lines), `message.rb` and
 `remote_connections.where(current_user: self).disconnect`.
 `Push::Subscription#notification` builds a `WebPush::Notification`; its
 delivery is `campfire-jobs-web-push-and-wal-checkpoint`.
+`Push::Subscription#resolved_endpoint_ip` calls
+`RestrictedHTTP::PrivateNetworkGuard.resolve` and rescues
+`Surfguard::Unresolvable` (`app/models/push/subscription.rb:23-27`).
 
 ## Acceptance criteria
 

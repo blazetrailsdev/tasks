@@ -5,7 +5,7 @@ status: draft
 created: 2026-11-27
 updated: 2026-11-27
 owner: "@deanmarano"
-max-est-loc: 4000 # app stories port a file group with its tests, or copy assets byte for byte; see "The LOC ceiling is lifted for the app stories"
+max-est-loc: 2500 # app stories port a file group with its tests; see "The LOC ceiling is lifted for the app stories"
 packages:
   - addressable
   - geared-pagination
@@ -173,8 +173,10 @@ their tests, so every story ends green:
 | `campfire-controllers-namespaced`             | namespaced controllers + tests                                   | 2,400   |
 | `campfire-views`                              | 90 views as `.tse`                                               | 2,350   |
 | `campfire-jobs-web-push-and-wal-checkpoint`   | jobs, `lib/web_push`, WAL checkpoint + tests                     | 1,100   |
-| `campfire-javascript`                         | `app/javascript`, copied                                         | 3,900   |
-| `campfire-stylesheets`                        | `app/assets`, copied                                             | 3,400   |
+| `campfire-javascript-controllers`             | Stimulus controllers, helpers, initializers, copied              | 2,000   |
+| `campfire-javascript-lib-and-models`          | `app/javascript/lib` and `models`, copied                        | 1,950   |
+| `campfire-stylesheets-a-to-l`                 | 17 stylesheets, copied                                           | 2,000   |
+| `campfire-stylesheets-m-to-z-and-images`      | 9 stylesheets and the images, copied                             | 1,450   |
 | `campfire-system-tests`                       | system, integration, middleware tests                            | 1,300   |
 
 ### The LOC ceiling is lifted for the app stories
@@ -184,10 +186,12 @@ is about 26,000 lines counting tests and assets, which is about 40 PRs at 700.
 Splitting further would separate a model from its tests or land half a
 directory of views, and a PR of that shape cannot be reviewed against the
 upstream files it mirrors. Writebook landed as one PR (trails#10716) for the
-same reason. `max-est-loc` is 4,000, set by the two copy-only stories
-(`campfire-javascript`, `campfire-stylesheets`), whose content is upstream
-byte for byte; every Ruby-ported story is at or under 2,450. Open question 5
-asks the operator to confirm this.
+same reason.
+
+`max-est-loc` is 2,500, the value RFCs 0185, 0212 and 0256 set. Every app
+story is at or under 2,450. The JavaScript and the stylesheets, which are
+copied byte for byte, are split in two each so that no story needs more than
+those RFCs were granted. Open question 5 asks the operator to confirm the lift.
 
 ## Non-goals
 
@@ -215,7 +219,11 @@ asks the operator to confirm this.
 1. Gems with no new crypto, in parallel: `addressable-uri-query-values` then
    `geared-pagination-port`; `rails-autolink-port`; `useragent-port` then
    `platform-agent-port`; `surfguard-port`; `lexxy-engine-port` (after Open
-   question 3); and the existing `rqrcode-port` and `jbuilder-port` (RFC 0142).
+   question 3); and the existing `rqrcode-port` and `jbuilder-port` (RFC 0142, both
+   `draft`). Whoever promotes this RFC to `active` also runs
+   `pnpm tasks status-set rqrcode-port ready` and
+   `pnpm tasks status-set jbuilder-port ready` in the same step, since
+   `campfire-controllers-top-level-and-concerns` depends on both.
 2. Crypto: `ruby-compat-openssl-pkey-ec` and `ruby-compat-openssl-kdf-bn-asn1`,
    then `jwt-es256-encode`, then `web-push-port`.
 3. App foundation: `vendor-campfire-source`, then `campfire-app-skeleton`.
@@ -225,12 +233,12 @@ asks the operator to confirm this.
 5. App surface: `campfire-channels`, `campfire-helpers`,
    `campfire-controllers-top-level-and-concerns`,
    `campfire-controllers-namespaced`, `campfire-views`,
-   `campfire-jobs-web-push-and-wal-checkpoint`, `campfire-javascript`,
-   `campfire-stylesheets`.
+   `campfire-jobs-web-push-and-wal-checkpoint`, `campfire-javascript-controllers`,
+   `campfire-javascript-lib-and-models`, `campfire-stylesheets-a-to-l`,
+   `campfire-stylesheets-m-to-z-and-images`.
 6. `campfire-system-tests`.
 
-Each story's `deps` encode this order. Phases 1 and 2 and the two copy-only
-stories can run in parallel.
+Each story's `deps` encode this order. Phases 1 and 2 and the four copy-only stories can run in parallel.
 
 ## Verification
 
@@ -261,15 +269,20 @@ stories can run in parallel.
    route-set one.
 4. **Package home for rqrcode and jbuilder.** Their stories sit in
    `0142-trailties-surfaced-deviations`; move them here or leave them and
-   depend on them by id. Recommendation: leave them, depend by id.
-5. **The LOC ceiling for the app stories.** Lift it to 4,000 as in § The LOC
+   depend on them by id. Recommendation: leave them, depend by id, and promote both to `ready` when
+   this RFC is promoted (Rollout phase 1).
+5. **The LOC ceiling for the app stories.** Lift it to 2,500 as in § The LOC
    ceiling is lifted, split the app into about 40 ceiling-sized stories, or
-   land it as one PR as Writebook did. Recommendation: lift it, as RFCs 0185,
-   0212 and 0256 do.
+   land it as one PR as Writebook did. Recommendation: lift it to 2,500, the
+   value RFCs 0185, 0212 and 0256 were granted.
 
 ## Changelog
 
 - 2026-11-27: initial RFC
+- 2026-11-27: review fixes: RestrictedHTTP and controller deps added to the
+  Opengraph, Push and views stories; the copy-only stories split in two so
+  `max-est-loc` is 2,500, the precedent value; RFC 0142's `rqrcode-port` and
+  `jbuilder-port` are promoted together with this RFC
 - 2026-11-27: app split into 15 stories that each carry their tests, with the
   LOC ceiling lifted for them; useragent tied to the blocked `AllowBrowser`
   story; Lexxy's ruling scope, gem versions and test paths corrected

@@ -9,8 +9,10 @@ deps:
   [
     campfire-channels,
     campfire-views,
-    campfire-javascript,
-    campfire-stylesheets,
+    campfire-javascript-controllers,
+    campfire-javascript-lib-and-models,
+    campfire-stylesheets-a-to-l,
+    campfire-stylesheets-m-to-z-and-images,
     campfire-jobs-web-push-and-wal-checkpoint,
     campfire-controllers-namespaced,
   ]
