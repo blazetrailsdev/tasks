@@ -10,9 +10,12 @@ packages:
   - activerecord
   - actionpack
   - trails-tsc
+  - stimulus
+  - trailties
 clusters:
   - typed-serialization
   - openapi
+  - follow-ons
 ---
 
 <!-- Unnumbered until merge. -->
@@ -147,14 +150,25 @@ generated schema and logs the mismatches. It catches what the static type can't
 see: an `asJson` override without a return annotation, or a hand-built hash
 typed as `Record<string, unknown>`.
 
+### Follow-ons
+
+These build on the generated document and don't block the core rollout:
+
+- **Typed fetch helpers for Stimulus** (`typed-fetch-helpers-for-stimulus`).
+  Apps without an SPA get one typed function per operation, carrying the CSRF
+  token, in place of hand-written `fetch`.
+- **API docs on `/rails/info`** (`api-docs-in-rails-info`). A development-only
+  API view beside Rails' route table, plus the raw document for external tools.
+
 ## Non-goals
 
 - **No runtime change to serialization or rendering.** This doesn't restate
   `as_json`, and Rails fidelity is untouched.
 - **No serializer DSL** (ActiveModel::Serializers, Blueprinter, zod schemas).
   The model and the call site are the source of truth.
-- **No client codegen in trails.** Consumers use `openapi-typescript` /
-  `openapi-fetch`. trails only emits the document.
+- **No SPA client codegen in trails.** SPA consumers use `openapi-typescript` /
+  `openapi-fetch`. The one exception is the small Stimulus helper module in
+  Follow-ons, for apps that have no SPA toolchain.
 
 ## Alternatives considered
 
@@ -183,6 +197,8 @@ Stories in dependency order:
 4. `openapi-request-bodies-from-permit`.
 5. `dev-mode-json-drift-check`.
 6. `trailmap-frontend-typed-client`, the proving-ground consumer.
+7. Follow-ons, any time after `openapi-json-schema-converter`:
+   `typed-fetch-helpers-for-stimulus` and `api-docs-in-rails-info`.
 
 ## Verification
 
