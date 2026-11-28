@@ -227,9 +227,10 @@ those RFCs were granted. Open question 5 asks the operator to confirm the lift.
 2. Crypto: `ruby-compat-openssl-pkey-ec` and `ruby-compat-openssl-kdf-bn-asn1`,
    then `jwt-es256-encode`, then `web-push-port`.
 3. App foundation: `vendor-campfire-source`, then `campfire-app-skeleton`.
-4. App models and lib: `campfire-models-rooms-memberships-accounts`,
-   `campfire-models-users-messages-push`, `campfire-models-opengraph-and-caches`,
-   `campfire-lib-rails-ext-and-restricted-http`.
+4. App lib and models: `campfire-lib-rails-ext-and-restricted-http` and
+   `campfire-models-rooms-memberships-accounts`, then
+   `campfire-models-users-messages-push` and `campfire-models-opengraph-and-caches`,
+   which depend on the lib story.
 5. App surface: `campfire-channels`, `campfire-helpers`,
    `campfire-controllers-top-level-and-concerns`,
    `campfire-controllers-namespaced`, `campfire-views`,

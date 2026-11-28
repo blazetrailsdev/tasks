@@ -35,7 +35,7 @@ rendered by these controllers belong here, not in the views stories.
 ## Acceptance criteria
 
 - [ ] every listed controller and concern ported file for file
-- [ ] every listed test file ported and passing
+- [ ] every listed test file ported; the JSON, redirect and `head` assertions pass, and each case that asserts on rendered HTML is parked as `it.skip` under a `PENDING-VIEWS: campfire-views` line, since the HTML templates arrive in `campfire-views`
 
 ## Notes
 

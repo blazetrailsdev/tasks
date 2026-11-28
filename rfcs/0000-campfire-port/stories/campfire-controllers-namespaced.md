@@ -25,7 +25,7 @@ the matching `test/controllers/` directories (about 1,630 lines).
 ## Acceptance criteria
 
 - [ ] every listed controller ported file for file
-- [ ] every listed test file ported and passing
+- [ ] every listed test file ported; the JSON, redirect and `head` assertions pass, and each case that asserts on rendered HTML is parked as `it.skip` under a `PENDING-VIEWS: campfire-views` line, since the HTML templates arrive in `campfire-views`
 
 ## Notes
 

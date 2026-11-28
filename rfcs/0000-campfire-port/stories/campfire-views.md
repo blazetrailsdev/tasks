@@ -27,7 +27,7 @@ The `.jbuilder` views are `campfire-controllers-top-level-and-concerns`.
 ## Acceptance criteria
 
 - [ ] every `.erb` view ported as `.tse`, file for file
-- [ ] the controller tests from the controller stories still pass with the real views rendering
+- [ ] every `PENDING-VIEWS: campfire-views` skip in the controller tests is un-skipped and passes with the real views rendering, and no such marker remains
 
 ## Notes
 
