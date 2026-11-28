@@ -1,6 +1,6 @@
 ---
 title: "activestorage-root-exports-blob-and-variant-record"
-status: ready
+status: in-progress
 updated: 2026-11-28
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10863
+claim: "2026-11-28T13:42:30Z"
+assignee: "activestorage-root-exports-blob-and-variant-record"
 blocked-by: null
 closed-reason: null
 ---

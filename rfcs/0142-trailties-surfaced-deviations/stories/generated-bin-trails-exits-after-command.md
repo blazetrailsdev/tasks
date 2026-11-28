@@ -1,6 +1,6 @@
 ---
 title: "Generated bin/trails exits after a command returns (db:migrate hangs on Postgres)"
-status: in-progress
+status: done
 updated: 2026-11-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
