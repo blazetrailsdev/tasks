@@ -1,5 +1,5 @@
 ---
-title: "activerecord: asJson and serializableHash return Serialized<this, O, Base>"
+title: "activerecord: serializableHash returns Serialized and asJson returns SerializedJson"
 status: draft
 updated: 2026-11-27
 rfc: "0000-typed-json-openapi"

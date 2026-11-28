@@ -76,15 +76,23 @@ Types only, in `activemodel/lib/serialization.ts`, beside `SerializeOptions`:
 - `TypedSerializeOptions<M, B>` is `SerializeOptions` with `only` / `except` checked
   against `AttributeKeys` and `include` against `AssociationKeys`, recursively
   with the target model's options.
-- `JsonValue<V>` mirrors the encoder's dispatch: primitives pass through,
-  `undefined` becomes `null`, a `toJSON()` or `asJson()` return type wins
-  (`Date` and `TimeWithZone` become `string`), arrays and plain objects map
-  element-wise.
-- `Serialized<M, O, B>` mirrors `serializable_hash`'s branches
-  (`vendor/rails/v8.0.5.2/activemodel/lib/active_model/serialization.rb`):
-  `only` wins over `except`, `methods` adds keys under their Rails name with the
-  camelized member's return type (`full_name` → `fullName()`, awaited), and
-  `include` adds each association serialized recursively with its own options.
+- `Serialized<M, O, B>` is the **raw** hash `serializable_hash` returns,
+  mirroring its branches
+  (`vendor/rails/v8.0.5.2/activemodel/lib/active_model/serialization.rb:125-149`).
+  Values aren't encoded, so a `Date` stays a `Date`. `only` wins over `except`.
+  `methods` adds keys under their Rails name, typed by whatever the member the
+  runtime `send`s returns: a reader's value, or a method's return _unawaited_,
+  since the runtime stores it as-is. `include` adds each association serialized
+  recursively with its own options.
+- `JsonValue<V>` mirrors the encoder's dispatch order
+  (`packages/activesupport/lib/core-ext/object/json.ts`): primitives pass
+  through, `undefined` becomes `null`, `bigint` becomes `string`
+  (`Numeric.asJson`), then an own `asJson()` wins _before_ `toJSON()`, arrays
+  map element-wise, and a `PromiseLike` (an unawaited async method) encodes as
+  `Object#as_json`'s `{}`.
+- `SerializedJson<M, O, B>` = `JsonValue<Serialized<M, O, B>>` is the shape
+  `as_json` returns, because `as_json` is `serializable_hash(options).as_json`
+  (`serializers/json.rb:103`).
 
 The draft prototype, blazetrailsdev/trails#10860, lands this with type tests
 and changes no runtime code. It follows `serializable_hash` branch for branch:
@@ -94,18 +102,19 @@ _optional_ key, not `| null`, because `serializable_add_includes` skips it
 spelling, including the `foo?` → `isFoo()` predicate rule that trails' runtime
 applies.
 
-### 2. `asJson` / `serializableHash` return `Serialized`
+### 2. `serializableHash` returns `Serialized`, `asJson` returns `SerializedJson`
 
-`ActiveRecord::Base#asJson` and `serializableHash` gain the signature
+`ActiveRecord::Base#asJson` gains the signature below, and `serializableHash` the
+same with `Serialized`:
 
 ```ts
-asJson<const O extends TypedSerializeOptions<this, Base>>(options?: O): Serialized<this, O, Base>;
+asJson<const O extends TypedSerializeOptions<this, Base>>(options?: O): SerializedJson<this, O, Base>;
 ```
 
 The TS 5 `const` type parameter keeps `{ only: ["id", "title"] }` literal
 without `as const` at the call site. The `SerializableHash` dual sync/thenable
 shape (activemodel CLAUDE.md, "Serialization's dual sync/async hash") is kept:
-the return becomes `Serialized<…> & PromiseLike<Serialized<…>>`. `root:`
+the return becomes `T & PromiseLike<T>`. `root:`
 wraps the result in `{ [root]: … }` when it's a string literal and is otherwise
 left untyped.
 

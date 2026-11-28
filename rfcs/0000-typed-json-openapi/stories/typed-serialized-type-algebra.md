@@ -20,17 +20,21 @@ blocked-by: null
 RFC § Design 1. `SerializeOptions` (`packages/activemodel/lib/serialization.ts:118`)
 types its keys as `string`, so nothing computes the hash's shape. This story adds
 types only: `AttributeKeys`, `AssociationKeys`, `AssociationTarget`,
-`TypedSerializeOptions`, `TypedIncludeHash`, `JsonValue` and `Serialized`,
+`TypedSerializeOptions`, `TypedIncludeHash`, `MethodNames`, `Serialized` (the raw
+`serializable_hash` shape), `JsonValue` and `SerializedJson` (the `as_json` shape),
 each with a `@noRailsEquivalent PERMANENT` receipt. The prototype is blazetrailsdev/trails#10860.
 
 ## Acceptance criteria
 
 - [ ] No options gives every attribute, with base-class members excluded.
 - [ ] `only` wins over `except`, and both accept a string or an array.
-- [ ] `methods` adds keys under their Rails name, typed by the awaited return of
-      the member that trails' runtime calls (`full_name` → `fullName()`, `admin?` →
-      `isAdmin()`), and an unknown name fails `TypedSerializeOptions`.
-- [ ] A nil `only:` falls through to `except:`, and `bigint` encodes as `string`.
+- [ ] `Serialized` keeps raw values (`Date`, `bigint`), and `SerializedJson` encodes them
+      (`string`) in the encoder's order, `asJson` before `toJSON`.
+- [ ] `methods` adds keys under their Rails name for any member the runtime `send`s,
+      readers included (`full_name` → `fullName()`, `admin?` → `isAdmin()`). A method's
+      return is unawaited, as the runtime stores it, and an unknown name fails
+      `TypedSerializeOptions`.
+- [ ] A nil `only:` falls through to `except:`.
 - [ ] `include` (string, array, hash, or a mixed array) serializes
       associations recursively. A nil-able singular association is an optional key
       (`serializable_add_includes` skips nil), and has_many becomes an array.
