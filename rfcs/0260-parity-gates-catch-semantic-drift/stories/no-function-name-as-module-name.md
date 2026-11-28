@@ -1,7 +1,7 @@
 ---
 title: "Lint rule: a class's .name is not Module#name (use rbModName)"
-status: draft
-updated: 2026-11-26
+status: ready
+updated: 2026-11-28
 rfc: "0260-parity-gates-catch-semantic-drift"
 cluster: parity-gates
 packages: [scripts, activesupport]

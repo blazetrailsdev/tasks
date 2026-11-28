@@ -1,6 +1,6 @@
 ---
 title: "actionpack: require(...).permit(...) returns params typed by the permitted keys"
-status: draft
+status: ready
 updated: 2026-11-28
 rfc: "0261-typed-json-openapi"
 cluster: typed-serialization

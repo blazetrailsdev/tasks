@@ -1,7 +1,7 @@
 ---
 title: "Ruby manifest records delegate_missing_to's generated method_missing / respond_to_missing?"
-status: draft
-updated: 2026-11-26
+status: ready
+updated: 2026-11-28
 rfc: "0260-parity-gates-catch-semantic-drift"
 cluster: parity-gates
 packages: [scripts, activestorage]

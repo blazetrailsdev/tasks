@@ -1,7 +1,7 @@
 ---
 title: "Close backlog stories that propose snake_case like Rails (falsified by the casing rule)"
-status: draft
-updated: 2026-11-19
+status: ready
+updated: 2026-11-28
 rfc: "0208-predicate-and-underscore-naming"
 cluster: null
 packages: []

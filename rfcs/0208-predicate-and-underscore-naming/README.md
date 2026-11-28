@@ -27,6 +27,7 @@ clusters:
   - ar-underscore-burndown
   - ar-generated-predicates
   - cross-package-burndown
+priority: 4
 ---
 
 # RFC 0208 — Predicate and underscore naming: what Rails requires, what trails invented

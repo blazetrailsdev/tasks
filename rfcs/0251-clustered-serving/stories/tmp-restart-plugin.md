@@ -1,7 +1,7 @@
 ---
 title: "The tmp_restart plugin: a rolling restart on touching tmp/restart.txt"
-status: draft
-updated: 2026-11-19
+status: ready
+updated: 2026-11-28
 rfc: "0251-clustered-serving"
 cluster: plugins
 packages: [rackup]

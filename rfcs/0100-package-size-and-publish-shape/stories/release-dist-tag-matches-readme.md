@@ -1,6 +1,6 @@
 ---
 title: "release.yml's alpha dist-tag and README's practice tag disagree; latest points at a practice build"
-status: draft
+status: done
 updated: 2026-11-28
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 15
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10865
+claim: "2026-11-28T14:09:26Z"
+assignee: "release-dist-tag-matches-readme"
 blocked-by: null
 closed-reason: null
 ---

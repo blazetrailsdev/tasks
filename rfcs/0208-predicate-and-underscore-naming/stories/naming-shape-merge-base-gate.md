@@ -1,7 +1,7 @@
 ---
 title: "Gate naming-shape debt against the merge-base, with no mark file"
-status: draft
-updated: 2026-10-26
+status: ready
+updated: 2026-11-28
 rfc: "0208-predicate-and-underscore-naming"
 cluster: naming-shape-gate
 packages: ["scripts"]

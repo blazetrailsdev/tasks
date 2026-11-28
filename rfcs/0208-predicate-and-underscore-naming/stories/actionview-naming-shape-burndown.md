@@ -1,7 +1,7 @@
 ---
 title: "Burn down actionview naming-shape debt and enroll it in the gate"
-status: draft
-updated: 2026-10-26
+status: ready
+updated: 2026-11-28
 rfc: "0208-predicate-and-underscore-naming"
 cluster: cross-package-burndown
 packages: ["actionview"]

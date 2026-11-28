@@ -1,6 +1,6 @@
 ---
 title: "routes-helpers-with-records-subclass-include-in-ancestry"
-status: ready
+status: in-progress
 updated: 2026-11-28
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10868
+claim: "2026-11-28T14:21:06Z"
+assignee: "routes-helpers-with-records-subclass-include-in-ancestry"
 blocked-by: null
 closed-reason: null
 ---

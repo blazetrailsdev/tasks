@@ -1,7 +1,7 @@
 ---
 title: "Uptime Kuma monitors trailmap web over the fleet network and a test hang alerts within 2 minutes"
-status: ready
-updated: 2026-11-27
+status: closed
+updated: 2026-11-28
 rfc: "0136-trailmap"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ pr: null
 claim: null
 assignee: null
 blocked-by: null
-closed-reason: null
+closed-reason: "don't want uptime kuma"
 ---
 
 ## Context

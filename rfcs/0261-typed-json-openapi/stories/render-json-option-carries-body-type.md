@@ -1,6 +1,6 @@
 ---
 title: "actionpack: render({ json }) carries the body's type"
-status: draft
+status: ready
 updated: 2026-11-28
 rfc: "0261-typed-json-openapi"
 cluster: openapi

@@ -1,7 +1,7 @@
 ---
 title: "start-worktree --branch reuses an existing tasks-<name> checkout"
-status: draft
-updated: 2026-11-25
+status: in-progress
+updated: 2026-11-28
 rfc: "0232-trailmap-fleet-session-redesign"
 cluster: null
 packages: []
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10866
+claim: "2026-11-28T14:18:43Z"
+assignee: "start-worktree-branch-reuses-tasks-checkout"
 blocked-by: null
 closed-reason: null
 ---

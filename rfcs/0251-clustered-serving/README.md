@@ -13,6 +13,7 @@ clusters:
   - cluster
   - config
   - plugins
+priority: 5
 ---
 
 # RFC 0251 — Clustered serving for trails server on node:cluster

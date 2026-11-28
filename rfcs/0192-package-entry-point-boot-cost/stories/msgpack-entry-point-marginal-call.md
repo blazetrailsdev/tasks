@@ -1,7 +1,7 @@
 ---
 title: "msgpack: decide whether its entry point is worth changing at all (21 modules over 6 call sites)"
-status: ready
-updated: 2026-11-24
+status: in-progress
+updated: 2026-11-28
 rfc: "0192-package-entry-point-boot-cost"
 cluster: "measurement"
 packages: ["msgpack"]
@@ -9,9 +9,9 @@ deps: ["boot-graph-measurement-harness", "migrate-the-tail-packages-off-the-ruby
 deps-rfc: []
 est-loc: 40
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10867
+claim: "2026-11-28T14:14:45Z"
+assignee: "msgpack-entry-point-marginal-call"
 blocked-by: null
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: "finisher-awaits-async-load-hooks"
-status: ready
+status: done
 updated: 2026-11-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10385
+claim: "2026-11-28T14:21:16Z"
+assignee: "finisher-awaits-async-load-hooks"
 blocked-by: null
 closed-reason: null
 ---

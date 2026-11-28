@@ -1,7 +1,7 @@
 ---
 title: "parity:api:exports: a ported public name reaches its package entry"
-status: draft
-updated: 2026-11-26
+status: ready
+updated: 2026-11-28
 rfc: "0260-parity-gates-catch-semantic-drift"
 cluster: parity-gates
 packages: [scripts, actionview]

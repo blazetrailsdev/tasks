@@ -16,6 +16,7 @@ clusters:
   - typed-serialization
   - openapi
   - follow-ons
+priority: 5
 ---
 
 # RFC 0261 — Typed as_json and render json:, and an OpenAPI spec generated from them

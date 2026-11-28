@@ -1,6 +1,6 @@
 ---
 title: "trails-tsc openapi: request bodies and path params"
-status: draft
+status: ready
 updated: 2026-11-28
 rfc: "0261-typed-json-openapi"
 cluster: openapi

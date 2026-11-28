@@ -1,6 +1,6 @@
 ---
 title: "actionpack: opt-in dev middleware logs JSON responses that drift from the OpenAPI schema"
-status: draft
+status: ready
 updated: 2026-11-28
 rfc: "0261-typed-json-openapi"
 cluster: openapi

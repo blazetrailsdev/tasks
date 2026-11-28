@@ -13,6 +13,7 @@ packages:
   - actionview
 clusters:
   - parity-gates
+priority: 3
 ---
 
 # RFC 0260 — Parity gates catch the drift the Writebook port found

@@ -1,7 +1,7 @@
 ---
 title: "Camel-case AR's snake_case declaration names"
-status: draft
-updated: 2026-10-26
+status: ready
+updated: 2026-11-28
 rfc: "0208-predicate-and-underscore-naming"
 cluster: ar-underscore-burndown
 packages: ["activerecord"]

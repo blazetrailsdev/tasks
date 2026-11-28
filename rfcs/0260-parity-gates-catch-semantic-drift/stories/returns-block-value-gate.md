@@ -1,7 +1,7 @@
 ---
 title: "parity:api:returns gates a block-returning method ported as void"
-status: draft
-updated: 2026-11-26
+status: ready
+updated: 2026-11-28
 rfc: "0260-parity-gates-catch-semantic-drift"
 cluster: parity-gates
 packages: [scripts]
