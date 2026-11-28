@@ -1,7 +1,7 @@
 ---
 title: "compiled-root-entry-import-placement-ruling"
-status: blocked
-updated: 2026-11-26
+status: ready
+updated: 2026-11-28
 rfc: "0258-ship-compiled-javascript"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-26T11:57:14Z"
-assignee: "compiled-root-config-readers-resolve-js"
-blocked-by: "operator decision: keep the entry import in Application#initializeBang (PERMANENT, cite a CLAUDE.md section), move it into the generated config/environment template, or move it elsewhere"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

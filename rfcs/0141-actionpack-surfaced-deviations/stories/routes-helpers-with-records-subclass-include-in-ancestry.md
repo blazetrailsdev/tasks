@@ -1,7 +1,7 @@
 ---
 title: "routes-helpers-with-records-subclass-include-in-ancestry"
-status: blocked
-updated: 2026-11-17
+status: ready
+updated: 2026-11-28
 rfc: "0141-actionpack-surfaced-deviations"
 cluster: null
 packages: []
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: null
 priority: null
 pr: null
-claim: "2026-11-17T14:21:38Z"
-assignee: "html5-document-descends-from-xml-document"
-blocked-by: "awaiting operator ruling on the ancestry mechanism for a deferred inherited include (story AC)"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

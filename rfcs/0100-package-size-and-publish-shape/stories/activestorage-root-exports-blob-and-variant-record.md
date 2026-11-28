@@ -1,6 +1,6 @@
 ---
 title: "activestorage-root-exports-blob-and-variant-record"
-status: draft
+status: ready
 updated: 2026-11-28
 rfc: "0100-package-size-and-publish-shape"
 cluster: null

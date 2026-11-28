@@ -1,6 +1,6 @@
 ---
 title: "ar-lane-vitest-silent-exit-runs-no-files"
-status: in-progress
+status: done
 updated: 2026-11-28
 rfc: "0061-ci-failures"
 cluster: null

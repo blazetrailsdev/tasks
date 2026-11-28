@@ -1,6 +1,6 @@
 ---
 title: "solid-queue: restore C's 4s pause in limiting-concurrency test"
-status: in-progress
+status: done
 updated: 2026-11-28
 rfc: "0061-ci-failures"
 cluster: null

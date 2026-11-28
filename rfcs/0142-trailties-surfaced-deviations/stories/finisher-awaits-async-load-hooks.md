@@ -1,7 +1,7 @@
 ---
 title: "finisher-awaits-async-load-hooks"
-status: draft
-updated: 2026-11-19
+status: ready
+updated: 2026-11-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
 packages: []
