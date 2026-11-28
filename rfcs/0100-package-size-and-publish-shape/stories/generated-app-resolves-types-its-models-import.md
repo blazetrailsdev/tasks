@@ -1,6 +1,6 @@
 ---
 title: "generated-app-resolves-types-its-models-import"
-status: in-progress
+status: done
 updated: 2026-11-28
 rfc: "0100-package-size-and-publish-shape"
 cluster: null

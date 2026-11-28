@@ -1,6 +1,6 @@
 ---
 title: "trailmap installs @blazetrails/* from npm instead of vendored tarballs"
-status: in-progress
+status: blocked
 updated: 2026-11-28
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
@@ -9,10 +9,10 @@ deps: ["first-alpha-practice-publish"]
 deps-rfc: []
 est-loc: 80
 priority: 2
-pr: trails#10856
+pr: trailmap#213
 claim: "2026-11-28T01:09:28Z"
 assignee: "trailmap-installs-published-packages-from-npm"
-blocked-by: null
+blocked-by: "blocked-by generated-bin-trails-exits-after-command: alpha0.2's generated bin/trails never exits after db:migrate on Postgres; image smoke hangs"
 closed-reason: null
 ---
 

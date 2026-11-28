@@ -1,6 +1,6 @@
 ---
 title: "Generated bin/trails exits after a command returns (db:migrate hangs on Postgres)"
-status: draft
+status: in-progress
 updated: 2026-11-28
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: 30
 priority: null
-pr: null
-claim: null
-assignee: null
+pr: trails#10862
+claim: "2026-11-28T03:53:19Z"
+assignee: "generated-bin-trails-exits-after-command"
 blocked-by: null
 closed-reason: null
 ---

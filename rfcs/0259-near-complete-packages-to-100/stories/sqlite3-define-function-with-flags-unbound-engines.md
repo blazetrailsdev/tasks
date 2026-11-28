@@ -1,6 +1,6 @@
 ---
 title: "sqlite3-define-function-with-flags-unbound-engines"
-status: claimed
+status: done
 updated: 2026-11-28
 rfc: "0259-near-complete-packages-to-100"
 cluster: null
@@ -9,7 +9,7 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: null
-pr: null
+pr: trails#10859
 claim: "2026-11-28T02:59:50Z"
 assignee: "sqlite3-define-function-with-flags-unbound-engines"
 blocked-by: null

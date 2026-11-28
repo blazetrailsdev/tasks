@@ -1,7 +1,7 @@
 ---
 title: "Generation-keyed module loader on ProcessAdapter (Bun.plugin namespace on Bun) so zeitwerk reloads"
-status: blocked
-updated: 2026-11-25
+status: ready
+updated: 2026-11-28
 rfc: "0252-bun-runtime-support"
 cluster: runtime
 packages: [ruby-compat, zeitwerk]
@@ -10,9 +10,9 @@ deps-rfc: []
 est-loc: 300
 priority: null
 pr: null
-claim: "2026-11-25T17:03:48Z"
-assignee: "runtime-detection-and-bun-process-adapter"
-blocked-by: "RFC 0252 Open question 3 operator ruling: Bun 1.3.6 spike (2026-11-25) — a top-level import() into a Bun.plugin namespace works, but a static import from one namespaced module to another (generated app/models/*.ts import ./application-record.ts) fails with 'Cannot resolve invalid URL zeitwerk:1:/…/b.ts'; a fake-path file-namespace onLoad never fires (ENOENT). Needs ruling: (a) eager-load on Bun, or (b) wait for Bun."
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 
