@@ -1,6 +1,6 @@
 ---
 title: "nokogiri-xml-node-wrap-identity-cache"
-status: ready
+status: in-progress
 updated: 2026-11-28
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
@@ -9,9 +9,9 @@ deps: []
 deps-rfc: []
 est-loc: null
 priority: 2
-pr: null
-claim: null
-assignee: null
+pr: trails#10871
+claim: "2026-11-28T15:44:47Z"
+assignee: "nokogiri-port-test-serializing-namespaces"
 blocked-by: null
 closed-reason: null
 ---

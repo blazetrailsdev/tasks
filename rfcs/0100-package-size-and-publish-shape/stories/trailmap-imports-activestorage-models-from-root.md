@@ -1,6 +1,6 @@
 ---
 title: "trailmap imports Attachment, Blob, VariantRecord from @blazetrails/activestorage root"
-status: draft
+status: ready
 updated: 2026-11-28
 rfc: "0100-package-size-and-publish-shape"
 cluster: null
@@ -8,7 +8,7 @@ packages: []
 deps: ["activestorage-root-exports-blob-and-variant-record"]
 deps-rfc: []
 est-loc: 10
-priority: null
+priority: 3
 pr: null
 claim: null
 assignee: null
