@@ -1,14 +1,14 @@
 ---
 title: "nokogiri-xml-node-wrap-identity-cache"
-status: draft
-updated: 2026-11-27
+status: ready
+updated: 2026-11-28
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
 packages: []
 deps: []
 deps-rfc: []
 est-loc: null
-priority: null
+priority: 2
 pr: null
 claim: null
 assignee: null

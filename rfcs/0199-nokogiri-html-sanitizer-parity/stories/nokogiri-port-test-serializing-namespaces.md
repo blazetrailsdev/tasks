@@ -1,7 +1,7 @@
 ---
 title: "Port nokogiri v1.19.7 test_serializing_namespaces.rb"
-status: blocked
-updated: 2026-11-27
+status: ready
+updated: 2026-11-28
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
 packages: []
@@ -9,11 +9,11 @@ deps:
   - nokogiri-xml-builder
 deps-rfc: []
 est-loc: 150
-priority: null
+priority: 1
 pr: null
-claim: "2026-11-27T01:14:45Z"
-assignee: "nokogiri-do-xinclude-safe-copy-arm"
-blocked-by: "story nokogiri-xml-builder: every test builds its tree with Nokogiri::XML::Builder, which trails has not ported"
+claim: null
+assignee: null
+blocked-by: null
 closed-reason: null
 ---
 

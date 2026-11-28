@@ -1,7 +1,7 @@
 ---
 title: "nokogiri-relink-namespace-qname-and-nsdef-arms"
-status: draft
-updated: 2026-11-27
+status: blocked
+updated: 2026-11-28
 rfc: "0199-nokogiri-html-sanitizer-parity"
 cluster: null
 packages: []
@@ -13,7 +13,7 @@ priority: null
 pr: null
 claim: null
 assignee: null
-blocked-by: null
+blocked-by: "libxml2-wasm 0.7.1 (pinned) and 0.7.2 (latest) export no _xmlSplitQName2/_xmlNodeSetName nor nsDef struct writes; waits on nokogiri-libxml2-wasm-export-missing-c-functions"
 closed-reason: null
 ---
 

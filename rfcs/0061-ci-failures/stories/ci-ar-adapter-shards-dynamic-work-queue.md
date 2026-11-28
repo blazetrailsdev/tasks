@@ -1,7 +1,7 @@
 ---
 title: "Schedule AR adapter shard files from a shared run-time work queue"
-status: in-progress
-updated: 2026-11-27
+status: done
+updated: 2026-11-28
 rfc: "0061-ci-failures"
 cluster: null
 packages: []
