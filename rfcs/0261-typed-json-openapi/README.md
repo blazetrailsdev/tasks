@@ -1,9 +1,9 @@
 ---
 rfc: "0261-typed-json-openapi"
 title: "Typed as_json and render json:, and an OpenAPI spec generated from them"
-status: draft
+status: active
 created: 2026-11-27
-updated: 2026-11-27
+updated: 2026-11-28
 owner: "@deanmarano"
 packages:
   - activemodel
