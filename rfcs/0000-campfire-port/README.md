@@ -157,7 +157,9 @@ are `Migration[7.2]`. trails targets Rails 8.0.5.2, so the port uses
 filed against its package rather than shimmed in the app.
 
 The app is split by file group. Each story ports its files together with
-their tests, so every story ends green:
+their tests, so every story ends green. A controller test case that asserts on
+rendered HTML is parked as `it.skip` under a `PENDING-VIEWS: campfire-views`
+line until `campfire-views` brings the templates and un-skips it:
 
 | Story                                         | Files                                                            | est-loc |
 | --------------------------------------------- | ---------------------------------------------------------------- | ------- |

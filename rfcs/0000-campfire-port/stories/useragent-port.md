@@ -33,4 +33,5 @@ RFC is that decision; this story unblocks that one.
 - [ ] useragent 0.16.11 vendored, `packages/useragent` created
 - [ ] `pnpm tasks status-set allow-browser-parses-with-ua-parser-js-not-the-useragent-gem ready` run on merge, with its `blocked-by` cleared
 - [ ] the new package registered as a new package needs (`ci.yml` lanes, the workspace guard fixture, `vendor/sources.ts`)
-- [ ] the gem's specs ported and passing; if the port exceeds the ceiling, the browser classes not reached by platform_agent are filed as a follow-up story
+- [ ] in scope, with their specs ported and passing: `UserAgent.parse`, `UserAgent::Version`, `UserAgent::Comparable`, operating-system detection, and the browser classes `BrowserBlocker` compares and platform_agent reads (`Chrome`, `Edge`, `Firefox`, `Opera`, `Safari`, `InternetExplorer`, `Webkit`); this is all RFC 0141's `AllowBrowser` story needs
+- [ ] the remaining browser classes and their specs filed as the follow-up story `useragent-remaining-browsers`, which nothing in RFC 0141 or this RFC waits on
