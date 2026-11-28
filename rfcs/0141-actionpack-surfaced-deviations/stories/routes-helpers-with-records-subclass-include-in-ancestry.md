@@ -26,5 +26,5 @@ After trails#10167, `packages/actionpack/lib/abstract-controller/trailties/route
 
 - `rbClassInheritedP(Sub, routes.urlHelpers())`, plus the path/url helpers modules it includes, answers `true` for every subclass of a class wired with `RoutesHelpers.with`, and does not answer `true` for the wired class itself.
 - `rbModAncestors(Sub)` lists the url-helpers module once.
-- The operator rules on the mechanism first, because it is ancestry bookkeeping for a deferred `inherited` include, which CLAUDE.md does not cover yet. One option is an "included for subclasses" record on the wired prototype that the ancestry walks honour only when entered from below.
+- **Ruling (operator, 2026-11-27): an "included for subclasses" record.** `RoutesHelpers.with` records the url-helpers module on the wired class's prototype as included-for-subclasses (alongside, not in, `includedModules`). `classSearchAncestor` / `rbModAncestors` in `packages/ruby-compat/lib/include.ts` honour that record only when the walk entered from a subclass, never for the wired class itself. No constructor or `inherited` hook.
 - This unblocks `unskip-route-helpers-test`.

@@ -24,3 +24,7 @@ closed-reason: null
 
 - `stubAnyInstance` intercepts construction of `klass` as Ruby's stubbed `klass.new` does.
 - Both tests unskipped and passing, with unchanged names.
+
+## Ruling (operator, 2026-11-27)
+
+Option (a): route the `new klass(...)` call sites in mail (`mail/lib/message.ts:164`, `mail.ts:136`, and any other construction `stub_any_instance` needs to intercept) through a stubbable `Klass.new` / `rbClassNewInstance`, so stubbing `klass.new` (method_call_assertions.rb:59-64) intercepts them. No per-class constructor hook.
