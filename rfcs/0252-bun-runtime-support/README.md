@@ -71,6 +71,20 @@ found three things:
 | `Bun.plugin` `onResolve` returning `path + "?zeitwerk=N"`                                       | `ENOENT` (the query is read as part of the filename)                         |
 | `onResolve` into a plugin namespace keyed by generation, plus `onLoad` that reads the real file | new instance per generation, and the same instance for a repeated generation |
 
+**Superseded on Bun 1.4.0+ (re-measured 2026-11-27).** The namespace row
+above does not survive a real app: a static import inside a namespaced
+module (a model's `import "./application-record.ts"`) skips the plugin and
+loads the real file once, so the dependency never reloads. On 1.3.6 it fails
+outright (`Cannot resolve invalid URL zeitwerk:1:/…`). But from Bun 1.4.0
+the second row works: a `Bun.plugin` `onResolve` returning
+`path + "?zeitwerk=N"` loads the file, gives a new instance per generation,
+and runs for nested static imports too, so an edit to both a model and
+`application-record.ts` is picked up after a generation bump. Measured on
+every stable release from 1.3.7 to 1.4.5: 1.3.7–1.3.13 fail with `ENOENT`,
+1.3.14 with `Cannot find module '…?zeitwerk=1'`, 1.4.0–1.4.5 pass. The Bun
+side of `registerGenerationalLoader` is therefore the query-string resolver,
+not the namespace, and the minimum Bun is 1.4.0 (Open question 2).
+
 So a one-to-one `registerHooks` shim is not possible. Instead,
 `ProcessAdapter` gains a narrower member, `registerGenerationalLoader(match,
 generationOf)`. On Node it wraps today's `registerHooks` resolve hook,
@@ -141,7 +155,7 @@ weeks.
 
 ## Verification
 
-- With Bun 1.3.x (Open question 2), `bun trails new app && cd app && bun trails db:migrate &&
+- With Bun 1.4.x (Open question 2), `bun trails new app && cd app && bun trails db:migrate &&
 bun trails test` passes.
 - `bun trails server` answers a request, and an edited model reloads in
   development.
@@ -158,6 +172,9 @@ bun trails test` passes.
 2. **What is the minimum Bun version?** Options: 1.2, or 1.3 (the version
    measured here). Recommendation: 1.3. The CI job pins 1.3.x and
    § Verification uses it.
+   **Ruled (operator, 2026-11-27): 1.4.0.** Query-string module loading,
+   which development reloading needs, first works in 1.4.0 (§ Module hooks);
+   no 1.3.x release supports it. The CI job pins 1.4.x.
 3. **What happens if the namespace loader fails on a real app?** For
    example, source maps, `import.meta.url`, or relative imports might break
    inside the plugin namespace. Options: (a) eager-load everything on Bun,
@@ -166,6 +183,10 @@ bun trails test` passes.
    and if the ruling picks (a), eager-load is filed then as its own story.
    The spike in § Module hooks makes this less likely, because the core
    mechanism works.
+   **Ruled (operator, 2026-11-27): neither.** The namespace loader does fail
+   on a real app (nested static imports bypass it), but on the 1.4.0 floor
+   the `?zeitwerk=<gen>` resolver works, so Bun keeps development reloading
+   with no eager-load fallback and no wait.
 
 ## Changelog
 
@@ -176,3 +197,6 @@ bun trails test` passes.
   recommendation; the sqlite pass bar has a number; clustered serving is a
   non-goal; the Bun vitest command is stated; the CLI docs and the
   required-check flip are their own stories.
+- 2026-11-27: minimum Bun is 1.4.0. The namespace loader fails on nested
+  static imports; from 1.4.0 the `?zeitwerk=<gen>` `onResolve` works and
+  replaces it. Open questions 2 and 3 ruled.

@@ -22,6 +22,6 @@ The RFC's § CI and § Verification.
 
 ## Acceptance criteria
 
-- [ ] The job installs Bun 1.3.x and runs `trails new`, `db:migrate`, `server` plus one request, and `test` under `bun`.
+- [ ] The job installs Bun 1.4.x (the 1.4.0 floor, RFC Open question 2) and runs `trails new`, `db:migrate`, `server` plus one request, and `test` under `bun`.
 - [ ] It runs the activerecord sqlite suite on `bun-sqlite`.
 - [ ] It is `continue-on-error`. Making it required is `bun-ci-required-check` (RFC Open question 1).
