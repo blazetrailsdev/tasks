@@ -1,6 +1,6 @@
 ---
 title: "trailties: loading, action-mailer-boot and test-runner tests broke while the shards ran zero tests"
-status: in-progress
+status: done
 updated: 2026-11-27
 rfc: "0142-trailties-surfaced-deviations"
 cluster: null
